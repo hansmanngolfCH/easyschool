@@ -2356,22 +2356,37 @@
     "questions": [
      {
       "id": "e1",
-      "q": "Kürze: 12/16 = (so weit wie möglich kürzen)",
-      "explain": "Durch 4 kürzen.",
-      "type": "input",
-      "answer": [
-       "3/4"
+      "q": "Welcher Bruch ist gefärbt? Kürze ihn so weit wie möglich.",
+      "type": "mc",
+      "options": [
+       "6/10",
+       "2/3",
+       "3/4",
+       "3/8"
+      ],
+      "answer": 2,
+      "explain": "6/8 = 3/4",
+      "visuals": [
+       {
+        "type": "pie",
+        "parts": 8,
+        "filled": 6,
+        "nocap": true
+       }
       ]
      },
      {
       "id": "e2",
-      "q": "Wandle um: 2 1/4 = (so weit wie möglich kürzen)",
-      "explain": "2·4+1 = 9, Nenner 4.",
-      "type": "input",
-      "answer": [
+      "q": "Wandle in einen unechten Bruch um: 2 1/4",
+      "type": "mc",
+      "options": [
+       "7/4",
        "9/4",
-       "2 1/4"
-      ]
+       "8/4",
+       "6/4"
+      ],
+      "answer": 1,
+      "explain": "2·4+1 = 9, also 9/4"
      },
      {
       "id": "e3",
@@ -2412,12 +2427,16 @@
      },
      {
       "id": "e7",
-      "q": "1/2 + 1/3 = (so weit wie möglich kürzen)",
-      "explain": "Hauptnenner 6.",
-      "type": "input",
-      "answer": [
-       "5/6"
-      ]
+      "q": "Welches Ergebnis stimmt? 1/2 + 1/3 =",
+      "type": "mc",
+      "options": [
+       "2/5",
+       "5/6",
+       "1/6",
+       "2/6"
+      ],
+      "answer": 1,
+      "explain": "Hauptnenner 6: 3/6 + 2/6 = 5/6"
      },
      {
       "id": "e8",
@@ -2430,12 +2449,16 @@
      },
      {
       "id": "e9",
-      "q": "1 1/2 · 2/3 = (so weit wie möglich kürzen)",
-      "explain": "3/2 · 2/3 = 1.",
-      "type": "input",
-      "answer": [
-       "1"
-      ]
+      "q": "Welches Ergebnis stimmt? 1 1/2 · 2/3 =",
+      "type": "mc",
+      "options": [
+       "1",
+       "3/5",
+       "2/3",
+       "1 1/3"
+      ],
+      "answer": 0,
+      "explain": "3/2 · 2/3 = 1"
      },
      {
       "id": "e10",
@@ -2448,12 +2471,16 @@
      },
      {
       "id": "e11",
-      "type": "input",
-      "q": "3/4 − 5/6 : 15/12 = (so weit wie möglich kürzen)",
-      "answer": [
-       "1/12"
+      "q": "Welche Rechnung musst du zuerst machen? 3/4 − 5/6 : 15/12",
+      "type": "mc",
+      "options": [
+       "3/4 − 5/6",
+       "Die ganze Rechnung von links nach rechts",
+       "15/12 − 3/4",
+       "5/6 : 15/12 (Punkt vor Strich)"
       ],
-      "explain": "5/6 : 15/12 = 5/6 · 12/15 = 2/3. Dann 3/4 − 2/3 = 9/12 − 8/12 = 1/12.",
+      "answer": 3,
+      "explain": "Punkt vor Strich: zuerst das Dividieren",
       "ref": "c1"
      },
      {
@@ -2468,12 +2495,16 @@
      },
      {
       "id": "e13",
-      "type": "input",
-      "q": "5/6 − 1/2 : 3/4 = (so weit wie möglich kürzen)",
-      "answer": [
-       "1/6"
+      "q": "Welches Ergebnis stimmt? 5/6 − 1/2 : 3/4 =",
+      "type": "mc",
+      "options": [
+       "1/6",
+       "1/3",
+       "2/3",
+       "1/2"
       ],
-      "explain": "1/2 : 3/4 = 1/2 · 4/3 = 2/3. Dann 5/6 − 4/6 = 1/6.",
+      "answer": 0,
+      "explain": "1/2 : 3/4 = 2/3; 5/6 − 4/6 = 1/6",
       "ref": "c11"
      },
      {
@@ -6032,21 +6063,29 @@
      },
      {
       "id": "e5",
-      "q": "Setze i oder ie ein: W_se",
-      "explain": "Langes i ist oft ie.",
-      "type": "input",
-      "answer": [
-       "Wiese"
-      ]
+      "q": "Wie schreibt man das Wort richtig?",
+      "type": "mc",
+      "options": [
+       "Wiese",
+       "Wise",
+       "Wihse",
+       "Wiehse"
+      ],
+      "answer": 0,
+      "explain": "Wiese – langes i als «ie»"
      },
      {
       "id": "e6",
-      "q": "Setze i oder ie ein: K_no",
-      "explain": "Langes i ist oft ie. Kino und Familie sind Ausnahmen.",
-      "type": "input",
-      "answer": [
-       "Kino"
-      ]
+      "q": "Welches Wort ist richtig geschrieben?",
+      "type": "mc",
+      "options": [
+       "Kino",
+       "Kieno",
+       "Kihno",
+       "Kinoh"
+      ],
+      "answer": 0,
+      "explain": "Kino – kurzes i"
      },
      {
       "id": "e7",
@@ -6068,21 +6107,29 @@
      },
      {
       "id": "e9",
-      "q": "Ergänze das Wort: Nach dem Sport brauche ich kurz ___. (Ruhe, Zahl, Fehler)",
-      "explain": "Das h steht nach dem langen u.",
-      "type": "input",
-      "answer": [
-       "Ruhe"
-      ]
+      "q": "Welcher Satz ist richtig geschrieben?",
+      "type": "mc",
+      "options": [
+       "Nach dem Sport brauche ich kurz Rhue.",
+       "Nach dem Sport brauche ich kurtz Ruhe.",
+       "Nach dem Sport brauche ich kurz Ruhe.",
+       "Nach dem Sport brauche ich kurz Ruhee."
+      ],
+      "answer": 2,
+      "explain": "Ruhe mit stummem h"
      },
      {
       "id": "e10",
-      "q": "Ergänze das Wort: Unser ___ erklärt die Aufgabe noch einmal. (Lehrer, Uhr, Zahl)",
-      "explain": "Lehrer schreibst du mit h.",
-      "type": "input",
-      "answer": [
-       "Lehrer"
-      ]
+      "q": "Welche Schreibweise ist richtig?",
+      "type": "mc",
+      "options": [
+       "Verlieren",
+       "Verliren",
+       "Verlihren",
+       "Ferlieren"
+      ],
+      "answer": 0,
+      "explain": "verlieren – langes i als «ie»"
      },
      {
       "id": "e11",
@@ -6104,12 +6151,16 @@
      },
      {
       "id": "e13",
-      "q": "Schreibe den Satz richtig ab: Meine Famielie wohnt in einer kleinen Wonung.",
-      "explain": "Prüfe h, i und ie.",
-      "type": "input",
-      "answer": [
-       "Meine Familie wohnt in einer kleinen Wohnung."
-      ]
+      "q": "Wie viele Fehler hat der Satz? «Meine Famielie wohnt in einer kleinen Wonung.»",
+      "type": "mc",
+      "options": [
+       "0",
+       "1",
+       "2",
+       "3"
+      ],
+      "answer": 2,
+      "explain": "Famielie → Familie, Wonung → Wohnung"
      },
      {
       "id": "e14",
@@ -7729,12 +7780,16 @@
     "questions": [
      {
       "id": "e1",
-      "q": "Bestimme die Wortart von «sehr»: Der aufmerksame Lehrer erklärt den Lösungsweg sehr genau.",
-      "explain": "sehr bestimmt «genau» näher.",
-      "type": "input",
-      "answer": [
-       "Adverb"
-      ]
+      "q": "Welche Wortart ist «sehr»? Der aufmerksame Lehrer erklärt den Lösungsweg sehr genau.",
+      "type": "mc",
+      "options": [
+       "Adjektiv",
+       "Adverb",
+       "Verb",
+       "Nomen"
+      ],
+      "answer": 1,
+      "explain": "«sehr» verstärkt «genau» und bleibt unverändert."
      },
      {
       "id": "e2",
@@ -7747,12 +7802,16 @@
      },
      {
       "id": "e3",
-      "q": "Bestimme die Wortart von «Obwohl»: Obwohl es regnet, gehen wir zusammen ins Schwimmbad.",
-      "explain": "Es leitet einen Nebensatz ein.",
-      "type": "input",
-      "answer": [
-       "Konjunktion"
-      ]
+      "q": "Welche Wortart ist «Obwohl»? Obwohl es regnet, gehen wir ins Schwimmbad.",
+      "type": "mc",
+      "options": [
+       "Konjunktion",
+       "Präposition",
+       "Adverb",
+       "Pronomen"
+      ],
+      "answer": 0,
+      "explain": "Verbindet Haupt- und Nebensatz."
      },
      {
       "id": "e4",
@@ -7774,12 +7833,16 @@
      },
      {
       "id": "e6",
-      "q": "Welcher Fall? Die neue Lehrerin erklärt den Schülern das Thema. («den Schülern»)",
-      "explain": "Wem erklärt sie das Thema?",
-      "type": "input",
-      "answer": [
-       "Dativ"
-      ]
+      "q": "Welcher Fall? Die Lehrerin erklärt den Schülern das Thema. («den Schülern»)",
+      "type": "mc",
+      "options": [
+       "Nominativ",
+       "Genitiv",
+       "Dativ",
+       "Akkusativ"
+      ],
+      "answer": 2,
+      "explain": "Wem erklärt sie? → Dativ"
      },
      {
       "id": "e7",
@@ -7801,21 +7864,29 @@
      },
      {
       "id": "e9",
-      "q": "Welche Zeitform? Nachdem wir den Text gelesen hatten, besprachen wir die Aufgabe. («wir den Text gelesen hatten»)",
-      "explain": "hatten + Partizip II",
-      "type": "input",
-      "answer": [
-       "Plusquamperfekt"
-      ]
+      "q": "Welche Zeitform? Nachdem wir den Text gelesen hatten, besprachen wir die Aufgabe. («hatten gelesen»)",
+      "type": "mc",
+      "options": [
+       "Perfekt",
+       "Plusquamperfekt",
+       "Präteritum",
+       "Futur II"
+      ],
+      "answer": 1,
+      "explain": "hatten + Partizip = Plusquamperfekt"
      },
      {
       "id": "e10",
       "q": "Welche Zeitform? Wir fahren morgen nach Bern.",
-      "explain": "Präsens mit Zukunftsbedeutung.",
-      "type": "input",
-      "answer": [
-       "Präsens"
-      ]
+      "type": "mc",
+      "options": [
+       "Präsens",
+       "Futur I",
+       "Perfekt",
+       "Präteritum"
+      ],
+      "answer": 0,
+      "explain": "Präsens mit Zeitangabe «morgen» drückt Zukunft aus."
      },
      {
       "id": "e11",
@@ -7837,12 +7908,16 @@
      },
      {
       "id": "e13",
-      "q": "Bestimme das Prädikat (P): Leah hat dem Nachbarn gestern das Paket gebracht. (zwei Wörter)",
-      "explain": "Hilfsverb + Partizip.",
-      "type": "input",
-      "answer": [
+      "q": "Welche zwei Wörter bilden das Prädikat? Leah hat dem Nachbarn gestern das Paket gebracht.",
+      "type": "mc",
+      "options": [
+       "Leah hat",
+       "dem Nachbarn",
+       "das Paket",
        "hat gebracht"
-      ]
+      ],
+      "answer": 3,
+      "explain": "Prädikat = hat … gebracht"
      },
      {
       "id": "e14",
@@ -7864,12 +7939,16 @@
      },
      {
       "id": "e16",
-      "q": "Setze die richtige Form ein: Sie schenkt ___ ein Buch. (ihr kleiner Bruder)",
-      "explain": "Dativ: wem schenkt sie?",
-      "type": "input",
-      "answer": [
+      "q": "Welche Form ist richtig? Sie schenkt ___ ein Buch. (ihr kleiner Bruder)",
+      "type": "mc",
+      "options": [
+       "ihren kleinen Bruder",
+       "ihr kleiner Bruder",
+       "ihres kleinen Bruders",
        "ihrem kleinen Bruder"
-      ]
+      ],
+      "answer": 3,
+      "explain": "Wem? → Dativ"
      },
      {
       "id": "e17",
@@ -7900,12 +7979,16 @@
      },
      {
       "id": "e20",
-      "q": "Tim hat «obwohl» als Adverb eingeordnet. Schreibe die richtige Wortart.",
-      "explain": "Es leitet einen Nebensatz ein.",
-      "type": "input",
-      "answer": [
-       "Konjunktion"
-      ]
+      "q": "Tim hat «obwohl» als Adverb eingeordnet. Welche Wortart stimmt?",
+      "type": "mc",
+      "options": [
+       "Konjunktion",
+       "Adverb",
+       "Präposition",
+       "Verb"
+      ],
+      "answer": 0,
+      "explain": "«obwohl» leitet einen Nebensatz ein."
      }
     ]
    },
@@ -9019,36 +9102,48 @@
      {
       "id": "e1",
       "q": "Wie lautet die Formel von Pythagoras?",
-      "explain": "Quadrate der Katheten ergeben das Quadrat der Hypotenuse.",
-      "type": "input",
-      "answer": [
+      "type": "mc",
+      "options": [
+       "a + b = c",
        "a² + b² = c²",
-       "a2 + b2 = c2",
-       "a^2 + b^2 = c^2"
-      ]
+       "a² − b² = c²",
+       "a · b = c²"
+      ],
+      "answer": 1,
+      "explain": "Kathete² + Kathete² = Hypotenuse²"
      },
      {
       "id": "e2",
-      "q": "Der Satz des Pythagoras gilt nur bei bestimmten Dreiecken. Wie heissen sie? (rechtwinklige oder gleichseitige oder stumpfe)",
-      "explain": "Der Satz gilt nur bei rechtwinkligen Dreiecken.",
-      "type": "input",
-      "answer": [
-       "rechtwinklige",
-       "rechtwinklig",
-       "rechtwinkliges",
-       "rechtwinkliges Dreieck",
-       "rechtwinklige Dreiecke"
+      "q": "Welche Seite ist im Dreieck die Hypotenuse?",
+      "type": "mc",
+      "options": [
+       "a",
+       "b",
+       "c",
+       "keine"
+      ],
+      "answer": 2,
+      "explain": "Die Hypotenuse liegt dem rechten Winkel gegenüber.",
+      "visuals": [
+       {
+        "type": "img",
+        "src": "data:image/svg+xml,%3Csvg%20width%3D%22240%22%20height%3D%22170%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20240%20170%22%20font-family%3D%22sans-serif%22%20font-size%3D%2216%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23333%22%20stroke-width%3D%222%22%3E%3Cpath%20d%3D%22M30%20140H190V40Z%22%20fill%3D%22%23eef3fb%22/%3E%3Cpath%20d%3D%22M175%20140v-15h15%22%20stroke-width%3D%221.5%22/%3E%3Ctext%20x%3D%22110%22%20y%3D%22162%22%20fill%3D%22%23333%22%20stroke%3D%22none%22%20text-anchor%3D%22middle%22%3Eb%3C/text%3E%3Ctext%20x%3D%22202%22%20y%3D%2295%22%20fill%3D%22%23333%22%20stroke%3D%22none%22%3Ea%3C/text%3E%3Ctext%20x%3D%2295%22%20y%3D%2278%22%20fill%3D%22%23333%22%20stroke%3D%22none%22%20text-anchor%3D%22end%22%3Ec%3C/text%3E%3C/g%3E%3C/svg%3E",
+        "alt": "Rechtwinkliges Dreieck mit Seiten a, b, c"
+       }
       ]
      },
      {
       "id": "e3",
-      "q": "Wie heisst die längste Seite im rechtwinkligen Dreieck?",
-      "explain": "Die Hypotenuse liegt dem rechten Winkel gegenüber.",
-      "type": "input",
-      "answer": [
-       "Hypotenuse",
-       "die Hypotenuse"
-      ]
+      "q": "Der Satz des Pythagoras gilt nur bei …",
+      "type": "mc",
+      "options": [
+       "rechtwinkligen Dreiecken",
+       "allen Dreiecken",
+       "gleichseitigen Dreiecken",
+       "Kreisen"
+      ],
+      "answer": 0,
+      "explain": "Nur wenn ein rechter Winkel vorhanden ist."
      },
      {
       "id": "e4",
@@ -9058,6 +9153,13 @@
       "answer": [
        "5",
        "5 cm"
+      ],
+      "visuals": [
+       {
+        "type": "img",
+        "src": "data:image/svg+xml,%3Csvg%20width%3D%22240%22%20height%3D%22170%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20240%20170%22%20font-family%3D%22sans-serif%22%20font-size%3D%2216%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23333%22%20stroke-width%3D%222%22%3E%3Cpath%20d%3D%22M30%20140H190V40Z%22%20fill%3D%22%23eef3fb%22/%3E%3Cpath%20d%3D%22M175%20140v-15h15%22%20stroke-width%3D%221.5%22/%3E%3Ctext%20x%3D%22110%22%20y%3D%22162%22%20fill%3D%22%23333%22%20stroke%3D%22none%22%20text-anchor%3D%22middle%22%3Eb%20%3D%204%20cm%3C/text%3E%3Ctext%20x%3D%22202%22%20y%3D%2295%22%20fill%3D%22%23333%22%20stroke%3D%22none%22%3Ea%20%3D%203%20cm%3C/text%3E%3Ctext%20x%3D%2295%22%20y%3D%2278%22%20fill%3D%22%23333%22%20stroke%3D%22none%22%20text-anchor%3D%22end%22%3Ec%20%3D%20%3F%3C/text%3E%3C/g%3E%3C/svg%3E",
+        "alt": "Dreieck mit a=3 und b=4"
+       }
       ]
      },
      {
@@ -9078,16 +9180,33 @@
       "answer": [
        "13",
        "13 cm"
+      ],
+      "visuals": [
+       {
+        "type": "img",
+        "src": "data:image/svg+xml,%3Csvg%20width%3D%22240%22%20height%3D%22170%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20240%20170%22%20font-family%3D%22sans-serif%22%20font-size%3D%2216%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23333%22%20stroke-width%3D%222%22%3E%3Cpath%20d%3D%22M30%20140H190V40Z%22%20fill%3D%22%23eef3fb%22/%3E%3Cpath%20d%3D%22M175%20140v-15h15%22%20stroke-width%3D%221.5%22/%3E%3Ctext%20x%3D%22110%22%20y%3D%22162%22%20fill%3D%22%23333%22%20stroke%3D%22none%22%20text-anchor%3D%22middle%22%3Eb%20%3D%2012%20cm%3C/text%3E%3Ctext%20x%3D%22202%22%20y%3D%2295%22%20fill%3D%22%23333%22%20stroke%3D%22none%22%3Ea%20%3D%205%20cm%3C/text%3E%3Ctext%20x%3D%2295%22%20y%3D%2278%22%20fill%3D%22%23333%22%20stroke%3D%22none%22%20text-anchor%3D%22end%22%3Ec%20%3D%20%3F%3C/text%3E%3C/g%3E%3C/svg%3E",
+        "alt": "Dreieck mit a=5 und b=12"
+       }
       ]
      },
      {
       "id": "e7",
-      "q": "Berechne b: a = 6 cm, c = 10 cm. (in cm)",
-      "explain": "100 − 36 = 64, b = 8 cm.",
-      "type": "input",
-      "answer": [
-       "8",
-       "8 cm"
+      "q": "Berechne b: a = 6 cm, c = 10 cm. Welche Rechnung stimmt?",
+      "type": "mc",
+      "options": [
+       "b = √(10² + 6²) ≈ 11.7 cm",
+       "b = 10 − 6 = 4 cm",
+       "b = √(6² − 10²)",
+       "b = √(10² − 6²) = 8 cm"
+      ],
+      "answer": 3,
+      "explain": "Kathete = √(c² − a²)",
+      "visuals": [
+       {
+        "type": "img",
+        "src": "data:image/svg+xml,%3Csvg%20width%3D%22240%22%20height%3D%22170%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20240%20170%22%20font-family%3D%22sans-serif%22%20font-size%3D%2216%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23333%22%20stroke-width%3D%222%22%3E%3Cpath%20d%3D%22M30%20140H190V40Z%22%20fill%3D%22%23eef3fb%22/%3E%3Cpath%20d%3D%22M175%20140v-15h15%22%20stroke-width%3D%221.5%22/%3E%3Ctext%20x%3D%22110%22%20y%3D%22162%22%20fill%3D%22%23333%22%20stroke%3D%22none%22%20text-anchor%3D%22middle%22%3Eb%20%3D%20%3F%3C/text%3E%3Ctext%20x%3D%22202%22%20y%3D%2295%22%20fill%3D%22%23333%22%20stroke%3D%22none%22%3Ea%20%3D%206%20cm%3C/text%3E%3Ctext%20x%3D%2295%22%20y%3D%2278%22%20fill%3D%22%23333%22%20stroke%3D%22none%22%20text-anchor%3D%22end%22%3Ec%20%3D%2010%20cm%3C/text%3E%3C/g%3E%3C/svg%3E",
+        "alt": "Dreieck"
+       }
       ]
      },
      {
@@ -9118,13 +9237,16 @@
      },
      {
       "id": "e10",
-      "q": "Rechteck mit den Seiten 12 cm und 5 cm. Wie lang ist die Diagonale? (in cm)",
-      "explain": "144 + 25 = 169, d = 13 cm.",
-      "type": "input",
-      "answer": [
-       "13",
-       "13 cm"
-      ]
+      "q": "Rechteck mit den Seiten 12 cm und 5 cm. Wie lang ist die Diagonale?",
+      "type": "mc",
+      "options": [
+       "13 cm",
+       "17 cm",
+       "11 cm",
+       "7 cm"
+      ],
+      "answer": 0,
+      "explain": "√(12² + 5²) = √169 = 13"
      },
      {
       "id": "e11",
@@ -9153,13 +9275,16 @@
      },
      {
       "id": "e13",
-      "q": "Fernseher mit Breite 40 cm und Höhe 30 cm. Wie lang ist die Diagonale? (in cm)",
-      "explain": "1600 + 900 = 2500, d = 50 cm.",
-      "type": "input",
-      "answer": [
-       "50",
-       "50 cm"
-      ]
+      "q": "Fernseher: Breite 40 cm, Höhe 30 cm. Wie lang ist die Diagonale?",
+      "type": "mc",
+      "options": [
+       "50 cm",
+       "70 cm",
+       "35 cm",
+       "10 cm"
+      ],
+      "answer": 0,
+      "explain": "√(40² + 30²) = 50"
      },
      {
       "id": "e14",
