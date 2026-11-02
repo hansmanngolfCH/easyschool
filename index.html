@@ -2,7 +2,7 @@
 <html lang="de" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="color-scheme" content="light"><meta name="theme-color" content="#ffffff">
 <title>EasySchool</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Outfit:wght@500;600;700&family=Caveat:wght@600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Outfit:wght@500;600;700&family=Patrick+Hand&display=swap">
 <style>
 :root{
   color-scheme:light;
@@ -648,13 +648,13 @@ details.card[open] summary{margin-bottom:10px}
 .btn.seg{background:#fff;color:#3c4043}
 .ptab .pin:focus,.mq .pin:focus{background:#F1F3F4!important;border-bottom-color:#5f6368!important}
 .sheet.corr{position:relative}
-.hw{font-family:Caveat,"Segoe Print","Bradley Hand",cursive;font-size:1.55rem;line-height:1.1;color:#1a3fb0;word-break:break-word}
+.hw{font-family:"Patrick Hand","Segoe Print","Bradley Hand",cursive;font-size:1.55rem;line-height:1.1;color:#1a3fb0;word-break:break-word}
 .hw.red{color:#D93025;display:block;margin-top:2px}
 .pa{vertical-align:middle}
 .mkw{display:inline-block;margin-left:8px;vertical-align:middle}
 .mkk{width:30px;height:26px;fill:none;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
 .mkk.ok{stroke:#188038}.mkk.no{stroke:#D93025}
-.gmark{position:absolute;right:14px;top:10px;display:flex;flex-direction:column;align-items:center;transform:rotate(-7deg);font-family:Caveat,"Segoe Print","Bradley Hand",cursive;color:#D93025;z-index:2}
+.gmark{position:absolute;right:14px;top:10px;display:flex;flex-direction:column;align-items:center;transform:rotate(-7deg);font-family:"Patrick Hand","Segoe Print","Bradley Hand",cursive;color:#D93025;z-index:2}
 .gnote{font-size:2.6rem;font-weight:700;line-height:1;border:3px solid #D93025;border-radius:50%;padding:4px 12px}
 .gpts{font-size:1.25rem;font-weight:700;margin-top:2px}
 .sheet.corr .shead{padding-right:110px}
@@ -681,6 +681,15 @@ details.card[open] summary{margin-bottom:10px}
 .mq .pin.cl{padding:8px 4px}
 .mkw{margin-left:auto}
 .ptab .hw{font-size:1.4rem}
+
+/* v3.56 lesbare Handschrift, grosse Note */
+.hw{font-size:1.6rem;line-height:1.15}
+.ptab .hw{font-size:1.5rem}
+.gnote{font-size:4.6rem!important;font-weight:400;padding:2px 22px 6px;border-width:4px}
+.gpts{font-size:1.6rem!important;margin-top:4px}
+.gmark{right:10px;top:6px}
+.sheet.corr .shead{padding-right:170px;min-height:110px;align-items:flex-start}
+.sheet.corr .shead{min-height:135px!important}.gmark{top:2px}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -688,7 +697,7 @@ details.card[open] summary{margin-bottom:10px}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v3.55';
+var APP_VERSION='v3.56';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -1494,9 +1503,8 @@ function examQs(n,t){if(n.qlist)return n.qlist;return mkQs(n,t)}
 function isLangT(t){return t.subject==='franz'||t.subject==='engl'}
 function mkQs(n,t){if(!isLangT(t))return t.exam.questions;
   var cs=t.cards.filter(function(c){return c.fw&&c.de});if(n.mode==='kurz')cs=shuffle(cs).slice(0,7);
-  if(n.edir==='de')return cs.map(function(c){return {id:c.id,q:c.de.join(' / '),type:'input',answer:[c.fw],ref:c.id,explain:''}});
-  return cs.map(function(c){return {id:c.id,q:c.fw,type:'input',answer:c.de.slice(),ref:c.id,explain:''}})}
-function langHead(n,t){return n.edir==='de'?'Übersetze ins '+(t.subject==='engl'?'Englische':'Französische'):'Übersetze ins Deutsche'}
+  return cs.map(function(c){return {id:c.id,q:c.de.join(' / '),type:'input',answer:[c.fw],ref:c.id,explain:''}})}
+function langHead(n,t){return 'Übersetze ins '+(t.subject==='engl'?'Englische':'Französische')}
 var FUNNY={franz:['Franz Franzose','Pierre Baguette','Marie Croissant','Jean Fromage','Louis Käsli','Brigitte Bonjour','Claude Crêpe','Amélie Merci'],engl:['Tom Teabag','Lady Biscuit','Sir Toastbrot','Bob Bigben','Molly Muffin','Harry Hotdog','Tina Teatime','Jack Fish&Chips'],deu:['Hans Wurst','Berta Brezel','Fritz Müesli','Heidi Alpenblick','Sepp Rösti','Lisa Zopf'],mathe:['Prof. Pi Pfiffig','Zora Zähler','Nick Nenner','Bruno Bruch','Mia Mal-Zwei','Kurt Kehrbruch']};
 function funnyName(t){var l=FUNNY[t.subject]||FUNNY.deu;return l[Math.floor(Math.random()*l.length)]}
 function paperLeft(q){return esc(q.q)}
@@ -1512,7 +1520,7 @@ function vPaper(n,t,qs){
   return h+'</tbody></table></div><button class="btn pri big" data-act="finish">Abgeben</button></div>'}
 function vExam(){
   var n=nav,t=topicById(n.topicId),mathe=!isLangT(t),qs=examQs(n,t);
-  if(n.phase==='intro')return '<div class="stack"><div><p class="eyebrow">Musterprüfung</p><h1>'+esc(t.title)+'</h1></div>'+coach('Ist nur eine Musterprüfung. Hier darf noch jeder Fehler passieren.',1)+'<section class="card"><p>'+qs.length+' Fragen · Note von 1 bis 6</p><p class="sub" style="margin-top:8px">Antworte so, wie du es in der Schule tun würdest. Ohne Tipps, ohne Nachschauen.'+(mathe?' Für Zwischenschritte kannst du bei jeder Frage «Notizen machen» öffnen.':'')+' Es gibt keinen Zeitdruck. Für jede richtige Antwort gibt es XP, für gute Noten einen Bonus.</p></section>'+(mathe?'':'<div class="modes"><button class="btn seg'+(n.mode!=='kurz'?' on':'')+'" data-act="emode" data-m="alles">Alles</button><button class="btn seg'+(n.mode==='kurz'?' on':'')+'" data-act="emode" data-m="kurz">Kurztext</button></div><div class="modes"><button class="btn seg'+(n.edir!=='de'?' on':'')+'" data-act="edir" data-d="fw">Fremdsprache → Deutsch</button><button class="btn seg'+(n.edir==='de'?' on':'')+'" data-act="edir" data-d="de">Deutsch → Fremdsprache</button></div>')+'<div class="row"><button class="btn pri big" data-act="start">Los geht\'s</button><button class="btn big" data-act="back">Zurück</button></div></div>';
+  if(n.phase==='intro')return '<div class="stack"><div><p class="eyebrow">Musterprüfung</p><h1>'+esc(t.title)+'</h1></div>'+coach('Ist nur eine Musterprüfung. Hier darf noch jeder Fehler passieren.',1)+'<section class="card"><p>'+qs.length+' Fragen · Note von 1 bis 6</p><p class="sub" style="margin-top:8px">Antworte so, wie du es in der Schule tun würdest. Ohne Tipps, ohne Nachschauen.'+(mathe?' Für Zwischenschritte kannst du bei jeder Frage «Notizen machen» öffnen.':'')+' Es gibt keinen Zeitdruck. Für jede richtige Antwort gibt es XP, für gute Noten einen Bonus.</p></section>'+(mathe?'':'<div class="modes"><button class="btn seg'+(n.mode!=='kurz'?' on':'')+'" data-act="emode" data-m="alles">Alles</button><button class="btn seg'+(n.mode==='kurz'?' on':'')+'" data-act="emode" data-m="kurz">Kurztext</button></div>')+'<div class="row"><button class="btn pri big" data-act="start">Los geht\'s</button><button class="btn big" data-act="back">Zurück</button></div></div>';
   if(n.phase==='run'&&!mathe)return vPaper(n,t,qs);
   if(n.phase==='run'){
     var dt=new Date(),ds=dt.getDate()+'.'+(dt.getMonth()+1)+'.'+dt.getFullYear();
