@@ -2,7 +2,7 @@
 <html lang="de" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="color-scheme" content="light"><meta name="theme-color" content="#ffffff">
 <title>EasySchool</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Outfit:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Outfit:wght@500;600;700&family=Caveat:wght@600;700&display=swap">
 <style>
 :root{
   color-scheme:light;
@@ -642,6 +642,23 @@ details.card[open] summary{margin-bottom:10px}
 .clist.cl-o{margin-top:22px}
 .clist.cl-p .ccard.sm2 .cnum{border-radius:50%}
 .clist.cl-o .ccard.sm2 .cnum{border-radius:6px}
+
+/* v3.53 Korrektur wie in der Schule, graue Auswahl */
+.btn.seg.on{background:#E8EAED;color:#202124;border-color:#BDC1C6;font-weight:700}
+.btn.seg{background:#fff;color:#3c4043}
+.ptab .pin:focus,.mq .pin:focus{background:#F1F3F4!important;border-bottom-color:#5f6368!important}
+.sheet.corr{position:relative}
+.hw{font-family:Caveat,"Segoe Print","Bradley Hand",cursive;font-size:1.55rem;line-height:1.1;color:#1a3fb0;word-break:break-word}
+.hw.red{color:#D93025;display:block;margin-top:2px}
+.pa{vertical-align:middle}
+.mkw{display:inline-block;margin-left:8px;vertical-align:middle}
+.mkk{width:30px;height:26px;fill:none;stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+.mkk.ok{stroke:#188038}.mkk.no{stroke:#D93025}
+.gmark{position:absolute;right:14px;top:10px;display:flex;flex-direction:column;align-items:center;transform:rotate(-7deg);font-family:Caveat,"Segoe Print","Bradley Hand",cursive;color:#D93025;z-index:2}
+.gnote{font-size:2.6rem;font-weight:700;line-height:1;border:3px solid #D93025;border-radius:50%;padding:4px 12px}
+.gpts{font-size:1.25rem;font-weight:700;margin-top:2px}
+.sheet.corr .shead{padding-right:110px}
+.mq .pa{padding:4px 0 8px 40px;border-bottom:1.5px dashed #bbb}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -649,7 +666,7 @@ details.card[open] summary{margin-bottom:10px}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v3.52';
+var APP_VERSION='v3.53';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -820,8 +837,8 @@ function buildQueue(child,topics,force){
   return q.map(function(x){return x.k});
 }
 function bestNote(child,topicId){var best=0;prog(child).exams.forEach(function(e){if(e.topic===topicId&&e.note>best)best=e.note});return best}
-function fmt(n){return String(parseFloat(n.toFixed(2)))}
-function grade(score,max){return Math.round((1+5*score/max)*4)/4}
+function fmt(n){return (Math.round(n*10)/10).toFixed(1)}
+function grade(score,max){return Math.round((1+5*score/max)*10)/10}
 
 /* ---------- Prüfen ---------- */
 function norm(s){return String(s).toLowerCase().replace(/[’‘`´]/g,"'").replace(/[−–]/g,'-').replace(/\s+/g,' ').replace(/\s*([\/=:+\-·*])\s*/g,'$1').replace(/[.!?\s]+$/,'').trim()}
@@ -1247,8 +1264,8 @@ function tryHTML(st){
     return '<div class="try"><p class="q">'+esc(T.q)+'</p><div class="dslots">'+T.drag.slots.map(function(s,si){return '<div class="dslot'+(pl[si]?' full':'')+'" data-slot="'+si+'" data-act="dslot" data-si="'+si+'"><small>'+esc(s)+'</small><b>'+(pl[si]?esc(pl[si]):'&nbsp;')+'</b></div>'}).join('')+'</div><div class="dchips">'+T.drag.chips.filter(function(c){return used.indexOf(c)<0}).map(function(c){return '<button class="dchip'+(nav.dsel===c?' sel':'')+'" data-chip="'+esc(c)+'">'+esc(c)+'</button>'}).join('')+'</div><div class="row"><button class="btn pri" data-act="dcheck">Prüfen</button><button class="btn" data-act="dreset">Neu</button></div><p class="fb '+(ok===true?'ok':ok===false?'no':'')+'" role="status">'+(ok===true?'Richtig!':ok===false?'Noch nicht ganz. '+esc(T.hint||''):'Ziehe die Wörter in die Felder oder tippe Wort und Feld an.')+'</p></div>'}
   return '<div class="try"><p class="q">Probier es kurz: '+rt(T.q)+'</p><div class="row"><input class="inp" id="tryin" placeholder="'+ph(T.a[0])+'" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Deine Antwort"><button class="btn pri" data-act="try">Prüfen</button>'+(T.hint?'<button class="btn" data-act="tryhint">Tipp</button>':'')+'</div><p class="fb" id="tryfb" role="status"></p></div>'}
 function vWordList(t){
-  var L=nav.lst||(nav.lst={dir:'de',open:{},mark:{}}),cs=t.cards.filter(function(c){return c.fw&&c.de}),nd=Object.keys(L.mark).filter(function(k){return L.mark[k]==='ok'}).length;
-  var h='<div class="wl"><div class="row wl-top"><button class="btn sm'+(L.dir==='de'?' pri':'')+'" data-act="ldir" data-d="de">Deutsch → Fremdsprache</button><button class="btn sm'+(L.dir==='fw'?' pri':'')+'" data-act="ldir" data-d="fw">Fremdsprache → Deutsch</button></div><div class="row between"><span class="sub">'+nd+' von '+cs.length+' gewusst</span><button class="btn sm" data-act="lreset">Alle wieder zudecken</button></div><div class="wl-tab">';
+  var L=nav.lst||(nav.lst={dir:'fw',open:{},mark:{}}),cs=t.cards.filter(function(c){return c.fw&&c.de}),nd=Object.keys(L.mark).filter(function(k){return L.mark[k]==='ok'}).length;
+  var h='<div class="wl"><div class="row wl-top"><button class="btn sm seg'+(L.dir!=='de'?' on':'')+'" data-act="ldir" data-d="fw">Fremdsprache → Deutsch</button><button class="btn sm seg'+(L.dir==='de'?' on':'')+'" data-act="ldir" data-d="de">Deutsch → Fremdsprache</button></div><div class="row between"><span class="sub">'+nd+' von '+cs.length+' gewusst</span><button class="btn sm" data-act="lreset">Alle wieder zudecken</button></div><div class="wl-tab">';
   cs.forEach(function(c){
     var q=L.dir==='de'?c.de.join(' / '):c.fw,a=L.dir==='de'?c.fw:c.de.join(' / '),o=L.open[c.id],m=L.mark[c.id];
     h+='<div class="wl-row'+(m?' '+m:'')+'"><div class="wl-q">'+esc(q)+'</div><button class="wl-a'+(o?' open':'')+'" data-act="lopen" data-id="'+esc(c.id)+'" aria-label="Aufdecken">'+(o?esc(a):'Tippen zum Aufdecken')+'</button>'+(o?'<div class="wl-m"><button class="mk ok'+(m==='ok'?' on':'')+'" data-act="lmark" data-id="'+esc(c.id)+'" data-v="ok" aria-label="Gewusst">✓</button><button class="mk no'+(m==='no'?' on':'')+'" data-act="lmark" data-id="'+esc(c.id)+'" data-v="no" aria-label="Nicht gewusst">✗</button></div>':'')+'</div>';
@@ -1454,13 +1471,15 @@ function examQs(n,t){if(n.qlist)return n.qlist;return mkQs(n,t)}
 function isLangT(t){return t.subject==='franz'||t.subject==='engl'}
 function mkQs(n,t){if(!isLangT(t))return t.exam.questions;
   var cs=t.cards.filter(function(c){return c.fw&&c.de});if(n.mode==='kurz')cs=shuffle(cs).slice(0,7);
-  return cs.map(function(c){return {id:c.id,q:c.de.join(' / '),type:'input',answer:[c.fw],ref:c.id,explain:''}})}
+  if(n.edir==='de')return cs.map(function(c){return {id:c.id,q:c.de.join(' / '),type:'input',answer:[c.fw],ref:c.id,explain:''}});
+  return cs.map(function(c){return {id:c.id,q:c.fw,type:'input',answer:c.de.slice(),ref:c.id,explain:''}})}
+function langHead(n,t){return n.edir==='de'?'Übersetze ins '+(t.subject==='engl'?'Englische':'Französische'):'Übersetze ins Deutsche'}
 var FUNNY={franz:['Franz Franzose','Pierre Baguette','Marie Croissant','Jean Fromage','Louis Käsli','Brigitte Bonjour','Claude Crêpe','Amélie Merci'],engl:['Tom Teabag','Lady Biscuit','Sir Toastbrot','Bob Bigben','Molly Muffin','Harry Hotdog','Tina Teatime','Jack Fish&Chips'],deu:['Hans Wurst','Berta Brezel','Fritz Müesli','Heidi Alpenblick','Sepp Rösti','Lisa Zopf'],mathe:['Prof. Pi Pfiffig','Zora Zähler','Nick Nenner','Bruno Bruch','Mia Mal-Zwei','Kurt Kehrbruch']};
 function funnyName(t){var l=FUNNY[t.subject]||FUNNY.deu;return l[Math.floor(Math.random()*l.length)]}
 function paperLeft(q){return esc(q.q)}
 function vPaper(n,t,qs){
   var dt=new Date(),ds=dt.getDate()+'.'+(dt.getMonth()+1)+'.'+dt.getFullYear(),lg=t.subject==='engl'?'Englische':'Französische';
-  var h='<div class="paperpage"><p class="ptitle">Prüfung · '+esc(t.title)+'</p><div class="sheet"><div class="shead"><span>Name: <b>'+esc(n.pname||'')+'</b></span><span>Datum: <b>'+ds+'</b></span></div><table class="ptab"><thead><tr><th class="pn">Nr.</th><th>'+'Übersetze ins '+lg+'</th><th>Antwort</th></tr></thead><tbody>';
+  var h='<div class="paperpage"><p class="ptitle">Prüfung · '+esc(t.title)+'</p><div class="sheet"><div class="shead"><span>Name: <b>'+esc(n.pname||'')+'</b></span><span>Datum: <b>'+ds+'</b></span></div><table class="ptab"><thead><tr><th class="pn">Nr.</th><th>'+langHead(n,t)+'</th><th>Antwort</th></tr></thead><tbody>';
   qs.forEach(function(q,i){
     var cell;
     if(q.type==='mc')cell='<select class="pin" data-q="'+q.id+'"><option value="">–</option>'+q.options.map(function(o,j){return '<option value="'+j+'"'+(n.answers[q.id]===j?' selected':'')+'>'+esc(o.replace(/<[^>]+>/g,''))+'</option>'}).join('')+'</select>';
@@ -1470,7 +1489,7 @@ function vPaper(n,t,qs){
   return h+'</tbody></table></div><button class="btn pri big" data-act="finish">Abgeben</button></div>'}
 function vExam(){
   var n=nav,t=topicById(n.topicId),mathe=!isLangT(t),qs=examQs(n,t);
-  if(n.phase==='intro')return '<div class="stack"><div><p class="eyebrow">Musterprüfung</p><h1>'+esc(t.title)+'</h1></div>'+coach('Ist nur eine Musterprüfung. Hier darf noch jeder Fehler passieren.',1)+'<section class="card"><p>'+qs.length+' Fragen · Note von 1 bis 6</p><p class="sub" style="margin-top:8px">Antworte so, wie du es in der Schule tun würdest. Ohne Tipps, ohne Nachschauen.'+(mathe?' Für Zwischenschritte kannst du bei jeder Frage «Notizen machen» öffnen.':'')+' Es gibt keinen Zeitdruck. Für jede richtige Antwort gibt es XP, für gute Noten einen Bonus.</p></section>'+(mathe?'':'<div class="modes"><button class="btn'+(n.mode!=='kurz'?' pri':'')+'" data-act="emode" data-m="alles">Alles</button><button class="btn'+(n.mode==='kurz'?' pri':'')+'" data-act="emode" data-m="kurz">Kurztext</button></div>')+'<div class="row"><button class="btn pri big" data-act="start">Los geht\'s</button><button class="btn big" data-act="back">Zurück</button></div></div>';
+  if(n.phase==='intro')return '<div class="stack"><div><p class="eyebrow">Musterprüfung</p><h1>'+esc(t.title)+'</h1></div>'+coach('Ist nur eine Musterprüfung. Hier darf noch jeder Fehler passieren.',1)+'<section class="card"><p>'+qs.length+' Fragen · Note von 1 bis 6</p><p class="sub" style="margin-top:8px">Antworte so, wie du es in der Schule tun würdest. Ohne Tipps, ohne Nachschauen.'+(mathe?' Für Zwischenschritte kannst du bei jeder Frage «Notizen machen» öffnen.':'')+' Es gibt keinen Zeitdruck. Für jede richtige Antwort gibt es XP, für gute Noten einen Bonus.</p></section>'+(mathe?'':'<div class="modes"><button class="btn seg'+(n.mode!=='kurz'?' on':'')+'" data-act="emode" data-m="alles">Alles</button><button class="btn seg'+(n.mode==='kurz'?' on':'')+'" data-act="emode" data-m="kurz">Kurztext</button></div><div class="modes"><button class="btn seg'+(n.edir!=='de'?' on':'')+'" data-act="edir" data-d="fw">Fremdsprache → Deutsch</button><button class="btn seg'+(n.edir==='de'?' on':'')+'" data-act="edir" data-d="de">Deutsch → Fremdsprache</button></div>')+'<div class="row"><button class="btn pri big" data-act="start">Los geht\'s</button><button class="btn big" data-act="back">Zurück</button></div></div>';
   if(n.phase==='run'&&!mathe)return vPaper(n,t,qs);
   if(n.phase==='run'){
     var dt=new Date(),ds=dt.getDate()+'.'+(dt.getMonth()+1)+'.'+dt.getFullYear();
@@ -1483,12 +1502,24 @@ function vExam(){
     return html+'<button class="btn pri big" data-act="finish">Abgeben</button></div>';
   }
   var r=n.result,msg=r.note>=5.5?'Wow! Das war fast zu einfach.':r.note>=4.5?'Stark gemacht. Noch ein bisschen Feinschliff.':r.note>=4?'Bestanden! Übe noch die Aufgaben, die nicht geklappt haben.':'Das war ein Aufwärmen. Die Aufgaben, die nicht geklappt haben, üben wir jetzt zusammen.';
-  var mood=r.note>=5.5?4:r.note>=4.5?3:r.note>=4?2:1;
-  var html3='<div class="stack"><div><p class="eyebrow">Ergebnis</p><h1>'+esc(t.title)+'</h1></div><section class="card row"><div class="grade">'+fmt(r.note)+'</div><div class="grow"><h2>'+r.score+' von '+r.max+' richtig</h2><p class="sub">Note 1 bis 6 · +'+r.xp+' XP</p></div></section>'+'<p class="sub" style="margin:0">'+esc(msg)+'</p>';
-  r.items.forEach(function(it,i){
+  var dt2=new Date(),ds2=dt2.getDate()+'.'+(dt2.getMonth()+1)+'.'+dt2.getFullYear();
+  var TK='<svg class="mkk ok" viewBox="0 0 32 28" aria-label="richtig"><path d="M3 15l8 9L29 3"/></svg>',XX='<svg class="mkk no" viewBox="0 0 28 28" aria-label="falsch"><path d="M4 5l20 18M24 4L5 24"/></svg>';
+  var html3='<div class="paperpage"><p class="ptitle">Korrektur · '+esc(t.title)+'</p><div class="sheet corr"><div class="gmark"><span class="gnote">'+fmt(r.note)+'</span><span class="gpts">'+r.score+' / '+r.max+'</span></div><div class="shead"><span>Name: <b>'+esc(n.pname||'')+'</b></span><span>Datum: <b>'+ds2+'</b></span></div>';
+  var rowAns=function(it,i){
     var ans=it.q.type==='mc'?it.q.options[it.q.answer]:it.q.answer[0],given=it.q.type==='mc'?(it.g==null?'':it.q.options[it.g]):(it.g||'');
-    html3+='<div class="rl '+(it.ok?'ok':'no')+'"><span class="rm">'+(it.ok?'✓':'✗')+'</span><div class="rb"><span class="rq">'+(i+1)+'. '+rt(it.q.q)+'</span>'+(it.ok?'<span class="ra"><b>'+rt(ans)+'</b></span>':'<span class="ra">Deine Antwort: '+(given?esc(given):'<i>keine</i>')+' · Richtig: <b>'+rt(ans)+'</b></span>')+(!it.ok&&it.q.explain&&it.q.explain.indexOf(ans)<0?'<span class="why">'+rt(it.q.explain)+'</span>':'')+'</div></div>';
-  });
+    var tilt=((i*37)%7)-3;
+    return '<span class="hw">'+(given?esc(given):'')+'</span><span class="mkw" style="transform:rotate('+tilt+'deg)">'+(it.ok?TK:XX)+'</span>'+(it.ok?'':'<span class="hw red">'+rt(ans)+'</span>');
+  };
+  if(isLangT(t)){
+    html3+='<table class="ptab"><thead><tr><th class="pn">Nr.</th><th>'+langHead(n,t)+'</th><th>Antwort</th></tr></thead><tbody>';
+    r.items.forEach(function(it,i){html3+='<tr><td class="pn"><span class="nc c'+(i%4)+'">'+(i+1)+'</span></td><td class="pq">'+paperLeft(it.q)+'</td><td class="pa">'+rowAns(it,i)+'</td></tr>'});
+    html3+='</tbody></table>';
+  }else{
+    html3+=(t.subject==='mathe'&&t.id.indexOf('bruch')>=0?'<p class="sub" style="margin:0 0 4px">Alle Brüche so weit wie möglich kürzen.</p>':'')+'<ol class="mq">';
+    r.items.forEach(function(it,i){html3+='<li><div class="mqt"><span class="nc c'+(i%4)+'">'+(i+1)+'</span><div class="mqx">'+rt(it.q.q.replace(' (so weit wie möglich kürzen)',''))+'</div></div><div class="pa">'+rowAns(it,i)+'</div></li>'});
+    html3+='</ol>';
+  }
+  html3+='</div><p class="sub" style="margin:10px 2px">'+esc(msg)+' · +'+r.xp+' XP</p>';
   return html3+'<div class="row"><button class="btn pri big" data-act="retake">Noch einmal</button><button class="btn big" data-act="practice" data-scope="topic:'+esc(t.id)+'" data-force="1">Falsche Aufgaben üben</button><button class="btn ghost" data-act="back">Fertig</button></div></div>';
 }
 
@@ -1594,8 +1625,8 @@ var ACT={
   flip:function(b){if(b.classList)b.classList.toggle('on')},
   speak:function(b){try{var u=new SpeechSynthesisUtterance(b.dataset.t);u.lang=b.dataset.lang||'en-GB';u.rate=.9;speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){}},
   qz:function(b){nav.qz=nav.qz||{};var key=nav.step+'_'+b.dataset.q;if(nav.qz[key]!=null)return;nav.qz[key]=+b.dataset.i;render()},
-  ldir:function(b){nav.lst=nav.lst||{open:{},mark:{}};nav.lst.dir=b.dataset.d;nav.lst.open={};render()},
-  lopen:function(b){var L=nav.lst||(nav.lst={dir:'de',open:{},mark:{}});L.open[b.dataset.id]=!L.open[b.dataset.id];render()},
+  ldir:function(b){nav.lst=nav.lst||{open:{},mark:{}};nav.lst.mark=nav.lst.mark||{};nav.lst.dir=b.dataset.d;nav.lst.open={};render()},
+  lopen:function(b){var L=nav.lst||(nav.lst={dir:'fw',open:{},mark:{}});L.open[b.dataset.id]=!L.open[b.dataset.id];render()},
   lmark:function(b){var L=nav.lst;L.mark[b.dataset.id]=b.dataset.v;render()},
   lreset:function(){var L=nav.lst;if(L){L.open={};L.mark={}}render()},
   topt:function(b){var T=topicById(nav.topicId).explain[nav.step].try,o=T.opts[+b.dataset.i],i=nav.step;nav.topt=nav.topt||{};var ch=nav.topt[i]||(nav.topt[i]={});if(o===T.a[0])ch.ok=true;else{ch.bad=(ch.bad||[]).concat([o])}render()},
@@ -1693,6 +1724,7 @@ var ACT={
   },
   exam:function(b){go({view:'exam',child:nav.child,subject:nav.subject,topicId:b.dataset.id,phase:'intro',answers:{},padOpen:{}})},
   emode:function(b){nav.mode=b.dataset.m;nav.qlist=null;render()},
+  edir:function(b){nav.edir=b.dataset.d;nav.qlist=null;render()},
   start:function(){nav.pname=funnyName(topicById(nav.topicId));nav.qlist=mkQs(nav,topicById(nav.topicId));clearPads('e:'+nav.topicId+':');nav.phase='run';nav.started=Date.now();nav.answers={};nav.padOpen={};render();window.scrollTo(0,0)},
   retake:function(){clearPads('e:'+nav.topicId+':');nav.phase='intro';nav.answers={};nav.result=null;nav.qlist=null;render();window.scrollTo(0,0)},
   finish:function(){finishExam()}

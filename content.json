@@ -2571,334 +2571,6 @@
      "h": "Wörterliste zum Durchlernen",
      "text": "So lernst du wie auf einem Blatt: Zuerst das Wort laut sagen. Dann tippe auf das Feld und decke die Lösung auf. Dann prüfe: Hast du es gewusst? Danach kommt das nächste Wort. Mit dem Knopf oben wechselst du die Richtung.",
      "list": true
-    },
-    {
-     "h": "Instrumente (1/3)",
-     "text": "Tippe auf eine Karte, um die Übersetzung zu sehen. Mit dem Lautsprecher hörst du das Wort.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "clapsticks",
-         "Schlaghölzer",
-         "🥢"
-        ],
-        [
-         "orchestra",
-         "Orchester",
-         "🎼"
-        ],
-        [
-         "brass instrument",
-         "Blechblasinstrument",
-         "🎺"
-        ],
-        [
-         "percussion instrument",
-         "Schlaginstrument",
-         "🪘"
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Instrumente (2/3)",
-     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "keyboard instrument",
-         "Tasteninstrument",
-         "🎹"
-        ],
-        [
-         "string instrument",
-         "Saiteninstrument",
-         "🎸"
-        ],
-        [
-         "woodwind instrument",
-         "Holzblasinstrument",
-         "🎷"
-        ],
-        [
-         "electric keyboard",
-         "elektrisches Keyboard",
-         "🎹"
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Instrumente (3/3)",
-     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "guitar",
-         "Gitarre",
-         "🎸"
-        ],
-        [
-         "piano",
-         "Klavier",
-         "🎹"
-        ],
-        [
-         "drums",
-         "Schlagzeug",
-         "🥁"
-        ],
-        [
-         "violin",
-         "Geige / Violine",
-         "🎻"
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Tätigkeiten und Dinge (1/4)",
-     "text": "Erst raten, dann aufdecken. So merkst du es dir besser.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "breathe",
-         "atmen",
-         "💨"
-        ],
-        [
-         "choose",
-         "auswählen",
-         "👆"
-        ],
-        [
-         "clean",
-         "reinigen / sauber machen",
-         "🧽"
-        ],
-        [
-         "decorate",
-         "dekorieren",
-         "🎄"
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Tätigkeiten und Dinge (2/4)",
-     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "hear",
-         "hören",
-         "👂"
-        ],
-        [
-         "hit",
-         "schlagen",
-         "🔨"
-        ],
-        [
-         "make",
-         "machen / herstellen",
-         "🛠️"
-        ],
-        [
-         "paint",
-         "malen / streichen",
-         "🎨"
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Tätigkeiten und Dinge (3/4)",
-     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "shake",
-         "schütteln",
-         ""
-        ],
-        [
-         "branch",
-         "Ast",
-         "🌿"
-        ],
-        [
-         "tree",
-         "Baum",
-         "🌳"
-        ],
-        [
-         "wood",
-         "Holz",
-         "🪵"
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Tätigkeiten und Dinge (4/4)",
-     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "shape",
-         "Form",
-         "🔷"
-        ],
-        [
-         "clue",
-         "Hinweis",
-         "🔍"
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Fragewörter",
-     "text": "Mit diesen Wörtern stellst du Fragen. Die Aussprache steht in Klammern.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "what",
-         "was",
-         "❓",
-         "wuat"
-        ],
-        [
-         "where",
-         "wo",
-         "📍",
-         "wuär"
-        ],
-        [
-         "how",
-         "wie",
-         "🤔",
-         "hauw"
-        ],
-        [
-         "who",
-         "wer",
-         "🧑",
-         "hoo"
-        ],
-        [
-         "when",
-         "wann",
-         "⏰",
-         "wenn"
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Sätze über Musik (1/2)",
-     "text": "Lies den Satz, versuche ihn zu übersetzen und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "What musical instrument do you play?",
-         "Was für ein Instrument spielst du?",
-         "",
-         ""
-        ],
-        [
-         "Who do you play it with?",
-         "Mit wem spielst du es?",
-         "",
-         ""
-        ],
-        [
-         "How do you play it?",
-         "Wie spielst du es?",
-         "",
-         ""
-        ],
-        [
-         "When do you practice?",
-         "Wann übst du?",
-         "",
-         ""
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Sätze über Musik (2/2)",
-     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "Where do you practice?",
-         "Wo übst du?",
-         "",
-         ""
-        ],
-        [
-         "We practice on stage at school.",
-         "Wir üben auf der Schulbühne.",
-         "",
-         ""
-        ],
-        [
-         "I like playing the recorder.",
-         "Ich spiele gerne Flöte.",
-         "",
-         ""
-        ],
-        [
-         "You use your fingers and mouth to play the saxophone.",
-         "Du benützt deine Finger und deinen Mund, um das Saxofon zu spielen.",
-         "",
-         ""
-        ]
-       ]
-      }
-     ],
-     "quiz": true
     }
    ],
    "cards": [
@@ -2908,7 +2580,6 @@
      "de": [
       "Schlaghölzer"
      ],
-     "emo": "🥢",
      "grp": "inst"
     },
     {
@@ -2917,7 +2588,6 @@
      "de": [
       "Orchester"
      ],
-     "emo": "🎼",
      "grp": "inst"
     },
     {
@@ -2926,7 +2596,6 @@
      "de": [
       "Blechblasinstrument"
      ],
-     "emo": "🎺",
      "grp": "inst"
     },
     {
@@ -2935,7 +2604,6 @@
      "de": [
       "Schlaginstrument"
      ],
-     "emo": "🪘",
      "grp": "inst"
     },
     {
@@ -2944,7 +2612,6 @@
      "de": [
       "Tasteninstrument"
      ],
-     "emo": "🎹",
      "grp": "inst"
     },
     {
@@ -2953,7 +2620,6 @@
      "de": [
       "Saiteninstrument"
      ],
-     "emo": "🎸",
      "grp": "inst"
     },
     {
@@ -2962,7 +2628,6 @@
      "de": [
       "Holzblasinstrument"
      ],
-     "emo": "🎷",
      "grp": "inst"
     },
     {
@@ -2971,7 +2636,6 @@
      "de": [
       "elektrisches Keyboard"
      ],
-     "emo": "🎹",
      "grp": "inst"
     },
     {
@@ -2980,7 +2644,6 @@
      "de": [
       "Gitarre"
      ],
-     "emo": "🎸",
      "grp": "inst"
     },
     {
@@ -2989,7 +2652,6 @@
      "de": [
       "Klavier"
      ],
-     "emo": "🎹",
      "grp": "inst"
     },
     {
@@ -2998,7 +2660,6 @@
      "de": [
       "Schlagzeug"
      ],
-     "emo": "🥁",
      "grp": "inst"
     },
     {
@@ -3008,7 +2669,6 @@
       "Geige",
       "Violine"
      ],
-     "emo": "🎻",
      "grp": "inst"
     },
     {
@@ -3017,7 +2677,6 @@
      "de": [
       "atmen"
      ],
-     "emo": "💨",
      "grp": "verb"
     },
     {
@@ -3026,7 +2685,6 @@
      "de": [
       "auswählen"
      ],
-     "emo": "👆",
      "grp": "verb"
     },
     {
@@ -3036,7 +2694,6 @@
       "reinigen",
       "sauber machen"
      ],
-     "emo": "🧽",
      "grp": "verb"
     },
     {
@@ -3045,7 +2702,6 @@
      "de": [
       "dekorieren"
      ],
-     "emo": "🎄",
      "grp": "verb"
     },
     {
@@ -3054,7 +2710,6 @@
      "de": [
       "hören"
      ],
-     "emo": "👂",
      "grp": "verb"
     },
     {
@@ -3063,7 +2718,6 @@
      "de": [
       "schlagen"
      ],
-     "emo": "🔨",
      "grp": "verb"
     },
     {
@@ -3073,7 +2727,6 @@
       "machen",
       "herstellen"
      ],
-     "emo": "🛠️",
      "grp": "verb"
     },
     {
@@ -3083,7 +2736,6 @@
       "malen",
       "streichen"
      ],
-     "emo": "🎨",
      "grp": "verb"
     },
     {
@@ -3100,7 +2752,6 @@
      "de": [
       "Ast"
      ],
-     "emo": "🌿",
      "grp": "noun"
     },
     {
@@ -3109,7 +2760,6 @@
      "de": [
       "Baum"
      ],
-     "emo": "🌳",
      "grp": "noun"
     },
     {
@@ -3118,7 +2768,6 @@
      "de": [
       "Holz"
      ],
-     "emo": "🪵",
      "grp": "noun"
     },
     {
@@ -3127,7 +2776,6 @@
      "de": [
       "Form"
      ],
-     "emo": "🔷",
      "grp": "noun"
     },
     {
@@ -3136,7 +2784,6 @@
      "de": [
       "Hinweis"
      ],
-     "emo": "🔍",
      "grp": "noun"
     },
     {
@@ -3145,7 +2792,6 @@
      "de": [
       "was"
      ],
-     "emo": "❓",
      "grp": "qw",
      "pron": "wuat"
     },
@@ -3155,7 +2801,6 @@
      "de": [
       "wo"
      ],
-     "emo": "📍",
      "grp": "qw",
      "pron": "wuär"
     },
@@ -3165,7 +2810,6 @@
      "de": [
       "wie"
      ],
-     "emo": "🤔",
      "grp": "qw",
      "pron": "hauw"
     },
@@ -3175,7 +2819,6 @@
      "de": [
       "wer"
      ],
-     "emo": "🧑",
      "grp": "qw",
      "pron": "hoo"
     },
@@ -3185,7 +2828,6 @@
      "de": [
       "wann"
      ],
-     "emo": "⏰",
      "grp": "qw",
      "pron": "wenn"
     },
@@ -3476,286 +3118,6 @@
      "h": "Wörterliste zum Durchlernen",
      "text": "So lernst du wie auf einem Blatt: Zuerst das Wort laut sagen. Dann tippe auf das Feld und decke die Lösung auf. Dann prüfe: Hast du es gewusst? Danach kommt das nächste Wort. Mit dem Knopf oben wechselst du die Richtung.",
      "list": true
-    },
-    {
-     "h": "Schulanfang",
-     "text": "Tippe auf eine Karte, um die Übersetzung zu sehen. Rate zuerst und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "Chouette, c'est la rentrée!",
-         "Toll, es ist Schulanfang!",
-         ""
-        ],
-        [
-         "Zut, c'est la rentrée!",
-         "Oje, es ist Schulanfang!",
-         ""
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Schulsachen (1/3)",
-     "text": "Tippe auf eine Karte, um die Übersetzung zu sehen. Rate zuerst und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "le livre",
-         "Buch",
-         "📖"
-        ],
-        [
-         "la règle",
-         "Lineal",
-         "📏"
-        ],
-        [
-         "le classeur",
-         "Ordner",
-         "🗂️"
-        ],
-        [
-         "le cahier",
-         "Heft",
-         "📓"
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Schulsachen (2/3)",
-     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "le crayon",
-         "Bleistift",
-         "✏️"
-        ],
-        [
-         "le stylo",
-         "Kugelschreiber",
-         "🖊️"
-        ],
-        [
-         "la gomme",
-         "Gummi",
-         "🧽"
-        ],
-        [
-         "le tableau noir",
-         "Wandtafel",
-         "🧑‍🏫"
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Schulsachen (3/3)",
-     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "la trousse",
-         "Etui",
-         "👝"
-        ],
-        [
-         "la table",
-         "Tisch",
-         ""
-        ],
-        [
-         "la chaise",
-         "Stuhl",
-         "🪑"
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Schulfächer (1/2)",
-     "text": "Tippe auf eine Karte, um die Übersetzung zu sehen. Rate zuerst und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "la matière scolaire",
-         "Schulfach",
-         "📚"
-        ],
-        [
-         "l'allemand (m)",
-         "Deutsch",
-         ""
-        ],
-        [
-         "le français",
-         "Französisch",
-         ""
-        ],
-        [
-         "l'anglais (m)",
-         "Englisch",
-         ""
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Schulfächer (2/2)",
-     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "les maths, les mathématiques (f pl)",
-         "Mathematik",
-         "➗"
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Die Wochentage (1/2)",
-     "text": "Tippe auf eine Karte, um die Übersetzung zu sehen. Rate zuerst und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "les jours (m) de la semaine",
-         "die Wochentage",
-         "📅"
-        ],
-        [
-         "lundi",
-         "Montag",
-         ""
-        ],
-        [
-         "mardi",
-         "Dienstag",
-         ""
-        ],
-        [
-         "mercredi",
-         "Mittwoch",
-         ""
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Die Wochentage (2/2)",
-     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "jeudi",
-         "Donnerstag",
-         ""
-        ],
-        [
-         "vendredi",
-         "Freitag",
-         ""
-        ],
-        [
-         "samedi",
-         "Samstag",
-         ""
-        ],
-        [
-         "dimanche",
-         "Sonntag",
-         ""
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Im Unterricht (1/2)",
-     "text": "Tippe auf eine Karte, um die Übersetzung zu sehen. Rate zuerst und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "une école",
-         "eine Schule",
-         "🏫"
-        ],
-        [
-         "calculer",
-         "rechnen",
-         ""
-        ],
-        [
-         "dessiner",
-         "zeichnen",
-         "🎨"
-        ],
-        [
-         "chanter",
-         "singen",
-         "🎤"
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Im Unterricht (2/2)",
-     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "expérimenter",
-         "experimentieren",
-         "🧪"
-        ],
-        [
-         "parler français",
-         "Französisch sprechen",
-         "🗣️"
-        ]
-       ]
-      }
-     ],
-     "quiz": true
     }
    ],
    "cards": [
@@ -3781,8 +3143,7 @@
      "de": [
       "Buch"
      ],
-     "grp": "obj",
-     "emo": "📖"
+     "grp": "obj"
     },
     {
      "id": "s4",
@@ -3790,8 +3151,7 @@
      "de": [
       "Lineal"
      ],
-     "grp": "obj",
-     "emo": "📏"
+     "grp": "obj"
     },
     {
      "id": "s5",
@@ -3799,8 +3159,7 @@
      "de": [
       "Ordner"
      ],
-     "grp": "obj",
-     "emo": "🗂️"
+     "grp": "obj"
     },
     {
      "id": "s6",
@@ -3808,8 +3167,7 @@
      "de": [
       "Heft"
      ],
-     "grp": "obj",
-     "emo": "📓"
+     "grp": "obj"
     },
     {
      "id": "s7",
@@ -3817,8 +3175,7 @@
      "de": [
       "Bleistift"
      ],
-     "grp": "obj",
-     "emo": "✏️"
+     "grp": "obj"
     },
     {
      "id": "s8",
@@ -3826,8 +3183,7 @@
      "de": [
       "Kugelschreiber"
      ],
-     "grp": "obj",
-     "emo": "🖊️"
+     "grp": "obj"
     },
     {
      "id": "s9",
@@ -3835,8 +3191,7 @@
      "de": [
       "Gummi"
      ],
-     "grp": "obj",
-     "emo": "🧽"
+     "grp": "obj"
     },
     {
      "id": "s10",
@@ -3844,8 +3199,7 @@
      "de": [
       "Wandtafel"
      ],
-     "grp": "obj",
-     "emo": "🧑‍🏫"
+     "grp": "obj"
     },
     {
      "id": "s11",
@@ -3853,8 +3207,7 @@
      "de": [
       "Etui"
      ],
-     "grp": "obj",
-     "emo": "👝"
+     "grp": "obj"
     },
     {
      "id": "s12",
@@ -3870,8 +3223,7 @@
      "de": [
       "Stuhl"
      ],
-     "grp": "obj",
-     "emo": "🪑"
+     "grp": "obj"
     },
     {
      "id": "s14",
@@ -3879,8 +3231,7 @@
      "de": [
       "Schulfach"
      ],
-     "grp": "mat",
-     "emo": "📚"
+     "grp": "mat"
     },
     {
      "id": "s15",
@@ -3912,8 +3263,7 @@
      "de": [
       "Mathematik"
      ],
-     "grp": "mat",
-     "emo": "➗"
+     "grp": "mat"
     },
     {
      "id": "s19",
@@ -3921,8 +3271,7 @@
      "de": [
       "die Wochentage"
      ],
-     "grp": "jour",
-     "emo": "📅"
+     "grp": "jour"
     },
     {
      "id": "s20",
@@ -3986,8 +3335,7 @@
      "de": [
       "eine Schule"
      ],
-     "grp": "verb",
-     "emo": "🏫"
+     "grp": "verb"
     },
     {
      "id": "s28",
@@ -4003,8 +3351,7 @@
      "de": [
       "zeichnen"
      ],
-     "grp": "verb",
-     "emo": "🎨"
+     "grp": "verb"
     },
     {
      "id": "s30",
@@ -4012,8 +3359,7 @@
      "de": [
       "singen"
      ],
-     "grp": "verb",
-     "emo": "🎤"
+     "grp": "verb"
     },
     {
      "id": "s31",
@@ -4021,8 +3367,7 @@
      "de": [
       "experimentieren"
      ],
-     "grp": "verb",
-     "emo": "🧪"
+     "grp": "verb"
     },
     {
      "id": "s32",
@@ -4030,8 +3375,7 @@
      "de": [
       "Französisch sprechen"
      ],
-     "grp": "verb",
-     "emo": "🗣️"
+     "grp": "verb"
     }
    ],
    "exam": {
@@ -4394,320 +3738,6 @@
      "h": "Wörterliste zum Durchlernen",
      "text": "So lernst du wie auf einem Blatt: Zuerst das Wort laut sagen. Dann tippe auf das Feld und decke die Lösung auf. Dann prüfe: Hast du es gewusst? Danach kommt das nächste Wort. Mit dem Knopf oben wechselst du die Richtung.",
      "list": true
-    },
-    {
-     "h": "Die Familie (1/4)",
-     "text": "Tippe auf eine Karte, um die Übersetzung zu sehen. Mit dem Lautsprecher hörst du das Wort.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "la famille",
-         "Familie",
-         "👨‍👩‍👧"
-        ],
-        [
-         "un enfant",
-         "Kind",
-         "🧒"
-        ],
-        [
-         "la mère",
-         "Mutter",
-         "👩"
-        ],
-        [
-         "le père",
-         "Vater",
-         "👨"
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Die Familie (2/4)",
-     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "les parents",
-         "Eltern",
-         "👫"
-        ],
-        [
-         "la sœur",
-         "Schwester",
-         "👧"
-        ],
-        [
-         "le frère",
-         "Bruder",
-         "👦"
-        ],
-        [
-         "la grand-mère",
-         "Grossmutter",
-         "👵"
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Die Familie (3/4)",
-     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "la cousine",
-         "Cousine",
-         "👧"
-        ],
-        [
-         "le cousin",
-         "Cousin",
-         "👦"
-        ],
-        [
-         "le bébé",
-         "Baby",
-         "👶"
-        ],
-        [
-         "la fille",
-         "Tochter",
-         "👧"
-        ],
-        [
-         "le fils",
-         "Sohn",
-         "👦"
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Die Familie (4/4)",
-     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "la cousine",
-         "Cousine",
-         "👧"
-        ],
-        [
-         "le cousin",
-         "Cousin",
-         "👦"
-        ],
-        [
-         "le bébé",
-         "Baby",
-         "👶"
-        ],
-        [
-         "la fille",
-         "Tochter",
-         "👧"
-        ],
-        [
-         "le fils",
-         "Sohn",
-         "👦"
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Sein, heissen, wer (1/3)",
-     "text": "Mit diesen kleinen Wörtern sagst du, wer jemand ist.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "voici",
-         "hier ist",
-         "",
-         ""
-        ],
-        [
-         "il est",
-         "er ist",
-         "",
-         ""
-        ],
-        [
-         "elle est",
-         "sie ist",
-         "",
-         ""
-        ],
-        [
-         "ils sont",
-         "sie sind (m)",
-         "",
-         ""
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Sein, heissen, wer (2/3)",
-     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "elles sont",
-         "sie sind (f)",
-         "",
-         ""
-        ],
-        [
-         "c'est",
-         "das ist",
-         "",
-         ""
-        ],
-        [
-         "ce sont",
-         "das sind",
-         "",
-         ""
-        ],
-        [
-         "qui",
-         "wer",
-         "",
-         ""
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Sein, heissen, wer (3/3)",
-     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "il s'appelle",
-         "er heisst",
-         "",
-         ""
-        ],
-        [
-         "elle s'appelle",
-         "sie heisst",
-         "",
-         ""
-        ],
-        [
-         "ils s'appellent",
-         "sie heissen (m)",
-         "",
-         ""
-        ],
-        [
-         "elles s'appellent",
-         "sie heissen (f)",
-         "",
-         ""
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Steckbrief",
-     "text": "So heissen die Teile einer fiche personnelle.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "la fiche personnelle",
-         "Steckbrief",
-         "📇"
-        ],
-        [
-         "le nom",
-         "Name",
-         "🏷️"
-        ],
-        [
-         "le prénom",
-         "Vorname",
-         "✍️"
-        ],
-        [
-         "la langue",
-         "Sprache",
-         "🗣️"
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Sätze zur Familie",
-     "text": "Lies den Satz, versuche ihn zu übersetzen und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "Lionel est le frère de Nathalie.",
-         "Lionel ist der Bruder von Nathalie.",
-         "",
-         ""
-        ],
-        [
-         "C'est ma famille.",
-         "Das ist meine Familie.",
-         "",
-         ""
-        ],
-        [
-         "Ce sont mes grands-parents.",
-         "Das sind meine Grosseltern.",
-         "",
-         ""
-        ],
-        [
-         "Je parle allemand, français et anglais.",
-         "Ich spreche Deutsch, Französisch und Englisch.",
-         "",
-         ""
-        ]
-       ]
-      }
-     ],
-     "quiz": true
     }
    ],
    "cards": [
@@ -4717,8 +3747,7 @@
      "de": [
       "Familie"
      ],
-     "grp": "fam",
-     "emo": "👨‍👩‍👧"
+     "grp": "fam"
     },
     {
      "id": "f2",
@@ -4726,8 +3755,7 @@
      "de": [
       "Kind"
      ],
-     "grp": "fam",
-     "emo": "🧒"
+     "grp": "fam"
     },
     {
      "id": "f3",
@@ -4735,8 +3763,7 @@
      "de": [
       "Mutter"
      ],
-     "grp": "fam",
-     "emo": "👩"
+     "grp": "fam"
     },
     {
      "id": "f4",
@@ -4744,8 +3771,7 @@
      "de": [
       "Vater"
      ],
-     "grp": "fam",
-     "emo": "👨"
+     "grp": "fam"
     },
     {
      "id": "f5",
@@ -4753,8 +3779,7 @@
      "de": [
       "Eltern"
      ],
-     "grp": "fam",
-     "emo": "👫"
+     "grp": "fam"
     },
     {
      "id": "f6",
@@ -4762,8 +3787,7 @@
      "de": [
       "Schwester"
      ],
-     "grp": "fam",
-     "emo": "👧"
+     "grp": "fam"
     },
     {
      "id": "f7",
@@ -4771,8 +3795,7 @@
      "de": [
       "Bruder"
      ],
-     "grp": "fam",
-     "emo": "👦"
+     "grp": "fam"
     },
     {
      "id": "f8",
@@ -4780,8 +3803,7 @@
      "de": [
       "Grossmutter"
      ],
-     "grp": "fam",
-     "emo": "👵"
+     "grp": "fam"
     },
     {
      "id": "f9",
@@ -4789,8 +3811,7 @@
      "de": [
       "Grossvater"
      ],
-     "grp": "fam",
-     "emo": "👴"
+     "grp": "fam"
     },
     {
      "id": "f10",
@@ -4798,8 +3819,7 @@
      "de": [
       "Grosseltern"
      ],
-     "grp": "fam",
-     "emo": "👴👵"
+     "grp": "fam"
     },
     {
      "id": "f11",
@@ -4807,8 +3827,7 @@
      "de": [
       "Tante"
      ],
-     "grp": "fam",
-     "emo": "👩"
+     "grp": "fam"
     },
     {
      "id": "f12",
@@ -4816,8 +3835,7 @@
      "de": [
       "Onkel"
      ],
-     "grp": "fam",
-     "emo": "👨"
+     "grp": "fam"
     },
     {
      "id": "f13",
@@ -4825,8 +3843,7 @@
      "de": [
       "Cousine"
      ],
-     "grp": "fam",
-     "emo": "👧"
+     "grp": "fam"
     },
     {
      "id": "f14",
@@ -4834,8 +3851,7 @@
      "de": [
       "Cousin"
      ],
-     "grp": "fam",
-     "emo": "👦"
+     "grp": "fam"
     },
     {
      "id": "f15",
@@ -4843,8 +3859,7 @@
      "de": [
       "Baby"
      ],
-     "grp": "fam",
-     "emo": "👶"
+     "grp": "fam"
     },
     {
      "id": "f16",
@@ -4852,8 +3867,7 @@
      "de": [
       "Tochter"
      ],
-     "grp": "fam",
-     "emo": "👧"
+     "grp": "fam"
     },
     {
      "id": "f17",
@@ -4861,8 +3875,7 @@
      "de": [
       "Sohn"
      ],
-     "grp": "fam",
-     "emo": "👦"
+     "grp": "fam"
     },
     {
      "id": "f18",
@@ -4966,8 +3979,7 @@
      "de": [
       "Steckbrief"
      ],
-     "grp": "nom",
-     "emo": "📇"
+     "grp": "nom"
     },
     {
      "id": "f31",
@@ -4975,8 +3987,7 @@
      "de": [
       "Name"
      ],
-     "grp": "nom",
-     "emo": "🏷️"
+     "grp": "nom"
     },
     {
      "id": "f32",
@@ -4984,8 +3995,7 @@
      "de": [
       "Vorname"
      ],
-     "grp": "nom",
-     "emo": "✍️"
+     "grp": "nom"
     },
     {
      "id": "f33",
@@ -4993,8 +4003,7 @@
      "de": [
       "Sprache"
      ],
-     "grp": "nom",
-     "emo": "🗣️"
+     "grp": "nom"
     },
     {
      "id": "f34",
@@ -10233,287 +9242,6 @@
      "h": "Wörterliste zum Durchlernen",
      "text": "So lernst du wie auf einem Blatt: Zuerst das Wort laut sagen. Dann tippe auf das Feld und decke die Lösung auf. Dann prüfe: Hast du es gewusst? Danach kommt das nächste Wort. Mit dem Knopf oben wechselst du die Richtung.",
      "list": true
-    },
-    {
-     "h": "Reisen (1/3)",
-     "text": "Tippe auf eine Karte, um die Übersetzung zu sehen. Rate zuerst und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "journey",
-         "Reise",
-         "🧳"
-        ],
-        [
-         "boat",
-         "Boot",
-         "⛵"
-        ],
-        [
-         "flight",
-         "Flug",
-         "✈️"
-        ],
-        [
-         "transport",
-         "Transport",
-         "🚌"
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Reisen (2/3)",
-     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "underground",
-         "U-Bahn",
-         "🚇"
-        ],
-        [
-         "arrive",
-         "ankommen",
-         "🛬"
-        ],
-        [
-         "check in",
-         "einchecken",
-         "🛎️"
-        ],
-        [
-         "pack",
-         "packen",
-         "🎒"
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Reisen (3/3)",
-     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "suitcase",
-         "Koffer",
-         "🧳"
-        ],
-        [
-         "reservation",
-         "Reservierung",
-         "📅"
-        ],
-        [
-         "confirm",
-         "bestätigen",
-         "✅"
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Abenteuer und Wetter",
-     "text": "Tippe auf eine Karte, um die Übersetzung zu sehen. Rate zuerst und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "adventure",
-         "Abenteuer",
-         "🧗"
-        ],
-        [
-         "sunny",
-         "sonnig",
-         "☀️"
-        ],
-        [
-         "foggy",
-         "neblig",
-         "🌫️"
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Bindewörter (1/2)",
-     "text": "Tippe auf eine Karte, um die Übersetzung zu sehen. Rate zuerst und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "although",
-         "obwohl",
-         ""
-        ],
-        [
-         "because",
-         "weil",
-         ""
-        ],
-        [
-         "however",
-         "jedoch",
-         ""
-        ],
-        [
-         "fortunately",
-         "zum Glück",
-         ""
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Bindewörter (2/2)",
-     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "as soon as",
-         "sobald",
-         ""
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Steigerung",
-     "text": "Tippe auf eine Karte, um die Übersetzung zu sehen. Rate zuerst und decke dann auf.",
-     "visuals": [
-      {
-       "type": "flip",
-       "items": [
-        [
-         "cheaper",
-         "billiger",
-         ""
-        ],
-        [
-         "more comfortable",
-         "bequemer",
-         ""
-        ],
-        [
-         "slower",
-         "langsamer",
-         ""
-        ],
-        [
-         "better",
-         "besser",
-         ""
-        ]
-       ]
-      }
-     ],
-     "quiz": true
-    },
-    {
-     "h": "Vergleichen mit -er und more",
-     "text": "Kurze Wörter bekommen -er: cheap → cheaper, slow → slower. Lange Wörter bekommen more: comfortable → more comfortable. good ist unregelmässig: good → better. Danach folgt than (als).",
-     "visuals": [
-      {
-       "type": "lines",
-       "num": false,
-       "items": [
-        [
-         "cheap → cheaper than",
-         "billiger als"
-        ],
-        [
-         "slow → slower than",
-         "langsamer als"
-        ],
-        [
-         "comfortable → more comfortable than",
-         "bequemer als"
-        ],
-        [
-         "good → better than",
-         "besser als"
-        ]
-       ]
-      }
-     ],
-     "try": {
-      "q": "Wie heisst die Steigerung von «good»?",
-      "opts": [
-       "better",
-       "gooder",
-       "more good",
-       "best"
-      ],
-      "a": [
-       "better"
-      ],
-      "hint": "good ist unregelmässig."
-     }
-    },
-    {
-     "h": "Linking words",
-     "text": "Mit Bindewörtern verbindest du Sätze. because = weil (Grund), although = obwohl, however = jedoch (Gegensatz), as soon as = sobald (Zeit), fortunately = zum Glück.",
-     "visuals": [
-      {
-       "type": "lines",
-       "num": false,
-       "items": [
-        [
-         "We arrived late because the flight was delayed.",
-         "Grund"
-        ],
-        [
-         "As soon as we landed, it started to rain.",
-         "Zeit"
-        ],
-        [
-         "The hotel was small. However, it was very clean.",
-         "Gegensatz"
-        ],
-        [
-         "Fortunately, nobody missed the connection.",
-         "zum Glück"
-        ]
-       ]
-      }
-     ],
-     "try": {
-      "q": "Welches Wort passt? The hotel was small, ___ it was very clean and comfortable.",
-      "opts": [
-       "however",
-       "because",
-       "as soon as",
-       "fortunately"
-      ],
-      "a": [
-       "however"
-      ],
-      "hint": "Klein ist schlecht, sauber ist gut: ein Gegensatz."
-     }
     }
    ],
    "cards": [
@@ -10523,8 +9251,7 @@
      "de": [
       "Reise"
      ],
-     "grp": "trav",
-     "emo": "🧳"
+     "grp": "trav"
     },
     {
      "id": "t2",
@@ -10532,8 +9259,7 @@
      "de": [
       "Boot"
      ],
-     "grp": "trav",
-     "emo": "⛵"
+     "grp": "trav"
     },
     {
      "id": "t3",
@@ -10541,8 +9267,7 @@
      "de": [
       "Flug"
      ],
-     "grp": "trav",
-     "emo": "✈️"
+     "grp": "trav"
     },
     {
      "id": "t4",
@@ -10551,8 +9276,7 @@
       "Transport",
       "Verkehrsmittel"
      ],
-     "grp": "trav",
-     "emo": "🚌"
+     "grp": "trav"
     },
     {
      "id": "t5",
@@ -10560,8 +9284,7 @@
      "de": [
       "U-Bahn"
      ],
-     "grp": "trav",
-     "emo": "🚇"
+     "grp": "trav"
     },
     {
      "id": "t6",
@@ -10569,8 +9292,7 @@
      "de": [
       "ankommen"
      ],
-     "grp": "trav",
-     "emo": "🛬"
+     "grp": "trav"
     },
     {
      "id": "t7",
@@ -10578,8 +9300,7 @@
      "de": [
       "einchecken"
      ],
-     "grp": "trav",
-     "emo": "🛎️"
+     "grp": "trav"
     },
     {
      "id": "t8",
@@ -10587,8 +9308,7 @@
      "de": [
       "packen"
      ],
-     "grp": "trav",
-     "emo": "🎒"
+     "grp": "trav"
     },
     {
      "id": "t9",
@@ -10596,8 +9316,7 @@
      "de": [
       "Koffer"
      ],
-     "grp": "trav",
-     "emo": "🧳"
+     "grp": "trav"
     },
     {
      "id": "t10",
@@ -10605,8 +9324,7 @@
      "de": [
       "Reservierung"
      ],
-     "grp": "trav",
-     "emo": "📅"
+     "grp": "trav"
     },
     {
      "id": "t11",
@@ -10614,8 +9332,7 @@
      "de": [
       "bestätigen"
      ],
-     "grp": "trav",
-     "emo": "✅"
+     "grp": "trav"
     },
     {
      "id": "t12",
@@ -10623,8 +9340,7 @@
      "de": [
       "Abenteuer"
      ],
-     "grp": "wet",
-     "emo": "🧗"
+     "grp": "wet"
     },
     {
      "id": "t13",
@@ -10632,8 +9348,7 @@
      "de": [
       "sonnig"
      ],
-     "grp": "wet",
-     "emo": "☀️"
+     "grp": "wet"
     },
     {
      "id": "t14",
@@ -10641,8 +9356,7 @@
      "de": [
       "neblig"
      ],
-     "grp": "wet",
-     "emo": "🌫️"
+     "grp": "wet"
     },
     {
      "id": "t15",
@@ -10717,6 +9431,214 @@
       "besser"
      ],
      "grp": "comp"
+    },
+    {
+     "id": "t24",
+     "q": "Wie heisst die Steigerung von «good»?",
+     "a": "better",
+     "lvl": 1,
+     "th": "comp",
+     "opts": [
+      "better",
+      "gooder",
+      "more good",
+      "best"
+     ],
+     "hints": [
+      "Kurze Wörter bekommen -er, lange Wörter bekommen more. good ist unregelmässig: better."
+     ],
+     "steps": [
+      [
+       "better",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "t25",
+     "q": "The train was ___ than the plane. (cheap)",
+     "a": "cheaper",
+     "lvl": 1,
+     "th": "comp",
+     "opts": [
+      "cheaper",
+      "more cheap",
+      "cheapest",
+      "cheaply"
+     ],
+     "hints": [
+      "Kurze Wörter bekommen -er, lange Wörter bekommen more. good ist unregelmässig: better."
+     ],
+     "steps": [
+      [
+       "cheaper",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "t26",
+     "q": "This hotel is ___ than the last one. (comfortable)",
+     "a": "more comfortable",
+     "lvl": 1,
+     "th": "comp",
+     "opts": [
+      "more comfortable",
+      "comfortabler",
+      "most comfortable",
+      "comfortable"
+     ],
+     "hints": [
+      "Kurze Wörter bekommen -er, lange Wörter bekommen more. good ist unregelmässig: better."
+     ],
+     "steps": [
+      [
+       "more comfortable",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "t27",
+     "q": "The hotel was small, ___ it was very clean and comfortable.",
+     "a": "however",
+     "lvl": 1,
+     "th": "link",
+     "opts": [
+      "however",
+      "because",
+      "as soon as",
+      "fortunately"
+     ],
+     "hints": [
+      "Klein ist schlecht, sauber ist gut: ein Gegensatz."
+     ],
+     "steps": [
+      [
+       "however",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "t28",
+     "q": "We arrived late ___ the flight was delayed.",
+     "a": "because",
+     "lvl": 1,
+     "th": "link",
+     "opts": [
+      "because",
+      "although",
+      "however",
+      "as soon as"
+     ],
+     "hints": [
+      "Das Wort nennt den Grund."
+     ],
+     "steps": [
+      [
+       "because",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "t29",
+     "q": "Travelling by boat is ___ than by car. (slow) Schreibe das Wort.",
+     "a": "slower",
+     "lvl": 2,
+     "th": "comp",
+     "ans": [
+      "slower"
+     ],
+     "hints": [
+      "Kurze Wörter bekommen -er, lange Wörter bekommen more. good ist unregelmässig: better."
+     ],
+     "steps": [
+      [
+       "slower",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "t30",
+     "q": "Which is ___, the coach or the train? (good) Schreibe das Wort.",
+     "a": "better",
+     "lvl": 2,
+     "th": "comp",
+     "ans": [
+      "better"
+     ],
+     "hints": [
+      "Kurze Wörter bekommen -er, lange Wörter bekommen more. good ist unregelmässig: better."
+     ],
+     "steps": [
+      [
+       "better",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "t31",
+     "q": "___ we landed, it started to rain. (sobald) Schreibe die zwei Wörter.",
+     "a": "As soon as",
+     "lvl": 2,
+     "th": "link",
+     "ans": [
+      "As soon as",
+      "as soon as"
+     ],
+     "hints": [
+      "sobald = as soon as"
+     ],
+     "steps": [
+      [
+       "As soon as",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "t32",
+     "q": "___, nobody missed the connection. (zum Glück) Schreibe das Wort.",
+     "a": "Fortunately",
+     "lvl": 2,
+     "th": "link",
+     "ans": [
+      "Fortunately",
+      "fortunately"
+     ],
+     "hints": [
+      "zum Glück = fortunately"
+     ],
+     "steps": [
+      [
+       "Fortunately",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "t33",
+     "q": "___ the room was small, it was very comfortable. (obwohl) Schreibe das Wort.",
+     "a": "Although",
+     "lvl": 3,
+     "th": "link",
+     "ans": [
+      "Although",
+      "although"
+     ],
+     "hints": [
+      "obwohl = although"
+     ],
+     "steps": [
+      [
+       "Although",
+       "richtig"
+      ]
+     ]
     }
    ],
    "exam": {
