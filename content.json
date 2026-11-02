@@ -6,72 +6,42 @@
    "name": "",
    "grade": 3,
    "img": "img/kl3.webp",
-   "full": "img/fb_brown.webp",
-   "subjects": [
-    "mathe",
-    "deu"
-   ]
+   "full": "img/fb_brown.webp"
   },
   {
    "id": "kl4",
    "name": "",
    "grade": 4,
    "img": "img/kl3.webp",
-   "full": "img/fb_brown.webp",
-   "subjects": [
-    "mathe",
-    "deu"
-   ]
+   "full": "img/fb_brown.webp"
   },
   {
    "id": "kl5",
    "name": "",
    "grade": 5,
    "img": "img/kl5.webp",
-   "full": "img/fb_blonde.webp",
-   "subjects": [
-    "mathe",
-    "franz",
-    "engl",
-    "deu"
-   ]
+   "full": "img/fb_blonde.webp"
   },
   {
    "id": "kl6",
    "name": "",
    "grade": 6,
    "img": "img/kl3.webp",
-   "full": "img/fb_brown.webp",
-   "subjects": [
-    "mathe",
-    "franz",
-    "engl",
-    "deu"
-   ]
+   "full": "img/fb_brown.webp"
   },
   {
    "id": "kl7",
    "name": "",
    "grade": 7,
    "img": "img/kl3.webp",
-   "full": "img/fb_brown.webp",
-   "subjects": [
-    "mathe",
-    "franz",
-    "engl",
-    "deu"
-   ]
+   "full": "img/fb_brown.webp"
   },
   {
    "id": "kl8",
    "name": "",
    "grade": 8,
    "img": "img/kl8.webp",
-   "full": "img/fb_boy.webp",
-   "subjects": [
-    "mathe",
-    "deu"
-   ]
+   "full": "img/fb_boy.webp"
   }
  ],
  "subjects": [
@@ -4341,6 +4311,1926 @@
     "sent": {
      "h": "Sätze",
      "text": "C'est = das ist (eine Person oder Sache). Ce sont = das sind (mehrere). «Ma» heisst meine und gehört zu einem weiblichen Nomen (ma famille), «mes» zu mehreren (mes grands-parents)."
+    }
+   }
+  },
+  {
+   "id": "kl8-deu-rechtschreibung1",
+   "child": "kl8",
+   "subject": "deu",
+   "chapter": "Rechtschreibung",
+   "title": "Rechtschreibung: ie und h",
+   "explain": [
+    {
+     "h": "Wann schreibe ich ie?",
+     "text": "Hörst du ein langes i, wird es sehr oft mit ie geschrieben. Merke: Langes i, oft ie.",
+     "visuals": [
+      {
+       "type": "lines",
+       "num": false,
+       "items": [
+        [
+         "spielen · Wiese · Brief",
+         "Beispiele"
+        ],
+        [
+         "sieben · fliegen · verlieren",
+         "Beispiele"
+        ],
+        [
+         "Langes i → oft ie",
+         "Merke"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Welches Wort ist richtig geschrieben?",
+      "opts": [
+       "Wiese",
+       "Wise",
+       "Wiehse",
+       "Wiße"
+      ],
+      "a": [
+       "Wiese"
+      ],
+      "hint": "Du hörst ein langes i."
+     }
+    },
+    {
+     "h": "Ausnahmen: nur i",
+     "text": "Es gibt Wörter mit langem i, die nur ein i haben. Diese Wörter musst du dir merken. Tippe die Karten an und decke sie auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "nospk": true,
+       "items": [
+        [
+         "Tiger",
+         "nur i, kein ie"
+        ],
+        [
+         "Kino",
+         "nur i, kein ie"
+        ],
+        [
+         "Musik",
+         "nur i, kein ie"
+        ],
+        [
+         "Maschine",
+         "nur i, kein ie"
+        ],
+        [
+         "Familie",
+         "nur i vor lie"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Welches Wort wird nur mit i geschrieben?",
+      "opts": [
+       "Brief",
+       "Kino",
+       "Wiese",
+       "fliegen"
+      ],
+      "a": [
+       "Kino"
+      ],
+      "hint": "Kino gehört zu den Ausnahmen."
+     }
+    },
+    {
+     "h": "Wann schreibe ich ein h?",
+     "text": "Manchmal steht nach einem langen Vokal ein h. Dieses h hört man meistens nicht. Es zeigt oft, dass der Vokal davor lang gesprochen wird.",
+     "visuals": [
+      {
+       "type": "lines",
+       "num": false,
+       "items": [
+        [
+         "fahren, Zahl, Lehrer",
+         "Beispiele"
+        ],
+        [
+         "Wohnung, Fehler, nehmen",
+         "Beispiele"
+        ],
+        [
+         "fahren → langes a",
+         "das h zeigt: lang"
+        ],
+        [
+         "nehmen → langes e",
+         ""
+        ],
+        [
+         "Wohnung → langes o",
+         ""
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Was zeigt das h in «fahren» oft?",
+      "opts": [
+       "Der Vokal davor ist lang.",
+       "Der Vokal davor ist kurz.",
+       "Das Wort ist ein Verb.",
+       "Das Wort ist gross."
+      ],
+      "a": [
+       "Der Vokal davor ist lang."
+      ],
+      "hint": "Das h steht nach einem langen Vokal."
+     }
+    },
+    {
+     "h": "Manchmal hört man das h",
+     "text": "Bei manchen Wörtern kann man das h hören. Sprich die Wörter langsam, dann hörst du es besser.",
+     "visuals": [
+      {
+       "type": "lines",
+       "num": false,
+       "items": [
+        [
+         "gehen · sehen",
+         "h hörbar"
+        ],
+        [
+         "drehen · stehen",
+         "h hörbar"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Ziehe die Wörter in die richtige Spalte.",
+      "drag": {
+       "slots": [
+        "Wort mit ie",
+        "Wort mit h",
+        "Wort mit nur i"
+       ],
+       "chips": [
+        "Tiger",
+        "Wiese",
+        "fahren"
+       ]
+      },
+      "a": [
+       "Wiese",
+       "fahren",
+       "Tiger"
+      ],
+      "hint": "Wiese hat ein langes i mit ie. Tiger ist eine Ausnahme."
+     }
+    },
+    {
+     "h": "Ein kleiner Trick: das Wort verlängern",
+     "text": "Verlängere oder verändere das Wort. So erkennst du manchmal besser, ob ein h gebraucht wird.",
+     "visuals": [
+      {
+       "type": "lines",
+       "num": false,
+       "items": [
+        [
+         "Zahl → zahlen",
+         "verlängern"
+        ],
+        [
+         "Fahrt → fahren",
+         "verändern"
+        ],
+        [
+         "sieht → sehen",
+         "verändern"
+        ],
+        [
+         "dreht → drehen",
+         "verändern"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Wie heisst die Grundform von «sieht»?",
+      "a": [
+       "sehen"
+      ],
+      "hint": "Denk an «sehen»."
+     }
+    },
+    {
+     "h": "Wichtig",
+     "text": "Nicht jedes lange i bekommt ein ie und nicht jeder lange Vokal bekommt ein h. Wenn du unsicher bist: Wort nachschlagen und merken.",
+     "visuals": [
+      {
+       "type": "lines",
+       "num": false,
+       "items": [
+        [
+         "Tiger, Kino",
+         "nur i"
+        ],
+        [
+         "Stuhl, Zahn",
+         "lang, aber ohne Regel merken"
+        ],
+        [
+         "unsicher? → nachschlagen",
+         "Wörterbuch"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Was machst du, wenn du unsicher bist?",
+      "opts": [
+       "Wort nachschlagen und merken",
+       "Immer ie schreiben",
+       "Immer h einsetzen",
+       "Das Wort weglassen"
+      ],
+      "a": [
+       "Wort nachschlagen und merken"
+      ],
+      "hint": "Ein Wörterbuch hilft dir."
+     }
+    }
+   ],
+   "cards": [
+    {
+     "id": "d1",
+     "q": "Welche Schreibweise stimmt?",
+     "a": "fahren",
+     "lvl": 1,
+     "th": "h",
+     "opts": [
+      "fahren",
+      "faren"
+     ],
+     "hints": [
+      "Nach einem langen Vokal steht oft ein h.",
+      "Sprich das Wort langsam."
+     ],
+     "steps": [
+      [
+       "fahren",
+       "mit h"
+      ]
+     ]
+    },
+    {
+     "id": "d2",
+     "q": "Welche Schreibweise stimmt?",
+     "a": "Zahl",
+     "lvl": 1,
+     "th": "h",
+     "opts": [
+      "Zahl",
+      "Zal"
+     ],
+     "hints": [
+      "Nach einem langen Vokal steht oft ein h.",
+      "Sprich das Wort langsam."
+     ],
+     "steps": [
+      [
+       "Zahl",
+       "mit h"
+      ]
+     ]
+    },
+    {
+     "id": "d3",
+     "q": "Welche Schreibweise stimmt?",
+     "a": "Lehrer",
+     "lvl": 1,
+     "th": "h",
+     "opts": [
+      "Lehrer",
+      "Lerer"
+     ],
+     "hints": [
+      "Nach einem langen Vokal steht oft ein h.",
+      "Sprich das Wort langsam."
+     ],
+     "steps": [
+      [
+       "Lehrer",
+       "mit h"
+      ]
+     ]
+    },
+    {
+     "id": "d4",
+     "q": "Welche Schreibweise stimmt?",
+     "a": "nehmen",
+     "lvl": 1,
+     "th": "h",
+     "opts": [
+      "nehmen",
+      "nemen"
+     ],
+     "hints": [
+      "Nach einem langen Vokal steht oft ein h.",
+      "Sprich das Wort langsam."
+     ],
+     "steps": [
+      [
+       "nehmen",
+       "mit h"
+      ]
+     ]
+    },
+    {
+     "id": "d5",
+     "q": "Welche Schreibweise stimmt?",
+     "a": "Stuhl",
+     "lvl": 1,
+     "th": "h",
+     "opts": [
+      "Stuhl",
+      "Stul"
+     ],
+     "hints": [
+      "Nach einem langen Vokal steht oft ein h.",
+      "Sprich das Wort langsam."
+     ],
+     "steps": [
+      [
+       "Stuhl",
+       "mit h"
+      ]
+     ]
+    },
+    {
+     "id": "d6",
+     "q": "Welche Schreibweise stimmt?",
+     "a": "Wohnung",
+     "lvl": 1,
+     "th": "h",
+     "opts": [
+      "Wohnung",
+      "Wonung"
+     ],
+     "hints": [
+      "Nach einem langen Vokal steht oft ein h.",
+      "Sprich das Wort langsam."
+     ],
+     "steps": [
+      [
+       "Wohnung",
+       "mit h"
+      ]
+     ]
+    },
+    {
+     "id": "d7",
+     "q": "Welche Schreibweise stimmt?",
+     "a": "Ruhe",
+     "lvl": 1,
+     "th": "h",
+     "opts": [
+      "Ruhe",
+      "Rue"
+     ],
+     "hints": [
+      "Nach einem langen Vokal steht oft ein h.",
+      "Sprich das Wort langsam."
+     ],
+     "steps": [
+      [
+       "Ruhe",
+       "mit h"
+      ]
+     ]
+    },
+    {
+     "id": "d8",
+     "q": "Welche Schreibweise stimmt?",
+     "a": "Fehler",
+     "lvl": 1,
+     "th": "h",
+     "opts": [
+      "Fehler",
+      "Feler"
+     ],
+     "hints": [
+      "Nach einem langen Vokal steht oft ein h.",
+      "Sprich das Wort langsam."
+     ],
+     "steps": [
+      [
+       "Fehler",
+       "mit h"
+      ]
+     ]
+    },
+    {
+     "id": "d9",
+     "q": "Welches Wort ist richtig geschrieben?",
+     "a": "Tiger",
+     "lvl": 1,
+     "th": "ie",
+     "opts": [
+      "Tiger",
+      "Tieger"
+     ],
+     "hints": [
+      "Manche Wörter sind Ausnahmen.",
+      "Merke dir dieses Wort."
+     ],
+     "steps": [
+      [
+       "Tiger",
+       "richtig geschrieben"
+      ]
+     ]
+    },
+    {
+     "id": "d10",
+     "q": "Welches Wort ist richtig geschrieben?",
+     "a": "Musik",
+     "lvl": 1,
+     "th": "ie",
+     "opts": [
+      "Musik",
+      "Musiek"
+     ],
+     "hints": [
+      "Manche Wörter sind Ausnahmen.",
+      "Merke dir dieses Wort."
+     ],
+     "steps": [
+      [
+       "Musik",
+       "richtig geschrieben"
+      ]
+     ]
+    },
+    {
+     "id": "d11",
+     "q": "Welches Wort ist richtig geschrieben?",
+     "a": "Familie",
+     "lvl": 1,
+     "th": "ie",
+     "opts": [
+      "Familie",
+      "Familiee"
+     ],
+     "hints": [
+      "Manche Wörter sind Ausnahmen.",
+      "Merke dir dieses Wort."
+     ],
+     "steps": [
+      [
+       "Familie",
+       "richtig geschrieben"
+      ]
+     ]
+    },
+    {
+     "id": "d12",
+     "q": "Welches Wort ist richtig geschrieben?",
+     "a": "schwierig",
+     "lvl": 1,
+     "th": "ie",
+     "opts": [
+      "schwierig",
+      "schwirig"
+     ],
+     "hints": [
+      "Manche Wörter sind Ausnahmen.",
+      "Merke dir dieses Wort."
+     ],
+     "steps": [
+      [
+       "schwierig",
+       "richtig geschrieben"
+      ]
+     ]
+    },
+    {
+     "id": "d13",
+     "q": "Welches Wort ist richtig geschrieben?",
+     "a": "Papier",
+     "lvl": 1,
+     "th": "ie",
+     "opts": [
+      "Papier",
+      "Papir"
+     ],
+     "hints": [
+      "Manche Wörter sind Ausnahmen.",
+      "Merke dir dieses Wort."
+     ],
+     "steps": [
+      [
+       "Papier",
+       "richtig geschrieben"
+      ]
+     ]
+    },
+    {
+     "id": "d14",
+     "q": "Setze h ein und schreibe das ganze Wort: Za_l",
+     "a": "Zahl",
+     "lvl": 2,
+     "th": "h",
+     "ans": [
+      "Zahl"
+     ],
+     "hints": [
+      "Hörst du ein langes a, e, o oder u?",
+      "Das h steht nach dem langen Vokal."
+     ],
+     "steps": [
+      [
+       "Zahl",
+       "h eingesetzt"
+      ]
+     ]
+    },
+    {
+     "id": "d15",
+     "q": "Setze h ein und schreibe das ganze Wort: Wo_nung",
+     "a": "Wohnung",
+     "lvl": 2,
+     "th": "h",
+     "ans": [
+      "Wohnung"
+     ],
+     "hints": [
+      "Hörst du ein langes a, e, o oder u?",
+      "Das h steht nach dem langen Vokal."
+     ],
+     "steps": [
+      [
+       "Wohnung",
+       "h eingesetzt"
+      ]
+     ]
+    },
+    {
+     "id": "d16",
+     "q": "Setze h ein und schreibe das ganze Wort: fa_ren",
+     "a": "fahren",
+     "lvl": 2,
+     "th": "h",
+     "ans": [
+      "fahren"
+     ],
+     "hints": [
+      "Hörst du ein langes a, e, o oder u?",
+      "Das h steht nach dem langen Vokal."
+     ],
+     "steps": [
+      [
+       "fahren",
+       "h eingesetzt"
+      ]
+     ]
+    },
+    {
+     "id": "d17",
+     "q": "Setze h ein und schreibe das ganze Wort: Fe_ler",
+     "a": "Fehler",
+     "lvl": 2,
+     "th": "h",
+     "ans": [
+      "Fehler"
+     ],
+     "hints": [
+      "Hörst du ein langes a, e, o oder u?",
+      "Das h steht nach dem langen Vokal."
+     ],
+     "steps": [
+      [
+       "Fehler",
+       "h eingesetzt"
+      ]
+     ]
+    },
+    {
+     "id": "d18",
+     "q": "Setze h ein und schreibe das ganze Wort: se_en",
+     "a": "sehen",
+     "lvl": 2,
+     "th": "h",
+     "ans": [
+      "sehen"
+     ],
+     "hints": [
+      "Hörst du ein langes a, e, o oder u?",
+      "Das h steht nach dem langen Vokal."
+     ],
+     "steps": [
+      [
+       "sehen",
+       "h eingesetzt"
+      ]
+     ]
+    },
+    {
+     "id": "d19",
+     "q": "Setze h ein und schreibe das ganze Wort: U_r",
+     "a": "Uhr",
+     "lvl": 2,
+     "th": "h",
+     "ans": [
+      "Uhr"
+     ],
+     "hints": [
+      "Hörst du ein langes a, e, o oder u?",
+      "Das h steht nach dem langen Vokal."
+     ],
+     "steps": [
+      [
+       "Uhr",
+       "h eingesetzt"
+      ]
+     ]
+    },
+    {
+     "id": "d20",
+     "q": "Setze h ein und schreibe das ganze Wort: Ru_e",
+     "a": "Ruhe",
+     "lvl": 2,
+     "th": "h",
+     "ans": [
+      "Ruhe"
+     ],
+     "hints": [
+      "Hörst du ein langes a, e, o oder u?",
+      "Das h steht nach dem langen Vokal."
+     ],
+     "steps": [
+      [
+       "Ruhe",
+       "h eingesetzt"
+      ]
+     ]
+    },
+    {
+     "id": "d21",
+     "q": "Setze h ein und schreibe das ganze Wort: Le_rer",
+     "a": "Lehrer",
+     "lvl": 2,
+     "th": "h",
+     "ans": [
+      "Lehrer"
+     ],
+     "hints": [
+      "Hörst du ein langes a, e, o oder u?",
+      "Das h steht nach dem langen Vokal."
+     ],
+     "steps": [
+      [
+       "Lehrer",
+       "h eingesetzt"
+      ]
+     ]
+    },
+    {
+     "id": "d22",
+     "q": "Setze h ein und schreibe das ganze Wort: Bo_ne",
+     "a": "Bohne",
+     "lvl": 2,
+     "th": "h",
+     "ans": [
+      "Bohne"
+     ],
+     "hints": [
+      "Hörst du ein langes a, e, o oder u?",
+      "Das h steht nach dem langen Vokal."
+     ],
+     "steps": [
+      [
+       "Bohne",
+       "h eingesetzt"
+      ]
+     ]
+    },
+    {
+     "id": "d23",
+     "q": "Setze h ein und schreibe das ganze Wort: dro_en",
+     "a": "drohen",
+     "lvl": 2,
+     "th": "h",
+     "ans": [
+      "drohen"
+     ],
+     "hints": [
+      "Hörst du ein langes a, e, o oder u?",
+      "Das h steht nach dem langen Vokal."
+     ],
+     "steps": [
+      [
+       "drohen",
+       "h eingesetzt"
+      ]
+     ]
+    },
+    {
+     "id": "d24",
+     "q": "Setze h ein und schreibe das ganze Wort: frü_",
+     "a": "früh",
+     "lvl": 2,
+     "th": "h",
+     "ans": [
+      "früh"
+     ],
+     "hints": [
+      "Hörst du ein langes a, e, o oder u?",
+      "Das h steht nach dem langen Vokal."
+     ],
+     "steps": [
+      [
+       "früh",
+       "h eingesetzt"
+      ]
+     ]
+    },
+    {
+     "id": "d25",
+     "q": "Setze h ein und schreibe das ganze Wort: na_",
+     "a": "nah",
+     "lvl": 2,
+     "th": "h",
+     "ans": [
+      "nah"
+     ],
+     "hints": [
+      "Hörst du ein langes a, e, o oder u?",
+      "Das h steht nach dem langen Vokal."
+     ],
+     "steps": [
+      [
+       "nah",
+       "h eingesetzt"
+      ]
+     ]
+    },
+    {
+     "id": "d26",
+     "q": "Setze i oder ie ein und schreibe das ganze Wort: Sp_gel",
+     "a": "Spiegel",
+     "lvl": 2,
+     "th": "ie",
+     "ans": [
+      "Spiegel"
+     ],
+     "hints": [
+      "Hörst du ein langes i? Dann oft ie.",
+      "Denk an die Ausnahmen: Tiger, Kino, Musik, Maschine, Familie."
+     ],
+     "steps": [
+      [
+       "Spiegel",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d27",
+     "q": "Setze i oder ie ein und schreibe das ganze Wort: T_r",
+     "a": "Tier",
+     "lvl": 2,
+     "th": "ie",
+     "ans": [
+      "Tier"
+     ],
+     "hints": [
+      "Hörst du ein langes i? Dann oft ie.",
+      "Denk an die Ausnahmen: Tiger, Kino, Musik, Maschine, Familie."
+     ],
+     "steps": [
+      [
+       "Tier",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d28",
+     "q": "Setze i oder ie ein und schreibe das ganze Wort: W_se",
+     "a": "Wiese",
+     "lvl": 2,
+     "th": "ie",
+     "ans": [
+      "Wiese"
+     ],
+     "hints": [
+      "Hörst du ein langes i? Dann oft ie.",
+      "Denk an die Ausnahmen: Tiger, Kino, Musik, Maschine, Familie."
+     ],
+     "steps": [
+      [
+       "Wiese",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d29",
+     "q": "Setze i oder ie ein und schreibe das ganze Wort: K_no",
+     "a": "Kino",
+     "lvl": 2,
+     "th": "ie",
+     "ans": [
+      "Kino"
+     ],
+     "hints": [
+      "Hörst du ein langes i? Dann oft ie.",
+      "Denk an die Ausnahmen: Tiger, Kino, Musik, Maschine, Familie."
+     ],
+     "steps": [
+      [
+       "Kino",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d30",
+     "q": "Setze i oder ie ein und schreibe das ganze Wort: Br_f",
+     "a": "Brief",
+     "lvl": 2,
+     "th": "ie",
+     "ans": [
+      "Brief"
+     ],
+     "hints": [
+      "Hörst du ein langes i? Dann oft ie.",
+      "Denk an die Ausnahmen: Tiger, Kino, Musik, Maschine, Familie."
+     ],
+     "steps": [
+      [
+       "Brief",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d31",
+     "q": "Setze i oder ie ein und schreibe das ganze Wort: Fam_lie",
+     "a": "Familie",
+     "lvl": 2,
+     "th": "ie",
+     "ans": [
+      "Familie"
+     ],
+     "hints": [
+      "Hörst du ein langes i? Dann oft ie.",
+      "Denk an die Ausnahmen: Tiger, Kino, Musik, Maschine, Familie."
+     ],
+     "steps": [
+      [
+       "Familie",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d32",
+     "q": "Setze i oder ie ein und schreibe das ganze Wort: fl_gen",
+     "a": "fliegen",
+     "lvl": 2,
+     "th": "ie",
+     "ans": [
+      "fliegen"
+     ],
+     "hints": [
+      "Hörst du ein langes i? Dann oft ie.",
+      "Denk an die Ausnahmen: Tiger, Kino, Musik, Maschine, Familie."
+     ],
+     "steps": [
+      [
+       "fliegen",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d33",
+     "q": "Setze i oder ie ein und schreibe das ganze Wort: Mus_k",
+     "a": "Musik",
+     "lvl": 2,
+     "th": "ie",
+     "ans": [
+      "Musik"
+     ],
+     "hints": [
+      "Hörst du ein langes i? Dann oft ie.",
+      "Denk an die Ausnahmen: Tiger, Kino, Musik, Maschine, Familie."
+     ],
+     "steps": [
+      [
+       "Musik",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d34",
+     "q": "Setze i oder ie ein und schreibe das ganze Wort: T_ger",
+     "a": "Tiger",
+     "lvl": 2,
+     "th": "ie",
+     "ans": [
+      "Tiger"
+     ],
+     "hints": [
+      "Hörst du ein langes i? Dann oft ie.",
+      "Denk an die Ausnahmen: Tiger, Kino, Musik, Maschine, Familie."
+     ],
+     "steps": [
+      [
+       "Tiger",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d35",
+     "q": "Setze i oder ie ein und schreibe das ganze Wort: s_ben",
+     "a": "sieben",
+     "lvl": 2,
+     "th": "ie",
+     "ans": [
+      "sieben"
+     ],
+     "hints": [
+      "Hörst du ein langes i? Dann oft ie.",
+      "Denk an die Ausnahmen: Tiger, Kino, Musik, Maschine, Familie."
+     ],
+     "steps": [
+      [
+       "sieben",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d36",
+     "q": "Setze i oder ie ein und schreibe das ganze Wort: L_be",
+     "a": "Liebe",
+     "lvl": 2,
+     "th": "ie",
+     "ans": [
+      "Liebe"
+     ],
+     "hints": [
+      "Hörst du ein langes i? Dann oft ie.",
+      "Denk an die Ausnahmen: Tiger, Kino, Musik, Maschine, Familie."
+     ],
+     "steps": [
+      [
+       "Liebe",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d37",
+     "q": "Setze i oder ie ein und schreibe das ganze Wort: Masch_ne",
+     "a": "Maschine",
+     "lvl": 2,
+     "th": "ie",
+     "ans": [
+      "Maschine"
+     ],
+     "hints": [
+      "Hörst du ein langes i? Dann oft ie.",
+      "Denk an die Ausnahmen: Tiger, Kino, Musik, Maschine, Familie."
+     ],
+     "steps": [
+      [
+       "Maschine",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d38",
+     "q": "Setze i oder ie ein und schreibe das ganze Wort: verl_ren",
+     "a": "verlieren",
+     "lvl": 2,
+     "th": "ie",
+     "ans": [
+      "verlieren"
+     ],
+     "hints": [
+      "Hörst du ein langes i? Dann oft ie.",
+      "Denk an die Ausnahmen: Tiger, Kino, Musik, Maschine, Familie."
+     ],
+     "steps": [
+      [
+       "verlieren",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d39",
+     "q": "Setze i oder ie ein und schreibe das ganze Wort: schw_rig",
+     "a": "schwierig",
+     "lvl": 2,
+     "th": "ie",
+     "ans": [
+      "schwierig"
+     ],
+     "hints": [
+      "Hörst du ein langes i? Dann oft ie.",
+      "Denk an die Ausnahmen: Tiger, Kino, Musik, Maschine, Familie."
+     ],
+     "steps": [
+      [
+       "schwierig",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d40",
+     "q": "Setze i oder ie ein und schreibe das ganze Wort: Pap_r",
+     "a": "Papier",
+     "lvl": 2,
+     "th": "ie",
+     "ans": [
+      "Papier"
+     ],
+     "hints": [
+      "Hörst du ein langes i? Dann oft ie.",
+      "Denk an die Ausnahmen: Tiger, Kino, Musik, Maschine, Familie."
+     ],
+     "steps": [
+      [
+       "Papier",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d41",
+     "q": "Setze i oder ie ein und schreibe das ganze Wort: Z_l",
+     "a": "Ziel",
+     "lvl": 2,
+     "th": "ie",
+     "ans": [
+      "Ziel"
+     ],
+     "hints": [
+      "Hörst du ein langes i? Dann oft ie.",
+      "Denk an die Ausnahmen: Tiger, Kino, Musik, Maschine, Familie."
+     ],
+     "steps": [
+      [
+       "Ziel",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d42",
+     "q": "Wortkasten: fahren – Uhr – Lehrer – Wohnung – nehmen – Ruhe – Zahl – Fehler. Welches Wort passt? Wir ___ morgen mit dem Zug nach Bern.",
+     "a": "fahren",
+     "lvl": 3,
+     "th": "h",
+     "ans": [
+      "fahren"
+     ],
+     "hints": [
+      "Lies den Satz ganz.",
+      "Welches Wort aus dem Kasten ergibt Sinn?"
+     ],
+     "steps": [
+      [
+       "fahren",
+       "passt in die Lücke"
+      ]
+     ]
+    },
+    {
+     "id": "d43",
+     "q": "Wortkasten: fahren – Uhr – Lehrer – Wohnung – nehmen – Ruhe – Zahl – Fehler. Welches Wort passt? An der Wand hängt eine grosse ___.",
+     "a": "Uhr",
+     "lvl": 3,
+     "th": "h",
+     "ans": [
+      "Uhr"
+     ],
+     "hints": [
+      "Lies den Satz ganz.",
+      "Welches Wort aus dem Kasten ergibt Sinn?"
+     ],
+     "steps": [
+      [
+       "Uhr",
+       "passt in die Lücke"
+      ]
+     ]
+    },
+    {
+     "id": "d44",
+     "q": "Wortkasten: fahren – Uhr – Lehrer – Wohnung – nehmen – Ruhe – Zahl – Fehler. Welches Wort passt? Unser ___ erklärt die Aufgabe noch einmal.",
+     "a": "Lehrer",
+     "lvl": 3,
+     "th": "h",
+     "ans": [
+      "Lehrer"
+     ],
+     "hints": [
+      "Lies den Satz ganz.",
+      "Welches Wort aus dem Kasten ergibt Sinn?"
+     ],
+     "steps": [
+      [
+       "Lehrer",
+       "passt in die Lücke"
+      ]
+     ]
+    },
+    {
+     "id": "d45",
+     "q": "Wortkasten: fahren – Uhr – Lehrer – Wohnung – nehmen – Ruhe – Zahl – Fehler. Welches Wort passt? Sie sucht eine neue ___.",
+     "a": "Wohnung",
+     "lvl": 3,
+     "th": "h",
+     "ans": [
+      "Wohnung"
+     ],
+     "hints": [
+      "Lies den Satz ganz.",
+      "Welches Wort aus dem Kasten ergibt Sinn?"
+     ],
+     "steps": [
+      [
+       "Wohnung",
+       "passt in die Lücke"
+      ]
+     ]
+    },
+    {
+     "id": "d46",
+     "q": "Wortkasten: fahren – Uhr – Lehrer – Wohnung – nehmen – Ruhe – Zahl – Fehler. Welches Wort passt? Du kannst den roten Stift ___.",
+     "a": "nehmen",
+     "lvl": 3,
+     "th": "h",
+     "ans": [
+      "nehmen"
+     ],
+     "hints": [
+      "Lies den Satz ganz.",
+      "Welches Wort aus dem Kasten ergibt Sinn?"
+     ],
+     "steps": [
+      [
+       "nehmen",
+       "passt in die Lücke"
+      ]
+     ]
+    },
+    {
+     "id": "d47",
+     "q": "Wortkasten: fahren – Uhr – Lehrer – Wohnung – nehmen – Ruhe – Zahl – Fehler. Welches Wort passt? Nach dem Sport brauche ich kurz ___.",
+     "a": "Ruhe",
+     "lvl": 3,
+     "th": "h",
+     "ans": [
+      "Ruhe"
+     ],
+     "hints": [
+      "Lies den Satz ganz.",
+      "Welches Wort aus dem Kasten ergibt Sinn?"
+     ],
+     "steps": [
+      [
+       "Ruhe",
+       "passt in die Lücke"
+      ]
+     ]
+    },
+    {
+     "id": "d48",
+     "q": "Wortkasten: fahren – Uhr – Lehrer – Wohnung – nehmen – Ruhe – Zahl – Fehler. Welches Wort passt? Schreibe die ___ 48 in Worten.",
+     "a": "Zahl",
+     "lvl": 3,
+     "th": "h",
+     "ans": [
+      "Zahl"
+     ],
+     "hints": [
+      "Lies den Satz ganz.",
+      "Welches Wort aus dem Kasten ergibt Sinn?"
+     ],
+     "steps": [
+      [
+       "Zahl",
+       "passt in die Lücke"
+      ]
+     ]
+    },
+    {
+     "id": "d49",
+     "q": "Wortkasten: fahren – Uhr – Lehrer – Wohnung – nehmen – Ruhe – Zahl – Fehler. Welches Wort passt? In diesem Satz steckt ein ___.",
+     "a": "Fehler",
+     "lvl": 3,
+     "th": "h",
+     "ans": [
+      "Fehler"
+     ],
+     "hints": [
+      "Lies den Satz ganz.",
+      "Welches Wort aus dem Kasten ergibt Sinn?"
+     ],
+     "steps": [
+      [
+       "Fehler",
+       "passt in die Lücke"
+      ]
+     ]
+    },
+    {
+     "id": "d50",
+     "q": "In diesem Satz ist ein Wort falsch geschrieben. Schreibe den Satz richtig ab: Wir faren am Wochenende zu meiner Tante.",
+     "a": "Wir fahren am Wochenende zu meiner Tante.",
+     "lvl": 3,
+     "th": "trick",
+     "ans": [
+      "Wir fahren am Wochenende zu meiner Tante."
+     ],
+     "hints": [
+      "Lies jedes Wort einzeln.",
+      "Prüfe h, i und ie.",
+      "Schreibe den ganzen Satz neu."
+     ],
+     "steps": [
+      [
+       "Wir fahren am Wochenende zu meiner Tante.",
+       "richtiger Satz"
+      ]
+     ]
+    },
+    {
+     "id": "d51",
+     "q": "In diesem Satz ist ein Wort falsch geschrieben. Schreibe den Satz richtig ab: Der Brif liegt schon seit gestern auf dem Tisch.",
+     "a": "Der Brief liegt schon seit gestern auf dem Tisch.",
+     "lvl": 3,
+     "th": "trick",
+     "ans": [
+      "Der Brief liegt schon seit gestern auf dem Tisch."
+     ],
+     "hints": [
+      "Lies jedes Wort einzeln.",
+      "Prüfe h, i und ie.",
+      "Schreibe den ganzen Satz neu."
+     ],
+     "steps": [
+      [
+       "Der Brief liegt schon seit gestern auf dem Tisch.",
+       "richtiger Satz"
+      ]
+     ]
+    },
+    {
+     "id": "d52",
+     "q": "In diesem Satz ist ein Wort falsch geschrieben. Schreibe den Satz richtig ab: Ich habe meinen Schlüssel leider verliren.",
+     "a": "Ich habe meinen Schlüssel leider verlieren.",
+     "lvl": 3,
+     "th": "trick",
+     "ans": [
+      "Ich habe meinen Schlüssel leider verlieren."
+     ],
+     "hints": [
+      "Lies jedes Wort einzeln.",
+      "Prüfe h, i und ie.",
+      "Schreibe den ganzen Satz neu."
+     ],
+     "steps": [
+      [
+       "Ich habe meinen Schlüssel leider verlieren.",
+       "richtiger Satz"
+      ]
+     ]
+    },
+    {
+     "id": "d53",
+     "q": "In diesem Satz ist ein Wort falsch geschrieben. Schreibe den Satz richtig ab: Die Lererin erklärt eine schwierige Aufgabe.",
+     "a": "Die Lehrerin erklärt eine schwierige Aufgabe.",
+     "lvl": 3,
+     "th": "trick",
+     "ans": [
+      "Die Lehrerin erklärt eine schwierige Aufgabe."
+     ],
+     "hints": [
+      "Lies jedes Wort einzeln.",
+      "Prüfe h, i und ie.",
+      "Schreibe den ganzen Satz neu."
+     ],
+     "steps": [
+      [
+       "Die Lehrerin erklärt eine schwierige Aufgabe.",
+       "richtiger Satz"
+      ]
+     ]
+    },
+    {
+     "id": "d54",
+     "q": "In diesem Satz ist ein Wort falsch geschrieben. Schreibe den Satz richtig ab: Nach dem Training brauche ich erst einmal Rue.",
+     "a": "Nach dem Training brauche ich erst einmal Ruhe.",
+     "lvl": 3,
+     "th": "trick",
+     "ans": [
+      "Nach dem Training brauche ich erst einmal Ruhe."
+     ],
+     "hints": [
+      "Lies jedes Wort einzeln.",
+      "Prüfe h, i und ie.",
+      "Schreibe den ganzen Satz neu."
+     ],
+     "steps": [
+      [
+       "Nach dem Training brauche ich erst einmal Ruhe.",
+       "richtiger Satz"
+      ]
+     ]
+    },
+    {
+     "id": "d55",
+     "q": "In diesem Satz ist ein Wort falsch geschrieben. Schreibe den Satz richtig ab: Meine Famielie wohnt in einer kleinen Wonung.",
+     "a": "Meine Familie wohnt in einer kleinen Wohnung.",
+     "lvl": 3,
+     "th": "trick",
+     "ans": [
+      "Meine Familie wohnt in einer kleinen Wohnung."
+     ],
+     "hints": [
+      "Lies jedes Wort einzeln.",
+      "Prüfe h, i und ie.",
+      "Schreibe den ganzen Satz neu."
+     ],
+     "steps": [
+      [
+       "Meine Familie wohnt in einer kleinen Wohnung.",
+       "richtiger Satz"
+      ]
+     ]
+    },
+    {
+     "id": "d56",
+     "q": "In diesem Satz ist ein Wort falsch geschrieben. Schreibe den Satz richtig ab: Sieben Kinder spilen auf der Wiese.",
+     "a": "Sieben Kinder spielen auf der Wiese.",
+     "lvl": 3,
+     "th": "trick",
+     "ans": [
+      "Sieben Kinder spielen auf der Wiese."
+     ],
+     "hints": [
+      "Lies jedes Wort einzeln.",
+      "Prüfe h, i und ie.",
+      "Schreibe den ganzen Satz neu."
+     ],
+     "steps": [
+      [
+       "Sieben Kinder spielen auf der Wiese.",
+       "richtiger Satz"
+      ]
+     ]
+    },
+    {
+     "id": "d57",
+     "q": "In diesem Satz ist ein Wort falsch geschrieben. Schreibe den Satz richtig ab: Er nimt das Papier und schreibt die Zal auf.",
+     "a": "Er nimmt das Papier und schreibt die Zahl auf.",
+     "lvl": 3,
+     "th": "trick",
+     "ans": [
+      "Er nimmt das Papier und schreibt die Zahl auf."
+     ],
+     "hints": [
+      "Lies jedes Wort einzeln.",
+      "Prüfe h, i und ie.",
+      "Schreibe den ganzen Satz neu."
+     ],
+     "steps": [
+      [
+       "Er nimmt das Papier und schreibt die Zahl auf.",
+       "richtiger Satz"
+      ]
+     ]
+    },
+    {
+     "id": "d58",
+     "q": "Entscheide selbst: h, i, ie oder nichts? Schreibe das ganze Wort: empfe_len",
+     "a": "empfehlen",
+     "lvl": 4,
+     "th": "trick",
+     "ans": [
+      "empfehlen"
+     ],
+     "hints": [
+      "Hörst du ein langes i oder einen langen Vokal?",
+      "Verlängere oder verändere das Wort.",
+      "Im Zweifel nachschlagen."
+     ],
+     "steps": [
+      [
+       "empfehlen",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d59",
+     "q": "Entscheide selbst: h, i, ie oder nichts? Schreibe das ganze Wort: gesche_en",
+     "a": "geschehen",
+     "lvl": 4,
+     "th": "trick",
+     "ans": [
+      "geschehen"
+     ],
+     "hints": [
+      "Hörst du ein langes i oder einen langen Vokal?",
+      "Verlängere oder verändere das Wort.",
+      "Im Zweifel nachschlagen."
+     ],
+     "steps": [
+      [
+       "geschehen",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d60",
+     "q": "Entscheide selbst: h, i, ie oder nichts? Schreibe das ganze Wort: beza_len",
+     "a": "bezahlen",
+     "lvl": 4,
+     "th": "trick",
+     "ans": [
+      "bezahlen"
+     ],
+     "hints": [
+      "Hörst du ein langes i oder einen langen Vokal?",
+      "Verlängere oder verändere das Wort.",
+      "Im Zweifel nachschlagen."
+     ],
+     "steps": [
+      [
+       "bezahlen",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d61",
+     "q": "Entscheide selbst: h, i, ie oder nichts? Schreibe das ganze Wort: verlie_ren",
+     "a": "verlieren",
+     "lvl": 4,
+     "th": "trick",
+     "ans": [
+      "verlieren"
+     ],
+     "hints": [
+      "Hörst du ein langes i oder einen langen Vokal?",
+      "Verlängere oder verändere das Wort.",
+      "Im Zweifel nachschlagen."
+     ],
+     "steps": [
+      [
+       "verlieren",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d62",
+     "q": "Entscheide selbst: h, i, ie oder nichts? Schreibe das ganze Wort: be_alten",
+     "a": "behalten",
+     "lvl": 4,
+     "th": "trick",
+     "ans": [
+      "behalten"
+     ],
+     "hints": [
+      "Hörst du ein langes i oder einen langen Vokal?",
+      "Verlängere oder verändere das Wort.",
+      "Im Zweifel nachschlagen."
+     ],
+     "steps": [
+      [
+       "behalten",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d63",
+     "q": "Entscheide selbst: h, i, ie oder nichts? Schreibe das ganze Wort: Masch_ne",
+     "a": "Maschine",
+     "lvl": 4,
+     "th": "trick",
+     "ans": [
+      "Maschine"
+     ],
+     "hints": [
+      "Hörst du ein langes i oder einen langen Vokal?",
+      "Verlängere oder verändere das Wort.",
+      "Im Zweifel nachschlagen."
+     ],
+     "steps": [
+      [
+       "Maschine",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d64",
+     "q": "Entscheide selbst: h, i, ie oder nichts? Schreibe das ganze Wort: zie_en",
+     "a": "ziehen",
+     "lvl": 4,
+     "th": "trick",
+     "ans": [
+      "ziehen"
+     ],
+     "hints": [
+      "Hörst du ein langes i oder einen langen Vokal?",
+      "Verlängere oder verändere das Wort.",
+      "Im Zweifel nachschlagen."
+     ],
+     "steps": [
+      [
+       "ziehen",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d65",
+     "q": "Entscheide selbst: h, i, ie oder nichts? Schreibe das ganze Wort: dro_en",
+     "a": "drohen",
+     "lvl": 4,
+     "th": "trick",
+     "ans": [
+      "drohen"
+     ],
+     "hints": [
+      "Hörst du ein langes i oder einen langen Vokal?",
+      "Verlängere oder verändere das Wort.",
+      "Im Zweifel nachschlagen."
+     ],
+     "steps": [
+      [
+       "drohen",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d66",
+     "q": "Entscheide selbst: h, i, ie oder nichts? Schreibe das ganze Wort: erzie_en",
+     "a": "erziehen",
+     "lvl": 4,
+     "th": "trick",
+     "ans": [
+      "erziehen"
+     ],
+     "hints": [
+      "Hörst du ein langes i oder einen langen Vokal?",
+      "Verlängere oder verändere das Wort.",
+      "Im Zweifel nachschlagen."
+     ],
+     "steps": [
+      [
+       "erziehen",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d67",
+     "q": "Entscheide selbst: h, i, ie oder nichts? Schreibe das ganze Wort: schw_rig",
+     "a": "schwierig",
+     "lvl": 4,
+     "th": "trick",
+     "ans": [
+      "schwierig"
+     ],
+     "hints": [
+      "Hörst du ein langes i oder einen langen Vokal?",
+      "Verlängere oder verändere das Wort.",
+      "Im Zweifel nachschlagen."
+     ],
+     "steps": [
+      [
+       "schwierig",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d68",
+     "q": "Entscheide selbst: h, i, ie oder nichts? Schreibe das ganze Wort: verze_en",
+     "a": "verzeihen",
+     "lvl": 4,
+     "th": "trick",
+     "ans": [
+      "verzeihen"
+     ],
+     "hints": [
+      "Hörst du ein langes i oder einen langen Vokal?",
+      "Verlängere oder verändere das Wort.",
+      "Im Zweifel nachschlagen."
+     ],
+     "steps": [
+      [
+       "verzeihen",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d69",
+     "q": "Entscheide selbst: h, i, ie oder nichts? Schreibe das ganze Wort: wä_len",
+     "a": "wählen",
+     "lvl": 4,
+     "th": "trick",
+     "ans": [
+      "wählen"
+     ],
+     "hints": [
+      "Hörst du ein langes i oder einen langen Vokal?",
+      "Verlängere oder verändere das Wort.",
+      "Im Zweifel nachschlagen."
+     ],
+     "steps": [
+      [
+       "wählen",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d70",
+     "q": "Entscheide selbst: h, i, ie oder nichts? Schreibe das ganze Wort: berü_mt",
+     "a": "berühmt",
+     "lvl": 4,
+     "th": "trick",
+     "ans": [
+      "berühmt"
+     ],
+     "hints": [
+      "Hörst du ein langes i oder einen langen Vokal?",
+      "Verlängere oder verändere das Wort.",
+      "Im Zweifel nachschlagen."
+     ],
+     "steps": [
+      [
+       "berühmt",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d71",
+     "q": "Entscheide selbst: h, i, ie oder nichts? Schreibe das ganze Wort: gesp_lt",
+     "a": "gespielt",
+     "lvl": 4,
+     "th": "trick",
+     "ans": [
+      "gespielt"
+     ],
+     "hints": [
+      "Hörst du ein langes i oder einen langen Vokal?",
+      "Verlängere oder verändere das Wort.",
+      "Im Zweifel nachschlagen."
+     ],
+     "steps": [
+      [
+       "gespielt",
+       "richtig ergänzt"
+      ]
+     ]
+    },
+    {
+     "id": "d72",
+     "q": "Entscheide selbst: h, i, ie oder nichts? Schreibe das ganze Wort: frü_er",
+     "a": "früher",
+     "lvl": 4,
+     "th": "trick",
+     "ans": [
+      "früher"
+     ],
+     "hints": [
+      "Hörst du ein langes i oder einen langen Vokal?",
+      "Verlängere oder verändere das Wort.",
+      "Im Zweifel nachschlagen."
+     ],
+     "steps": [
+      [
+       "früher",
+       "richtig ergänzt"
+      ]
+     ]
+    }
+   ],
+   "exam": {
+    "minutes": 30,
+    "questions": [
+     {
+      "id": "e1",
+      "q": "Setze h ein: Za_l",
+      "explain": "Nach einem langen Vokal steht oft ein h.",
+      "type": "input",
+      "answer": [
+       "Zahl"
+      ]
+     },
+     {
+      "id": "e2",
+      "q": "Setze h ein: Wo_nung",
+      "explain": "Nach einem langen Vokal steht oft ein h.",
+      "type": "input",
+      "answer": [
+       "Wohnung"
+      ]
+     },
+     {
+      "id": "e3",
+      "q": "Setze h ein: fa_ren",
+      "explain": "Nach einem langen Vokal steht oft ein h.",
+      "type": "input",
+      "answer": [
+       "fahren"
+      ]
+     },
+     {
+      "id": "e4",
+      "q": "Setze h ein: Fe_ler",
+      "explain": "Nach einem langen Vokal steht oft ein h.",
+      "type": "input",
+      "answer": [
+       "Fehler"
+      ]
+     },
+     {
+      "id": "e5",
+      "q": "Setze i oder ie ein: W_se",
+      "explain": "Langes i ist oft ie.",
+      "type": "input",
+      "answer": [
+       "Wiese"
+      ]
+     },
+     {
+      "id": "e6",
+      "q": "Setze i oder ie ein: K_no",
+      "explain": "Langes i ist oft ie. Kino und Familie sind Ausnahmen.",
+      "type": "input",
+      "answer": [
+       "Kino"
+      ]
+     },
+     {
+      "id": "e7",
+      "q": "Setze i oder ie ein: Br_f",
+      "explain": "Langes i ist oft ie.",
+      "type": "input",
+      "answer": [
+       "Brief"
+      ]
+     },
+     {
+      "id": "e8",
+      "q": "Setze i oder ie ein: Fam_lie",
+      "explain": "Langes i ist oft ie. Kino und Familie sind Ausnahmen.",
+      "type": "input",
+      "answer": [
+       "Familie"
+      ]
+     },
+     {
+      "id": "e9",
+      "q": "Ergänze das Wort: Nach dem Sport brauche ich kurz ___. (Ruhe, Zahl, Fehler)",
+      "explain": "Das h steht nach dem langen u.",
+      "type": "input",
+      "answer": [
+       "Ruhe"
+      ]
+     },
+     {
+      "id": "e10",
+      "q": "Ergänze das Wort: Unser ___ erklärt die Aufgabe noch einmal. (Lehrer, Uhr, Zahl)",
+      "explain": "Lehrer schreibst du mit h.",
+      "type": "input",
+      "answer": [
+       "Lehrer"
+      ]
+     },
+     {
+      "id": "e11",
+      "q": "Schreibe den Satz richtig ab: Wir faren am Wochenende zu meiner Tante.",
+      "explain": "Prüfe h, i und ie.",
+      "type": "input",
+      "answer": [
+       "Wir fahren am Wochenende zu meiner Tante."
+      ]
+     },
+     {
+      "id": "e12",
+      "q": "Schreibe den Satz richtig ab: Ich habe meinen Schlüssel leider verliren.",
+      "explain": "Prüfe h, i und ie.",
+      "type": "input",
+      "answer": [
+       "Ich habe meinen Schlüssel leider verlieren."
+      ]
+     },
+     {
+      "id": "e13",
+      "q": "Schreibe den Satz richtig ab: Meine Famielie wohnt in einer kleinen Wonung.",
+      "explain": "Prüfe h, i und ie.",
+      "type": "input",
+      "answer": [
+       "Meine Familie wohnt in einer kleinen Wohnung."
+      ]
+     },
+     {
+      "id": "e14",
+      "q": "Entscheide selbst (h, i, ie oder nichts) und schreibe das ganze Wort: verlie_ren",
+      "explain": "Verlängere oder verändere das Wort.",
+      "type": "input",
+      "answer": [
+       "verlieren"
+      ]
+     },
+     {
+      "id": "e15",
+      "q": "Entscheide selbst (h, i, ie oder nichts) und schreibe das ganze Wort: berü_mt",
+      "explain": "Verlängere oder verändere das Wort.",
+      "type": "input",
+      "answer": [
+       "berühmt"
+      ]
+     },
+     {
+      "id": "e16",
+      "q": "Entscheide selbst (h, i, ie oder nichts) und schreibe das ganze Wort: empfe_len",
+      "explain": "Verlängere oder verändere das Wort.",
+      "type": "input",
+      "answer": [
+       "empfehlen"
+      ]
+     }
+    ]
+   },
+   "theory": {
+    "ie": {
+     "h": "Langes i",
+     "text": "Langes i wird oft mit ie geschrieben. Ausnahmen: Tiger, Kino, Musik, Maschine, Familie.",
+     "lines": [
+      [
+       "Wiese, Brief, sieben",
+       "ie"
+      ],
+      [
+       "Tiger, Kino, Musik",
+       "nur i"
+      ]
+     ]
+    },
+    "h": {
+     "h": "Das h nach langem Vokal",
+     "text": "Nach einem langen Vokal steht manchmal ein h. Es zeigt oft, dass der Vokal lang ist.",
+     "lines": [
+      [
+       "fahren, Zahl, Lehrer",
+       "h"
+      ],
+      [
+       "Wohnung, Fehler, nehmen",
+       "h"
+      ]
+     ]
+    },
+    "trick": {
+     "h": "Verlängern und verändern",
+     "text": "Verlängere oder verändere das Wort, dann erkennst du besser, ob ein h gebraucht wird. Wenn du unsicher bist, schlage das Wort nach.",
+     "lines": [
+      [
+       "Zahl → zahlen",
+       ""
+      ],
+      [
+       "sieht → sehen",
+       ""
+      ]
+     ]
     }
    }
   }

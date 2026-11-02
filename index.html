@@ -549,7 +549,7 @@ details.card[open] summary{margin-bottom:10px}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v3.35';
+var APP_VERSION='v3.36';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -1054,8 +1054,8 @@ function vHome(){
     return '<button class="ccard simple" data-act="child" data-id="'+esc(c.id)+'"><span class="cc-top"><span class="cnum">'+esc(String(c.grade||''))+'</span><span class="cc-t"><span class="cc-h">'+esc(label(c))+'</span><span class="sub">'+esc(subs.length?subs.join(' · '):'Bald mehr Aufgaben')+'</span></span><span class="cc-go">›</span></span></button>';
   }).join('');
   var picker='';
-  if(nav.avpick){var cur=myAv(),cc=myCol();picker='<div class="avmodal"><div class="avback" data-act="avclose"></div><div class="avsheet" role="dialog" aria-label="Avatar aussuchen"><div class="avhead"><b>Dein Avatar</b><button class="btn sm" data-act="avclose">Fertig</button></div><p class="lab2">Farbe</p><div class="avcols">'+AVCOL.map(function(c,i){return '<button class="avcol'+(i===cc?' on':'')+'" style="background:linear-gradient(135deg,'+c[0]+','+c[1]+')" data-act="avcol" data-id="'+i+'" aria-label="Farbe '+(i+1)+'"></button>'}).join('')+'</div><p class="lab2" style="margin-top:12px">Bild</p><div class="avgrid">'+Array.apply(null,{length:AV_N}).map(function(_,i){return '<button class="avopt'+(i===cur?' on':'')+'" data-act="avpick" data-id="'+i+'" aria-label="Avatar '+(i+1)+'">'+avPic(i,56)+'</button>'}).join('')+'</div></div></div>'}
-  return '<div class="home"><div class="brandrow">'+logoSvg(54)+'<h1>EasySchool</h1></div><div class="whoami"><button class="whoav" data-act="avopen" aria-label="Avatar aussuchen">'+avPic(myAv(),64)+'</button><div class="whoin"><label for="avname">Wer bist du?</label><input class="inp avname" id="avname" maxlength="14" placeholder="Dein Name (freiwillig)" value="'+esc(myName())+'" autocomplete="off"><button class="btn sm" data-act="avopen">Bild und Farbe ändern</button></div></div><p class="ask">Wähle deine Klasse</p><div class="clist">'+cards+'</div>'+picker+'</div>';
+  if(nav.avpick){var cur=myAv(),cc=myCol();picker='<div class="avmodal"><div class="avback" data-act="avclose"></div><div class="avsheet" role="dialog" aria-label="Avatar aussuchen"><div class="avhead"><b>Dein Avatar</b><button class="btn sm" data-act="avclose">Fertig</button></div><label class="lab2" for="avname">Dein Name (freiwillig)</label><input class="inp avname" id="avname" maxlength="14" placeholder="Zum Beispiel Luca" value="'+esc(myName())+'" autocomplete="off"><p class="lab2" style="margin-top:12px">Farbe</p><div class="avcols">'+AVCOL.map(function(c,i){return '<button class="avcol'+(i===cc?' on':'')+'" style="background:linear-gradient(135deg,'+c[0]+','+c[1]+')" data-act="avcol" data-id="'+i+'" aria-label="Farbe '+(i+1)+'"></button>'}).join('')+'</div><p class="lab2" style="margin-top:12px">Bild</p><div class="avgrid">'+Array.apply(null,{length:AV_N}).map(function(_,i){return '<button class="avopt'+(i===cur?' on':'')+'" data-act="avpick" data-id="'+i+'" aria-label="Avatar '+(i+1)+'">'+avPic(i,56)+'</button>'}).join('')+'</div></div></div>'}
+  return '<div class="home"><button class="avbtn" data-act="avopen" aria-label="Avatar aussuchen"><span class="avdot">'+avPic(myAv(),34)+'</span><span class="avn">'+(esc(myName())||'Avatar')+'</span></button><div class="brandrow">'+logoSvg(54)+'<h1>EasySchool</h1></div><p class="ask">Wähle deine Klasse</p><div class="clist">'+cards+'</div>'+picker+'</div>';
 }
 
 function vChild(){
@@ -1324,7 +1324,8 @@ function vGame(){
 /* ---------- Prüfung ---------- */
 function mmss(sec){var s=Math.abs(sec);return (sec<0?'−':'')+Math.floor(s/60)+':'+String(s%60).padStart(2,'0')}
 function examQs(n,t){if(n.qlist)return n.qlist;return mkQs(n,t)}
-function mkQs(n,t){if(t.subject==='mathe')return t.exam.questions;
+function isLangT(t){return t.subject==='franz'||t.subject==='engl'}
+function mkQs(n,t){if(!isLangT(t))return t.exam.questions;
   var cs=t.cards.filter(function(c){return c.fw&&c.de});if(n.mode==='kurz')cs=shuffle(cs).slice(0,7);
   return cs.map(function(c){return {id:c.id,q:c.de.join(' / '),type:'input',answer:[c.fw],ref:c.id,explain:''}})}
 var FUNNY={franz:['Franz Franzose','Pierre Baguette','Marie Croissant','Jean Fromage','Louis Käsli','Brigitte Bonjour','Claude Crêpe','Amélie Merci'],engl:['Tom Teabag','Lady Biscuit','Sir Toastbrot','Bob Bigben','Molly Muffin','Harry Hotdog','Tina Teatime','Jack Fish&Chips'],deu:['Hans Wurst','Berta Brezel','Fritz Müesli','Heidi Alpenblick','Sepp Rösti','Lisa Zopf'],mathe:['Prof. Pi Pfiffig','Zora Zähler','Nick Nenner','Bruno Bruch','Mia Mal-Zwei','Kurt Kehrbruch']};
@@ -1341,12 +1342,12 @@ function vPaper(n,t,qs){
   });
   return h+'</tbody></table></div><button class="btn pri big" data-act="finish">Abgeben</button></div>'}
 function vExam(){
-  var n=nav,t=topicById(n.topicId),mathe=t.subject==='mathe',qs=examQs(n,t);
+  var n=nav,t=topicById(n.topicId),mathe=!isLangT(t),qs=examQs(n,t);
   if(n.phase==='intro')return '<div class="stack"><div><p class="eyebrow">Musterprüfung</p><h1>'+esc(t.title)+'</h1></div>'+coach('Ist nur eine Musterprüfung. Hier darf noch jeder Fehler passieren.',1)+'<section class="card"><p>'+qs.length+' Fragen · Note von 1 bis 6</p><p class="sub" style="margin-top:8px">Antworte so, wie du es in der Schule tun würdest. Ohne Tipps, ohne Nachschauen.'+(mathe?' Für Zwischenschritte kannst du bei jeder Frage «Notizen machen» öffnen.':'')+' Es gibt keinen Zeitdruck. Für jede richtige Antwort gibt es XP, für gute Noten einen Bonus.</p></section>'+(mathe?'':'<div class="modes"><button class="btn'+(n.mode!=='kurz'?' pri':'')+'" data-act="emode" data-m="alles">Alles</button><button class="btn'+(n.mode==='kurz'?' pri':'')+'" data-act="emode" data-m="kurz">Kurztext</button></div>')+'<div class="row"><button class="btn pri big" data-act="start">Los geht\'s</button><button class="btn big" data-act="back">Zurück</button></div></div>';
   if(n.phase==='run'&&!mathe)return vPaper(n,t,qs);
   if(n.phase==='run'){
     var dt=new Date(),ds=dt.getDate()+'.'+(dt.getMonth()+1)+'.'+dt.getFullYear();
-    var html='<div class="paperpage"><p class="ptitle">Prüfung · '+esc(t.title)+'</p><div class="sheet"><div class="shead"><span>Name: <b>'+esc(n.pname||'')+'</b></span><span>Datum: <b>'+ds+'</b></span></div><p class="sub" style="margin:0 0 4px">Alle Brüche so weit wie möglich kürzen.</p><ol class="mq">';
+    var html='<div class="paperpage"><p class="ptitle">Prüfung · '+esc(t.title)+'</p><div class="sheet"><div class="shead"><span>Name: <b>'+esc(n.pname||'')+'</b></span><span>Datum: <b>'+ds+'</b></span></div>'+(t.subject==='mathe'?'<p class="sub" style="margin:0 0 4px">Alle Brüche so weit wie möglich kürzen.</p>':'')+'<ol class="mq">';
     qs.forEach(function(q,i){
       var key='e:'+t.id+':'+q.id,pd=padHTML(key,q.q);
       html+='<li><div class="mqt"><span class="nc c'+(i%4)+'">'+(i+1)+'</span><div class="mqx">'+rt(q.q.replace(' (so weit wie möglich kürzen)',''))+'</div></div>'+visuals(q.visuals)+'<input class="pin" id="in-'+q.id+'" data-q="'+q.id+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" value="'+esc(n.answers[q.id]||'')+'"><div class="tools">'+pd.btn+'</div>'+pd.box+'</li>';
