@@ -526,6 +526,15 @@ details.card[open] summary{margin-bottom:10px}
 .avname{width:100%;margin-top:4px}.avcols{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
 .avcol{all:unset;cursor:pointer;width:38px;height:38px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 1.5px #c4c7cc}.avcol.on{box-shadow:0 0 0 3px #1a73e8}
 .avn{max-width:90px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+.wl{display:flex;flex-direction:column;gap:10px}.wl-top{gap:8px;flex-wrap:wrap}
+.wl-tab{border:1px solid #c9ccd1;border-radius:12px;overflow:hidden;background:#fff}
+.wl-row{display:grid;grid-template-columns:1fr 1fr auto;gap:8px;align-items:center;padding:8px 12px;border-bottom:1px solid #e3e5e8;min-height:56px}
+.wl-row:last-child{border-bottom:0}.wl-row.ok{background:#f1faf3}.wl-row.no{background:#fdf2f1}
+.wl-q{font-size:1.1rem;font-weight:600}.wl-a{all:unset;cursor:pointer;font-size:1.05rem;padding:10px;border-radius:8px;background:#f1f3f4;color:#80868b;text-align:center;font-size:.9rem}
+.wl-a.open{background:#e8f0fe;color:#1a1f36;font-size:1.1rem;font-weight:600}
+.wl-m{display:flex;gap:6px}.mk{all:unset;cursor:pointer;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-weight:700;border:2px solid #c4c7cc;color:#777}
+.mk.ok.on{background:#34A853;border-color:#34A853;color:#fff}.mk.no.on{background:#EA4335;border-color:#EA4335;color:#fff}
 </style>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1100,11 +1109,20 @@ function tryHTML(st){
   if(T.drag){var pl=nav.dr[i]||(nav.dr[i]=T.drag.slots.map(function(){return null})),used=pl.filter(Boolean),ok=nav.dr[i+'ok'];
     return '<div class="try"><p class="q">'+esc(T.q)+'</p><div class="dslots">'+T.drag.slots.map(function(s,si){return '<div class="dslot'+(pl[si]?' full':'')+'" data-slot="'+si+'" data-act="dslot" data-si="'+si+'"><small>'+esc(s)+'</small><b>'+(pl[si]?esc(pl[si]):'&nbsp;')+'</b></div>'}).join('')+'</div><div class="dchips">'+T.drag.chips.filter(function(c){return used.indexOf(c)<0}).map(function(c){return '<button class="dchip'+(nav.dsel===c?' sel':'')+'" data-chip="'+esc(c)+'">'+esc(c)+'</button>'}).join('')+'</div><div class="row"><button class="btn pri" data-act="dcheck">Prüfen</button><button class="btn" data-act="dreset">Neu</button></div><p class="fb '+(ok===true?'ok':ok===false?'no':'')+'" role="status">'+(ok===true?'Richtig!':ok===false?'Noch nicht ganz. '+esc(T.hint||''):'Ziehe die Wörter in die Felder oder tippe Wort und Feld an.')+'</p></div>'}
   return '<div class="try"><p class="q">Probier es kurz: '+rt(T.q)+'</p><div class="row"><input class="inp" id="tryin" placeholder="'+ph(T.a[0])+'" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Deine Antwort"><button class="btn pri" data-act="try">Prüfen</button>'+(T.hint?'<button class="btn" data-act="tryhint">Tipp</button>':'')+'</div><p class="fb" id="tryfb" role="status"></p></div>'}
+function vWordList(t){
+  var L=nav.lst||(nav.lst={dir:'de',open:{},mark:{}}),cs=t.cards.filter(function(c){return c.fw&&c.de}),nd=Object.keys(L.mark).filter(function(k){return L.mark[k]==='ok'}).length;
+  var h='<div class="wl"><div class="row wl-top"><button class="btn sm'+(L.dir==='de'?' pri':'')+'" data-act="ldir" data-d="de">Deutsch → Fremdsprache</button><button class="btn sm'+(L.dir==='fw'?' pri':'')+'" data-act="ldir" data-d="fw">Fremdsprache → Deutsch</button></div><div class="row between"><span class="sub">'+nd+' von '+cs.length+' gewusst</span><button class="btn sm" data-act="lreset">Alle wieder zudecken</button></div><div class="wl-tab">';
+  cs.forEach(function(c){
+    var q=L.dir==='de'?c.de.join(' / '):c.fw,a=L.dir==='de'?c.fw:c.de.join(' / '),o=L.open[c.id],m=L.mark[c.id];
+    h+='<div class="wl-row'+(m?' '+m:'')+'"><div class="wl-q">'+esc(q)+'</div><button class="wl-a'+(o?' open':'')+'" data-act="lopen" data-id="'+esc(c.id)+'" aria-label="Aufdecken">'+(o?esc(a):'Tippen zum Aufdecken')+'</button>'+(o?'<div class="wl-m"><button class="mk ok'+(m==='ok'?' on':'')+'" data-act="lmark" data-id="'+esc(c.id)+'" data-v="ok" aria-label="Gewusst">✓</button><button class="mk no'+(m==='no'?' on':'')+'" data-act="lmark" data-id="'+esc(c.id)+'" data-v="no" aria-label="Nicht gewusst">✗</button></div>':'')+'</div>';
+  });
+  return h+'</div></div>'}
 function vLearn(){
   var t=topicById(nav.topicId),st=t.explain[nav.step],last=nav.step===t.explain.length-1,first=nav.step===0;
   var dots='<div class="dotsrow" aria-label="Schritt '+(nav.step+1)+' von '+t.explain.length+'">'+t.explain.map(function(_,i){return '<i class="'+(i<=nav.step?'on':'')+'"></i>'}).join('')+'</div>';
   var say=first?'Los geht\'s. Lies in Ruhe, dann probier es aus.':last?'Letzter Schritt. Danach darfst du üben.':pick(['Schau dir die Bilder genau an, sie verraten viel.','Kleine Schritte, grosse Wirkung.','Das merkst du dir schneller, als du denkst.'],nav.step);
   var html='<div class="stack explain"><div><p class="eyebrow">'+esc(t.title)+' · Schritt '+(nav.step+1)+' von '+t.explain.length+'</p><h1>'+esc(st.h)+'</h1></div>'+dots+coach(esc(say),first?1:last?3:2)+'<p class="txt">'+rt(st.text)+'</p>'+visuals(st.visuals);
+  if(st.list)html+=vWordList(t);
   var qz=quizFor(st);
   if(qz.length){
     nav.qz=nav.qz||{};
@@ -1298,13 +1316,13 @@ function mmss(sec){var s=Math.abs(sec);return (sec<0?'−':'')+Math.floor(s/60)+
 function examQs(n,t){if(n.qlist)return n.qlist;return mkQs(n,t)}
 function mkQs(n,t){if(t.subject==='mathe')return t.exam.questions;
   var cs=t.cards.filter(function(c){return c.fw&&c.de});if(n.mode==='kurz')cs=shuffle(cs).slice(0,7);
-  return cs.map(function(c){return {id:c.id,q:c.fw,type:'input',answer:c.de,ref:c.id,explain:''}})}
+  return cs.map(function(c){return {id:c.id,q:c.de.join(' / '),type:'input',answer:[c.fw],ref:c.id,explain:''}})}
 var FUNNY={franz:['Franz Franzose','Pierre Baguette','Marie Croissant','Jean Fromage','Louis Käsli','Brigitte Bonjour','Claude Crêpe','Amélie Merci'],engl:['Tom Teabag','Lady Biscuit','Sir Toastbrot','Bob Bigben','Molly Muffin','Harry Hotdog','Tina Teatime','Jack Fish&Chips'],deu:['Hans Wurst','Berta Brezel','Fritz Müesli','Heidi Alpenblick','Sepp Rösti','Lisa Zopf'],mathe:['Prof. Pi Pfiffig','Zora Zähler','Nick Nenner','Bruno Bruch','Mia Mal-Zwei','Kurt Kehrbruch']};
 function funnyName(t){var l=FUNNY[t.subject]||FUNNY.deu;return l[Math.floor(Math.random()*l.length)]}
 function paperLeft(q){return esc(q.q)}
 function vPaper(n,t,qs){
-  var dt=new Date(),ds=dt.getDate()+'.'+(dt.getMonth()+1)+'.'+dt.getFullYear(),lg='Deutsche';
-  var h='<div class="paperpage"><p class="ptitle">Prüfung · '+esc(t.title)+'</p><div class="sheet"><div class="shead"><span>Name: <b>'+esc(n.pname||'')+'</b></span><span>Datum: <b>'+ds+'</b></span></div><table class="ptab"><thead><tr><th class="pn">Nr.</th><th>'+'Übersetze ins Deutsche'+'</th><th>Antwort</th></tr></thead><tbody>';
+  var dt=new Date(),ds=dt.getDate()+'.'+(dt.getMonth()+1)+'.'+dt.getFullYear(),lg=t.subject==='engl'?'Englische':'Französische';
+  var h='<div class="paperpage"><p class="ptitle">Prüfung · '+esc(t.title)+'</p><div class="sheet"><div class="shead"><span>Name: <b>'+esc(n.pname||'')+'</b></span><span>Datum: <b>'+ds+'</b></span></div><table class="ptab"><thead><tr><th class="pn">Nr.</th><th>'+'Übersetze ins '+lg+'</th><th>Antwort</th></tr></thead><tbody>';
   qs.forEach(function(q,i){
     var cell;
     if(q.type==='mc')cell='<select class="pin" data-q="'+q.id+'"><option value="">–</option>'+q.options.map(function(o,j){return '<option value="'+j+'"'+(n.answers[q.id]===j?' selected':'')+'>'+esc(o.replace(/<[^>]+>/g,''))+'</option>'}).join('')+'</select>';
@@ -1437,6 +1455,10 @@ var ACT={
   flip:function(b){if(b.classList)b.classList.toggle('on')},
   speak:function(b){try{var u=new SpeechSynthesisUtterance(b.dataset.t);u.lang=b.dataset.lang||'en-GB';u.rate=.9;speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){}},
   qz:function(b){nav.qz=nav.qz||{};var key=nav.step+'_'+b.dataset.q;if(nav.qz[key]!=null)return;nav.qz[key]=+b.dataset.i;render()},
+  ldir:function(b){nav.lst=nav.lst||{open:{},mark:{}};nav.lst.dir=b.dataset.d;nav.lst.open={};render()},
+  lopen:function(b){var L=nav.lst||(nav.lst={dir:'de',open:{},mark:{}});L.open[b.dataset.id]=!L.open[b.dataset.id];render()},
+  lmark:function(b){var L=nav.lst;L.mark[b.dataset.id]=b.dataset.v;render()},
+  lreset:function(){var L=nav.lst;if(L){L.open={};L.mark={}}render()},
   topt:function(b){var T=topicById(nav.topicId).explain[nav.step].try,o=T.opts[+b.dataset.i],i=nav.step;nav.topt=nav.topt||{};var ch=nav.topt[i]||(nav.topt[i]={});if(o===T.a[0])ch.ok=true;else{ch.bad=(ch.bad||[]).concat([o])}render()},
   dslot:function(b){var i=nav.step,si=+b.dataset.si,pl=nav.dr[i];if(pl[si]){pl[si]=null;nav.dr[i+'ok']=undefined}else if(nav.dsel){pl[si]=nav.dsel;nav.dsel=null}render()},
   dcheck:function(){var T=topicById(nav.topicId).explain[nav.step].try,i=nav.step,pl=nav.dr[i];nav.dr[i+'ok']=pl.every(function(x,k){return x===T.a[k]});render()},
