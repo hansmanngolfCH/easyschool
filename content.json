@@ -2,6 +2,20 @@
  "version": 5,
  "children": [
   {
+   "id": "kl1",
+   "name": "",
+   "grade": 1,
+   "img": "img/kl3.webp",
+   "full": "img/fb_brown.webp"
+  },
+  {
+   "id": "kl2",
+   "name": "",
+   "grade": 2,
+   "img": "img/kl3.webp",
+   "full": "img/fb_brown.webp"
+  },
+  {
    "id": "kl3",
    "name": "",
    "grade": 3,
@@ -42,6 +56,13 @@
    "grade": 8,
    "img": "img/kl8.webp",
    "full": "img/fb_boy.webp"
+  },
+  {
+   "id": "kl9",
+   "name": "",
+   "grade": 9,
+   "img": "img/kl3.webp",
+   "full": "img/fb_brown.webp"
   }
  ],
  "subjects": [

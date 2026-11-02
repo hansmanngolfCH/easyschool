@@ -621,6 +621,20 @@ details.card[open] summary{margin-bottom:10px}
 @keyframes xpsweep{0%{background-position:-80% 0}70%,100%{background-position:190% 0}}
 @keyframes xpglow{0%,100%{box-shadow:0 0 8px rgba(66,133,244,.45)}50%{box-shadow:0 0 18px rgba(251,188,4,.75)}}
 @media (prefers-reduced-motion:reduce){.xpg i,.xpg i::after{animation:none}}
+
+/* v3.51 Klassen 1 bis 9, kompakt, nach Stufe */
+.stufe{display:flex;align-items:center;gap:8px;margin:14px 0 8px;color:#3c4043;font-size:.85rem}
+.stufe b{font:700 1rem var(--font-d);color:#1f2430}
+.stic{display:grid;place-items:center;width:30px;height:30px;border-radius:10px;color:#fff}
+.stp{background:#4285F4}.sto{background:#34A853}
+.clist{grid-template-columns:repeat(2,1fr);gap:10px}
+.ccard.sm2{padding:10px 12px;border-radius:16px}
+.ccard.sm2 .cc-top{gap:10px}
+.ccard.sm2 .cnum{width:42px;height:42px;border-radius:13px;font-size:1.35rem}
+.ccard.sm2 .cc-h{font:600 1.05rem var(--font-d)}
+.ccard.sm2 .sub{font-size:.78rem}
+.cl-o .ccard:nth-child(1) .cnum{background:#34A853}.cl-o .ccard:nth-child(2) .cnum{background:#EA4335}.cl-o .ccard:nth-child(3) .cnum{background:#F9AB00}
+@media (min-width:700px){.clist{grid-template-columns:repeat(3,1fr)}}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -628,7 +642,7 @@ details.card[open] summary{margin-bottom:10px}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v3.50';
+var APP_VERSION='v3.51';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -1126,17 +1140,20 @@ function banner(){
 }
 function xpbar(pl){return '<div class="xpbar"><div class="bar" role="img" aria-label="XP"><i style="width:'+Math.max(3,Math.round(pl.pct*100))+'%"></i></div><span class="pct">'+pl.xp+' / '+pl.next+' XP</span></div>'}
 
+function cclass(c){
+  var subs=subjOf(c),n=subs.length;
+  return '<button class="ccard simple sm2" data-act="child" data-id="'+esc(c.id)+'"><span class="cc-top"><span class="cnum">'+esc(String(c.grade||''))+'</span><span class="cc-t"><span class="cc-h">'+esc(label(c))+'</span><span class="sub'+(n?'':' noc')+'">'+(n?n+(n===1?' Fach':' Fächer'):'Kein Inhalt')+'</span></span></span></button>';
+}
+var STUFE_IC={p:'<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1-4L17 4l3 3L8 19z"/><path d="M14 7l3 3"/></svg>',o:'<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>'};
 function vHome(){
-  var cards=C.children.map(function(c){
-    var ts=topicsOf(c.id),s=stats(c.id,ts),L=level(c.id,ts),subs=subjOf(c).map(function(sb){return sb.name});
-    var status=!s.total?'Bald mehr Aufgaben':s.due>0?s.due+' zum Wiederholen':s.fresh>0?s.fresh+' neue Aufgaben':'Alles erledigt';
-    return '<button class="ccard simple" data-act="child" data-id="'+esc(c.id)+'"><span class="cc-top"><span class="cnum">'+esc(String(c.grade||''))+'</span><span class="cc-t"><span class="cc-h">'+esc(label(c))+'</span><span class="sub'+(subs.length?'':' noc')+'">'+esc(subs.length?subs.join(' · '):'Kein Inhalt')+'</span></span><span class="cc-go">›</span></span></button>';
-  }).join('');
+  var kids=C.children.slice().sort(function(a,b){return (a.grade||0)-(b.grade||0)});
+  var prim=kids.filter(function(c){return (c.grade||0)<=6}),ober=kids.filter(function(c){return (c.grade||0)>=7});
+  var cards=(prim.length?'<div class="stufe"><span class="stic stp">'+STUFE_IC.p+'</span><b>Primarstufe</b><span>Klasse 1–6</span></div><div class="clist cl-p">'+prim.map(cclass).join('')+'</div>':'')+(ober.length?'<div class="stufe"><span class="stic sto">'+STUFE_IC.o+'</span><b>Oberstufe</b><span>Klasse 7–9</span></div><div class="clist cl-o">'+ober.map(cclass).join('')+'</div>':'');
   var tot=0;C.children.forEach(function(c){tot+=xpTotal(c.id)});var HL=plv(tot),hp=(tot%1000)/1000;
   var hb='<div class="banner hbn"><span class="av" style="width:40px;height:40px">'+avPic(myAv(),40)+'</span><div class="bn-m"><div class="bn-row"><span class="bn-lv"><b style="color:'+AVCOL[myCol()][1]+'">'+(esc(myName())||'Schüler')+'</b> · Level '+HL+'</span><span class="bn-xp">'+fx(tot)+' XP</span></div><div class="xpg sm" role="img" aria-label="XP"><i style="width:'+Math.max(5,Math.round(hp*100))+'%"></i><u></u></div></div>'+shield(HL,40)+'</div>';
   var picker='';
   if(nav.avpick){var cur=myAv(),cc=myCol();picker='<div class="avmodal"><div class="avback" data-act="avclose"></div><div class="avsheet" role="dialog" aria-label="Avatar aussuchen"><div class="avhead"><b>Dein Avatar</b><button class="btn sm" data-act="avclose">Fertig</button></div><label class="lab2" for="avname">Dein Name (freiwillig)</label><input class="inp avname" id="avname" maxlength="14" placeholder="Zum Beispiel Luca" value="'+esc(myName())+'" autocomplete="off"><p class="lab2" style="margin-top:12px">Farbe</p><div class="avcols">'+AVCOL.map(function(c,i){return '<button class="avcol'+(i===cc?' on':'')+'" style="background:linear-gradient(135deg,'+c[0]+','+c[1]+')" data-act="avcol" data-id="'+i+'" aria-label="Farbe '+(i+1)+'"></button>'}).join('')+'</div><p class="lab2" style="margin-top:12px">Bild</p><div class="avgrid">'+Array.apply(null,{length:AV_N}).map(function(_,i){return '<button class="avopt'+(i===cur?' on':'')+'" data-act="avpick" data-id="'+i+'" aria-label="Avatar '+(i+1)+'">'+avPic(i,56)+'</button>'}).join('')+'</div></div></div>'}
-  return '<div class="home"><button class="avbtn" data-act="avopen" aria-label="Avatar aussuchen"><span class="avdot">'+avPic(myAv(),34)+'</span><span class="avn">'+(esc(myName())||'Schüler')+'</span></button><div class="brandrow">'+logoSvg(76)+'<h1>EasySchool</h1></div>'+hb+'<p class="ask">Wähle deine Klasse</p><div class="clist">'+cards+'</div>'+picker+'</div>';
+  return '<div class="home"><button class="avbtn" data-act="avopen" aria-label="Avatar aussuchen"><span class="avdot">'+avPic(myAv(),34)+'</span><span class="avn">'+(esc(myName())||'Schüler')+'</span></button><div class="brandrow">'+logoSvg(76)+'<h1>EasySchool</h1></div>'+hb+'<p class="ask">Wähle deine Klasse</p>'+cards+''+picker+'</div>';
 }
 
 function vChild(){
