@@ -673,6 +673,14 @@ details.card[open] summary{margin-bottom:10px}
 .btn.joker:disabled{border-color:#DADCE0;color:#9aa0a6}
 @media (max-width:360px){.opts.mill{grid-template-columns:1fr}}
 .hint{background:#F1F3F4!important;border-color:#DADCE0!important;color:#202124!important}.hint b{color:#5f6368!important}
+
+/* v3.55 Korrektur = gleiche Seite wie Pruefung */
+.pin.cl{display:flex;align-items:center;flex-wrap:wrap;gap:4px 12px;box-sizing:border-box;min-height:48px;width:100%}
+.hw.strike{text-decoration:line-through;text-decoration-color:#D93025;text-decoration-thickness:3px}
+.hw.red{display:inline;margin:0}
+.mq .pin.cl{padding:8px 4px}
+.mkw{margin-left:auto}
+.ptab .hw{font-size:1.4rem}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -680,7 +688,7 @@ details.card[open] summary{margin-bottom:10px}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v3.54';
+var APP_VERSION='v3.55';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -1519,19 +1527,19 @@ function vExam(){
   var r=n.result,msg=r.note>=5.5?'Wow! Das war fast zu einfach.':r.note>=4.5?'Stark gemacht. Noch ein bisschen Feinschliff.':r.note>=4?'Bestanden! Übe noch die Aufgaben, die nicht geklappt haben.':'Das war ein Aufwärmen. Die Aufgaben, die nicht geklappt haben, üben wir jetzt zusammen.';
   var dt2=new Date(),ds2=dt2.getDate()+'.'+(dt2.getMonth()+1)+'.'+dt2.getFullYear();
   var TK='<svg class="mkk ok" viewBox="0 0 32 28" aria-label="richtig"><path d="M3 15l8 9L29 3"/></svg>',XX='<svg class="mkk no" viewBox="0 0 28 28" aria-label="falsch"><path d="M4 5l20 18M24 4L5 24"/></svg>';
-  var html3='<div class="paperpage"><p class="ptitle">Korrektur · '+esc(t.title)+'</p><div class="sheet corr"><div class="gmark"><span class="gnote">'+fmt(r.note)+'</span><span class="gpts">'+r.score+' / '+r.max+'</span></div><div class="shead"><span>Name: <b>'+esc(n.pname||'')+'</b></span><span>Datum: <b>'+ds2+'</b></span></div>';
+  var html3='<div class="paperpage"><p class="ptitle">Prüfung · '+esc(t.title)+'</p><div class="sheet corr"><div class="gmark"><span class="gnote">'+fmt(r.note)+'</span><span class="gpts">'+r.score+' / '+r.max+'</span></div><div class="shead"><span>Name: <b>'+esc(n.pname||'')+'</b></span><span>Datum: <b>'+ds2+'</b></span></div>';
   var rowAns=function(it,i){
     var ans=it.q.type==='mc'?it.q.options[it.q.answer]:it.q.answer[0],given=it.q.type==='mc'?(it.g==null?'':it.q.options[it.g]):(it.g||'');
     var tilt=((i*37)%7)-3;
-    return '<span class="hw">'+(given?esc(given):'')+'</span><span class="mkw" style="transform:rotate('+tilt+'deg)">'+(it.ok?TK:XX)+'</span>'+(it.ok?'':'<span class="hw red">'+rt(ans)+'</span>');
+    return '<div class="pin cl">'+(given?'<span class="hw'+(it.ok?'':' strike')+'">'+esc(given)+'</span>':'')+(it.ok?'':'<span class="hw red">'+rt(ans)+'</span>')+'<span class="mkw" style="transform:rotate('+tilt+'deg)">'+(it.ok?TK:XX)+'</span></div>';
   };
   if(isLangT(t)){
     html3+='<table class="ptab"><thead><tr><th class="pn">Nr.</th><th>'+langHead(n,t)+'</th><th>Antwort</th></tr></thead><tbody>';
-    r.items.forEach(function(it,i){html3+='<tr><td class="pn"><span class="nc c'+(i%4)+'">'+(i+1)+'</span></td><td class="pq">'+paperLeft(it.q)+'</td><td class="pa">'+rowAns(it,i)+'</td></tr>'});
+    r.items.forEach(function(it,i){html3+='<tr><td class="pn"><span class="nc c'+(i%4)+'">'+(i+1)+'</span></td><td class="pq">'+paperLeft(it.q)+'</td><td>'+rowAns(it,i)+'</td></tr>'});
     html3+='</tbody></table>';
   }else{
     html3+=(t.subject==='mathe'&&t.id.indexOf('bruch')>=0?'<p class="sub" style="margin:0 0 4px">Alle Brüche so weit wie möglich kürzen.</p>':'')+'<ol class="mq">';
-    r.items.forEach(function(it,i){html3+='<li><div class="mqt"><span class="nc c'+(i%4)+'">'+(i+1)+'</span><div class="mqx">'+rt(it.q.q.replace(' (so weit wie möglich kürzen)',''))+'</div></div><div class="pa">'+rowAns(it,i)+'</div></li>'});
+    r.items.forEach(function(it,i){html3+='<li><div class="mqt"><span class="nc c'+(i%4)+'">'+(i+1)+'</span><div class="mqx">'+rt(it.q.q.replace(' (so weit wie möglich kürzen)',''))+'</div></div>'+rowAns(it,i)+'</li>'});
     html3+='</ol>';
   }
   html3+='</div><p class="sub" style="margin:10px 2px">'+esc(msg)+' · +'+r.xp+' XP</p>';
