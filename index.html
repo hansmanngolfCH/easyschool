@@ -611,6 +611,7 @@ details.card[open] summary{margin-bottom:10px}
 .tchead .tcgame{all:unset;box-sizing:border-box;cursor:pointer;flex:none;font:600 .74rem var(--font-d);padding:5px 10px;border-radius:99px;border:1px solid #DADCE0;color:#1A73E8;background:#fff;white-space:nowrap;touch-action:manipulation}
 .tchead .tcgame:hover{background:#F1F3F4}
 .tchead .tcgame:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.tcpct{flex:none;font:700 .95rem var(--font-d);color:#1A73E8;margin-left:auto}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -618,7 +619,7 @@ details.card[open] summary{margin-bottom:10px}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v3.48';
+var APP_VERSION='v3.49';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -630,7 +631,7 @@ function stable(o){return JSON.stringify(o,function(k,v){return v&&typeof v==='o
 function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t}return a}
 
 /* ---------- Fortschritt ---------- */
-function prog(id){var p=P[id]||(P[id]={});p.cards=p.cards||{};p.exams=p.exams||[];p.seen=p.seen||{};p.days=p.days||{};p.ach=p.ach||{};p.skin=p.skin||'classic';p.skinT=p.skinT||0;p.pw=p.pw||{};p.aura=p.aura||'none';p.auraT=p.auraT||0;p.arm=p.arm||[];return p}
+function prog(id){var p=P[id]||(P[id]={});p.cards=p.cards||{};p.exams=p.exams||[];p.seen=p.seen||{};p.days=p.days||{};p.ach=p.ach||{};p.skin=p.skin||'classic';p.skinT=p.skinT||0;p.pw=p.pw||{};p.aura=p.aura||'none';p.auraT=p.auraT||0;p.arm=p.arm||[];p.vis=p.vis||{};return p}
 function loadLocal(){try{var r=localStorage.getItem(LS);if(r)P=JSON.parse(r)||{}}catch(e){}}
 function saveLocal(){try{localStorage.setItem(LS,JSON.stringify(P))}catch(e){}}
 function sortEx(a){return a.slice().sort(function(x,y){return x.t-y.t||(x.topic<y.topic?-1:1)})}
@@ -1167,7 +1168,7 @@ deu:'<rect x="6" y="6" width="52" height="52" rx="12" fill="'+Y+'"/><text x="32"
 function artSvg(t){var k=t.art&&ART[t.art]?t.art:(ART[t.subject]?t.subject:'mathe');return '<svg viewBox="0 0 64 64" width="100%" height="100%" aria-hidden="true">'+ART[k]+'</svg>'}
 function topicCard(ch,t){
   var st=stats(ch.id,[t]),seen=prog(ch.id).seen[t.id],best=bestNote(ch.id,t.id),hasV=t.cards.some(isV),L=level(ch.id,[t]),w=Math.max(L.seen?4:0,Math.round(L.pct*100));
-  return '<article class="card topic tc"><div class="tchead"><span class="tcart">'+artSvg(t)+'</span><div class="tcmain"><h3 class="tt">'+esc(t.title)+'</h3><p class="sub">'+t.cards.length+' Aufgaben · '+w+'%</p></div>'+(hasV?'<button class="btn sm tcgame" data-act="pairs" data-id="'+esc(t.id)+'">Paare-Spiel</button>':'')+'</div>'
+  return '<article class="card topic tc"><div class="tchead"><span class="tcart">'+artSvg(t)+'</span><div class="tcmain"><h3 class="tt">'+esc(t.title)+'</h3><p class="sub">'+(prog(ch.id).vis[t.id]||0)+'× besucht</p></div><span class="tcpct">'+w+'%</span>'+(hasV?'<button class="btn sm tcgame" data-act="pairs" data-id="'+esc(t.id)+'">Paare-Spiel</button>':'')+'</div>'
   +'<div class="bar thin" role="img" aria-label="'+w+' Prozent"><i style="width:'+w+'%"></i></div>'
   +'<div class="mods3"><button class="mod3 m-v" data-act="learn" data-id="'+esc(t.id)+'">AI-Theorie</button>'
   +'<button class="mod3 m-u" data-act="practice" data-scope="topic:'+esc(t.id)+'" data-force="1">AI-Lernen</button>'
@@ -1679,7 +1680,7 @@ function finishExam(){
   save(n.child);n.phase='result';n.result={items:items,score:score,max:max,note:note,xp:xp};render();window.scrollTo(0,0);
 }
 
-app.addEventListener('click',function(e){var b=e.target.closest('[data-act]');if(!b)return;if(nav.child)touch(nav.child);var f=ACT[b.dataset.act];if(f)f(b)});
+app.addEventListener('click',function(e){var b=e.target.closest('[data-act]');if(!b)return;if(nav.child)touch(nav.child);var ac=b.dataset.act,tid=(ac==='learn'||ac==='exam'||ac==='pairs')?b.dataset.id:((ac==='practice'&&/^topic:/.test(b.dataset.scope||''))?b.dataset.scope.slice(6):null);if(tid&&nav.child){var pv=prog(nav.child);pv.vis[tid]=(pv.vis[tid]||0)+1;saveLocal()}var f=ACT[ac];if(f)f(b)});
 app.addEventListener('change',function(e){var t=e.target,q=t&&t.dataset&&t.dataset.q;if(q&&nav.view==='exam'&&t.tagName==='SELECT')nav.answers[q]=t.value===''?null:Number(t.value)});
 app.addEventListener('input',function(e){
   var t=e.target;if(!t)return;
