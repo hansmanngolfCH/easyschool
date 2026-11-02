@@ -7150,6 +7150,3805 @@
      ]
     }
    }
+  },
+  {
+   "id": "kl8-deu-grammatik1",
+   "child": "kl8",
+   "subject": "deu",
+   "chapter": "Grammatik",
+   "title": "Grammatik: Grundlagen",
+   "explain": [
+    {
+     "h": "Wortarten erkennen",
+     "text": "Jedes Wort im Satz hat eine Wortart. Ein Nomen ist ein Name (Schüler), ein Verb eine Tätigkeit (lösen), ein Adjektiv eine Eigenschaft (mutig).",
+     "visuals": [
+      {
+       "type": "lines",
+       "num": false,
+       "items": [
+        [
+         "Nomen",
+         "Schüler, Schulhaus, Aufgabe"
+        ],
+        [
+         "Verb",
+         "lösen, warten, erklären"
+        ],
+        [
+         "Adjektiv",
+         "mutig, schnell, ruhig"
+        ],
+        [
+         "Pronomen",
+         "sie, wir, ich"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Welche Wortart ist «mutige» in: Der mutige Schüler meldet sich zuerst?",
+      "opts": [
+       "Adjektiv",
+       "Verb",
+       "Nomen",
+       "Pronomen"
+      ],
+      "a": [
+       "Adjektiv"
+      ],
+      "hint": "Es sagt, wie der Schüler ist."
+     }
+    },
+    {
+     "h": "Kleine Wörter: Präposition, Konjunktion, Adverb",
+     "text": "Eine Präposition steht vor einem Nomen (vor dem Schulhaus). Eine Konjunktion verbindet Sätze (obwohl, weil). Ein Adverb sagt, wann, wo oder wie etwas geschieht (heute, gemeinsam).",
+     "visuals": [
+      {
+       "type": "lines",
+       "num": false,
+       "items": [
+        [
+         "Präposition",
+         "vor, nach, auf, neben"
+        ],
+        [
+         "Konjunktion",
+         "obwohl, weil, denn"
+        ],
+        [
+         "Adverb",
+         "heute, oft, gestern"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Welche Wortart ist «vor» in: Mia wartet vor dem Schulhaus?",
+      "opts": [
+       "Präposition",
+       "Konjunktion",
+       "Adverb",
+       "Adjektiv"
+      ],
+      "a": [
+       "Präposition"
+      ],
+      "hint": "Es steht vor dem Nomen und zeigt, wo."
+     }
+    },
+    {
+     "h": "Die vier Fälle (Kasus)",
+     "text": "Mit Fragen findest du den Fall: Nominativ = wer oder was, Genitiv = wessen, Dativ = wem, Akkusativ = wen oder was.",
+     "visuals": [
+      {
+       "type": "lines",
+       "num": false,
+       "items": [
+        [
+         "Nominativ",
+         "wer oder was?"
+        ],
+        [
+         "Genitiv",
+         "wessen?"
+        ],
+        [
+         "Dativ",
+         "wem?"
+        ],
+        [
+         "Akkusativ",
+         "wen oder was?"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Ordne die Frage dem Fall zu.",
+      "drag": {
+       "slots": [
+        "wer oder was?",
+        "wessen?",
+        "wem?",
+        "wen oder was?"
+       ],
+       "chips": [
+        "Nominativ",
+        "Genitiv",
+        "Dativ",
+        "Akkusativ"
+       ]
+      },
+      "a": [
+       "Nominativ",
+       "Genitiv",
+       "Dativ",
+       "Akkusativ"
+      ],
+      "hint": "Wem = Dativ, wessen = Genitiv."
+     }
+    },
+    {
+     "h": "Fälle im Satz erkennen",
+     "text": "Beispiel: Die Lehrerin hilft der neuen Schülerin. Wem hilft sie? Der neuen Schülerin. Das ist der Dativ.",
+     "visuals": [
+      {
+       "type": "lines",
+       "num": false,
+       "items": [
+        [
+         "Die neue Schülerin stellt sich vor.",
+         "Nominativ"
+        ],
+        [
+         "Die Lehrerin hilft der neuen Schülerin.",
+         "Dativ"
+        ],
+        [
+         "Wir begrüssen die neue Schülerin.",
+         "Akkusativ"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "In welchem Fall steht «die neue Schülerin» in: Wir begrüssen die neue Schülerin?",
+      "opts": [
+       "Akkusativ",
+       "Nominativ",
+       "Dativ",
+       "Genitiv"
+      ],
+      "a": [
+       "Akkusativ"
+      ],
+      "hint": "Wen begrüssen wir?"
+     }
+    },
+    {
+     "h": "Die Zeitformen (Tempus)",
+     "text": "Perfekt = hat/ist + Partizip II (hat gelesen). Plusquamperfekt = hatte/war + Partizip II (hatte besprochen). Futur I = wird + Infinitiv (wird vergleichen).",
+     "visuals": [
+      {
+       "type": "lines",
+       "num": false,
+       "items": [
+        [
+         "Präsens",
+         "Die Klasse arbeitet."
+        ],
+        [
+         "Präteritum",
+         "Jonas schrieb."
+        ],
+        [
+         "Perfekt",
+         "Lea hat gelesen."
+        ],
+        [
+         "Plusquamperfekt",
+         "Wir hatten besprochen."
+        ],
+        [
+         "Futur I",
+         "Wir werden vergleichen."
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Welche Zeitform ist: Lea hat den Text bereits gelesen?",
+      "opts": [
+       "Perfekt",
+       "Präteritum",
+       "Plusquamperfekt",
+       "Futur I"
+      ],
+      "a": [
+       "Perfekt"
+      ],
+      "hint": "hat + Partizip II"
+     }
+    },
+    {
+     "h": "Satzglieder bestimmen",
+     "text": "S = Subjekt (wer oder was?), P = Prädikat (das Verb), DO = Dativobjekt (wem?), AO = Akkusativobjekt (wen oder was?).",
+     "visuals": [
+      {
+       "type": "lines",
+       "num": false,
+       "items": [
+        [
+         "Die Lehrerin",
+         "S"
+        ],
+        [
+         "gibt",
+         "P"
+        ],
+        [
+         "dem Schüler",
+         "DO"
+        ],
+        [
+         "eine neue Aufgabe",
+         "AO"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Welches Satzglied ist «dem Schüler» in: Die Lehrerin gibt dem Schüler eine neue Aufgabe?",
+      "opts": [
+       "DO",
+       "AO",
+       "S",
+       "P"
+      ],
+      "a": [
+       "DO"
+      ],
+      "hint": "Wem gibt sie etwas?"
+     }
+    }
+   ],
+   "cards": [
+    {
+     "id": "g1",
+     "q": "Der mutige Schüler meldet sich zuerst. Welche Wortart ist «mutige»?",
+     "a": "Adjektiv",
+     "lvl": 1,
+     "th": "wa",
+     "opts": [
+      "Adjektiv",
+      "Verb",
+      "Nomen",
+      "Pronomen"
+     ],
+     "hints": [
+      "Adjektiv = Eigenschaft, Verb = Tätigkeit, Pronomen = steht für ein Nomen.",
+      "Präposition = Verhältniswort (vor, nach, auf), Konjunktion = Bindewort (weil, obwohl)."
+     ],
+     "steps": [
+      [
+       "Adjektiv",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g2",
+     "q": "Wir lösen die Aufgabe gemeinsam. Welche Wortart ist «lösen»?",
+     "a": "Verb",
+     "lvl": 1,
+     "th": "wa",
+     "opts": [
+      "Verb",
+      "Pronomen",
+      "Adverb",
+      "Präposition"
+     ],
+     "hints": [
+      "Adjektiv = Eigenschaft, Verb = Tätigkeit, Pronomen = steht für ein Nomen.",
+      "Präposition = Verhältniswort (vor, nach, auf), Konjunktion = Bindewort (weil, obwohl)."
+     ],
+     "steps": [
+      [
+       "Verb",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g3",
+     "q": "Mia wartet vor dem Schulhaus. Welche Wortart ist «vor»?",
+     "a": "Präposition",
+     "lvl": 1,
+     "th": "wa",
+     "opts": [
+      "Präposition",
+      "Adverb",
+      "Verb",
+      "Pronomen"
+     ],
+     "hints": [
+      "Adjektiv = Eigenschaft, Verb = Tätigkeit, Pronomen = steht für ein Nomen.",
+      "Präposition = Verhältniswort (vor, nach, auf), Konjunktion = Bindewort (weil, obwohl)."
+     ],
+     "steps": [
+      [
+       "Präposition",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g4",
+     "q": "Obwohl es spät ist, arbeitet die Klasse weiter. Welche Wortart ist «Obwohl»?",
+     "a": "Konjunktion",
+     "lvl": 1,
+     "th": "wa",
+     "opts": [
+      "Konjunktion",
+      "Präposition",
+      "Verb",
+      "Adverb"
+     ],
+     "hints": [
+      "Adjektiv = Eigenschaft, Verb = Tätigkeit, Pronomen = steht für ein Nomen.",
+      "Präposition = Verhältniswort (vor, nach, auf), Konjunktion = Bindewort (weil, obwohl)."
+     ],
+     "steps": [
+      [
+       "Konjunktion",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g5",
+     "q": "Sie erklärt die Lösung ruhig. Welche Wortart ist «Sie»?",
+     "a": "Pronomen",
+     "lvl": 1,
+     "th": "wa",
+     "opts": [
+      "Pronomen",
+      "Adverb",
+      "Verb",
+      "Präposition"
+     ],
+     "hints": [
+      "Adjektiv = Eigenschaft, Verb = Tätigkeit, Pronomen = steht für ein Nomen.",
+      "Präposition = Verhältniswort (vor, nach, auf), Konjunktion = Bindewort (weil, obwohl)."
+     ],
+     "steps": [
+      [
+       "Pronomen",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g6",
+     "q": "Wir treffen uns heute nach dem Unterricht. Welche Wortart ist «heute»?",
+     "a": "Adverb",
+     "lvl": 1,
+     "th": "wa",
+     "opts": [
+      "Adverb",
+      "Pronomen",
+      "Verb",
+      "Adjektiv"
+     ],
+     "hints": [
+      "Adjektiv = Eigenschaft, Verb = Tätigkeit, Pronomen = steht für ein Nomen.",
+      "Präposition = Verhältniswort (vor, nach, auf), Konjunktion = Bindewort (weil, obwohl)."
+     ],
+     "steps": [
+      [
+       "Adverb",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g7",
+     "q": "Die Katze schläft auf dem Sofa. Welche Wortart ist «Katze»?",
+     "a": "Nomen",
+     "lvl": 1,
+     "th": "wa",
+     "opts": [
+      "Nomen",
+      "Pronomen",
+      "Konjunktion",
+      "Adjektiv"
+     ],
+     "hints": [
+      "Adjektiv = Eigenschaft, Verb = Tätigkeit, Pronomen = steht für ein Nomen.",
+      "Präposition = Verhältniswort (vor, nach, auf), Konjunktion = Bindewort (weil, obwohl)."
+     ],
+     "steps": [
+      [
+       "Nomen",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g8",
+     "q": "Die neue Schülerin stellt sich vor. In welchem Fall steht «Die neue Schülerin»?",
+     "a": "Nominativ",
+     "lvl": 1,
+     "th": "ka",
+     "opts": [
+      "Nominativ",
+      "Genitiv",
+      "Dativ",
+      "Akkusativ"
+     ],
+     "hints": [
+      "Frage: wer/was = Nominativ, wessen = Genitiv, wem = Dativ, wen/was = Akkusativ."
+     ],
+     "steps": [
+      [
+       "Nominativ",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g9",
+     "q": "Die Lehrerin hilft der neuen Schülerin. In welchem Fall steht «der neuen Schülerin»?",
+     "a": "Dativ",
+     "lvl": 1,
+     "th": "ka",
+     "opts": [
+      "Dativ",
+      "Nominativ",
+      "Genitiv",
+      "Akkusativ"
+     ],
+     "hints": [
+      "Frage: wer/was = Nominativ, wessen = Genitiv, wem = Dativ, wen/was = Akkusativ."
+     ],
+     "steps": [
+      [
+       "Dativ",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g10",
+     "q": "Wir begrüssen die neue Schülerin. In welchem Fall steht «die neue Schülerin»?",
+     "a": "Akkusativ",
+     "lvl": 1,
+     "th": "ka",
+     "opts": [
+      "Akkusativ",
+      "Nominativ",
+      "Genitiv",
+      "Dativ"
+     ],
+     "hints": [
+      "Frage: wer/was = Nominativ, wessen = Genitiv, wem = Dativ, wen/was = Akkusativ."
+     ],
+     "steps": [
+      [
+       "Akkusativ",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g11",
+     "q": "Das Fell des Hundes ist weich. In welchem Fall steht «des Hundes»?",
+     "a": "Genitiv",
+     "lvl": 1,
+     "th": "ka",
+     "opts": [
+      "Genitiv",
+      "Nominativ",
+      "Dativ",
+      "Akkusativ"
+     ],
+     "hints": [
+      "Frage: wer/was = Nominativ, wessen = Genitiv, wem = Dativ, wen/was = Akkusativ."
+     ],
+     "steps": [
+      [
+       "Genitiv",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g12",
+     "q": "Die Klasse arbeitet konzentriert. In welcher Zeitform steht der Satz?",
+     "a": "Präsens",
+     "lvl": 1,
+     "th": "te",
+     "opts": [
+      "Präsens",
+      "Präteritum",
+      "Perfekt",
+      "Plusquamperfekt"
+     ],
+     "hints": [
+      "Achte auf das Hilfsverb: hat/ist, hatte/war, wird/werden."
+     ],
+     "steps": [
+      [
+       "Präsens",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g13",
+     "q": "Gestern schrieb Jonas eine Nachricht. In welcher Zeitform steht der Satz?",
+     "a": "Präteritum",
+     "lvl": 1,
+     "th": "te",
+     "opts": [
+      "Präteritum",
+      "Präsens",
+      "Perfekt",
+      "Plusquamperfekt"
+     ],
+     "hints": [
+      "Achte auf das Hilfsverb: hat/ist, hatte/war, wird/werden."
+     ],
+     "steps": [
+      [
+       "Präteritum",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g14",
+     "q": "Lea hat den Text bereits gelesen. In welcher Zeitform steht der Satz?",
+     "a": "Perfekt",
+     "lvl": 1,
+     "th": "te",
+     "opts": [
+      "Perfekt",
+      "Präsens",
+      "Präteritum",
+      "Plusquamperfekt"
+     ],
+     "hints": [
+      "Achte auf das Hilfsverb: hat/ist, hatte/war, wird/werden."
+     ],
+     "steps": [
+      [
+       "Perfekt",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g15",
+     "q": "Wir hatten die Aufgabe vorher besprochen. In welcher Zeitform steht der Satz?",
+     "a": "Plusquamperfekt",
+     "lvl": 1,
+     "th": "te",
+     "opts": [
+      "Plusquamperfekt",
+      "Präsens",
+      "Präteritum",
+      "Perfekt"
+     ],
+     "hints": [
+      "Achte auf das Hilfsverb: hat/ist, hatte/war, wird/werden."
+     ],
+     "steps": [
+      [
+       "Plusquamperfekt",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g16",
+     "q": "Morgen werden wir die Ergebnisse vergleichen. In welcher Zeitform steht der Satz?",
+     "a": "Futur I",
+     "lvl": 1,
+     "th": "te",
+     "opts": [
+      "Futur I",
+      "Präsens",
+      "Präteritum",
+      "Perfekt"
+     ],
+     "hints": [
+      "Achte auf das Hilfsverb: hat/ist, hatte/war, wird/werden."
+     ],
+     "steps": [
+      [
+       "Futur I",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g17",
+     "q": "Die Lehrerin gibt dem Schüler eine neue Aufgabe. Welches Satzglied ist «Die Lehrerin»? (S = Subjekt, P = Prädikat, DO = Dativobjekt, AO = Akkusativobjekt)",
+     "a": "S",
+     "lvl": 1,
+     "th": "sg",
+     "opts": [
+      "S",
+      "P",
+      "DO",
+      "AO"
+     ],
+     "hints": [
+      "S: Wer oder was? P: das Verb. DO: Wem? AO: Wen oder was?"
+     ],
+     "steps": [
+      [
+       "S",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g18",
+     "q": "Die Lehrerin gibt dem Schüler eine neue Aufgabe. Welches Satzglied ist «gibt»? (S = Subjekt, P = Prädikat, DO = Dativobjekt, AO = Akkusativobjekt)",
+     "a": "P",
+     "lvl": 1,
+     "th": "sg",
+     "opts": [
+      "P",
+      "S",
+      "DO",
+      "AO"
+     ],
+     "hints": [
+      "S: Wer oder was? P: das Verb. DO: Wem? AO: Wen oder was?"
+     ],
+     "steps": [
+      [
+       "P",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g19",
+     "q": "Die Lehrerin gibt dem Schüler eine neue Aufgabe. Welches Satzglied ist «dem Schüler»? (S = Subjekt, P = Prädikat, DO = Dativobjekt, AO = Akkusativobjekt)",
+     "a": "DO",
+     "lvl": 1,
+     "th": "sg",
+     "opts": [
+      "DO",
+      "S",
+      "P",
+      "AO"
+     ],
+     "hints": [
+      "S: Wer oder was? P: das Verb. DO: Wem? AO: Wen oder was?"
+     ],
+     "steps": [
+      [
+       "DO",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g20",
+     "q": "Die Lehrerin gibt dem Schüler eine neue Aufgabe. Welches Satzglied ist «eine neue Aufgabe»? (S = Subjekt, P = Prädikat, DO = Dativobjekt, AO = Akkusativobjekt)",
+     "a": "AO",
+     "lvl": 1,
+     "th": "sg",
+     "opts": [
+      "AO",
+      "S",
+      "P",
+      "DO"
+     ],
+     "hints": [
+      "S: Wer oder was? P: das Verb. DO: Wem? AO: Wen oder was?"
+     ],
+     "steps": [
+      [
+       "AO",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g21",
+     "q": "Die Klasse arbeitet weiter, weil es wichtig ist. Schreibe die Wortart von «weil».",
+     "a": "Konjunktion",
+     "lvl": 2,
+     "th": "wa",
+     "ans": [
+      "Konjunktion"
+     ],
+     "hints": [
+      "Adjektiv, Verb, Nomen, Pronomen, Präposition, Konjunktion oder Adverb?",
+      "Überlege, was das Wort im Satz macht."
+     ],
+     "steps": [
+      [
+       "Konjunktion",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g22",
+     "q": "Er wohnt neben dem Bahnhof. Schreibe die Wortart von «neben».",
+     "a": "Präposition",
+     "lvl": 2,
+     "th": "wa",
+     "ans": [
+      "Präposition"
+     ],
+     "hints": [
+      "Adjektiv, Verb, Nomen, Pronomen, Präposition, Konjunktion oder Adverb?",
+      "Überlege, was das Wort im Satz macht."
+     ],
+     "steps": [
+      [
+       "Präposition",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g23",
+     "q": "Das Buch ist spannend. Schreibe die Wortart von «spannend».",
+     "a": "Adjektiv",
+     "lvl": 2,
+     "th": "wa",
+     "ans": [
+      "Adjektiv"
+     ],
+     "hints": [
+      "Adjektiv, Verb, Nomen, Pronomen, Präposition, Konjunktion oder Adverb?",
+      "Überlege, was das Wort im Satz macht."
+     ],
+     "steps": [
+      [
+       "Adjektiv",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g24",
+     "q": "Wir spielen oft Fussball. Schreibe die Wortart von «oft».",
+     "a": "Adverb",
+     "lvl": 2,
+     "th": "wa",
+     "ans": [
+      "Adverb"
+     ],
+     "hints": [
+      "Adjektiv, Verb, Nomen, Pronomen, Präposition, Konjunktion oder Adverb?",
+      "Überlege, was das Wort im Satz macht."
+     ],
+     "steps": [
+      [
+       "Adverb",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g25",
+     "q": "Er fragt mich etwas. Schreibe die Wortart von «mich».",
+     "a": "Pronomen",
+     "lvl": 2,
+     "th": "wa",
+     "ans": [
+      "Pronomen"
+     ],
+     "hints": [
+      "Adjektiv, Verb, Nomen, Pronomen, Präposition, Konjunktion oder Adverb?",
+      "Überlege, was das Wort im Satz macht."
+     ],
+     "steps": [
+      [
+       "Pronomen",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g26",
+     "q": "Die Schüler schreiben einen Text. Schreibe die Wortart von «schreiben».",
+     "a": "Verb",
+     "lvl": 2,
+     "th": "wa",
+     "ans": [
+      "Verb"
+     ],
+     "hints": [
+      "Adjektiv, Verb, Nomen, Pronomen, Präposition, Konjunktion oder Adverb?",
+      "Überlege, was das Wort im Satz macht."
+     ],
+     "steps": [
+      [
+       "Verb",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g27",
+     "q": "Mit welcher Frage findest du den Nominativ? (Schreibe: wer oder was)",
+     "a": "wer oder was",
+     "lvl": 2,
+     "th": "ka",
+     "ans": [
+      "wer oder was"
+     ],
+     "hints": [
+      "Merke: Nominativ wer/was, Genitiv wessen, Dativ wem, Akkusativ wen/was."
+     ],
+     "steps": [
+      [
+       "wer oder was",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g28",
+     "q": "Mit welcher Frage findest du den Genitiv?",
+     "a": "wessen",
+     "lvl": 2,
+     "th": "ka",
+     "ans": [
+      "wessen"
+     ],
+     "hints": [
+      "Merke: Nominativ wer/was, Genitiv wessen, Dativ wem, Akkusativ wen/was."
+     ],
+     "steps": [
+      [
+       "wessen",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g29",
+     "q": "Mit welcher Frage findest du den Dativ?",
+     "a": "wem",
+     "lvl": 2,
+     "th": "ka",
+     "ans": [
+      "wem"
+     ],
+     "hints": [
+      "Merke: Nominativ wer/was, Genitiv wessen, Dativ wem, Akkusativ wen/was."
+     ],
+     "steps": [
+      [
+       "wem",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g30",
+     "q": "Mit welcher Frage findest du den Akkusativ? (Schreibe: wen oder was)",
+     "a": "wen oder was",
+     "lvl": 2,
+     "th": "ka",
+     "ans": [
+      "wen oder was"
+     ],
+     "hints": [
+      "Merke: Nominativ wer/was, Genitiv wessen, Dativ wem, Akkusativ wen/was."
+     ],
+     "steps": [
+      [
+       "wen oder was",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g31",
+     "q": "Ich sehe den Hund. Schreibe den Fall von «den Hund».",
+     "a": "Akkusativ",
+     "lvl": 2,
+     "th": "ka",
+     "ans": [
+      "Akkusativ"
+     ],
+     "hints": [
+      "Stelle die Frage: wer, wessen, wem oder wen?"
+     ],
+     "steps": [
+      [
+       "Akkusativ",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g32",
+     "q": "Ich helfe dem Hund. Schreibe den Fall von «dem Hund».",
+     "a": "Dativ",
+     "lvl": 2,
+     "th": "ka",
+     "ans": [
+      "Dativ"
+     ],
+     "hints": [
+      "Stelle die Frage: wer, wessen, wem oder wen?"
+     ],
+     "steps": [
+      [
+       "Dativ",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g33",
+     "q": "Der Hund bellt laut. Schreibe den Fall von «Der Hund».",
+     "a": "Nominativ",
+     "lvl": 2,
+     "th": "ka",
+     "ans": [
+      "Nominativ"
+     ],
+     "hints": [
+      "Stelle die Frage: wer, wessen, wem oder wen?"
+     ],
+     "steps": [
+      [
+       "Nominativ",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g34",
+     "q": "Das Auto meines Vaters ist neu. Schreibe den Fall von «meines Vaters».",
+     "a": "Genitiv",
+     "lvl": 2,
+     "th": "ka",
+     "ans": [
+      "Genitiv"
+     ],
+     "hints": [
+      "Stelle die Frage: wer, wessen, wem oder wen?"
+     ],
+     "steps": [
+      [
+       "Genitiv",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g35",
+     "q": "Jonas hat seinen Fehler erkannt. Schreibe die Zeitform.",
+     "a": "Perfekt",
+     "lvl": 2,
+     "th": "te",
+     "ans": [
+      "Perfekt"
+     ],
+     "hints": [
+      "Achte auf das Hilfsverb und auf die Verbform."
+     ],
+     "steps": [
+      [
+       "Perfekt",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g36",
+     "q": "Die Klasse wird das Problem besprechen. Schreibe die Zeitform.",
+     "a": "Futur I",
+     "lvl": 2,
+     "th": "te",
+     "ans": [
+      "Futur I"
+     ],
+     "hints": [
+      "Achte auf das Hilfsverb und auf die Verbform."
+     ],
+     "steps": [
+      [
+       "Futur I",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g37",
+     "q": "Wir fanden eine Lösung. Schreibe die Zeitform.",
+     "a": "Präteritum",
+     "lvl": 2,
+     "th": "te",
+     "ans": [
+      "Präteritum"
+     ],
+     "hints": [
+      "Achte auf das Hilfsverb und auf die Verbform."
+     ],
+     "steps": [
+      [
+       "Präteritum",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g38",
+     "q": "Jonas hatte seinen Fehler erkannt. Schreibe die Zeitform.",
+     "a": "Plusquamperfekt",
+     "lvl": 2,
+     "th": "te",
+     "ans": [
+      "Plusquamperfekt"
+     ],
+     "hints": [
+      "Achte auf das Hilfsverb und auf die Verbform."
+     ],
+     "steps": [
+      [
+       "Plusquamperfekt",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g39",
+     "q": "Mia schreibt eine Nachricht. Schreibe die Zeitform.",
+     "a": "Präsens",
+     "lvl": 2,
+     "th": "te",
+     "ans": [
+      "Präsens"
+     ],
+     "hints": [
+      "Achte auf das Hilfsverb und auf die Verbform."
+     ],
+     "steps": [
+      [
+       "Präsens",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g40",
+     "q": "Wie heisst die Kurzform für Subjekt? (Schreibe den Buchstaben)",
+     "a": "S",
+     "lvl": 2,
+     "th": "sg",
+     "ans": [
+      "S"
+     ],
+     "hints": [
+      "Subjekt beginnt mit S."
+     ],
+     "steps": [
+      [
+       "S",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g41",
+     "q": "Wofür steht DO?",
+     "a": "Dativobjekt",
+     "lvl": 2,
+     "th": "sg",
+     "ans": [
+      "Dativobjekt"
+     ],
+     "hints": [
+      "D steht für Dativ, O für Objekt."
+     ],
+     "steps": [
+      [
+       "Dativobjekt",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g42",
+     "q": "Wofür steht AO?",
+     "a": "Akkusativobjekt",
+     "lvl": 2,
+     "th": "sg",
+     "ans": [
+      "Akkusativobjekt"
+     ],
+     "hints": [
+      "A steht für Akkusativ, O für Objekt."
+     ],
+     "steps": [
+      [
+       "Akkusativobjekt",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g43",
+     "q": "Setze die richtige Form ein: Ich gebe ___ die Unterlagen. (der neue Schüler)",
+     "a": "dem neuen Schüler",
+     "lvl": 3,
+     "th": "ka",
+     "ans": [
+      "dem neuen Schüler"
+     ],
+     "hints": [
+      "Bestimme zuerst den Fall: wem, wen oder wessen?",
+      "Dann passe Begleiter und Adjektiv an."
+     ],
+     "steps": [
+      [
+       "dem neuen Schüler",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g44",
+     "q": "Setze die richtige Form ein: Wir besprechen ___ nach der Pause. (das schwierige Problem)",
+     "a": "das schwierige Problem",
+     "lvl": 3,
+     "th": "ka",
+     "ans": [
+      "das schwierige Problem"
+     ],
+     "hints": [
+      "Bestimme zuerst den Fall: wem, wen oder wessen?",
+      "Dann passe Begleiter und Adjektiv an."
+     ],
+     "steps": [
+      [
+       "das schwierige Problem",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g45",
+     "q": "Setze die richtige Form ein: Die Meinung ___ zählt ebenfalls. (meine Freundin)",
+     "a": "meiner Freundin",
+     "lvl": 3,
+     "th": "ka",
+     "ans": [
+      "meiner Freundin"
+     ],
+     "hints": [
+      "Bestimme zuerst den Fall: wem, wen oder wessen?",
+      "Dann passe Begleiter und Adjektiv an."
+     ],
+     "steps": [
+      [
+       "meiner Freundin",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g46",
+     "q": "Setze die richtige Form ein: Wir begrüssen ___. (der neue Lehrer)",
+     "a": "den neuen Lehrer",
+     "lvl": 3,
+     "th": "ka",
+     "ans": [
+      "den neuen Lehrer"
+     ],
+     "hints": [
+      "Bestimme zuerst den Fall: wem, wen oder wessen?",
+      "Dann passe Begleiter und Adjektiv an."
+     ],
+     "steps": [
+      [
+       "den neuen Lehrer",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g47",
+     "q": "Setze die richtige Form ein: Die Lehrerin hilft ___. (die neue Schülerin)",
+     "a": "der neuen Schülerin",
+     "lvl": 3,
+     "th": "ka",
+     "ans": [
+      "der neuen Schülerin"
+     ],
+     "hints": [
+      "Bestimme zuerst den Fall: wem, wen oder wessen?",
+      "Dann passe Begleiter und Adjektiv an."
+     ],
+     "steps": [
+      [
+       "der neuen Schülerin",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g48",
+     "q": "Setze die richtige Form ein: Das Auto ___ steht vor dem Haus. (mein Vater)",
+     "a": "meines Vaters",
+     "lvl": 3,
+     "th": "ka",
+     "ans": [
+      "meines Vaters"
+     ],
+     "hints": [
+      "Bestimme zuerst den Fall: wem, wen oder wessen?",
+      "Dann passe Begleiter und Adjektiv an."
+     ],
+     "steps": [
+      [
+       "meines Vaters",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g49",
+     "q": "Fehler finden: Tim sagt, «weil» sei ein Verb. Welche Wortart ist «weil» richtig?",
+     "a": "Konjunktion",
+     "lvl": 3,
+     "th": "wa",
+     "ans": [
+      "Konjunktion"
+     ],
+     "hints": [
+      "Ein Bindewort oder eine Eigenschaft?"
+     ],
+     "steps": [
+      [
+       "Konjunktion",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g50",
+     "q": "Fehler finden: Tim sagt, «schnelle» sei ein Nomen. Welche Wortart ist «schnelle» richtig?",
+     "a": "Adjektiv",
+     "lvl": 3,
+     "th": "wa",
+     "ans": [
+      "Adjektiv"
+     ],
+     "hints": [
+      "Ein Bindewort oder eine Eigenschaft?"
+     ],
+     "steps": [
+      [
+       "Adjektiv",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g51",
+     "q": "Ins Perfekt: Mia schreibt eine Nachricht. Schreibe den ganzen Satz.",
+     "a": "Mia hat eine Nachricht geschrieben.",
+     "lvl": 3,
+     "th": "te",
+     "ans": [
+      "Mia hat eine Nachricht geschrieben."
+     ],
+     "hints": [
+      "Perfekt: hat/ist + Partizip II. Plusquamperfekt: hatte/war + Partizip II. Futur I: wird + Infinitiv.",
+      "Schreibe ganze Sätze."
+     ],
+     "steps": [
+      [
+       "Mia hat eine Nachricht geschrieben.",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g52",
+     "q": "Ins Präteritum: Wir finden eine gute Lösung. Schreibe den ganzen Satz.",
+     "a": "Wir fanden eine gute Lösung.",
+     "lvl": 3,
+     "th": "te",
+     "ans": [
+      "Wir fanden eine gute Lösung."
+     ],
+     "hints": [
+      "Perfekt: hat/ist + Partizip II. Plusquamperfekt: hatte/war + Partizip II. Futur I: wird + Infinitiv.",
+      "Schreibe ganze Sätze."
+     ],
+     "steps": [
+      [
+       "Wir fanden eine gute Lösung.",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g53",
+     "q": "Ins Plusquamperfekt: Jonas hat seinen Fehler erkannt. Schreibe den ganzen Satz.",
+     "a": "Jonas hatte seinen Fehler erkannt.",
+     "lvl": 3,
+     "th": "te",
+     "ans": [
+      "Jonas hatte seinen Fehler erkannt."
+     ],
+     "hints": [
+      "Perfekt: hat/ist + Partizip II. Plusquamperfekt: hatte/war + Partizip II. Futur I: wird + Infinitiv.",
+      "Schreibe ganze Sätze."
+     ],
+     "steps": [
+      [
+       "Jonas hatte seinen Fehler erkannt.",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g54",
+     "q": "Ins Futur I: Die Klasse bespricht das Problem. Schreibe den ganzen Satz.",
+     "a": "Die Klasse wird das Problem besprechen.",
+     "lvl": 3,
+     "th": "te",
+     "ans": [
+      "Die Klasse wird das Problem besprechen."
+     ],
+     "hints": [
+      "Perfekt: hat/ist + Partizip II. Plusquamperfekt: hatte/war + Partizip II. Futur I: wird + Infinitiv.",
+      "Schreibe ganze Sätze."
+     ],
+     "steps": [
+      [
+       "Die Klasse wird das Problem besprechen.",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g55",
+     "q": "Ins Perfekt: Die Lehrerin erklärt den Schülern die Aufgabe. Schreibe den ganzen Satz.",
+     "a": "Die Lehrerin hat den Schülern die Aufgabe erklärt.",
+     "lvl": 3,
+     "th": "te",
+     "ans": [
+      "Die Lehrerin hat den Schülern die Aufgabe erklärt."
+     ],
+     "hints": [
+      "Perfekt: hat/ist + Partizip II. Plusquamperfekt: hatte/war + Partizip II. Futur I: wird + Infinitiv.",
+      "Schreibe ganze Sätze."
+     ],
+     "steps": [
+      [
+       "Die Lehrerin hat den Schülern die Aufgabe erklärt.",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g56",
+     "q": "Bestimme das Prädikat (P): Jonas erklärt seiner Freundin den Lösungsweg.",
+     "a": "erklärt",
+     "lvl": 4,
+     "th": "sg",
+     "ans": [
+      "erklärt"
+     ],
+     "hints": [
+      "Das Prädikat ist das Verb."
+     ],
+     "steps": [
+      [
+       "erklärt",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g57",
+     "q": "Bestimme das Subjekt (S): Jonas erklärt seiner Freundin den Lösungsweg.",
+     "a": "Jonas",
+     "lvl": 4,
+     "th": "sg",
+     "ans": [
+      "Jonas"
+     ],
+     "hints": [
+      "Wer erklärt?"
+     ],
+     "steps": [
+      [
+       "Jonas",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g58",
+     "q": "Bestimme das Dativobjekt (DO): Jonas erklärt seiner Freundin den Lösungsweg.",
+     "a": "seiner Freundin",
+     "lvl": 4,
+     "th": "sg",
+     "ans": [
+      "seiner Freundin"
+     ],
+     "hints": [
+      "Wem erklärt Jonas etwas?"
+     ],
+     "steps": [
+      [
+       "seiner Freundin",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g59",
+     "q": "Bestimme das Akkusativobjekt (AO): Jonas erklärt seiner Freundin den Lösungsweg.",
+     "a": "den Lösungsweg",
+     "lvl": 4,
+     "th": "sg",
+     "ans": [
+      "den Lösungsweg"
+     ],
+     "hints": [
+      "Was erklärt Jonas?"
+     ],
+     "steps": [
+      [
+       "den Lösungsweg",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g60",
+     "q": "Bestimme das Dativobjekt (DO): Die Lehrerin gibt dem Schüler eine neue Aufgabe.",
+     "a": "dem Schüler",
+     "lvl": 4,
+     "th": "sg",
+     "ans": [
+      "dem Schüler"
+     ],
+     "hints": [
+      "Wem gibt sie etwas?"
+     ],
+     "steps": [
+      [
+       "dem Schüler",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g61",
+     "q": "Bestimme das Akkusativobjekt (AO): Die Lehrerin gibt dem Schüler eine neue Aufgabe.",
+     "a": "eine neue Aufgabe",
+     "lvl": 4,
+     "th": "sg",
+     "ans": [
+      "eine neue Aufgabe"
+     ],
+     "hints": [
+      "Was gibt sie?"
+     ],
+     "steps": [
+      [
+       "eine neue Aufgabe",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g62",
+     "q": "Bestimme den Fall und die Zeitform: «Wir hatten die Aufgabe vorher besprochen.» Schreibe die Zeitform.",
+     "a": "Plusquamperfekt",
+     "lvl": 4,
+     "th": "te",
+     "ans": [
+      "Plusquamperfekt"
+     ],
+     "hints": [
+      "hatte + Partizip II"
+     ],
+     "steps": [
+      [
+       "Plusquamperfekt",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g63",
+     "q": "Bestimme die Wortart von «Obwohl» im Satz: Obwohl es spät ist, arbeitet die Klasse weiter.",
+     "a": "Konjunktion",
+     "lvl": 4,
+     "th": "wa",
+     "ans": [
+      "Konjunktion"
+     ],
+     "hints": [
+      "Es verbindet zwei Teilsätze."
+     ],
+     "steps": [
+      [
+       "Konjunktion",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g64",
+     "q": "Ergänze den Satz mit der richtigen Form: Die Lehrerin gibt ___ eine neue Aufgabe. (der fleissige Schüler)",
+     "a": "dem fleissigen Schüler",
+     "lvl": 4,
+     "th": "ka",
+     "ans": [
+      "dem fleissigen Schüler"
+     ],
+     "hints": [
+      "Wem gibt sie?",
+      "Dativ männlich: dem … en … "
+     ],
+     "steps": [
+      [
+       "dem fleissigen Schüler",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g65",
+     "q": "Ins Futur I: Mia hat eine Nachricht geschrieben. Schreibe den ganzen Satz.",
+     "a": "Mia wird eine Nachricht schreiben.",
+     "lvl": 4,
+     "th": "te",
+     "ans": [
+      "Mia wird eine Nachricht schreiben."
+     ],
+     "hints": [
+      "wird + Infinitiv."
+     ],
+     "steps": [
+      [
+       "Mia wird eine Nachricht schreiben.",
+       "richtig"
+      ]
+     ]
+    }
+   ],
+   "exam": {
+    "minutes": 30,
+    "questions": [
+     {
+      "id": "e1",
+      "q": "Bestimme die Wortart von «mutige»: Der mutige Schüler meldet sich zuerst.",
+      "explain": "mutig beschreibt den Schüler.",
+      "type": "input",
+      "answer": [
+       "Adjektiv"
+      ]
+     },
+     {
+      "id": "e2",
+      "q": "Bestimme die Wortart von «lösen»: Wir lösen die Aufgabe gemeinsam.",
+      "explain": "lösen ist eine Tätigkeit.",
+      "type": "input",
+      "answer": [
+       "Verb"
+      ]
+     },
+     {
+      "id": "e3",
+      "q": "Bestimme die Wortart von «vor»: Mia wartet vor dem Schulhaus.",
+      "explain": "vor steht vor einem Nomen.",
+      "type": "input",
+      "answer": [
+       "Präposition"
+      ]
+     },
+     {
+      "id": "e4",
+      "q": "Bestimme die Wortart von «Obwohl»: Obwohl es spät ist, arbeitet die Klasse weiter.",
+      "explain": "Obwohl verbindet Sätze.",
+      "type": "input",
+      "answer": [
+       "Konjunktion"
+      ]
+     },
+     {
+      "id": "e5",
+      "q": "Bestimme die Wortart von «Sie»: Sie erklärt die Lösung ruhig.",
+      "explain": "Sie steht für eine Person.",
+      "type": "input",
+      "answer": [
+       "Pronomen"
+      ]
+     },
+     {
+      "id": "e6",
+      "q": "Bestimme die Wortart von «heute»: Wir treffen uns heute nach dem Unterricht.",
+      "explain": "heute sagt, wann.",
+      "type": "input",
+      "answer": [
+       "Adverb"
+      ]
+     },
+     {
+      "id": "e7",
+      "q": "Welcher Fall? Die neue Schülerin stellt sich vor. («Die neue Schülerin»)",
+      "explain": "Wer stellt sich vor?",
+      "type": "input",
+      "answer": [
+       "Nominativ"
+      ]
+     },
+     {
+      "id": "e8",
+      "q": "Welcher Fall? Die Lehrerin hilft der neuen Schülerin. («der neuen Schülerin»)",
+      "explain": "Wem hilft sie?",
+      "type": "input",
+      "answer": [
+       "Dativ"
+      ]
+     },
+     {
+      "id": "e9",
+      "q": "Welcher Fall? Wir begrüssen die neue Schülerin. («die neue Schülerin»)",
+      "explain": "Wen begrüssen wir?",
+      "type": "input",
+      "answer": [
+       "Akkusativ"
+      ]
+     },
+     {
+      "id": "e10",
+      "q": "Welche Zeitform? Lea hat den Text bereits gelesen.",
+      "explain": "hat + Partizip II",
+      "type": "input",
+      "answer": [
+       "Perfekt"
+      ]
+     },
+     {
+      "id": "e11",
+      "q": "Welche Zeitform? Wir hatten die Aufgabe vorher besprochen.",
+      "explain": "hatte + Partizip II",
+      "type": "input",
+      "answer": [
+       "Plusquamperfekt"
+      ]
+     },
+     {
+      "id": "e12",
+      "q": "Ins Futur I: Die Klasse bespricht das Problem. Schreibe den ganzen Satz.",
+      "explain": "wird + Infinitiv",
+      "type": "input",
+      "answer": [
+       "Die Klasse wird das Problem besprechen."
+      ]
+     },
+     {
+      "id": "e13",
+      "q": "Setze die richtige Form ein: Ich gebe ___ die Unterlagen. (der neue Schüler)",
+      "explain": "Dativ: wem?",
+      "type": "input",
+      "answer": [
+       "dem neuen Schüler"
+      ]
+     },
+     {
+      "id": "e14",
+      "q": "Setze die richtige Form ein: Die Meinung ___ zählt ebenfalls. (meine Freundin)",
+      "explain": "Genitiv: wessen?",
+      "type": "input",
+      "answer": [
+       "meiner Freundin"
+      ]
+     },
+     {
+      "id": "e15",
+      "q": "Bestimme das Dativobjekt (DO): Die Lehrerin gibt dem Schüler eine neue Aufgabe.",
+      "explain": "Wem gibt sie etwas?",
+      "type": "input",
+      "answer": [
+       "dem Schüler"
+      ]
+     },
+     {
+      "id": "e16",
+      "q": "Bestimme das Akkusativobjekt (AO): Jonas erklärt seiner Freundin den Lösungsweg.",
+      "explain": "Was erklärt Jonas?",
+      "type": "input",
+      "answer": [
+       "den Lösungsweg"
+      ]
+     }
+    ]
+   },
+   "theory": {
+    "wa": {
+     "h": "Wortarten",
+     "text": "Nomen = Name, Verb = Tätigkeit, Adjektiv = Eigenschaft, Pronomen = steht für ein Nomen, Präposition = Verhältniswort (vor, nach), Konjunktion = Bindewort (weil, obwohl), Adverb = wann, wo, wie (heute)."
+    },
+    "ka": {
+     "h": "Die vier Fälle",
+     "text": "Nominativ = wer oder was? Genitiv = wessen? Dativ = wem? Akkusativ = wen oder was? Passe Begleiter und Adjektiv dem Fall an."
+    },
+    "te": {
+     "h": "Zeitformen",
+     "text": "Perfekt = hat/ist + Partizip II. Plusquamperfekt = hatte/war + Partizip II. Futur I = wird + Infinitiv. Präteritum = einfache Vergangenheit (fanden)."
+    },
+    "sg": {
+     "h": "Satzglieder",
+     "text": "S = Subjekt (wer oder was?), P = Prädikat (Verb), DO = Dativobjekt (wem?), AO = Akkusativobjekt (wen oder was?). Jedes richtige Satzglied gibt 1 Punkt."
+    }
+   }
+  },
+  {
+   "id": "kl8-mathe-pythagoras",
+   "child": "kl8",
+   "subject": "mathe",
+   "chapter": "Pythagoras",
+   "title": "Satz des Pythagoras",
+   "explain": [
+    {
+     "h": "Das rechtwinklige Dreieck",
+     "text": "Ein rechtwinkliges Dreieck hat einen rechten Winkel. Die zwei Seiten am rechten Winkel heissen Katheten (a und b). Die längste Seite gegenüber heisst Hypotenuse (c).",
+     "visuals": [
+      {
+       "type": "lines",
+       "num": false,
+       "items": [
+        [
+         "a und b",
+         "Katheten"
+        ],
+        [
+         "c",
+         "Hypotenuse (längste Seite)"
+        ],
+        [
+         "Rechter Winkel",
+         "zwischen a und b"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Welche Seite ist die Hypotenuse?",
+      "opts": [
+       "Die Seite gegenüber dem rechten Winkel",
+       "Die kürzeste Seite",
+       "Eine Seite am rechten Winkel",
+       "Die Höhe"
+      ],
+      "a": [
+       "Die Seite gegenüber dem rechten Winkel"
+      ],
+      "hint": "Sie ist die längste Seite."
+     }
+    },
+    {
+     "h": "Der Satz des Pythagoras",
+     "text": "In jedem rechtwinkligen Dreieck gilt: Die Quadrate der beiden Katheten ergeben zusammen das Quadrat der Hypotenuse. Formel: a² + b² = c².",
+     "visuals": [
+      {
+       "type": "lines",
+       "num": false,
+       "items": [
+        [
+         "a² + b² = c²",
+         "Formel"
+        ],
+        [
+         "3² + 4² = 9 + 16 = 25",
+         "Beispiel"
+        ],
+        [
+         "c = √25 = 5",
+         "Resultat"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Wie lautet die Formel?",
+      "opts": [
+       "a² + b² = c²",
+       "a + b = c",
+       "a² − b² = c²",
+       "a · b = c²"
+      ],
+      "a": [
+       "a² + b² = c²"
+      ],
+      "hint": "Quadrate der Katheten zusammen = Quadrat der Hypotenuse."
+     }
+    },
+    {
+     "h": "Die Hypotenuse berechnen",
+     "text": "Sind a und b gegeben, rechnest du c = √(a² + b²). Beispiel: a = 6 cm und b = 8 cm. Dann ist c² = 36 + 64 = 100 und c = 10 cm.",
+     "visuals": [
+      {
+       "type": "lines",
+       "num": true,
+       "items": [
+        [
+         "a² + b² = c²",
+         "Formel"
+        ],
+        [
+         "6² + 8² = 36 + 64 = 100",
+         "einsetzen"
+        ],
+        [
+         "c = √100 = 10 cm",
+         "Wurzel ziehen"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "a = 3 cm, b = 4 cm. Wie lang ist c in cm?",
+      "a": [
+       "5"
+      ],
+      "hint": "9 + 16 = 25, die Wurzel aus 25 ist 5."
+     }
+    },
+    {
+     "h": "Eine Kathete berechnen",
+     "text": "Ist die Hypotenuse c gegeben, wird subtrahiert: b = √(c² − a²). Beispiel: c = 10 cm und a = 6 cm. Dann ist b² = 100 − 36 = 64 und b = 8 cm.",
+     "visuals": [
+      {
+       "type": "lines",
+       "num": true,
+       "items": [
+        [
+         "b² = c² − a²",
+         "Formel"
+        ],
+        [
+         "10² − 6² = 100 − 36 = 64",
+         "einsetzen"
+        ],
+        [
+         "b = √64 = 8 cm",
+         "Wurzel ziehen"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Ordne zu: Was ist gesucht, welche Formel passt?",
+      "drag": {
+       "slots": [
+        "c gesucht",
+        "a gesucht",
+        "b gesucht"
+       ],
+       "chips": [
+        "√(a² + b²)",
+        "√(c² − b²)",
+        "√(c² − a²)"
+       ]
+      },
+      "a": [
+       "√(a² + b²)",
+       "√(c² − b²)",
+       "√(c² − a²)"
+      ],
+      "hint": "Die Hypotenuse c wird addiert, eine Kathete subtrahiert."
+     }
+    },
+    {
+     "h": "Rechteck und Diagonale",
+     "text": "Die Diagonale teilt ein Rechteck in zwei rechtwinklige Dreiecke. Die Diagonale d ist die Hypotenuse, die zwei Seiten des Rechtecks sind die Katheten.",
+     "visuals": [
+      {
+       "type": "lines",
+       "num": false,
+       "items": [
+        [
+         "Seiten 21 cm und ?",
+         "Diagonale d = 35 cm"
+        ],
+        [
+         "? = √(35² − 21²)",
+         "= √(1225 − 441)"
+        ],
+        [
+         "? = √784 = 28 cm",
+         "fehlende Seite"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Rechteck mit Seiten 12 cm und 5 cm. Wie lang ist die Diagonale in cm?",
+      "opts": [
+       "13",
+       "17",
+       "7",
+       "11"
+      ],
+      "a": [
+       "13"
+      ],
+      "hint": "12² + 5² = 144 + 25 = 169"
+     }
+    },
+    {
+     "h": "Anwendungen: Schritt für Schritt",
+     "text": "Zeichne eine Skizze und suche das rechtwinklige Dreieck. Dann: Was wird gesucht? Wie wird es berechnet? Werte einsetzen. Resultat mit Einheit, wenn verlangt gerundet. Beispiel Baum: 8 m und 15 m ergeben die Hypotenuse 17 m, der Baum war 8 + 17 = 25 m hoch.",
+     "visuals": [
+      {
+       "type": "lines",
+       "num": true,
+       "items": [
+        [
+         "Was wird gesucht?",
+         "Skizze zeichnen"
+        ],
+        [
+         "Wie wird es berechnet?",
+         "a² + b² = c² anpassen"
+        ],
+        [
+         "Werte einsetzen",
+         "Quadrate rechnen"
+        ],
+        [
+         "Resultat",
+         "mit Einheit, runden"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Ein Baum ist 8 m über dem Boden abgeknickt, die Spitze berührt 15 m entfernt den Boden. Wie lang ist der abgeknickte Teil in m?",
+      "opts": [
+       "17",
+       "23",
+       "12.7",
+       "7"
+      ],
+      "a": [
+       "17"
+      ],
+      "hint": "8² + 15² = 64 + 225 = 289"
+     }
+    }
+   ],
+   "cards": [
+    {
+     "id": "p1",
+     "q": "Wie lautet der Satz des Pythagoras?",
+     "a": "a² + b² = c²",
+     "lvl": 1,
+     "th": "satz",
+     "opts": [
+      "a² + b² = c²",
+      "a + b = c",
+      "a² − b² = c²",
+      "a · b = c"
+     ],
+     "hints": [
+      "Die Quadrate der beiden kurzen Seiten ergeben das Quadrat der längsten Seite."
+     ],
+     "steps": [
+      [
+       "a² + b² = c²",
+       "Katheten zum Quadrat, zusammen gleich Hypotenuse zum Quadrat"
+      ]
+     ]
+    },
+    {
+     "id": "p2",
+     "q": "Bei welchen Dreiecken funktioniert der Satz des Pythagoras?",
+     "a": "bei rechtwinkligen Dreiecken",
+     "lvl": 1,
+     "th": "satz",
+     "opts": [
+      "bei rechtwinkligen Dreiecken",
+      "bei allen Dreiecken",
+      "bei gleichseitigen Dreiecken",
+      "bei stumpfen Dreiecken"
+     ],
+     "hints": [
+      "Es braucht einen rechten Winkel."
+     ],
+     "steps": [
+      [
+       "rechtwinklig",
+       "Das Dreieck hat einen rechten Winkel."
+      ]
+     ]
+    },
+    {
+     "id": "p3",
+     "q": "Wie heisst die längste Seite im rechtwinkligen Dreieck?",
+     "a": "Hypotenuse",
+     "lvl": 1,
+     "th": "seiten",
+     "opts": [
+      "Hypotenuse",
+      "Kathete",
+      "Diagonale",
+      "Radius"
+     ],
+     "hints": [
+      "Sie liegt dem rechten Winkel gegenüber."
+     ],
+     "steps": [
+      [
+       "Hypotenuse",
+       "Resultat"
+      ]
+     ]
+    },
+    {
+     "id": "p4",
+     "q": "Wie heissen die beiden Seiten, die am rechten Winkel anliegen?",
+     "a": "Katheten",
+     "lvl": 1,
+     "th": "seiten",
+     "opts": [
+      "Katheten",
+      "Hypotenusen",
+      "Diagonalen",
+      "Höhen"
+     ],
+     "hints": [
+      "Es sind die beiden kürzeren Seiten."
+     ],
+     "steps": [
+      [
+       "Katheten",
+       "Resultat"
+      ]
+     ]
+    },
+    {
+     "id": "p5",
+     "q": "Im Dreieck sind a und b die Katheten. Welche Seite ist die Hypotenuse?",
+     "a": "c",
+     "lvl": 1,
+     "th": "seiten",
+     "opts": [
+      "a",
+      "b",
+      "c",
+      "d"
+     ],
+     "hints": [
+      "Die Hypotenuse liegt dem rechten Winkel gegenüber."
+     ],
+     "steps": [
+      [
+       "c",
+       "Resultat"
+      ]
+     ]
+    },
+    {
+     "id": "p6",
+     "q": "Wie rechnest du c, wenn a und b gegeben sind?",
+     "a": "c = √(a² + b²)",
+     "lvl": 1,
+     "th": "hyp",
+     "opts": [
+      "c = √(a² + b²)",
+      "c = √(a² − b²)",
+      "c = a + b",
+      "c = a² + b²"
+     ],
+     "hints": [
+      "Zuerst Quadrate addieren, dann die Wurzel ziehen."
+     ],
+     "steps": [
+      [
+       "c = √(a² + b²)",
+       "Resultat"
+      ]
+     ]
+    },
+    {
+     "id": "p7",
+     "q": "Wie rechnest du b, wenn a und c gegeben sind?",
+     "a": "b = √(c² − a²)",
+     "lvl": 1,
+     "th": "kat",
+     "opts": [
+      "b = √(c² − a²)",
+      "b = √(c² + a²)",
+      "b = c − a",
+      "b = c² − a²"
+     ],
+     "hints": [
+      "Die Hypotenuse c ist die längste Seite, darum wird subtrahiert."
+     ],
+     "steps": [
+      [
+       "b = √(c² − a²)",
+       "Resultat"
+      ]
+     ]
+    },
+    {
+     "id": "p8",
+     "q": "Eine Diagonale im Rechteck teilt es in zwei rechtwinklige Dreiecke. Welche Seite ist die Diagonale d?",
+     "a": "die Hypotenuse",
+     "lvl": 1,
+     "th": "rechteck",
+     "opts": [
+      "die Hypotenuse",
+      "eine Kathete",
+      "der Umfang",
+      "die Höhe"
+     ],
+     "hints": [
+      "Die Diagonale liegt dem rechten Winkel gegenüber."
+     ],
+     "steps": [
+      [
+       "die Hypotenuse",
+       "Resultat"
+      ]
+     ]
+    },
+    {
+     "id": "p9",
+     "q": "Berechne c: a = 3 cm, b = 4 cm. (in cm)",
+     "a": "5",
+     "lvl": 2,
+     "th": "hyp",
+     "ans": [
+      "5",
+      "5 cm"
+     ],
+     "hints": [
+      "a² + b² = c²",
+      "3² = 9, 4² = 16"
+     ],
+     "steps": [
+      [
+       "3² + 4² = 9 + 16 = 25",
+       "Quadrate addieren"
+      ],
+      [
+       "c = √25 = 5 cm",
+       "Wurzel ziehen"
+      ]
+     ]
+    },
+    {
+     "id": "p10",
+     "q": "Berechne c: a = 6 cm, b = 8 cm. (in cm)",
+     "a": "10",
+     "lvl": 2,
+     "th": "hyp",
+     "ans": [
+      "10",
+      "10 cm"
+     ],
+     "hints": [
+      "a² + b² = c²",
+      "6² = 36, 8² = 64"
+     ],
+     "steps": [
+      [
+       "6² + 8² = 36 + 64 = 100",
+       "Quadrate addieren"
+      ],
+      [
+       "c = √100 = 10 cm",
+       "Wurzel ziehen"
+      ]
+     ]
+    },
+    {
+     "id": "p11",
+     "q": "Berechne c: a = 5 cm, b = 12 cm. (in cm)",
+     "a": "13",
+     "lvl": 2,
+     "th": "hyp",
+     "ans": [
+      "13",
+      "13 cm"
+     ],
+     "hints": [
+      "a² + b² = c²",
+      "5² = 25, 12² = 144"
+     ],
+     "steps": [
+      [
+       "5² + 12² = 25 + 144 = 169",
+       "Quadrate addieren"
+      ],
+      [
+       "c = √169 = 13 cm",
+       "Wurzel ziehen"
+      ]
+     ]
+    },
+    {
+     "id": "p12",
+     "q": "Berechne c: a = 9 cm, b = 12 cm. (in cm)",
+     "a": "15",
+     "lvl": 2,
+     "th": "hyp",
+     "ans": [
+      "15",
+      "15 cm"
+     ],
+     "hints": [
+      "a² + b² = c²",
+      "9² = 81, 12² = 144"
+     ],
+     "steps": [
+      [
+       "9² + 12² = 81 + 144 = 225",
+       "Quadrate addieren"
+      ],
+      [
+       "c = √225 = 15 cm",
+       "Wurzel ziehen"
+      ]
+     ]
+    },
+    {
+     "id": "p13",
+     "q": "Berechne b: a = 6 cm, c = 10 cm. (in cm)",
+     "a": "8",
+     "lvl": 2,
+     "th": "kat",
+     "ans": [
+      "8",
+      "8 cm"
+     ],
+     "hints": [
+      "b² = c² − a²",
+      "10² = 100, 6² = 36"
+     ],
+     "steps": [
+      [
+       "10² − 6² = 100 − 36 = 64",
+       "Quadrate subtrahieren"
+      ],
+      [
+       "b = √64 = 8 cm",
+       "Wurzel ziehen"
+      ]
+     ]
+    },
+    {
+     "id": "p14",
+     "q": "Berechne b: a = 5 cm, c = 13 cm. (in cm)",
+     "a": "12",
+     "lvl": 2,
+     "th": "kat",
+     "ans": [
+      "12",
+      "12 cm"
+     ],
+     "hints": [
+      "b² = c² − a²",
+      "13² = 169, 5² = 25"
+     ],
+     "steps": [
+      [
+       "13² − 5² = 169 − 25 = 144",
+       "Quadrate subtrahieren"
+      ],
+      [
+       "b = √144 = 12 cm",
+       "Wurzel ziehen"
+      ]
+     ]
+    },
+    {
+     "id": "p15",
+     "q": "Berechne b: a = 9 cm, c = 15 cm. (in cm)",
+     "a": "12",
+     "lvl": 2,
+     "th": "kat",
+     "ans": [
+      "12",
+      "12 cm"
+     ],
+     "hints": [
+      "b² = c² − a²",
+      "15² = 225, 9² = 81"
+     ],
+     "steps": [
+      [
+       "15² − 9² = 225 − 81 = 144",
+       "Quadrate subtrahieren"
+      ],
+      [
+       "b = √144 = 12 cm",
+       "Wurzel ziehen"
+      ]
+     ]
+    },
+    {
+     "id": "p16",
+     "q": "Berechne b: a = 8 cm, c = 17 cm. (in cm)",
+     "a": "15",
+     "lvl": 2,
+     "th": "kat",
+     "ans": [
+      "15",
+      "15 cm"
+     ],
+     "hints": [
+      "b² = c² − a²",
+      "17² = 289, 8² = 64"
+     ],
+     "steps": [
+      [
+       "17² − 8² = 289 − 64 = 225",
+       "Quadrate subtrahieren"
+      ],
+      [
+       "b = √225 = 15 cm",
+       "Wurzel ziehen"
+      ]
+     ]
+    },
+    {
+     "id": "p17",
+     "q": "Berechne das Quadrat: 7² =",
+     "a": "49",
+     "lvl": 2,
+     "th": "sq",
+     "ans": [
+      "49"
+     ],
+     "hints": [
+      "Zahl mal sich selbst."
+     ],
+     "steps": [
+      [
+       "49",
+       "Resultat"
+      ]
+     ]
+    },
+    {
+     "id": "p18",
+     "q": "Berechne das Quadrat: 24² =",
+     "a": "576",
+     "lvl": 2,
+     "th": "sq",
+     "ans": [
+      "576"
+     ],
+     "hints": [
+      "Zahl mal sich selbst."
+     ],
+     "steps": [
+      [
+       "576",
+       "Resultat"
+      ]
+     ]
+    },
+    {
+     "id": "p19",
+     "q": "Berechne das Quadrat: 1.3² =",
+     "a": "1.69",
+     "lvl": 2,
+     "th": "sq",
+     "ans": [
+      "1.69",
+      "1,69"
+     ],
+     "hints": [
+      "Zahl mal sich selbst."
+     ],
+     "steps": [
+      [
+       "1.69",
+       "Resultat"
+      ]
+     ]
+    },
+    {
+     "id": "p20",
+     "q": "Berechne das Quadrat: 8.5² =",
+     "a": "72.25",
+     "lvl": 2,
+     "th": "sq",
+     "ans": [
+      "72.25",
+      "72,25"
+     ],
+     "hints": [
+      "Zahl mal sich selbst."
+     ],
+     "steps": [
+      [
+       "72.25",
+       "Resultat"
+      ]
+     ]
+    },
+    {
+     "id": "p21",
+     "q": "Ziehe die Wurzel: √625 =",
+     "a": "25",
+     "lvl": 2,
+     "th": "sq",
+     "ans": [
+      "25"
+     ],
+     "hints": [
+      "Welche Zahl mal sich selbst ergibt das?"
+     ],
+     "steps": [
+      [
+       "25",
+       "Resultat"
+      ]
+     ]
+    },
+    {
+     "id": "p22",
+     "q": "Ziehe die Wurzel: √784 =",
+     "a": "28",
+     "lvl": 2,
+     "th": "sq",
+     "ans": [
+      "28"
+     ],
+     "hints": [
+      "Welche Zahl mal sich selbst ergibt das?"
+     ],
+     "steps": [
+      [
+       "28",
+       "Resultat"
+      ]
+     ]
+    },
+    {
+     "id": "p23",
+     "q": "Ziehe die Wurzel: √289 =",
+     "a": "17",
+     "lvl": 2,
+     "th": "sq",
+     "ans": [
+      "17"
+     ],
+     "hints": [
+      "Welche Zahl mal sich selbst ergibt das?"
+     ],
+     "steps": [
+      [
+       "17",
+       "Resultat"
+      ]
+     ]
+    },
+    {
+     "id": "p24",
+     "q": "Ziehe die Wurzel: √70.56 =",
+     "a": "8.4",
+     "lvl": 2,
+     "th": "sq",
+     "ans": [
+      "8.4",
+      "8,4"
+     ],
+     "hints": [
+      "Welche Zahl mal sich selbst ergibt das?"
+     ],
+     "steps": [
+      [
+       "8.4",
+       "Resultat"
+      ]
+     ]
+    },
+    {
+     "id": "p25",
+     "q": "a = 7 cm, b = 24 cm. Berechne c. (in cm)",
+     "a": "25",
+     "lvl": 3,
+     "th": "hyp",
+     "ans": [
+      "25",
+      "25 cm"
+     ],
+     "hints": [
+      "c² = a² + b²",
+      "7² = 49, 24² = 576"
+     ],
+     "steps": [
+      [
+       "c² = 49 + 576 = 625",
+       "Quadrate addieren"
+      ],
+      [
+       "c = √625 = 25 cm",
+       "Wurzel ziehen"
+      ]
+     ]
+    },
+    {
+     "id": "p26",
+     "q": "a = 1.3 cm, c = 8.5 cm. Berechne b. Runde auf eine Stelle nach dem Komma. (in cm)",
+     "a": "8.4",
+     "lvl": 3,
+     "th": "kat",
+     "ans": [
+      "8.4",
+      "8,4",
+      "8.4 cm",
+      "8,4 cm"
+     ],
+     "hints": [
+      "b² = c² − a²",
+      "8.5² = 72.25, 1.3² = 1.69"
+     ],
+     "steps": [
+      [
+       "b² = 72.25 − 1.69 = 70.56",
+       "Quadrate subtrahieren"
+      ],
+      [
+       "b = √70.56 = 8.4 cm",
+       "Wurzel ziehen, auf eine Stelle runden"
+      ]
+     ]
+    },
+    {
+     "id": "p27",
+     "q": "Ein Rechteck hat die Seite 21 cm und die Diagonale d = 35 cm. Berechne die fehlende Seite. Runde auf eine Stelle nach dem Komma. (in cm)",
+     "a": "28",
+     "lvl": 3,
+     "th": "rechteck",
+     "ans": [
+      "28",
+      "28 cm",
+      "28.0",
+      "28,0",
+      "28.0 cm",
+      "28,0 cm"
+     ],
+     "hints": [
+      "Die Diagonale d ist die Hypotenuse.",
+      "Fehlende Seite² = d² − 21²"
+     ],
+     "steps": [
+      [
+       "35² − 21² = 1225 − 441 = 784",
+       "Quadrate subtrahieren"
+      ],
+      [
+       "√784 = 28.0 cm",
+       "Wurzel ziehen"
+      ]
+     ]
+    },
+    {
+     "id": "p28",
+     "q": "Ein Rechteck hat die Seiten 12 cm und 5 cm. Wie lang ist die Diagonale? (in cm)",
+     "a": "13",
+     "lvl": 3,
+     "th": "rechteck",
+     "ans": [
+      "13",
+      "13 cm"
+     ],
+     "hints": [
+      "d² = 12² + 5²"
+     ],
+     "steps": [
+      [
+       "12² + 5² = 144 + 25 = 169",
+       "Quadrate addieren"
+      ],
+      [
+       "d = √169 = 13 cm",
+       "Wurzel ziehen"
+      ]
+     ]
+    },
+    {
+     "id": "p29",
+     "q": "Ein Quadrat hat die Seite 10 cm. Wie lang ist die Diagonale? Runde auf eine Stelle nach dem Komma. (in cm)",
+     "a": "14.1",
+     "lvl": 3,
+     "th": "rechteck",
+     "ans": [
+      "14.1",
+      "14,1",
+      "14.1 cm",
+      "14,1 cm"
+     ],
+     "hints": [
+      "d² = 10² + 10²"
+     ],
+     "steps": [
+      [
+       "10² + 10² = 200",
+       "Quadrate addieren"
+      ],
+      [
+       "d = √200 = 14.1 cm",
+       "Wurzel ziehen, runden"
+      ]
+     ]
+    },
+    {
+     "id": "p30",
+     "q": "Ein Dreieck hat die Seiten 6 cm, 8 cm und 10 cm. Ist es rechtwinklig? Schreibe ja oder nein.",
+     "a": "ja",
+     "lvl": 3,
+     "th": "satz",
+     "ans": [
+      "ja",
+      "Ja"
+     ],
+     "hints": [
+      "Prüfe: 6² + 8² = 10²?"
+     ],
+     "steps": [
+      [
+       "36 + 64 = 100 = 10²",
+       "Die Gleichung stimmt, also rechtwinklig."
+      ]
+     ]
+    },
+    {
+     "id": "p31",
+     "q": "Dreieck ABC mit rechtem Winkel bei A: AC = 20 cm, BC = 36 cm. Berechne AB. Runde auf eine Stelle nach dem Komma. (in cm)",
+     "a": "29.9",
+     "lvl": 4,
+     "th": "anw",
+     "ans": [
+      "29.9",
+      "29,9",
+      "29.9 cm",
+      "29,9 cm"
+     ],
+     "hints": [
+      "BC ist die Hypotenuse.",
+      "AB² = BC² − AC²"
+     ],
+     "steps": [
+      [
+       "AB² = 36² − 20² = 1296 − 400 = 896",
+       "Quadrate subtrahieren"
+      ],
+      [
+       "AB = √896 = 29.9 cm",
+       "Wurzel ziehen, runden"
+      ]
+     ]
+    },
+    {
+     "id": "p32",
+     "q": "Dreieck ABC mit rechtem Winkel bei A: AC = 20 cm, BC = 36 cm, D liegt auf AB mit AD = 10 cm. Berechne x = DB. Runde auf eine Stelle nach dem Komma. (in cm)",
+     "a": "19.9",
+     "lvl": 4,
+     "th": "anw",
+     "ans": [
+      "19.9",
+      "19,9",
+      "19.9 cm",
+      "19,9 cm"
+     ],
+     "hints": [
+      "Berechne zuerst AB mit dem Satz des Pythagoras.",
+      "Dann DB = AB − AD."
+     ],
+     "steps": [
+      [
+       "AB = √(36² − 20²) = √896 = 29.93 cm",
+       "Pythagoras im Dreieck ABC"
+      ],
+      [
+       "x = DB = 29.93 − 10 = 19.9 cm",
+       "Strecke AD abziehen"
+      ]
+     ]
+    },
+    {
+     "id": "p33",
+     "q": "Pyramide mit quadratischer Grundfläche: a = 7 cm, h = 9 cm. Berechne die Kantenlänge s. Runde auf eine Stelle nach dem Komma. (in cm)",
+     "a": "10.3",
+     "lvl": 4,
+     "th": "anw",
+     "ans": [
+      "10.3",
+      "10,3",
+      "10.3 cm",
+      "10,3 cm"
+     ],
+     "hints": [
+      "Zuerst die halbe Diagonale des Quadrats: (a · √2) : 2.",
+      "Dann s² = h² + (halbe Diagonale)²."
+     ],
+     "steps": [
+      [
+       "Halbe Diagonale² = (7² + 7²) : 4 = 98 : 4 = 24.5",
+       "Diagonale der Grundfläche halbieren"
+      ],
+      [
+       "s² = 9² + 24.5 = 81 + 24.5 = 105.5",
+       "Pythagoras im Dreieck mit h"
+      ],
+      [
+       "s = √105.5 = 10.3 cm",
+       "Wurzel ziehen, runden"
+      ]
+     ]
+    },
+    {
+     "id": "p34",
+     "q": "Ein Baum ist bei einem Sturm 8 m über dem Boden abgeknickt. Seine Spitze berührt in 15 m Entfernung den Boden. Wie gross war der Baum vor dem Sturm? (in m)",
+     "a": "25",
+     "lvl": 4,
+     "th": "anw",
+     "ans": [
+      "25",
+      "25 cm",
+      "25 m",
+      "25m"
+     ],
+     "hints": [
+      "Der abgeknickte Teil ist die Hypotenuse.",
+      "Gesamthöhe = 8 m + abgeknickter Teil."
+     ],
+     "steps": [
+      [
+       "Hypotenuse = √(8² + 15²) = √289 = 17 m",
+       "abgeknickter Teil"
+      ],
+      [
+       "Baumhöhe = 8 + 17 = 25 m",
+       "Stamm plus abgeknickter Teil"
+      ]
+     ]
+    },
+    {
+     "id": "p35",
+     "q": "Eine Leiter ist 5 m lang. Sie steht 1.4 m von der Wand entfernt. Wie hoch reicht sie? Runde auf eine Stelle nach dem Komma. (in m)",
+     "a": "4.8",
+     "lvl": 4,
+     "th": "anw",
+     "ans": [
+      "4.8",
+      "4,8",
+      "4.8 cm",
+      "4,8 cm",
+      "4.8 m"
+     ],
+     "hints": [
+      "Die Leiter ist die Hypotenuse.",
+      "Höhe² = 5² − 1.4²"
+     ],
+     "steps": [
+      [
+       "h² = 25 − 1.96 = 23.04",
+       "Quadrate subtrahieren"
+      ],
+      [
+       "h = √23.04 = 4.8 m",
+       "Wurzel ziehen"
+      ]
+     ]
+    },
+    {
+     "id": "p36",
+     "q": "Ein Fernseher hat die Breite 40 cm und die Höhe 30 cm. Wie lang ist die Diagonale? (in cm)",
+     "a": "50",
+     "lvl": 4,
+     "th": "anw",
+     "ans": [
+      "50",
+      "50 cm"
+     ],
+     "hints": [
+      "d² = 40² + 30²"
+     ],
+     "steps": [
+      [
+       "40² + 30² = 1600 + 900 = 2500",
+       "Quadrate addieren"
+      ],
+      [
+       "d = √2500 = 50 cm",
+       "Wurzel ziehen"
+      ]
+     ]
+    }
+   ],
+   "exam": {
+    "minutes": 30,
+    "questions": [
+     {
+      "id": "e1",
+      "q": "Wie lautet die Formel von Pythagoras?",
+      "explain": "Quadrate der Katheten ergeben das Quadrat der Hypotenuse.",
+      "type": "input",
+      "answer": [
+       "a² + b² = c²",
+       "a2 + b2 = c2",
+       "a^2 + b^2 = c^2"
+      ]
+     },
+     {
+      "id": "e2",
+      "q": "Der Satz des Pythagoras gilt nur bei bestimmten Dreiecken. Wie heissen sie? (rechtwinklige oder gleichseitige oder stumpfe)",
+      "explain": "Der Satz gilt nur bei rechtwinkligen Dreiecken.",
+      "type": "input",
+      "answer": [
+       "rechtwinklige",
+       "rechtwinklig",
+       "rechtwinkliges",
+       "rechtwinkliges Dreieck",
+       "rechtwinklige Dreiecke"
+      ]
+     },
+     {
+      "id": "e3",
+      "q": "Wie heisst die längste Seite im rechtwinkligen Dreieck?",
+      "explain": "Die Hypotenuse liegt dem rechten Winkel gegenüber.",
+      "type": "input",
+      "answer": [
+       "Hypotenuse",
+       "die Hypotenuse"
+      ]
+     },
+     {
+      "id": "e4",
+      "q": "Berechne c: a = 3 cm, b = 4 cm. (in cm)",
+      "explain": "9 + 16 = 25, c = 5 cm.",
+      "type": "input",
+      "answer": [
+       "5",
+       "5 cm"
+      ]
+     },
+     {
+      "id": "e5",
+      "q": "Berechne c: a = 7 cm, b = 24 cm. (in cm)",
+      "explain": "49 + 576 = 625, c = 25 cm.",
+      "type": "input",
+      "answer": [
+       "25",
+       "25 cm"
+      ]
+     },
+     {
+      "id": "e6",
+      "q": "Berechne c: a = 5 cm, b = 12 cm. (in cm)",
+      "explain": "25 + 144 = 169, c = 13 cm.",
+      "type": "input",
+      "answer": [
+       "13",
+       "13 cm"
+      ]
+     },
+     {
+      "id": "e7",
+      "q": "Berechne b: a = 6 cm, c = 10 cm. (in cm)",
+      "explain": "100 − 36 = 64, b = 8 cm.",
+      "type": "input",
+      "answer": [
+       "8",
+       "8 cm"
+      ]
+     },
+     {
+      "id": "e8",
+      "q": "Berechne b: a = 1.3 cm, c = 8.5 cm. Runde auf eine Stelle nach dem Komma. (in cm)",
+      "explain": "72.25 − 1.69 = 70.56, b = 8.4 cm.",
+      "type": "input",
+      "answer": [
+       "8.4",
+       "8,4",
+       "8.4 cm",
+       "8,4 cm"
+      ]
+     },
+     {
+      "id": "e9",
+      "q": "Rechteck: eine Seite 21 cm, Diagonale d = 35 cm. Berechne die fehlende Seite. Runde auf eine Stelle nach dem Komma. (in cm)",
+      "explain": "1225 − 441 = 784, √784 = 28.0 cm.",
+      "type": "input",
+      "answer": [
+       "28",
+       "28 cm",
+       "28.0",
+       "28,0",
+       "28.0 cm",
+       "28,0 cm"
+      ]
+     },
+     {
+      "id": "e10",
+      "q": "Rechteck mit den Seiten 12 cm und 5 cm. Wie lang ist die Diagonale? (in cm)",
+      "explain": "144 + 25 = 169, d = 13 cm.",
+      "type": "input",
+      "answer": [
+       "13",
+       "13 cm"
+      ]
+     },
+     {
+      "id": "e11",
+      "q": "Quadrat mit der Seite 10 cm. Wie lang ist die Diagonale? Runde auf eine Stelle nach dem Komma. (in cm)",
+      "explain": "200, √200 = 14.1 cm.",
+      "type": "input",
+      "answer": [
+       "14.1",
+       "14,1",
+       "14.1 cm",
+       "14,1 cm"
+      ]
+     },
+     {
+      "id": "e12",
+      "q": "Eine Leiter ist 5 m lang und steht 1.4 m von der Wand entfernt. Wie hoch reicht sie? Runde auf eine Stelle nach dem Komma. (in m)",
+      "explain": "25 − 1.96 = 23.04, h = 4.8 m.",
+      "type": "input",
+      "answer": [
+       "4.8",
+       "4,8",
+       "4.8 cm",
+       "4,8 cm",
+       "4.8 m"
+      ]
+     },
+     {
+      "id": "e13",
+      "q": "Fernseher mit Breite 40 cm und Höhe 30 cm. Wie lang ist die Diagonale? (in cm)",
+      "explain": "1600 + 900 = 2500, d = 50 cm.",
+      "type": "input",
+      "answer": [
+       "50",
+       "50 cm"
+      ]
+     },
+     {
+      "id": "e14",
+      "q": "Dreieck ABC, rechter Winkel bei A, AC = 20 cm, BC = 36 cm. Berechne AB. Runde auf eine Stelle nach dem Komma. (in cm)",
+      "explain": "AB² = 1296 − 400 = 896, AB = 29.9 cm.",
+      "type": "input",
+      "answer": [
+       "29.9",
+       "29,9",
+       "29.9 cm",
+       "29,9 cm"
+      ]
+     },
+     {
+      "id": "e15",
+      "q": "Pyramide mit quadratischer Grundfläche: a = 7 cm, h = 9 cm. Berechne die Kantenlänge s. Runde auf eine Stelle nach dem Komma. (in cm)",
+      "explain": "Halbe Diagonale² = 24.5, s² = 105.5, s = 10.3 cm.",
+      "type": "input",
+      "answer": [
+       "10.3",
+       "10,3",
+       "10.3 cm",
+       "10,3 cm"
+      ]
+     },
+     {
+      "id": "e16",
+      "q": "Ein Baum ist bei einem Sturm 8 m über dem Boden abgeknickt, die Spitze berührt 15 m entfernt den Boden. Wie gross war der Baum vor dem Sturm? (in m)",
+      "explain": "Abgeknickter Teil = √(64 + 225) = 17 m, Baum = 8 + 17 = 25 m.",
+      "type": "input",
+      "answer": [
+       "25",
+       "25 cm",
+       "25 m",
+       "25m"
+      ]
+     }
+    ]
+   },
+   "theory": {
+    "satz": {
+     "h": "Satz des Pythagoras",
+     "text": "Nur im rechtwinkligen Dreieck gilt a² + b² = c². Dabei sind a und b die Katheten und c die Hypotenuse."
+    },
+    "seiten": {
+     "h": "Seiten im Dreieck",
+     "text": "Katheten liegen am rechten Winkel, die Hypotenuse liegt gegenüber und ist die längste Seite."
+    },
+    "hyp": {
+     "h": "Hypotenuse berechnen",
+     "text": "c = √(a² + b²): Quadrate addieren, dann die Wurzel ziehen."
+    },
+    "kat": {
+     "h": "Kathete berechnen",
+     "text": "b = √(c² − a²): Quadrate subtrahieren, dann die Wurzel ziehen. Die Hypotenuse c steht immer vorn."
+    },
+    "sq": {
+     "h": "Quadrate und Wurzeln",
+     "text": "Quadrat: Zahl mal sich selbst (7² = 49). Wurzel: die Umkehrung (√49 = 7)."
+    },
+    "rechteck": {
+     "h": "Rechteck und Quadrat",
+     "text": "Die Diagonale ist die Hypotenuse: d² = a² + b²."
+    },
+    "anw": {
+     "h": "Anwendungen",
+     "text": "Skizze zeichnen, rechtwinkliges Dreieck suchen, Formel anpassen, Lösungsweg schreiben, sinnvoll runden und die Einheit angeben."
+    }
+   }
+  },
+  {
+   "id": "kl8-engl-travel",
+   "child": "kl8",
+   "subject": "engl",
+   "chapter": "Travel",
+   "title": "Travel · Vocabulary & Grammar",
+   "explain": [
+    {
+     "h": "Wörterliste zum Durchlernen",
+     "text": "So lernst du wie auf einem Blatt: Zuerst das Wort laut sagen. Dann tippe auf das Feld und decke die Lösung auf. Dann prüfe: Hast du es gewusst? Danach kommt das nächste Wort. Mit dem Knopf oben wechselst du die Richtung.",
+     "list": true
+    },
+    {
+     "h": "Reisen (1/3)",
+     "text": "Tippe auf eine Karte, um die Übersetzung zu sehen. Rate zuerst und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "journey",
+         "Reise",
+         "🧳"
+        ],
+        [
+         "boat",
+         "Boot",
+         "⛵"
+        ],
+        [
+         "flight",
+         "Flug",
+         "✈️"
+        ],
+        [
+         "transport",
+         "Transport",
+         "🚌"
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Reisen (2/3)",
+     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "underground",
+         "U-Bahn",
+         "🚇"
+        ],
+        [
+         "arrive",
+         "ankommen",
+         "🛬"
+        ],
+        [
+         "check in",
+         "einchecken",
+         "🛎️"
+        ],
+        [
+         "pack",
+         "packen",
+         "🎒"
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Reisen (3/3)",
+     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "suitcase",
+         "Koffer",
+         "🧳"
+        ],
+        [
+         "reservation",
+         "Reservierung",
+         "📅"
+        ],
+        [
+         "confirm",
+         "bestätigen",
+         "✅"
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Abenteuer und Wetter",
+     "text": "Tippe auf eine Karte, um die Übersetzung zu sehen. Rate zuerst und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "adventure",
+         "Abenteuer",
+         "🧗"
+        ],
+        [
+         "sunny",
+         "sonnig",
+         "☀️"
+        ],
+        [
+         "foggy",
+         "neblig",
+         "🌫️"
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Bindewörter (1/2)",
+     "text": "Tippe auf eine Karte, um die Übersetzung zu sehen. Rate zuerst und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "although",
+         "obwohl",
+         ""
+        ],
+        [
+         "because",
+         "weil",
+         ""
+        ],
+        [
+         "however",
+         "jedoch",
+         ""
+        ],
+        [
+         "fortunately",
+         "zum Glück",
+         ""
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Bindewörter (2/2)",
+     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "as soon as",
+         "sobald",
+         ""
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Steigerung",
+     "text": "Tippe auf eine Karte, um die Übersetzung zu sehen. Rate zuerst und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "cheaper",
+         "billiger",
+         ""
+        ],
+        [
+         "more comfortable",
+         "bequemer",
+         ""
+        ],
+        [
+         "slower",
+         "langsamer",
+         ""
+        ],
+        [
+         "better",
+         "besser",
+         ""
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Vergleichen mit -er und more",
+     "text": "Kurze Wörter bekommen -er: cheap → cheaper, slow → slower. Lange Wörter bekommen more: comfortable → more comfortable. good ist unregelmässig: good → better. Danach folgt than (als).",
+     "visuals": [
+      {
+       "type": "lines",
+       "num": false,
+       "items": [
+        [
+         "cheap → cheaper than",
+         "billiger als"
+        ],
+        [
+         "slow → slower than",
+         "langsamer als"
+        ],
+        [
+         "comfortable → more comfortable than",
+         "bequemer als"
+        ],
+        [
+         "good → better than",
+         "besser als"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Wie heisst die Steigerung von «good»?",
+      "opts": [
+       "better",
+       "gooder",
+       "more good",
+       "best"
+      ],
+      "a": [
+       "better"
+      ],
+      "hint": "good ist unregelmässig."
+     }
+    },
+    {
+     "h": "Linking words",
+     "text": "Mit Bindewörtern verbindest du Sätze. because = weil (Grund), although = obwohl, however = jedoch (Gegensatz), as soon as = sobald (Zeit), fortunately = zum Glück.",
+     "visuals": [
+      {
+       "type": "lines",
+       "num": false,
+       "items": [
+        [
+         "We arrived late because the flight was delayed.",
+         "Grund"
+        ],
+        [
+         "As soon as we landed, it started to rain.",
+         "Zeit"
+        ],
+        [
+         "The hotel was small. However, it was very clean.",
+         "Gegensatz"
+        ],
+        [
+         "Fortunately, nobody missed the connection.",
+         "zum Glück"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Welches Wort passt? The hotel was small, ___ it was very clean and comfortable.",
+      "opts": [
+       "however",
+       "because",
+       "as soon as",
+       "fortunately"
+      ],
+      "a": [
+       "however"
+      ],
+      "hint": "Klein ist schlecht, sauber ist gut: ein Gegensatz."
+     }
+    }
+   ],
+   "cards": [
+    {
+     "id": "t1",
+     "fw": "journey",
+     "de": [
+      "Reise"
+     ],
+     "grp": "trav",
+     "emo": "🧳"
+    },
+    {
+     "id": "t2",
+     "fw": "boat",
+     "de": [
+      "Boot"
+     ],
+     "grp": "trav",
+     "emo": "⛵"
+    },
+    {
+     "id": "t3",
+     "fw": "flight",
+     "de": [
+      "Flug"
+     ],
+     "grp": "trav",
+     "emo": "✈️"
+    },
+    {
+     "id": "t4",
+     "fw": "transport",
+     "de": [
+      "Transport",
+      "Verkehrsmittel"
+     ],
+     "grp": "trav",
+     "emo": "🚌"
+    },
+    {
+     "id": "t5",
+     "fw": "underground",
+     "de": [
+      "U-Bahn"
+     ],
+     "grp": "trav",
+     "emo": "🚇"
+    },
+    {
+     "id": "t6",
+     "fw": "arrive",
+     "de": [
+      "ankommen"
+     ],
+     "grp": "trav",
+     "emo": "🛬"
+    },
+    {
+     "id": "t7",
+     "fw": "check in",
+     "de": [
+      "einchecken"
+     ],
+     "grp": "trav",
+     "emo": "🛎️"
+    },
+    {
+     "id": "t8",
+     "fw": "pack",
+     "de": [
+      "packen"
+     ],
+     "grp": "trav",
+     "emo": "🎒"
+    },
+    {
+     "id": "t9",
+     "fw": "suitcase",
+     "de": [
+      "Koffer"
+     ],
+     "grp": "trav",
+     "emo": "🧳"
+    },
+    {
+     "id": "t10",
+     "fw": "reservation",
+     "de": [
+      "Reservierung"
+     ],
+     "grp": "trav",
+     "emo": "📅"
+    },
+    {
+     "id": "t11",
+     "fw": "confirm",
+     "de": [
+      "bestätigen"
+     ],
+     "grp": "trav",
+     "emo": "✅"
+    },
+    {
+     "id": "t12",
+     "fw": "adventure",
+     "de": [
+      "Abenteuer"
+     ],
+     "grp": "wet",
+     "emo": "🧗"
+    },
+    {
+     "id": "t13",
+     "fw": "sunny",
+     "de": [
+      "sonnig"
+     ],
+     "grp": "wet",
+     "emo": "☀️"
+    },
+    {
+     "id": "t14",
+     "fw": "foggy",
+     "de": [
+      "neblig"
+     ],
+     "grp": "wet",
+     "emo": "🌫️"
+    },
+    {
+     "id": "t15",
+     "fw": "although",
+     "de": [
+      "obwohl"
+     ],
+     "grp": "link"
+    },
+    {
+     "id": "t16",
+     "fw": "because",
+     "de": [
+      "weil"
+     ],
+     "grp": "link"
+    },
+    {
+     "id": "t17",
+     "fw": "however",
+     "de": [
+      "jedoch",
+      "aber"
+     ],
+     "grp": "link"
+    },
+    {
+     "id": "t18",
+     "fw": "fortunately",
+     "de": [
+      "zum Glück",
+      "glücklicherweise"
+     ],
+     "grp": "link"
+    },
+    {
+     "id": "t19",
+     "fw": "as soon as",
+     "de": [
+      "sobald"
+     ],
+     "grp": "link"
+    },
+    {
+     "id": "t20",
+     "fw": "cheaper",
+     "de": [
+      "billiger"
+     ],
+     "grp": "comp"
+    },
+    {
+     "id": "t21",
+     "fw": "more comfortable",
+     "de": [
+      "bequemer"
+     ],
+     "grp": "comp"
+    },
+    {
+     "id": "t22",
+     "fw": "slower",
+     "de": [
+      "langsamer"
+     ],
+     "grp": "comp"
+    },
+    {
+     "id": "t23",
+     "fw": "better",
+     "de": [
+      "besser"
+     ],
+     "grp": "comp"
+    }
+   ],
+   "exam": {
+    "minutes": 30,
+    "questions": [
+     {
+      "id": "q1",
+      "q": "Wie heisst «Reise» auf Englisch?",
+      "explain": "Reise = journey",
+      "ref": "t1",
+      "type": "input",
+      "answer": [
+       "journey"
+      ]
+     },
+     {
+      "id": "q2",
+      "q": "Wie heisst «Boot» auf Englisch?",
+      "explain": "Boot = boat",
+      "ref": "t2",
+      "type": "input",
+      "answer": [
+       "boat"
+      ]
+     },
+     {
+      "id": "q3",
+      "q": "Wie heisst «Flug» auf Englisch?",
+      "explain": "Flug = flight",
+      "ref": "t3",
+      "type": "input",
+      "answer": [
+       "flight"
+      ]
+     },
+     {
+      "id": "q4",
+      "q": "Wie heisst «Transport» auf Englisch?",
+      "explain": "Transport = transport",
+      "ref": "t4",
+      "type": "input",
+      "answer": [
+       "transport"
+      ]
+     },
+     {
+      "id": "q5",
+      "q": "Wie heisst «U-Bahn» auf Englisch?",
+      "explain": "U-Bahn = underground",
+      "ref": "t5",
+      "type": "input",
+      "answer": [
+       "underground"
+      ]
+     },
+     {
+      "id": "q6",
+      "q": "Wie heisst «ankommen» auf Englisch?",
+      "explain": "ankommen = arrive",
+      "ref": "t6",
+      "type": "input",
+      "answer": [
+       "arrive"
+      ]
+     },
+     {
+      "id": "q7",
+      "q": "Wie heisst «einchecken» auf Englisch?",
+      "explain": "einchecken = check in",
+      "ref": "t7",
+      "type": "input",
+      "answer": [
+       "check in"
+      ]
+     },
+     {
+      "id": "q8",
+      "q": "Wie heisst «packen» auf Englisch?",
+      "explain": "packen = pack",
+      "ref": "t8",
+      "type": "input",
+      "answer": [
+       "pack"
+      ]
+     },
+     {
+      "id": "q9",
+      "q": "Wie heisst «Koffer» auf Englisch?",
+      "explain": "Koffer = suitcase",
+      "ref": "t9",
+      "type": "input",
+      "answer": [
+       "suitcase"
+      ]
+     },
+     {
+      "id": "q10",
+      "q": "Wie heisst «Reservierung» auf Englisch?",
+      "explain": "Reservierung = reservation",
+      "ref": "t10",
+      "type": "input",
+      "answer": [
+       "reservation"
+      ]
+     },
+     {
+      "id": "q11",
+      "q": "Wie heisst «bestätigen» auf Englisch?",
+      "explain": "bestätigen = confirm",
+      "ref": "t11",
+      "type": "input",
+      "answer": [
+       "confirm"
+      ]
+     },
+     {
+      "id": "q12",
+      "q": "Wie heisst «Abenteuer» auf Englisch?",
+      "explain": "Abenteuer = adventure",
+      "ref": "t12",
+      "type": "input",
+      "answer": [
+       "adventure"
+      ]
+     },
+     {
+      "id": "q13",
+      "q": "Wie heisst «sonnig» auf Englisch?",
+      "explain": "sonnig = sunny",
+      "ref": "t13",
+      "type": "input",
+      "answer": [
+       "sunny"
+      ]
+     },
+     {
+      "id": "q14",
+      "q": "Wie heisst «neblig» auf Englisch?",
+      "explain": "neblig = foggy",
+      "ref": "t14",
+      "type": "input",
+      "answer": [
+       "foggy"
+      ]
+     },
+     {
+      "id": "q15",
+      "q": "Wie heisst «obwohl» auf Englisch?",
+      "explain": "obwohl = although",
+      "ref": "t15",
+      "type": "input",
+      "answer": [
+       "although"
+      ]
+     },
+     {
+      "id": "q16",
+      "q": "Wie heisst «weil» auf Englisch?",
+      "explain": "weil = because",
+      "ref": "t16",
+      "type": "input",
+      "answer": [
+       "because"
+      ]
+     },
+     {
+      "id": "q17",
+      "q": "Wie heisst «jedoch» auf Englisch?",
+      "explain": "jedoch = however",
+      "ref": "t17",
+      "type": "input",
+      "answer": [
+       "however"
+      ]
+     },
+     {
+      "id": "q18",
+      "q": "Wie heisst «zum Glück» auf Englisch?",
+      "explain": "zum Glück = fortunately",
+      "ref": "t18",
+      "type": "input",
+      "answer": [
+       "fortunately"
+      ]
+     },
+     {
+      "id": "q19",
+      "q": "Wie heisst «sobald» auf Englisch?",
+      "explain": "sobald = as soon as",
+      "ref": "t19",
+      "type": "input",
+      "answer": [
+       "as soon as"
+      ]
+     },
+     {
+      "id": "q20",
+      "q": "Wie heisst «billiger» auf Englisch?",
+      "explain": "billiger = cheaper",
+      "ref": "t20",
+      "type": "input",
+      "answer": [
+       "cheaper"
+      ]
+     },
+     {
+      "id": "q21",
+      "q": "Wie heisst «bequemer» auf Englisch?",
+      "explain": "bequemer = more comfortable",
+      "ref": "t21",
+      "type": "input",
+      "answer": [
+       "more comfortable"
+      ]
+     },
+     {
+      "id": "q22",
+      "q": "Wie heisst «langsamer» auf Englisch?",
+      "explain": "langsamer = slower",
+      "ref": "t22",
+      "type": "input",
+      "answer": [
+       "slower"
+      ]
+     },
+     {
+      "id": "q23",
+      "q": "Wie heisst «besser» auf Englisch?",
+      "explain": "besser = better",
+      "ref": "t23",
+      "type": "input",
+      "answer": [
+       "better"
+      ]
+     }
+    ]
+   },
+   "theory": {
+    "trav": {
+     "h": "Travel",
+     "text": "journey = Reise, flight = Flug, boat = Boot, underground = U-Bahn. Verben: arrive, check in, pack, confirm."
+    },
+    "link": {
+     "h": "Linking words",
+     "text": "because = weil, although = obwohl, however = jedoch, as soon as = sobald, fortunately = zum Glück."
+    },
+    "comp": {
+     "h": "Comparatives",
+     "text": "Kurze Adjektive: -er (cheaper). Lange Adjektive: more (more comfortable). Unregelmässig: good → better."
+    }
+   }
   }
  ],
  "hero": "img/hero.webp"
