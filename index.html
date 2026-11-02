@@ -549,7 +549,7 @@ details.card[open] summary{margin-bottom:10px}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v3.34';
+var APP_VERSION='v3.35';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -696,6 +696,7 @@ function checkPassive(id){
 
 /* ---------- Inhalte ---------- */
 function topicById(id){return C.topics.filter(function(t){return t.id===id})[0]}
+function subjOf(c){return C.subjects.filter(function(sb){return c.subjects?c.subjects.indexOf(sb.id)>=0:topicsOf(c.id,sb.id).length})}
 function topicsOf(child,subject){return C.topics.filter(function(t){return t.child===child&&(!subject||t.subject===subject)})}
 function subjName(id){var s=C.subjects.filter(function(x){return x.id===id})[0];return s?s.name:id}
 function cardsIn(topics){var out=[];topics.forEach(function(t){t.cards.forEach(function(c){out.push({k:t.id+'_'+c.id,c:c,t:t})})});return out}
@@ -1048,7 +1049,7 @@ function xpbar(pl){return '<div class="xpbar"><div class="bar" role="img" aria-l
 
 function vHome(){
   var cards=C.children.map(function(c){
-    var ts=topicsOf(c.id),s=stats(c.id,ts),L=level(c.id,ts),subs=C.subjects.filter(function(sb){return topicsOf(c.id,sb.id).length}).map(function(sb){return sb.name});
+    var ts=topicsOf(c.id),s=stats(c.id,ts),L=level(c.id,ts),subs=subjOf(c).map(function(sb){return sb.name});
     var status=!s.total?'Bald mehr Aufgaben':s.due>0?s.due+' zum Wiederholen':s.fresh>0?s.fresh+' neue Aufgaben':'Alles erledigt';
     return '<button class="ccard simple" data-act="child" data-id="'+esc(c.id)+'"><span class="cc-top"><span class="cnum">'+esc(String(c.grade||''))+'</span><span class="cc-t"><span class="cc-h">'+esc(label(c))+'</span><span class="sub">'+esc(subs.length?subs.join(' · '):'Bald mehr Aufgaben')+'</span></span><span class="cc-go">›</span></span></button>';
   }).join('');
@@ -1061,12 +1062,12 @@ function vChild(){
   var ch=C.children.filter(function(c){return c.id===nav.child})[0],all=topicsOf(ch.id),s=stats(ch.id,all),pl=plinfo(ch.id),p=prog(ch.id),st=streak(ch.id),dx=peekDay(ch.id).xp;
   var L=level(ch.id,all);
   var html='<div class="stack"><h1>'+esc(label(ch))+'</h1>';
-  if(!all.length)return html+'<section class="card"><h2>Noch ist alles leer</h2><p class="sub" style="margin-top:6px">Sobald neue Aufgaben da sind, tauchen sie hier auf.</p></section>'+syncNote()+'</div>';
-  var subs=C.subjects.filter(function(sb){return topicsOf(ch.id,sb.id).length});
+  if(!all.length&&!subjOf(ch).length)return html+'<section class="card"><h2>Noch ist alles leer</h2><p class="sub" style="margin-top:6px">Sobald neue Aufgaben da sind, tauchen sie hier auf.</p></section>'+syncNote()+'</div>';
+  var subs=subjOf(ch);
   html+='<section class="worlds-wrap"><h2 class="wtitle">Wähle deine Welt</h2><div class="worlds">'+subs.map(function(sb){
     var ts=topicsOf(ch.id,sb.id),Lw=level(ch.id,ts),w=Math.max(Lw.seen?4:0,Math.round(Lw.pct*100)),n=ts.length,pot=0;
     ts.forEach(function(t){pot+=t.cards.length*10+t.exam.questions.length*5+60});
-    return '<button class="world w-'+esc(sb.id)+'" data-act="subject" data-id="'+esc(sb.id)+'"><span class="wi">'+sicon(sb,52)+'</span><span class="wn">'+esc(sb.name)+'</span><span class="wm">'+n+(n===1?' Thema':' Themen')+'</span><span class="wb"><i style="width:'+w+'%"></i></span><span class="wl">'+w+'% geschafft</span><span class="wgo">Los geht\'s ›</span></button>'}).join('')+'</div></section>';
+    return '<button class="world w-'+esc(sb.id)+'" data-act="subject" data-id="'+esc(sb.id)+'"><span class="wi">'+sicon(sb,52)+'</span><span class="wn">'+esc(sb.name)+'</span><span class="wm">'+(n?n+(n===1?' Thema':' Themen'):'Bald mehr')+'</span><span class="wb"><i style="width:'+w+'%"></i></span><span class="wl">'+(n?w+'% geschafft':'noch leer')+'</span><span class="wgo">Los geht\'s ›</span></button>'}).join('')+'</div></section>';
   var left=s.due+s.fresh;
 
   var weak=all.map(function(t){return {t:t,w:stats(ch.id,[t]).weak}}).filter(function(x){return x.w>0}).sort(function(a,b){return b.w-a.w}).slice(0,2);
@@ -1086,6 +1087,7 @@ function vSubject(){
   if(s.due+s.fresh>0)html+='<div><button class="btn pri big" data-act="practice" data-scope="subject:'+esc(nav.subject)+'">Alles in dieser Welt üben ('+(s.due+s.fresh)+')</button></div>';
   var lvCount={};
   html+='<section class="list">';
+  if(!ts.length)html+='<section class="card"><h2>Hier kommen bald Aufgaben</h2><p class="sub" style="margin-top:6px">Sobald die Unterlagen da sind, erscheinen sie hier.</p></section>';
   ts.forEach(function(t){var chp='x';
       var st=stats(ch.id,[t]),seen=prog(ch.id).seen[t.id],best=bestNote(ch.id,t.id),hasV=t.cards.some(isV),lvn=(lvCount[chp]=(lvCount[chp]||0)+1),pot=t.cards.length*10+t.exam.questions.length*5+60;
       html+='<article class="card topic"><div><h3 class="tt">'+esc(t.title)+'</h3><p class="sub">'+t.cards.length+' Aufgaben</p></div>'+lbar(level(ch.id,[t]),true)

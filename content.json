@@ -6,21 +6,72 @@
    "name": "",
    "grade": 3,
    "img": "img/kl3.webp",
-   "full": "img/fb_brown.webp"
+   "full": "img/fb_brown.webp",
+   "subjects": [
+    "mathe",
+    "deu"
+   ]
+  },
+  {
+   "id": "kl4",
+   "name": "",
+   "grade": 4,
+   "img": "img/kl3.webp",
+   "full": "img/fb_brown.webp",
+   "subjects": [
+    "mathe",
+    "deu"
+   ]
   },
   {
    "id": "kl5",
    "name": "",
    "grade": 5,
    "img": "img/kl5.webp",
-   "full": "img/fb_blonde.webp"
+   "full": "img/fb_blonde.webp",
+   "subjects": [
+    "mathe",
+    "franz",
+    "engl",
+    "deu"
+   ]
+  },
+  {
+   "id": "kl6",
+   "name": "",
+   "grade": 6,
+   "img": "img/kl3.webp",
+   "full": "img/fb_brown.webp",
+   "subjects": [
+    "mathe",
+    "franz",
+    "engl",
+    "deu"
+   ]
+  },
+  {
+   "id": "kl7",
+   "name": "",
+   "grade": 7,
+   "img": "img/kl3.webp",
+   "full": "img/fb_brown.webp",
+   "subjects": [
+    "mathe",
+    "franz",
+    "engl",
+    "deu"
+   ]
   },
   {
    "id": "kl8",
    "name": "",
    "grade": 8,
    "img": "img/kl8.webp",
-   "full": "img/fb_boy.webp"
+   "full": "img/fb_boy.webp",
+   "subjects": [
+    "mathe",
+    "deu"
+   ]
   }
  ],
  "subjects": [
