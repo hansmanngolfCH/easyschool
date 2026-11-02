@@ -718,6 +718,16 @@ h1{font-size:clamp(1.1rem,4vw,1.45rem)}h2{font-size:.85rem}h3{font-size:.78rem}
 .brand .wm{font-size:.82rem}
 .wtitle{font-size:.85rem}
 @media (max-width:480px){h1{font-size:clamp(1.05rem,4.4vw,1.3rem)}.brandrow h1{font-size:1.4rem}}
+/* v3.64 Belohnung */
+.rwd{position:fixed;inset:0;background:rgba(32,33,36,.55);display:flex;align-items:center;justify-content:center;z-index:999;padding:16px}
+.rwbox{background:#fff;border-radius:20px;padding:16px;max-width:420px;width:100%;max-height:92vh;overflow:auto;display:flex;flex-direction:column;gap:10px}
+.rwtop{display:flex;justify-content:space-between;align-items:center;font-size:1.05rem}
+.rwx{border:0;background:#F1F3F4;border-radius:50%;width:34px;height:34px;font-size:1.3rem;cursor:pointer}
+.rwwhy{margin:0;color:#5f6368}#rwbody{display:flex;flex-direction:column;gap:10px;align-items:stretch}
+.rwcv{width:100%;max-width:340px;aspect-ratio:1;margin:0 auto;border:2px solid #DADCE0;border-radius:12px;touch-action:none}
+.rwsc{margin:0;text-align:center}.rwpad{display:flex;flex-direction:column;align-items:center;gap:4px}.rwpad div{display:flex;gap:4px}
+.rwpad button{width:56px;height:46px;border:1.5px solid #DADCE0;background:#fff;border-radius:12px;font-size:1.2rem;cursor:pointer}
+.rwif{width:100%;height:60vh;border:0;border-radius:12px}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -725,7 +735,7 @@ h1{font-size:clamp(1.1rem,4vw,1.45rem)}h2{font-size:.85rem}h3{font-size:.78rem}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v3.63';
+var APP_VERSION='v3.64';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -790,7 +800,7 @@ function dkey(off){var d=new Date();d.setDate(d.getDate()-off);return d.getFullY
 function day(id){var p=prog(id),k=dkey(0);return p.days[k]||(p.days[k]={sec:0,n:0,ok:0,xp:0})}
 function peekDay(id,off){return prog(id).days[dkey(off||0)]||{sec:0,n:0,ok:0,xp:0}}
 function touch(id){var now=Date.now();if(lastAct&&now-lastAct<90000)day(id).sec+=Math.round((now-lastAct)/1000);lastAct=now;if(now-lastSave>20000){lastSave=now;save(id)}}
-function logAnswer(id,ok){var d=day(id);d.n++;if(ok)d.ok++}
+function logAnswer(id,ok){var d=day(id);d.n++;if(ok)d.ok++;if(typeof rewardAfter==='function')rewardAfter(ok)}
 function xpTotal(id){var s=0,d=prog(id).days,k;for(k in d)s+=d[k].xp||0;return s}
 function plv(xp){return Math.floor(xp/1000)+1}
 function fx(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,"'")}
@@ -1800,7 +1810,7 @@ function finishExam(){
     return {q:q,g:g,ok:ok,note:note};
   });
   var max=qsx.length,note=grade(score,max),xp=5*score+(note>=5?30:0)+(note>=5.75?20:0);
-  p.exams.push({topic:t.id,score:score,max:max,note:note,t:now});
+  p.exams.push({topic:t.id,score:score,max:max,note:note,t:now});if(note>=5)setTimeout(function(){showReward('Prüfung mit Note '+fmt(note)+' geschafft!')},900);
   addXp(n.child,xp);if(note>=5)ach(n.child,'exam5');checkPassive(n.child);
   save(n.child);n.phase='result';n.result={items:items,score:score,max:max,note:note,xp:xp};render();window.scrollTo(0,0);
 }
@@ -1853,6 +1863,58 @@ fetch('content.json',{cache:'no-cache'}).then(function(r){if(!r.ok)throw new Err
   else{nav.dsel=nav.dsel===d.chip?null:d.chip;render()}});
  window.addEventListener('pointercancel',function(){if(drag&&drag.ghost)drag.ghost.remove();drag=null});
 })();
+/* ---------- Belohnung: Minispiel ---------- */
+var GAME_IFRAME='';/* optional: URL eines Partner-Spiels (GameDistribution/Famobi), wird als zweiter Tab angeboten */
+var STREAK=0,SNAKE=null;
+function rewardAfter(ok){
+  if(!nav||nav.view!=='practice')return;
+  if(!ok){STREAK=0;return}
+  STREAK++;
+  if(STREAK>=5){STREAK=0;showReward('5 richtige Antworten in Folge!')}
+}
+function showReward(why){
+  if(document.getElementById('rwd'))return;
+  var o=document.createElement('div');o.id='rwd';o.className='rwd';
+  o.innerHTML='<div class="rwbox" role="dialog" aria-modal="true"><div class="rwtop"><b>🎮 Belohnung freigeschaltet</b><button class="rwx" aria-label="Schliessen">×</button></div><p class="rwwhy">'+why+'</p><div id="rwbody"><button class="btn pri big rwgo">Snake spielen</button>'+(GAME_IFRAME?'<button class="btn big rwgo2">Partner-Spiel</button>':'')+'<button class="btn ghost rwlater">Später</button></div></div>';
+  document.body.appendChild(o);
+  o.querySelector('.rwx').onclick=o.querySelector('.rwlater').onclick=closeReward;
+  o.querySelector('.rwgo').onclick=startSnake;
+  var g2=o.querySelector('.rwgo2');if(g2)g2.onclick=function(){document.getElementById('rwbody').innerHTML='<iframe class="rwif" src="'+GAME_IFRAME+'" allow="fullscreen" referrerpolicy="no-referrer"></iframe>'};
+}
+function closeReward(){if(SNAKE){clearInterval(SNAKE.t);document.removeEventListener('keydown',SNAKE.k);SNAKE=null}var o=document.getElementById('rwd');if(o)o.remove()}
+function startSnake(){
+  var b=document.getElementById('rwbody'),N=16,S=20;
+  var best=0;try{best=Number(localStorage.getItem('es.snake')||0)}catch(e){}
+  b.innerHTML='<p class="rwsc">Punkte: <b id="sn-s">0</b> · Rekord: <b id="sn-b">'+best+'</b></p><canvas id="sn" width="'+N*S+'" height="'+N*S+'" class="rwcv"></canvas><div class="rwpad"><button data-d="U" aria-label="hoch">▲</button><div><button data-d="L" aria-label="links">◀</button><button data-d="D" aria-label="runter">▼</button><button data-d="R" aria-label="rechts">▶</button></div></div><p class="sub" style="text-align:center">Pfeiltasten, Wischen oder Tasten</p>';
+  var cv=document.getElementById('sn'),cx=cv.getContext('2d');
+  var st={sn:[{x:8,y:8},{x:7,y:8},{x:6,y:8}],d:{x:1,y:0},nd:{x:1,y:0},f:null,s:0,over:false};
+  function food(){do{st.f={x:Math.floor(Math.random()*N),y:Math.floor(Math.random()*N)}}while(st.sn.some(function(c){return c.x===st.f.x&&c.y===st.f.y}))}
+  food();
+  var DIR={U:{x:0,y:-1},D:{x:0,y:1},L:{x:-1,y:0},R:{x:1,y:0}};
+  function turn(d){if(d.x!==-st.d.x||d.y!==-st.d.y)st.nd=d}
+  function draw(){
+    cx.fillStyle='#F8F9FA';cx.fillRect(0,0,N*S,N*S);
+    cx.fillStyle='#EA4335';cx.beginPath();cx.arc(st.f.x*S+S/2,st.f.y*S+S/2,S/2-3,0,7);cx.fill();
+    st.sn.forEach(function(c,i){cx.fillStyle=i?'#34A853':'#1A73E8';cx.fillRect(c.x*S+1,c.y*S+1,S-2,S-2)});
+    if(st.over){cx.fillStyle='rgba(255,255,255,.85)';cx.fillRect(0,0,N*S,N*S);cx.fillStyle='#202124';cx.font='bold 22px sans-serif';cx.textAlign='center';cx.fillText('Game over · '+st.s+' Punkte',N*S/2,N*S/2-6);cx.font='15px sans-serif';cx.fillText('Tippen zum Neustart',N*S/2,N*S/2+20)}
+  }
+  function step(){
+    if(st.over)return;st.d=st.nd;
+    var h={x:st.sn[0].x+st.d.x,y:st.sn[0].y+st.d.y};
+    if(h.x<0||h.y<0||h.x>=N||h.y>=N||st.sn.some(function(c){return c.x===h.x&&c.y===h.y})){st.over=true;if(st.s>best){best=st.s;try{localStorage.setItem('es.snake',best)}catch(e){}document.getElementById('sn-b').textContent=best}draw();return}
+    st.sn.unshift(h);
+    if(h.x===st.f.x&&h.y===st.f.y){st.s++;document.getElementById('sn-s').textContent=st.s;food()}else st.sn.pop();
+    draw();
+  }
+  var kd=function(e){var m={ArrowUp:'U',ArrowDown:'D',ArrowLeft:'L',ArrowRight:'R'}[e.key];if(m){e.preventDefault();turn(DIR[m])}};
+  document.addEventListener('keydown',kd);
+  b.querySelectorAll('[data-d]').forEach(function(x){x.onclick=function(){turn(DIR[x.dataset.d])}});
+  var sx,sy;cv.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;sy=e.touches[0].clientY},{passive:true});
+  cv.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;if(Math.max(Math.abs(dx),Math.abs(dy))<20){if(st.over)startSnake();return}turn(Math.abs(dx)>Math.abs(dy)?(dx>0?DIR.R:DIR.L):(dy>0?DIR.D:DIR.U))});
+  cv.addEventListener('click',function(){if(st.over){clearInterval(SNAKE.t);document.removeEventListener('keydown',kd);startSnake()}});
+  SNAKE={t:setInterval(step,140),k:kd};draw();
+}
+
 })();
 
 </script>
