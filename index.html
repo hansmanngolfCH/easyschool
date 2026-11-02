@@ -561,6 +561,44 @@ details.card[open] summary{margin-bottom:10px}
 .sub.noc{font-size:.78rem;color:#9aa0a6}
 .hbn{margin:6px 0 14px}
 .hbn{width:100%;box-sizing:border-box}.hbn .bn-m{flex:1;min-width:0}
+
+/* v3.46 kompakte Welten und Themen */
+.worlds{grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+.world{border-radius:18px;padding:12px 16px 14px;min-height:0;display:grid;grid-template-columns:auto 1fr auto;grid-template-areas:"wi wn wl" "wi wm wl" "wb wb wb";column-gap:14px;row-gap:2px;align-items:center}
+.world::after{width:90px;height:90px;right:-24px;top:-34px}
+.world .wi{grid-area:wi;width:46px;height:46px;border-radius:14px;margin:0}
+.world .wi svg{width:30px;height:30px}
+.world .wn{grid-area:wn;font-size:1.3rem}
+.world .wm{grid-area:wm;font-size:.82rem}
+.world .wl{grid-area:wl;font-size:.82rem;text-align:right}
+.world .wb{grid-area:wb;height:6px;margin-top:8px}
+.world .wgo{display:none}
+@media (min-width:700px){.worlds{grid-template-columns:repeat(2,1fr)}}
+.tlist{gap:8px}
+.card.topic.tc{padding:12px 14px;gap:8px;border-radius:18px}
+.tchead{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.tcmain{min-width:0}
+.card.topic.tc h3.tt{font-size:1.1rem;line-height:1.2;margin:0 0 2px}
+.card.topic.tc .sub{font-size:.8rem;margin:0}
+.tcgame{flex:none;font-size:.78rem;padding:6px 10px;min-height:0}
+.bar.thin{height:5px}
+.mods3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.mod3{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;padding:8px 6px;border-radius:12px;color:#fff;background:var(--m2);touch-action:manipulation;min-width:0}
+.mod3 span{display:flex;flex-direction:column;line-height:1.15;min-width:0}
+.mod3 b{font:700 .84rem var(--font-d);white-space:nowrap}
+.mod3 small{font-size:.68rem;opacity:.92;white-space:nowrap}
+.mod3 svg{flex:none}
+.mod3:hover{filter:brightness(1.07)}.mod3:active{transform:scale(.97)}
+.mod3:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+@media (max-width:420px){.mod3{flex-direction:column;gap:2px;padding:7px 4px}.mod3 span{align-items:center}.mod3 b{font-size:.78rem}.mod3 svg{width:18px;height:18px}}
+.chgrp{display:flex;flex-direction:column;gap:8px}
+.chh{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:14px;background:#F1F3F4;color:#1f2430;touch-action:manipulation}
+.chh:hover{background:#E8EAED}
+.chh:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.chn{font:700 1rem var(--font-d);flex:1;min-width:0}
+.chm{font-size:.8rem;color:#5f6368}
+.chc{color:#5f6368;font-size:1rem}
+.chbody{display:flex;flex-direction:column;gap:8px;padding-left:8px;border-left:3px solid #DADCE0}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -568,7 +606,7 @@ details.card[open] summary{margin-bottom:10px}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v3.45';
+var APP_VERSION='v3.46';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -1100,21 +1138,30 @@ function vChild(){
   return html+syncNote()+'</div>';
 }
 
+function topicCard(ch,t){
+  var st=stats(ch.id,[t]),seen=prog(ch.id).seen[t.id],best=bestNote(ch.id,t.id),hasV=t.cards.some(isV),L=level(ch.id,[t]),w=Math.max(L.seen?4:0,Math.round(L.pct*100)),due=st.due+st.fresh;
+  var ic={v:'<path d="M24 12C19 8 11 8 6 10v28c5-2 13-2 18 2 5-4 13-4 18-2V10c-5-2-13-2-18 2zM24 12v28"/>',u:'<circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="9"/><circle cx="24" cy="24" r="2.5" fill="#fff"/>',p:'<path d="M10 42V6M10 8h26l-6 9 6 9H10"/>'};
+  var svg=function(k){return '<svg viewBox="0 0 48 48" width="22" height="22" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">'+ic[k]+'</svg>'};
+  return '<article class="card topic tc"><div class="tchead"><div class="tcmain"><h3 class="tt">'+esc(t.title)+'</h3><p class="sub">'+t.cards.length+' Aufgaben · '+esc(L.n)+' · '+w+'%</p></div>'+(hasV?'<button class="btn sm tcgame" data-act="pairs" data-id="'+esc(t.id)+'" aria-label="Spiel: Paare finden">Paare-Spiel</button>':'')+'</div><div class="bar thin" role="img" aria-label="'+w+' Prozent"><i style="width:'+w+'%"></i></div>'
+  +'<div class="mods3"><button class="mod3 m-v" data-act="learn" data-id="'+esc(t.id)+'">'+svg('v')+'<span><b>AI-Theorie</b><small>'+(seen?'✓ gesehen':t.explain.length+' Schritte')+'</small></span></button>'
+  +'<button class="mod3 m-u" data-act="practice" data-scope="topic:'+esc(t.id)+'" data-force="1">'+svg('u')+'<span><b>AI-Lernen</b><small>'+(due>0?due+' dran':'✓ wiederholt')+'</small></span></button>'
+  +'<button class="mod3 m-p" data-act="exam" data-id="'+esc(t.id)+'">'+svg('p')+'<span><b>Prüfung</b><small>'+(best?'Note '+fmt(best):'Boss-Test')+'</small></span></button></div></article>';
+}
 function vSubject(){
   var ch=C.children.filter(function(c){return c.id===nav.child})[0],ts=topicsOf(ch.id,nav.subject),chapters=[],sb=C.subjects.filter(function(x){return x.id===nav.subject})[0];
   ts.forEach(function(t){if(chapters.indexOf(t.chapter)<0)chapters.push(t.chapter)});
-  var s=stats(ch.id,ts);
   var html='<div class="stack"><div class="row"><span class="sbadge">'+sicon(sb,24)+'</span><div><p class="eyebrow">Welt · '+esc(label(ch))+'</p><h1>'+esc(sb.name)+'</h1></div></div>';
-  var lvCount={};
-  html+='<section class="list">';
+  html+='<section class="list tlist">';
   if(!ts.length)html+='<section class="card"><h2>Hier kommen bald Aufgaben</h2><p class="sub" style="margin-top:6px">Sobald die Unterlagen da sind, erscheinen sie hier.</p></section>';
-  ts.forEach(function(t){var chp='x';
-      var st=stats(ch.id,[t]),seen=prog(ch.id).seen[t.id],best=bestNote(ch.id,t.id),hasV=t.cards.some(isV),lvn=(lvCount[chp]=(lvCount[chp]||0)+1),pot=t.cards.length*10+t.exam.questions.length*5+60;
-      html+='<article class="card topic"><div><h3 class="tt">'+esc(t.title)+'</h3><p class="sub">'+t.cards.length+' Aufgaben</p></div>'+lbar(level(ch.id,[t]),true)
-      +'<div class="mods2"><button class="mod m-v" data-act="learn" data-id="'+esc(t.id)+'"><span class="mi"><svg viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 12C19 8 11 8 6 10v28c5-2 13-2 18 2 5-4 13-4 18-2V10c-5-2-13-2-18 2zM24 12v28"/></svg></span><b>AI-Theorie</b><small>'+(seen?'✓ gesehen':t.explain.length+' Schritte')+'</small></button>'
-      +'<button class="mod m-u" data-act="practice" data-scope="topic:'+esc(t.id)+'" data-force="1"><span class="mi"><svg viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="9"/><circle cx="24" cy="24" r="2.5" fill="#fff"/><path d="M24 24L40 8M34 8h6v6"/></svg></span><b>AI-Lernen</b><small>'+(st.due+st.fresh>0?(st.due+st.fresh)+' dran':'✓ wiederholt')+'</small></button>'
-      +'<button class="mod m-p" data-act="exam" data-id="'+esc(t.id)+'"><span class="mi"><svg viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 42V6M10 8h26l-6 9 6 9H10"/></svg></span><b>Prüfung</b><small>'+(best?'Note '+fmt(best):'Boss-Test')+'</small></button></div>'
-      +(hasV?'<button class="btn sm" data-act="pairs" data-id="'+esc(t.id)+'">🎮 Spiel: Paare finden</button>':'')+'</article>';
+  nav.chopen=nav.chopen||{};
+  var many=ts.length>8;
+  chapters.forEach(function(chp){
+    var group=ts.filter(function(t){return t.chapter===chp});
+    if(group.length<2){group.forEach(function(t){html+=topicCard(ch,t)});return}
+    var key=nav.subject+'|'+chp,open=key in nav.chopen?nav.chopen[key]:!many,L=level(ch.id,group),w=Math.max(L.seen?4:0,Math.round(L.pct*100));
+    html+='<div class="chgrp'+(open?' open':'')+'"><button class="chh" data-act="chtoggle" data-key="'+esc(key)+'" aria-expanded="'+(open?'true':'false')+'"><span class="chn">'+esc(chp)+'</span><span class="chm">'+group.length+' Themen · '+w+'%</span><span class="chc">'+(open?'▾':'▸')+'</span></button>';
+    if(open)html+='<div class="chbody">'+group.map(function(t){return topicCard(ch,t)}).join('')+'</div>';
+    html+='</div>';
   });
   html+='</section>';
   return html+'</div>';
@@ -1474,6 +1521,7 @@ var ACT={
   learn:function(b){go({view:'learn',child:nav.child,topicId:b.dataset.id,step:0,qz:{}})},
   next:function(){nav.step++;nav.fails=0;render();window.scrollTo(0,0)},
   prev:function(){nav.step--;nav.fails=0;render();window.scrollTo(0,0)},
+  chtoggle:function(el){var k=el.getAttribute('data-key');nav.chopen=nav.chopen||{};var def=!(topicsOf(nav.child,nav.subject).length>8);nav.chopen[k]=!((k in nav.chopen)?nav.chopen[k]:def);render()},
   avopen:function(){nav.avpick=true;render()},
   avclose:function(){nav.avpick=false;render();if(nav.view!=='home')return},
   avcol:function(b){setMyCol(parseInt(b.dataset.id,10));render()},
