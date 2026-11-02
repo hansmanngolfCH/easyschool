@@ -3443,6 +3443,923 @@
    }
   },
   {
+   "id": "kl5-franz-unit1-ecole",
+   "child": "kl5",
+   "subject": "franz",
+   "chapter": "Unit 1 · École / Semaine",
+   "title": "Unit 1 · École / Semaine",
+   "explain": [
+    {
+     "h": "Wörterliste zum Durchlernen",
+     "text": "So lernst du wie auf einem Blatt: Zuerst das Wort laut sagen. Dann tippe auf das Feld und decke die Lösung auf. Dann prüfe: Hast du es gewusst? Danach kommt das nächste Wort. Mit dem Knopf oben wechselst du die Richtung.",
+     "list": true
+    },
+    {
+     "h": "Schulanfang",
+     "text": "Tippe auf eine Karte, um die Übersetzung zu sehen. Rate zuerst und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "Chouette, c'est la rentrée!",
+         "Toll, es ist Schulanfang!",
+         ""
+        ],
+        [
+         "Zut, c'est la rentrée!",
+         "Oje, es ist Schulanfang!",
+         ""
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Schulsachen (1/3)",
+     "text": "Tippe auf eine Karte, um die Übersetzung zu sehen. Rate zuerst und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "le livre",
+         "Buch",
+         "📖"
+        ],
+        [
+         "la règle",
+         "Lineal",
+         "📏"
+        ],
+        [
+         "le classeur",
+         "Ordner",
+         "🗂️"
+        ],
+        [
+         "le cahier",
+         "Heft",
+         "📓"
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Schulsachen (2/3)",
+     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "le crayon",
+         "Bleistift",
+         "✏️"
+        ],
+        [
+         "le stylo",
+         "Kugelschreiber",
+         "🖊️"
+        ],
+        [
+         "la gomme",
+         "Gummi",
+         "🧽"
+        ],
+        [
+         "le tableau noir",
+         "Wandtafel",
+         "🧑‍🏫"
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Schulsachen (3/3)",
+     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "la trousse",
+         "Etui",
+         "👝"
+        ],
+        [
+         "la table",
+         "Tisch",
+         ""
+        ],
+        [
+         "la chaise",
+         "Stuhl",
+         "🪑"
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Schulfächer (1/2)",
+     "text": "Tippe auf eine Karte, um die Übersetzung zu sehen. Rate zuerst und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "la matière scolaire",
+         "Schulfach",
+         "📚"
+        ],
+        [
+         "l'allemand (m)",
+         "Deutsch",
+         ""
+        ],
+        [
+         "le français",
+         "Französisch",
+         ""
+        ],
+        [
+         "l'anglais (m)",
+         "Englisch",
+         ""
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Schulfächer (2/2)",
+     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "les maths, les mathématiques (f pl)",
+         "Mathematik",
+         "➗"
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Die Wochentage (1/2)",
+     "text": "Tippe auf eine Karte, um die Übersetzung zu sehen. Rate zuerst und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "les jours (m) de la semaine",
+         "die Wochentage",
+         "📅"
+        ],
+        [
+         "lundi",
+         "Montag",
+         ""
+        ],
+        [
+         "mardi",
+         "Dienstag",
+         ""
+        ],
+        [
+         "mercredi",
+         "Mittwoch",
+         ""
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Die Wochentage (2/2)",
+     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "jeudi",
+         "Donnerstag",
+         ""
+        ],
+        [
+         "vendredi",
+         "Freitag",
+         ""
+        ],
+        [
+         "samedi",
+         "Samstag",
+         ""
+        ],
+        [
+         "dimanche",
+         "Sonntag",
+         ""
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Im Unterricht (1/2)",
+     "text": "Tippe auf eine Karte, um die Übersetzung zu sehen. Rate zuerst und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "une école",
+         "eine Schule",
+         "🏫"
+        ],
+        [
+         "calculer",
+         "rechnen",
+         ""
+        ],
+        [
+         "dessiner",
+         "zeichnen",
+         "🎨"
+        ],
+        [
+         "chanter",
+         "singen",
+         "🎤"
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Im Unterricht (2/2)",
+     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "expérimenter",
+         "experimentieren",
+         "🧪"
+        ],
+        [
+         "parler français",
+         "Französisch sprechen",
+         "🗣️"
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    }
+   ],
+   "cards": [
+    {
+     "id": "s1",
+     "fw": "Chouette, c'est la rentrée!",
+     "de": [
+      "Toll, es ist Schulanfang!"
+     ],
+     "grp": "rent"
+    },
+    {
+     "id": "s2",
+     "fw": "Zut, c'est la rentrée!",
+     "de": [
+      "Oje, es ist Schulanfang!"
+     ],
+     "grp": "rent"
+    },
+    {
+     "id": "s3",
+     "fw": "le livre",
+     "de": [
+      "Buch"
+     ],
+     "grp": "obj",
+     "emo": "📖"
+    },
+    {
+     "id": "s4",
+     "fw": "la règle",
+     "de": [
+      "Lineal"
+     ],
+     "grp": "obj",
+     "emo": "📏"
+    },
+    {
+     "id": "s5",
+     "fw": "le classeur",
+     "de": [
+      "Ordner"
+     ],
+     "grp": "obj",
+     "emo": "🗂️"
+    },
+    {
+     "id": "s6",
+     "fw": "le cahier",
+     "de": [
+      "Heft"
+     ],
+     "grp": "obj",
+     "emo": "📓"
+    },
+    {
+     "id": "s7",
+     "fw": "le crayon",
+     "de": [
+      "Bleistift"
+     ],
+     "grp": "obj",
+     "emo": "✏️"
+    },
+    {
+     "id": "s8",
+     "fw": "le stylo",
+     "de": [
+      "Kugelschreiber"
+     ],
+     "grp": "obj",
+     "emo": "🖊️"
+    },
+    {
+     "id": "s9",
+     "fw": "la gomme",
+     "de": [
+      "Gummi"
+     ],
+     "grp": "obj",
+     "emo": "🧽"
+    },
+    {
+     "id": "s10",
+     "fw": "le tableau noir",
+     "de": [
+      "Wandtafel"
+     ],
+     "grp": "obj",
+     "emo": "🧑‍🏫"
+    },
+    {
+     "id": "s11",
+     "fw": "la trousse",
+     "de": [
+      "Etui"
+     ],
+     "grp": "obj",
+     "emo": "👝"
+    },
+    {
+     "id": "s12",
+     "fw": "la table",
+     "de": [
+      "Tisch"
+     ],
+     "grp": "obj"
+    },
+    {
+     "id": "s13",
+     "fw": "la chaise",
+     "de": [
+      "Stuhl"
+     ],
+     "grp": "obj",
+     "emo": "🪑"
+    },
+    {
+     "id": "s14",
+     "fw": "la matière scolaire",
+     "de": [
+      "Schulfach"
+     ],
+     "grp": "mat",
+     "emo": "📚"
+    },
+    {
+     "id": "s15",
+     "fw": "l'allemand (m)",
+     "de": [
+      "Deutsch"
+     ],
+     "grp": "mat"
+    },
+    {
+     "id": "s16",
+     "fw": "le français",
+     "de": [
+      "Französisch"
+     ],
+     "grp": "mat"
+    },
+    {
+     "id": "s17",
+     "fw": "l'anglais (m)",
+     "de": [
+      "Englisch"
+     ],
+     "grp": "mat"
+    },
+    {
+     "id": "s18",
+     "fw": "les maths, les mathématiques (f pl)",
+     "de": [
+      "Mathematik"
+     ],
+     "grp": "mat",
+     "emo": "➗"
+    },
+    {
+     "id": "s19",
+     "fw": "les jours (m) de la semaine",
+     "de": [
+      "die Wochentage"
+     ],
+     "grp": "jour",
+     "emo": "📅"
+    },
+    {
+     "id": "s20",
+     "fw": "lundi",
+     "de": [
+      "Montag"
+     ],
+     "grp": "jour"
+    },
+    {
+     "id": "s21",
+     "fw": "mardi",
+     "de": [
+      "Dienstag"
+     ],
+     "grp": "jour"
+    },
+    {
+     "id": "s22",
+     "fw": "mercredi",
+     "de": [
+      "Mittwoch"
+     ],
+     "grp": "jour"
+    },
+    {
+     "id": "s23",
+     "fw": "jeudi",
+     "de": [
+      "Donnerstag"
+     ],
+     "grp": "jour"
+    },
+    {
+     "id": "s24",
+     "fw": "vendredi",
+     "de": [
+      "Freitag"
+     ],
+     "grp": "jour"
+    },
+    {
+     "id": "s25",
+     "fw": "samedi",
+     "de": [
+      "Samstag"
+     ],
+     "grp": "jour"
+    },
+    {
+     "id": "s26",
+     "fw": "dimanche",
+     "de": [
+      "Sonntag"
+     ],
+     "grp": "jour"
+    },
+    {
+     "id": "s27",
+     "fw": "une école",
+     "de": [
+      "eine Schule"
+     ],
+     "grp": "verb",
+     "emo": "🏫"
+    },
+    {
+     "id": "s28",
+     "fw": "calculer",
+     "de": [
+      "rechnen"
+     ],
+     "grp": "verb"
+    },
+    {
+     "id": "s29",
+     "fw": "dessiner",
+     "de": [
+      "zeichnen"
+     ],
+     "grp": "verb",
+     "emo": "🎨"
+    },
+    {
+     "id": "s30",
+     "fw": "chanter",
+     "de": [
+      "singen"
+     ],
+     "grp": "verb",
+     "emo": "🎤"
+    },
+    {
+     "id": "s31",
+     "fw": "expérimenter",
+     "de": [
+      "experimentieren"
+     ],
+     "grp": "verb",
+     "emo": "🧪"
+    },
+    {
+     "id": "s32",
+     "fw": "parler français",
+     "de": [
+      "Französisch sprechen"
+     ],
+     "grp": "verb",
+     "emo": "🗣️"
+    }
+   ],
+   "exam": {
+    "minutes": 30,
+    "questions": [
+     {
+      "id": "q1",
+      "q": "Wie heisst «Toll, es ist Schulanfang!» auf Französisch?",
+      "explain": "Toll, es ist Schulanfang! = Chouette, c'est la rentrée!",
+      "ref": "s1",
+      "type": "input",
+      "answer": [
+       "Chouette, c'est la rentrée!"
+      ]
+     },
+     {
+      "id": "q2",
+      "q": "Wie heisst «Oje, es ist Schulanfang!» auf Französisch?",
+      "explain": "Oje, es ist Schulanfang! = Zut, c'est la rentrée!",
+      "ref": "s2",
+      "type": "input",
+      "answer": [
+       "Zut, c'est la rentrée!"
+      ]
+     },
+     {
+      "id": "q3",
+      "q": "Wie heisst «Buch» auf Französisch?",
+      "explain": "Buch = le livre",
+      "ref": "s3",
+      "type": "input",
+      "answer": [
+       "le livre"
+      ]
+     },
+     {
+      "id": "q4",
+      "q": "Wie heisst «Lineal» auf Französisch?",
+      "explain": "Lineal = la règle",
+      "ref": "s4",
+      "type": "input",
+      "answer": [
+       "la règle"
+      ]
+     },
+     {
+      "id": "q5",
+      "q": "Wie heisst «Ordner» auf Französisch?",
+      "explain": "Ordner = le classeur",
+      "ref": "s5",
+      "type": "input",
+      "answer": [
+       "le classeur"
+      ]
+     },
+     {
+      "id": "q6",
+      "q": "Wie heisst «Heft» auf Französisch?",
+      "explain": "Heft = le cahier",
+      "ref": "s6",
+      "type": "input",
+      "answer": [
+       "le cahier"
+      ]
+     },
+     {
+      "id": "q7",
+      "q": "Wie heisst «Bleistift» auf Französisch?",
+      "explain": "Bleistift = le crayon",
+      "ref": "s7",
+      "type": "input",
+      "answer": [
+       "le crayon"
+      ]
+     },
+     {
+      "id": "q8",
+      "q": "Wie heisst «Kugelschreiber» auf Französisch?",
+      "explain": "Kugelschreiber = le stylo",
+      "ref": "s8",
+      "type": "input",
+      "answer": [
+       "le stylo"
+      ]
+     },
+     {
+      "id": "q9",
+      "q": "Wie heisst «Gummi» auf Französisch?",
+      "explain": "Gummi = la gomme",
+      "ref": "s9",
+      "type": "input",
+      "answer": [
+       "la gomme"
+      ]
+     },
+     {
+      "id": "q10",
+      "q": "Wie heisst «Wandtafel» auf Französisch?",
+      "explain": "Wandtafel = le tableau noir",
+      "ref": "s10",
+      "type": "input",
+      "answer": [
+       "le tableau noir"
+      ]
+     },
+     {
+      "id": "q11",
+      "q": "Wie heisst «Etui» auf Französisch?",
+      "explain": "Etui = la trousse",
+      "ref": "s11",
+      "type": "input",
+      "answer": [
+       "la trousse"
+      ]
+     },
+     {
+      "id": "q12",
+      "q": "Wie heisst «Tisch» auf Französisch?",
+      "explain": "Tisch = la table",
+      "ref": "s12",
+      "type": "input",
+      "answer": [
+       "la table"
+      ]
+     },
+     {
+      "id": "q13",
+      "q": "Wie heisst «Stuhl» auf Französisch?",
+      "explain": "Stuhl = la chaise",
+      "ref": "s13",
+      "type": "input",
+      "answer": [
+       "la chaise"
+      ]
+     },
+     {
+      "id": "q14",
+      "q": "Wie heisst «Schulfach» auf Französisch?",
+      "explain": "Schulfach = la matière scolaire",
+      "ref": "s14",
+      "type": "input",
+      "answer": [
+       "la matière scolaire"
+      ]
+     },
+     {
+      "id": "q15",
+      "q": "Wie heisst «Deutsch» auf Französisch?",
+      "explain": "Deutsch = l'allemand (m)",
+      "ref": "s15",
+      "type": "input",
+      "answer": [
+       "l'allemand (m)"
+      ]
+     },
+     {
+      "id": "q16",
+      "q": "Wie heisst «Französisch» auf Französisch?",
+      "explain": "Französisch = le français",
+      "ref": "s16",
+      "type": "input",
+      "answer": [
+       "le français"
+      ]
+     },
+     {
+      "id": "q17",
+      "q": "Wie heisst «Englisch» auf Französisch?",
+      "explain": "Englisch = l'anglais (m)",
+      "ref": "s17",
+      "type": "input",
+      "answer": [
+       "l'anglais (m)"
+      ]
+     },
+     {
+      "id": "q18",
+      "q": "Wie heisst «Mathematik» auf Französisch?",
+      "explain": "Mathematik = les maths, les mathématiques (f pl)",
+      "ref": "s18",
+      "type": "input",
+      "answer": [
+       "les maths, les mathématiques (f pl)"
+      ]
+     },
+     {
+      "id": "q19",
+      "q": "Wie heisst «die Wochentage» auf Französisch?",
+      "explain": "die Wochentage = les jours (m) de la semaine",
+      "ref": "s19",
+      "type": "input",
+      "answer": [
+       "les jours (m) de la semaine"
+      ]
+     },
+     {
+      "id": "q20",
+      "q": "Wie heisst «Montag» auf Französisch?",
+      "explain": "Montag = lundi",
+      "ref": "s20",
+      "type": "input",
+      "answer": [
+       "lundi"
+      ]
+     },
+     {
+      "id": "q21",
+      "q": "Wie heisst «Dienstag» auf Französisch?",
+      "explain": "Dienstag = mardi",
+      "ref": "s21",
+      "type": "input",
+      "answer": [
+       "mardi"
+      ]
+     },
+     {
+      "id": "q22",
+      "q": "Wie heisst «Mittwoch» auf Französisch?",
+      "explain": "Mittwoch = mercredi",
+      "ref": "s22",
+      "type": "input",
+      "answer": [
+       "mercredi"
+      ]
+     },
+     {
+      "id": "q23",
+      "q": "Wie heisst «Donnerstag» auf Französisch?",
+      "explain": "Donnerstag = jeudi",
+      "ref": "s23",
+      "type": "input",
+      "answer": [
+       "jeudi"
+      ]
+     },
+     {
+      "id": "q24",
+      "q": "Wie heisst «Freitag» auf Französisch?",
+      "explain": "Freitag = vendredi",
+      "ref": "s24",
+      "type": "input",
+      "answer": [
+       "vendredi"
+      ]
+     },
+     {
+      "id": "q25",
+      "q": "Wie heisst «Samstag» auf Französisch?",
+      "explain": "Samstag = samedi",
+      "ref": "s25",
+      "type": "input",
+      "answer": [
+       "samedi"
+      ]
+     },
+     {
+      "id": "q26",
+      "q": "Wie heisst «Sonntag» auf Französisch?",
+      "explain": "Sonntag = dimanche",
+      "ref": "s26",
+      "type": "input",
+      "answer": [
+       "dimanche"
+      ]
+     },
+     {
+      "id": "q27",
+      "q": "Wie heisst «eine Schule» auf Französisch?",
+      "explain": "eine Schule = une école",
+      "ref": "s27",
+      "type": "input",
+      "answer": [
+       "une école"
+      ]
+     },
+     {
+      "id": "q28",
+      "q": "Wie heisst «rechnen» auf Französisch?",
+      "explain": "rechnen = calculer",
+      "ref": "s28",
+      "type": "input",
+      "answer": [
+       "calculer"
+      ]
+     },
+     {
+      "id": "q29",
+      "q": "Wie heisst «zeichnen» auf Französisch?",
+      "explain": "zeichnen = dessiner",
+      "ref": "s29",
+      "type": "input",
+      "answer": [
+       "dessiner"
+      ]
+     },
+     {
+      "id": "q30",
+      "q": "Wie heisst «singen» auf Französisch?",
+      "explain": "singen = chanter",
+      "ref": "s30",
+      "type": "input",
+      "answer": [
+       "chanter"
+      ]
+     },
+     {
+      "id": "q31",
+      "q": "Wie heisst «experimentieren» auf Französisch?",
+      "explain": "experimentieren = expérimenter",
+      "ref": "s31",
+      "type": "input",
+      "answer": [
+       "expérimenter"
+      ]
+     },
+     {
+      "id": "q32",
+      "q": "Wie heisst «Französisch sprechen» auf Französisch?",
+      "explain": "Französisch sprechen = parler français",
+      "ref": "s32",
+      "type": "input",
+      "answer": [
+       "parler français"
+      ]
+     }
+    ]
+   },
+   "theory": {
+    "obj": {
+     "h": "Schulsachen",
+     "text": "Im Französischen steht vor jedem Nomen ein Begleiter: le (männlich) oder la (weiblich). Lerne das Wort immer mit dem Begleiter, zum Beispiel le livre, la règle."
+    },
+    "mat": {
+     "h": "Schulfächer",
+     "text": "l'allemand und l'anglais haben ein l' vor dem Wort, weil sie mit einem Vokal beginnen. Das (m) zeigt, dass das Wort männlich ist. les maths ist die Kurzform von les mathématiques."
+    },
+    "jour": {
+     "h": "Die Wochentage",
+     "text": "Im Französischen schreibt man die Wochentage klein: lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche."
+    },
+    "verb": {
+     "h": "Im Unterricht",
+     "text": "Diese Verben enden auf -er: calculer, dessiner, chanter, expérimenter. So sagt man, was man in der Schule macht."
+    },
+    "rent": {
+     "h": "Schulanfang",
+     "text": "c'est la rentrée = es ist Schulanfang. Mit chouette sagst du toll, mit zut sagst du oje."
+    }
+   }
+  },
+  {
    "id": "kl5-franz-unit2-famille",
    "child": "kl5",
    "subject": "franz",
