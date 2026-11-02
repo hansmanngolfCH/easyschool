@@ -612,6 +612,15 @@ details.card[open] summary{margin-bottom:10px}
 .tchead .tcgame:hover{background:#F1F3F4}
 .tchead .tcgame:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
 .tcpct{flex:none;font:700 .95rem var(--font-d);color:#1A73E8;margin-left:auto}
+/* v3.50 XP-Balken: Google-Farben, Auflade-Effekt */
+.xpg i{background:linear-gradient(90deg,#4285F4 0%,#EA4335 34%,#FBBC04 67%,#34A853 100%);background-size:100% 100%;box-shadow:0 0 12px rgba(66,133,244,.55);animation:xpfill 1.4s cubic-bezier(.2,.8,.2,1) both,xpglow 2.2s ease-in-out 1.4s infinite}
+.xpg i::after{background:linear-gradient(100deg,transparent 0,rgba(255,255,255,.0) 30%,rgba(255,255,255,.75) 50%,rgba(255,255,255,0) 70%,transparent 100%);background-size:60% 100%;background-repeat:no-repeat;background-position:-80% 0;animation:xpsweep 1.8s ease-in-out .3s infinite}
+.xpg i::before{height:40%;background:rgba(255,255,255,.4)}
+.xpg.sm i{box-shadow:0 0 8px rgba(66,133,244,.5)}
+@keyframes xpfill{from{width:0}}
+@keyframes xpsweep{0%{background-position:-80% 0}70%,100%{background-position:190% 0}}
+@keyframes xpglow{0%,100%{box-shadow:0 0 8px rgba(66,133,244,.45)}50%{box-shadow:0 0 18px rgba(251,188,4,.75)}}
+@media (prefers-reduced-motion:reduce){.xpg i,.xpg i::after{animation:none}}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -619,7 +628,7 @@ details.card[open] summary{margin-bottom:10px}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v3.49';
+var APP_VERSION='v3.50';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
