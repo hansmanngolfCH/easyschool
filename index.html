@@ -3,13 +3,14 @@
 <title>EasySchool</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Outfit:wght@500;600;700&family=Patrick+Hand&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap">
 <style>
 :root{
   color-scheme:light;
   --bg:#FFFFFF; --surface:#FFFFFF; --surface2:#F1F3F4; --ink:#202124; --ink2:#5F6368; --line:#DADCE0; --track:#E8EAED;
   --accent:#1A73E8; --accent-c:#E8F0FE; --on-accent:#FFFFFF;
   --good:#188038; --good-bg:#E6F4EA; --warn:#B06000; --warn-bg:#FEF7E0; --bad:#C5221F; --bad-bg:#FCE8E6;
-  --font-d:'Outfit',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --font-d:'Google Sans','Product Sans','Outfit',system-ui,-apple-system,'Segoe UI',sans-serif;
   --font-b:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;
   --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
 }
@@ -712,7 +713,7 @@ details.card[open] summary{margin-bottom:10px}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v3.59';
+var APP_VERSION='v3.60';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
