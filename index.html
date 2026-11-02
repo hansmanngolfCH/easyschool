@@ -547,13 +547,14 @@ details.card[open] summary{margin-bottom:10px}
 
 /* Responsive */
 .brandrow{flex-wrap:nowrap;gap:14px}.brandrow .logo{width:auto!important;height:auto!important;max-width:42vw;flex:none}.brandrow h1{font-size:clamp(1.9rem,8.5vw,2.8rem);line-height:1.05}
-body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right);padding-bottom:env(safe-area-inset-bottom)}
 @media (max-width:480px){.stack{gap:14px}h1{font-size:clamp(1.5rem,7vw,2rem)}.sheet{padding:16px 10px 22px!important}.ptab .pq{width:40%!important}.btn.big{min-height:54px}.ver{margin-top:18px}.avbtn{top:2px}.whoami{flex-wrap:wrap}}
 @media (max-width:360px){body{font-size:15px}.ptab td,.ptab th{font-size:1rem!important}.wl-row{grid-template-columns:1fr 1fr;gap:6px}.wl-m{grid-column:1/-1;justify-content:flex-end}.brandrow .logo{max-width:36vw}}
 @media (min-width:700px){#app{max-width:860px;padding:0 24px}.worlds{grid-template-columns:repeat(2,1fr)}.clist{grid-template-columns:repeat(2,1fr)}.mods2{gap:16px}.sheet{padding:28px 32px 36px!important}.brandrow h1{font-size:3rem}}
 @media (min-width:1100px){#app{max-width:980px}}
 @media (max-width:480px){.brandrow{flex-direction:column;gap:2px;margin-top:18px}.brandrow .logo{width:132px!important;max-width:none}.brandrow h1{font-size:2.1rem}.avbtn{top:-4px}}
 .disc{text-align:center;color:#80868b;font-size:.78rem;margin:-6px 16px 20px}
+@media (max-width:500px){html{font-size:112.5%}.ptab td{padding:12px 6px!important}}
+@media (max-width:400px){.mod b{font-size:.92rem;hyphens:none;white-space:nowrap}.mods2{gap:8px}}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -561,7 +562,7 @@ body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-ri
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v3.38';
+var APP_VERSION='v3.39';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -1055,7 +1056,7 @@ function nextReward(pl){
 function banner(){
   if(!nav.child||(nav.view!=='child'&&nav.view!=='subject'))return '';
   var id=nav.child,pl=plinfo(id),L=level(id,topicsOf(id));
-  return '<div class="banner">'+av(L.lvl,40)+'<div class="bn-m"><div class="bn-row"><span class="bn-lv">'+(myName()?'<b style="color:'+(myCol()>=0?AVCOL[myCol()][1]:'inherit')+'">'+esc(myName())+'</b> · ':'')+'Level '+pl.L+'</span><span class="bn-xp">'+fx(pl.xp)+' XP</span></div><div class="xpg sm" role="img" aria-label="XP"><i style="width:'+Math.max(5,Math.round(pl.pct*100))+'%"></i><u></u></div></div>'+shield(pl.L,40)+'</div>';
+  return '<div class="banner">'+av(L.lvl,40)+'<div class="bn-m"><div class="bn-row"><span class="bn-lv">'+'<b style="color:'+(myCol()>=0?AVCOL[myCol()][1]:'inherit')+'">'+(esc(myName())||'Schüler')+'</b> · '+'Level '+pl.L+'</span><span class="bn-xp">'+fx(pl.xp)+' XP</span></div><div class="xpg sm" role="img" aria-label="XP"><i style="width:'+Math.max(5,Math.round(pl.pct*100))+'%"></i><u></u></div></div>'+shield(pl.L,40)+'</div>';
 }
 function xpbar(pl){return '<div class="xpbar"><div class="bar" role="img" aria-label="XP"><i style="width:'+Math.max(3,Math.round(pl.pct*100))+'%"></i></div><span class="pct">'+pl.xp+' / '+pl.next+' XP</span></div>'}
 
@@ -1067,7 +1068,7 @@ function vHome(){
   }).join('');
   var picker='';
   if(nav.avpick){var cur=myAv(),cc=myCol();picker='<div class="avmodal"><div class="avback" data-act="avclose"></div><div class="avsheet" role="dialog" aria-label="Avatar aussuchen"><div class="avhead"><b>Dein Avatar</b><button class="btn sm" data-act="avclose">Fertig</button></div><label class="lab2" for="avname">Dein Name (freiwillig)</label><input class="inp avname" id="avname" maxlength="14" placeholder="Zum Beispiel Luca" value="'+esc(myName())+'" autocomplete="off"><p class="lab2" style="margin-top:12px">Farbe</p><div class="avcols">'+AVCOL.map(function(c,i){return '<button class="avcol'+(i===cc?' on':'')+'" style="background:linear-gradient(135deg,'+c[0]+','+c[1]+')" data-act="avcol" data-id="'+i+'" aria-label="Farbe '+(i+1)+'"></button>'}).join('')+'</div><p class="lab2" style="margin-top:12px">Bild</p><div class="avgrid">'+Array.apply(null,{length:AV_N}).map(function(_,i){return '<button class="avopt'+(i===cur?' on':'')+'" data-act="avpick" data-id="'+i+'" aria-label="Avatar '+(i+1)+'">'+avPic(i,56)+'</button>'}).join('')+'</div></div></div>'}
-  return '<div class="home"><button class="avbtn" data-act="avopen" aria-label="Avatar aussuchen"><span class="avdot">'+avPic(myAv(),34)+'</span><span class="avn">'+(esc(myName())||'Avatar')+'</span></button><div class="brandrow">'+logoSvg(76)+'<h1>EasySchool</h1></div><p class="ask">Wähle deine Klasse</p><div class="clist">'+cards+'</div>'+picker+'</div>';
+  return '<div class="home"><button class="avbtn" data-act="avopen" aria-label="Avatar aussuchen"><span class="avdot">'+avPic(myAv(),34)+'</span><span class="avn">'+(esc(myName())||'Schüler')+'</span></button><div class="brandrow">'+logoSvg(76)+'<h1>EasySchool</h1></div><p class="ask">Wähle deine Klasse</p><div class="clist">'+cards+'</div>'+picker+'</div>';
 }
 
 function vChild(){
@@ -1142,7 +1143,7 @@ function vLearn(){
   var t=topicById(nav.topicId),st=t.explain[nav.step],last=nav.step===t.explain.length-1,first=nav.step===0;
   var dots='<div class="dotsrow" aria-label="Schritt '+(nav.step+1)+' von '+t.explain.length+'">'+t.explain.map(function(_,i){return '<i class="'+(i<=nav.step?'on':'')+'"></i>'}).join('')+'</div>';
   var say=first?'Los geht\'s. Lies in Ruhe, dann probier es aus.':last?'Letzter Schritt. Danach darfst du üben.':pick(['Schau dir die Bilder genau an, sie verraten viel.','Kleine Schritte, grosse Wirkung.','Das merkst du dir schneller, als du denkst.'],nav.step);
-  var html='<div class="stack explain"><div><p class="eyebrow">'+esc(t.title)+' · Schritt '+(nav.step+1)+' von '+t.explain.length+'</p><h1>'+esc(st.h)+'</h1></div>'+dots+coach(esc(say),first?1:last?3:2)+'<p class="txt">'+rt(st.text)+'</p>'+visuals(st.visuals);
+  var html='<div class="stack explain"><div><p class="eyebrow">'+esc(t.title)+' · Schritt '+(nav.step+1)+' von '+t.explain.length+'</p><h1>'+esc(st.h)+'</h1></div>'+dots+coach(esc(say),first?1:last?3:2)+(st.list?'':'<p class="txt">'+rt(st.text)+'</p>')+visuals(st.visuals);
   if(st.list)html+=vWordList(t);
   var qz=quizFor(st);
   if(qz.length){
