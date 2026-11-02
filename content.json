@@ -78,11 +78,22 @@
       }
      ],
      "try": {
-      "q": "Wie heisst die untere Zahl bei einem Bruch? Schreibe Zähler oder Nenner.",
+      "q": "Ziehe die Wörter an den richtigen Platz.",
+      "drag": {
+       "slots": [
+        "oben im Bruch",
+        "unten im Bruch"
+       ],
+       "chips": [
+        "Nenner",
+        "Zähler"
+       ]
+      },
       "a": [
+       "Zähler",
        "Nenner"
       ],
-      "hint": "Der Nenner nennt die Stücke."
+      "hint": "Der Zähler zählt die Stücke, die du hast."
      }
     },
     {
@@ -116,6 +127,12 @@
      ],
      "try": {
       "q": "Kürze 6/8 so weit wie möglich.",
+      "opts": [
+       "3/4",
+       "2/3",
+       "6/4",
+       "1/4"
+      ],
       "a": [
        "3/4"
       ],
@@ -147,10 +164,16 @@
      ],
      "try": {
       "q": "2/5 = ?/10. Welche Zahl fehlt?",
+      "opts": [
+       "2",
+       "4",
+       "5",
+       "10"
+      ],
       "a": [
        "4"
       ],
-      "hint": "Der Nenner wurde mal 2 genommen, der Zähler auch."
+      "hint": "Der Nenner wurde mal 2 genommen."
      }
     },
     {
@@ -178,10 +201,16 @@
      ],
      "try": {
       "q": "Wandle 1 1/2 in einen unechten Bruch um.",
+      "opts": [
+       "3/2",
+       "2/3",
+       "1/3",
+       "11/2"
+      ],
       "a": [
        "3/2"
       ],
-      "hint": "1·2+1 = 3, der Nenner bleibt 2."
+      "hint": "1·2+1 = 3, der Nenner bleibt."
      }
     },
     {
@@ -254,11 +283,28 @@
       }
      ],
      "try": {
-      "q": "Wie lautet der Hauptnenner von 4 und 6?",
+      "q": "Bringe die Schritte in die richtige Reihenfolge.",
+      "drag": {
+       "slots": [
+        "1. Schritt",
+        "2. Schritt",
+        "3. Schritt",
+        "4. Schritt"
+       ],
+       "chips": [
+        "Zähler rechnen",
+        "Kürzen",
+        "Hauptnenner suchen",
+        "Brüche erweitern"
+       ]
+      },
       "a": [
-       "12"
+       "Hauptnenner suchen",
+       "Brüche erweitern",
+       "Zähler rechnen",
+       "Kürzen"
       ],
-      "hint": "Die kleinste Zahl, in der 4 und 6 aufgehen."
+      "hint": "Ohne gleichen Nenner geht Plus und Minus nicht."
      }
     },
     {
@@ -319,9 +365,23 @@
       }
      ],
      "try": {
-      "q": "Was rechnest du bei 5/6 · (2/3 − 3/10) zuerst? Schreibe Klammer oder Mal.",
+      "q": "Ziehe in die richtige Reihenfolge: Was rechnest du zuerst?",
+      "drag": {
+       "slots": [
+        "zuerst",
+        "dann",
+        "zuletzt"
+       ],
+       "chips": [
+        "Plus und Minus",
+        "Klammer",
+        "Mal und Geteilt"
+       ]
+      },
       "a": [
-       "Klammer"
+       "Klammer",
+       "Mal und Geteilt",
+       "Plus und Minus"
       ],
       "hint": "Klammer geht immer zuerst."
      }
@@ -351,10 +411,34 @@
         ]
        ],
        "num": true
+      },
+      {
+       "type": "flip",
+       "nospk": true,
+       "items": [
+        [
+         "2/3",
+         "3/2"
+        ],
+        [
+         "5/4",
+         "4/5"
+        ],
+        [
+         "7",
+         "1/7"
+        ]
+       ]
       }
      ],
      "try": {
       "q": "Wie lautet der Kehrbruch von 15/12?",
+      "opts": [
+       "12/15",
+       "15/12",
+       "−15/12",
+       "27/12"
+      ],
       "a": [
        "12/15"
       ],
@@ -390,7 +474,13 @@
       }
      ],
      "try": {
-      "q": "Wie viele Viertel passen in 1/2? (Zahl)",
+      "q": "Wie viele Viertel passen in 1/2?",
+      "opts": [
+       "1",
+       "2",
+       "4",
+       "1/4"
+      ],
       "a": [
        "2"
       ],
@@ -432,10 +522,16 @@
      ],
      "try": {
       "q": "Wie lautet der Hauptnenner von 4 und 3?",
+      "opts": [
+       "7",
+       "12",
+       "1",
+       "6"
+      ],
       "a": [
        "12"
       ],
-      "hint": "Suche die kleinste Zahl, in der 4 und 3 aufgehen."
+      "hint": "Die kleinste Zahl, in der 4 und 3 aufgehen."
      }
     },
     {
@@ -522,6 +618,1051 @@
    ],
    "cards": [
     {
+     "id": "m1",
+     "q": "Bei 3/5: Welche Zahl ist der Nenner?",
+     "a": "5",
+     "lvl": 1,
+     "th": "order",
+     "opts": [
+      "3",
+      "5",
+      "8",
+      "2"
+     ],
+     "steps": [
+      [
+       "5",
+       "Zähler oben, Nenner unten."
+      ]
+     ],
+     "hints": [
+      "Der Nenner steht unten.",
+      "Zähler oben, Nenner unten."
+     ]
+    },
+    {
+     "id": "m2",
+     "q": "Welcher Bruch zeigt 3 von 8 Stücken?",
+     "a": "3/8",
+     "lvl": 1,
+     "th": "order",
+     "opts": [
+      "3/8",
+      "8/3",
+      "3/5",
+      "5/8"
+     ],
+     "steps": [
+      [
+       "3/8",
+       "Oben 3, unten 8."
+      ]
+     ],
+     "hints": [
+      "Zähler = Stücke, die du hast.",
+      "Oben 3, unten 8."
+     ]
+    },
+    {
+     "id": "m3",
+     "q": "Welcher Bruch ist gleich gross wie 4/8?",
+     "a": "1/2",
+     "lvl": 1,
+     "th": "order",
+     "opts": [
+      "1/2",
+      "2/3",
+      "1/4",
+      "4/4"
+     ],
+     "steps": [
+      [
+       "1/2",
+       "4/8 : 4 oben und unten."
+      ]
+     ],
+     "hints": [
+      "Kürze mit 4.",
+      "4/8 : 4 oben und unten."
+     ]
+    },
+    {
+     "id": "m4",
+     "q": "Was ergibt 2/3, wenn du mit 2 erweiterst?",
+     "a": "4/6",
+     "lvl": 1,
+     "th": "order",
+     "opts": [
+      "4/6",
+      "2/6",
+      "4/3",
+      "3/5"
+     ],
+     "steps": [
+      [
+       "4/6",
+       "2·2 = 4 und 3·2 = 6."
+      ]
+     ],
+     "hints": [
+      "Zähler und Nenner mal 2.",
+      "2·2 = 4 und 3·2 = 6."
+     ]
+    },
+    {
+     "id": "m5",
+     "q": "Wandle 1 1/2 in einen unechten Bruch um.",
+     "a": "3/2",
+     "lvl": 1,
+     "th": "order",
+     "opts": [
+      "3/2",
+      "2/3",
+      "1/3",
+      "11/2"
+     ],
+     "steps": [
+      [
+       "3/2",
+       "1·2+1 = 3, Nenner bleibt 2."
+      ]
+     ],
+     "hints": [
+      "Ganze mal Nenner plus Zähler.",
+      "1·2+1 = 3, Nenner bleibt 2."
+     ]
+    },
+    {
+     "id": "m6",
+     "q": "Wie lautet der Kehrbruch von 3/7?",
+     "a": "7/3",
+     "lvl": 1,
+     "th": "order",
+     "opts": [
+      "7/3",
+      "3/7",
+      "−3/7",
+      "10/7"
+     ],
+     "steps": [
+      [
+       "7/3",
+       "Tausche oben und unten."
+      ]
+     ],
+     "hints": [
+      "Zähler und Nenner tauschen.",
+      "Tausche oben und unten."
+     ]
+    },
+    {
+     "id": "m7",
+     "q": "Wie lautet der Hauptnenner von 2 und 3?",
+     "a": "6",
+     "lvl": 1,
+     "th": "order",
+     "opts": [
+      "5",
+      "6",
+      "12",
+      "3"
+     ],
+     "steps": [
+      [
+       "6",
+       "In 6 passen 2 und 3."
+      ]
+     ],
+     "hints": [
+      "Die kleinste Zahl, in der beide aufgehen.",
+      "In 6 passen 2 und 3."
+     ]
+    },
+    {
+     "id": "m8",
+     "q": "Rechne: 2/7 + 3/7 =",
+     "a": "5/7",
+     "lvl": 1,
+     "th": "order",
+     "opts": [
+      "5/7",
+      "5/14",
+      "6/7",
+      "1/7"
+     ],
+     "steps": [
+      [
+       "5/7",
+       "2 + 3 = 5, Nenner bleibt 7."
+      ]
+     ],
+     "hints": [
+      "Gleicher Nenner: nur Zähler zusammenzählen.",
+      "2 + 3 = 5, Nenner bleibt 7."
+     ]
+    },
+    {
+     "id": "m9",
+     "q": "Was rechnest du bei 1/2 + 3/4 · 2 zuerst?",
+     "a": "Mal",
+     "lvl": 1,
+     "th": "order",
+     "opts": [
+      "Mal",
+      "Plus",
+      "Egal"
+     ],
+     "steps": [
+      [
+       "Mal",
+       "Mal kommt vor Plus."
+      ]
+     ],
+     "hints": [
+      "Punkt vor Strich gilt auch bei Brüchen.",
+      "Mal kommt vor Plus."
+     ]
+    },
+    {
+     "id": "m10",
+     "q": "Wie teilst du durch einen Bruch?",
+     "a": "Mit dem Kehrbruch malnehmen",
+     "lvl": 1,
+     "th": "order",
+     "opts": [
+      "Mit dem Kehrbruch malnehmen",
+      "Zähler abziehen",
+      "Nenner addieren",
+      "Gar nicht kürzen"
+     ],
+     "steps": [
+      [
+       "Mit dem Kehrbruch malnehmen",
+       "Geteilt = mal Kehrbruch."
+      ]
+     ],
+     "hints": [
+      "Denk an den Kehrbruch.",
+      "Geteilt = mal Kehrbruch."
+     ]
+    },
+    {
+     "id": "c3",
+     "q": "Wie teilst du durch einen Bruch?",
+     "a": "Mit dem Kehrbruch malnehmen, zum Beispiel 5/6 : 15/12 = 5/6 · 12/15.",
+     "hints": [
+      "Denk an den Schritt «Verstehen»."
+     ],
+     "th": "div",
+     "lvl": 1
+    },
+    {
+     "id": "c4",
+     "q": "Welche Reihenfolge gilt bei Aufgaben mit Brüchen?",
+     "a": "Zuerst die Klammer, dann Mal und Geteilt, zuletzt Plus und Minus.",
+     "hints": [
+      "Denk an den Schritt «Verstehen»."
+     ],
+     "th": "order",
+     "lvl": 1
+    },
+    {
+     "id": "m11",
+     "q": "Kürze so weit wie möglich: 6/8 =",
+     "a": "3/4",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "3/4"
+     ],
+     "steps": [
+      [
+       "6/8 = 3/4",
+       "durch 2 geteilt"
+      ]
+     ],
+     "hints": [
+      "Welche Zahl geht in Zähler und Nenner auf?",
+      "Teile beide durch 2."
+     ]
+    },
+    {
+     "id": "m12",
+     "q": "Kürze so weit wie möglich: 12/18 =",
+     "a": "2/3",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "2/3"
+     ],
+     "steps": [
+      [
+       "12/18 = 2/3",
+       "durch 6 geteilt"
+      ]
+     ],
+     "hints": [
+      "Welche Zahl geht in Zähler und Nenner auf?",
+      "Teile beide durch 6."
+     ]
+    },
+    {
+     "id": "m13",
+     "q": "Kürze so weit wie möglich: 15/20 =",
+     "a": "3/4",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "3/4"
+     ],
+     "steps": [
+      [
+       "15/20 = 3/4",
+       "durch 5 geteilt"
+      ]
+     ],
+     "hints": [
+      "Welche Zahl geht in Zähler und Nenner auf?",
+      "Teile beide durch 5."
+     ]
+    },
+    {
+     "id": "m14",
+     "q": "Kürze so weit wie möglich: 9/12 =",
+     "a": "3/4",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "3/4"
+     ],
+     "steps": [
+      [
+       "9/12 = 3/4",
+       "durch 3 geteilt"
+      ]
+     ],
+     "hints": [
+      "Welche Zahl geht in Zähler und Nenner auf?",
+      "Teile beide durch 3."
+     ]
+    },
+    {
+     "id": "m15",
+     "q": "Kürze so weit wie möglich: 10/25 =",
+     "a": "2/5",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "2/5"
+     ],
+     "steps": [
+      [
+       "10/25 = 2/5",
+       "durch 5 geteilt"
+      ]
+     ],
+     "hints": [
+      "Welche Zahl geht in Zähler und Nenner auf?",
+      "Teile beide durch 5."
+     ]
+    },
+    {
+     "id": "m16",
+     "q": "Kürze so weit wie möglich: 14/21 =",
+     "a": "2/3",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "2/3"
+     ],
+     "steps": [
+      [
+       "14/21 = 2/3",
+       "durch 7 geteilt"
+      ]
+     ],
+     "hints": [
+      "Welche Zahl geht in Zähler und Nenner auf?",
+      "Teile beide durch 7."
+     ]
+    },
+    {
+     "id": "m17",
+     "q": "Erweitere 2/3 mit 4:",
+     "a": "2/3",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "2/3"
+     ],
+     "steps": [
+      [
+       "2/3 = 8/12",
+       "beide mal 4"
+      ]
+     ],
+     "hints": [
+      "Zähler und Nenner mit derselben Zahl malnehmen.",
+      "Beide mal 4."
+     ]
+    },
+    {
+     "id": "m18",
+     "q": "Erweitere 3/5 mit 3:",
+     "a": "3/5",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "3/5"
+     ],
+     "steps": [
+      [
+       "3/5 = 9/15",
+       "beide mal 3"
+      ]
+     ],
+     "hints": [
+      "Zähler und Nenner mit derselben Zahl malnehmen.",
+      "Beide mal 3."
+     ]
+    },
+    {
+     "id": "m19",
+     "q": "Erweitere 5/6 mit 2:",
+     "a": "5/6",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "5/6"
+     ],
+     "steps": [
+      [
+       "5/6 = 10/12",
+       "beide mal 2"
+      ]
+     ],
+     "hints": [
+      "Zähler und Nenner mit derselben Zahl malnehmen.",
+      "Beide mal 2."
+     ]
+    },
+    {
+     "id": "m20",
+     "q": "Wandle um in einen unechten Bruch: 2 1/3 =",
+     "a": "7/3",
+     "lvl": 2,
+     "th": "gem",
+     "ans": [
+      "7/3"
+     ],
+     "steps": [
+      [
+       "(2·3+1)/3 = 7/3",
+       "ganze Zahl mal Nenner plus Zähler"
+      ]
+     ],
+     "hints": [
+      "Ganze mal Nenner plus Zähler.",
+      "2·3+1 gibt den Zähler."
+     ]
+    },
+    {
+     "id": "m21",
+     "q": "Wandle um in einen unechten Bruch: 3 2/5 =",
+     "a": "17/5",
+     "lvl": 2,
+     "th": "gem",
+     "ans": [
+      "17/5"
+     ],
+     "steps": [
+      [
+       "(3·5+2)/5 = 17/5",
+       "ganze Zahl mal Nenner plus Zähler"
+      ]
+     ],
+     "hints": [
+      "Ganze mal Nenner plus Zähler.",
+      "3·5+2 gibt den Zähler."
+     ]
+    },
+    {
+     "id": "m22",
+     "q": "Wandle um in einen unechten Bruch: 1 3/4 =",
+     "a": "7/4",
+     "lvl": 2,
+     "th": "gem",
+     "ans": [
+      "7/4"
+     ],
+     "steps": [
+      [
+       "(1·4+3)/4 = 7/4",
+       "ganze Zahl mal Nenner plus Zähler"
+      ]
+     ],
+     "hints": [
+      "Ganze mal Nenner plus Zähler.",
+      "1·4+3 gibt den Zähler."
+     ]
+    },
+    {
+     "id": "m23",
+     "q": "3/8 + 2/8 =",
+     "a": "5/8",
+     "lvl": 2,
+     "th": "hn",
+     "ans": [
+      "5/8"
+     ],
+     "steps": [
+      [
+       "(3 + 2)/8 = 5/8",
+       "nur die Zähler rechnen"
+      ],
+      [
+       "= 5/8",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Der Nenner bleibt gleich.",
+      "Rechne nur die Zähler und kürze."
+     ]
+    },
+    {
+     "id": "m24",
+     "q": "5/9 + 1/9 =",
+     "a": "2/3",
+     "lvl": 2,
+     "th": "hn",
+     "ans": [
+      "2/3"
+     ],
+     "steps": [
+      [
+       "(5 + 1)/9 = 2/3",
+       "nur die Zähler rechnen"
+      ],
+      [
+       "= 2/3",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Der Nenner bleibt gleich.",
+      "Rechne nur die Zähler und kürze."
+     ]
+    },
+    {
+     "id": "m25",
+     "q": "7/10 − 3/10 =",
+     "a": "2/5",
+     "lvl": 2,
+     "th": "hn",
+     "ans": [
+      "2/5"
+     ],
+     "steps": [
+      [
+       "(7 − 3)/10 = 2/5",
+       "nur die Zähler rechnen"
+      ],
+      [
+       "= 2/5",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Der Nenner bleibt gleich.",
+      "Rechne nur die Zähler und kürze."
+     ]
+    },
+    {
+     "id": "m26",
+     "q": "8/11 − 5/11 =",
+     "a": "3/11",
+     "lvl": 2,
+     "th": "hn",
+     "ans": [
+      "3/11"
+     ],
+     "steps": [
+      [
+       "(8 − 5)/11 = 3/11",
+       "nur die Zähler rechnen"
+      ],
+      [
+       "= 3/11",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Der Nenner bleibt gleich.",
+      "Rechne nur die Zähler und kürze."
+     ]
+    },
+    {
+     "id": "m27",
+     "q": "1/2 · 2/3 =",
+     "a": "1/3",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "1/3"
+     ],
+     "steps": [
+      [
+       "2/6",
+       "Zähler mal Zähler, Nenner mal Nenner"
+      ],
+      [
+       "= 1/3",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Oben mal oben, unten mal unten.",
+      "Danach kürzen."
+     ]
+    },
+    {
+     "id": "m28",
+     "q": "3/4 · 2/9 =",
+     "a": "1/6",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "1/6"
+     ],
+     "steps": [
+      [
+       "6/36",
+       "Zähler mal Zähler, Nenner mal Nenner"
+      ],
+      [
+       "= 1/6",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Oben mal oben, unten mal unten.",
+      "Danach kürzen."
+     ]
+    },
+    {
+     "id": "m29",
+     "q": "2/5 · 5/6 =",
+     "a": "1/3",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "1/3"
+     ],
+     "steps": [
+      [
+       "10/30",
+       "Zähler mal Zähler, Nenner mal Nenner"
+      ],
+      [
+       "= 1/3",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Oben mal oben, unten mal unten.",
+      "Danach kürzen."
+     ]
+    },
+    {
+     "id": "m30",
+     "q": "3/8 · 4/5 =",
+     "a": "3/10",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "3/10"
+     ],
+     "steps": [
+      [
+       "12/40",
+       "Zähler mal Zähler, Nenner mal Nenner"
+      ],
+      [
+       "= 3/10",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Oben mal oben, unten mal unten.",
+      "Danach kürzen."
+     ]
+    },
+    {
+     "id": "m31",
+     "q": "1/2 : 3/4 =",
+     "a": "2/3",
+     "lvl": 2,
+     "th": "div",
+     "ans": [
+      "2/3"
+     ],
+     "steps": [
+      [
+       "1/2 · 4/3",
+       "Kehrbruch"
+      ],
+      [
+       "= 2/3",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Geteilt = mal Kehrbruch.",
+      "Der Kehrbruch von 3/4 ist 4/3."
+     ]
+    },
+    {
+     "id": "m32",
+     "q": "2/3 : 4/5 =",
+     "a": "5/6",
+     "lvl": 2,
+     "th": "div",
+     "ans": [
+      "5/6"
+     ],
+     "steps": [
+      [
+       "2/3 · 5/4",
+       "Kehrbruch"
+      ],
+      [
+       "= 5/6",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Geteilt = mal Kehrbruch.",
+      "Der Kehrbruch von 4/5 ist 5/4."
+     ]
+    },
+    {
+     "id": "m33",
+     "q": "3/4 : 3/8 =",
+     "a": "2",
+     "lvl": 2,
+     "th": "div",
+     "ans": [
+      "2"
+     ],
+     "steps": [
+      [
+       "3/4 · 8/3",
+       "Kehrbruch"
+      ],
+      [
+       "= 2",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Geteilt = mal Kehrbruch.",
+      "Der Kehrbruch von 3/8 ist 8/3."
+     ]
+    },
+    {
+     "id": "m34",
+     "q": "1/2 + 1/3 =",
+     "a": "5/6",
+     "lvl": 3,
+     "th": "hn",
+     "ans": [
+      "5/6"
+     ],
+     "steps": [
+      [
+       "Hauptnenner 6",
+       "2 und 3 passen in 6"
+      ],
+      [
+       "3/6 + 2/6 = 5/6",
+       "erweitern, dann Zähler rechnen"
+      ],
+      [
+       "= 5/6",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Zuerst den Hauptnenner suchen.",
+      "Der Hauptnenner ist 6.",
+      "Beide Brüche erweitern, dann Zähler rechnen."
+     ]
+    },
+    {
+     "id": "m35",
+     "q": "3/4 + 1/6 =",
+     "a": "11/12",
+     "lvl": 3,
+     "th": "hn",
+     "ans": [
+      "11/12"
+     ],
+     "steps": [
+      [
+       "Hauptnenner 12",
+       "4 und 6 passen in 12"
+      ],
+      [
+       "9/12 + 2/12 = 11/12",
+       "erweitern, dann Zähler rechnen"
+      ],
+      [
+       "= 11/12",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Zuerst den Hauptnenner suchen.",
+      "Der Hauptnenner ist 12.",
+      "Beide Brüche erweitern, dann Zähler rechnen."
+     ]
+    },
+    {
+     "id": "m36",
+     "q": "2/3 − 1/4 =",
+     "a": "5/12",
+     "lvl": 3,
+     "th": "hn",
+     "ans": [
+      "5/12"
+     ],
+     "steps": [
+      [
+       "Hauptnenner 12",
+       "3 und 4 passen in 12"
+      ],
+      [
+       "8/12 − 3/12 = 5/12",
+       "erweitern, dann Zähler rechnen"
+      ],
+      [
+       "= 5/12",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Zuerst den Hauptnenner suchen.",
+      "Der Hauptnenner ist 12.",
+      "Beide Brüche erweitern, dann Zähler rechnen."
+     ]
+    },
+    {
+     "id": "m37",
+     "q": "5/6 − 1/4 =",
+     "a": "7/12",
+     "lvl": 3,
+     "th": "hn",
+     "ans": [
+      "7/12"
+     ],
+     "steps": [
+      [
+       "Hauptnenner 12",
+       "6 und 4 passen in 12"
+      ],
+      [
+       "10/12 − 3/12 = 7/12",
+       "erweitern, dann Zähler rechnen"
+      ],
+      [
+       "= 7/12",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Zuerst den Hauptnenner suchen.",
+      "Der Hauptnenner ist 12.",
+      "Beide Brüche erweitern, dann Zähler rechnen."
+     ]
+    },
+    {
+     "id": "m38",
+     "q": "3/5 + 1/2 =",
+     "a": "11/10",
+     "lvl": 3,
+     "th": "hn",
+     "ans": [
+      "11/10",
+      "1 1/10"
+     ],
+     "steps": [
+      [
+       "Hauptnenner 10",
+       "5 und 2 passen in 10"
+      ],
+      [
+       "6/10 + 5/10 = 11/10",
+       "erweitern, dann Zähler rechnen"
+      ],
+      [
+       "= 11/10",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Zuerst den Hauptnenner suchen.",
+      "Der Hauptnenner ist 10.",
+      "Beide Brüche erweitern, dann Zähler rechnen."
+     ]
+    },
+    {
+     "id": "m39",
+     "q": "7/8 − 3/4 =",
+     "a": "1/8",
+     "lvl": 3,
+     "th": "hn",
+     "ans": [
+      "1/8"
+     ],
+     "steps": [
+      [
+       "Hauptnenner 8",
+       "8 und 4 passen in 8"
+      ],
+      [
+       "7/8 − 6/8 = 1/8",
+       "erweitern, dann Zähler rechnen"
+      ],
+      [
+       "= 1/8",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Zuerst den Hauptnenner suchen.",
+      "Der Hauptnenner ist 8.",
+      "Beide Brüche erweitern, dann Zähler rechnen."
+     ]
+    },
+    {
+     "id": "m40",
+     "q": "1 1/2 · 1/4 =",
+     "a": "3/8",
+     "lvl": 3,
+     "th": "gem",
+     "ans": [
+      "3/8"
+     ],
+     "steps": [
+      [
+       "1 1/2 = 3/2",
+       "gemischte Zahl umwandeln"
+      ],
+      [
+       "3/2 · 1/4",
+       "rechnen"
+      ],
+      [
+       "= 3/8",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Wandle die gemischte Zahl zuerst um.",
+      "Bei : mal den Kehrbruch nehmen.",
+      "Am Schluss kürzen."
+     ]
+    },
+    {
+     "id": "m41",
+     "q": "2 1/3 · 3/7 =",
+     "a": "1",
+     "lvl": 3,
+     "th": "gem",
+     "ans": [
+      "1"
+     ],
+     "steps": [
+      [
+       "2 1/3 = 7/3",
+       "gemischte Zahl umwandeln"
+      ],
+      [
+       "7/3 · 3/7",
+       "rechnen"
+      ],
+      [
+       "= 1",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Wandle die gemischte Zahl zuerst um.",
+      "Bei : mal den Kehrbruch nehmen.",
+      "Am Schluss kürzen."
+     ]
+    },
+    {
+     "id": "m42",
+     "q": "1 3/4 : 2/5 =",
+     "a": "35/8",
+     "lvl": 3,
+     "th": "gem",
+     "ans": [
+      "35/8",
+      "4 3/8"
+     ],
+     "steps": [
+      [
+       "1 3/4 = 7/4",
+       "gemischte Zahl umwandeln"
+      ],
+      [
+       "7/4 : 2/5 = 7/4 · 5/2",
+       "rechnen"
+      ],
+      [
+       "= 35/8",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Wandle die gemischte Zahl zuerst um.",
+      "Bei : mal den Kehrbruch nehmen.",
+      "Am Schluss kürzen."
+     ]
+    },
+    {
+     "id": "m43",
+     "q": "3 1/2 : 7/4 =",
+     "a": "2",
+     "lvl": 3,
+     "th": "gem",
+     "ans": [
+      "2"
+     ],
+     "steps": [
+      [
+       "3 1/2 = 7/2",
+       "gemischte Zahl umwandeln"
+      ],
+      [
+       "7/2 : 7/4 = 7/2 · 4/7",
+       "rechnen"
+      ],
+      [
+       "= 2",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Wandle die gemischte Zahl zuerst um.",
+      "Bei : mal den Kehrbruch nehmen.",
+      "Am Schluss kürzen."
+     ]
+    },
+    {
      "id": "c1",
      "q": "3/4 − 5/6 : 15/12 =",
      "a": "1/12",
@@ -545,7 +1686,8 @@
       "Geteilt durch einen Bruch = mal den Kehrbruch (12/15). Danach kürzen, das gibt ein Zwischenergebnis mit Nenner 3.",
       "Jetzt 3/4 minus dein Zwischenergebnis. Welcher Hauptnenner passt zu 4 und 3?"
      ],
-     "th": "order"
+     "th": "order",
+     "lvl": 4
     },
     {
      "id": "c2",
@@ -571,25 +1713,8 @@
       "Mit Hauptnenner 30 ergibt die Klammer einen Bruch mit Zähler 11.",
       "Multipliziere mit 5/6: Zähler mal Zähler, Nenner mal Nenner, dann mit 5 kürzen."
      ],
-     "th": "order"
-    },
-    {
-     "id": "c3",
-     "q": "Wie teilst du durch einen Bruch?",
-     "a": "Mit dem Kehrbruch malnehmen, zum Beispiel 5/6 : 15/12 = 5/6 · 12/15.",
-     "hints": [
-      "Denk an den Schritt «Verstehen»."
-     ],
-     "th": "div"
-    },
-    {
-     "id": "c4",
-     "q": "Welche Reihenfolge gilt bei Aufgaben mit Brüchen?",
-     "a": "Zuerst die Klammer, dann Mal und Geteilt, zuletzt Plus und Minus.",
-     "hints": [
-      "Denk an den Schritt «Verstehen»."
-     ],
-     "th": "order"
+     "th": "order",
+     "lvl": 4
     },
     {
      "id": "c5",
@@ -598,7 +1723,8 @@
      "hints": [
       "Beim Kehrbruch tauschen Zähler und Nenner die Plätze."
      ],
-     "th": "div"
+     "th": "div",
+     "lvl": 4
     },
     {
      "id": "c6",
@@ -608,7 +1734,8 @@
       "Suche eine Zahl, in der 4 und 6 beide aufgehen.",
       "Sie liegt zwischen 10 und 14."
      ],
-     "th": "hn"
+     "th": "hn",
+     "lvl": 4
     },
     {
      "id": "c7",
@@ -618,7 +1745,8 @@
       "Suche eine Zahl, in der 3 und 10 beide aufgehen.",
       "Sie ist das Dreifache von 10."
      ],
-     "th": "hn"
+     "th": "hn",
+     "lvl": 4
     },
     {
      "id": "c8",
@@ -639,7 +1767,8 @@
       "Tausche Zähler und Nenner von 15/12 und rechne mal.",
       "Zähler mal Zähler, Nenner mal Nenner. Dann mit der grössten möglichen Zahl kürzen."
      ],
-     "th": "div"
+     "th": "div",
+     "lvl": 4
     },
     {
      "id": "c9",
@@ -672,7 +1801,8 @@
        "filled": 8
       }
      ],
-     "th": "hn"
+     "th": "hn",
+     "lvl": 4
     },
     {
      "id": "c10",
@@ -693,7 +1823,8 @@
       "Erweitere beide Brüche auf Dreissigstel.",
       "Dann nur die Zähler abziehen."
      ],
-     "th": "hn"
+     "th": "hn",
+     "lvl": 4
     },
     {
      "id": "c11",
@@ -715,7 +1846,8 @@
       "Das Zwischenergebnis hat den Nenner 3. Der Hauptnenner mit 6 ist 6."
      ],
      "gen": "A",
-     "th": "order"
+     "th": "order",
+     "lvl": 4
     },
     {
      "id": "c12",
@@ -737,7 +1869,8 @@
       "Das Ergebnis der Klammer lässt sich noch kürzen. Dann mal 3/4."
      ],
      "gen": "B",
-     "th": "order"
+     "th": "order",
+     "lvl": 4
     },
     {
      "id": "c13",
@@ -759,7 +1892,8 @@
       "Das Zwischenergebnis ist ein halb. Welcher Hauptnenner passt zu 8 und 2?"
      ],
      "gen": "A",
-     "th": "order"
+     "th": "order",
+     "lvl": 4
     },
     {
      "id": "c14",
@@ -781,7 +1915,8 @@
       "Das Ergebnis der Klammer mal 2/5 rechnen und mit 2 kürzen."
      ],
      "gen": "B",
-     "th": "order"
+     "th": "order",
+     "lvl": 4
     },
     {
      "id": "c15",
@@ -809,7 +1944,8 @@
       "3 1/9: 3 mal 9 plus 1 gibt den Zähler. Der Nenner bleibt 9.",
       "Geteilt durch 4 heisst: mal 1/4. Danach mit 4 kürzen."
      ],
-     "th": "gem"
+     "th": "gem",
+     "lvl": 4
     },
     {
      "id": "c16",
@@ -843,7 +1979,8 @@
       "5/4 · 2/25 ergibt nach dem Kürzen ein Zehntel.",
       "Dann 1/10 plus 13/10. Das Ergebnis darfst du als 7/5 oder 1 2/5 schreiben."
      ],
-     "th": "gem"
+     "th": "gem",
+     "lvl": 4
     },
     {
      "id": "c17",
@@ -876,7 +2013,8 @@
       "Oben: 3/4 + 5/8 mit Hauptnenner 8. Unten: 7/12 − 1/6 mit Hauptnenner 12.",
       "Du erhältst 11/8 durch 5/12. Mal den Kehrbruch rechnen und mit 4 kürzen."
      ],
-     "th": "div"
+     "th": "div",
+     "lvl": 4
     },
     {
      "id": "c18",
@@ -904,7 +2042,8 @@
       "2 mal 3 plus 1 gibt den Zähler. Der Nenner bleibt 3.",
       "Geteilt durch 5 heisst: mal 1/5. Danach kürzen."
      ],
-     "th": "gem"
+     "th": "gem",
+     "lvl": 4
     },
     {
      "id": "c19",
@@ -932,7 +2071,8 @@
       "4 mal 5 plus 2 gibt den Zähler. Der Nenner bleibt 5.",
       "Geteilt durch 6 heisst: mal 1/6. Danach kürzen."
      ],
-     "th": "gem"
+     "th": "gem",
+     "lvl": 4
     },
     {
      "id": "c20",
@@ -960,7 +2100,8 @@
       "1 mal 4 plus 3 gibt den Zähler. Der Nenner bleibt 4.",
       "Geteilt durch 7 heisst: mal 1/7. Danach kürzen."
      ],
-     "th": "gem"
+     "th": "gem",
+     "lvl": 4
     },
     {
      "id": "c21",
@@ -994,7 +2135,8 @@
       "Geteilt durch einen Bruch: mal den Kehrbruch. Dann kürzen.",
       "Zum Schluss plus: Hauptnenner suchen. Das Ergebnis darf als Bruch oder gemischte Zahl stehen."
      ],
-     "th": "gem"
+     "th": "gem",
+     "lvl": 4
     },
     {
      "id": "c22",
@@ -1028,7 +2170,8 @@
       "Geteilt durch einen Bruch: mal den Kehrbruch. Dann kürzen.",
       "Zum Schluss plus: Hauptnenner suchen. Das Ergebnis darf als Bruch oder gemischte Zahl stehen."
      ],
-     "th": "gem"
+     "th": "gem",
+     "lvl": 4
     },
     {
      "id": "c23",
@@ -1061,7 +2204,8 @@
       "Geteilt durch einen Bruch: mal den Kehrbruch. Dann kürzen.",
       "Zum Schluss plus: Hauptnenner suchen. Das Ergebnis darf als Bruch oder gemischte Zahl stehen."
      ],
-     "th": "gem"
+     "th": "gem",
+     "lvl": 4
     },
     {
      "id": "c24",
@@ -1094,7 +2238,8 @@
       "Suche bei jeder Klammer den Hauptnenner.",
       "Dann teilen: mal den Kehrbruch. Zum Schluss kürzen."
      ],
-     "th": "div"
+     "th": "div",
+     "lvl": 4
     },
     {
      "id": "c25",
@@ -1127,7 +2272,8 @@
       "Suche bei jeder Klammer den Hauptnenner.",
       "Dann teilen: mal den Kehrbruch. Zum Schluss kürzen."
      ],
-     "th": "div"
+     "th": "div",
+     "lvl": 4
     },
     {
      "id": "c26",
@@ -1159,14 +2305,107 @@
       "Suche bei jeder Klammer den Hauptnenner.",
       "Dann teilen: mal den Kehrbruch. Zum Schluss kürzen."
      ],
-     "th": "div"
+     "th": "div",
+     "lvl": 4
     }
    ],
    "exam": {
     "minutes": 30,
     "questions": [
      {
-      "id": "q1",
+      "id": "e1",
+      "q": "Kürze: 12/16 = (so weit wie möglich kürzen)",
+      "explain": "Durch 4 kürzen.",
+      "type": "input",
+      "answer": [
+       "3/4"
+      ]
+     },
+     {
+      "id": "e2",
+      "q": "Wandle um: 2 1/4 = (so weit wie möglich kürzen)",
+      "explain": "2·4+1 = 9, Nenner 4.",
+      "type": "input",
+      "answer": [
+       "9/4",
+       "2 1/4"
+      ]
+     },
+     {
+      "id": "e3",
+      "q": "3/7 + 2/7 = (so weit wie möglich kürzen)",
+      "explain": "Gleicher Nenner, Zähler addieren.",
+      "type": "input",
+      "answer": [
+       "5/7"
+      ]
+     },
+     {
+      "id": "e4",
+      "q": "5/8 − 1/8 = (so weit wie möglich kürzen)",
+      "explain": "4/8 gekürzt.",
+      "type": "input",
+      "answer": [
+       "1/2"
+      ]
+     },
+     {
+      "id": "e5",
+      "q": "2/3 · 3/5 = (so weit wie möglich kürzen)",
+      "explain": "6/15 gekürzt.",
+      "type": "input",
+      "answer": [
+       "2/5"
+      ]
+     },
+     {
+      "id": "e6",
+      "q": "3/4 : 1/2 = (so weit wie möglich kürzen)",
+      "explain": "Mal Kehrbruch 2/1.",
+      "type": "input",
+      "answer": [
+       "3/2",
+       "1 1/2"
+      ]
+     },
+     {
+      "id": "e7",
+      "q": "1/2 + 1/3 = (so weit wie möglich kürzen)",
+      "explain": "Hauptnenner 6.",
+      "type": "input",
+      "answer": [
+       "5/6"
+      ]
+     },
+     {
+      "id": "e8",
+      "q": "3/4 − 1/6 = (so weit wie möglich kürzen)",
+      "explain": "Hauptnenner 12.",
+      "type": "input",
+      "answer": [
+       "7/12"
+      ]
+     },
+     {
+      "id": "e9",
+      "q": "1 1/2 · 2/3 = (so weit wie möglich kürzen)",
+      "explain": "3/2 · 2/3 = 1.",
+      "type": "input",
+      "answer": [
+       "1"
+      ]
+     },
+     {
+      "id": "e10",
+      "q": "2 1/3 : 5 = (so weit wie möglich kürzen)",
+      "explain": "7/3 · 1/5.",
+      "type": "input",
+      "answer": [
+       "7/15"
+      ]
+     },
+     {
+      "id": "e11",
       "type": "input",
       "q": "3/4 − 5/6 : 15/12 = (so weit wie möglich kürzen)",
       "answer": [
@@ -1176,7 +2415,7 @@
       "ref": "c1"
      },
      {
-      "id": "q2",
+      "id": "e12",
       "type": "input",
       "q": "5/6 · (2/3 − 3/10) = (so weit wie möglich kürzen)",
       "answer": [
@@ -1186,7 +2425,7 @@
       "ref": "c2"
      },
      {
-      "id": "q3",
+      "id": "e13",
       "type": "input",
       "q": "5/6 − 1/2 : 3/4 = (so weit wie möglich kürzen)",
       "answer": [
@@ -1196,7 +2435,7 @@
       "ref": "c11"
      },
      {
-      "id": "q4",
+      "id": "e14",
       "type": "input",
       "q": "3/4 · (1/2 − 1/6) = (so weit wie möglich kürzen)",
       "answer": [
@@ -1206,7 +2445,7 @@
       "ref": "c12"
      },
      {
-      "id": "q5",
+      "id": "e15",
       "type": "input",
       "q": "7/8 − 3/4 : 3/2 = (so weit wie möglich kürzen)",
       "answer": [
@@ -1216,7 +2455,7 @@
       "ref": "c13"
      },
      {
-      "id": "q6",
+      "id": "e16",
       "type": "input",
       "q": "2/5 · (3/4 − 1/6) = (so weit wie möglich kürzen)",
       "answer": [
