@@ -690,6 +690,10 @@ details.card[open] summary{margin-bottom:10px}
 .gmark{right:10px;top:6px}
 .sheet.corr .shead{padding-right:170px;min-height:110px;align-items:flex-start}
 .sheet.corr .shead{min-height:135px!important}.gmark{top:2px}
+/* v3.57 Schrift auf Handy und Tablet ca. 20% kleiner */
+@media (max-width:1100px){html{font-size:80%}body{font-size:13.6px}}
+@media (max-width:500px){html{font-size:84%}}
+@media (max-width:1100px){input,select,textarea,.inp,.pin{font-size:max(16px,1rem)!important}}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -697,7 +701,7 @@ details.card[open] summary{margin-bottom:10px}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v3.56';
+var APP_VERSION='v3.57';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
