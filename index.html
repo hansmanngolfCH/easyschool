@@ -493,6 +493,19 @@ details.card[open] summary{margin-bottom:10px}
 .ptab .pn{width:34px;color:#555}.ptab .pq i{font-style:normal;color:#666;font-size:.8rem}
 .ptab .pin{width:100%;border:0;border-bottom:1px dashed #888;background:transparent;font:inherit;font-size:1rem;padding:6px 2px;border-radius:0;outline:0;min-width:90px}
 .ptab .pin:focus{border-bottom:2px solid #111;background:#fffef3}
+
+.card.topic h3.tt{font-size:1.7rem;font-weight:700;line-height:1.15;margin:0 0 4px;color:#1f2430}
+.brandrow .logo{height:54px;width:54px;border-radius:0}
+.sheet{font-family:Inter,"Segoe UI",Arial,sans-serif!important;padding:22px 16px 28px!important;min-height:70vh}
+.ptab td,.ptab th{font-size:1.1rem!important}.ptab th{font-size:.95rem!important}
+.ptab td{padding:10px 6px!important}.ptab{table-layout:fixed}.ptab .pn{width:36px}
+.ptab .pq{width:38%;word-break:break-word}.ptab .pq i{font-style:normal;color:#777;font-size:.85rem}
+.ptab .pin{font-size:1.15rem!important;padding:12px 6px!important;min-height:48px;font-family:inherit!important}
+.shead{font-size:1rem!important}
+.rl{display:flex;gap:8px;padding:7px 10px;border-radius:10px;margin:4px 0;font-size:.95rem;background:#f6f7f9}
+.rl.ok{background:#f1faf3}.rl.no{background:#fdf2f1}.rl .rm{font-weight:700;width:16px}.rl.ok .rm{color:#1e8e3e}.rl.no .rm{color:#d93025}
+.rl .rb{display:flex;flex-direction:column;gap:1px}.rl .rq{color:#444}.rl .ra{color:#111}.rl .why{font-size:.82rem;color:#666}
+.ptab .pq{width:34%!important}.grade{font-size:3rem!important;line-height:1}
 </style>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -566,10 +579,12 @@ function peekDay(id,off){return prog(id).days[dkey(off||0)]||{sec:0,n:0,ok:0,xp:
 function touch(id){var now=Date.now();if(lastAct&&now-lastAct<90000)day(id).sec+=Math.round((now-lastAct)/1000);lastAct=now;if(now-lastSave>20000){lastSave=now;save(id)}}
 function logAnswer(id,ok){var d=day(id);d.n++;if(ok)d.ok++}
 function xpTotal(id){var s=0,d=prog(id).days,k;for(k in d)s+=d[k].xp||0;return s}
-function plv(xp){return Math.floor(xp/100)+1}
+function plv(xp){return Math.floor(xp/1000)+1}
+function fx(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,"'")}
+function logoSvg(s){return '<svg class="logo" viewBox="0 0 64 64" width="'+s+'" height="'+s+'" aria-hidden="true"><path d="M4 14c9-3 19-2 28 4v34c-9-6-19-7-28-4z" fill="#4285F4"/><path d="M60 14c-9-3-19-2-28 4v34c9-6 19-7 28-4z" fill="#34A853"/><path d="M4 14l0 34M60 14v34" stroke="#fff" stroke-width="0"/><rect x="22" y="24" width="26" height="34" rx="4" fill="#fff" stroke="#EA4335" stroke-width="4"/><rect x="26" y="29" width="18" height="20" rx="1.5" fill="#FBBC05"/><circle cx="35" cy="54" r="1.8" fill="#EA4335"/></svg>'}
 var RANK=['Neuling','Rookie','Checker','Durchstarter','Hustler','Mastermind','Brain-Boss','Legende','Endgegner','GOAT'];
 function rankName(L){return L<=10?RANK[L-1]:'GOAT +'+(L-10)}
-function plinfo(id){var t=xpTotal(id),L=plv(t),x=t%100;return {xp:x,total:t,L:L,rank:'Level '+L,base:0,next:100,pct:x/100}}
+function plinfo(id){var t=xpTotal(id),L=plv(t),x=t%1000;return {xp:t,total:t,L:L,rank:'Level '+L,base:0,next:L*1000,pct:x/1000}}
 function streak(id){var d=prog(id).days,s=0,off=0;if(!(d[dkey(0)]&&d[dkey(0)].xp>0))off=1;while(d[dkey(off)]&&d[dkey(off)].xp>0){s++;off++}return s}
 
 var SK=[
@@ -969,7 +984,7 @@ function coach(html,l){return '<div class="coach">'+av(l==null?2:l,46)+'<p>'+htm
 var LVC=['#8FDB6B','#5CC96A','#2FB36B','#1BA38A','#1593B8','#1A73E8','#4B54D9','#7A3FD1','#A733BE','#D12E8A','#E0402F','#C42525','#8E1B1B'];
 function lvColor(L){return LVC[Math.min(L,LVC.length)-1]}
 function shield(L,size){var c=lvColor(L),h=Math.round(size*1.15),fs=L>=100?.34:L>=10?.46:.56;return '<span class="shield" style="width:'+size+'px;height:'+h+'px"><svg viewBox="0 0 60 68" width="'+size+'" height="'+h+'" aria-hidden="true"><path d="M30 3L55 14V38C55 52 44 62 30 66C16 62 5 52 5 38V14Z" fill="#fff" stroke="'+c+'" stroke-width="5" stroke-linejoin="round"/></svg><b style="color:'+c+';font-size:'+Math.round(size*fs)+'px">'+L+'</b></span>'}
-function gbar(pl){return '<div class="gbar" role="img" aria-label="XP"><i style="width:'+Math.max(4,Math.round(pl.pct*100))+'%"></i></div><div class="gx"><b>'+pl.xp+' XP</b><span>noch '+(pl.next-pl.xp)+' bis Level '+(pl.L+1)+'</span></div>'}
+function gbar(pl){return '<div class="gbar" role="img" aria-label="XP"><i style="width:'+Math.max(4,Math.round(pl.pct*100))+'%"></i></div><div class="gx"><b>'+fx(pl.xp)+' XP</b><span>noch '+fx(pl.next-pl.xp)+' bis Level '+(pl.L+1)+'</span></div>'}
 function tierTrack(pl){
   var up=Math.max(10,pl.L+4),list=tiers(up);
   return '<div class="tiers" tabindex="0" aria-label="Belohnungen pro Rang">'+list.map(function(x){
@@ -985,7 +1000,7 @@ function nextReward(pl){
 function banner(){
   if(!nav.child||(nav.view!=='child'&&nav.view!=='subject'))return '';
   var id=nav.child,pl=plinfo(id),L=level(id,topicsOf(id));
-  return '<div class="banner">'+av(L.lvl,40)+'<div class="bn-m"><div class="bn-row"><span class="bn-lv">Level</span><span class="bn-xp">'+pl.xp+' / 100 XP</span></div><div class="xpg sm" role="img" aria-label="XP"><i style="width:'+Math.max(5,Math.round(pl.pct*100))+'%"></i><u></u></div></div>'+shield(pl.L,40)+'</div>';
+  return '<div class="banner">'+av(L.lvl,40)+'<div class="bn-m"><div class="bn-row"><span class="bn-lv">Level</span><span class="bn-xp">'+fx(pl.xp)+' XP</span></div><div class="xpg sm" role="img" aria-label="XP"><i style="width:'+Math.max(5,Math.round(pl.pct*100))+'%"></i><u></u></div></div>'+shield(pl.L,40)+'</div>';
 }
 function xpbar(pl){return '<div class="xpbar"><div class="bar" role="img" aria-label="XP"><i style="width:'+Math.max(3,Math.round(pl.pct*100))+'%"></i></div><span class="pct">'+pl.xp+' / '+pl.next+' XP</span></div>'}
 
@@ -997,7 +1012,7 @@ function vHome(){
   }).join('');
   var picker='';
   if(nav.avpick){var cur=myAv();picker='<div class="avmodal"><div class="avback" data-act="avclose"></div><div class="avsheet" role="dialog" aria-label="Avatar aussuchen"><div class="avhead"><b>Avatar aussuchen</b><button class="btn sm" data-act="avclose">Fertig</button></div><div class="avgrid">'+Array.apply(null,{length:AV_N}).map(function(_,i){return '<button class="avopt'+(i===cur?' on':'')+'" data-act="avpick" data-id="'+i+'" aria-label="Avatar '+(i+1)+'">'+avPic(i,56)+'</button>'}).join('')+'</div></div></div>'}
-  return '<div class="home"><button class="avbtn" data-act="avopen" aria-label="Avatar aussuchen"><span class="avdot">'+avPic(myAv(),34)+'</span><span>Avatar</span></button>'+'<div class="brandrow"><img class="logo" src="img/logo.webp" alt=""><h1>EasySchool</h1></div><p class="ask">Wähle deine Klasse</p><div class="clist">'+cards+'</div>'+picker+'</div>';
+  return '<div class="home"><button class="avbtn" data-act="avopen" aria-label="Avatar aussuchen"><span class="avdot">'+avPic(myAv(),34)+'</span><span>Avatar</span></button>'+'<div class="brandrow">'+logoSvg(54)+'<h1>EasySchool</h1></div><p class="ask">Wähle deine Klasse</p><div class="clist">'+cards+'</div>'+picker+'</div>';
 }
 
 function vChild(){
@@ -1031,7 +1046,7 @@ function vSubject(){
   html+='<section class="list">';
   ts.forEach(function(t){var chp='x';
       var st=stats(ch.id,[t]),seen=prog(ch.id).seen[t.id],best=bestNote(ch.id,t.id),hasV=t.cards.some(isV),lvn=(lvCount[chp]=(lvCount[chp]||0)+1),pot=t.cards.length*10+t.exam.questions.length*5+60;
-      html+='<article class="card topic"><div><p class="eyebrow">Thema '+lvn+'</p><h3>'+esc(t.title)+'</h3><p class="sub">'+t.cards.length+' Aufgaben</p></div>'+lbar(level(ch.id,[t]),true)
+      html+='<article class="card topic"><div><h3 class="tt">'+esc(t.title)+'</h3><p class="sub">'+t.cards.length+' Aufgaben</p></div>'+lbar(level(ch.id,[t]),true)
       +'<div class="mods2"><button class="mod m-v" data-act="learn" data-id="'+esc(t.id)+'"><span class="mi"><svg viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 12C19 8 11 8 6 10v28c5-2 13-2 18 2 5-4 13-4 18-2V10c-5-2-13-2-18 2zM24 12v28"/></svg></span><b>AI-Theorie</b><small>'+(seen?'✓ gesehen':t.explain.length+' Schritte')+'</small></button>'
       +'<button class="mod m-u" data-act="practice" data-scope="topic:'+esc(t.id)+'" data-force="1"><span class="mi"><svg viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="9"/><circle cx="24" cy="24" r="2.5" fill="#fff"/><path d="M24 24L40 8M34 8h6v6"/></svg></span><b>AI-Lernen</b><small>'+(st.due+st.fresh>0?(st.due+st.fresh)+' dran':'✓ wiederholt')+'</small></button>'
       +'<button class="mod m-p" data-act="exam" data-id="'+esc(t.id)+'"><span class="mi"><svg viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 42V6M10 8h26l-6 9 6 9H10"/></svg></span><b>Prüfung</b><small>'+(best?'Note '+fmt(best):'Boss-Test')+'</small></button></div>'
@@ -1248,13 +1263,16 @@ function vGame(){
 /* ---------- Prüfung ---------- */
 function mmss(sec){var s=Math.abs(sec);return (sec<0?'−':'')+Math.floor(s/60)+':'+String(s%60).padStart(2,'0')}
 function examQs(n,t){var qs=t.exam.questions;if(n.mode==='kurz')qs=qs.filter(function(q){return /^(Übersetze|Ergänze|Welches)/.test(q.q)});return qs}
-function paperLeft(q){var m=q.q.match(/«([^»]+)»/),l=q.q.match(/auf (\S+)\?/);
-  if(/^Wie heisst/.test(q.q)&&m)return '<b>'+esc(m[1])+'</b> <i>→ '+(l?esc(l[1].replace(/ischen?$/,'isch')):'')+'</i>';
-  if(/^Was heisst/.test(q.q)&&m)return '<b>'+esc(m[1])+'</b> <i>→ Deutsch</i>';
-  var u=q.q.match(/^Übersetze ins (\S+): (.*)$/);if(u)return esc(u[2])+' <i>→ '+esc(u[1].replace(/e$/,''))+'</i>';
+var FUNNY={franz:['Franz Franzose','Pierre Baguette','Marie Croissant','Jean Fromage','Louis Käsli','Brigitte Bonjour','Claude Crêpe','Amélie Merci'],engl:['Tom Teabag','Lady Biscuit','Sir Toastbrot','Bob Bigben','Molly Muffin','Harry Hotdog','Tina Teatime','Jack Fish&Chips'],deu:['Hans Wurst','Berta Brezel','Fritz Müesli','Heidi Alpenblick','Sepp Rösti','Lisa Zopf'],mathe:['Prof. Pi Pfiffig','Zora Zähler','Nick Nenner','Bruno Bruch','Mia Mal-Zwei','Kurt Kehrbruch']};
+function funnyName(t){var l=FUNNY[t.subject]||FUNNY.deu;return l[Math.floor(Math.random()*l.length)]}
+function paperLeft(q){var m=q.q.match(/«([^»]+)»/);
+  if(/^Wie heisst/.test(q.q)&&m)return esc(m[1]);
+  if(/^Was heisst/.test(q.q)&&m)return esc(m[1])+' <i>(→ Deutsch)</i>';
+  var u=q.q.match(/^Übersetze ins (\S+): (.*)$/);if(u)return esc(u[2]);
   return rt(q.q)}
 function vPaper(n,t,qs){
-  var h='<div class="paperpage"><div class="row between"><span class="ptitle">Prüfung · '+esc(t.title)+'</span><div class="timer" id="timer" aria-label="Zeit">0:00</div></div><div class="sheet"><div class="shead"><span>Name: ____________</span><span>Datum: ________</span></div><table class="ptab"><thead><tr><th class="pn">Nr.</th><th>Aufgabe</th><th>Antwort</th></tr></thead><tbody>';
+  var dt=new Date(),ds=dt.getDate()+'.'+(dt.getMonth()+1)+'.'+dt.getFullYear(),lg=t.subject==='franz'?'Französische':t.subject==='engl'?'Englische':'';
+  var h='<div class="paperpage"><p class="ptitle">Prüfung · '+esc(t.title)+'</p><div class="sheet"><div class="shead"><span>Name: <b>'+esc(n.pname||'')+'</b></span><span>Datum: <b>'+ds+'</b></span></div><table class="ptab"><thead><tr><th class="pn">Nr.</th><th>'+(lg?'Übersetze ins '+lg:'Aufgabe')+'</th><th>Antwort</th></tr></thead><tbody>';
   qs.forEach(function(q,i){
     var cell;
     if(q.type==='mc')cell='<select class="pin" data-q="'+q.id+'"><option value="">–</option>'+q.options.map(function(o,j){return '<option value="'+j+'"'+(n.answers[q.id]===j?' selected':'')+'>'+esc(o.replace(/<[^>]+>/g,''))+'</option>'}).join('')+'</select>';
@@ -1264,10 +1282,10 @@ function vPaper(n,t,qs){
   return h+'</tbody></table></div><button class="btn pri big" data-act="finish">Abgeben</button></div>'}
 function vExam(){
   var n=nav,t=topicById(n.topicId),mathe=t.subject==='mathe',qs=examQs(n,t);
-  if(n.phase==='intro')return '<div class="stack"><div><p class="eyebrow">Musterprüfung</p><h1>'+esc(t.title)+'</h1></div>'+coach('Ist nur eine Musterprüfung. Hier darf noch jeder Fehler passieren.',1)+'<section class="card"><p>'+qs.length+' Fragen · etwa '+t.exam.minutes+' Minuten · Note von 1 bis 6</p><p class="sub" style="margin-top:8px">Antworte so, wie du es in der Schule tun würdest. Ohne Tipps, ohne Nachschauen.'+(mathe?' Für Zwischenschritte kannst du bei jeder Frage «Notizen machen» öffnen.':'')+' Die Zeit ist nur ein Richtwert, du wirst nicht abgebrochen. Für jede richtige Antwort gibt es XP, für gute Noten einen Bonus.</p></section>'+(mathe?'':'<div class="modes"><button class="btn'+(n.mode!=='kurz'?' pri':'')+'" data-act="emode" data-m="alles">Alles</button><button class="btn'+(n.mode==='kurz'?' pri':'')+'" data-act="emode" data-m="kurz">Kurztext</button></div>')+'<div class="row"><button class="btn pri big" data-act="start">Los geht\'s</button><button class="btn big" data-act="back">Zurück</button></div></div>';
+  if(n.phase==='intro')return '<div class="stack"><div><p class="eyebrow">Musterprüfung</p><h1>'+esc(t.title)+'</h1></div>'+coach('Ist nur eine Musterprüfung. Hier darf noch jeder Fehler passieren.',1)+'<section class="card"><p>'+qs.length+' Fragen · Note von 1 bis 6</p><p class="sub" style="margin-top:8px">Antworte so, wie du es in der Schule tun würdest. Ohne Tipps, ohne Nachschauen.'+(mathe?' Für Zwischenschritte kannst du bei jeder Frage «Notizen machen» öffnen.':'')+' Es gibt keinen Zeitdruck. Für jede richtige Antwort gibt es XP, für gute Noten einen Bonus.</p></section>'+(mathe?'':'<div class="modes"><button class="btn'+(n.mode!=='kurz'?' pri':'')+'" data-act="emode" data-m="alles">Alles</button><button class="btn'+(n.mode==='kurz'?' pri':'')+'" data-act="emode" data-m="kurz">Kurztext</button></div>')+'<div class="row"><button class="btn pri big" data-act="start">Los geht\'s</button><button class="btn big" data-act="back">Zurück</button></div></div>';
   if(n.phase==='run'&&!mathe)return vPaper(n,t,qs);
   if(n.phase==='run'){
-    var html='<div class="stack"><div class="row between"><div><p class="eyebrow">Musterprüfung</p><h1 style="font-size:1.5rem">'+esc(t.title)+'</h1></div><div class="timer" id="timer" aria-label="Zeit">0:00</div></div>';
+    var html='<div class="stack"><div class="row between"><div><p class="eyebrow">Musterprüfung</p><h1 style="font-size:1.5rem">'+esc(t.title)+'</h1></div></div>';
     qs.forEach(function(q,i){
       var key='e:'+t.id+':'+q.id,pd=mathe?padHTML(key,q.q):{btn:'',box:''};
       html+='<section class="card qn"><span class="no">Frage '+(i+1)+' von '+qs.length+'</span><label class="qt" for="in-'+q.id+'">'+rt(q.q)+'</label>'+visuals(q.visuals);
@@ -1280,10 +1298,10 @@ function vExam(){
   }
   var r=n.result,msg=r.note>=5.5?'Wow! Das war fast zu einfach.':r.note>=4.5?'Stark gemacht. Noch ein bisschen Feinschliff.':r.note>=4?'Bestanden! Übe noch die Aufgaben, die nicht geklappt haben.':'Das war ein Aufwärmen. Die Aufgaben, die nicht geklappt haben, üben wir jetzt zusammen.';
   var mood=r.note>=5.5?4:r.note>=4.5?3:r.note>=4?2:1;
-  var html3='<div class="stack"><div><p class="eyebrow">Ergebnis</p><h1>'+esc(t.title)+'</h1></div><section class="card row"><div class="grade">'+fmt(r.note)+'</div><div class="grow"><h2>'+r.score+' von '+r.max+' richtig</h2><p class="sub">Note 1 bis 6 · +'+r.xp+' XP</p></div></section>'+coach(esc(msg),mood);
+  var html3='<div class="stack"><div><p class="eyebrow">Ergebnis</p><h1>'+esc(t.title)+'</h1></div><section class="card row"><div class="grade">'+fmt(r.note)+'</div><div class="grow"><h2>'+r.score+' von '+r.max+' richtig</h2><p class="sub">Note 1 bis 6 · +'+r.xp+' XP</p></div></section>'+'<p class="sub" style="margin:0">'+esc(msg)+'</p>';
   r.items.forEach(function(it,i){
     var ans=it.q.type==='mc'?it.q.options[it.q.answer]:it.q.answer[0],given=it.q.type==='mc'?(it.g==null?'':it.q.options[it.g]):(it.g||'');
-    html3+='<section class="card res"><span class="tag '+(it.ok?'ok':'no')+'">'+(it.ok?'Richtig':'Falsch')+'</span><div class="body"><b>'+(i+1)+'. '+rt(it.q.q)+'</b>'+(it.ok?'':'<span>Deine Antwort: '+(given?esc(given):'<i>keine</i>')+'</span>')+'<span>Richtig: <b>'+rt(ans)+'</b></span>'+(it.note?'<span class="why">Achte auf die Schreibweise: '+esc(it.note)+'</span>':'')+'<span class="why">'+rt(it.q.explain||'')+'</span></div></section>';
+    html3+='<div class="rl '+(it.ok?'ok':'no')+'"><span class="rm">'+(it.ok?'✓':'✗')+'</span><div class="rb"><span class="rq">'+(i+1)+'. '+rt(it.q.q)+'</span>'+(it.ok?'<span class="ra"><b>'+rt(ans)+'</b></span>':'<span class="ra">Deine Antwort: '+(given?esc(given):'<i>keine</i>')+' · Richtig: <b>'+rt(ans)+'</b></span>')+(!it.ok&&it.q.explain&&it.q.explain.indexOf(ans)<0?'<span class="why">'+rt(it.q.explain)+'</span>':'')+'</div></div>';
   });
   return html3+'<div class="row"><button class="btn pri big" data-act="retake">Noch einmal</button><button class="btn big" data-act="practice" data-scope="topic:'+esc(t.id)+'" data-force="1">Falsche Aufgaben üben</button><button class="btn ghost" data-act="back">Fertig</button></div></div>';
 }
@@ -1291,7 +1309,7 @@ function vExam(){
 
 var VIEWS={home:vHome,child:vChild,subject:vSubject,learn:vLearn,practice:vPractice,exam:vExam,game:vGame,parent:vParent};
 
-function top(){if(nav.view==='home')return '<header class="top" style="min-height:8px"></header>';return '<header class="top"><button class="brand" data-act="home" aria-label="Zur Startseite">'+(C&&C.hero?'<img src="'+esc(C.hero)+'" alt="" style="height:34px;width:auto;border-radius:8px">':av(2,34,null))+'<span class="wm">EasySchool</span></button><button class="btn back" data-act="back">← Zurück</button></header>'}
+function top(){if(nav.view==='home')return '<header class="top" style="min-height:8px"></header>';return '<header class="top"><button class="brand" data-act="home" aria-label="Zur Startseite">'+logoSvg(34)+'<span class="wm">EasySchool</span></button><button class="btn back" data-act="back">← Zurück</button></header>'}
 function render(){
   clearInterval(timer);timer=null;
   SKIN=nav.child?skinOf(nav.child):null;
@@ -1478,7 +1496,7 @@ var ACT={
   },
   exam:function(b){go({view:'exam',child:nav.child,subject:nav.subject,topicId:b.dataset.id,phase:'intro',answers:{},padOpen:{}})},
   emode:function(b){nav.mode=b.dataset.m;render()},
-  start:function(){clearPads('e:'+nav.topicId+':');nav.phase='run';nav.started=Date.now();nav.answers={};nav.padOpen={};render();window.scrollTo(0,0)},
+  start:function(){nav.pname=funnyName(topicById(nav.topicId));clearPads('e:'+nav.topicId+':');nav.phase='run';nav.started=Date.now();nav.answers={};nav.padOpen={};render();window.scrollTo(0,0)},
   retake:function(){clearPads('e:'+nav.topicId+':');nav.phase='intro';nav.answers={};nav.result=null;render();window.scrollTo(0,0)},
   finish:function(){finishExam()}
 };
