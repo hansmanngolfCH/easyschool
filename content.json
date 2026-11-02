@@ -1,0 +1,2806 @@
+{
+ "version": 5,
+ "children": [
+  {
+   "id": "kl3",
+   "name": "",
+   "grade": 3,
+   "img": "img/kl3.webp",
+   "full": "img/fb_brown.webp"
+  },
+  {
+   "id": "kl5",
+   "name": "",
+   "grade": 5,
+   "img": "img/kl5.webp",
+   "full": "img/fb_blonde.webp"
+  },
+  {
+   "id": "kl8",
+   "name": "",
+   "grade": 8,
+   "img": "img/kl8.webp",
+   "full": "img/fb_boy.webp"
+  }
+ ],
+ "subjects": [
+  {
+   "id": "mathe",
+   "name": "Mathematik"
+  },
+  {
+   "id": "franz",
+   "name": "Französisch"
+  },
+  {
+   "id": "engl",
+   "name": "Englisch"
+  },
+  {
+   "id": "deu",
+   "name": "Deutsch"
+  }
+ ],
+ "topics": [
+  {
+   "id": "kl8-mathe-bruch1",
+   "child": "kl8",
+   "subject": "mathe",
+   "chapter": "Bruchrechnen",
+   "title": "Bruchrechnen",
+   "explain": [
+    {
+     "h": "Erst die Klammer, dann Punkt vor Strich",
+     "text": "Bei Aufgaben mit Brüchen gilt dieselbe Reihenfolge wie bei normalen Zahlen: Zuerst rechnest du die Klammer. Dann folgen Mal und Geteilt. Plus und Minus kommen zuletzt.",
+     "visuals": [
+      {
+       "type": "lines",
+       "items": [
+        [
+         "3/4 − 5/6 : 15/12",
+         "Aufgabe 1"
+        ],
+        [
+         "5/6 : 15/12",
+         "zuerst, weil Geteilt vor Minus kommt"
+        ],
+        [
+         "5/6 · (2/3 − 3/10)",
+         "Aufgabe 2"
+        ],
+        [
+         "(2/3 − 3/10)",
+         "zuerst, weil die Klammer vorgeht"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Was rechnest du bei 5/6 · (2/3 − 3/10) zuerst? Schreibe Klammer oder Mal.",
+      "a": [
+       "Klammer"
+      ],
+      "hint": "Klammer geht immer zuerst."
+     }
+    },
+    {
+     "h": "Brüche teilen: den Kehrbruch nehmen",
+     "text": "Geteilt durch einen Bruch heisst: Mal den Kehrbruch. Beim Kehrbruch tauschen Zähler und Nenner die Plätze. Danach kürzt du das Ergebnis.",
+     "visuals": [
+      {
+       "type": "lines",
+       "items": [
+        [
+         "5/6 : 15/12",
+         ""
+        ],
+        [
+         "= 5/6 · 12/15",
+         "Kehrbruch von 15/12"
+        ],
+        [
+         "= 60/90",
+         "Zähler mal Zähler, Nenner mal Nenner"
+        ],
+        [
+         "= 2/3",
+         "mit 30 kürzen"
+        ]
+       ],
+       "num": true
+      }
+     ],
+     "try": {
+      "q": "Wie lautet der Kehrbruch von 15/12?",
+      "a": [
+       "12/15"
+      ],
+      "hint": "Zähler und Nenner tauschen."
+     }
+    },
+    {
+     "h": "Warum der Kehrbruch? (Herleitung)",
+     "text": "Frage: Wie oft passt 1/4 in 1/2? Du siehst es im Bild: Zwei Viertel ergeben ein halbes. Also ist 1/2 : 1/4 = 2. Rechnest du 1/2 · 4/1, kommt dasselbe heraus. Darum darfst du immer mit dem Kehrbruch malnehmen.",
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 4,
+       "filled": 2
+      },
+      {
+       "type": "lines",
+       "num": true,
+       "items": [
+        [
+         "1/2 : 1/4",
+         "Wie oft passt 1/4 in 1/2?"
+        ],
+        [
+         "= 2",
+         "zwei Viertel passen hinein"
+        ],
+        [
+         "1/2 · 4/1 = 4/2 = 2",
+         "dasselbe mit dem Kehrbruch"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Wie viele Viertel passen in 1/2? (Zahl)",
+      "a": [
+       "2"
+      ],
+      "hint": "Zähle die gefärbten Viertel im Bild."
+     }
+    },
+    {
+     "h": "Brüche abziehen: gleicher Nenner",
+     "text": "Plus und Minus gehen nur mit gleichem Nenner. Suche zuerst den Hauptnenner, das ist eine Zahl, in die beide Nenner passen. Erweitere dann beide Brüche. Die Kreise zeigen 3/4 = 9/12 und 2/3 = 8/12.",
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 12,
+       "filled": 9
+      },
+      {
+       "type": "pie",
+       "parts": 12,
+       "filled": 8
+      },
+      {
+       "type": "lines",
+       "items": [
+        [
+         "3/4 − 2/3",
+         ""
+        ],
+        [
+         "= 9/12 − 8/12",
+         "Hauptnenner 12: 3/4 mal 3, 2/3 mal 4"
+        ],
+        [
+         "= 1/12",
+         "nur die Zähler abziehen"
+        ]
+       ],
+       "num": true
+      }
+     ],
+     "try": {
+      "q": "Wie lautet der Hauptnenner von 4 und 3?",
+      "a": [
+       "12"
+      ],
+      "hint": "Suche die kleinste Zahl, in der 4 und 3 aufgehen."
+     }
+    },
+    {
+     "h": "Warum erweitern? (Herleitung)",
+     "text": "Erweitern heisst: Zähler und Nenner mit derselben Zahl malnehmen. Der Wert bleibt gleich, nur die Stücke werden kleiner. Das siehst du an den drei gleich grossen Hälften.",
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 2,
+       "filled": 1
+      },
+      {
+       "type": "pie",
+       "parts": 4,
+       "filled": 2
+      },
+      {
+       "type": "pie",
+       "parts": 6,
+       "filled": 3
+      },
+      {
+       "type": "lines",
+       "num": true,
+       "items": [
+        [
+         "1/2 = 2/4",
+         "mal 2"
+        ],
+        [
+         "1/2 = 3/6",
+         "mal 3"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "1/2 = ?/6. Welche Zahl fehlt?",
+      "a": [
+       "3"
+      ],
+      "hint": "Der Nenner wurde mal 3 genommen. Der Zähler auch."
+     }
+    },
+    {
+     "h": "Aufgabe mit Klammer",
+     "text": "Bei Aufgabe 2 rechnest du zuerst die Klammer mit dem Hauptnenner 30. Dann multiplizierst du mit 5/6 und kürzt.",
+     "visuals": [
+      {
+       "type": "lines",
+       "items": [
+        [
+         "5/6 · (2/3 − 3/10)",
+         ""
+        ],
+        [
+         "= 5/6 · (20/30 − 9/30)",
+         "Hauptnenner 30"
+        ],
+        [
+         "= 5/6 · 11/30",
+         "Klammer ausgerechnet"
+        ],
+        [
+         "= 55/180",
+         "Zähler mal Zähler, Nenner mal Nenner"
+        ],
+        [
+         "= 11/36",
+         "mit 5 kürzen"
+        ]
+       ],
+       "num": true
+      }
+     ],
+     "try": {
+      "q": "Rechne: 2/3 − 3/10 =",
+      "a": [
+       "11/30"
+      ],
+      "hint": "Hauptnenner 30. Erweitere beide Brüche."
+     }
+    }
+   ],
+   "cards": [
+    {
+     "id": "c1",
+     "q": "3/4 − 5/6 : 15/12 =",
+     "a": "1/12",
+     "steps": [
+      [
+       "5/6 : 15/12 = 5/6 · 12/15 = 2/3",
+       "zuerst teilen"
+      ],
+      [
+       "3/4 − 2/3 = 9/12 − 8/12",
+       "Hauptnenner 12"
+      ],
+      [
+       "= 1/12",
+       ""
+      ]
+     ],
+     "hints": [
+      "Welche Rechenart kommt zuerst: Minus oder Geteilt?",
+      "Geteilt vor Minus. Rechne zuerst 5/6 : 15/12.",
+      "Geteilt durch einen Bruch = mal den Kehrbruch (12/15). Danach kürzen, das gibt ein Zwischenergebnis mit Nenner 3.",
+      "Jetzt 3/4 minus dein Zwischenergebnis. Welcher Hauptnenner passt zu 4 und 3?"
+     ],
+     "th": "order"
+    },
+    {
+     "id": "c2",
+     "q": "5/6 · (2/3 − 3/10) =",
+     "a": "11/36",
+     "steps": [
+      [
+       "2/3 − 3/10 = 20/30 − 9/30 = 11/30",
+       "Klammer zuerst"
+      ],
+      [
+       "5/6 · 11/30 = 55/180",
+       "malnehmen"
+      ],
+      [
+       "= 11/36",
+       "mit 5 kürzen"
+      ]
+     ],
+     "hints": [
+      "Was geht vor: die Klammer oder das Mal?",
+      "Rechne zuerst 2/3 − 3/10. Suche den Hauptnenner von 3 und 10.",
+      "Mit Hauptnenner 30 ergibt die Klammer einen Bruch mit Zähler 11.",
+      "Multipliziere mit 5/6: Zähler mal Zähler, Nenner mal Nenner, dann mit 5 kürzen."
+     ],
+     "th": "order"
+    },
+    {
+     "id": "c3",
+     "q": "Wie teilst du durch einen Bruch?",
+     "a": "Mit dem Kehrbruch malnehmen, zum Beispiel 5/6 : 15/12 = 5/6 · 12/15.",
+     "hints": [
+      "Denk an den Schritt «Verstehen»."
+     ],
+     "th": "div"
+    },
+    {
+     "id": "c4",
+     "q": "Welche Reihenfolge gilt bei Aufgaben mit Brüchen?",
+     "a": "Zuerst die Klammer, dann Mal und Geteilt, zuletzt Plus und Minus.",
+     "hints": [
+      "Denk an den Schritt «Verstehen»."
+     ],
+     "th": "order"
+    },
+    {
+     "id": "c5",
+     "q": "Kehrbruch von 15/12",
+     "a": "12/15",
+     "hints": [
+      "Beim Kehrbruch tauschen Zähler und Nenner die Plätze."
+     ],
+     "th": "div"
+    },
+    {
+     "id": "c6",
+     "q": "Hauptnenner von 4 und 6",
+     "a": "12",
+     "hints": [
+      "Suche eine Zahl, in der 4 und 6 beide aufgehen.",
+      "Sie liegt zwischen 10 und 14."
+     ],
+     "th": "hn"
+    },
+    {
+     "id": "c7",
+     "q": "Hauptnenner von 3 und 10",
+     "a": "30",
+     "hints": [
+      "Suche eine Zahl, in der 3 und 10 beide aufgehen.",
+      "Sie ist das Dreifache von 10."
+     ],
+     "th": "hn"
+    },
+    {
+     "id": "c8",
+     "q": "5/6 : 15/12 =",
+     "a": "2/3",
+     "steps": [
+      [
+       "5/6 · 12/15 = 60/90",
+       "Kehrbruch"
+      ],
+      [
+       "= 2/3",
+       "mit 30 kürzen"
+      ]
+     ],
+     "hints": [
+      "Wie teilst du durch einen Bruch?",
+      "Tausche Zähler und Nenner von 15/12 und rechne mal.",
+      "Zähler mal Zähler, Nenner mal Nenner. Dann mit der grössten möglichen Zahl kürzen."
+     ],
+     "th": "div"
+    },
+    {
+     "id": "c9",
+     "q": "3/4 − 2/3 =",
+     "a": "1/12",
+     "steps": [
+      [
+       "3/4 = 9/12 und 2/3 = 8/12",
+       "Hauptnenner 12"
+      ],
+      [
+       "9/12 − 8/12 = 1/12",
+       ""
+      ]
+     ],
+     "hints": [
+      "Suche einen Nenner, in den 4 und 3 passen.",
+      "Erweitere beide Brüche auf Zwölftel.",
+      "Dann nur die Zähler abziehen."
+     ],
+     "solvis": [
+      {
+       "type": "pie",
+       "parts": 12,
+       "filled": 9
+      },
+      {
+       "type": "pie",
+       "parts": 12,
+       "filled": 8
+      }
+     ],
+     "th": "hn"
+    },
+    {
+     "id": "c10",
+     "q": "2/3 − 3/10 =",
+     "a": "11/30",
+     "steps": [
+      [
+       "2/3 = 20/30 und 3/10 = 9/30",
+       "Hauptnenner 30"
+      ],
+      [
+       "20/30 − 9/30 = 11/30",
+       ""
+      ]
+     ],
+     "hints": [
+      "Suche einen Nenner, in den 3 und 10 passen.",
+      "Erweitere beide Brüche auf Dreissigstel.",
+      "Dann nur die Zähler abziehen."
+     ],
+     "th": "hn"
+    },
+    {
+     "id": "c11",
+     "q": "5/6 − 1/2 : 3/4 =",
+     "a": "1/6",
+     "steps": [
+      [
+       "1/2 : 3/4 = 1/2 · 4/3 = 2/3",
+       "zuerst teilen"
+      ],
+      [
+       "5/6 − 4/6 = 1/6",
+       "Hauptnenner 6"
+      ]
+     ],
+     "hints": [
+      "Geteilt kommt vor Minus.",
+      "Rechne zuerst 1/2 : 3/4 mit dem Kehrbruch.",
+      "Das Zwischenergebnis hat den Nenner 3. Der Hauptnenner mit 6 ist 6."
+     ],
+     "gen": "A",
+     "th": "order"
+    },
+    {
+     "id": "c12",
+     "q": "3/4 · (1/2 − 1/6) =",
+     "a": "1/4",
+     "steps": [
+      [
+       "1/2 − 1/6 = 3/6 − 1/6 = 1/3",
+       "Klammer zuerst"
+      ],
+      [
+       "3/4 · 1/3 = 1/4",
+       ""
+      ]
+     ],
+     "hints": [
+      "Zuerst die Klammer.",
+      "1/2 − 1/6: Erweitere auf Sechstel.",
+      "Das Ergebnis der Klammer lässt sich noch kürzen. Dann mal 3/4."
+     ],
+     "gen": "B",
+     "th": "order"
+    },
+    {
+     "id": "c13",
+     "q": "7/8 − 3/4 : 3/2 =",
+     "a": "3/8",
+     "steps": [
+      [
+       "3/4 : 3/2 = 3/4 · 2/3 = 1/2",
+       "zuerst teilen"
+      ],
+      [
+       "7/8 − 4/8 = 3/8",
+       "Hauptnenner 8"
+      ]
+     ],
+     "hints": [
+      "Geteilt kommt vor Minus.",
+      "Rechne zuerst 3/4 : 3/2 mit dem Kehrbruch.",
+      "Das Zwischenergebnis ist ein halb. Welcher Hauptnenner passt zu 8 und 2?"
+     ],
+     "gen": "A",
+     "th": "order"
+    },
+    {
+     "id": "c14",
+     "q": "2/5 · (3/4 − 1/6) =",
+     "a": "7/30",
+     "steps": [
+      [
+       "3/4 − 1/6 = 9/12 − 2/12 = 7/12",
+       "Klammer zuerst"
+      ],
+      [
+       "2/5 · 7/12 = 14/60 = 7/30",
+       "mit 2 kürzen"
+      ]
+     ],
+     "hints": [
+      "Zuerst die Klammer.",
+      "3/4 − 1/6: Hauptnenner 12.",
+      "Das Ergebnis der Klammer mal 2/5 rechnen und mit 2 kürzen."
+     ],
+     "gen": "B",
+     "th": "order"
+    },
+    {
+     "id": "c15",
+     "q": "3 1/9 : 4 =",
+     "a": "7/9",
+     "ans": [
+      "7/9"
+     ],
+     "steps": [
+      [
+       "3 1/9 = 28/9",
+       "gemischte Zahl umwandeln"
+      ],
+      [
+       "28/9 : 4 = 28/9 · 1/4",
+       "mal den Kehrbruch"
+      ],
+      [
+       "= 28/36 = 7/9",
+       "mit 4 kürzen"
+      ]
+     ],
+     "hints": [
+      "Wandle die gemischte Zahl zuerst in einen Bruch um.",
+      "3 1/9: 3 mal 9 plus 1 gibt den Zähler. Der Nenner bleibt 9.",
+      "Geteilt durch 4 heisst: mal 1/4. Danach mit 4 kürzen."
+     ],
+     "th": "gem"
+    },
+    {
+     "id": "c16",
+     "q": "1 1/4 : 12 1/2 + 1 3/10 =",
+     "a": "7/5",
+     "ans": [
+      "7/5",
+      "1 2/5"
+     ],
+     "steps": [
+      [
+       "1 1/4 = 5/4 und 12 1/2 = 25/2",
+       "beide umwandeln"
+      ],
+      [
+       "5/4 : 25/2 = 5/4 · 2/25 = 1/10",
+       "geteilt vor plus"
+      ],
+      [
+       "1/10 + 1 3/10 = 1/10 + 13/10 = 14/10",
+       "gleicher Nenner"
+      ],
+      [
+       "= 7/5 = 1 2/5",
+       "mit 2 kürzen"
+      ]
+     ],
+     "hints": [
+      "Wandle zuerst alle gemischten Zahlen in Brüche um.",
+      "Geteilt kommt vor Plus. Rechne zuerst 5/4 : 25/2.",
+      "5/4 · 2/25 ergibt nach dem Kürzen ein Zehntel.",
+      "Dann 1/10 plus 13/10. Das Ergebnis darfst du als 7/5 oder 1 2/5 schreiben."
+     ],
+     "th": "gem"
+    },
+    {
+     "id": "c17",
+     "q": "(3/4 + 5/8) : (7/12 − 1/6) =",
+     "a": "33/10",
+     "ans": [
+      "33/10",
+      "3 3/10"
+     ],
+     "steps": [
+      [
+       "3/4 + 5/8 = 6/8 + 5/8 = 11/8",
+       "oben: Hauptnenner 8"
+      ],
+      [
+       "7/12 − 1/6 = 7/12 − 2/12 = 5/12",
+       "unten: Hauptnenner 12"
+      ],
+      [
+       "11/8 : 5/12 = 11/8 · 12/5 = 132/40",
+       "mal den Kehrbruch"
+      ],
+      [
+       "= 33/10 = 3 3/10",
+       "mit 4 kürzen"
+      ]
+     ],
+     "hints": [
+      "Der grosse Bruchstrich heisst geteilt. Rechne zuerst oben und unten getrennt.",
+      "Oben: 3/4 + 5/8 mit Hauptnenner 8. Unten: 7/12 − 1/6 mit Hauptnenner 12.",
+      "Du erhältst 11/8 durch 5/12. Mal den Kehrbruch rechnen und mit 4 kürzen."
+     ],
+     "th": "div"
+    },
+    {
+     "id": "c18",
+     "q": "2 1/3 : 5 =",
+     "a": "7/15",
+     "ans": [
+      "7/15"
+     ],
+     "steps": [
+      [
+       "2 1/3 = 7/3",
+       "gemischte Zahl umwandeln"
+      ],
+      [
+       "7/3 : 5 = 7/3 · 1/5",
+       "mal den Kehrbruch"
+      ],
+      [
+       "= 7/15",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Wandle die gemischte Zahl zuerst in einen Bruch um.",
+      "2 mal 3 plus 1 gibt den Zähler. Der Nenner bleibt 3.",
+      "Geteilt durch 5 heisst: mal 1/5. Danach kürzen."
+     ],
+     "th": "gem"
+    },
+    {
+     "id": "c19",
+     "q": "4 2/5 : 6 =",
+     "a": "11/15",
+     "ans": [
+      "11/15"
+     ],
+     "steps": [
+      [
+       "4 2/5 = 22/5",
+       "gemischte Zahl umwandeln"
+      ],
+      [
+       "22/5 : 6 = 22/5 · 1/6",
+       "mal den Kehrbruch"
+      ],
+      [
+       "= 11/15",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Wandle die gemischte Zahl zuerst in einen Bruch um.",
+      "4 mal 5 plus 2 gibt den Zähler. Der Nenner bleibt 5.",
+      "Geteilt durch 6 heisst: mal 1/6. Danach kürzen."
+     ],
+     "th": "gem"
+    },
+    {
+     "id": "c20",
+     "q": "1 3/4 : 7 =",
+     "a": "1/4",
+     "ans": [
+      "1/4"
+     ],
+     "steps": [
+      [
+       "1 3/4 = 7/4",
+       "gemischte Zahl umwandeln"
+      ],
+      [
+       "7/4 : 7 = 7/4 · 1/7",
+       "mal den Kehrbruch"
+      ],
+      [
+       "= 1/4",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Wandle die gemischte Zahl zuerst in einen Bruch um.",
+      "1 mal 4 plus 3 gibt den Zähler. Der Nenner bleibt 4.",
+      "Geteilt durch 7 heisst: mal 1/7. Danach kürzen."
+     ],
+     "th": "gem"
+    },
+    {
+     "id": "c21",
+     "q": "2 1/2 : 1 1/4 + 2 1/5 =",
+     "a": "21/5",
+     "ans": [
+      "21/5",
+      "4 1/5"
+     ],
+     "steps": [
+      [
+       "2 1/2 = 5/2, 1 1/4 = 5/4, 2 1/5 = 11/5",
+       "alle umwandeln"
+      ],
+      [
+       "5/2 : 5/4 = 5/2 · 4/5 = 2",
+       "geteilt vor plus"
+      ],
+      [
+       "2 + 11/5 = 10/5 + 11/5 = 21/5",
+       "gleicher Nenner"
+      ],
+      [
+       "= 4 1/5",
+       "fertig"
+      ]
+     ],
+     "hints": [
+      "Wandle zuerst alle gemischten Zahlen in Brüche um.",
+      "Geteilt kommt vor Plus. Rechne zuerst 5/2 : 5/4.",
+      "Geteilt durch einen Bruch: mal den Kehrbruch. Dann kürzen.",
+      "Zum Schluss plus: Hauptnenner suchen. Das Ergebnis darf als Bruch oder gemischte Zahl stehen."
+     ],
+     "th": "gem"
+    },
+    {
+     "id": "c22",
+     "q": "3 1/3 : 2 1/2 + 1 1/6 =",
+     "a": "5/2",
+     "ans": [
+      "5/2",
+      "2 1/2"
+     ],
+     "steps": [
+      [
+       "3 1/3 = 10/3, 2 1/2 = 5/2, 1 1/6 = 7/6",
+       "alle umwandeln"
+      ],
+      [
+       "10/3 : 5/2 = 10/3 · 2/5 = 4/3",
+       "geteilt vor plus"
+      ],
+      [
+       "4/3 + 7/6 = 8/6 + 7/6 = 5/2",
+       "gleicher Nenner"
+      ],
+      [
+       "= 2 1/2",
+       "fertig"
+      ]
+     ],
+     "hints": [
+      "Wandle zuerst alle gemischten Zahlen in Brüche um.",
+      "Geteilt kommt vor Plus. Rechne zuerst 10/3 : 5/2.",
+      "Geteilt durch einen Bruch: mal den Kehrbruch. Dann kürzen.",
+      "Zum Schluss plus: Hauptnenner suchen. Das Ergebnis darf als Bruch oder gemischte Zahl stehen."
+     ],
+     "th": "gem"
+    },
+    {
+     "id": "c23",
+     "q": "1 1/2 : 4 1/2 + 2 2/3 =",
+     "a": "3",
+     "ans": [
+      "3"
+     ],
+     "steps": [
+      [
+       "1 1/2 = 3/2, 4 1/2 = 9/2, 2 2/3 = 8/3",
+       "alle umwandeln"
+      ],
+      [
+       "3/2 : 9/2 = 3/2 · 2/9 = 1/3",
+       "geteilt vor plus"
+      ],
+      [
+       "1/3 + 8/3 = 1/3 + 8/3 = 3",
+       "gleicher Nenner"
+      ],
+      [
+       "= 3",
+       "fertig"
+      ]
+     ],
+     "hints": [
+      "Wandle zuerst alle gemischten Zahlen in Brüche um.",
+      "Geteilt kommt vor Plus. Rechne zuerst 3/2 : 9/2.",
+      "Geteilt durch einen Bruch: mal den Kehrbruch. Dann kürzen.",
+      "Zum Schluss plus: Hauptnenner suchen. Das Ergebnis darf als Bruch oder gemischte Zahl stehen."
+     ],
+     "th": "gem"
+    },
+    {
+     "id": "c24",
+     "q": "(1/2 + 1/3) : (5/6 − 1/4) =",
+     "a": "10/7",
+     "ans": [
+      "10/7",
+      "1 3/7"
+     ],
+     "steps": [
+      [
+       "1/2 + 1/3 = 3/6 + 2/6 = 5/6",
+       "erste Klammer"
+      ],
+      [
+       "5/6 − 1/4 = 10/12 − 3/12 = 7/12",
+       "zweite Klammer"
+      ],
+      [
+       "5/6 : 7/12 = 5/6 · 12/7 = 10/7",
+       "mal den Kehrbruch"
+      ],
+      [
+       "= 1 3/7",
+       "fertig"
+      ]
+     ],
+     "hints": [
+      "Rechne zuerst beide Klammern einzeln.",
+      "Suche bei jeder Klammer den Hauptnenner.",
+      "Dann teilen: mal den Kehrbruch. Zum Schluss kürzen."
+     ],
+     "th": "div"
+    },
+    {
+     "id": "c25",
+     "q": "(2/3 + 1/6) : (3/4 − 1/2) =",
+     "a": "10/3",
+     "ans": [
+      "10/3",
+      "3 1/3"
+     ],
+     "steps": [
+      [
+       "2/3 + 1/6 = 4/6 + 1/6 = 5/6",
+       "erste Klammer"
+      ],
+      [
+       "3/4 − 1/2 = 3/4 − 2/4 = 1/4",
+       "zweite Klammer"
+      ],
+      [
+       "5/6 : 1/4 = 5/6 · 4 = 10/3",
+       "mal den Kehrbruch"
+      ],
+      [
+       "= 3 1/3",
+       "fertig"
+      ]
+     ],
+     "hints": [
+      "Rechne zuerst beide Klammern einzeln.",
+      "Suche bei jeder Klammer den Hauptnenner.",
+      "Dann teilen: mal den Kehrbruch. Zum Schluss kürzen."
+     ],
+     "th": "div"
+    },
+    {
+     "id": "c26",
+     "q": "(5/6 − 1/3) : (1/2 + 1/4) =",
+     "a": "2/3",
+     "ans": [
+      "2/3"
+     ],
+     "steps": [
+      [
+       "5/6 − 1/3 = 5/6 − 2/6 = 1/2",
+       "erste Klammer"
+      ],
+      [
+       "1/2 + 1/4 = 2/4 + 1/4 = 3/4",
+       "zweite Klammer"
+      ],
+      [
+       "1/2 : 3/4 = 1/2 · 4/3 = 2/3",
+       "mal den Kehrbruch"
+      ],
+      [
+       "= 2/3",
+       "fertig"
+      ]
+     ],
+     "hints": [
+      "Rechne zuerst beide Klammern einzeln.",
+      "Suche bei jeder Klammer den Hauptnenner.",
+      "Dann teilen: mal den Kehrbruch. Zum Schluss kürzen."
+     ],
+     "th": "div"
+    }
+   ],
+   "exam": {
+    "minutes": 30,
+    "questions": [
+     {
+      "id": "q1",
+      "type": "input",
+      "q": "3/4 − 5/6 : 15/12 = (so weit wie möglich kürzen)",
+      "answer": [
+       "1/12"
+      ],
+      "explain": "5/6 : 15/12 = 5/6 · 12/15 = 2/3. Dann 3/4 − 2/3 = 9/12 − 8/12 = 1/12.",
+      "ref": "c1"
+     },
+     {
+      "id": "q2",
+      "type": "input",
+      "q": "5/6 · (2/3 − 3/10) = (so weit wie möglich kürzen)",
+      "answer": [
+       "11/36"
+      ],
+      "explain": "Klammer: 20/30 − 9/30 = 11/30. Dann 5/6 · 11/30 = 55/180 = 11/36.",
+      "ref": "c2"
+     },
+     {
+      "id": "q3",
+      "type": "input",
+      "q": "5/6 − 1/2 : 3/4 = (so weit wie möglich kürzen)",
+      "answer": [
+       "1/6"
+      ],
+      "explain": "1/2 : 3/4 = 1/2 · 4/3 = 2/3. Dann 5/6 − 4/6 = 1/6.",
+      "ref": "c11"
+     },
+     {
+      "id": "q4",
+      "type": "input",
+      "q": "3/4 · (1/2 − 1/6) = (so weit wie möglich kürzen)",
+      "answer": [
+       "1/4"
+      ],
+      "explain": "Klammer: 3/6 − 1/6 = 2/6 = 1/3. Dann 3/4 · 1/3 = 1/4.",
+      "ref": "c12"
+     },
+     {
+      "id": "q5",
+      "type": "input",
+      "q": "7/8 − 3/4 : 3/2 = (so weit wie möglich kürzen)",
+      "answer": [
+       "3/8"
+      ],
+      "explain": "3/4 : 3/2 = 3/4 · 2/3 = 1/2. Dann 7/8 − 4/8 = 3/8.",
+      "ref": "c13"
+     },
+     {
+      "id": "q6",
+      "type": "input",
+      "q": "2/5 · (3/4 − 1/6) = (so weit wie möglich kürzen)",
+      "answer": [
+       "7/30"
+      ],
+      "explain": "Klammer: 9/12 − 2/12 = 7/12. Dann 2/5 · 7/12 = 14/60 = 7/30.",
+      "ref": "c14"
+     }
+    ]
+   },
+   "theory": {
+    "order": {
+     "h": "Reihenfolge",
+     "text": "Zuerst die Klammer. Dann Mal und Geteilt. Zuletzt Plus und Minus.",
+     "lines": [
+      [
+       "( ) zuerst",
+       "1"
+      ],
+      [
+       "· und : danach",
+       "2"
+      ],
+      [
+       "+ und − zuletzt",
+       "3"
+      ]
+     ]
+    },
+    "div": {
+     "h": "Durch einen Bruch teilen",
+     "text": "Geteilt durch einen Bruch heisst: mal den Kehrbruch. Beim Kehrbruch tauschen Zähler und Nenner die Plätze.",
+     "lines": [
+      [
+       "3/4 : 2/5 = 3/4 · 5/2",
+       "Kehrbruch von 2/5 ist 5/2"
+      ]
+     ]
+    },
+    "hn": {
+     "h": "Hauptnenner",
+     "text": "Plus und Minus gehen nur mit gleichem Nenner. Suche eine Zahl, in die beide Nenner passen, und erweitere beide Brüche darauf.",
+     "lines": [
+      [
+       "1/2 + 1/3 = 3/6 + 2/6",
+       "Hauptnenner 6"
+      ]
+     ]
+    },
+    "gem": {
+     "h": "Gemischte Zahl",
+     "text": "Eine gemischte Zahl wie 3 1/9 ist ganze Zahl plus Bruch. Zum Rechnen zuerst in einen unechten Bruch umwandeln: ganze Zahl mal Nenner plus Zähler.",
+     "lines": [
+      [
+       "3 1/9 = (3·9+1)/9 = 28/9",
+       "ganze Zahl mal Nenner plus Zähler"
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "id": "kl5-engl-unit2-music",
+   "child": "kl5",
+   "subject": "engl",
+   "chapter": "Unit 2 · Music",
+   "title": "Unit 2 · Music",
+   "explain": [
+    {
+     "h": "Instrumente (1/3)",
+     "text": "Tippe auf eine Karte, um die Übersetzung zu sehen. Mit dem Lautsprecher hörst du das Wort.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "clapsticks",
+         "Schlaghölzer",
+         "🥢"
+        ],
+        [
+         "orchestra",
+         "Orchester",
+         "🎼"
+        ],
+        [
+         "brass instrument",
+         "Blechblasinstrument",
+         "🎺"
+        ],
+        [
+         "percussion instrument",
+         "Schlaginstrument",
+         "🪘"
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Instrumente (2/3)",
+     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "keyboard instrument",
+         "Tasteninstrument",
+         "🎹"
+        ],
+        [
+         "string instrument",
+         "Saiteninstrument",
+         "🎸"
+        ],
+        [
+         "woodwind instrument",
+         "Holzblasinstrument",
+         "🎷"
+        ],
+        [
+         "electric keyboard",
+         "elektrisches Keyboard",
+         "🎹"
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Instrumente (3/3)",
+     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "guitar",
+         "Gitarre",
+         "🎸"
+        ],
+        [
+         "piano",
+         "Klavier",
+         "🎹"
+        ],
+        [
+         "drums",
+         "Schlagzeug",
+         "🥁"
+        ],
+        [
+         "violin",
+         "Geige / Violine",
+         "🎻"
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Tätigkeiten und Dinge (1/4)",
+     "text": "Erst raten, dann aufdecken. So merkst du es dir besser.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "breathe",
+         "atmen",
+         "💨"
+        ],
+        [
+         "choose",
+         "auswählen",
+         "👆"
+        ],
+        [
+         "clean",
+         "reinigen / sauber machen",
+         "🧽"
+        ],
+        [
+         "decorate",
+         "dekorieren",
+         "🎄"
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Tätigkeiten und Dinge (2/4)",
+     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "hear",
+         "hören",
+         "👂"
+        ],
+        [
+         "hit",
+         "schlagen",
+         "🔨"
+        ],
+        [
+         "make",
+         "machen / herstellen",
+         "🛠️"
+        ],
+        [
+         "paint",
+         "malen / streichen",
+         "🎨"
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Tätigkeiten und Dinge (3/4)",
+     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "shake",
+         "schütteln",
+         ""
+        ],
+        [
+         "branch",
+         "Ast",
+         "🌿"
+        ],
+        [
+         "tree",
+         "Baum",
+         "🌳"
+        ],
+        [
+         "wood",
+         "Holz",
+         "🪵"
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Tätigkeiten und Dinge (4/4)",
+     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "shape",
+         "Form",
+         "🔷"
+        ],
+        [
+         "clue",
+         "Hinweis",
+         "🔍"
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Fragewörter",
+     "text": "Mit diesen Wörtern stellst du Fragen. Die Aussprache steht in Klammern.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "what",
+         "was",
+         "❓",
+         "wuat"
+        ],
+        [
+         "where",
+         "wo",
+         "📍",
+         "wuär"
+        ],
+        [
+         "how",
+         "wie",
+         "🤔",
+         "hauw"
+        ],
+        [
+         "who",
+         "wer",
+         "🧑",
+         "hoo"
+        ],
+        [
+         "when",
+         "wann",
+         "⏰",
+         "wenn"
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Sätze über Musik (1/2)",
+     "text": "Lies den Satz, versuche ihn zu übersetzen und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "What musical instrument do you play?",
+         "Was für ein Instrument spielst du?",
+         "",
+         ""
+        ],
+        [
+         "Who do you play it with?",
+         "Mit wem spielst du es?",
+         "",
+         ""
+        ],
+        [
+         "How do you play it?",
+         "Wie spielst du es?",
+         "",
+         ""
+        ],
+        [
+         "When do you practice?",
+         "Wann übst du?",
+         "",
+         ""
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Sätze über Musik (2/2)",
+     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "Where do you practice?",
+         "Wo übst du?",
+         "",
+         ""
+        ],
+        [
+         "We practice on stage at school.",
+         "Wir üben auf der Schulbühne.",
+         "",
+         ""
+        ],
+        [
+         "I like playing the recorder.",
+         "Ich spiele gerne Flöte.",
+         "",
+         ""
+        ],
+        [
+         "You use your fingers and mouth to play the saxophone.",
+         "Du benützt deine Finger und deinen Mund, um das Saxofon zu spielen.",
+         "",
+         ""
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    }
+   ],
+   "cards": [
+    {
+     "id": "w1",
+     "fw": "clapsticks",
+     "de": [
+      "Schlaghölzer"
+     ],
+     "emo": "🥢",
+     "grp": "inst"
+    },
+    {
+     "id": "w2",
+     "fw": "orchestra",
+     "de": [
+      "Orchester"
+     ],
+     "emo": "🎼",
+     "grp": "inst"
+    },
+    {
+     "id": "w3",
+     "fw": "brass instrument",
+     "de": [
+      "Blechblasinstrument"
+     ],
+     "emo": "🎺",
+     "grp": "inst"
+    },
+    {
+     "id": "w4",
+     "fw": "percussion instrument",
+     "de": [
+      "Schlaginstrument"
+     ],
+     "emo": "🪘",
+     "grp": "inst"
+    },
+    {
+     "id": "w5",
+     "fw": "keyboard instrument",
+     "de": [
+      "Tasteninstrument"
+     ],
+     "emo": "🎹",
+     "grp": "inst"
+    },
+    {
+     "id": "w6",
+     "fw": "string instrument",
+     "de": [
+      "Saiteninstrument"
+     ],
+     "emo": "🎸",
+     "grp": "inst"
+    },
+    {
+     "id": "w7",
+     "fw": "woodwind instrument",
+     "de": [
+      "Holzblasinstrument"
+     ],
+     "emo": "🎷",
+     "grp": "inst"
+    },
+    {
+     "id": "w8",
+     "fw": "electric keyboard",
+     "de": [
+      "elektrisches Keyboard"
+     ],
+     "emo": "🎹",
+     "grp": "inst"
+    },
+    {
+     "id": "w9",
+     "fw": "guitar",
+     "de": [
+      "Gitarre"
+     ],
+     "emo": "🎸",
+     "grp": "inst"
+    },
+    {
+     "id": "w10",
+     "fw": "piano",
+     "de": [
+      "Klavier"
+     ],
+     "emo": "🎹",
+     "grp": "inst"
+    },
+    {
+     "id": "w11",
+     "fw": "drums",
+     "de": [
+      "Schlagzeug"
+     ],
+     "emo": "🥁",
+     "grp": "inst"
+    },
+    {
+     "id": "w12",
+     "fw": "violin",
+     "de": [
+      "Geige",
+      "Violine"
+     ],
+     "emo": "🎻",
+     "grp": "inst"
+    },
+    {
+     "id": "w13",
+     "fw": "breathe",
+     "de": [
+      "atmen"
+     ],
+     "emo": "💨",
+     "grp": "verb"
+    },
+    {
+     "id": "w14",
+     "fw": "choose",
+     "de": [
+      "auswählen"
+     ],
+     "emo": "👆",
+     "grp": "verb"
+    },
+    {
+     "id": "w15",
+     "fw": "clean",
+     "de": [
+      "reinigen",
+      "sauber machen"
+     ],
+     "emo": "🧽",
+     "grp": "verb"
+    },
+    {
+     "id": "w16",
+     "fw": "decorate",
+     "de": [
+      "dekorieren"
+     ],
+     "emo": "🎄",
+     "grp": "verb"
+    },
+    {
+     "id": "w17",
+     "fw": "hear",
+     "de": [
+      "hören"
+     ],
+     "emo": "👂",
+     "grp": "verb"
+    },
+    {
+     "id": "w18",
+     "fw": "hit",
+     "de": [
+      "schlagen"
+     ],
+     "emo": "🔨",
+     "grp": "verb"
+    },
+    {
+     "id": "w19",
+     "fw": "make",
+     "de": [
+      "machen",
+      "herstellen"
+     ],
+     "emo": "🛠️",
+     "grp": "verb"
+    },
+    {
+     "id": "w20",
+     "fw": "paint",
+     "de": [
+      "malen",
+      "streichen"
+     ],
+     "emo": "🎨",
+     "grp": "verb"
+    },
+    {
+     "id": "w21",
+     "fw": "shake",
+     "de": [
+      "schütteln"
+     ],
+     "grp": "verb"
+    },
+    {
+     "id": "w22",
+     "fw": "branch",
+     "de": [
+      "Ast"
+     ],
+     "emo": "🌿",
+     "grp": "noun"
+    },
+    {
+     "id": "w23",
+     "fw": "tree",
+     "de": [
+      "Baum"
+     ],
+     "emo": "🌳",
+     "grp": "noun"
+    },
+    {
+     "id": "w24",
+     "fw": "wood",
+     "de": [
+      "Holz"
+     ],
+     "emo": "🪵",
+     "grp": "noun"
+    },
+    {
+     "id": "w25",
+     "fw": "shape",
+     "de": [
+      "Form"
+     ],
+     "emo": "🔷",
+     "grp": "noun"
+    },
+    {
+     "id": "w26",
+     "fw": "clue",
+     "de": [
+      "Hinweis"
+     ],
+     "emo": "🔍",
+     "grp": "noun"
+    },
+    {
+     "id": "w27",
+     "fw": "what",
+     "de": [
+      "was"
+     ],
+     "emo": "❓",
+     "grp": "qw",
+     "pron": "wuat"
+    },
+    {
+     "id": "w28",
+     "fw": "where",
+     "de": [
+      "wo"
+     ],
+     "emo": "📍",
+     "grp": "qw",
+     "pron": "wuär"
+    },
+    {
+     "id": "w29",
+     "fw": "how",
+     "de": [
+      "wie"
+     ],
+     "emo": "🤔",
+     "grp": "qw",
+     "pron": "hauw"
+    },
+    {
+     "id": "w30",
+     "fw": "who",
+     "de": [
+      "wer"
+     ],
+     "emo": "🧑",
+     "grp": "qw",
+     "pron": "hoo"
+    },
+    {
+     "id": "w31",
+     "fw": "when",
+     "de": [
+      "wann"
+     ],
+     "emo": "⏰",
+     "grp": "qw",
+     "pron": "wenn"
+    },
+    {
+     "id": "w32",
+     "fw": "What musical instrument do you play?",
+     "de": [
+      "Was für ein Instrument spielst du?"
+     ],
+     "grp": "sent"
+    },
+    {
+     "id": "w33",
+     "fw": "Who do you play it with?",
+     "de": [
+      "Mit wem spielst du es?"
+     ],
+     "grp": "sent"
+    },
+    {
+     "id": "w34",
+     "fw": "How do you play it?",
+     "de": [
+      "Wie spielst du es?"
+     ],
+     "grp": "sent"
+    },
+    {
+     "id": "w35",
+     "fw": "When do you practice?",
+     "de": [
+      "Wann übst du?"
+     ],
+     "grp": "sent"
+    },
+    {
+     "id": "w36",
+     "fw": "Where do you practice?",
+     "de": [
+      "Wo übst du?"
+     ],
+     "grp": "sent"
+    },
+    {
+     "id": "w37",
+     "fw": "We practice on stage at school.",
+     "de": [
+      "Wir üben auf der Schulbühne."
+     ],
+     "grp": "sent"
+    },
+    {
+     "id": "w38",
+     "fw": "I like playing the recorder.",
+     "de": [
+      "Ich spiele gerne Flöte."
+     ],
+     "grp": "sent"
+    },
+    {
+     "id": "w39",
+     "fw": "You use your fingers and mouth to play the saxophone.",
+     "de": [
+      "Du benützt deine Finger und deinen Mund, um das Saxofon zu spielen."
+     ],
+     "grp": "sent"
+    }
+   ],
+   "exam": {
+    "minutes": 30,
+    "questions": [
+     {
+      "id": "q1",
+      "q": "Wie heisst «Gitarre» auf Englisch?",
+      "explain": "Gitarre = guitar",
+      "ref": "w9",
+      "type": "input",
+      "answer": [
+       "guitar"
+      ]
+     },
+     {
+      "id": "q2",
+      "q": "Wie heisst «Klavier» auf Englisch?",
+      "explain": "Klavier = piano",
+      "ref": "w10",
+      "type": "input",
+      "answer": [
+       "piano"
+      ]
+     },
+     {
+      "id": "q3",
+      "q": "Wie heisst «Schlagzeug» auf Englisch?",
+      "explain": "Schlagzeug = drums",
+      "ref": "w11",
+      "type": "input",
+      "answer": [
+       "drums"
+      ]
+     },
+     {
+      "id": "q4",
+      "q": "Wie heisst «Orchester» auf Englisch?",
+      "explain": "Orchester = orchestra",
+      "ref": "w2",
+      "type": "input",
+      "answer": [
+       "orchestra"
+      ]
+     },
+     {
+      "id": "q5",
+      "q": "Wie heisst «Geige» auf Englisch?",
+      "explain": "Geige = violin",
+      "ref": "w12",
+      "type": "input",
+      "answer": [
+       "violin"
+      ]
+     },
+     {
+      "id": "q6",
+      "q": "Wie heisst «Baum» auf Englisch?",
+      "explain": "Baum = tree",
+      "ref": "w23",
+      "type": "input",
+      "answer": [
+       "tree"
+      ]
+     },
+     {
+      "id": "q7",
+      "q": "Was heisst «breathe» auf Deutsch?",
+      "explain": "breathe = atmen",
+      "ref": "w13",
+      "type": "input",
+      "answer": [
+       "atmen"
+      ]
+     },
+     {
+      "id": "q8",
+      "q": "Was heisst «hear» auf Deutsch?",
+      "explain": "hear = hören",
+      "ref": "w17",
+      "type": "input",
+      "answer": [
+       "hören"
+      ]
+     },
+     {
+      "id": "q9",
+      "q": "Was heisst «branch» auf Deutsch?",
+      "explain": "branch = Ast",
+      "ref": "w22",
+      "type": "input",
+      "answer": [
+       "Ast"
+      ]
+     },
+     {
+      "id": "q10",
+      "q": "Was heisst «shake» auf Deutsch?",
+      "explain": "shake = schütteln",
+      "ref": "w21",
+      "type": "input",
+      "answer": [
+       "schütteln"
+      ]
+     },
+     {
+      "id": "q11",
+      "q": "Was heisst «clapsticks»?",
+      "explain": "clapsticks = Schlaghölzer",
+      "ref": "w1",
+      "type": "mc",
+      "options": [
+       "Tasteninstrument",
+       "Klavier",
+       "Schlaghölzer",
+       "Schlagzeug"
+      ],
+      "answer": 2
+     },
+     {
+      "id": "q12",
+      "q": "Was heisst «woodwind instrument»?",
+      "explain": "woodwind instrument = Holzblasinstrument",
+      "ref": "w7",
+      "type": "mc",
+      "options": [
+       "Holzblasinstrument",
+       "Orchester",
+       "Schlagzeug",
+       "Geige"
+      ],
+      "answer": 0
+     },
+     {
+      "id": "q13",
+      "q": "Was heisst «percussion instrument»?",
+      "explain": "percussion instrument = Schlaginstrument",
+      "ref": "w4",
+      "type": "mc",
+      "options": [
+       "Klavier",
+       "Tasteninstrument",
+       "Schlagzeug",
+       "Schlaginstrument"
+      ],
+      "answer": 3
+     },
+     {
+      "id": "q14",
+      "q": "Übersetze ins Englische: Wir üben auf der Schulbühne.",
+      "explain": "We practice on stage at school.",
+      "ref": "w37",
+      "type": "input",
+      "answer": [
+       "We practice on stage at school."
+      ]
+     },
+     {
+      "id": "q15",
+      "q": "Übersetze ins Englische: Wann übst du?",
+      "explain": "When do you practice?",
+      "ref": "w35",
+      "type": "input",
+      "answer": [
+       "When do you practice?"
+      ]
+     },
+     {
+      "id": "q16",
+      "q": "Übersetze ins Englische: Wo übst du?",
+      "explain": "Where do you practice?",
+      "ref": "w36",
+      "type": "input",
+      "answer": [
+       "Where do you practice?"
+      ]
+     },
+     {
+      "id": "q17",
+      "q": "Welches Fragewort passt? «___ do you play it with?» (Mit wem spielst du es?)",
+      "explain": "Who = Wer. «Who do you play it with?» heisst: Mit wem spielst du es?",
+      "ref": "w33",
+      "type": "input",
+      "answer": [
+       "Who"
+      ]
+     }
+    ]
+   },
+   "theory": {
+    "inst": {
+     "h": "Instrumente",
+     "text": "Instrumente werden nach der Art eingeteilt: string (Saiten), brass (Blech), woodwind (Holz), percussion (Schlag), keyboard (Tasten)."
+    },
+    "verb": {
+     "h": "Tätigkeiten",
+     "text": "Diese Wörter sagen, was man tut. Nach «to» bleiben sie unverändert, zum Beispiel to hear, to make, to paint."
+    },
+    "noun": {
+     "h": "Dinge und Formen",
+     "text": "Branch (Ast), tree (Baum) und wood (Holz) gehören zusammen: Der Baum hat Äste und besteht aus Holz."
+    },
+    "qw": {
+     "h": "Fragewörter",
+     "text": "What = Was, Where = Wo, How = Wie, Who = Wer, When = Wann. Damit beginnen Fragen, zum Beispiel: Where do you practice?"
+    },
+    "sent": {
+     "h": "Sätze bauen",
+     "text": "Fragen mit do: Fragewort + do + du + Verb. Beispiel: When do you practice? Antworten sagen, was man tut: We practice on stage at school."
+    }
+   }
+  },
+  {
+   "id": "kl5-franz-unit2-famille",
+   "child": "kl5",
+   "subject": "franz",
+   "chapter": "Unit 2 · Famille",
+   "title": "Unit 2 · Famille",
+   "explain": [
+    {
+     "h": "Die Familie (1/4)",
+     "text": "Tippe auf eine Karte, um die Übersetzung zu sehen. Mit dem Lautsprecher hörst du das Wort.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "la famille",
+         "Familie",
+         "👨‍👩‍👧"
+        ],
+        [
+         "un enfant",
+         "Kind",
+         "🧒"
+        ],
+        [
+         "la mère",
+         "Mutter",
+         "👩"
+        ],
+        [
+         "le père",
+         "Vater",
+         "👨"
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Die Familie (2/4)",
+     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "les parents",
+         "Eltern",
+         "👫"
+        ],
+        [
+         "la sœur",
+         "Schwester",
+         "👧"
+        ],
+        [
+         "le frère",
+         "Bruder",
+         "👦"
+        ],
+        [
+         "la grand-mère",
+         "Grossmutter",
+         "👵"
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Die Familie (3/4)",
+     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "la cousine",
+         "Cousine",
+         "👧"
+        ],
+        [
+         "le cousin",
+         "Cousin",
+         "👦"
+        ],
+        [
+         "le bébé",
+         "Baby",
+         "👶"
+        ],
+        [
+         "la fille",
+         "Tochter",
+         "👧"
+        ],
+        [
+         "le fils",
+         "Sohn",
+         "👦"
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Die Familie (4/4)",
+     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "la cousine",
+         "Cousine",
+         "👧"
+        ],
+        [
+         "le cousin",
+         "Cousin",
+         "👦"
+        ],
+        [
+         "le bébé",
+         "Baby",
+         "👶"
+        ],
+        [
+         "la fille",
+         "Tochter",
+         "👧"
+        ],
+        [
+         "le fils",
+         "Sohn",
+         "👦"
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Sein, heissen, wer (1/3)",
+     "text": "Mit diesen kleinen Wörtern sagst du, wer jemand ist.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "voici",
+         "hier ist",
+         "",
+         ""
+        ],
+        [
+         "il est",
+         "er ist",
+         "",
+         ""
+        ],
+        [
+         "elle est",
+         "sie ist",
+         "",
+         ""
+        ],
+        [
+         "ils sont",
+         "sie sind (m)",
+         "",
+         ""
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Sein, heissen, wer (2/3)",
+     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "elles sont",
+         "sie sind (f)",
+         "",
+         ""
+        ],
+        [
+         "c'est",
+         "das ist",
+         "",
+         ""
+        ],
+        [
+         "ce sont",
+         "das sind",
+         "",
+         ""
+        ],
+        [
+         "qui",
+         "wer",
+         "",
+         ""
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Sein, heissen, wer (3/3)",
+     "text": "Weiter so: tippe auf die Karten, rate zuerst und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "il s'appelle",
+         "er heisst",
+         "",
+         ""
+        ],
+        [
+         "elle s'appelle",
+         "sie heisst",
+         "",
+         ""
+        ],
+        [
+         "ils s'appellent",
+         "sie heissen (m)",
+         "",
+         ""
+        ],
+        [
+         "elles s'appellent",
+         "sie heissen (f)",
+         "",
+         ""
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Steckbrief",
+     "text": "So heissen die Teile einer fiche personnelle.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "la fiche personnelle",
+         "Steckbrief",
+         "📇"
+        ],
+        [
+         "le nom",
+         "Name",
+         "🏷️"
+        ],
+        [
+         "le prénom",
+         "Vorname",
+         "✍️"
+        ],
+        [
+         "la langue",
+         "Sprache",
+         "🗣️"
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    },
+    {
+     "h": "Sätze zur Familie",
+     "text": "Lies den Satz, versuche ihn zu übersetzen und decke dann auf.",
+     "visuals": [
+      {
+       "type": "flip",
+       "items": [
+        [
+         "Lionel est le frère de Nathalie.",
+         "Lionel ist der Bruder von Nathalie.",
+         "",
+         ""
+        ],
+        [
+         "C'est ma famille.",
+         "Das ist meine Familie.",
+         "",
+         ""
+        ],
+        [
+         "Ce sont mes grands-parents.",
+         "Das sind meine Grosseltern.",
+         "",
+         ""
+        ],
+        [
+         "Je parle allemand, français et anglais.",
+         "Ich spreche Deutsch, Französisch und Englisch.",
+         "",
+         ""
+        ]
+       ]
+      }
+     ],
+     "quiz": true
+    }
+   ],
+   "cards": [
+    {
+     "id": "f1",
+     "fw": "la famille",
+     "de": [
+      "Familie"
+     ],
+     "grp": "fam",
+     "emo": "👨‍👩‍👧"
+    },
+    {
+     "id": "f2",
+     "fw": "un enfant",
+     "de": [
+      "Kind"
+     ],
+     "grp": "fam",
+     "emo": "🧒"
+    },
+    {
+     "id": "f3",
+     "fw": "la mère",
+     "de": [
+      "Mutter"
+     ],
+     "grp": "fam",
+     "emo": "👩"
+    },
+    {
+     "id": "f4",
+     "fw": "le père",
+     "de": [
+      "Vater"
+     ],
+     "grp": "fam",
+     "emo": "👨"
+    },
+    {
+     "id": "f5",
+     "fw": "les parents",
+     "de": [
+      "Eltern"
+     ],
+     "grp": "fam",
+     "emo": "👫"
+    },
+    {
+     "id": "f6",
+     "fw": "la sœur",
+     "de": [
+      "Schwester"
+     ],
+     "grp": "fam",
+     "emo": "👧"
+    },
+    {
+     "id": "f7",
+     "fw": "le frère",
+     "de": [
+      "Bruder"
+     ],
+     "grp": "fam",
+     "emo": "👦"
+    },
+    {
+     "id": "f8",
+     "fw": "la grand-mère",
+     "de": [
+      "Grossmutter"
+     ],
+     "grp": "fam",
+     "emo": "👵"
+    },
+    {
+     "id": "f9",
+     "fw": "le grand-père",
+     "de": [
+      "Grossvater"
+     ],
+     "grp": "fam",
+     "emo": "👴"
+    },
+    {
+     "id": "f10",
+     "fw": "les grands-parents",
+     "de": [
+      "Grosseltern"
+     ],
+     "grp": "fam",
+     "emo": "👴👵"
+    },
+    {
+     "id": "f11",
+     "fw": "la tante",
+     "de": [
+      "Tante"
+     ],
+     "grp": "fam",
+     "emo": "👩"
+    },
+    {
+     "id": "f12",
+     "fw": "un oncle",
+     "de": [
+      "Onkel"
+     ],
+     "grp": "fam",
+     "emo": "👨"
+    },
+    {
+     "id": "f13",
+     "fw": "la cousine",
+     "de": [
+      "Cousine"
+     ],
+     "grp": "fam",
+     "emo": "👧"
+    },
+    {
+     "id": "f14",
+     "fw": "le cousin",
+     "de": [
+      "Cousin"
+     ],
+     "grp": "fam",
+     "emo": "👦"
+    },
+    {
+     "id": "f15",
+     "fw": "le bébé",
+     "de": [
+      "Baby"
+     ],
+     "grp": "fam",
+     "emo": "👶"
+    },
+    {
+     "id": "f16",
+     "fw": "la fille",
+     "de": [
+      "Tochter"
+     ],
+     "grp": "fam",
+     "emo": "👧"
+    },
+    {
+     "id": "f17",
+     "fw": "le fils",
+     "de": [
+      "Sohn"
+     ],
+     "grp": "fam",
+     "emo": "👦"
+    },
+    {
+     "id": "f18",
+     "fw": "voici",
+     "de": [
+      "hier ist"
+     ],
+     "grp": "verb"
+    },
+    {
+     "id": "f19",
+     "fw": "il est",
+     "de": [
+      "er ist"
+     ],
+     "grp": "verb"
+    },
+    {
+     "id": "f20",
+     "fw": "elle est",
+     "de": [
+      "sie ist"
+     ],
+     "grp": "verb"
+    },
+    {
+     "id": "f21",
+     "fw": "ils sont",
+     "de": [
+      "sie sind (m)"
+     ],
+     "grp": "verb"
+    },
+    {
+     "id": "f22",
+     "fw": "elles sont",
+     "de": [
+      "sie sind (f)"
+     ],
+     "grp": "verb"
+    },
+    {
+     "id": "f23",
+     "fw": "c'est",
+     "de": [
+      "das ist"
+     ],
+     "grp": "verb"
+    },
+    {
+     "id": "f24",
+     "fw": "ce sont",
+     "de": [
+      "das sind"
+     ],
+     "grp": "verb"
+    },
+    {
+     "id": "f25",
+     "fw": "qui",
+     "de": [
+      "wer"
+     ],
+     "grp": "verb"
+    },
+    {
+     "id": "f26",
+     "fw": "il s'appelle",
+     "de": [
+      "er heisst"
+     ],
+     "grp": "verb"
+    },
+    {
+     "id": "f27",
+     "fw": "elle s'appelle",
+     "de": [
+      "sie heisst"
+     ],
+     "grp": "verb"
+    },
+    {
+     "id": "f28",
+     "fw": "ils s'appellent",
+     "de": [
+      "sie heissen (m)"
+     ],
+     "grp": "verb"
+    },
+    {
+     "id": "f29",
+     "fw": "elles s'appellent",
+     "de": [
+      "sie heissen (f)"
+     ],
+     "grp": "verb"
+    },
+    {
+     "id": "f30",
+     "fw": "la fiche personnelle",
+     "de": [
+      "Steckbrief"
+     ],
+     "grp": "nom",
+     "emo": "📇"
+    },
+    {
+     "id": "f31",
+     "fw": "le nom",
+     "de": [
+      "Name"
+     ],
+     "grp": "nom",
+     "emo": "🏷️"
+    },
+    {
+     "id": "f32",
+     "fw": "le prénom",
+     "de": [
+      "Vorname"
+     ],
+     "grp": "nom",
+     "emo": "✍️"
+    },
+    {
+     "id": "f33",
+     "fw": "la langue",
+     "de": [
+      "Sprache"
+     ],
+     "grp": "nom",
+     "emo": "🗣️"
+    },
+    {
+     "id": "f34",
+     "fw": "Lionel est le frère de Nathalie.",
+     "de": [
+      "Lionel ist der Bruder von Nathalie."
+     ],
+     "grp": "sent"
+    },
+    {
+     "id": "f35",
+     "fw": "C'est ma famille.",
+     "de": [
+      "Das ist meine Familie."
+     ],
+     "grp": "sent"
+    },
+    {
+     "id": "f36",
+     "fw": "Ce sont mes grands-parents.",
+     "de": [
+      "Das sind meine Grosseltern."
+     ],
+     "grp": "sent"
+    },
+    {
+     "id": "f37",
+     "fw": "Je parle allemand, français et anglais.",
+     "de": [
+      "Ich spreche Deutsch, Französisch und Englisch."
+     ],
+     "grp": "sent"
+    }
+   ],
+   "exam": {
+    "minutes": 30,
+    "questions": [
+     {
+      "id": "q1",
+      "q": "Wie heisst «Mutter» auf Französisch?",
+      "explain": "Mutter = la mère",
+      "ref": "f3",
+      "type": "input",
+      "answer": [
+       "la mère"
+      ]
+     },
+     {
+      "id": "q2",
+      "q": "Wie heisst «Vater» auf Französisch?",
+      "explain": "Vater = le père",
+      "ref": "f4",
+      "type": "input",
+      "answer": [
+       "le père"
+      ]
+     },
+     {
+      "id": "q3",
+      "q": "Wie heisst «Schwester» auf Französisch?",
+      "explain": "Schwester = la sœur",
+      "ref": "f6",
+      "type": "input",
+      "answer": [
+       "la sœur"
+      ]
+     },
+     {
+      "id": "q4",
+      "q": "Wie heisst «Bruder» auf Französisch?",
+      "explain": "Bruder = le frère",
+      "ref": "f7",
+      "type": "input",
+      "answer": [
+       "le frère"
+      ]
+     },
+     {
+      "id": "q5",
+      "q": "Wie heisst «Grossmutter» auf Französisch?",
+      "explain": "Grossmutter = la grand-mère",
+      "ref": "f8",
+      "type": "input",
+      "answer": [
+       "la grand-mère"
+      ]
+     },
+     {
+      "id": "q6",
+      "q": "Wie heisst «Tante» auf Französisch?",
+      "explain": "Tante = la tante",
+      "ref": "f11",
+      "type": "input",
+      "answer": [
+       "la tante"
+      ]
+     },
+     {
+      "id": "q7",
+      "q": "Wie heisst «Sohn» auf Französisch?",
+      "explain": "Sohn = le fils",
+      "ref": "f17",
+      "type": "input",
+      "answer": [
+       "le fils"
+      ]
+     },
+     {
+      "id": "q8",
+      "q": "Was heisst «les parents» auf Deutsch?",
+      "explain": "les parents = Eltern",
+      "ref": "f5",
+      "type": "input",
+      "answer": [
+       "Eltern"
+      ]
+     },
+     {
+      "id": "q9",
+      "q": "Was heisst «le bébé» auf Deutsch?",
+      "explain": "le bébé = Baby",
+      "ref": "f15",
+      "type": "input",
+      "answer": [
+       "Baby"
+      ]
+     },
+     {
+      "id": "q10",
+      "q": "Was heisst «la fille» auf Deutsch?",
+      "explain": "la fille = Tochter",
+      "ref": "f16",
+      "type": "input",
+      "answer": [
+       "Tochter"
+      ]
+     },
+     {
+      "id": "q11",
+      "q": "Was heisst «le prénom» auf Deutsch?",
+      "explain": "le prénom = Vorname",
+      "ref": "f32",
+      "type": "input",
+      "answer": [
+       "Vorname"
+      ]
+     },
+     {
+      "id": "q12",
+      "q": "Was heisst «qui» auf Deutsch?",
+      "explain": "qui = wer",
+      "ref": "f25",
+      "type": "input",
+      "answer": [
+       "wer"
+      ]
+     },
+     {
+      "id": "q13",
+      "q": "Was heisst «le cousin»?",
+      "explain": "le cousin = Cousin",
+      "ref": "f14",
+      "type": "mc",
+      "options": [
+       "Onkel",
+       "Cousin",
+       "Bruder",
+       "Sohn"
+      ],
+      "answer": 1
+     },
+     {
+      "id": "q14",
+      "q": "Was heisst «les grands-parents»?",
+      "explain": "les grands-parents = Grosseltern",
+      "ref": "f10",
+      "type": "mc",
+      "options": [
+       "Eltern",
+       "Geschwister",
+       "Grosseltern",
+       "Kinder"
+      ],
+      "answer": 2
+     },
+     {
+      "id": "q15",
+      "q": "Was heisst «la langue»?",
+      "explain": "la langue = Sprache",
+      "ref": "f33",
+      "type": "mc",
+      "options": [
+       "Name",
+       "Sprache",
+       "Steckbrief",
+       "Vorname"
+      ],
+      "answer": 1
+     },
+     {
+      "id": "q16",
+      "q": "Übersetze ins Französische: Das sind meine Grosseltern.",
+      "explain": "Ce sont mes grands-parents.",
+      "ref": "f36",
+      "type": "input",
+      "answer": [
+       "Ce sont mes grands-parents."
+      ]
+     },
+     {
+      "id": "q17",
+      "q": "Übersetze ins Französische: Das ist meine Familie.",
+      "explain": "C'est ma famille.",
+      "ref": "f35",
+      "type": "input",
+      "answer": [
+       "C'est ma famille."
+      ]
+     },
+     {
+      "id": "q18",
+      "q": "Übersetze ins Französische: Lionel ist der Bruder von Nathalie.",
+      "explain": "Lionel est le frère de Nathalie.",
+      "ref": "f34",
+      "type": "input",
+      "answer": [
+       "Lionel est le frère de Nathalie."
+      ]
+     },
+     {
+      "id": "q19",
+      "q": "Ergänze: Nathalie ___ (sie heisst).",
+      "explain": "elle s'appelle = sie heisst",
+      "ref": "f27",
+      "type": "input",
+      "answer": [
+       "elle s'appelle"
+      ]
+     }
+    ]
+   },
+   "theory": {
+    "fam": {
+     "h": "Die Familie",
+     "text": "Im Französischen steht vor jedem Nomen ein Begleiter: le (männlich), la (weiblich), les (Mehrzahl). Lerne das Wort immer mit dem Begleiter, zum Beispiel la mère, le père. Für Mutter und Vater sagt man auch la maman und le papa."
+    },
+    "verb": {
+     "h": "Sein und heissen",
+     "text": "il est / elle est = er ist / sie ist. ils sont / elles sont = sie sind. Bei s'appeler heisst es: il s'appelle, elle s'appelle, ils s'appellent, elles s'appellent. Mit «ils» sind Jungen oder gemischte Gruppen gemeint, mit «elles» nur Mädchen."
+    },
+    "nom": {
+     "h": "Steckbrief",
+     "text": "Auf einer fiche personnelle stehen le nom (Familienname) und le prénom (Vorname). La langue ist die Sprache."
+    },
+    "sent": {
+     "h": "Sätze",
+     "text": "C'est = das ist (eine Person oder Sache). Ce sont = das sind (mehrere). «Ma» heisst meine und gehört zu einem weiblichen Nomen (ma famille), «mes» zu mehreren (mes grands-parents)."
+    }
+   }
+  }
+ ],
+ "hero": "img/hero.webp"
+}
