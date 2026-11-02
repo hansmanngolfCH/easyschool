@@ -7159,106 +7159,102 @@
    "title": "Grammatik: Grundlagen",
    "explain": [
     {
-     "h": "Wortarten erkennen",
-     "text": "Jedes Wort im Satz hat eine Wortart. Ein Nomen ist ein Name (Schüler), ein Verb eine Tätigkeit (lösen), ein Adjektiv eine Eigenschaft (mutig).",
+     "h": "Wortarten sicher bestimmen",
+     "text": "Bei der Prüfung kommen Sätze mit mehreren ähnlichen Wörtern. Prüfe immer die Aufgabe des Worts im Satz. Adjektiv: beschreibt ein Nomen (der mutige Schüler). Adverb: bestimmt ein Verb näher (er arbeitet gemeinsam, wir treffen uns heute). Pronomen: ersetzt ein Nomen (sie, ihm).",
      "visuals": [
       {
        "type": "lines",
        "num": false,
        "items": [
         [
-         "Nomen",
-         "Schüler, Schulhaus, Aufgabe"
+         "mutige Schüler",
+         "Adjektiv beschreibt das Nomen"
         ],
         [
-         "Verb",
-         "lösen, warten, erklären"
+         "gemeinsam lösen",
+         "Adverb bestimmt das Verb"
         ],
         [
-         "Adjektiv",
-         "mutig, schnell, ruhig"
-        ],
-        [
-         "Pronomen",
-         "sie, wir, ich"
+         "Sie erklärt",
+         "Pronomen ersetzt das Nomen"
         ]
        ]
       }
      ],
      "try": {
-      "q": "Welche Wortart ist «mutige» in: Der mutige Schüler meldet sich zuerst?",
+      "q": "Welche Wortart ist «ruhig» in: Sie erklärt die Lösung ruhig?",
       "opts": [
+       "Adverb",
        "Adjektiv",
-       "Verb",
        "Nomen",
        "Pronomen"
       ],
       "a": [
-       "Adjektiv"
+       "Adverb"
       ],
-      "hint": "Es sagt, wie der Schüler ist."
+      "hint": "Es sagt, wie sie erklärt, und gehört zum Verb."
      }
     },
     {
-     "h": "Kleine Wörter: Präposition, Konjunktion, Adverb",
-     "text": "Eine Präposition steht vor einem Nomen (vor dem Schulhaus). Eine Konjunktion verbindet Sätze (obwohl, weil). Ein Adverb sagt, wann, wo oder wie etwas geschieht (heute, gemeinsam).",
+     "h": "Präposition oder Konjunktion?",
+     "text": "Manche Wörter können beides sein. Während der Pause (Präposition, danach folgt ein Nomen). Während die Lehrerin erklärt (Konjunktion, danach folgt ein Satz mit Verb). Konjunktionen leiten Nebensätze ein: obwohl, weil, dass.",
      "visuals": [
       {
        "type": "lines",
        "num": false,
        "items": [
         [
-         "Präposition",
-         "vor, nach, auf, neben"
+         "Während der Pause",
+         "Präposition + Nomen"
         ],
         [
-         "Konjunktion",
-         "obwohl, weil, denn"
+         "Während die Lehrerin erklärt",
+         "Konjunktion + Satz"
         ],
         [
-         "Adverb",
-         "heute, oft, gestern"
+         "Obwohl es spät ist",
+         "Konjunktion"
         ]
        ]
       }
      ],
      "try": {
-      "q": "Welche Wortart ist «vor» in: Mia wartet vor dem Schulhaus?",
+      "q": "Welche Wortart ist «Während» in: Während die Lehrerin erklärt, schreiben wir mit?",
       "opts": [
-       "Präposition",
        "Konjunktion",
+       "Präposition",
        "Adverb",
-       "Adjektiv"
+       "Pronomen"
       ],
       "a": [
-       "Präposition"
+       "Konjunktion"
       ],
-      "hint": "Es steht vor dem Nomen und zeigt, wo."
+      "hint": "Danach folgt ein ganzer Satz mit Verb."
      }
     },
     {
      "h": "Die vier Fälle (Kasus)",
-     "text": "Mit Fragen findest du den Fall: Nominativ = wer oder was, Genitiv = wessen, Dativ = wem, Akkusativ = wen oder was.",
+     "text": "Nominativ = wer oder was? Genitiv = wessen? Dativ = wem? Akkusativ = wen oder was? Das Verb bestimmt den Fall: helfen, danken und schenken verlangen den Dativ, loben und besuchen den Akkusativ.",
      "visuals": [
       {
        "type": "lines",
        "num": false,
        "items": [
         [
-         "Nominativ",
-         "wer oder was?"
+         "Die neue Schülerin stellt sich vor.",
+         "Nominativ"
         ],
         [
-         "Genitiv",
-         "wessen?"
+         "Die Lehrerin hilft der neuen Schülerin.",
+         "Dativ"
         ],
         [
-         "Dativ",
-         "wem?"
+         "Wir begrüssen die neue Schülerin.",
+         "Akkusativ"
         ],
         [
-         "Akkusativ",
-         "wen oder was?"
+         "Das Heft der neuen Schülerin",
+         "Genitiv"
         ]
        ]
       }
@@ -7289,45 +7285,43 @@
      }
     },
     {
-     "h": "Fälle im Satz erkennen",
-     "text": "Beispiel: Die Lehrerin hilft der neuen Schülerin. Wem hilft sie? Der neuen Schülerin. Das ist der Dativ.",
+     "h": "Endungen im Fall anpassen",
+     "text": "Begleiter, Adjektiv und Nomen werden gemeinsam angepasst. Dativ männlich: dem neuen Schüler. Akkusativ männlich: den neuen Schüler. Genitiv weiblich: der neuen Schülerin. Dativ weiblich: der neuen Schülerin.",
      "visuals": [
       {
        "type": "lines",
        "num": false,
        "items": [
         [
-         "Die neue Schülerin stellt sich vor.",
-         "Nominativ"
+         "Nominativ",
+         "der neue Schüler"
         ],
         [
-         "Die Lehrerin hilft der neuen Schülerin.",
-         "Dativ"
+         "Akkusativ",
+         "den neuen Schüler"
         ],
         [
-         "Wir begrüssen die neue Schülerin.",
-         "Akkusativ"
+         "Dativ",
+         "dem neuen Schüler"
+        ],
+        [
+         "Genitiv",
+         "des neuen Schülers"
         ]
        ]
       }
      ],
      "try": {
-      "q": "In welchem Fall steht «die neue Schülerin» in: Wir begrüssen die neue Schülerin?",
-      "opts": [
-       "Akkusativ",
-       "Nominativ",
-       "Dativ",
-       "Genitiv"
-      ],
+      "q": "Setze ein: Ich gebe ___ die Unterlagen. (der neue Schüler)",
       "a": [
-       "Akkusativ"
+       "dem neuen Schüler"
       ],
-      "hint": "Wen begrüssen wir?"
+      "hint": "Wem gebe ich etwas? Dativ männlich."
      }
     },
     {
-     "h": "Die Zeitformen (Tempus)",
-     "text": "Perfekt = hat/ist + Partizip II (hat gelesen). Plusquamperfekt = hatte/war + Partizip II (hatte besprochen). Futur I = wird + Infinitiv (wird vergleichen).",
+     "h": "Zeitformen (Tempus)",
+     "text": "Perfekt = hat/ist + Partizip II. Plusquamperfekt = hatte/war + Partizip II (Vorzeitigkeit). Futur I = wird + Infinitiv. Präteritum = einfache Vergangenheit (fanden). Sein steht bei Bewegung (ist gefahren). Das Präsens kann Zukunft meinen (Wir fahren morgen).",
      "visuals": [
       {
        "type": "lines",
@@ -7335,44 +7329,44 @@
        "items": [
         [
          "Präsens",
-         "Die Klasse arbeitet."
+         "Wir fahren morgen."
         ],
         [
          "Präteritum",
-         "Jonas schrieb."
+         "Wir fuhren."
         ],
         [
          "Perfekt",
-         "Lea hat gelesen."
+         "Wir sind gefahren."
         ],
         [
          "Plusquamperfekt",
-         "Wir hatten besprochen."
+         "Wir waren gefahren."
         ],
         [
          "Futur I",
-         "Wir werden vergleichen."
+         "Wir werden fahren."
         ]
        ]
       }
      ],
      "try": {
-      "q": "Welche Zeitform ist: Lea hat den Text bereits gelesen?",
+      "q": "Wie heisst der Satz «Wir fahren nach Bern» im Perfekt?",
       "opts": [
-       "Perfekt",
-       "Präteritum",
-       "Plusquamperfekt",
-       "Futur I"
+       "Wir sind nach Bern gefahren.",
+       "Wir haben nach Bern gefahren.",
+       "Wir fuhren nach Bern.",
+       "Wir werden nach Bern fahren."
       ],
       "a": [
-       "Perfekt"
+       "Wir sind nach Bern gefahren."
       ],
-      "hint": "hat + Partizip II"
+      "hint": "Bei Bewegung steht «sein»."
      }
     },
     {
      "h": "Satzglieder bestimmen",
-     "text": "S = Subjekt (wer oder was?), P = Prädikat (das Verb), DO = Dativobjekt (wem?), AO = Akkusativobjekt (wen oder was?).",
+     "text": "S = Subjekt (wer oder was?), P = Prädikat (das Verb, auch zweiteilig wie hat erklärt), DO = Dativobjekt (wem?), AO = Akkusativobjekt (wen oder was?). Angaben wie «heute» oder «in der Pause» gehören nicht dazu. Jedes richtige Satzglied gibt 1 Punkt.",
      "visuals": [
       {
        "type": "lines",
@@ -7398,7 +7392,7 @@
       }
      ],
      "try": {
-      "q": "Welches Satzglied ist «dem Schüler» in: Die Lehrerin gibt dem Schüler eine neue Aufgabe?",
+      "q": "Welches Satzglied ist «den Kindern» in: Heute erzählt die Grossmutter den Kindern eine Geschichte?",
       "opts": [
        "DO",
        "AO",
@@ -7408,72 +7402,72 @@
       "a": [
        "DO"
       ],
-      "hint": "Wem gibt sie etwas?"
+      "hint": "Wem erzählt sie etwas?"
      }
     }
    ],
    "cards": [
     {
      "id": "g1",
-     "q": "Der mutige Schüler meldet sich zuerst. Welche Wortart ist «mutige»?",
-     "a": "Adjektiv",
+     "q": "Der aufmerksame Lehrer erklärt den Lösungsweg sehr genau.\nBestimme die Wortart des Wortes «sehr».",
+     "a": "Adverb",
      "lvl": 1,
      "th": "wa",
      "opts": [
-      "Adjektiv",
-      "Verb",
-      "Nomen",
-      "Pronomen"
+      "Konjunktion",
+      "Adverb",
+      "Präposition",
+      "Verb"
      ],
      "hints": [
-      "Adjektiv = Eigenschaft, Verb = Tätigkeit, Pronomen = steht für ein Nomen.",
-      "Präposition = Verhältniswort (vor, nach, auf), Konjunktion = Bindewort (weil, obwohl)."
+      "Was macht das Wort im Satz?",
+      "Adjektiv, Adverb oder Pronomen? Frage: Wird ein Nomen beschrieben, ein Verb näher bestimmt oder ein Nomen ersetzt?"
      ],
      "steps": [
       [
-       "Adjektiv",
+       "Adverb",
        "richtig"
       ]
      ]
     },
     {
      "id": "g2",
-     "q": "Wir lösen die Aufgabe gemeinsam. Welche Wortart ist «lösen»?",
-     "a": "Verb",
+     "q": "Obwohl es regnet, gehen wir zusammen ins Schwimmbad.\nBestimme die Wortart des Wortes «Obwohl».",
+     "a": "Konjunktion",
      "lvl": 1,
      "th": "wa",
      "opts": [
-      "Verb",
-      "Pronomen",
       "Adverb",
-      "Präposition"
+      "Verb",
+      "Adjektiv",
+      "Konjunktion"
      ],
      "hints": [
-      "Adjektiv = Eigenschaft, Verb = Tätigkeit, Pronomen = steht für ein Nomen.",
-      "Präposition = Verhältniswort (vor, nach, auf), Konjunktion = Bindewort (weil, obwohl)."
+      "Was macht das Wort im Satz?",
+      "Adjektiv, Adverb oder Pronomen? Frage: Wird ein Nomen beschrieben, ein Verb näher bestimmt oder ein Nomen ersetzt?"
      ],
      "steps": [
       [
-       "Verb",
+       "Konjunktion",
        "richtig"
       ]
      ]
     },
     {
      "id": "g3",
-     "q": "Mia wartet vor dem Schulhaus. Welche Wortart ist «vor»?",
+     "q": "Während der Pause diskutierten die Schüler lebhaft über das Ergebnis.\nBestimme die Wortart des Wortes «über».",
      "a": "Präposition",
      "lvl": 1,
      "th": "wa",
      "opts": [
+      "Konjunktion",
       "Präposition",
       "Adverb",
-      "Verb",
-      "Pronomen"
+      "Nomen"
      ],
      "hints": [
-      "Adjektiv = Eigenschaft, Verb = Tätigkeit, Pronomen = steht für ein Nomen.",
-      "Präposition = Verhältniswort (vor, nach, auf), Konjunktion = Bindewort (weil, obwohl)."
+      "Was macht das Wort im Satz?",
+      "Adjektiv, Adverb oder Pronomen? Frage: Wird ein Nomen beschrieben, ein Verb näher bestimmt oder ein Nomen ersetzt?"
      ],
      "steps": [
       [
@@ -7484,42 +7478,19 @@
     },
     {
      "id": "g4",
-     "q": "Obwohl es spät ist, arbeitet die Klasse weiter. Welche Wortart ist «Obwohl»?",
-     "a": "Konjunktion",
-     "lvl": 1,
-     "th": "wa",
-     "opts": [
-      "Konjunktion",
-      "Präposition",
-      "Verb",
-      "Adverb"
-     ],
-     "hints": [
-      "Adjektiv = Eigenschaft, Verb = Tätigkeit, Pronomen = steht für ein Nomen.",
-      "Präposition = Verhältniswort (vor, nach, auf), Konjunktion = Bindewort (weil, obwohl)."
-     ],
-     "steps": [
-      [
-       "Konjunktion",
-       "richtig"
-      ]
-     ]
-    },
-    {
-     "id": "g5",
-     "q": "Sie erklärt die Lösung ruhig. Welche Wortart ist «Sie»?",
+     "q": "Sie hat ihm gestern ihr Heft gegeben.\nBestimme die Wortart des Wortes «ihm».",
      "a": "Pronomen",
      "lvl": 1,
      "th": "wa",
      "opts": [
-      "Pronomen",
       "Adverb",
-      "Verb",
-      "Präposition"
+      "Pronomen",
+      "Nomen",
+      "Verb"
      ],
      "hints": [
-      "Adjektiv = Eigenschaft, Verb = Tätigkeit, Pronomen = steht für ein Nomen.",
-      "Präposition = Verhältniswort (vor, nach, auf), Konjunktion = Bindewort (weil, obwohl)."
+      "Was macht das Wort im Satz?",
+      "Adjektiv, Adverb oder Pronomen? Frage: Wird ein Nomen beschrieben, ein Verb näher bestimmt oder ein Nomen ersetzt?"
      ],
      "steps": [
       [
@@ -7529,87 +7500,20 @@
      ]
     },
     {
-     "id": "g6",
-     "q": "Wir treffen uns heute nach dem Unterricht. Welche Wortart ist «heute»?",
-     "a": "Adverb",
-     "lvl": 1,
-     "th": "wa",
-     "opts": [
-      "Adverb",
-      "Pronomen",
-      "Verb",
-      "Adjektiv"
-     ],
-     "hints": [
-      "Adjektiv = Eigenschaft, Verb = Tätigkeit, Pronomen = steht für ein Nomen.",
-      "Präposition = Verhältniswort (vor, nach, auf), Konjunktion = Bindewort (weil, obwohl)."
-     ],
-     "steps": [
-      [
-       "Adverb",
-       "richtig"
-      ]
-     ]
-    },
-    {
-     "id": "g7",
-     "q": "Die Katze schläft auf dem Sofa. Welche Wortart ist «Katze»?",
-     "a": "Nomen",
-     "lvl": 1,
-     "th": "wa",
-     "opts": [
-      "Nomen",
-      "Pronomen",
-      "Konjunktion",
-      "Adjektiv"
-     ],
-     "hints": [
-      "Adjektiv = Eigenschaft, Verb = Tätigkeit, Pronomen = steht für ein Nomen.",
-      "Präposition = Verhältniswort (vor, nach, auf), Konjunktion = Bindewort (weil, obwohl)."
-     ],
-     "steps": [
-      [
-       "Nomen",
-       "richtig"
-      ]
-     ]
-    },
-    {
-     "id": "g8",
-     "q": "Die neue Schülerin stellt sich vor. In welchem Fall steht «Die neue Schülerin»?",
-     "a": "Nominativ",
-     "lvl": 1,
-     "th": "ka",
-     "opts": [
-      "Nominativ",
-      "Genitiv",
-      "Dativ",
-      "Akkusativ"
-     ],
-     "hints": [
-      "Frage: wer/was = Nominativ, wessen = Genitiv, wem = Dativ, wen/was = Akkusativ."
-     ],
-     "steps": [
-      [
-       "Nominativ",
-       "richtig"
-      ]
-     ]
-    },
-    {
-     "id": "g9",
-     "q": "Die Lehrerin hilft der neuen Schülerin. In welchem Fall steht «der neuen Schülerin»?",
+     "id": "g5",
+     "q": "Die neue Lehrerin erklärt den Schülern das Thema.\nIn welchem Fall steht «den Schülern»?",
      "a": "Dativ",
      "lvl": 1,
      "th": "ka",
      "opts": [
-      "Dativ",
       "Nominativ",
       "Genitiv",
+      "Dativ",
       "Akkusativ"
      ],
      "hints": [
-      "Frage: wer/was = Nominativ, wessen = Genitiv, wem = Dativ, wen/was = Akkusativ."
+      "Stelle die Frage: wer/was, wessen, wem oder wen/was?",
+      "Achte auf das Verb: Manche Verben verlangen den Dativ (helfen, danken, schenken)."
      ],
      "steps": [
       [
@@ -7619,41 +7523,20 @@
      ]
     },
     {
-     "id": "g10",
-     "q": "Wir begrüssen die neue Schülerin. In welchem Fall steht «die neue Schülerin»?",
-     "a": "Akkusativ",
-     "lvl": 1,
-     "th": "ka",
-     "opts": [
-      "Akkusativ",
-      "Nominativ",
-      "Genitiv",
-      "Dativ"
-     ],
-     "hints": [
-      "Frage: wer/was = Nominativ, wessen = Genitiv, wem = Dativ, wen/was = Akkusativ."
-     ],
-     "steps": [
-      [
-       "Akkusativ",
-       "richtig"
-      ]
-     ]
-    },
-    {
-     "id": "g11",
-     "q": "Das Fell des Hundes ist weich. In welchem Fall steht «des Hundes»?",
+     "id": "g6",
+     "q": "Der Hund des Nachbarn bellt laut.\nIn welchem Fall steht «des Nachbarn»?",
      "a": "Genitiv",
      "lvl": 1,
      "th": "ka",
      "opts": [
-      "Genitiv",
       "Nominativ",
+      "Genitiv",
       "Dativ",
       "Akkusativ"
      ],
      "hints": [
-      "Frage: wer/was = Nominativ, wessen = Genitiv, wem = Dativ, wen/was = Akkusativ."
+      "Stelle die Frage: wer/was, wessen, wem oder wen/was?",
+      "Achte auf das Verb: Manche Verben verlangen den Dativ (helfen, danken, schenken)."
      ],
      "steps": [
       [
@@ -7663,85 +7546,44 @@
      ]
     },
     {
-     "id": "g12",
-     "q": "Die Klasse arbeitet konzentriert. In welcher Zeitform steht der Satz?",
-     "a": "Präsens",
+     "id": "g7",
+     "q": "Der Lehrer lobt den fleissigen Schüler.\nIn welchem Fall steht «den fleissigen Schüler»?",
+     "a": "Akkusativ",
      "lvl": 1,
-     "th": "te",
+     "th": "ka",
      "opts": [
-      "Präsens",
-      "Präteritum",
-      "Perfekt",
-      "Plusquamperfekt"
+      "Nominativ",
+      "Genitiv",
+      "Dativ",
+      "Akkusativ"
      ],
      "hints": [
-      "Achte auf das Hilfsverb: hat/ist, hatte/war, wird/werden."
+      "Stelle die Frage: wer/was, wessen, wem oder wen/was?",
+      "Achte auf das Verb: Manche Verben verlangen den Dativ (helfen, danken, schenken)."
      ],
      "steps": [
       [
-       "Präsens",
+       "Akkusativ",
        "richtig"
       ]
      ]
     },
     {
-     "id": "g13",
-     "q": "Gestern schrieb Jonas eine Nachricht. In welcher Zeitform steht der Satz?",
-     "a": "Präteritum",
-     "lvl": 1,
-     "th": "te",
-     "opts": [
-      "Präteritum",
-      "Präsens",
-      "Perfekt",
-      "Plusquamperfekt"
-     ],
-     "hints": [
-      "Achte auf das Hilfsverb: hat/ist, hatte/war, wird/werden."
-     ],
-     "steps": [
-      [
-       "Präteritum",
-       "richtig"
-      ]
-     ]
-    },
-    {
-     "id": "g14",
-     "q": "Lea hat den Text bereits gelesen. In welcher Zeitform steht der Satz?",
-     "a": "Perfekt",
-     "lvl": 1,
-     "th": "te",
-     "opts": [
-      "Perfekt",
-      "Präsens",
-      "Präteritum",
-      "Plusquamperfekt"
-     ],
-     "hints": [
-      "Achte auf das Hilfsverb: hat/ist, hatte/war, wird/werden."
-     ],
-     "steps": [
-      [
-       "Perfekt",
-       "richtig"
-      ]
-     ]
-    },
-    {
-     "id": "g15",
-     "q": "Wir hatten die Aufgabe vorher besprochen. In welcher Zeitform steht der Satz?",
+     "id": "g8",
+     "q": "Nachdem wir den Text gelesen hatten, besprachen wir die Aufgabe.\nIn welcher Zeitform steht «wir den Text gelesen hatten»?",
      "a": "Plusquamperfekt",
      "lvl": 1,
      "th": "te",
      "opts": [
-      "Plusquamperfekt",
       "Präsens",
       "Präteritum",
-      "Perfekt"
+      "Perfekt",
+      "Plusquamperfekt",
+      "Futur I"
      ],
      "hints": [
-      "Achte auf das Hilfsverb: hat/ist, hatte/war, wird/werden."
+      "Achte auf das Hilfsverb (hat/ist, hatte/war, wird) und auf die Form des Verbs.",
+      "Auch im Präsens kann etwas in der Zukunft gemeint sein (morgen)."
      ],
      "steps": [
       [
@@ -7751,85 +7593,92 @@
      ]
     },
     {
-     "id": "g16",
-     "q": "Morgen werden wir die Ergebnisse vergleichen. In welcher Zeitform steht der Satz?",
-     "a": "Futur I",
+     "id": "g9",
+     "q": "Wir fahren morgen nach Bern.\nIn welcher Zeitform steht der Satz?",
+     "a": "Präsens",
      "lvl": 1,
      "th": "te",
      "opts": [
-      "Futur I",
       "Präsens",
       "Präteritum",
-      "Perfekt"
+      "Perfekt",
+      "Plusquamperfekt",
+      "Futur I"
      ],
      "hints": [
-      "Achte auf das Hilfsverb: hat/ist, hatte/war, wird/werden."
+      "Achte auf das Hilfsverb (hat/ist, hatte/war, wird) und auf die Form des Verbs.",
+      "Auch im Präsens kann etwas in der Zukunft gemeint sein (morgen)."
      ],
      "steps": [
       [
-       "Futur I",
+       "Präsens",
        "richtig"
       ]
      ]
     },
     {
-     "id": "g17",
-     "q": "Die Lehrerin gibt dem Schüler eine neue Aufgabe. Welches Satzglied ist «Die Lehrerin»? (S = Subjekt, P = Prädikat, DO = Dativobjekt, AO = Akkusativobjekt)",
-     "a": "S",
+     "id": "g10",
+     "q": "Die Schüler haben gestern lange diskutiert.\nIn welcher Zeitform steht der Satz?",
+     "a": "Perfekt",
      "lvl": 1,
-     "th": "sg",
+     "th": "te",
      "opts": [
-      "S",
-      "P",
-      "DO",
-      "AO"
+      "Präsens",
+      "Präteritum",
+      "Perfekt",
+      "Plusquamperfekt",
+      "Futur I"
      ],
      "hints": [
-      "S: Wer oder was? P: das Verb. DO: Wem? AO: Wen oder was?"
+      "Achte auf das Hilfsverb (hat/ist, hatte/war, wird) und auf die Form des Verbs.",
+      "Auch im Präsens kann etwas in der Zukunft gemeint sein (morgen)."
      ],
      "steps": [
       [
-       "S",
+       "Perfekt",
        "richtig"
       ]
      ]
     },
     {
-     "id": "g18",
-     "q": "Die Lehrerin gibt dem Schüler eine neue Aufgabe. Welches Satzglied ist «gibt»? (S = Subjekt, P = Prädikat, DO = Dativobjekt, AO = Akkusativobjekt)",
-     "a": "P",
+     "id": "g11",
+     "q": "Sie lernte jeden Abend bis spät in die Nacht.\nIn welcher Zeitform steht der Satz?",
+     "a": "Präteritum",
      "lvl": 1,
-     "th": "sg",
+     "th": "te",
      "opts": [
-      "P",
-      "S",
-      "DO",
-      "AO"
+      "Präsens",
+      "Präteritum",
+      "Perfekt",
+      "Plusquamperfekt",
+      "Futur I"
      ],
      "hints": [
-      "S: Wer oder was? P: das Verb. DO: Wem? AO: Wen oder was?"
+      "Achte auf das Hilfsverb (hat/ist, hatte/war, wird) und auf die Form des Verbs.",
+      "Auch im Präsens kann etwas in der Zukunft gemeint sein (morgen)."
      ],
      "steps": [
       [
-       "P",
+       "Präteritum",
        "richtig"
       ]
      ]
     },
     {
-     "id": "g19",
-     "q": "Die Lehrerin gibt dem Schüler eine neue Aufgabe. Welches Satzglied ist «dem Schüler»? (S = Subjekt, P = Prädikat, DO = Dativobjekt, AO = Akkusativobjekt)",
+     "id": "g12",
+     "q": "Die Mutter schenkt ihrem Sohn ein neues Fahrrad.\nWelches Satzglied ist «ihrem Sohn»? (S = Subjekt, P = Prädikat, DO = Dativobjekt, AO = Akkusativobjekt)",
      "a": "DO",
      "lvl": 1,
      "th": "sg",
      "opts": [
-      "DO",
       "S",
       "P",
+      "DO",
       "AO"
      ],
      "hints": [
-      "S: Wer oder was? P: das Verb. DO: Wem? AO: Wen oder was?"
+      "Wem schenkt sie etwas?",
+      "DO = Dativobjekt."
      ],
      "steps": [
       [
@@ -7839,19 +7688,20 @@
      ]
     },
     {
-     "id": "g20",
-     "q": "Die Lehrerin gibt dem Schüler eine neue Aufgabe. Welches Satzglied ist «eine neue Aufgabe»? (S = Subjekt, P = Prädikat, DO = Dativobjekt, AO = Akkusativobjekt)",
+     "id": "g13",
+     "q": "Der Trainer zeigt den Spielern die neue Taktik.\nWelches Satzglied ist «die neue Taktik»? (S = Subjekt, P = Prädikat, DO = Dativobjekt, AO = Akkusativobjekt)",
      "a": "AO",
      "lvl": 1,
      "th": "sg",
      "opts": [
-      "AO",
       "S",
       "P",
-      "DO"
+      "DO",
+      "AO"
      ],
      "hints": [
-      "S: Wer oder was? P: das Verb. DO: Wem? AO: Wen oder was?"
+      "Was zeigt der Trainer?",
+      "AO = Akkusativobjekt."
      ],
      "steps": [
       [
@@ -7861,8 +7711,108 @@
      ]
     },
     {
-     "id": "g21",
-     "q": "Die Klasse arbeitet weiter, weil es wichtig ist. Schreibe die Wortart von «weil».",
+     "id": "g14",
+     "q": "Weil das Wetter schlecht war, blieben wir drinnen.\nBestimme die Wortart des Wortes «drinnen».",
+     "a": "Adverb",
+     "lvl": 2,
+     "th": "wa",
+     "ans": [
+      "Adverb"
+     ],
+     "hints": [
+      "Was macht das Wort im Satz?",
+      "Adjektiv, Adverb oder Pronomen? Frage: Wird ein Nomen beschrieben, ein Verb näher bestimmt oder ein Nomen ersetzt?"
+     ],
+     "steps": [
+      [
+       "Adverb",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g15",
+     "q": "Das schwierige Problem lösten sie schliesslich gemeinsam.\nBestimme die Wortart des Wortes «schwierige».",
+     "a": "Adjektiv",
+     "lvl": 2,
+     "th": "wa",
+     "ans": [
+      "Adjektiv"
+     ],
+     "hints": [
+      "Was macht das Wort im Satz?",
+      "Adjektiv, Adverb oder Pronomen? Frage: Wird ein Nomen beschrieben, ein Verb näher bestimmt oder ein Nomen ersetzt?"
+     ],
+     "steps": [
+      [
+       "Adjektiv",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g16",
+     "q": "Das schwierige Problem lösten sie schliesslich gemeinsam.\nBestimme die Wortart des Wortes «sie».",
+     "a": "Pronomen",
+     "lvl": 2,
+     "th": "wa",
+     "ans": [
+      "Pronomen"
+     ],
+     "hints": [
+      "Was macht das Wort im Satz?",
+      "Adjektiv, Adverb oder Pronomen? Frage: Wird ein Nomen beschrieben, ein Verb näher bestimmt oder ein Nomen ersetzt?"
+     ],
+     "steps": [
+      [
+       "Pronomen",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g17",
+     "q": "Das schwierige Problem lösten sie schliesslich gemeinsam.\nBestimme die Wortart des Wortes «schliesslich».",
+     "a": "Adverb",
+     "lvl": 2,
+     "th": "wa",
+     "ans": [
+      "Adverb"
+     ],
+     "hints": [
+      "Was macht das Wort im Satz?",
+      "Adjektiv, Adverb oder Pronomen? Frage: Wird ein Nomen beschrieben, ein Verb näher bestimmt oder ein Nomen ersetzt?"
+     ],
+     "steps": [
+      [
+       "Adverb",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g18",
+     "q": "Mia wartet seit einer Stunde vor dem Schulhaus.\nBestimme die Wortart des Wortes «seit».",
+     "a": "Präposition",
+     "lvl": 2,
+     "th": "wa",
+     "ans": [
+      "Präposition"
+     ],
+     "hints": [
+      "Was macht das Wort im Satz?",
+      "Adjektiv, Adverb oder Pronomen? Frage: Wird ein Nomen beschrieben, ein Verb näher bestimmt oder ein Nomen ersetzt?"
+     ],
+     "steps": [
+      [
+       "Präposition",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g19",
+     "q": "Er sagte, dass er die Aufgabe verstanden hat.\nBestimme die Wortart des Wortes «dass».",
      "a": "Konjunktion",
      "lvl": 2,
      "th": "wa",
@@ -7870,8 +7820,48 @@
       "Konjunktion"
      ],
      "hints": [
-      "Adjektiv, Verb, Nomen, Pronomen, Präposition, Konjunktion oder Adverb?",
-      "Überlege, was das Wort im Satz macht."
+      "Was macht das Wort im Satz?",
+      "Adjektiv, Adverb oder Pronomen? Frage: Wird ein Nomen beschrieben, ein Verb näher bestimmt oder ein Nomen ersetzt?"
+     ],
+     "steps": [
+      [
+       "Konjunktion",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g20",
+     "q": "Die Entscheidung fällt der Klasse nicht leicht.\nBestimme die Wortart des Wortes «Entscheidung».",
+     "a": "Nomen",
+     "lvl": 2,
+     "th": "wa",
+     "ans": [
+      "Nomen"
+     ],
+     "hints": [
+      "Was macht das Wort im Satz?",
+      "Adjektiv, Adverb oder Pronomen? Frage: Wird ein Nomen beschrieben, ein Verb näher bestimmt oder ein Nomen ersetzt?"
+     ],
+     "steps": [
+      [
+       "Nomen",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g21",
+     "q": "Während die Lehrerin erklärt, schreiben wir mit.\nBestimme die Wortart des Wortes «Während».",
+     "a": "Konjunktion",
+     "lvl": 2,
+     "th": "wa",
+     "ans": [
+      "Konjunktion"
+     ],
+     "hints": [
+      "Hier verbindet das Wort zwei Sätze mit je einem Verb.",
+      "Adjektiv, Adverb oder Pronomen? Frage: Wird ein Nomen beschrieben, ein Verb näher bestimmt oder ein Nomen ersetzt?"
      ],
      "steps": [
       [
@@ -7882,7 +7872,7 @@
     },
     {
      "id": "g22",
-     "q": "Er wohnt neben dem Bahnhof. Schreibe die Wortart von «neben».",
+     "q": "Während der Prüfung darf niemand sprechen.\nBestimme die Wortart des Wortes «Während».",
      "a": "Präposition",
      "lvl": 2,
      "th": "wa",
@@ -7890,8 +7880,8 @@
       "Präposition"
      ],
      "hints": [
-      "Adjektiv, Verb, Nomen, Pronomen, Präposition, Konjunktion oder Adverb?",
-      "Überlege, was das Wort im Satz macht."
+      "Hier steht ein Nomen mit Begleiter nach dem Wort.",
+      "Adjektiv, Adverb oder Pronomen? Frage: Wird ein Nomen beschrieben, ein Verb näher bestimmt oder ein Nomen ersetzt?"
      ],
      "steps": [
       [
@@ -7902,182 +7892,7 @@
     },
     {
      "id": "g23",
-     "q": "Das Buch ist spannend. Schreibe die Wortart von «spannend».",
-     "a": "Adjektiv",
-     "lvl": 2,
-     "th": "wa",
-     "ans": [
-      "Adjektiv"
-     ],
-     "hints": [
-      "Adjektiv, Verb, Nomen, Pronomen, Präposition, Konjunktion oder Adverb?",
-      "Überlege, was das Wort im Satz macht."
-     ],
-     "steps": [
-      [
-       "Adjektiv",
-       "richtig"
-      ]
-     ]
-    },
-    {
-     "id": "g24",
-     "q": "Wir spielen oft Fussball. Schreibe die Wortart von «oft».",
-     "a": "Adverb",
-     "lvl": 2,
-     "th": "wa",
-     "ans": [
-      "Adverb"
-     ],
-     "hints": [
-      "Adjektiv, Verb, Nomen, Pronomen, Präposition, Konjunktion oder Adverb?",
-      "Überlege, was das Wort im Satz macht."
-     ],
-     "steps": [
-      [
-       "Adverb",
-       "richtig"
-      ]
-     ]
-    },
-    {
-     "id": "g25",
-     "q": "Er fragt mich etwas. Schreibe die Wortart von «mich».",
-     "a": "Pronomen",
-     "lvl": 2,
-     "th": "wa",
-     "ans": [
-      "Pronomen"
-     ],
-     "hints": [
-      "Adjektiv, Verb, Nomen, Pronomen, Präposition, Konjunktion oder Adverb?",
-      "Überlege, was das Wort im Satz macht."
-     ],
-     "steps": [
-      [
-       "Pronomen",
-       "richtig"
-      ]
-     ]
-    },
-    {
-     "id": "g26",
-     "q": "Die Schüler schreiben einen Text. Schreibe die Wortart von «schreiben».",
-     "a": "Verb",
-     "lvl": 2,
-     "th": "wa",
-     "ans": [
-      "Verb"
-     ],
-     "hints": [
-      "Adjektiv, Verb, Nomen, Pronomen, Präposition, Konjunktion oder Adverb?",
-      "Überlege, was das Wort im Satz macht."
-     ],
-     "steps": [
-      [
-       "Verb",
-       "richtig"
-      ]
-     ]
-    },
-    {
-     "id": "g27",
-     "q": "Mit welcher Frage findest du den Nominativ? (Schreibe: wer oder was)",
-     "a": "wer oder was",
-     "lvl": 2,
-     "th": "ka",
-     "ans": [
-      "wer oder was"
-     ],
-     "hints": [
-      "Merke: Nominativ wer/was, Genitiv wessen, Dativ wem, Akkusativ wen/was."
-     ],
-     "steps": [
-      [
-       "wer oder was",
-       "richtig"
-      ]
-     ]
-    },
-    {
-     "id": "g28",
-     "q": "Mit welcher Frage findest du den Genitiv?",
-     "a": "wessen",
-     "lvl": 2,
-     "th": "ka",
-     "ans": [
-      "wessen"
-     ],
-     "hints": [
-      "Merke: Nominativ wer/was, Genitiv wessen, Dativ wem, Akkusativ wen/was."
-     ],
-     "steps": [
-      [
-       "wessen",
-       "richtig"
-      ]
-     ]
-    },
-    {
-     "id": "g29",
-     "q": "Mit welcher Frage findest du den Dativ?",
-     "a": "wem",
-     "lvl": 2,
-     "th": "ka",
-     "ans": [
-      "wem"
-     ],
-     "hints": [
-      "Merke: Nominativ wer/was, Genitiv wessen, Dativ wem, Akkusativ wen/was."
-     ],
-     "steps": [
-      [
-       "wem",
-       "richtig"
-      ]
-     ]
-    },
-    {
-     "id": "g30",
-     "q": "Mit welcher Frage findest du den Akkusativ? (Schreibe: wen oder was)",
-     "a": "wen oder was",
-     "lvl": 2,
-     "th": "ka",
-     "ans": [
-      "wen oder was"
-     ],
-     "hints": [
-      "Merke: Nominativ wer/was, Genitiv wessen, Dativ wem, Akkusativ wen/was."
-     ],
-     "steps": [
-      [
-       "wen oder was",
-       "richtig"
-      ]
-     ]
-    },
-    {
-     "id": "g31",
-     "q": "Ich sehe den Hund. Schreibe den Fall von «den Hund».",
-     "a": "Akkusativ",
-     "lvl": 2,
-     "th": "ka",
-     "ans": [
-      "Akkusativ"
-     ],
-     "hints": [
-      "Stelle die Frage: wer, wessen, wem oder wen?"
-     ],
-     "steps": [
-      [
-       "Akkusativ",
-       "richtig"
-      ]
-     ]
-    },
-    {
-     "id": "g32",
-     "q": "Ich helfe dem Hund. Schreibe den Fall von «dem Hund».",
+     "q": "Wir danken unserer netten Gastgeberin.\nIn welchem Fall steht «unserer netten Gastgeberin»?",
      "a": "Dativ",
      "lvl": 2,
      "th": "ka",
@@ -8085,7 +7900,8 @@
       "Dativ"
      ],
      "hints": [
-      "Stelle die Frage: wer, wessen, wem oder wen?"
+      "Stelle die Frage: wer/was, wessen, wem oder wen/was?",
+      "Achte auf das Verb: Manche Verben verlangen den Dativ (helfen, danken, schenken)."
      ],
      "steps": [
       [
@@ -8095,27 +7911,8 @@
      ]
     },
     {
-     "id": "g33",
-     "q": "Der Hund bellt laut. Schreibe den Fall von «Der Hund».",
-     "a": "Nominativ",
-     "lvl": 2,
-     "th": "ka",
-     "ans": [
-      "Nominativ"
-     ],
-     "hints": [
-      "Stelle die Frage: wer, wessen, wem oder wen?"
-     ],
-     "steps": [
-      [
-       "Nominativ",
-       "richtig"
-      ]
-     ]
-    },
-    {
-     "id": "g34",
-     "q": "Das Auto meines Vaters ist neu. Schreibe den Fall von «meines Vaters».",
+     "id": "g24",
+     "q": "Die Eltern des erfolgreichen Kindes sind stolz.\nIn welchem Fall steht «des erfolgreichen Kindes»?",
      "a": "Genitiv",
      "lvl": 2,
      "th": "ka",
@@ -8123,7 +7920,8 @@
       "Genitiv"
      ],
      "hints": [
-      "Stelle die Frage: wer, wessen, wem oder wen?"
+      "Stelle die Frage: wer/was, wessen, wem oder wen/was?",
+      "Achte auf das Verb: Manche Verben verlangen den Dativ (helfen, danken, schenken)."
      ],
      "steps": [
       [
@@ -8133,65 +7931,68 @@
      ]
     },
     {
-     "id": "g35",
-     "q": "Jonas hat seinen Fehler erkannt. Schreibe die Zeitform.",
-     "a": "Perfekt",
+     "id": "g25",
+     "q": "Wir besuchen unseren alten Onkel in den Ferien.\nIn welchem Fall steht «unseren alten Onkel»?",
+     "a": "Akkusativ",
      "lvl": 2,
-     "th": "te",
+     "th": "ka",
      "ans": [
-      "Perfekt"
+      "Akkusativ"
      ],
      "hints": [
-      "Achte auf das Hilfsverb und auf die Verbform."
+      "Stelle die Frage: wer/was, wessen, wem oder wen/was?",
+      "Achte auf das Verb: Manche Verben verlangen den Dativ (helfen, danken, schenken)."
      ],
      "steps": [
       [
-       "Perfekt",
+       "Akkusativ",
        "richtig"
       ]
      ]
     },
     {
-     "id": "g36",
-     "q": "Die Klasse wird das Problem besprechen. Schreibe die Zeitform.",
-     "a": "Futur I",
+     "id": "g26",
+     "q": "Mein bester Freund schreibt mir jeden Tag.\nIn welchem Fall steht «Mein bester Freund»?",
+     "a": "Nominativ",
      "lvl": 2,
-     "th": "te",
+     "th": "ka",
      "ans": [
-      "Futur I"
+      "Nominativ"
      ],
      "hints": [
-      "Achte auf das Hilfsverb und auf die Verbform."
+      "Stelle die Frage: wer/was, wessen, wem oder wen/was?",
+      "Achte auf das Verb: Manche Verben verlangen den Dativ (helfen, danken, schenken)."
      ],
      "steps": [
       [
-       "Futur I",
+       "Nominativ",
        "richtig"
       ]
      ]
     },
     {
-     "id": "g37",
-     "q": "Wir fanden eine Lösung. Schreibe die Zeitform.",
-     "a": "Präteritum",
+     "id": "g27",
+     "q": "Sie hilft dem neuen Mitschüler bei den Aufgaben.\nIn welchem Fall steht «dem neuen Mitschüler»?",
+     "a": "Dativ",
      "lvl": 2,
-     "th": "te",
+     "th": "ka",
      "ans": [
-      "Präteritum"
+      "Dativ"
      ],
      "hints": [
-      "Achte auf das Hilfsverb und auf die Verbform."
+      "Stelle die Frage: wer/was, wessen, wem oder wen/was?",
+      "Achte auf das Verb: Manche Verben verlangen den Dativ (helfen, danken, schenken)."
      ],
      "steps": [
       [
-       "Präteritum",
+       "Dativ",
        "richtig"
       ]
      ]
     },
     {
-     "id": "g38",
-     "q": "Jonas hatte seinen Fehler erkannt. Schreibe die Zeitform.",
+     "id": "g28",
+     "q": "Ich hatte meine Hausaufgaben schon gemacht, als du anriefst.\nIn welcher Zeitform steht «ich hatte meine Hausaufgaben schon gemacht»?",
      "a": "Plusquamperfekt",
      "lvl": 2,
      "th": "te",
@@ -8199,7 +8000,8 @@
       "Plusquamperfekt"
      ],
      "hints": [
-      "Achte auf das Hilfsverb und auf die Verbform."
+      "Achte auf das Hilfsverb (hat/ist, hatte/war, wird) und auf die Form des Verbs.",
+      "Auch im Präsens kann etwas in der Zukunft gemeint sein (morgen)."
      ],
      "steps": [
       [
@@ -8209,8 +8011,48 @@
      ]
     },
     {
-     "id": "g39",
-     "q": "Mia schreibt eine Nachricht. Schreibe die Zeitform.",
+     "id": "g29",
+     "q": "Nächste Woche werden wir eine Prüfung schreiben.\nIn welcher Zeitform steht der Satz?",
+     "a": "Futur I",
+     "lvl": 2,
+     "th": "te",
+     "ans": [
+      "Futur I"
+     ],
+     "hints": [
+      "Achte auf das Hilfsverb (hat/ist, hatte/war, wird) und auf die Form des Verbs.",
+      "Auch im Präsens kann etwas in der Zukunft gemeint sein (morgen)."
+     ],
+     "steps": [
+      [
+       "Futur I",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g30",
+     "q": "Sie ist gestern mit dem Zug nach Zürich gefahren.\nIn welcher Zeitform steht der Satz?",
+     "a": "Perfekt",
+     "lvl": 2,
+     "th": "te",
+     "ans": [
+      "Perfekt"
+     ],
+     "hints": [
+      "Achte auf das Hilfsverb (hat/ist, hatte/war, wird) und auf die Form des Verbs.",
+      "Auch im Präsens kann etwas in der Zukunft gemeint sein (morgen)."
+     ],
+     "steps": [
+      [
+       "Perfekt",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g31",
+     "q": "Die Klasse arbeitet konzentriert an der Aufgabe.\nIn welcher Zeitform steht der Satz?",
      "a": "Präsens",
      "lvl": 2,
      "th": "te",
@@ -8218,7 +8060,8 @@
       "Präsens"
      ],
      "hints": [
-      "Achte auf das Hilfsverb und auf die Verbform."
+      "Achte auf das Hilfsverb (hat/ist, hatte/war, wird) und auf die Form des Verbs.",
+      "Auch im Präsens kann etwas in der Zukunft gemeint sein (morgen)."
      ],
      "steps": [
       [
@@ -8228,65 +8071,88 @@
      ]
     },
     {
-     "id": "g40",
-     "q": "Wie heisst die Kurzform für Subjekt? (Schreibe den Buchstaben)",
-     "a": "S",
-     "lvl": 2,
-     "th": "sg",
+     "id": "g32",
+     "q": "Setze die richtige Form ein: Wir danken ___ . (unsere nette Gastgeberin)",
+     "a": "unserer netten Gastgeberin",
+     "lvl": 3,
+     "th": "ka",
      "ans": [
-      "S"
+      "unserer netten Gastgeberin"
      ],
      "hints": [
-      "Subjekt beginnt mit S."
+      "Bestimme zuerst den Fall: wem, wen, wessen oder wer?",
+      "Passe Begleiter, Adjektiv und Nomen dem Fall an."
      ],
      "steps": [
       [
-       "S",
+       "unserer netten Gastgeberin",
        "richtig"
       ]
      ]
     },
     {
-     "id": "g41",
-     "q": "Wofür steht DO?",
-     "a": "Dativobjekt",
-     "lvl": 2,
-     "th": "sg",
+     "id": "g33",
+     "q": "Setze die richtige Form ein: Der Lehrer lobt ___ . (der fleissige Schüler)",
+     "a": "den fleissigen Schüler",
+     "lvl": 3,
+     "th": "ka",
      "ans": [
-      "Dativobjekt"
+      "den fleissigen Schüler"
      ],
      "hints": [
-      "D steht für Dativ, O für Objekt."
+      "Bestimme zuerst den Fall: wem, wen, wessen oder wer?",
+      "Passe Begleiter, Adjektiv und Nomen dem Fall an."
      ],
      "steps": [
       [
-       "Dativobjekt",
+       "den fleissigen Schüler",
        "richtig"
       ]
      ]
     },
     {
-     "id": "g42",
-     "q": "Wofür steht AO?",
-     "a": "Akkusativobjekt",
-     "lvl": 2,
-     "th": "sg",
+     "id": "g34",
+     "q": "Setze die richtige Form ein: Sie schenkt ___ ein Buch. (ihr kleiner Bruder)",
+     "a": "ihrem kleinen Bruder",
+     "lvl": 3,
+     "th": "ka",
      "ans": [
-      "Akkusativobjekt"
+      "ihrem kleinen Bruder"
      ],
      "hints": [
-      "A steht für Akkusativ, O für Objekt."
+      "Bestimme zuerst den Fall: wem, wen, wessen oder wer?",
+      "Passe Begleiter, Adjektiv und Nomen dem Fall an."
      ],
      "steps": [
       [
-       "Akkusativobjekt",
+       "ihrem kleinen Bruder",
        "richtig"
       ]
      ]
     },
     {
-     "id": "g43",
-     "q": "Setze die richtige Form ein: Ich gebe ___ die Unterlagen. (der neue Schüler)",
+     "id": "g35",
+     "q": "Setze die richtige Form ein: Die Eltern ___ sind stolz. (das erfolgreiche Kind)",
+     "a": "des erfolgreichen Kindes",
+     "lvl": 3,
+     "th": "ka",
+     "ans": [
+      "des erfolgreichen Kindes"
+     ],
+     "hints": [
+      "Bestimme zuerst den Fall: wem, wen, wessen oder wer?",
+      "Passe Begleiter, Adjektiv und Nomen dem Fall an."
+     ],
+     "steps": [
+      [
+       "des erfolgreichen Kindes",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g36",
+     "q": "Setze die richtige Form ein: Die Lehrerin hilft ___ bei den Aufgaben. (der neue Schüler)",
      "a": "dem neuen Schüler",
      "lvl": 3,
      "th": "ka",
@@ -8294,8 +8160,8 @@
       "dem neuen Schüler"
      ],
      "hints": [
-      "Bestimme zuerst den Fall: wem, wen oder wessen?",
-      "Dann passe Begleiter und Adjektiv an."
+      "Bestimme zuerst den Fall: wem, wen, wessen oder wer?",
+      "Passe Begleiter, Adjektiv und Nomen dem Fall an."
      ],
      "steps": [
       [
@@ -8305,68 +8171,8 @@
      ]
     },
     {
-     "id": "g44",
-     "q": "Setze die richtige Form ein: Wir besprechen ___ nach der Pause. (das schwierige Problem)",
-     "a": "das schwierige Problem",
-     "lvl": 3,
-     "th": "ka",
-     "ans": [
-      "das schwierige Problem"
-     ],
-     "hints": [
-      "Bestimme zuerst den Fall: wem, wen oder wessen?",
-      "Dann passe Begleiter und Adjektiv an."
-     ],
-     "steps": [
-      [
-       "das schwierige Problem",
-       "richtig"
-      ]
-     ]
-    },
-    {
-     "id": "g45",
-     "q": "Setze die richtige Form ein: Die Meinung ___ zählt ebenfalls. (meine Freundin)",
-     "a": "meiner Freundin",
-     "lvl": 3,
-     "th": "ka",
-     "ans": [
-      "meiner Freundin"
-     ],
-     "hints": [
-      "Bestimme zuerst den Fall: wem, wen oder wessen?",
-      "Dann passe Begleiter und Adjektiv an."
-     ],
-     "steps": [
-      [
-       "meiner Freundin",
-       "richtig"
-      ]
-     ]
-    },
-    {
-     "id": "g46",
-     "q": "Setze die richtige Form ein: Wir begrüssen ___. (der neue Lehrer)",
-     "a": "den neuen Lehrer",
-     "lvl": 3,
-     "th": "ka",
-     "ans": [
-      "den neuen Lehrer"
-     ],
-     "hints": [
-      "Bestimme zuerst den Fall: wem, wen oder wessen?",
-      "Dann passe Begleiter und Adjektiv an."
-     ],
-     "steps": [
-      [
-       "den neuen Lehrer",
-       "richtig"
-      ]
-     ]
-    },
-    {
-     "id": "g47",
-     "q": "Setze die richtige Form ein: Die Lehrerin hilft ___. (die neue Schülerin)",
+     "id": "g37",
+     "q": "Setze die richtige Form ein: Das Heft ___ liegt auf dem Tisch. (die neue Schülerin)",
      "a": "der neuen Schülerin",
      "lvl": 3,
      "th": "ka",
@@ -8374,8 +8180,8 @@
       "der neuen Schülerin"
      ],
      "hints": [
-      "Bestimme zuerst den Fall: wem, wen oder wessen?",
-      "Dann passe Begleiter und Adjektiv an."
+      "Bestimme zuerst den Fall: wem, wen, wessen oder wer?",
+      "Passe Begleiter, Adjektiv und Nomen dem Fall an."
      ],
      "steps": [
       [
@@ -8385,65 +8191,131 @@
      ]
     },
     {
-     "id": "g48",
-     "q": "Setze die richtige Form ein: Das Auto ___ steht vor dem Haus. (mein Vater)",
-     "a": "meines Vaters",
+     "id": "g38",
+     "q": "Setze die richtige Form ein: Wir besprechen ___ nach der Pause. (das schwierige Problem)",
+     "a": "das schwierige Problem",
      "lvl": 3,
      "th": "ka",
      "ans": [
-      "meines Vaters"
+      "das schwierige Problem"
      ],
      "hints": [
-      "Bestimme zuerst den Fall: wem, wen oder wessen?",
-      "Dann passe Begleiter und Adjektiv an."
+      "Bestimme zuerst den Fall: wem, wen, wessen oder wer?",
+      "Passe Begleiter, Adjektiv und Nomen dem Fall an."
      ],
      "steps": [
       [
-       "meines Vaters",
+       "das schwierige Problem",
        "richtig"
       ]
      ]
     },
     {
-     "id": "g49",
-     "q": "Fehler finden: Tim sagt, «weil» sei ein Verb. Welche Wortart ist «weil» richtig?",
-     "a": "Konjunktion",
+     "id": "g39",
+     "q": "Die Mutter schenkt ihrem Sohn ein neues Fahrrad.\nSchreibe das Subjekt (S).",
+     "a": "Die Mutter",
      "lvl": 3,
-     "th": "wa",
+     "th": "sg",
      "ans": [
-      "Konjunktion"
+      "Die Mutter"
      ],
      "hints": [
-      "Ein Bindewort oder eine Eigenschaft?"
+      "S: wer oder was? P: das Verb (auch zweiteilig). DO: wem? AO: wen oder was?",
+      "Wörter wie «heute» oder «gestern» sind keine dieser Satzglieder."
      ],
      "steps": [
       [
-       "Konjunktion",
+       "Die Mutter",
        "richtig"
       ]
      ]
     },
     {
-     "id": "g50",
-     "q": "Fehler finden: Tim sagt, «schnelle» sei ein Nomen. Welche Wortart ist «schnelle» richtig?",
-     "a": "Adjektiv",
+     "id": "g40",
+     "q": "Die Mutter schenkt ihrem Sohn ein neues Fahrrad.\nSchreibe das Akkusativobjekt (AO).",
+     "a": "ein neues Fahrrad",
      "lvl": 3,
-     "th": "wa",
+     "th": "sg",
      "ans": [
-      "Adjektiv"
+      "ein neues Fahrrad",
+      "ein neues fahrrad"
      ],
      "hints": [
-      "Ein Bindewort oder eine Eigenschaft?"
+      "S: wer oder was? P: das Verb (auch zweiteilig). DO: wem? AO: wen oder was?",
+      "Wörter wie «heute» oder «gestern» sind keine dieser Satzglieder."
      ],
      "steps": [
       [
-       "Adjektiv",
+       "ein neues Fahrrad",
        "richtig"
       ]
      ]
     },
     {
-     "id": "g51",
+     "id": "g41",
+     "q": "Heute erzählt die Grossmutter den Kindern eine spannende Geschichte.\nSchreibe das Dativobjekt (DO).",
+     "a": "den Kindern",
+     "lvl": 3,
+     "th": "sg",
+     "ans": [
+      "den Kindern",
+      "den kindern"
+     ],
+     "hints": [
+      "S: wer oder was? P: das Verb (auch zweiteilig). DO: wem? AO: wen oder was?",
+      "Wörter wie «heute» oder «gestern» sind keine dieser Satzglieder."
+     ],
+     "steps": [
+      [
+       "den Kindern",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g42",
+     "q": "Heute erzählt die Grossmutter den Kindern eine spannende Geschichte.\nSchreibe das Akkusativobjekt (AO).",
+     "a": "eine spannende Geschichte",
+     "lvl": 3,
+     "th": "sg",
+     "ans": [
+      "eine spannende Geschichte",
+      "eine spannende geschichte"
+     ],
+     "hints": [
+      "S: wer oder was? P: das Verb (auch zweiteilig). DO: wem? AO: wen oder was?",
+      "Wörter wie «heute» oder «gestern» sind keine dieser Satzglieder."
+     ],
+     "steps": [
+      [
+       "eine spannende Geschichte",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g43",
+     "q": "Leah hat dem Nachbarn gestern das Paket gebracht.\nSchreibe das Prädikat (P). (Es besteht aus zwei Wörtern.)",
+     "a": "hat gebracht",
+     "lvl": 3,
+     "th": "sg",
+     "ans": [
+      "hat gebracht",
+      "hat gebracht"
+     ],
+     "hints": [
+      "S: wer oder was? P: das Verb (auch zweiteilig). DO: wem? AO: wen oder was?",
+      "Wörter wie «heute» oder «gestern» sind keine dieser Satzglieder."
+     ],
+     "steps": [
+      [
+       "hat gebracht",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g44",
      "q": "Ins Perfekt: Mia schreibt eine Nachricht. Schreibe den ganzen Satz.",
      "a": "Mia hat eine Nachricht geschrieben.",
      "lvl": 3,
@@ -8463,7 +8335,7 @@
      ]
     },
     {
-     "id": "g52",
+     "id": "g45",
      "q": "Ins Präteritum: Wir finden eine gute Lösung. Schreibe den ganzen Satz.",
      "a": "Wir fanden eine gute Lösung.",
      "lvl": 3,
@@ -8483,27 +8355,7 @@
      ]
     },
     {
-     "id": "g53",
-     "q": "Ins Plusquamperfekt: Jonas hat seinen Fehler erkannt. Schreibe den ganzen Satz.",
-     "a": "Jonas hatte seinen Fehler erkannt.",
-     "lvl": 3,
-     "th": "te",
-     "ans": [
-      "Jonas hatte seinen Fehler erkannt."
-     ],
-     "hints": [
-      "Perfekt: hat/ist + Partizip II. Plusquamperfekt: hatte/war + Partizip II. Futur I: wird + Infinitiv.",
-      "Schreibe ganze Sätze."
-     ],
-     "steps": [
-      [
-       "Jonas hatte seinen Fehler erkannt.",
-       "richtig"
-      ]
-     ]
-    },
-    {
-     "id": "g54",
+     "id": "g46",
      "q": "Ins Futur I: Die Klasse bespricht das Problem. Schreibe den ganzen Satz.",
      "a": "Die Klasse wird das Problem besprechen.",
      "lvl": 3,
@@ -8523,17 +8375,213 @@
      ]
     },
     {
+     "id": "g47",
+     "q": "Ins Perfekt: Der Schüler liest den langen Text. Schreibe den ganzen Satz.",
+     "a": "Der Schüler hat den langen Text gelesen.",
+     "lvl": 3,
+     "th": "te",
+     "ans": [
+      "Der Schüler hat den langen Text gelesen."
+     ],
+     "hints": [
+      "Perfekt: hat/ist + Partizip II. Plusquamperfekt: hatte/war + Partizip II. Futur I: wird + Infinitiv.",
+      "Schreibe ganze Sätze."
+     ],
+     "steps": [
+      [
+       "Der Schüler hat den langen Text gelesen.",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g48",
+     "q": "Tim hat «obwohl» als Adverb eingeordnet. Das ist falsch. Schreibe die richtige Wortart.",
+     "a": "Konjunktion",
+     "lvl": 4,
+     "th": "wa",
+     "ans": [
+      "Konjunktion"
+     ],
+     "hints": [
+      "Das Wort leitet einen Nebensatz ein."
+     ],
+     "steps": [
+      [
+       "Konjunktion",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g49",
+     "q": "Tim hat «gestern» als Konjunktion eingeordnet. Das ist falsch. Schreibe die richtige Wortart.",
+     "a": "Adverb",
+     "lvl": 4,
+     "th": "wa",
+     "ans": [
+      "Adverb"
+     ],
+     "hints": [
+      "Das Wort sagt, wann etwas geschah."
+     ],
+     "steps": [
+      [
+       "Adverb",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g50",
+     "q": "Tim hat «schnelle» als Nomen eingeordnet. Das ist falsch. Schreibe die richtige Wortart.",
+     "a": "Adjektiv",
+     "lvl": 4,
+     "th": "wa",
+     "ans": [
+      "Adjektiv"
+     ],
+     "hints": [
+      "Es beschreibt, wie etwas ist."
+     ],
+     "steps": [
+      [
+       "Adjektiv",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g51",
+     "q": "Tim schreibt: «Ich gebe dem neuem Schüler die Unterlagen.» Ein Wort ist falsch. Schreibe die richtige Form von «neuem».",
+     "a": "neuen",
+     "lvl": 4,
+     "th": "ka",
+     "ans": [
+      "neuen"
+     ],
+     "hints": [
+      "Nach «dem» folgt im Dativ männlich die Endung -en."
+     ],
+     "steps": [
+      [
+       "neuen",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g52",
+     "q": "Tim schreibt: «Die Meinung meine Freundin zählt ebenfalls.» Schreibe die richtige Form von «meine Freundin».",
+     "a": "meiner Freundin",
+     "lvl": 4,
+     "th": "ka",
+     "ans": [
+      "meiner Freundin"
+     ],
+     "hints": [
+      "Genitiv: wessen Meinung?",
+      "Weiblich Genitiv: der / meiner."
+     ],
+     "steps": [
+      [
+       "meiner Freundin",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g53",
+     "q": "Ins Perfekt: Wir fahren mit dem Zug nach Bern. Schreibe den ganzen Satz.",
+     "a": "Wir sind mit dem Zug nach Bern gefahren.",
+     "lvl": 4,
+     "th": "te",
+     "ans": [
+      "Wir sind mit dem Zug nach Bern gefahren."
+     ],
+     "hints": [
+      "Welches Hilfsverb passt: haben oder sein? (Bewegung → sein)",
+      "Bei trennbaren Verben (einladen) steht die Vorsilbe im Präteritum am Ende."
+     ],
+     "steps": [
+      [
+       "Wir sind mit dem Zug nach Bern gefahren.",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g54",
+     "q": "Ins Plusquamperfekt: Die Klasse löste die schwierige Aufgabe. Schreibe den ganzen Satz.",
+     "a": "Die Klasse hatte die schwierige Aufgabe gelöst.",
+     "lvl": 4,
+     "th": "te",
+     "ans": [
+      "Die Klasse hatte die schwierige Aufgabe gelöst."
+     ],
+     "hints": [
+      "Welches Hilfsverb passt: haben oder sein? (Bewegung → sein)",
+      "Bei trennbaren Verben (einladen) steht die Vorsilbe im Präteritum am Ende."
+     ],
+     "steps": [
+      [
+       "Die Klasse hatte die schwierige Aufgabe gelöst.",
+       "richtig"
+      ]
+     ]
+    },
+    {
      "id": "g55",
+     "q": "Ins Präteritum: Er hat seinen Freund eingeladen. Schreibe den ganzen Satz.",
+     "a": "Er lud seinen Freund ein.",
+     "lvl": 4,
+     "th": "te",
+     "ans": [
+      "Er lud seinen Freund ein."
+     ],
+     "hints": [
+      "Welches Hilfsverb passt: haben oder sein? (Bewegung → sein)",
+      "Bei trennbaren Verben (einladen) steht die Vorsilbe im Präteritum am Ende."
+     ],
+     "steps": [
+      [
+       "Er lud seinen Freund ein.",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g56",
+     "q": "Ins Plusquamperfekt: Jonas hat seinen Fehler erkannt. Schreibe den ganzen Satz.",
+     "a": "Jonas hatte seinen Fehler erkannt.",
+     "lvl": 4,
+     "th": "te",
+     "ans": [
+      "Jonas hatte seinen Fehler erkannt."
+     ],
+     "hints": [
+      "Welches Hilfsverb passt: haben oder sein? (Bewegung → sein)",
+      "Bei trennbaren Verben (einladen) steht die Vorsilbe im Präteritum am Ende."
+     ],
+     "steps": [
+      [
+       "Jonas hatte seinen Fehler erkannt.",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g57",
      "q": "Ins Perfekt: Die Lehrerin erklärt den Schülern die Aufgabe. Schreibe den ganzen Satz.",
      "a": "Die Lehrerin hat den Schülern die Aufgabe erklärt.",
-     "lvl": 3,
+     "lvl": 4,
      "th": "te",
      "ans": [
       "Die Lehrerin hat den Schülern die Aufgabe erklärt."
      ],
      "hints": [
-      "Perfekt: hat/ist + Partizip II. Plusquamperfekt: hatte/war + Partizip II. Futur I: wird + Infinitiv.",
-      "Schreibe ganze Sätze."
+      "Welches Hilfsverb passt: haben oder sein? (Bewegung → sein)",
+      "Bei trennbaren Verben (einladen) steht die Vorsilbe im Präteritum am Ende."
      ],
      "steps": [
       [
@@ -8543,84 +8591,8 @@
      ]
     },
     {
-     "id": "g56",
-     "q": "Bestimme das Prädikat (P): Jonas erklärt seiner Freundin den Lösungsweg.",
-     "a": "erklärt",
-     "lvl": 4,
-     "th": "sg",
-     "ans": [
-      "erklärt"
-     ],
-     "hints": [
-      "Das Prädikat ist das Verb."
-     ],
-     "steps": [
-      [
-       "erklärt",
-       "richtig"
-      ]
-     ]
-    },
-    {
-     "id": "g57",
-     "q": "Bestimme das Subjekt (S): Jonas erklärt seiner Freundin den Lösungsweg.",
-     "a": "Jonas",
-     "lvl": 4,
-     "th": "sg",
-     "ans": [
-      "Jonas"
-     ],
-     "hints": [
-      "Wer erklärt?"
-     ],
-     "steps": [
-      [
-       "Jonas",
-       "richtig"
-      ]
-     ]
-    },
-    {
      "id": "g58",
-     "q": "Bestimme das Dativobjekt (DO): Jonas erklärt seiner Freundin den Lösungsweg.",
-     "a": "seiner Freundin",
-     "lvl": 4,
-     "th": "sg",
-     "ans": [
-      "seiner Freundin"
-     ],
-     "hints": [
-      "Wem erklärt Jonas etwas?"
-     ],
-     "steps": [
-      [
-       "seiner Freundin",
-       "richtig"
-      ]
-     ]
-    },
-    {
-     "id": "g59",
-     "q": "Bestimme das Akkusativobjekt (AO): Jonas erklärt seiner Freundin den Lösungsweg.",
-     "a": "den Lösungsweg",
-     "lvl": 4,
-     "th": "sg",
-     "ans": [
-      "den Lösungsweg"
-     ],
-     "hints": [
-      "Was erklärt Jonas?"
-     ],
-     "steps": [
-      [
-       "den Lösungsweg",
-       "richtig"
-      ]
-     ]
-    },
-    {
-     "id": "g60",
-     "q": "Bestimme das Dativobjekt (DO): Die Lehrerin gibt dem Schüler eine neue Aufgabe.",
+     "q": "Die Lehrerin gibt dem Schüler gestern in der Pause eine neue Aufgabe.\nSchreibe das Dativobjekt (DO).",
      "a": "dem Schüler",
      "lvl": 4,
      "th": "sg",
@@ -8628,7 +8600,8 @@
       "dem Schüler"
      ],
      "hints": [
-      "Wem gibt sie etwas?"
+      "Wem gibt sie etwas?",
+      "«gestern» und «in der Pause» sind keine Objekte."
      ],
      "steps": [
       [
@@ -8638,8 +8611,8 @@
      ]
     },
     {
-     "id": "g61",
-     "q": "Bestimme das Akkusativobjekt (AO): Die Lehrerin gibt dem Schüler eine neue Aufgabe.",
+     "id": "g59",
+     "q": "Die Lehrerin gibt dem Schüler gestern in der Pause eine neue Aufgabe.\nSchreibe das Akkusativobjekt (AO).",
      "a": "eine neue Aufgabe",
      "lvl": 4,
      "th": "sg",
@@ -8657,78 +8630,60 @@
      ]
     },
     {
-     "id": "g62",
-     "q": "Bestimme den Fall und die Zeitform: «Wir hatten die Aufgabe vorher besprochen.» Schreibe die Zeitform.",
-     "a": "Plusquamperfekt",
+     "id": "g60",
+     "q": "Der Trainer hat den Spielern vor dem Spiel die neue Taktik erklärt.\nSchreibe das Prädikat (P). (zwei Wörter)",
+     "a": "hat erklärt",
      "lvl": 4,
-     "th": "te",
+     "th": "sg",
      "ans": [
-      "Plusquamperfekt"
+      "hat erklärt"
      ],
      "hints": [
-      "hatte + Partizip II"
+      "Das Prädikat besteht aus Hilfsverb und Partizip."
      ],
      "steps": [
       [
-       "Plusquamperfekt",
+       "hat erklärt",
        "richtig"
       ]
      ]
     },
     {
-     "id": "g63",
-     "q": "Bestimme die Wortart von «Obwohl» im Satz: Obwohl es spät ist, arbeitet die Klasse weiter.",
-     "a": "Konjunktion",
+     "id": "g61",
+     "q": "Der Trainer hat den Spielern vor dem Spiel die neue Taktik erklärt.\nSchreibe das Dativobjekt (DO).",
+     "a": "den Spielern",
+     "lvl": 4,
+     "th": "sg",
+     "ans": [
+      "den Spielern"
+     ],
+     "hints": [
+      "Wem hat er etwas erklärt?"
+     ],
+     "steps": [
+      [
+       "den Spielern",
+       "richtig"
+      ]
+     ]
+    },
+    {
+     "id": "g62",
+     "q": "Ob oder dass: Er sagt, ___ er die Aufgabe verstanden hat. Schreibe das richtige Wort und die Wortart, getrennt durch ein Komma.",
+     "a": "dass, Konjunktion",
      "lvl": 4,
      "th": "wa",
      "ans": [
-      "Konjunktion"
+      "dass, Konjunktion",
+      "dass,Konjunktion",
+      "dass Konjunktion"
      ],
      "hints": [
-      "Es verbindet zwei Teilsätze."
+      "Es leitet einen Nebensatz ein und verbindet Sätze."
      ],
      "steps": [
       [
-       "Konjunktion",
-       "richtig"
-      ]
-     ]
-    },
-    {
-     "id": "g64",
-     "q": "Ergänze den Satz mit der richtigen Form: Die Lehrerin gibt ___ eine neue Aufgabe. (der fleissige Schüler)",
-     "a": "dem fleissigen Schüler",
-     "lvl": 4,
-     "th": "ka",
-     "ans": [
-      "dem fleissigen Schüler"
-     ],
-     "hints": [
-      "Wem gibt sie?",
-      "Dativ männlich: dem … en … "
-     ],
-     "steps": [
-      [
-       "dem fleissigen Schüler",
-       "richtig"
-      ]
-     ]
-    },
-    {
-     "id": "g65",
-     "q": "Ins Futur I: Mia hat eine Nachricht geschrieben. Schreibe den ganzen Satz.",
-     "a": "Mia wird eine Nachricht schreiben.",
-     "lvl": 4,
-     "th": "te",
-     "ans": [
-      "Mia wird eine Nachricht schreiben."
-     ],
-     "hints": [
-      "wird + Infinitiv."
-     ],
-     "steps": [
-      [
-       "Mia wird eine Nachricht schreiben.",
+       "dass, Konjunktion",
        "richtig"
       ]
      ]
@@ -8739,44 +8694,44 @@
     "questions": [
      {
       "id": "e1",
-      "q": "Bestimme die Wortart von «mutige»: Der mutige Schüler meldet sich zuerst.",
-      "explain": "mutig beschreibt den Schüler.",
+      "q": "Bestimme die Wortart von «sehr»: Der aufmerksame Lehrer erklärt den Lösungsweg sehr genau.",
+      "explain": "sehr bestimmt «genau» näher.",
+      "type": "input",
+      "answer": [
+       "Adverb"
+      ]
+     },
+     {
+      "id": "e2",
+      "q": "Bestimme die Wortart von «aufmerksame»: Der aufmerksame Lehrer erklärt den Lösungsweg sehr genau.",
+      "explain": "Es beschreibt den Lehrer.",
       "type": "input",
       "answer": [
        "Adjektiv"
       ]
      },
      {
-      "id": "e2",
-      "q": "Bestimme die Wortart von «lösen»: Wir lösen die Aufgabe gemeinsam.",
-      "explain": "lösen ist eine Tätigkeit.",
-      "type": "input",
-      "answer": [
-       "Verb"
-      ]
-     },
-     {
       "id": "e3",
-      "q": "Bestimme die Wortart von «vor»: Mia wartet vor dem Schulhaus.",
-      "explain": "vor steht vor einem Nomen.",
-      "type": "input",
-      "answer": [
-       "Präposition"
-      ]
-     },
-     {
-      "id": "e4",
-      "q": "Bestimme die Wortart von «Obwohl»: Obwohl es spät ist, arbeitet die Klasse weiter.",
-      "explain": "Obwohl verbindet Sätze.",
+      "q": "Bestimme die Wortart von «Obwohl»: Obwohl es regnet, gehen wir zusammen ins Schwimmbad.",
+      "explain": "Es leitet einen Nebensatz ein.",
       "type": "input",
       "answer": [
        "Konjunktion"
       ]
      },
      {
+      "id": "e4",
+      "q": "Bestimme die Wortart von «Während»: Während der Pause diskutierten die Schüler lebhaft.",
+      "explain": "Danach folgt ein Nomen mit Begleiter.",
+      "type": "input",
+      "answer": [
+       "Präposition"
+      ]
+     },
+     {
       "id": "e5",
-      "q": "Bestimme die Wortart von «Sie»: Sie erklärt die Lösung ruhig.",
-      "explain": "Sie steht für eine Person.",
+      "q": "Bestimme die Wortart von «ihm»: Sie hat ihm gestern ihr Heft gegeben.",
+      "explain": "ihm ersetzt ein Nomen.",
       "type": "input",
       "answer": [
        "Pronomen"
@@ -8784,26 +8739,26 @@
      },
      {
       "id": "e6",
-      "q": "Bestimme die Wortart von «heute»: Wir treffen uns heute nach dem Unterricht.",
-      "explain": "heute sagt, wann.",
+      "q": "Welcher Fall? Die neue Lehrerin erklärt den Schülern das Thema. («den Schülern»)",
+      "explain": "Wem erklärt sie das Thema?",
       "type": "input",
       "answer": [
-       "Adverb"
+       "Dativ"
       ]
      },
      {
       "id": "e7",
-      "q": "Welcher Fall? Die neue Schülerin stellt sich vor. («Die neue Schülerin»)",
-      "explain": "Wer stellt sich vor?",
+      "q": "Welcher Fall? Der Hund des Nachbarn bellt laut. («des Nachbarn»)",
+      "explain": "Wessen Hund?",
       "type": "input",
       "answer": [
-       "Nominativ"
+       "Genitiv"
       ]
      },
      {
       "id": "e8",
-      "q": "Welcher Fall? Die Lehrerin hilft der neuen Schülerin. («der neuen Schülerin»)",
-      "explain": "Wem hilft sie?",
+      "q": "Welcher Fall? Wir danken unserer netten Gastgeberin. («unserer netten Gastgeberin»)",
+      "explain": "danken verlangt den Dativ.",
       "type": "input",
       "answer": [
        "Dativ"
@@ -8811,74 +8766,110 @@
      },
      {
       "id": "e9",
-      "q": "Welcher Fall? Wir begrüssen die neue Schülerin. («die neue Schülerin»)",
-      "explain": "Wen begrüssen wir?",
-      "type": "input",
-      "answer": [
-       "Akkusativ"
-      ]
-     },
-     {
-      "id": "e10",
-      "q": "Welche Zeitform? Lea hat den Text bereits gelesen.",
-      "explain": "hat + Partizip II",
-      "type": "input",
-      "answer": [
-       "Perfekt"
-      ]
-     },
-     {
-      "id": "e11",
-      "q": "Welche Zeitform? Wir hatten die Aufgabe vorher besprochen.",
-      "explain": "hatte + Partizip II",
+      "q": "Welche Zeitform? Nachdem wir den Text gelesen hatten, besprachen wir die Aufgabe. («wir den Text gelesen hatten»)",
+      "explain": "hatten + Partizip II",
       "type": "input",
       "answer": [
        "Plusquamperfekt"
       ]
      },
      {
-      "id": "e12",
-      "q": "Ins Futur I: Die Klasse bespricht das Problem. Schreibe den ganzen Satz.",
-      "explain": "wird + Infinitiv",
+      "id": "e10",
+      "q": "Welche Zeitform? Wir fahren morgen nach Bern.",
+      "explain": "Präsens mit Zukunftsbedeutung.",
       "type": "input",
       "answer": [
-       "Die Klasse wird das Problem besprechen."
+       "Präsens"
+      ]
+     },
+     {
+      "id": "e11",
+      "q": "Bestimme das Dativobjekt (DO): Die Mutter schenkt ihrem Sohn ein neues Fahrrad.",
+      "explain": "Wem schenkt sie etwas?",
+      "type": "input",
+      "answer": [
+       "ihrem Sohn"
+      ]
+     },
+     {
+      "id": "e12",
+      "q": "Bestimme das Akkusativobjekt (AO): Heute erzählt die Grossmutter den Kindern eine spannende Geschichte.",
+      "explain": "Was erzählt sie?",
+      "type": "input",
+      "answer": [
+       "eine spannende Geschichte"
       ]
      },
      {
       "id": "e13",
-      "q": "Setze die richtige Form ein: Ich gebe ___ die Unterlagen. (der neue Schüler)",
-      "explain": "Dativ: wem?",
+      "q": "Bestimme das Prädikat (P): Leah hat dem Nachbarn gestern das Paket gebracht. (zwei Wörter)",
+      "explain": "Hilfsverb + Partizip.",
       "type": "input",
       "answer": [
-       "dem neuen Schüler"
+       "hat gebracht"
       ]
      },
      {
       "id": "e14",
-      "q": "Setze die richtige Form ein: Die Meinung ___ zählt ebenfalls. (meine Freundin)",
-      "explain": "Genitiv: wessen?",
+      "q": "Setze die richtige Form ein: Der Lehrer lobt ___ . (der fleissige Schüler)",
+      "explain": "Akkusativ: wen lobt er?",
       "type": "input",
       "answer": [
-       "meiner Freundin"
+       "den fleissigen Schüler"
       ]
      },
      {
       "id": "e15",
-      "q": "Bestimme das Dativobjekt (DO): Die Lehrerin gibt dem Schüler eine neue Aufgabe.",
-      "explain": "Wem gibt sie etwas?",
+      "q": "Setze die richtige Form ein: Die Eltern ___ sind stolz. (das erfolgreiche Kind)",
+      "explain": "Genitiv: wessen Eltern?",
       "type": "input",
       "answer": [
-       "dem Schüler"
+       "des erfolgreichen Kindes"
       ]
      },
      {
       "id": "e16",
-      "q": "Bestimme das Akkusativobjekt (AO): Jonas erklärt seiner Freundin den Lösungsweg.",
-      "explain": "Was erklärt Jonas?",
+      "q": "Setze die richtige Form ein: Sie schenkt ___ ein Buch. (ihr kleiner Bruder)",
+      "explain": "Dativ: wem schenkt sie?",
       "type": "input",
       "answer": [
-       "den Lösungsweg"
+       "ihrem kleinen Bruder"
+      ]
+     },
+     {
+      "id": "e17",
+      "q": "Ins Futur I: Wir schreiben eine Prüfung. Schreibe den ganzen Satz.",
+      "explain": "wird + Infinitiv",
+      "type": "input",
+      "answer": [
+       "Wir werden eine Prüfung schreiben."
+      ]
+     },
+     {
+      "id": "e18",
+      "q": "Ins Perfekt: Wir fahren mit dem Zug nach Bern. Schreibe den ganzen Satz.",
+      "explain": "Bewegung: sein",
+      "type": "input",
+      "answer": [
+       "Wir sind mit dem Zug nach Bern gefahren."
+      ]
+     },
+     {
+      "id": "e19",
+      "q": "Ins Plusquamperfekt: Die Klasse löste die schwierige Aufgabe. Schreibe den ganzen Satz.",
+      "explain": "hatte + Partizip II",
+      "type": "input",
+      "answer": [
+       "Die Klasse hatte die schwierige Aufgabe gelöst."
+      ]
+     },
+     {
+      "id": "e20",
+      "q": "Tim hat «obwohl» als Adverb eingeordnet. Schreibe die richtige Wortart.",
+      "explain": "Es leitet einen Nebensatz ein.",
+      "type": "input",
+      "answer": [
+       "Konjunktion"
       ]
      }
     ]
@@ -8886,19 +8877,19 @@
    "theory": {
     "wa": {
      "h": "Wortarten",
-     "text": "Nomen = Name, Verb = Tätigkeit, Adjektiv = Eigenschaft, Pronomen = steht für ein Nomen, Präposition = Verhältniswort (vor, nach), Konjunktion = Bindewort (weil, obwohl), Adverb = wann, wo, wie (heute)."
+     "text": "Nomen = Name. Verb = Tätigkeit. Adjektiv = beschreibt ein Nomen. Adverb = bestimmt ein Verb näher (wann, wo, wie). Pronomen = ersetzt ein Nomen. Präposition = steht vor einem Nomen (vor, über, während der Pause). Konjunktion = verbindet Sätze (weil, obwohl, dass)."
     },
     "ka": {
      "h": "Die vier Fälle",
-     "text": "Nominativ = wer oder was? Genitiv = wessen? Dativ = wem? Akkusativ = wen oder was? Passe Begleiter und Adjektiv dem Fall an."
+     "text": "Nominativ = wer oder was? Genitiv = wessen? Dativ = wem? Akkusativ = wen oder was? Passe Begleiter, Adjektiv und Nomen dem Fall an. Das Verb bestimmt den Fall."
     },
     "te": {
      "h": "Zeitformen",
-     "text": "Perfekt = hat/ist + Partizip II. Plusquamperfekt = hatte/war + Partizip II. Futur I = wird + Infinitiv. Präteritum = einfache Vergangenheit (fanden)."
+     "text": "Perfekt = hat/ist + Partizip II. Plusquamperfekt = hatte/war + Partizip II. Futur I = wird + Infinitiv. Präteritum = einfache Vergangenheit. Bei Bewegung: ist gefahren."
     },
     "sg": {
      "h": "Satzglieder",
-     "text": "S = Subjekt (wer oder was?), P = Prädikat (Verb), DO = Dativobjekt (wem?), AO = Akkusativobjekt (wen oder was?). Jedes richtige Satzglied gibt 1 Punkt."
+     "text": "S = Subjekt (wer oder was?), P = Prädikat (Verb, auch zweiteilig), DO = Dativobjekt (wem?), AO = Akkusativobjekt (wen oder was?). Angaben der Zeit oder des Ortes sind keine Objekte."
     }
    }
   },
@@ -10204,8 +10195,8 @@
    }
   },
   {
-   "id": "kl5-engl-travel",
-   "child": "kl5",
+   "id": "kl8-engl-travel",
+   "child": "kl8",
    "subject": "engl",
    "chapter": "Travel",
    "title": "Travel · Vocabulary & Grammar",
