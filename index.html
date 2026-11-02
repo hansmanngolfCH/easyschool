@@ -736,6 +736,11 @@ body.rwopen{overflow:hidden}
 .rwpad2{display:flex;justify-content:center;gap:8px}
 .rwpad2 button{min-width:54px;height:50px;border:1.5px solid #DADCE0;background:#fff;border-radius:14px;font-size:1.3rem;cursor:pointer;touch-action:manipulation;user-select:none;-webkit-user-select:none}
 .rwcv{border:3px solid #fff;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+
+.rwgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.rwg{display:flex;flex-direction:column;align-items:center;gap:2px;padding:16px 8px;border:0;border-radius:16px;cursor:pointer;font:inherit;box-shadow:0 4px 0 rgba(0,0,0,.12)}
+.rwg span{font-size:2.4rem}
+.rwg:nth-child(1){background:linear-gradient(160deg,#BFE9FF,#5EC2F5)}.rwg:nth-child(2){background:linear-gradient(160deg,#C9B6FF,#8E6BFF)}.rwg:nth-child(3){background:linear-gradient(160deg,#FFC9E0,#FF7BAC)}.rwg:nth-child(4){background:linear-gradient(160deg,#FFE29A,#FF9F5E)}.rwg:nth-child(5){background:linear-gradient(160deg,#C8F2A0,#8BD65E)}.rwg:nth-child(6){background:linear-gradient(160deg,#B2EBF2,#7E8CF5)}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -743,7 +748,7 @@ body.rwopen{overflow:hidden}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v3.68';
+var APP_VERSION='v3.69';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -1691,7 +1696,7 @@ var ACT={
   prev:function(){nav.step--;nav.fails=0;render();window.scrollTo(0,0)},
   chtoggle:function(el){var k=el.getAttribute('data-key');nav.chopen=nav.chopen||{};var def=!(topicsOf(nav.child,nav.subject).length>8);nav.chopen[k]=!((k in nav.chopen)?nav.chopen[k]:def);render()},
   avopen:function(){nav.avpick=true;render()},
-  avclose:function(){nav.avpick=false;render();if(nav.view!=='home')return},
+  avclose:function(){nav.avpick=false;render();if(String(myName()).trim().toLowerCase()==='spielplatz'){setMyName('');render();showPicker();return}if(nav.view!=='home')return},
   avcol:function(b){setMyCol(parseInt(b.dataset.id,10));render()},
   avpick:function(b){setMyAv(parseInt(b.dataset.id,10));render()},
   power:function(b){var p=prog(nav.child),id=b.dataset.id,i=p.arm.indexOf(id);if(i>=0)p.arm.splice(i,1);else{var w=POW.filter(function(x){return x.id===id})[0];if(!powReady(nav.child,w))return;p.arm.push(id)}saveLocal();render()},
@@ -1887,14 +1892,21 @@ var GAMES=[
  {id:'stack',n:'Turmbau',e:'🏗️',g:[4,8,12],time:90,how:'Tippe im richtigen Moment, um den Block abzulegen. Baue den höchsten Turm!'},
  {id:'catch',n:'Sternenfang',e:'⭐',g:[12,24,36],time:75,how:'Tippe links oder rechts. Fange Sterne und Diamanten, meide die Bomben!'}
 ];
-function showReward(why){
+function showPicker(){
+  var o=document.createElement('div');o.id='rwd';o.className='rwd';
+  o.innerHTML='<div class="rwbox"><div class="rwtop"><b>🎮 Spielplatz (Testmodus)</b><button class="rwx" aria-label="Schliessen">×</button></div><p class="sub" style="margin:0">Hier kannst du alle Spiele testen. Es gibt keine XP.</p><div class="rwgrid">'+GAMES.map(function(g){return '<button class="rwg" data-g="'+g.id+'"><span>'+g.e+'</span><b>'+g.n+'</b></button>'}).join('')+'</div></div>';
+  document.body.appendChild(o);document.body.classList.add('rwopen');
+  o.querySelector('.rwx').onclick=closeReward;
+  o.querySelectorAll('.rwg').forEach(function(b){b.onclick=function(){o.remove();showReward('Testmodus.',b.dataset.g)}});
+}
+function showReward(why,force){
   if(document.getElementById('rwd'))return;
-  var pool=GAMES.filter(function(g){return g.id!==(RW_LAST||'')}),g=pool[Math.floor(Math.random()*pool.length)];RW_LAST=g.id;
-  RW={child:nav.child,g:g,stop:null,score:0,done:false,why:why};
+  var pool=GAMES.filter(function(g){return g.id!==(RW_LAST||'')}),g=force?GAMES.filter(function(x){return x.id===force})[0]:pool[Math.floor(Math.random()*pool.length)];RW_LAST=g.id;
+  RW={child:nav.child,g:g,stop:null,score:0,done:false,why:why,test:!!force};
   var o=document.createElement('div');o.id='rwd';o.className='rwd';
   o.innerHTML='<div class="rwbox" role="dialog" aria-modal="true"><div class="rwtop"><b>'+g.e+' '+g.n+'</b><span id="rwt" class="rwtime">'+fmtT(g.time)+'</span><button class="rwx" aria-label="Schliessen">×</button></div>'
    +'<div class="xb"><div class="xbt"><i id="rwf"></i>'+[0,1].map(function(i){return '<u style="left:'+(g.g[i]/g.g[2]*100)+'%"></u>'}).join('')+'</div><div class="xbl">'+['100','200','300'].map(function(x,i){return '<span style="left:'+(g.g[i]/g.g[2]*100)+'%">'+x+' XP</span>'}).join('')+'</div></div>'
-   +'<div class="rwcvw"><canvas id="rwc" class="rwcv"></canvas><div id="rwst" class="rwstart"><p class="rwwhy">'+why+' Hol dir bis zu 300 Extra-XP!</p><p>'+g.how+'</p><button class="btn pri big" id="rwgo">Los!</button></div></div><div id="rwctl"></div><div id="rwmsg" class="rwmsg"></div></div>';
+   +'<div class="rwcvw"><canvas id="rwc" class="rwcv"></canvas><div id="rwst" class="rwstart"><p class="rwwhy">'+why+' '+(force?'':'Hol dir bis zu 300 Extra-XP!')+'</p><p>'+g.how+'</p><button class="btn pri big" id="rwgo">Los!</button></div></div><div id="rwctl"></div><div id="rwmsg" class="rwmsg"></div></div>';
   document.body.appendChild(o);document.body.classList.add('rwopen');
   o.querySelector('.rwx').onclick=closeReward;
   var W=Math.floor(Math.min(window.innerWidth-48,440)),H=Math.floor(Math.min(W*1.1,window.innerHeight-270));if(H<200)H=200;
@@ -1916,10 +1928,10 @@ function rwBegin(){
 function rwEnd(){
   if(!RW||RW.done)return;RW.done=true;RW.stop();
   var s=RW.score,g=RW.g,xp=s>=g.g[2]?300:s>=g.g[1]?200:s>=g.g[0]?100:0;
-  if(xp>0){addXp(RW.child,xp);toast('+'+xp+' Extra-XP')}
+  if(xp>0&&!RW.test){addXp(RW.child,xp);toast('+'+xp+' Extra-XP')}
   var m=document.getElementById('rwmsg');
   if(m)m.innerHTML=(xp?'<b class="rwwin">🎉 +'+xp+' XP!</b>':'<b>Knapp! Beim nächsten Mal klappt es.</b>')+'<br><small>'+s+' Punkte · weiter geht\'s mit Lernen</small>';
-  var me=RW;setTimeout(function(){if(RW===me)closeReward()},2600);
+  var me=RW;setTimeout(function(){if(RW===me){var tst=me.test;closeReward();if(tst)showPicker()}},2600);
 }
 function closeReward(){if(RW&&!RW.done&&RW.stop)RW.stop();RW=null;var o=document.getElementById('rwd');if(o)o.remove();document.body.classList.remove('rwopen')}
 function rr(cx,x,y,w,h,r){cx.beginPath();cx.moveTo(x+r,y);cx.arcTo(x+w,y,x+w,y+h,r);cx.arcTo(x+w,y+h,x,y+h,r);cx.arcTo(x,y+h,x,y,r);cx.arcTo(x,y,x+w,y,r);cx.closePath()}
