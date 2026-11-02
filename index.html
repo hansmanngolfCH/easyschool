@@ -522,6 +522,10 @@ details.card[open] summary{margin-bottom:10px}
 .mqt{display:flex;align-items:center}
 .mqx{flex:1;min-width:0}
 .padcv{background:#fff!important}
+
+.avname{width:100%;margin-top:4px}.avcols{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.avcol{all:unset;cursor:pointer;width:38px;height:38px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 1.5px #c4c7cc}.avcol.on{box-shadow:0 0 0 3px #1a73e8}
+.avn{max-width:90px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 </style>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -826,7 +830,12 @@ var AVD=[
 /*50 Handheld*/['#FF5C8A','#A31656','<rect x="8" y="26" width="84" height="48" rx="14" '+F('#FFD23F')+'/><rect x="30" y="32" width="40" height="36" rx="4" '+F('#1F2430')+'/><rect x="34" y="36" width="32" height="28" rx="2" fill="#7BE0FF"/><path d="M42 58l6-10 6 6 6-8v12z" fill="#34C759"/><path d="M19 50h10M24 45v10" stroke="#1F2430" stroke-width="4" stroke-linecap="round"/><circle cx="76" cy="46" r="4" '+F('#FF5C5C')+'/><circle cx="82" cy="54" r="4" '+F('#4CB4FF')+'/>']
 ];
 var AV_N=AVD.length;
-function avSvg(i,size){var d=AVD[i%AV_N];return '<svg viewBox="0 0 100 100" width="'+size+'" height="'+size+'" aria-hidden="true"><defs><linearGradient id="avg'+i+'" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="'+d[0]+'"/><stop offset="1" stop-color="'+d[1]+'"/></linearGradient><clipPath id="avc'+i+'"><circle cx="50" cy="50" r="50"/></clipPath></defs><g clip-path="url(#avc'+i+')"><rect width="100" height="100" fill="url(#avg'+i+')"/><circle cx="26" cy="22" r="22" fill="#fff" opacity=".12"/><g transform="translate(50 50) scale(.86) translate(-50 -50)">'+d[2]+'</g></g></svg>'}
+var AVCOL=[['#4285F4','#1A56B8'],['#EA4335','#A32018'],['#FBBC05','#E08A00'],['#34A853','#1B7A38'],['#7B61FF','#4327B8'],['#FF6D91','#C2305A'],['#00ACC1','#00707E'],['#FF8A3D','#D4540F'],['#5F6368','#2B2F33'],['#B04FD6','#6C1E8E']];
+function myCol(){var v=-1;try{v=parseInt(localStorage.getItem('es.avcolor'),10)}catch(e){}return isNaN(v)||v<0||v>=AVCOL.length?-1:v}
+function setMyCol(i){try{localStorage.setItem('es.avcolor',String(i))}catch(e){}}
+function myName(){var v='';try{v=localStorage.getItem('es.name')||''}catch(e){}return v}
+function setMyName(v){try{localStorage.setItem('es.name',v.slice(0,14))}catch(e){}}
+function avSvg(i,size){var d=AVD[i%AV_N].slice(),cc=myCol();if(cc>=0){d[0]=AVCOL[cc][0];d[1]=AVCOL[cc][1]}return '<svg viewBox="0 0 100 100" width="'+size+'" height="'+size+'" aria-hidden="true"><defs><linearGradient id="avg'+i+'" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="'+d[0]+'"/><stop offset="1" stop-color="'+d[1]+'"/></linearGradient><clipPath id="avc'+i+'"><circle cx="50" cy="50" r="50"/></clipPath></defs><g clip-path="url(#avc'+i+')"><rect width="100" height="100" fill="url(#avg'+i+')"/><circle cx="26" cy="22" r="22" fill="#fff" opacity=".12"/><g transform="translate(50 50) scale(.86) translate(-50 -50)">'+d[2]+'</g></g></svg>'}
 function avKey(){return 'es.avatar'}
 function myAv(){var v=-1;try{v=parseInt(localStorage.getItem(avKey()),10)}catch(e){}return isNaN(v)||v<0||v>=AV_N?0:v}
 function setMyAv(i){try{localStorage.setItem(avKey(),String(i))}catch(e){}}
@@ -1016,7 +1025,7 @@ function nextReward(pl){
 function banner(){
   if(!nav.child||(nav.view!=='child'&&nav.view!=='subject'))return '';
   var id=nav.child,pl=plinfo(id),L=level(id,topicsOf(id));
-  return '<div class="banner">'+av(L.lvl,40)+'<div class="bn-m"><div class="bn-row"><span class="bn-lv">Level</span><span class="bn-xp">'+fx(pl.xp)+' XP</span></div><div class="xpg sm" role="img" aria-label="XP"><i style="width:'+Math.max(5,Math.round(pl.pct*100))+'%"></i><u></u></div></div>'+shield(pl.L,40)+'</div>';
+  return '<div class="banner">'+av(L.lvl,40)+'<div class="bn-m"><div class="bn-row"><span class="bn-lv">'+(myName()?'<b style="color:'+(myCol()>=0?AVCOL[myCol()][1]:'inherit')+'">'+esc(myName())+'</b> · ':'')+'Level '+pl.L+'</span><span class="bn-xp">'+fx(pl.xp)+' XP</span></div><div class="xpg sm" role="img" aria-label="XP"><i style="width:'+Math.max(5,Math.round(pl.pct*100))+'%"></i><u></u></div></div>'+shield(pl.L,40)+'</div>';
 }
 function xpbar(pl){return '<div class="xpbar"><div class="bar" role="img" aria-label="XP"><i style="width:'+Math.max(3,Math.round(pl.pct*100))+'%"></i></div><span class="pct">'+pl.xp+' / '+pl.next+' XP</span></div>'}
 
@@ -1027,8 +1036,8 @@ function vHome(){
     return '<button class="ccard simple" data-act="child" data-id="'+esc(c.id)+'"><span class="cc-top"><span class="cnum">'+esc(String(c.grade||''))+'</span><span class="cc-t"><span class="cc-h">'+esc(label(c))+'</span><span class="sub">'+esc(subs.length?subs.join(' · '):'Bald mehr Aufgaben')+'</span></span><span class="cc-go">›</span></span></button>';
   }).join('');
   var picker='';
-  if(nav.avpick){var cur=myAv();picker='<div class="avmodal"><div class="avback" data-act="avclose"></div><div class="avsheet" role="dialog" aria-label="Avatar aussuchen"><div class="avhead"><b>Avatar aussuchen</b><button class="btn sm" data-act="avclose">Fertig</button></div><div class="avgrid">'+Array.apply(null,{length:AV_N}).map(function(_,i){return '<button class="avopt'+(i===cur?' on':'')+'" data-act="avpick" data-id="'+i+'" aria-label="Avatar '+(i+1)+'">'+avPic(i,56)+'</button>'}).join('')+'</div></div></div>'}
-  return '<div class="home"><button class="avbtn" data-act="avopen" aria-label="Avatar aussuchen"><span class="avdot">'+avPic(myAv(),34)+'</span><span>Avatar</span></button>'+'<div class="brandrow">'+logoSvg(54)+'<h1>EasySchool</h1></div><p class="ask">Wähle deine Klasse</p><div class="clist">'+cards+'</div>'+picker+'</div>';
+  if(nav.avpick){var cur=myAv(),cc=myCol();picker='<div class="avmodal"><div class="avback" data-act="avclose"></div><div class="avsheet" role="dialog" aria-label="Avatar aussuchen"><div class="avhead"><b>Dein Avatar</b><button class="btn sm" data-act="avclose">Fertig</button></div><label class="lab2" for="avname">Dein Name (freiwillig)</label><input class="inp avname" id="avname" maxlength="14" placeholder="Zum Beispiel Luca" value="'+esc(myName())+'" autocomplete="off"><p class="lab2" style="margin-top:12px">Farbe</p><div class="avcols">'+AVCOL.map(function(c,i){return '<button class="avcol'+(i===cc?' on':'')+'" style="background:linear-gradient(135deg,'+c[0]+','+c[1]+')" data-act="avcol" data-id="'+i+'" aria-label="Farbe '+(i+1)+'"></button>'}).join('')+'</div><p class="lab2" style="margin-top:12px">Bild</p><div class="avgrid">'+Array.apply(null,{length:AV_N}).map(function(_,i){return '<button class="avopt'+(i===cur?' on':'')+'" data-act="avpick" data-id="'+i+'" aria-label="Avatar '+(i+1)+'">'+avPic(i,56)+'</button>'}).join('')+'</div></div></div>'}
+  return '<div class="home"><button class="avbtn" data-act="avopen" aria-label="Avatar aussuchen"><span class="avdot">'+avPic(myAv(),34)+'</span><span class="avn">'+(esc(myName())||'Avatar')+'</span></button>'+'<div class="brandrow">'+logoSvg(54)+'<h1>EasySchool</h1></div><p class="ask">Wähle deine Klasse</p><div class="clist">'+cards+'</div>'+picker+'</div>';
 }
 
 function vChild(){
@@ -1417,7 +1426,8 @@ var ACT={
   next:function(){nav.step++;nav.fails=0;render();window.scrollTo(0,0)},
   prev:function(){nav.step--;nav.fails=0;render();window.scrollTo(0,0)},
   avopen:function(){nav.avpick=true;render()},
-  avclose:function(){nav.avpick=false;render()},
+  avclose:function(){nav.avpick=false;render();if(nav.view!=='home')return},
+  avcol:function(b){setMyCol(parseInt(b.dataset.id,10));render()},
   avpick:function(b){setMyAv(parseInt(b.dataset.id,10));render()},
   power:function(b){var p=prog(nav.child),id=b.dataset.id,i=p.arm.indexOf(id);if(i>=0)p.arm.splice(i,1);else{var w=POW.filter(function(x){return x.id===id})[0];if(!powReady(nav.child,w))return;p.arm.push(id)}saveLocal();render()},
   powinfo:function(b){var w=POW.filter(function(x){return x.id===b.dataset.id})[0],p=prog(nav.child);toast(w.ic+' '+w.n+': '+(w.lvl>plinfo(nav.child).L?'ab Rang '+w.lvl:p.pw[w.id]===dkey(0)?'heute schon genutzt':w.d),'')},
@@ -1546,6 +1556,7 @@ app.addEventListener('click',function(e){var b=e.target.closest('[data-act]');if
 app.addEventListener('change',function(e){var t=e.target,q=t&&t.dataset&&t.dataset.q;if(q&&nav.view==='exam'&&t.tagName==='SELECT')nav.answers[q]=t.value===''?null:Number(t.value)});
 app.addEventListener('input',function(e){
   var t=e.target;if(!t)return;
+  if(t.id==='avname'){setMyName(t.value);return}
   if(t.id==='ans'&&nav.view==='practice'){nav.typed=t.value;return}
   var q=t.dataset&&t.dataset.q;if(!q||nav.view!=='exam')return;nav.answers[q]=t.type==='radio'?Number(t.value):t.value;
 });
