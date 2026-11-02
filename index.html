@@ -635,6 +635,13 @@ details.card[open] summary{margin-bottom:10px}
 .ccard.sm2 .sub{font-size:.78rem}
 .cl-o .ccard:nth-child(1) .cnum{background:#34A853}.cl-o .ccard:nth-child(2) .cnum{background:#EA4335}.cl-o .ccard:nth-child(3) .cnum{background:#F9AB00}
 @media (min-width:700px){.clist{grid-template-columns:repeat(3,1fr)}}
+
+/* v3.52 Unterscheidung ueber Zahlenform */
+.cl-p .cnum{border-radius:50%}
+.cl-o .cnum{border-radius:8px}
+.clist.cl-o{margin-top:22px}
+.clist.cl-p .ccard.sm2 .cnum{border-radius:50%}
+.clist.cl-o .ccard.sm2 .cnum{border-radius:6px}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -642,7 +649,7 @@ details.card[open] summary{margin-bottom:10px}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v3.51';
+var APP_VERSION='v3.52';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -1148,7 +1155,7 @@ var STUFE_IC={p:'<svg viewBox="0 0 24 24" width="20" height="20" fill="none" str
 function vHome(){
   var kids=C.children.slice().sort(function(a,b){return (a.grade||0)-(b.grade||0)});
   var prim=kids.filter(function(c){return (c.grade||0)<=6}),ober=kids.filter(function(c){return (c.grade||0)>=7});
-  var cards=(prim.length?'<div class="stufe"><span class="stic stp">'+STUFE_IC.p+'</span><b>Primarstufe</b><span>Klasse 1–6</span></div><div class="clist cl-p">'+prim.map(cclass).join('')+'</div>':'')+(ober.length?'<div class="stufe"><span class="stic sto">'+STUFE_IC.o+'</span><b>Oberstufe</b><span>Klasse 7–9</span></div><div class="clist cl-o">'+ober.map(cclass).join('')+'</div>':'');
+  var cards=(prim.length?'<div class="clist cl-p">'+prim.map(cclass).join('')+'</div>':'')+(ober.length?'<div class="clist cl-o">'+ober.map(cclass).join('')+'</div>':'');
   var tot=0;C.children.forEach(function(c){tot+=xpTotal(c.id)});var HL=plv(tot),hp=(tot%1000)/1000;
   var hb='<div class="banner hbn"><span class="av" style="width:40px;height:40px">'+avPic(myAv(),40)+'</span><div class="bn-m"><div class="bn-row"><span class="bn-lv"><b style="color:'+AVCOL[myCol()][1]+'">'+(esc(myName())||'Schüler')+'</b> · Level '+HL+'</span><span class="bn-xp">'+fx(tot)+' XP</span></div><div class="xpg sm" role="img" aria-label="XP"><i style="width:'+Math.max(5,Math.round(hp*100))+'%"></i><u></u></div></div>'+shield(HL,40)+'</div>';
   var picker='';
