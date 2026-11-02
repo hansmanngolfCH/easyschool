@@ -599,6 +599,11 @@ details.card[open] summary{margin-bottom:10px}
 .chm{font-size:.8rem;color:#5f6368}
 .chc{color:#5f6368;font-size:1rem}
 .chbody{display:flex;flex-direction:column;gap:8px;padding-left:8px;border-left:3px solid #DADCE0}
+
+/* v3.47 Vorschau und schlanke Knöpfe */
+.tcprev{margin:0;font-size:.82rem;line-height:1.35;color:#5f6368;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.mod3{padding:7px 4px;border-radius:10px;font:700 .82rem var(--font-d);white-space:nowrap}
+@media (max-width:420px){.mod3{flex-direction:row;padding:7px 2px;font-size:.78rem}}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -606,7 +611,7 @@ details.card[open] summary{margin-bottom:10px}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v3.46';
+var APP_VERSION='v3.47';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -1139,13 +1144,14 @@ function vChild(){
 }
 
 function topicCard(ch,t){
-  var st=stats(ch.id,[t]),seen=prog(ch.id).seen[t.id],best=bestNote(ch.id,t.id),hasV=t.cards.some(isV),L=level(ch.id,[t]),w=Math.max(L.seen?4:0,Math.round(L.pct*100)),due=st.due+st.fresh;
-  var ic={v:'<path d="M24 12C19 8 11 8 6 10v28c5-2 13-2 18 2 5-4 13-4 18-2V10c-5-2-13-2-18 2zM24 12v28"/>',u:'<circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="9"/><circle cx="24" cy="24" r="2.5" fill="#fff"/>',p:'<path d="M10 42V6M10 8h26l-6 9 6 9H10"/>'};
-  var svg=function(k){return '<svg viewBox="0 0 48 48" width="22" height="22" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">'+ic[k]+'</svg>'};
-  return '<article class="card topic tc"><div class="tchead"><div class="tcmain"><h3 class="tt">'+esc(t.title)+'</h3><p class="sub">'+t.cards.length+' Aufgaben · '+esc(L.n)+' · '+w+'%</p></div>'+(hasV?'<button class="btn sm tcgame" data-act="pairs" data-id="'+esc(t.id)+'" aria-label="Spiel: Paare finden">Paare-Spiel</button>':'')+'</div><div class="bar thin" role="img" aria-label="'+w+' Prozent"><i style="width:'+w+'%"></i></div>'
-  +'<div class="mods3"><button class="mod3 m-v" data-act="learn" data-id="'+esc(t.id)+'">'+svg('v')+'<span><b>AI-Theorie</b><small>'+(seen?'✓ gesehen':t.explain.length+' Schritte')+'</small></span></button>'
-  +'<button class="mod3 m-u" data-act="practice" data-scope="topic:'+esc(t.id)+'" data-force="1">'+svg('u')+'<span><b>AI-Lernen</b><small>'+(due>0?due+' dran':'✓ wiederholt')+'</small></span></button>'
-  +'<button class="mod3 m-p" data-act="exam" data-id="'+esc(t.id)+'">'+svg('p')+'<span><b>Prüfung</b><small>'+(best?'Note '+fmt(best):'Boss-Test')+'</small></span></button></div></article>';
+  var st=stats(ch.id,[t]),seen=prog(ch.id).seen[t.id],best=bestNote(ch.id,t.id),hasV=t.cards.some(isV),L=level(ch.id,[t]),w=Math.max(L.seen?4:0,Math.round(L.pct*100));
+  var pv=[];t.explain.forEach(function(e){var h=String(e.h||'').replace(/\s*\(\d+\/\d+\)\s*$/,'');if(!h||/^Wörterliste/.test(h)||pv.indexOf(h)>=0)return;pv.push(h)});
+  return '<article class="card topic tc"><div class="tchead"><div class="tcmain"><h3 class="tt">'+esc(t.title)+'</h3><p class="sub">'+t.cards.length+' Aufgaben · '+w+'%</p></div>'+(hasV?'<button class="btn sm tcgame" data-act="pairs" data-id="'+esc(t.id)+'">Paare-Spiel</button>':'')+'</div>'
+  +(pv.length?'<p class="tcprev">'+pv.map(esc).join(' · ')+'</p>':'')
+  +'<div class="bar thin" role="img" aria-label="'+w+' Prozent"><i style="width:'+w+'%"></i></div>'
+  +'<div class="mods3"><button class="mod3 m-v" data-act="learn" data-id="'+esc(t.id)+'">AI-Theorie</button>'
+  +'<button class="mod3 m-u" data-act="practice" data-scope="topic:'+esc(t.id)+'" data-force="1">AI-Lernen</button>'
+  +'<button class="mod3 m-p" data-act="exam" data-id="'+esc(t.id)+'">Prüfung</button></div></article>';
 }
 function vSubject(){
   var ch=C.children.filter(function(c){return c.id===nav.child})[0],ts=topicsOf(ch.id,nav.subject),chapters=[],sb=C.subjects.filter(function(x){return x.id===nav.subject})[0];
