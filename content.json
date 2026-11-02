@@ -2536,7 +2536,8 @@
       ]
      ]
     }
-   }
+   },
+   "art": "bruch"
   },
   {
    "id": "kl5-engl-unit2-music",
@@ -3440,7 +3441,8 @@
      "h": "Sätze bauen",
      "text": "Fragen mit do: Fragewort + do + du + Verb. Beispiel: When do you practice? Antworten sagen, was man tut: We practice on stage at school."
     }
-   }
+   },
+   "art": "music"
   },
   {
    "id": "kl5-franz-unit1-ecole",
@@ -4357,7 +4359,8 @@
      "h": "Schulanfang",
      "text": "c'est la rentrée = es ist Schulanfang. Mit chouette sagst du toll, mit zut sagst du oje."
     }
-   }
+   },
+   "art": "school"
   },
   {
    "id": "kl5-franz-unit2-famille",
@@ -5229,7 +5232,8 @@
      "h": "Sätze",
      "text": "C'est = das ist (eine Person oder Sache). Ce sont = das sind (mehrere). «Ma» heisst meine und gehört zu einem weiblichen Nomen (ma famille), «mes» zu mehreren (mes grands-parents)."
     }
-   }
+   },
+   "art": "family"
   },
   {
    "id": "kl8-deu-rechtschreibung1",
@@ -7149,7 +7153,8 @@
       ]
      ]
     }
-   }
+   },
+   "art": "ie"
   },
   {
    "id": "kl8-deu-grammatik1",
@@ -8891,7 +8896,8 @@
      "h": "Satzglieder",
      "text": "S = Subjekt (wer oder was?), P = Prädikat (Verb, auch zweiteilig), DO = Dativobjekt (wem?), AO = Akkusativobjekt (wen oder was?). Angaben der Zeit oder des Ortes sind keine Objekte."
     }
-   }
+   },
+   "art": "gram"
   },
   {
    "id": "kl8-mathe-pythagoras",
@@ -10192,7 +10198,8 @@
      "h": "Anwendungen",
      "text": "Skizze zeichnen, rechtwinkliges Dreieck suchen, Formel anpassen, Lösungsweg schreiben, sinnvoll runden und die Einheit angeben."
     }
-   }
+   },
+   "art": "pyth"
   },
   {
    "id": "kl8-engl-travel",
@@ -10939,7 +10946,8 @@
      "h": "Comparatives",
      "text": "Kurze Adjektive: -er (cheaper). Lange Adjektive: more (more comfortable). Unregelmässig: good → better."
     }
-   }
+   },
+   "art": "travel"
   }
  ],
  "hero": "img/hero.webp"
