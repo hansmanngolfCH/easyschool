@@ -1262,17 +1262,15 @@ function vGame(){
 
 /* ---------- Prüfung ---------- */
 function mmss(sec){var s=Math.abs(sec);return (sec<0?'−':'')+Math.floor(s/60)+':'+String(s%60).padStart(2,'0')}
-function examQs(n,t){var qs=t.exam.questions;if(n.mode==='kurz')qs=qs.filter(function(q){return /^(Übersetze|Ergänze|Welches)/.test(q.q)});return qs}
+function examQs(n,t){if(t.subject==='mathe')return t.exam.questions;
+  var cs=t.cards.filter(function(c){return c.fw&&c.de});if(n.mode==='kurz')cs=cs.filter(function(c){return c.grp==='sent'});
+  return cs.map(function(c){return {id:c.id,q:c.fw,type:'input',answer:c.de,ref:c.id,explain:''}})}
 var FUNNY={franz:['Franz Franzose','Pierre Baguette','Marie Croissant','Jean Fromage','Louis Käsli','Brigitte Bonjour','Claude Crêpe','Amélie Merci'],engl:['Tom Teabag','Lady Biscuit','Sir Toastbrot','Bob Bigben','Molly Muffin','Harry Hotdog','Tina Teatime','Jack Fish&Chips'],deu:['Hans Wurst','Berta Brezel','Fritz Müesli','Heidi Alpenblick','Sepp Rösti','Lisa Zopf'],mathe:['Prof. Pi Pfiffig','Zora Zähler','Nick Nenner','Bruno Bruch','Mia Mal-Zwei','Kurt Kehrbruch']};
 function funnyName(t){var l=FUNNY[t.subject]||FUNNY.deu;return l[Math.floor(Math.random()*l.length)]}
-function paperLeft(q){var m=q.q.match(/«([^»]+)»/);
-  if(/^Wie heisst/.test(q.q)&&m)return esc(m[1]);
-  if(/^Was heisst/.test(q.q)&&m)return esc(m[1])+' <i>(→ Deutsch)</i>';
-  var u=q.q.match(/^Übersetze ins (\S+): (.*)$/);if(u)return esc(u[2]);
-  return rt(q.q)}
+function paperLeft(q){return esc(q.q)}
 function vPaper(n,t,qs){
-  var dt=new Date(),ds=dt.getDate()+'.'+(dt.getMonth()+1)+'.'+dt.getFullYear(),lg=t.subject==='franz'?'Französische':t.subject==='engl'?'Englische':'';
-  var h='<div class="paperpage"><p class="ptitle">Prüfung · '+esc(t.title)+'</p><div class="sheet"><div class="shead"><span>Name: <b>'+esc(n.pname||'')+'</b></span><span>Datum: <b>'+ds+'</b></span></div><table class="ptab"><thead><tr><th class="pn">Nr.</th><th>'+(lg?'Übersetze ins '+lg:'Aufgabe')+'</th><th>Antwort</th></tr></thead><tbody>';
+  var dt=new Date(),ds=dt.getDate()+'.'+(dt.getMonth()+1)+'.'+dt.getFullYear(),lg='Deutsche';
+  var h='<div class="paperpage"><p class="ptitle">Prüfung · '+esc(t.title)+'</p><div class="sheet"><div class="shead"><span>Name: <b>'+esc(n.pname||'')+'</b></span><span>Datum: <b>'+ds+'</b></span></div><table class="ptab"><thead><tr><th class="pn">Nr.</th><th>'+'Übersetze ins Deutsche'+'</th><th>Antwort</th></tr></thead><tbody>';
   qs.forEach(function(q,i){
     var cell;
     if(q.type==='mc')cell='<select class="pin" data-q="'+q.id+'"><option value="">–</option>'+q.options.map(function(o,j){return '<option value="'+j+'"'+(n.answers[q.id]===j?' selected':'')+'>'+esc(o.replace(/<[^>]+>/g,''))+'</option>'}).join('')+'</select>';
