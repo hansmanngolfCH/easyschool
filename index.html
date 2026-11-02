@@ -514,6 +514,13 @@ details.card[open] summary{margin-bottom:10px}
 .mq{list-style:none;margin:0;padding:0}.mq li{padding:14px 0;border-bottom:1px solid #ccc}.mqt{font-size:1.2rem;margin-bottom:8px}.mqt b{color:#666;margin-right:8px}
 .mq .pin{width:100%;border:0;border-bottom:1.5px dashed #888;background:transparent;font:inherit;font-size:1.2rem;padding:12px 4px;outline:0}
 .mq .tools{margin-top:6px}
+
+.nc{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;border:2.5px solid;font:600 .95rem/1 Inter,Arial,sans-serif;background:#fff;flex:none;margin-right:10px;vertical-align:middle}
+.nc.c0{color:#4285F4;border-color:#4285F4}.nc.c1{color:#EA4335;border-color:#EA4335}.nc.c2{color:#F9AB00;border-color:#FBBC05}.nc.c3{color:#34A853;border-color:#34A853}
+.nc.sm{width:24px;height:24px;font-size:.8rem;border-width:2px;margin-right:8px}
+.ptab .pn{width:46px!important}.ptab .pn .nc{margin:0}
+.mqt{display:flex;align-items:center}
+.mqx{flex:1;min-width:0}
 </style>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1240,7 +1247,7 @@ function vPractice(){
     return html;
   }
   var k=q[n.idx],x=cardIdx[k],c=curCard(n);
-  var head='<div class="stack"><div class="row between"><p class="eyebrow">Aufgabe '+(n.idx+1)+' von '+q.length+'</p><span class="chips">'+(n.pw.length?n.pw.map(function(id){var w=POW.filter(function(x){return x.id===id})[0];return '<span class="chp pw">'+w.ic+' '+esc(w.n)+'</span>'}).join(''):'')+(n.combo>=2?'<span class="chp fire">🔥 Combo x'+n.combo+'</span>':'')+'<span class="chp xp">⚡ +'+n.xp+' XP</span></span></div><div class="bar" role="img" aria-label="Fortschritt"><i style="width:'+Math.round(100*n.idx/q.length)+'%"></i></div>'+(n.msg&&!n.revealed?'<p class="cheer">'+esc(n.msg)+'</p>':'')+(n.pw.indexOf('skip')>=0&&!n.skipUsed&&!n.revealed?'<button class="btn sm" data-act="skip">⏩ Joker: Aufgabe überspringen</button>':'');
+  var head='<div class="stack"><div class="row between"><p class="eyebrow">Aufgabe '+(n.idx+1)+' von '+q.length+'</p><span class="chips">'+(n.pw.length?n.pw.map(function(id){var w=POW.filter(function(x){return x.id===id})[0];return '<span class="chp pw">'+w.ic+' '+esc(w.n)+'</span>'}).join(''):'')+(n.combo>=2?'<span class="chp fire">🔥 Combo x'+n.combo+'</span>':'')+'</span></div><div class="bar" role="img" aria-label="Fortschritt"><i style="width:'+Math.round(100*n.idx/q.length)+'%"></i></div>'+(n.msg&&!n.revealed?'<p class="cheer">'+esc(n.msg)+'</p>':'')+(n.pw.indexOf('skip')>=0&&!n.skipUsed&&!n.revealed?'<button class="btn sm" data-act="skip">⏩ Joker: Aufgabe überspringen</button>':'');
   if(isV(c))return head+vVocab(n,k,c,stageOf(n,k))+'</div>';
   var pkey='p:'+k,pd=padHTML(pkey,c.q),hs=hintList(n,k,c,0),chk=!c.opts&&checkable(c);
   if(c.opts&&!n.opts)n.opts=shuffle(c.opts.map(function(t){return {t:t,ok:t===c.a}}));
@@ -1258,7 +1265,7 @@ function vPractice(){
     else if(vd==='near')h2+='<div class="verdict near">Dein Satz weicht von der Lösung ab. Vergleiche selbst, ob er trotzdem stimmt.</div>';
     h2+='<p class="fa" style="align-self:flex-start">'+rt(c.a)+'</p>'+(c.steps?'<div class="steps"><p class="lab2">Rechenweg in Schritten</p>'+vLines({items:c.steps,num:true})+'</div>':'')+(c.solvis?visuals(c.solvis):'');
     if(pd.box)h2+=pd.box;else h2+='<div class="tools">'+pd.btn+'</div>';
-    h2+='<p>Wie gut wusstest du es?</p><div class="rates"><button class="rate a'+(vd==='no'?' sug':'')+'" data-act="rate" data-r="again"><b>Noch nicht</b><span>kommt gleich wieder</span></button><button class="rate h" data-act="rate" data-r="hard"><b>Fast</b><span>kommt morgen wieder</span></button><button class="rate g'+(vd==='ok'?' sug':'')+'" data-act="rate" data-r="good"><b>Sitzt</b><span>kommt später wieder</span></button></div>';
+    h2+='<button class="btn pri big" data-act="rate" data-r="'+(vd==='ok'?(n.hintN>0?'hard':'good'):'again')+'">Weiter</button>';
   }
   return h2+'</div>';
 }
@@ -1304,7 +1311,7 @@ function vExam(){
     var html='<div class="paperpage"><p class="ptitle">Prüfung · '+esc(t.title)+'</p><div class="sheet"><div class="shead"><span>Name: <b>'+esc(n.pname||'')+'</b></span><span>Datum: <b>'+ds+'</b></span></div><p class="sub" style="margin:0 0 4px">Alle Brüche so weit wie möglich kürzen.</p><ol class="mq">';
     qs.forEach(function(q,i){
       var key='e:'+t.id+':'+q.id,pd=padHTML(key,q.q);
-      html+='<li><div class="mqt"><b>'+(i+1)+'.</b>'+rt(q.q)+'</div>'+visuals(q.visuals)+'<input class="pin" id="in-'+q.id+'" data-q="'+q.id+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" value="'+esc(n.answers[q.id]||'')+'"><div class="tools">'+pd.btn+'</div>'+pd.box+'</li>';
+      html+='<li><div class="mqt"><span class="nc c'+(i%4)+'">'+(i+1)+'</span><div class="mqx">'+rt(q.q.replace(' (so weit wie möglich kürzen)',''))+'</div></div>'+visuals(q.visuals)+'<input class="pin" id="in-'+q.id+'" data-q="'+q.id+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" value="'+esc(n.answers[q.id]||'')+'"><div class="tools">'+pd.btn+'</div>'+pd.box+'</li>';
     });
     html+='</ol></div>';
     return html+'<button class="btn pri big" data-act="finish">Abgeben</button></div>';
