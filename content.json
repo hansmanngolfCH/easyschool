@@ -50,6 +50,249 @@
    "title": "Bruchrechnen",
    "explain": [
     {
+     "h": "Was ist ein Bruch?",
+     "text": "Ein Bruch zeigt einen Teil von einem Ganzen. Das Ganze wird in gleich grosse Stücke geteilt. Der Nenner (unten) sagt, in wie viele Stücke geteilt wird. Der Zähler (oben) sagt, wie viele Stücke du hast.",
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 4,
+       "filled": 3
+      },
+      {
+       "type": "lines",
+       "num": true,
+       "items": [
+        [
+         "3/4",
+         "3 von 4 Stücken"
+        ],
+        [
+         "Zähler = 3",
+         "so viele Stücke hast du"
+        ],
+        [
+         "Nenner = 4",
+         "so viele Stücke hat das Ganze"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Wie heisst die untere Zahl bei einem Bruch? Schreibe Zähler oder Nenner.",
+      "a": [
+       "Nenner"
+      ],
+      "hint": "Der Nenner nennt die Stücke."
+     }
+    },
+    {
+     "h": "Kürzen: Stücke grösser machen",
+     "text": "Kürzen heisst: Zähler und Nenner durch dieselbe Zahl teilen. Der Wert bleibt gleich, die Zahlen werden kleiner. Du kürzt, bis es nicht mehr geht.",
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 6,
+       "filled": 4
+      },
+      {
+       "type": "pie",
+       "parts": 3,
+       "filled": 2
+      },
+      {
+       "type": "lines",
+       "num": true,
+       "items": [
+        [
+         "4/6",
+         "Start"
+        ],
+        [
+         "= 2/3",
+         "Zähler und Nenner durch 2 geteilt"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Kürze 6/8 so weit wie möglich.",
+      "a": [
+       "3/4"
+      ],
+      "hint": "Teile oben und unten durch 2."
+     }
+    },
+    {
+     "h": "Erweitern: Stücke kleiner machen",
+     "text": "Erweitern ist das Gegenteil: Zähler und Nenner mit derselben Zahl malnehmen. Der Wert bleibt gleich. Das brauchst du später für den Hauptnenner.",
+     "visuals": [
+      {
+       "type": "lines",
+       "num": true,
+       "items": [
+        [
+         "2/3",
+         "Start"
+        ],
+        [
+         "= 4/6",
+         "mal 2"
+        ],
+        [
+         "= 6/9",
+         "mal 3"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "2/5 = ?/10. Welche Zahl fehlt?",
+      "a": [
+       "4"
+      ],
+      "hint": "Der Nenner wurde mal 2 genommen, der Zähler auch."
+     }
+    },
+    {
+     "h": "Gemischte Zahl und unechter Bruch",
+     "text": "Eine gemischte Zahl hat ganze Zahlen und einen Bruch, zum Beispiel 2 1/3. Zum Rechnen wandelst du sie um: ganze Zahl mal Nenner, plus Zähler. Das Ergebnis steht über dem gleichen Nenner.",
+     "visuals": [
+      {
+       "type": "lines",
+       "num": true,
+       "items": [
+        [
+         "2 1/3",
+         "gemischte Zahl"
+        ],
+        [
+         "= (2·3+1)/3",
+         "ganze Zahl mal Nenner plus Zähler"
+        ],
+        [
+         "= 7/3",
+         "unechter Bruch"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Wandle 1 1/2 in einen unechten Bruch um.",
+      "a": [
+       "3/2"
+      ],
+      "hint": "1·2+1 = 3, der Nenner bleibt 2."
+     }
+    },
+    {
+     "h": "Mal rechnen: oben mal oben, unten mal unten",
+     "text": "Beim Malnehmen brauchst du keinen gleichen Nenner. Zähler mal Zähler, Nenner mal Nenner. Danach kürzt du. Tipp: Kürze schon vorher über Kreuz, dann sind die Zahlen kleiner.",
+     "visuals": [
+      {
+       "type": "lines",
+       "num": true,
+       "items": [
+        [
+         "2/3 · 3/4",
+         ""
+        ],
+        [
+         "= 6/12",
+         "oben 2·3, unten 3·4"
+        ],
+        [
+         "= 1/2",
+         "mit 6 gekürzt"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Rechne 1/2 · 2/3 und kürze.",
+      "a": [
+       "1/3",
+       "2/6"
+      ],
+      "hint": "Oben 1·2 = 2, unten 2·3 = 6."
+     }
+    },
+    {
+     "h": "Hauptnenner: gleiche Stücke finden",
+     "text": "Plus und Minus gehen nur mit gleichem Nenner. Der Hauptnenner ist die kleinste Zahl, in die beide Nenner passen. Beide Brüche werden darauf erweitert.",
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 12,
+       "filled": 9
+      },
+      {
+       "type": "pie",
+       "parts": 12,
+       "filled": 8
+      },
+      {
+       "type": "lines",
+       "num": true,
+       "items": [
+        [
+         "4 und 3",
+         "Nenner"
+        ],
+        [
+         "Hauptnenner 12",
+         "in 12 passen 4 und 3"
+        ],
+        [
+         "3/4 = 9/12",
+         "mal 3"
+        ],
+        [
+         "2/3 = 8/12",
+         "mal 4"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Wie lautet der Hauptnenner von 4 und 6?",
+      "a": [
+       "12"
+      ],
+      "hint": "Die kleinste Zahl, in der 4 und 6 aufgehen."
+     }
+    },
+    {
+     "h": "Plus und Minus rechnen",
+     "text": "Erst den Hauptnenner suchen und beide Brüche erweitern. Dann nur die Zähler zusammenzählen oder abziehen. Der Nenner bleibt gleich. Am Schluss kürzen.",
+     "visuals": [
+      {
+       "type": "lines",
+       "num": true,
+       "items": [
+        [
+         "1/2 + 1/3",
+         ""
+        ],
+        [
+         "= 3/6 + 2/6",
+         "Hauptnenner 6"
+        ],
+        [
+         "= 5/6",
+         "Zähler plus Zähler"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Rechne 1/2 + 1/4.",
+      "a": [
+       "3/4"
+      ],
+      "hint": "Hauptnenner 4: 2/4 + 1/4."
+     }
+    },
+    {
      "h": "Erst die Klammer, dann Punkt vor Strich",
      "text": "Bei Aufgaben mit Brüchen gilt dieselbe Reihenfolge wie bei normalen Zahlen: Zuerst rechnest du die Klammer. Dann folgen Mal und Geteilt. Plus und Minus kommen zuletzt.",
      "visuals": [
