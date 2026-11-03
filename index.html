@@ -1160,6 +1160,11 @@ body.rwopen{overflow:hidden}
 .tcart svg{width:34px;height:34px}
 .tcun small{font-size:.5rem;letter-spacing:.1em}
 .tcun b{font-size:1.6rem!important}
+/* v4.11 Themen-Buttons ca. 15% kleiner */
+.tc4{grid-auto-rows:54px;gap:9px;margin-top:10px}
+.tb4{font-size:.9rem;border-radius:14px;box-shadow:0 3px 0 rgba(0,0,0,.18)}
+.tb4,.tb4.m-v,.tb4.m-u,.tb4.m-p{box-shadow:0 3px 0 var(--sd)}
+.tb4.m-x{box-shadow:0 3px 0 rgba(0,0,0,.25)}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1167,7 +1172,7 @@ body.rwopen{overflow:hidden}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v4.10';
+var APP_VERSION='v4.11';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
