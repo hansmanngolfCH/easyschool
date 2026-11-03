@@ -3407,6 +3407,3028 @@
        "Hauptnenner 30. Erweitere beide Brüche."
       ]
      ]
+    },
+    {
+     "id": "zb1",
+     "q": "Bei 1/2: Welche Zahl ist der Zähler?",
+     "a": "1",
+     "lvl": 1,
+     "th": "order",
+     "opts": [
+      "2",
+      "3",
+      "1"
+     ],
+     "steps": [
+      [
+       "1",
+       "Zähler oben, Nenner unten."
+      ]
+     ],
+     "hints": [
+      "Zähler steht oben, Nenner unten."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 2,
+       "filled": 1
+      }
+     ]
+    },
+    {
+     "id": "zb2",
+     "q": "Bei 1/3: Welche Zahl ist der Nenner?",
+     "a": "3",
+     "lvl": 1,
+     "th": "order",
+     "opts": [
+      "1",
+      "4",
+      "3"
+     ],
+     "steps": [
+      [
+       "3",
+       "Zähler oben, Nenner unten."
+      ]
+     ],
+     "hints": [
+      "Zähler steht oben, Nenner unten."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 3,
+       "filled": 1
+      }
+     ]
+    },
+    {
+     "id": "zb3",
+     "q": "Bei 1/3: Welche Zahl ist der Zähler?",
+     "a": "1",
+     "lvl": 1,
+     "th": "order",
+     "opts": [
+      "3",
+      "4",
+      "2",
+      "1"
+     ],
+     "steps": [
+      [
+       "1",
+       "Zähler oben, Nenner unten."
+      ]
+     ],
+     "hints": [
+      "Zähler steht oben, Nenner unten."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 3,
+       "filled": 1
+      }
+     ]
+    },
+    {
+     "id": "zb4",
+     "q": "Bei 5/9: Welche Zahl ist der Zähler?",
+     "a": "5",
+     "lvl": 1,
+     "th": "order",
+     "opts": [
+      "5",
+      "14",
+      "6",
+      "9"
+     ],
+     "steps": [
+      [
+       "5",
+       "Zähler oben, Nenner unten."
+      ]
+     ],
+     "hints": [
+      "Zähler steht oben, Nenner unten."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 9,
+       "filled": 5
+      }
+     ]
+    },
+    {
+     "id": "zb5",
+     "q": "Bei 3/7: Welche Zahl ist der Zähler?",
+     "a": "3",
+     "lvl": 1,
+     "th": "order",
+     "opts": [
+      "4",
+      "3",
+      "10",
+      "7"
+     ],
+     "steps": [
+      [
+       "3",
+       "Zähler oben, Nenner unten."
+      ]
+     ],
+     "hints": [
+      "Zähler steht oben, Nenner unten."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 7,
+       "filled": 3
+      }
+     ]
+    },
+    {
+     "id": "zb6",
+     "q": "Bei 2/3: Welche Zahl ist der Zähler?",
+     "a": "2",
+     "lvl": 1,
+     "th": "order",
+     "opts": [
+      "2",
+      "5",
+      "3"
+     ],
+     "steps": [
+      [
+       "2",
+       "Zähler oben, Nenner unten."
+      ]
+     ],
+     "hints": [
+      "Zähler steht oben, Nenner unten."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 3,
+       "filled": 2
+      }
+     ]
+    },
+    {
+     "id": "zb7",
+     "q": "Wie heisst der Kehrbruch von 5/11?",
+     "a": "11/5",
+     "lvl": 1,
+     "th": "div",
+     "ans": [
+      "11/5"
+     ],
+     "steps": [
+      [
+       "11/5",
+       "Zähler und Nenner vertauschen"
+      ]
+     ],
+     "hints": [
+      "Zähler und Nenner vertauschen."
+     ]
+    },
+    {
+     "id": "zb8",
+     "q": "Wie heisst der Kehrbruch von 1/2?",
+     "a": "2/1",
+     "lvl": 1,
+     "th": "div",
+     "ans": [
+      "2/1"
+     ],
+     "steps": [
+      [
+       "2/1",
+       "Zähler und Nenner vertauschen"
+      ]
+     ],
+     "hints": [
+      "Zähler und Nenner vertauschen."
+     ]
+    },
+    {
+     "id": "zb9",
+     "q": "Wie heisst der Kehrbruch von 1/8?",
+     "a": "8/1",
+     "lvl": 1,
+     "th": "div",
+     "ans": [
+      "8/1"
+     ],
+     "steps": [
+      [
+       "8/1",
+       "Zähler und Nenner vertauschen"
+      ]
+     ],
+     "hints": [
+      "Zähler und Nenner vertauschen."
+     ]
+    },
+    {
+     "id": "zb10",
+     "q": "Wie heisst der Kehrbruch von 5/7?",
+     "a": "7/5",
+     "lvl": 1,
+     "th": "div",
+     "ans": [
+      "7/5"
+     ],
+     "steps": [
+      [
+       "7/5",
+       "Zähler und Nenner vertauschen"
+      ]
+     ],
+     "hints": [
+      "Zähler und Nenner vertauschen."
+     ]
+    },
+    {
+     "id": "zb11",
+     "q": "Wie heisst der Kehrbruch von 1/5?",
+     "a": "5/1",
+     "lvl": 1,
+     "th": "div",
+     "ans": [
+      "5/1"
+     ],
+     "steps": [
+      [
+       "5/1",
+       "Zähler und Nenner vertauschen"
+      ]
+     ],
+     "hints": [
+      "Zähler und Nenner vertauschen."
+     ]
+    },
+    {
+     "id": "zb12",
+     "q": "Wie heisst der Kehrbruch von 3?",
+     "a": "1/3",
+     "lvl": 2,
+     "th": "div",
+     "ans": [
+      "1/3"
+     ],
+     "steps": [
+      [
+       "3 = 3/1",
+       "als Bruch schreiben"
+      ],
+      [
+       "1/3",
+       "vertauschen"
+      ]
+     ],
+     "hints": [
+      "Schreibe 3 als 3/1."
+     ]
+    },
+    {
+     "id": "zb13",
+     "q": "Wie heisst der Kehrbruch von 5?",
+     "a": "1/5",
+     "lvl": 2,
+     "th": "div",
+     "ans": [
+      "1/5"
+     ],
+     "steps": [
+      [
+       "5 = 5/1",
+       "als Bruch schreiben"
+      ],
+      [
+       "1/5",
+       "vertauschen"
+      ]
+     ],
+     "hints": [
+      "Schreibe 5 als 5/1."
+     ]
+    },
+    {
+     "id": "zb14",
+     "q": "Wie heisst der Kehrbruch von 7?",
+     "a": "1/7",
+     "lvl": 2,
+     "th": "div",
+     "ans": [
+      "1/7"
+     ],
+     "steps": [
+      [
+       "7 = 7/1",
+       "als Bruch schreiben"
+      ],
+      [
+       "1/7",
+       "vertauschen"
+      ]
+     ],
+     "hints": [
+      "Schreibe 7 als 7/1."
+     ]
+    },
+    {
+     "id": "zb15",
+     "q": "Wie heisst der Kehrbruch von 4?",
+     "a": "1/4",
+     "lvl": 2,
+     "th": "div",
+     "ans": [
+      "1/4"
+     ],
+     "steps": [
+      [
+       "4 = 4/1",
+       "als Bruch schreiben"
+      ],
+      [
+       "1/4",
+       "vertauschen"
+      ]
+     ],
+     "hints": [
+      "Schreibe 4 als 4/1."
+     ]
+    },
+    {
+     "id": "zb16",
+     "q": "Kürze so weit wie möglich: 4/10",
+     "a": "2/5",
+     "lvl": 1,
+     "th": "order",
+     "ans": [
+      "2/5"
+     ],
+     "steps": [
+      [
+       "grösster gemeinsamer Teiler: 2",
+       "beide Zahlen teilen"
+      ],
+      [
+       "4 : 2 = 2 und 10 : 2 = 5",
+       "Zähler und Nenner durch 2 teilen"
+      ],
+      [
+       "2/5",
+       "nicht weiter kürzbar"
+      ]
+     ],
+     "hints": [
+      "Beide Zahlen sind durch 2 teilbar."
+     ]
+    },
+    {
+     "id": "zb17",
+     "q": "Kürze so weit wie möglich: 12/14",
+     "a": "6/7",
+     "lvl": 1,
+     "th": "order",
+     "ans": [
+      "6/7"
+     ],
+     "steps": [
+      [
+       "grösster gemeinsamer Teiler: 2",
+       "beide Zahlen teilen"
+      ],
+      [
+       "12 : 2 = 6 und 14 : 2 = 7",
+       "Zähler und Nenner durch 2 teilen"
+      ],
+      [
+       "6/7",
+       "nicht weiter kürzbar"
+      ]
+     ],
+     "hints": [
+      "Beide Zahlen sind durch 2 teilbar."
+     ]
+    },
+    {
+     "id": "zb18",
+     "q": "Kürze so weit wie möglich: 15/36",
+     "a": "5/12",
+     "lvl": 1,
+     "th": "order",
+     "ans": [
+      "5/12"
+     ],
+     "steps": [
+      [
+       "grösster gemeinsamer Teiler: 3",
+       "beide Zahlen teilen"
+      ],
+      [
+       "15 : 3 = 5 und 36 : 3 = 12",
+       "Zähler und Nenner durch 3 teilen"
+      ],
+      [
+       "5/12",
+       "nicht weiter kürzbar"
+      ]
+     ],
+     "hints": [
+      "Beide Zahlen sind durch 3 teilbar."
+     ]
+    },
+    {
+     "id": "zb19",
+     "q": "Kürze so weit wie möglich: 14/77",
+     "a": "2/11",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "2/11"
+     ],
+     "steps": [
+      [
+       "grösster gemeinsamer Teiler: 7",
+       "beide Zahlen teilen"
+      ],
+      [
+       "14 : 7 = 2 und 77 : 7 = 11",
+       "Zähler und Nenner durch 7 teilen"
+      ],
+      [
+       "2/11",
+       "nicht weiter kürzbar"
+      ]
+     ],
+     "hints": [
+      "Beide Zahlen sind durch 7 teilbar."
+     ]
+    },
+    {
+     "id": "zb20",
+     "q": "Kürze so weit wie möglich: 21/70",
+     "a": "3/10",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "3/10"
+     ],
+     "steps": [
+      [
+       "grösster gemeinsamer Teiler: 7",
+       "beide Zahlen teilen"
+      ],
+      [
+       "21 : 7 = 3 und 70 : 7 = 10",
+       "Zähler und Nenner durch 7 teilen"
+      ],
+      [
+       "3/10",
+       "nicht weiter kürzbar"
+      ]
+     ],
+     "hints": [
+      "Beide Zahlen sind durch 7 teilbar."
+     ]
+    },
+    {
+     "id": "zb21",
+     "q": "Kürze so weit wie möglich: 35/84",
+     "a": "5/12",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "5/12"
+     ],
+     "steps": [
+      [
+       "grösster gemeinsamer Teiler: 7",
+       "beide Zahlen teilen"
+      ],
+      [
+       "35 : 7 = 5 und 84 : 7 = 12",
+       "Zähler und Nenner durch 7 teilen"
+      ],
+      [
+       "5/12",
+       "nicht weiter kürzbar"
+      ]
+     ],
+     "hints": [
+      "Beide Zahlen sind durch 7 teilbar."
+     ]
+    },
+    {
+     "id": "zb22",
+     "q": "Kürze so weit wie möglich: 28/77",
+     "a": "4/11",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "4/11"
+     ],
+     "steps": [
+      [
+       "grösster gemeinsamer Teiler: 7",
+       "beide Zahlen teilen"
+      ],
+      [
+       "28 : 7 = 4 und 77 : 7 = 11",
+       "Zähler und Nenner durch 7 teilen"
+      ],
+      [
+       "4/11",
+       "nicht weiter kürzbar"
+      ]
+     ],
+     "hints": [
+      "Beide Zahlen sind durch 7 teilbar."
+     ]
+    },
+    {
+     "id": "zb23",
+     "q": "Kürze so weit wie möglich: 49/77",
+     "a": "7/11",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "7/11"
+     ],
+     "steps": [
+      [
+       "grösster gemeinsamer Teiler: 7",
+       "beide Zahlen teilen"
+      ],
+      [
+       "49 : 7 = 7 und 77 : 7 = 11",
+       "Zähler und Nenner durch 7 teilen"
+      ],
+      [
+       "7/11",
+       "nicht weiter kürzbar"
+      ]
+     ],
+     "hints": [
+      "Beide Zahlen sind durch 7 teilbar."
+     ]
+    },
+    {
+     "id": "zb24",
+     "q": "Kürze so weit wie möglich: 15/50",
+     "a": "3/10",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "3/10"
+     ],
+     "steps": [
+      [
+       "grösster gemeinsamer Teiler: 5",
+       "beide Zahlen teilen"
+      ],
+      [
+       "15 : 5 = 3 und 50 : 5 = 10",
+       "Zähler und Nenner durch 5 teilen"
+      ],
+      [
+       "3/10",
+       "nicht weiter kürzbar"
+      ]
+     ],
+     "hints": [
+      "Beide Zahlen sind durch 5 teilbar."
+     ]
+    },
+    {
+     "id": "zb25",
+     "q": "Kürze so weit wie möglich: 35/55",
+     "a": "7/11",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "7/11"
+     ],
+     "steps": [
+      [
+       "grösster gemeinsamer Teiler: 5",
+       "beide Zahlen teilen"
+      ],
+      [
+       "35 : 5 = 7 und 55 : 5 = 11",
+       "Zähler und Nenner durch 5 teilen"
+      ],
+      [
+       "7/11",
+       "nicht weiter kürzbar"
+      ]
+     ],
+     "hints": [
+      "Beide Zahlen sind durch 5 teilbar."
+     ]
+    },
+    {
+     "id": "zb26",
+     "q": "Kürze so weit wie möglich: 14/16",
+     "a": "7/8",
+     "lvl": 1,
+     "th": "order",
+     "ans": [
+      "7/8"
+     ],
+     "steps": [
+      [
+       "grösster gemeinsamer Teiler: 2",
+       "beide Zahlen teilen"
+      ],
+      [
+       "14 : 2 = 7 und 16 : 2 = 8",
+       "Zähler und Nenner durch 2 teilen"
+      ],
+      [
+       "7/8",
+       "nicht weiter kürzbar"
+      ]
+     ],
+     "hints": [
+      "Beide Zahlen sind durch 2 teilbar."
+     ]
+    },
+    {
+     "id": "zb27",
+     "q": "Kürze so weit wie möglich: 6/72",
+     "a": "1/12",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "1/12"
+     ],
+     "steps": [
+      [
+       "grösster gemeinsamer Teiler: 6",
+       "beide Zahlen teilen"
+      ],
+      [
+       "6 : 6 = 1 und 72 : 6 = 12",
+       "Zähler und Nenner durch 6 teilen"
+      ],
+      [
+       "1/12",
+       "nicht weiter kürzbar"
+      ]
+     ],
+     "hints": [
+      "Beide Zahlen sind durch 6 teilbar."
+     ]
+    },
+    {
+     "id": "zb28",
+     "q": "Kürze so weit wie möglich: 35/56",
+     "a": "5/8",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "5/8"
+     ],
+     "steps": [
+      [
+       "grösster gemeinsamer Teiler: 7",
+       "beide Zahlen teilen"
+      ],
+      [
+       "35 : 7 = 5 und 56 : 7 = 8",
+       "Zähler und Nenner durch 7 teilen"
+      ],
+      [
+       "5/8",
+       "nicht weiter kürzbar"
+      ]
+     ],
+     "hints": [
+      "Beide Zahlen sind durch 7 teilbar."
+     ]
+    },
+    {
+     "id": "zb29",
+     "q": "Kürze so weit wie möglich: 9/30",
+     "a": "3/10",
+     "lvl": 1,
+     "th": "order",
+     "ans": [
+      "3/10"
+     ],
+     "steps": [
+      [
+       "grösster gemeinsamer Teiler: 3",
+       "beide Zahlen teilen"
+      ],
+      [
+       "9 : 3 = 3 und 30 : 3 = 10",
+       "Zähler und Nenner durch 3 teilen"
+      ],
+      [
+       "3/10",
+       "nicht weiter kürzbar"
+      ]
+     ],
+     "hints": [
+      "Beide Zahlen sind durch 3 teilbar."
+     ]
+    },
+    {
+     "id": "zb30",
+     "q": "Erweitere 2/3 auf den Nenner 18",
+     "a": "12/18",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "12/18"
+     ],
+     "steps": [
+      [
+       "3 · 6 = 18",
+       "Erweiterungszahl finden"
+      ],
+      [
+       "2 · 6 = 12",
+       "Zähler mit derselben Zahl"
+      ],
+      [
+       "12/18",
+       "Resultat"
+      ]
+     ],
+     "hints": [
+      "Womit musst du 3 malnehmen, um 18 zu erhalten?"
+     ]
+    },
+    {
+     "id": "zb31",
+     "q": "Erweitere 4/11 auf den Nenner 33",
+     "a": "12/33",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "12/33"
+     ],
+     "steps": [
+      [
+       "11 · 3 = 33",
+       "Erweiterungszahl finden"
+      ],
+      [
+       "4 · 3 = 12",
+       "Zähler mit derselben Zahl"
+      ],
+      [
+       "12/33",
+       "Resultat"
+      ]
+     ],
+     "hints": [
+      "Womit musst du 11 malnehmen, um 33 zu erhalten?"
+     ]
+    },
+    {
+     "id": "zb32",
+     "q": "Erweitere 2/7 auf den Nenner 42",
+     "a": "12/42",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "12/42"
+     ],
+     "steps": [
+      [
+       "7 · 6 = 42",
+       "Erweiterungszahl finden"
+      ],
+      [
+       "2 · 6 = 12",
+       "Zähler mit derselben Zahl"
+      ],
+      [
+       "12/42",
+       "Resultat"
+      ]
+     ],
+     "hints": [
+      "Womit musst du 7 malnehmen, um 42 zu erhalten?"
+     ]
+    },
+    {
+     "id": "zb33",
+     "q": "Erweitere 1/10 auf den Nenner 60",
+     "a": "6/60",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "6/60"
+     ],
+     "steps": [
+      [
+       "10 · 6 = 60",
+       "Erweiterungszahl finden"
+      ],
+      [
+       "1 · 6 = 6",
+       "Zähler mit derselben Zahl"
+      ],
+      [
+       "6/60",
+       "Resultat"
+      ]
+     ],
+     "hints": [
+      "Womit musst du 10 malnehmen, um 60 zu erhalten?"
+     ]
+    },
+    {
+     "id": "zb34",
+     "q": "Erweitere 4/7 auf den Nenner 14",
+     "a": "8/14",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "8/14"
+     ],
+     "steps": [
+      [
+       "7 · 2 = 14",
+       "Erweiterungszahl finden"
+      ],
+      [
+       "4 · 2 = 8",
+       "Zähler mit derselben Zahl"
+      ],
+      [
+       "8/14",
+       "Resultat"
+      ]
+     ],
+     "hints": [
+      "Womit musst du 7 malnehmen, um 14 zu erhalten?"
+     ]
+    },
+    {
+     "id": "zb35",
+     "q": "Erweitere 2/3 auf den Nenner 12",
+     "a": "8/12",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "8/12"
+     ],
+     "steps": [
+      [
+       "3 · 4 = 12",
+       "Erweiterungszahl finden"
+      ],
+      [
+       "2 · 4 = 8",
+       "Zähler mit derselben Zahl"
+      ],
+      [
+       "8/12",
+       "Resultat"
+      ]
+     ],
+     "hints": [
+      "Womit musst du 3 malnehmen, um 12 zu erhalten?"
+     ]
+    },
+    {
+     "id": "zb36",
+     "q": "Erweitere 1/5 auf den Nenner 15",
+     "a": "3/15",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "3/15"
+     ],
+     "steps": [
+      [
+       "5 · 3 = 15",
+       "Erweiterungszahl finden"
+      ],
+      [
+       "1 · 3 = 3",
+       "Zähler mit derselben Zahl"
+      ],
+      [
+       "3/15",
+       "Resultat"
+      ]
+     ],
+     "hints": [
+      "Womit musst du 5 malnehmen, um 15 zu erhalten?"
+     ]
+    },
+    {
+     "id": "zb37",
+     "q": "Erweitere 2/11 auf den Nenner 22",
+     "a": "4/22",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "4/22"
+     ],
+     "steps": [
+      [
+       "11 · 2 = 22",
+       "Erweiterungszahl finden"
+      ],
+      [
+       "2 · 2 = 4",
+       "Zähler mit derselben Zahl"
+      ],
+      [
+       "4/22",
+       "Resultat"
+      ]
+     ],
+     "hints": [
+      "Womit musst du 11 malnehmen, um 22 zu erhalten?"
+     ]
+    },
+    {
+     "id": "zb38",
+     "q": "Erweitere 2/9 auf den Nenner 54",
+     "a": "12/54",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "12/54"
+     ],
+     "steps": [
+      [
+       "9 · 6 = 54",
+       "Erweiterungszahl finden"
+      ],
+      [
+       "2 · 6 = 12",
+       "Zähler mit derselben Zahl"
+      ],
+      [
+       "12/54",
+       "Resultat"
+      ]
+     ],
+     "hints": [
+      "Womit musst du 9 malnehmen, um 54 zu erhalten?"
+     ]
+    },
+    {
+     "id": "zb39",
+     "q": "Erweitere 1/4 auf den Nenner 20",
+     "a": "5/20",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "5/20"
+     ],
+     "steps": [
+      [
+       "4 · 5 = 20",
+       "Erweiterungszahl finden"
+      ],
+      [
+       "1 · 5 = 5",
+       "Zähler mit derselben Zahl"
+      ],
+      [
+       "5/20",
+       "Resultat"
+      ]
+     ],
+     "hints": [
+      "Womit musst du 4 malnehmen, um 20 zu erhalten?"
+     ]
+    },
+    {
+     "id": "zb40",
+     "q": "6/12 − 3/12 =",
+     "a": "1/4",
+     "lvl": 1,
+     "th": "hn",
+     "ans": [
+      "1/4",
+      "0,25",
+      "0.25"
+     ],
+     "steps": [
+      [
+       "6 − 3 = 3",
+       "Nur die Zähler rechnen"
+      ],
+      [
+       "3/12 = 1/4",
+       "Nenner bleibt, dann kürzen"
+      ]
+     ],
+     "hints": [
+      "Der Nenner bleibt gleich, nur die Zähler rechnen."
+     ]
+    },
+    {
+     "id": "zb41",
+     "q": "5/7 − 1/7 =",
+     "a": "4/7",
+     "lvl": 1,
+     "th": "hn",
+     "ans": [
+      "4/7"
+     ],
+     "steps": [
+      [
+       "5 − 1 = 4",
+       "Nur die Zähler rechnen"
+      ],
+      [
+       "4/7 = 4/7",
+       "Nenner bleibt, dann kürzen"
+      ]
+     ],
+     "hints": [
+      "Der Nenner bleibt gleich, nur die Zähler rechnen."
+     ]
+    },
+    {
+     "id": "zb42",
+     "q": "6/10 − 2/10 =",
+     "a": "2/5",
+     "lvl": 1,
+     "th": "hn",
+     "ans": [
+      "2/5",
+      "0,4",
+      "0.4"
+     ],
+     "steps": [
+      [
+       "6 − 2 = 4",
+       "Nur die Zähler rechnen"
+      ],
+      [
+       "4/10 = 2/5",
+       "Nenner bleibt, dann kürzen"
+      ]
+     ],
+     "hints": [
+      "Der Nenner bleibt gleich, nur die Zähler rechnen."
+     ]
+    },
+    {
+     "id": "zb43",
+     "q": "1/5 + 1/5 =",
+     "a": "2/5",
+     "lvl": 1,
+     "th": "hn",
+     "ans": [
+      "2/5",
+      "0,4",
+      "0.4"
+     ],
+     "steps": [
+      [
+       "1 + 1 = 2",
+       "Nur die Zähler rechnen"
+      ],
+      [
+       "2/5 = 2/5",
+       "Nenner bleibt, dann kürzen"
+      ]
+     ],
+     "hints": [
+      "Der Nenner bleibt gleich, nur die Zähler rechnen."
+     ]
+    },
+    {
+     "id": "zb44",
+     "q": "1/9 + 5/9 =",
+     "a": "2/3",
+     "lvl": 1,
+     "th": "hn",
+     "ans": [
+      "2/3"
+     ],
+     "steps": [
+      [
+       "1 + 5 = 6",
+       "Nur die Zähler rechnen"
+      ],
+      [
+       "6/9 = 2/3",
+       "Nenner bleibt, dann kürzen"
+      ]
+     ],
+     "hints": [
+      "Der Nenner bleibt gleich, nur die Zähler rechnen."
+     ]
+    },
+    {
+     "id": "zb45",
+     "q": "1/7 + 1/7 =",
+     "a": "2/7",
+     "lvl": 1,
+     "th": "hn",
+     "ans": [
+      "2/7"
+     ],
+     "steps": [
+      [
+       "1 + 1 = 2",
+       "Nur die Zähler rechnen"
+      ],
+      [
+       "2/7 = 2/7",
+       "Nenner bleibt, dann kürzen"
+      ]
+     ],
+     "hints": [
+      "Der Nenner bleibt gleich, nur die Zähler rechnen."
+     ]
+    },
+    {
+     "id": "zb46",
+     "q": "2/7 − 1/7 =",
+     "a": "1/7",
+     "lvl": 1,
+     "th": "hn",
+     "ans": [
+      "1/7"
+     ],
+     "steps": [
+      [
+       "2 − 1 = 1",
+       "Nur die Zähler rechnen"
+      ],
+      [
+       "1/7 = 1/7",
+       "Nenner bleibt, dann kürzen"
+      ]
+     ],
+     "hints": [
+      "Der Nenner bleibt gleich, nur die Zähler rechnen."
+     ]
+    },
+    {
+     "id": "zb47",
+     "q": "3/5 − 1/5 =",
+     "a": "2/5",
+     "lvl": 1,
+     "th": "hn",
+     "ans": [
+      "2/5",
+      "0,4",
+      "0.4"
+     ],
+     "steps": [
+      [
+       "3 − 1 = 2",
+       "Nur die Zähler rechnen"
+      ],
+      [
+       "2/5 = 2/5",
+       "Nenner bleibt, dann kürzen"
+      ]
+     ],
+     "hints": [
+      "Der Nenner bleibt gleich, nur die Zähler rechnen."
+     ]
+    },
+    {
+     "id": "zb48",
+     "q": "5/6 − 3/4 =",
+     "a": "1/12",
+     "lvl": 3,
+     "th": "hn",
+     "ans": [
+      "1/12"
+     ],
+     "steps": [
+      [
+       "Hauptnenner 12",
+       "kleinste Zahl, in die beide Nenner passen"
+      ],
+      [
+       "10/12 − 9/12",
+       "beide Brüche erweitern"
+      ],
+      [
+       "1/12 = 1/12",
+       "Zähler rechnen, kürzen"
+      ]
+     ],
+     "hints": [
+      "Zuerst den Hauptnenner finden.",
+      "Der Hauptnenner ist 12."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 6,
+       "filled": 5
+      },
+      {
+       "type": "pie",
+       "parts": 4,
+       "filled": 3
+      }
+     ]
+    },
+    {
+     "id": "zb49",
+     "q": "2/3 + 2/5 =",
+     "a": "16/15",
+     "lvl": 3,
+     "th": "hn",
+     "ans": [
+      "16/15",
+      "1 1/15"
+     ],
+     "steps": [
+      [
+       "Hauptnenner 15",
+       "kleinste Zahl, in die beide Nenner passen"
+      ],
+      [
+       "10/15 + 6/15",
+       "beide Brüche erweitern"
+      ],
+      [
+       "16/15 = 16/15",
+       "Zähler rechnen, kürzen"
+      ]
+     ],
+     "hints": [
+      "Zuerst den Hauptnenner finden.",
+      "Der Hauptnenner ist 15."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 3,
+       "filled": 2
+      },
+      {
+       "type": "pie",
+       "parts": 5,
+       "filled": 2
+      }
+     ]
+    },
+    {
+     "id": "zb50",
+     "q": "7/9 − 1/2 =",
+     "a": "5/18",
+     "lvl": 3,
+     "th": "hn",
+     "ans": [
+      "5/18"
+     ],
+     "steps": [
+      [
+       "Hauptnenner 18",
+       "kleinste Zahl, in die beide Nenner passen"
+      ],
+      [
+       "14/18 − 9/18",
+       "beide Brüche erweitern"
+      ],
+      [
+       "5/18 = 5/18",
+       "Zähler rechnen, kürzen"
+      ]
+     ],
+     "hints": [
+      "Zuerst den Hauptnenner finden.",
+      "Der Hauptnenner ist 18."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 9,
+       "filled": 7
+      },
+      {
+       "type": "pie",
+       "parts": 2,
+       "filled": 1
+      }
+     ]
+    },
+    {
+     "id": "zb51",
+     "q": "1/2 − 1/5 =",
+     "a": "3/10",
+     "lvl": 3,
+     "th": "hn",
+     "ans": [
+      "3/10",
+      "0,3",
+      "0.3"
+     ],
+     "steps": [
+      [
+       "Hauptnenner 10",
+       "kleinste Zahl, in die beide Nenner passen"
+      ],
+      [
+       "5/10 − 2/10",
+       "beide Brüche erweitern"
+      ],
+      [
+       "3/10 = 3/10",
+       "Zähler rechnen, kürzen"
+      ]
+     ],
+     "hints": [
+      "Zuerst den Hauptnenner finden.",
+      "Der Hauptnenner ist 10."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 2,
+       "filled": 1
+      },
+      {
+       "type": "pie",
+       "parts": 5,
+       "filled": 1
+      }
+     ]
+    },
+    {
+     "id": "zb52",
+     "q": "1/4 + 1/3 =",
+     "a": "7/12",
+     "lvl": 3,
+     "th": "hn",
+     "ans": [
+      "7/12"
+     ],
+     "steps": [
+      [
+       "Hauptnenner 12",
+       "kleinste Zahl, in die beide Nenner passen"
+      ],
+      [
+       "3/12 + 4/12",
+       "beide Brüche erweitern"
+      ],
+      [
+       "7/12 = 7/12",
+       "Zähler rechnen, kürzen"
+      ]
+     ],
+     "hints": [
+      "Zuerst den Hauptnenner finden.",
+      "Der Hauptnenner ist 12."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 4,
+       "filled": 1
+      },
+      {
+       "type": "pie",
+       "parts": 3,
+       "filled": 1
+      }
+     ]
+    },
+    {
+     "id": "zb53",
+     "q": "1/3 + 7/10 =",
+     "a": "31/30",
+     "lvl": 3,
+     "th": "hn",
+     "ans": [
+      "31/30",
+      "1 1/30"
+     ],
+     "steps": [
+      [
+       "Hauptnenner 30",
+       "kleinste Zahl, in die beide Nenner passen"
+      ],
+      [
+       "10/30 + 21/30",
+       "beide Brüche erweitern"
+      ],
+      [
+       "31/30 = 31/30",
+       "Zähler rechnen, kürzen"
+      ]
+     ],
+     "hints": [
+      "Zuerst den Hauptnenner finden.",
+      "Der Hauptnenner ist 30."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 3,
+       "filled": 1
+      },
+      {
+       "type": "pie",
+       "parts": 10,
+       "filled": 7
+      }
+     ]
+    },
+    {
+     "id": "zb54",
+     "q": "1/4 − 1/5 =",
+     "a": "1/20",
+     "lvl": 3,
+     "th": "hn",
+     "ans": [
+      "1/20",
+      "0,05",
+      "0.05"
+     ],
+     "steps": [
+      [
+       "Hauptnenner 20",
+       "kleinste Zahl, in die beide Nenner passen"
+      ],
+      [
+       "5/20 − 4/20",
+       "beide Brüche erweitern"
+      ],
+      [
+       "1/20 = 1/20",
+       "Zähler rechnen, kürzen"
+      ]
+     ],
+     "hints": [
+      "Zuerst den Hauptnenner finden.",
+      "Der Hauptnenner ist 20."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 4,
+       "filled": 1
+      },
+      {
+       "type": "pie",
+       "parts": 5,
+       "filled": 1
+      }
+     ]
+    },
+    {
+     "id": "zb55",
+     "q": "1/6 + 1/3 =",
+     "a": "1/2",
+     "lvl": 3,
+     "th": "hn",
+     "ans": [
+      "1/2",
+      "0,5",
+      "0.5"
+     ],
+     "steps": [
+      [
+       "Hauptnenner 6",
+       "kleinste Zahl, in die beide Nenner passen"
+      ],
+      [
+       "1/6 + 2/6",
+       "beide Brüche erweitern"
+      ],
+      [
+       "3/6 = 1/2",
+       "Zähler rechnen, kürzen"
+      ]
+     ],
+     "hints": [
+      "Zuerst den Hauptnenner finden.",
+      "Der Hauptnenner ist 6."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 6,
+       "filled": 1
+      },
+      {
+       "type": "pie",
+       "parts": 3,
+       "filled": 1
+      }
+     ]
+    },
+    {
+     "id": "zb56",
+     "q": "2/3 − 1/2 =",
+     "a": "1/6",
+     "lvl": 3,
+     "th": "hn",
+     "ans": [
+      "1/6"
+     ],
+     "steps": [
+      [
+       "Hauptnenner 6",
+       "kleinste Zahl, in die beide Nenner passen"
+      ],
+      [
+       "4/6 − 3/6",
+       "beide Brüche erweitern"
+      ],
+      [
+       "1/6 = 1/6",
+       "Zähler rechnen, kürzen"
+      ]
+     ],
+     "hints": [
+      "Zuerst den Hauptnenner finden.",
+      "Der Hauptnenner ist 6."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 3,
+       "filled": 2
+      },
+      {
+       "type": "pie",
+       "parts": 2,
+       "filled": 1
+      }
+     ]
+    },
+    {
+     "id": "zb57",
+     "q": "8/9 − 1/2 =",
+     "a": "7/18",
+     "lvl": 3,
+     "th": "hn",
+     "ans": [
+      "7/18"
+     ],
+     "steps": [
+      [
+       "Hauptnenner 18",
+       "kleinste Zahl, in die beide Nenner passen"
+      ],
+      [
+       "16/18 − 9/18",
+       "beide Brüche erweitern"
+      ],
+      [
+       "7/18 = 7/18",
+       "Zähler rechnen, kürzen"
+      ]
+     ],
+     "hints": [
+      "Zuerst den Hauptnenner finden.",
+      "Der Hauptnenner ist 18."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 9,
+       "filled": 8
+      },
+      {
+       "type": "pie",
+       "parts": 2,
+       "filled": 1
+      }
+     ]
+    },
+    {
+     "id": "zb58",
+     "q": "1/3 + 1/2 =",
+     "a": "5/6",
+     "lvl": 3,
+     "th": "hn",
+     "ans": [
+      "5/6"
+     ],
+     "steps": [
+      [
+       "Hauptnenner 6",
+       "kleinste Zahl, in die beide Nenner passen"
+      ],
+      [
+       "2/6 + 3/6",
+       "beide Brüche erweitern"
+      ],
+      [
+       "5/6 = 5/6",
+       "Zähler rechnen, kürzen"
+      ]
+     ],
+     "hints": [
+      "Zuerst den Hauptnenner finden.",
+      "Der Hauptnenner ist 6."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 3,
+       "filled": 1
+      },
+      {
+       "type": "pie",
+       "parts": 2,
+       "filled": 1
+      }
+     ]
+    },
+    {
+     "id": "zb59",
+     "q": "1/2 · 9/10 =",
+     "a": "9/20",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "9/20",
+      "0,45",
+      "0.45"
+     ],
+     "steps": [
+      [
+       "1·9 und 2·10",
+       "oben mal oben, unten mal unten"
+      ],
+      [
+       "9/20 = 9/20",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Oben mal oben, unten mal unten.",
+      "Danach kürzen."
+     ]
+    },
+    {
+     "id": "zb60",
+     "q": "1/4 · 1/4 =",
+     "a": "1/16",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "1/16"
+     ],
+     "steps": [
+      [
+       "1·1 und 4·4",
+       "oben mal oben, unten mal unten"
+      ],
+      [
+       "1/16 = 1/16",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Oben mal oben, unten mal unten.",
+      "Danach kürzen."
+     ]
+    },
+    {
+     "id": "zb61",
+     "q": "2/11 · 1/8 =",
+     "a": "1/44",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "1/44"
+     ],
+     "steps": [
+      [
+       "2·1 und 11·8",
+       "oben mal oben, unten mal unten"
+      ],
+      [
+       "2/88 = 1/44",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Oben mal oben, unten mal unten.",
+      "Danach kürzen."
+     ]
+    },
+    {
+     "id": "zb62",
+     "q": "4/11 · 10/11 =",
+     "a": "40/121",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "40/121"
+     ],
+     "steps": [
+      [
+       "4·10 und 11·11",
+       "oben mal oben, unten mal unten"
+      ],
+      [
+       "40/121 = 40/121",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Oben mal oben, unten mal unten.",
+      "Danach kürzen."
+     ]
+    },
+    {
+     "id": "zb63",
+     "q": "1/2 · 10/11 =",
+     "a": "5/11",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "5/11"
+     ],
+     "steps": [
+      [
+       "1·10 und 2·11",
+       "oben mal oben, unten mal unten"
+      ],
+      [
+       "10/22 = 5/11",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Oben mal oben, unten mal unten.",
+      "Danach kürzen."
+     ]
+    },
+    {
+     "id": "zb64",
+     "q": "3/5 · 11/12 =",
+     "a": "11/20",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "11/20",
+      "0,55",
+      "0.55"
+     ],
+     "steps": [
+      [
+       "3·11 und 5·12",
+       "oben mal oben, unten mal unten"
+      ],
+      [
+       "33/60 = 11/20",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Oben mal oben, unten mal unten.",
+      "Danach kürzen."
+     ]
+    },
+    {
+     "id": "zb65",
+     "q": "1/7 · 1/2 =",
+     "a": "1/14",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "1/14"
+     ],
+     "steps": [
+      [
+       "1·1 und 7·2",
+       "oben mal oben, unten mal unten"
+      ],
+      [
+       "1/14 = 1/14",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Oben mal oben, unten mal unten.",
+      "Danach kürzen."
+     ]
+    },
+    {
+     "id": "zb66",
+     "q": "10/11 · 1/3 =",
+     "a": "10/33",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "10/33"
+     ],
+     "steps": [
+      [
+       "10·1 und 11·3",
+       "oben mal oben, unten mal unten"
+      ],
+      [
+       "10/33 = 10/33",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Oben mal oben, unten mal unten.",
+      "Danach kürzen."
+     ]
+    },
+    {
+     "id": "zb67",
+     "q": "1/3 · 3/7 =",
+     "a": "1/7",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "1/7"
+     ],
+     "steps": [
+      [
+       "1·3 und 3·7",
+       "oben mal oben, unten mal unten"
+      ],
+      [
+       "3/21 = 1/7",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Oben mal oben, unten mal unten.",
+      "Danach kürzen."
+     ]
+    },
+    {
+     "id": "zb68",
+     "q": "9/11 · 1/2 =",
+     "a": "9/22",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "9/22"
+     ],
+     "steps": [
+      [
+       "9·1 und 11·2",
+       "oben mal oben, unten mal unten"
+      ],
+      [
+       "9/22 = 9/22",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Oben mal oben, unten mal unten.",
+      "Danach kürzen."
+     ]
+    },
+    {
+     "id": "zb69",
+     "q": "1/3 · 3/10 =",
+     "a": "1/10",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "1/10",
+      "0,1",
+      "0.1"
+     ],
+     "steps": [
+      [
+       "1·3 und 3·10",
+       "oben mal oben, unten mal unten"
+      ],
+      [
+       "3/30 = 1/10",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Oben mal oben, unten mal unten.",
+      "Danach kürzen."
+     ]
+    },
+    {
+     "id": "zb70",
+     "q": "4/11 · 2/7 =",
+     "a": "8/77",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "8/77"
+     ],
+     "steps": [
+      [
+       "4·2 und 11·7",
+       "oben mal oben, unten mal unten"
+      ],
+      [
+       "8/77 = 8/77",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Oben mal oben, unten mal unten.",
+      "Danach kürzen."
+     ]
+    },
+    {
+     "id": "zb71",
+     "q": "11/12 : 5/6 =",
+     "a": "11/10",
+     "lvl": 3,
+     "th": "div",
+     "ans": [
+      "11/10",
+      "1 1/10",
+      "1,1",
+      "1.1"
+     ],
+     "steps": [
+      [
+       "Kehrbruch von 5/6 ist 6/5",
+       "zweiten Bruch umdrehen"
+      ],
+      [
+       "11/12 · 6/5",
+       "aus Geteilt wird Mal"
+      ],
+      [
+       "= 11/10",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Nimm den Kehrbruch vom zweiten Bruch.",
+      "Dann malnehmen."
+     ]
+    },
+    {
+     "id": "zb72",
+     "q": "5/9 : 1/2 =",
+     "a": "10/9",
+     "lvl": 3,
+     "th": "div",
+     "ans": [
+      "10/9",
+      "1 1/9"
+     ],
+     "steps": [
+      [
+       "Kehrbruch von 1/2 ist 2/1",
+       "zweiten Bruch umdrehen"
+      ],
+      [
+       "5/9 · 2/1",
+       "aus Geteilt wird Mal"
+      ],
+      [
+       "= 10/9",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Nimm den Kehrbruch vom zweiten Bruch.",
+      "Dann malnehmen."
+     ]
+    },
+    {
+     "id": "zb73",
+     "q": "7/12 : 1/6 =",
+     "a": "7/2",
+     "lvl": 3,
+     "th": "div",
+     "ans": [
+      "7/2",
+      "3 1/2",
+      "3,5",
+      "3.5"
+     ],
+     "steps": [
+      [
+       "Kehrbruch von 1/6 ist 6/1",
+       "zweiten Bruch umdrehen"
+      ],
+      [
+       "7/12 · 6/1",
+       "aus Geteilt wird Mal"
+      ],
+      [
+       "= 7/2",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Nimm den Kehrbruch vom zweiten Bruch.",
+      "Dann malnehmen."
+     ]
+    },
+    {
+     "id": "zb74",
+     "q": "1/2 : 3/4 =",
+     "a": "2/3",
+     "lvl": 3,
+     "th": "div",
+     "ans": [
+      "2/3"
+     ],
+     "steps": [
+      [
+       "Kehrbruch von 3/4 ist 4/3",
+       "zweiten Bruch umdrehen"
+      ],
+      [
+       "1/2 · 4/3",
+       "aus Geteilt wird Mal"
+      ],
+      [
+       "= 2/3",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Nimm den Kehrbruch vom zweiten Bruch.",
+      "Dann malnehmen."
+     ]
+    },
+    {
+     "id": "zb75",
+     "q": "7/9 : 1/10 =",
+     "a": "70/9",
+     "lvl": 3,
+     "th": "div",
+     "ans": [
+      "70/9",
+      "7 7/9"
+     ],
+     "steps": [
+      [
+       "Kehrbruch von 1/10 ist 10/1",
+       "zweiten Bruch umdrehen"
+      ],
+      [
+       "7/9 · 10/1",
+       "aus Geteilt wird Mal"
+      ],
+      [
+       "= 70/9",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Nimm den Kehrbruch vom zweiten Bruch.",
+      "Dann malnehmen."
+     ]
+    },
+    {
+     "id": "zb76",
+     "q": "1/3 : 3/4 =",
+     "a": "4/9",
+     "lvl": 3,
+     "th": "div",
+     "ans": [
+      "4/9"
+     ],
+     "steps": [
+      [
+       "Kehrbruch von 3/4 ist 4/3",
+       "zweiten Bruch umdrehen"
+      ],
+      [
+       "1/3 · 4/3",
+       "aus Geteilt wird Mal"
+      ],
+      [
+       "= 4/9",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Nimm den Kehrbruch vom zweiten Bruch.",
+      "Dann malnehmen."
+     ]
+    },
+    {
+     "id": "zb77",
+     "q": "1/2 : 9/11 =",
+     "a": "11/18",
+     "lvl": 3,
+     "th": "div",
+     "ans": [
+      "11/18"
+     ],
+     "steps": [
+      [
+       "Kehrbruch von 9/11 ist 11/9",
+       "zweiten Bruch umdrehen"
+      ],
+      [
+       "1/2 · 11/9",
+       "aus Geteilt wird Mal"
+      ],
+      [
+       "= 11/18",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Nimm den Kehrbruch vom zweiten Bruch.",
+      "Dann malnehmen."
+     ]
+    },
+    {
+     "id": "zb78",
+     "q": "1/4 : 1/2 =",
+     "a": "1/2",
+     "lvl": 3,
+     "th": "div",
+     "ans": [
+      "1/2",
+      "0,5",
+      "0.5"
+     ],
+     "steps": [
+      [
+       "Kehrbruch von 1/2 ist 2/1",
+       "zweiten Bruch umdrehen"
+      ],
+      [
+       "1/4 · 2/1",
+       "aus Geteilt wird Mal"
+      ],
+      [
+       "= 1/2",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Nimm den Kehrbruch vom zweiten Bruch.",
+      "Dann malnehmen."
+     ]
+    },
+    {
+     "id": "zb79",
+     "q": "2/5 : 5/7 =",
+     "a": "14/25",
+     "lvl": 3,
+     "th": "div",
+     "ans": [
+      "14/25",
+      "0,56",
+      "0.56"
+     ],
+     "steps": [
+      [
+       "Kehrbruch von 5/7 ist 7/5",
+       "zweiten Bruch umdrehen"
+      ],
+      [
+       "2/5 · 7/5",
+       "aus Geteilt wird Mal"
+      ],
+      [
+       "= 14/25",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Nimm den Kehrbruch vom zweiten Bruch.",
+      "Dann malnehmen."
+     ]
+    },
+    {
+     "id": "zb80",
+     "q": "5/8 : 1/4 =",
+     "a": "5/2",
+     "lvl": 3,
+     "th": "div",
+     "ans": [
+      "5/2",
+      "2 1/2",
+      "2,5",
+      "2.5"
+     ],
+     "steps": [
+      [
+       "Kehrbruch von 1/4 ist 4/1",
+       "zweiten Bruch umdrehen"
+      ],
+      [
+       "5/8 · 4/1",
+       "aus Geteilt wird Mal"
+      ],
+      [
+       "= 5/2",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Nimm den Kehrbruch vom zweiten Bruch.",
+      "Dann malnehmen."
+     ]
+    },
+    {
+     "id": "zb81",
+     "q": "1/4 : 1/8 =",
+     "a": "2",
+     "lvl": 3,
+     "th": "div",
+     "ans": [
+      "2",
+      "2",
+      "2"
+     ],
+     "steps": [
+      [
+       "Kehrbruch von 1/8 ist 8/1",
+       "zweiten Bruch umdrehen"
+      ],
+      [
+       "1/4 · 8/1",
+       "aus Geteilt wird Mal"
+      ],
+      [
+       "= 2",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Nimm den Kehrbruch vom zweiten Bruch.",
+      "Dann malnehmen."
+     ]
+    },
+    {
+     "id": "zb82",
+     "q": "3/4 : 4/7 =",
+     "a": "21/16",
+     "lvl": 3,
+     "th": "div",
+     "ans": [
+      "21/16",
+      "1 5/16"
+     ],
+     "steps": [
+      [
+       "Kehrbruch von 4/7 ist 7/4",
+       "zweiten Bruch umdrehen"
+      ],
+      [
+       "3/4 · 7/4",
+       "aus Geteilt wird Mal"
+      ],
+      [
+       "= 21/16",
+       "kürzen"
+      ]
+     ],
+     "hints": [
+      "Nimm den Kehrbruch vom zweiten Bruch.",
+      "Dann malnehmen."
+     ]
+    },
+    {
+     "id": "zb83",
+     "q": "Schreibe 2 2/3 als unechten Bruch",
+     "a": "8/3",
+     "lvl": 2,
+     "th": "gem",
+     "ans": [
+      "8/3"
+     ],
+     "steps": [
+      [
+       "2 · 3 + 2 = 8",
+       "ganze Zahl mal Nenner plus Zähler"
+      ],
+      [
+       "8/3",
+       "über dem gleichen Nenner"
+      ]
+     ],
+     "hints": [
+      "Ganze Zahl mal Nenner, plus Zähler."
+     ]
+    },
+    {
+     "id": "zb84",
+     "q": "Schreibe 8/3 als gemischte Zahl",
+     "a": "2 2/3",
+     "lvl": 2,
+     "th": "gem",
+     "ans": [
+      "2 2/3"
+     ],
+     "steps": [
+      [
+       "8 : 3 = 2 Rest 2",
+       "Zähler durch Nenner"
+      ],
+      [
+       "2 2/3",
+       "Rest wird der neue Zähler"
+      ]
+     ],
+     "hints": [
+      "Teile den Zähler durch den Nenner. Der Rest ist der neue Zähler."
+     ]
+    },
+    {
+     "id": "zb85",
+     "q": "Schreibe 1 4/9 als unechten Bruch",
+     "a": "13/9",
+     "lvl": 2,
+     "th": "gem",
+     "ans": [
+      "13/9"
+     ],
+     "steps": [
+      [
+       "1 · 9 + 4 = 13",
+       "ganze Zahl mal Nenner plus Zähler"
+      ],
+      [
+       "13/9",
+       "über dem gleichen Nenner"
+      ]
+     ],
+     "hints": [
+      "Ganze Zahl mal Nenner, plus Zähler."
+     ]
+    },
+    {
+     "id": "zb86",
+     "q": "Schreibe 13/9 als gemischte Zahl",
+     "a": "1 4/9",
+     "lvl": 2,
+     "th": "gem",
+     "ans": [
+      "1 4/9"
+     ],
+     "steps": [
+      [
+       "13 : 9 = 1 Rest 4",
+       "Zähler durch Nenner"
+      ],
+      [
+       "1 4/9",
+       "Rest wird der neue Zähler"
+      ]
+     ],
+     "hints": [
+      "Teile den Zähler durch den Nenner. Der Rest ist der neue Zähler."
+     ]
+    },
+    {
+     "id": "zb87",
+     "q": "Schreibe 2 1/5 als unechten Bruch",
+     "a": "11/5",
+     "lvl": 2,
+     "th": "gem",
+     "ans": [
+      "11/5"
+     ],
+     "steps": [
+      [
+       "2 · 5 + 1 = 11",
+       "ganze Zahl mal Nenner plus Zähler"
+      ],
+      [
+       "11/5",
+       "über dem gleichen Nenner"
+      ]
+     ],
+     "hints": [
+      "Ganze Zahl mal Nenner, plus Zähler."
+     ]
+    },
+    {
+     "id": "zb88",
+     "q": "Schreibe 11/5 als gemischte Zahl",
+     "a": "2 1/5",
+     "lvl": 2,
+     "th": "gem",
+     "ans": [
+      "2 1/5"
+     ],
+     "steps": [
+      [
+       "11 : 5 = 2 Rest 1",
+       "Zähler durch Nenner"
+      ],
+      [
+       "2 1/5",
+       "Rest wird der neue Zähler"
+      ]
+     ],
+     "hints": [
+      "Teile den Zähler durch den Nenner. Der Rest ist der neue Zähler."
+     ]
+    },
+    {
+     "id": "zb89",
+     "q": "Schreibe 2 3/8 als unechten Bruch",
+     "a": "19/8",
+     "lvl": 2,
+     "th": "gem",
+     "ans": [
+      "19/8"
+     ],
+     "steps": [
+      [
+       "2 · 8 + 3 = 19",
+       "ganze Zahl mal Nenner plus Zähler"
+      ],
+      [
+       "19/8",
+       "über dem gleichen Nenner"
+      ]
+     ],
+     "hints": [
+      "Ganze Zahl mal Nenner, plus Zähler."
+     ]
+    },
+    {
+     "id": "zb90",
+     "q": "Schreibe 19/8 als gemischte Zahl",
+     "a": "2 3/8",
+     "lvl": 2,
+     "th": "gem",
+     "ans": [
+      "2 3/8"
+     ],
+     "steps": [
+      [
+       "19 : 8 = 2 Rest 3",
+       "Zähler durch Nenner"
+      ],
+      [
+       "2 3/8",
+       "Rest wird der neue Zähler"
+      ]
+     ],
+     "hints": [
+      "Teile den Zähler durch den Nenner. Der Rest ist der neue Zähler."
+     ]
+    },
+    {
+     "id": "zb91",
+     "q": "Schreibe 3 2/3 als unechten Bruch",
+     "a": "11/3",
+     "lvl": 2,
+     "th": "gem",
+     "ans": [
+      "11/3"
+     ],
+     "steps": [
+      [
+       "3 · 3 + 2 = 11",
+       "ganze Zahl mal Nenner plus Zähler"
+      ],
+      [
+       "11/3",
+       "über dem gleichen Nenner"
+      ]
+     ],
+     "hints": [
+      "Ganze Zahl mal Nenner, plus Zähler."
+     ]
+    },
+    {
+     "id": "zb92",
+     "q": "Schreibe 11/3 als gemischte Zahl",
+     "a": "3 2/3",
+     "lvl": 2,
+     "th": "gem",
+     "ans": [
+      "3 2/3"
+     ],
+     "steps": [
+      [
+       "11 : 3 = 3 Rest 2",
+       "Zähler durch Nenner"
+      ],
+      [
+       "3 2/3",
+       "Rest wird der neue Zähler"
+      ]
+     ],
+     "hints": [
+      "Teile den Zähler durch den Nenner. Der Rest ist der neue Zähler."
+     ]
+    },
+    {
+     "id": "zb93",
+     "q": "Schreibe 3 1/2 als unechten Bruch",
+     "a": "7/2",
+     "lvl": 2,
+     "th": "gem",
+     "ans": [
+      "7/2"
+     ],
+     "steps": [
+      [
+       "3 · 2 + 1 = 7",
+       "ganze Zahl mal Nenner plus Zähler"
+      ],
+      [
+       "7/2",
+       "über dem gleichen Nenner"
+      ]
+     ],
+     "hints": [
+      "Ganze Zahl mal Nenner, plus Zähler."
+     ]
+    },
+    {
+     "id": "zb94",
+     "q": "Schreibe 7/2 als gemischte Zahl",
+     "a": "3 1/2",
+     "lvl": 2,
+     "th": "gem",
+     "ans": [
+      "3 1/2"
+     ],
+     "steps": [
+      [
+       "7 : 2 = 3 Rest 1",
+       "Zähler durch Nenner"
+      ],
+      [
+       "3 1/2",
+       "Rest wird der neue Zähler"
+      ]
+     ],
+     "hints": [
+      "Teile den Zähler durch den Nenner. Der Rest ist der neue Zähler."
+     ]
+    },
+    {
+     "id": "zb95",
+     "q": "Schreibe 3 3/4 als unechten Bruch",
+     "a": "15/4",
+     "lvl": 2,
+     "th": "gem",
+     "ans": [
+      "15/4"
+     ],
+     "steps": [
+      [
+       "3 · 4 + 3 = 15",
+       "ganze Zahl mal Nenner plus Zähler"
+      ],
+      [
+       "15/4",
+       "über dem gleichen Nenner"
+      ]
+     ],
+     "hints": [
+      "Ganze Zahl mal Nenner, plus Zähler."
+     ]
+    },
+    {
+     "id": "zb96",
+     "q": "Schreibe 15/4 als gemischte Zahl",
+     "a": "3 3/4",
+     "lvl": 2,
+     "th": "gem",
+     "ans": [
+      "3 3/4"
+     ],
+     "steps": [
+      [
+       "15 : 4 = 3 Rest 3",
+       "Zähler durch Nenner"
+      ],
+      [
+       "3 3/4",
+       "Rest wird der neue Zähler"
+      ]
+     ],
+     "hints": [
+      "Teile den Zähler durch den Nenner. Der Rest ist der neue Zähler."
+     ]
+    },
+    {
+     "id": "zb97",
+     "q": "Schreibe 3 1/2 als unechten Bruch",
+     "a": "7/2",
+     "lvl": 2,
+     "th": "gem",
+     "ans": [
+      "7/2"
+     ],
+     "steps": [
+      [
+       "3 · 2 + 1 = 7",
+       "ganze Zahl mal Nenner plus Zähler"
+      ],
+      [
+       "7/2",
+       "über dem gleichen Nenner"
+      ]
+     ],
+     "hints": [
+      "Ganze Zahl mal Nenner, plus Zähler."
+     ]
+    },
+    {
+     "id": "zb98",
+     "q": "Schreibe 7/2 als gemischte Zahl",
+     "a": "3 1/2",
+     "lvl": 2,
+     "th": "gem",
+     "ans": [
+      "3 1/2"
+     ],
+     "steps": [
+      [
+       "7 : 2 = 3 Rest 1",
+       "Zähler durch Nenner"
+      ],
+      [
+       "3 1/2",
+       "Rest wird der neue Zähler"
+      ]
+     ],
+     "hints": [
+      "Teile den Zähler durch den Nenner. Der Rest ist der neue Zähler."
+     ]
+    },
+    {
+     "id": "zb99",
+     "q": "Wie viel sind 4/8 von 56?",
+     "a": "28",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "28"
+     ],
+     "steps": [
+      [
+       "56 : 8 = 7",
+       "ein Teil"
+      ],
+      [
+       "7 · 4 = 28",
+       "mal 4 Teile"
+      ]
+     ],
+     "hints": [
+      "Teile 56 durch 8, dann mal 4."
+     ]
+    },
+    {
+     "id": "zb100",
+     "q": "Wie viel sind 6/10 von 80?",
+     "a": "48",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "48"
+     ],
+     "steps": [
+      [
+       "80 : 10 = 8",
+       "ein Teil"
+      ],
+      [
+       "8 · 6 = 48",
+       "mal 6 Teile"
+      ]
+     ],
+     "hints": [
+      "Teile 80 durch 10, dann mal 6."
+     ]
+    },
+    {
+     "id": "zb101",
+     "q": "Wie viel sind 5/8 von 24?",
+     "a": "15",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "15"
+     ],
+     "steps": [
+      [
+       "24 : 8 = 3",
+       "ein Teil"
+      ],
+      [
+       "3 · 5 = 15",
+       "mal 5 Teile"
+      ]
+     ],
+     "hints": [
+      "Teile 24 durch 8, dann mal 5."
+     ]
+    },
+    {
+     "id": "zb102",
+     "q": "Wie viel sind 2/5 von 30?",
+     "a": "12",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "12"
+     ],
+     "steps": [
+      [
+       "30 : 5 = 6",
+       "ein Teil"
+      ],
+      [
+       "6 · 2 = 12",
+       "mal 2 Teile"
+      ]
+     ],
+     "hints": [
+      "Teile 30 durch 5, dann mal 2."
+     ]
+    },
+    {
+     "id": "zb103",
+     "q": "Wie viel sind 1/2 von 4?",
+     "a": "2",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "2"
+     ],
+     "steps": [
+      [
+       "4 : 2 = 2",
+       "ein Teil"
+      ],
+      [
+       "2 · 1 = 2",
+       "mal 1 Teile"
+      ]
+     ],
+     "hints": [
+      "Teile 4 durch 2, dann mal 1."
+     ]
+    },
+    {
+     "id": "zb104",
+     "q": "Wie viel sind 7/8 von 40?",
+     "a": "35",
+     "lvl": 2,
+     "th": "order",
+     "ans": [
+      "35"
+     ],
+     "steps": [
+      [
+       "40 : 8 = 5",
+       "ein Teil"
+      ],
+      [
+       "5 · 7 = 35",
+       "mal 7 Teile"
+      ]
+     ],
+     "hints": [
+      "Teile 40 durch 8, dann mal 7."
+     ]
+    },
+    {
+     "id": "zb105",
+     "q": "Welcher Bruch ist grösser: 4/7 oder 2/3?",
+     "a": "2/3",
+     "lvl": 2,
+     "th": "hn",
+     "opts": [
+      "4/7",
+      "2/3",
+      "kann man nicht sagen",
+      "beide gleich gross"
+     ],
+     "steps": [
+      [
+       "Gemeinsamer Nenner 21",
+       "12/21 und 14/21"
+      ],
+      [
+       "2/3",
+       "der grössere Zähler gewinnt"
+      ]
+     ],
+     "hints": [
+      "Mache beide Brüche gleichnennig."
+     ]
+    },
+    {
+     "id": "zb106",
+     "q": "Welcher Bruch ist grösser: 5/6 oder 4/7?",
+     "a": "5/6",
+     "lvl": 2,
+     "th": "hn",
+     "opts": [
+      "4/7",
+      "5/6",
+      "kann man nicht sagen",
+      "beide gleich gross"
+     ],
+     "steps": [
+      [
+       "Gemeinsamer Nenner 42",
+       "35/42 und 24/42"
+      ],
+      [
+       "5/6",
+       "der grössere Zähler gewinnt"
+      ]
+     ],
+     "hints": [
+      "Mache beide Brüche gleichnennig."
+     ]
+    },
+    {
+     "id": "zb107",
+     "q": "Welcher Bruch ist grösser: 4/5 oder 7/12?",
+     "a": "4/5",
+     "lvl": 2,
+     "th": "hn",
+     "opts": [
+      "4/5",
+      "kann man nicht sagen",
+      "beide gleich gross",
+      "7/12"
+     ],
+     "steps": [
+      [
+       "Gemeinsamer Nenner 60",
+       "48/60 und 35/60"
+      ],
+      [
+       "4/5",
+       "der grössere Zähler gewinnt"
+      ]
+     ],
+     "hints": [
+      "Mache beide Brüche gleichnennig."
+     ]
+    },
+    {
+     "id": "zb108",
+     "q": "Welcher Bruch ist grösser: 5/8 oder 1/2?",
+     "a": "5/8",
+     "lvl": 2,
+     "th": "hn",
+     "opts": [
+      "kann man nicht sagen",
+      "1/2",
+      "5/8",
+      "beide gleich gross"
+     ],
+     "steps": [
+      [
+       "Gemeinsamer Nenner 16",
+       "10/16 und 8/16"
+      ],
+      [
+       "5/8",
+       "der grössere Zähler gewinnt"
+      ]
+     ],
+     "hints": [
+      "Mache beide Brüche gleichnennig."
+     ]
+    },
+    {
+     "id": "zb109",
+     "q": "Welcher Bruch ist grösser: 10/11 oder 8/9?",
+     "a": "10/11",
+     "lvl": 2,
+     "th": "hn",
+     "opts": [
+      "8/9",
+      "10/11",
+      "beide gleich gross",
+      "kann man nicht sagen"
+     ],
+     "steps": [
+      [
+       "Gemeinsamer Nenner 99",
+       "90/99 und 88/99"
+      ],
+      [
+       "10/11",
+       "der grössere Zähler gewinnt"
+      ]
+     ],
+     "hints": [
+      "Mache beide Brüche gleichnennig."
+     ]
+    },
+    {
+     "id": "zb110",
+     "q": "Welcher Bruch ist grösser: 3/4 oder 2/3?",
+     "a": "3/4",
+     "lvl": 2,
+     "th": "hn",
+     "opts": [
+      "2/3",
+      "kann man nicht sagen",
+      "3/4",
+      "beide gleich gross"
+     ],
+     "steps": [
+      [
+       "Gemeinsamer Nenner 12",
+       "9/12 und 8/12"
+      ],
+      [
+       "3/4",
+       "der grössere Zähler gewinnt"
+      ]
+     ],
+     "hints": [
+      "Mache beide Brüche gleichnennig."
+     ]
+    },
+    {
+     "id": "zb111",
+     "q": "Was ist richtig? 1/4 + 1/4 =",
+     "a": "1/2",
+     "lvl": 1,
+     "th": "hn",
+     "opts": [
+      "1/2",
+      "2/8",
+      "2/4 und 2/8",
+      "1/8"
+     ],
+     "steps": [
+      [
+       "1/4 + 1/4 = 2/4 = 1/2",
+       "Beim Plus bleibt der Nenner"
+      ]
+     ],
+     "hints": [
+      "Beim Plus bleibt der Nenner gleich."
+     ]
+    },
+    {
+     "id": "zb112",
+     "q": "Was machst du beim Teilen von Brüchen mit dem zweiten Bruch?",
+     "a": "Kehrbruch nehmen",
+     "lvl": 1,
+     "th": "div",
+     "opts": [
+      "Kehrbruch nehmen",
+      "Nichts, einfach malnehmen",
+      "Kürzen",
+      "Hauptnenner suchen"
+     ],
+     "steps": [
+      [
+       "Kehrbruch nehmen",
+       "zweiten Bruch umdrehen und mal rechnen"
+      ]
+     ],
+     "hints": [
+      "Der zweite Bruch wird umgedreht."
+     ]
+    },
+    {
+     "id": "zb113",
+     "q": "Wann ist ein Bruch ein unechter Bruch?",
+     "a": "Zähler ≥ Nenner",
+     "lvl": 1,
+     "th": "gem",
+     "opts": [
+      "Zähler ≥ Nenner",
+      "Zähler < Nenner",
+      "Nenner = 1",
+      "Wenn er gekürzt ist"
+     ],
+     "steps": [
+      [
+       "Zähler ≥ Nenner",
+       "Wert ist 1 oder grösser"
+      ]
+     ],
+     "hints": [
+      "Der Wert ist grösser oder gleich 1."
+     ]
     }
    ],
    "exam": {
@@ -7363,6 +10385,1688 @@
        "Wem erzählt sie etwas?"
       ]
      ]
+    },
+    {
+     "id": "zz1",
+     "q": "Der kleine Hund schläft unter dem Tisch.\nBestimme die Wortart des Wortes «kleine».",
+     "a": "Adjektiv",
+     "lvl": 1,
+     "th": "wa",
+     "opts": [
+      "Nomen",
+      "Verb",
+      "Adjektiv",
+      "Adverb"
+     ],
+     "steps": [
+      [
+       "Adjektiv",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Es beschreibt das Nomen Hund."
+     ]
+    },
+    {
+     "id": "zz2",
+     "q": "Der kleine Hund schläft unter dem Tisch.\nBestimme die Wortart des Wortes «unter».",
+     "a": "Präposition",
+     "lvl": 1,
+     "th": "wa",
+     "opts": [
+      "Verb",
+      "Präposition",
+      "Adjektiv",
+      "Nomen"
+     ],
+     "steps": [
+      [
+       "Präposition",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Danach folgt ein Nomen mit Artikel."
+     ]
+    },
+    {
+     "id": "zz3",
+     "q": "Wir gehen heute ins Kino.\nBestimme die Wortart des Wortes «heute».",
+     "a": "Adverb",
+     "lvl": 1,
+     "th": "wa",
+     "opts": [
+      "Nomen",
+      "Verb",
+      "Adjektiv",
+      "Adverb"
+     ],
+     "steps": [
+      [
+       "Adverb",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Es sagt, wann etwas geschieht."
+     ]
+    },
+    {
+     "id": "zz4",
+     "q": "Sie hilft ihm bei den Hausaufgaben.\nBestimme die Wortart des Wortes «ihm».",
+     "a": "Pronomen",
+     "lvl": 1,
+     "th": "wa",
+     "opts": [
+      "Pronomen",
+      "Nomen",
+      "Adjektiv",
+      "Verb"
+     ],
+     "steps": [
+      [
+       "Pronomen",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Es ersetzt ein Nomen."
+     ]
+    },
+    {
+     "id": "zz5",
+     "q": "Ich bleibe zu Hause, weil ich krank bin.\nBestimme die Wortart des Wortes «weil».",
+     "a": "Konjunktion",
+     "lvl": 1,
+     "th": "wa",
+     "opts": [
+      "Verb",
+      "Nomen",
+      "Konjunktion",
+      "Adjektiv"
+     ],
+     "steps": [
+      [
+       "Konjunktion",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Es leitet einen Nebensatz ein."
+     ]
+    },
+    {
+     "id": "zz6",
+     "q": "Die Schülerin liest ein spannendes Buch.\nBestimme die Wortart des Wortes «spannendes».",
+     "a": "Adjektiv",
+     "lvl": 1,
+     "th": "wa",
+     "opts": [
+      "Adjektiv",
+      "Nomen",
+      "Adverb",
+      "Verb"
+     ],
+     "steps": [
+      [
+       "Adjektiv",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Es beschreibt das Nomen Buch."
+     ]
+    },
+    {
+     "id": "zz7",
+     "q": "Er läuft schnell nach Hause.\nBestimme die Wortart des Wortes «schnell».",
+     "a": "Adverb",
+     "lvl": 2,
+     "th": "wa",
+     "opts": [
+      "Adverb",
+      "Nomen",
+      "Adjektiv",
+      "Verb"
+     ],
+     "steps": [
+      [
+       "Adverb",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Es bestimmt das Verb läuft näher."
+     ]
+    },
+    {
+     "id": "zz8",
+     "q": "Der schnelle Läufer gewinnt das Rennen.\nBestimme die Wortart des Wortes «schnelle».",
+     "a": "Adjektiv",
+     "lvl": 2,
+     "th": "wa",
+     "opts": [
+      "Nomen",
+      "Verb",
+      "Adjektiv",
+      "Adverb"
+     ],
+     "steps": [
+      [
+       "Adjektiv",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Es steht vor dem Nomen Läufer und wird gebeugt."
+     ]
+    },
+    {
+     "id": "zz9",
+     "q": "Nach dem Unterricht gehen wir nach Hause.\nBestimme die Wortart des Wortes «Nach».",
+     "a": "Präposition",
+     "lvl": 2,
+     "th": "wa",
+     "opts": [
+      "Präposition",
+      "Nomen",
+      "Verb",
+      "Adjektiv"
+     ],
+     "steps": [
+      [
+       "Präposition",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Es folgt ein Nomen mit Artikel (dem Unterricht)."
+     ]
+    },
+    {
+     "id": "zz10",
+     "q": "Es regnet, obwohl die Sonne scheint.\nBestimme die Wortart des Wortes «obwohl».",
+     "a": "Konjunktion",
+     "lvl": 2,
+     "th": "wa",
+     "opts": [
+      "Nomen",
+      "Adjektiv",
+      "Konjunktion",
+      "Verb"
+     ],
+     "steps": [
+      [
+       "Konjunktion",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Danach folgt ein ganzer Satz."
+     ]
+    },
+    {
+     "id": "zz11",
+     "q": "Die Katze jagt die Maus.\nBestimme die Wortart des Wortes «jagt».",
+     "a": "Verb",
+     "lvl": 1,
+     "th": "wa",
+     "opts": [
+      "Adverb",
+      "Verb",
+      "Adjektiv",
+      "Nomen"
+     ],
+     "steps": [
+      [
+       "Verb",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Es sagt, was geschieht."
+     ]
+    },
+    {
+     "id": "zz12",
+     "q": "Dieses Heft gehört mir.\nBestimme die Wortart des Wortes «mir».",
+     "a": "Pronomen",
+     "lvl": 1,
+     "th": "wa",
+     "opts": [
+      "Nomen",
+      "Pronomen",
+      "Adjektiv",
+      "Verb"
+     ],
+     "steps": [
+      [
+       "Pronomen",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Es steht für eine Person."
+     ]
+    },
+    {
+     "id": "zz13",
+     "q": "Während der Pause spielen wir Fussball.\nBestimme die Wortart des Wortes «Während».",
+     "a": "Präposition",
+     "lvl": 3,
+     "th": "wa",
+     "opts": [
+      "Präposition",
+      "Verb",
+      "Adjektiv",
+      "Nomen"
+     ],
+     "steps": [
+      [
+       "Präposition",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Danach folgt das Nomen die Pause."
+     ]
+    },
+    {
+     "id": "zz14",
+     "q": "Während die Lehrerin erklärt, hören alle zu.\nBestimme die Wortart des Wortes «Während».",
+     "a": "Konjunktion",
+     "lvl": 3,
+     "th": "wa",
+     "opts": [
+      "Adjektiv",
+      "Nomen",
+      "Konjunktion",
+      "Verb"
+     ],
+     "steps": [
+      [
+       "Konjunktion",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Danach folgt ein Satz mit Verb am Ende."
+     ]
+    },
+    {
+     "id": "zz15",
+     "q": "Gestern haben wir lange gewartet.\nBestimme die Wortart des Wortes «lange».",
+     "a": "Adverb",
+     "lvl": 3,
+     "th": "wa",
+     "opts": [
+      "Verb",
+      "Nomen",
+      "Adverb",
+      "Adjektiv"
+     ],
+     "steps": [
+      [
+       "Adverb",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Es sagt, wie lange etwas dauerte."
+     ]
+    },
+    {
+     "id": "zz16",
+     "q": "Der Lehrer lobt sie.\nBestimme die Wortart des Wortes «sie».",
+     "a": "Pronomen",
+     "lvl": 2,
+     "th": "wa",
+     "opts": [
+      "Pronomen",
+      "Adjektiv",
+      "Nomen",
+      "Verb"
+     ],
+     "steps": [
+      [
+       "Pronomen",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Es ersetzt eine weibliche Person."
+     ]
+    },
+    {
+     "id": "zz17",
+     "q": "Der Hund bellt laut.\nIn welchem Fall steht «Der Hund»?",
+     "a": "Nominativ",
+     "lvl": 1,
+     "th": "ka",
+     "opts": [
+      "Genitiv",
+      "Nominativ",
+      "Akkusativ",
+      "Dativ"
+     ],
+     "steps": [
+      [
+       "Nominativ",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Wer oder was bellt?"
+     ]
+    },
+    {
+     "id": "zz18",
+     "q": "Ich sehe den Hund.\nIn welchem Fall steht «den Hund»?",
+     "a": "Akkusativ",
+     "lvl": 1,
+     "th": "ka",
+     "opts": [
+      "Akkusativ",
+      "Genitiv",
+      "Dativ",
+      "Nominativ"
+     ],
+     "steps": [
+      [
+       "Akkusativ",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Wen oder was sehe ich?"
+     ]
+    },
+    {
+     "id": "zz19",
+     "q": "Ich gebe dem Hund Futter.\nIn welchem Fall steht «dem Hund»?",
+     "a": "Dativ",
+     "lvl": 1,
+     "th": "ka",
+     "opts": [
+      "Dativ",
+      "Genitiv",
+      "Nominativ",
+      "Akkusativ"
+     ],
+     "steps": [
+      [
+       "Dativ",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Wem gebe ich Futter?"
+     ]
+    },
+    {
+     "id": "zz20",
+     "q": "Das Fell des Hundes ist weich.\nIn welchem Fall steht «des Hundes»?",
+     "a": "Genitiv",
+     "lvl": 1,
+     "th": "ka",
+     "opts": [
+      "Dativ",
+      "Akkusativ",
+      "Nominativ",
+      "Genitiv"
+     ],
+     "steps": [
+      [
+       "Genitiv",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Wessen Fell?"
+     ]
+    },
+    {
+     "id": "zz21",
+     "q": "Die Lehrerin lobt den Schüler.\nIn welchem Fall steht «den Schüler»?",
+     "a": "Akkusativ",
+     "lvl": 2,
+     "th": "ka",
+     "opts": [
+      "Akkusativ",
+      "Dativ",
+      "Nominativ",
+      "Genitiv"
+     ],
+     "steps": [
+      [
+       "Akkusativ",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Wen lobt sie?"
+     ]
+    },
+    {
+     "id": "zz22",
+     "q": "Der Trainer hilft dem Spieler.\nIn welchem Fall steht «dem Spieler»?",
+     "a": "Dativ",
+     "lvl": 2,
+     "th": "ka",
+     "opts": [
+      "Genitiv",
+      "Akkusativ",
+      "Nominativ",
+      "Dativ"
+     ],
+     "steps": [
+      [
+       "Dativ",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Wem hilft er?"
+     ]
+    },
+    {
+     "id": "zz23",
+     "q": "Das Heft der Schülerin liegt auf dem Tisch.\nIn welchem Fall steht «der Schülerin»?",
+     "a": "Genitiv",
+     "lvl": 2,
+     "th": "ka",
+     "opts": [
+      "Dativ",
+      "Genitiv",
+      "Nominativ",
+      "Akkusativ"
+     ],
+     "steps": [
+      [
+       "Genitiv",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Wessen Heft?"
+     ]
+    },
+    {
+     "id": "zz24",
+     "q": "Wegen des Regens fällt das Fest aus.\nIn welchem Fall steht «des Regens»?",
+     "a": "Genitiv",
+     "lvl": 2,
+     "th": "ka",
+     "opts": [
+      "Genitiv",
+      "Akkusativ",
+      "Dativ",
+      "Nominativ"
+     ],
+     "steps": [
+      [
+       "Genitiv",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "wegen verlangt den Genitiv."
+     ]
+    },
+    {
+     "id": "zz25",
+     "q": "Wir fahren mit dem Bus.\nIn welchem Fall steht «dem Bus»?",
+     "a": "Dativ",
+     "lvl": 2,
+     "th": "ka",
+     "opts": [
+      "Dativ",
+      "Nominativ",
+      "Genitiv",
+      "Akkusativ"
+     ],
+     "steps": [
+      [
+       "Dativ",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "mit verlangt den Dativ."
+     ]
+    },
+    {
+     "id": "zz26",
+     "q": "Sie kauft ein Geschenk für den Freund.\nIn welchem Fall steht «den Freund»?",
+     "a": "Akkusativ",
+     "lvl": 2,
+     "th": "ka",
+     "opts": [
+      "Genitiv",
+      "Nominativ",
+      "Dativ",
+      "Akkusativ"
+     ],
+     "steps": [
+      [
+       "Akkusativ",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "für verlangt den Akkusativ."
+     ]
+    },
+    {
+     "id": "zz27",
+     "q": "Die neue Schülerin stellt sich vor.\nIn welchem Fall steht «Die neue Schülerin»?",
+     "a": "Nominativ",
+     "lvl": 2,
+     "th": "ka",
+     "opts": [
+      "Nominativ",
+      "Dativ",
+      "Akkusativ",
+      "Genitiv"
+     ],
+     "steps": [
+      [
+       "Nominativ",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Wer stellt sich vor?"
+     ]
+    },
+    {
+     "id": "zz28",
+     "q": "Er dankt seinem Lehrer.\nIn welchem Fall steht «seinem Lehrer»?",
+     "a": "Dativ",
+     "lvl": 2,
+     "th": "ka",
+     "opts": [
+      "Nominativ",
+      "Genitiv",
+      "Dativ",
+      "Akkusativ"
+     ],
+     "steps": [
+      [
+       "Dativ",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "danken verlangt den Dativ."
+     ]
+    },
+    {
+     "id": "zz29",
+     "q": "Welcher bestimmte Artikel steht bei einem männlichen Nomen im Dativ?",
+     "a": "dem",
+     "lvl": 2,
+     "th": "ka",
+     "opts": [
+      "des",
+      "dem",
+      "der",
+      "den"
+     ],
+     "steps": [
+      [
+       "dem",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Denke an die Artikel-Tabelle."
+     ]
+    },
+    {
+     "id": "zz30",
+     "q": "Welcher bestimmte Artikel steht bei einem männlichen Nomen im Akkusativ?",
+     "a": "den",
+     "lvl": 2,
+     "th": "ka",
+     "opts": [
+      "dem",
+      "den",
+      "des",
+      "der"
+     ],
+     "steps": [
+      [
+       "den",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Denke an die Artikel-Tabelle."
+     ]
+    },
+    {
+     "id": "zz31",
+     "q": "Welcher bestimmte Artikel steht bei einem weiblichen Nomen im Dativ?",
+     "a": "der",
+     "lvl": 2,
+     "th": "ka",
+     "opts": [
+      "dem",
+      "den",
+      "der",
+      "die"
+     ],
+     "steps": [
+      [
+       "der",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Denke an die Artikel-Tabelle."
+     ]
+    },
+    {
+     "id": "zz32",
+     "q": "Welcher bestimmte Artikel steht bei einem männlichen Nomen im Genitiv?",
+     "a": "des",
+     "lvl": 2,
+     "th": "ka",
+     "opts": [
+      "den",
+      "der",
+      "dem",
+      "des"
+     ],
+     "steps": [
+      [
+       "des",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Denke an die Artikel-Tabelle."
+     ]
+    },
+    {
+     "id": "zz33",
+     "q": "Welcher bestimmte Artikel steht bei einem sächlichen Nomen im Dativ?",
+     "a": "dem",
+     "lvl": 2,
+     "th": "ka",
+     "opts": [
+      "dem",
+      "der",
+      "das",
+      "den"
+     ],
+     "steps": [
+      [
+       "dem",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Denke an die Artikel-Tabelle."
+     ]
+    },
+    {
+     "id": "zz34",
+     "q": "Welcher bestimmte Artikel steht bei einem weiblichen Nomen im Akkusativ?",
+     "a": "die",
+     "lvl": 2,
+     "th": "ka",
+     "opts": [
+      "die",
+      "dem",
+      "der",
+      "den"
+     ],
+     "steps": [
+      [
+       "die",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Denke an die Artikel-Tabelle."
+     ]
+    },
+    {
+     "id": "zz35",
+     "q": "Welcher bestimmte Artikel steht bei einem sächlichen Nomen im Genitiv?",
+     "a": "des",
+     "lvl": 2,
+     "th": "ka",
+     "opts": [
+      "der",
+      "dem",
+      "des",
+      "das"
+     ],
+     "steps": [
+      [
+       "des",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Denke an die Artikel-Tabelle."
+     ]
+    },
+    {
+     "id": "zz36",
+     "q": "Welcher bestimmte Artikel steht bei einem männlichen Nomen im Nominativ?",
+     "a": "der",
+     "lvl": 2,
+     "th": "ka",
+     "opts": [
+      "dem",
+      "der",
+      "des",
+      "den"
+     ],
+     "steps": [
+      [
+       "der",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Denke an die Artikel-Tabelle."
+     ]
+    },
+    {
+     "id": "zz37",
+     "q": "Wir sind gestern ins Kino gegangen.\nIn welcher Zeitform steht der Satz?",
+     "a": "Perfekt",
+     "lvl": 2,
+     "th": "te",
+     "opts": [
+      "Plusquamperfekt",
+      "Futur I",
+      "Perfekt",
+      "Präteritum"
+     ],
+     "steps": [
+      [
+       "Perfekt",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Achte auf das Hilfsverb und die Verbform."
+     ]
+    },
+    {
+     "id": "zz38",
+     "q": "Ich werde morgen lernen.\nIn welcher Zeitform steht der Satz?",
+     "a": "Futur I",
+     "lvl": 2,
+     "th": "te",
+     "opts": [
+      "Futur I",
+      "Perfekt",
+      "Präsens",
+      "Präteritum"
+     ],
+     "steps": [
+      [
+       "Futur I",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Achte auf das Hilfsverb und die Verbform."
+     ]
+    },
+    {
+     "id": "zz39",
+     "q": "Er ging nach Hause.\nIn welcher Zeitform steht der Satz?",
+     "a": "Präteritum",
+     "lvl": 2,
+     "th": "te",
+     "opts": [
+      "Präsens",
+      "Plusquamperfekt",
+      "Perfekt",
+      "Präteritum"
+     ],
+     "steps": [
+      [
+       "Präteritum",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Achte auf das Hilfsverb und die Verbform."
+     ]
+    },
+    {
+     "id": "zz40",
+     "q": "Nachdem sie gegessen hatte, ging sie spielen.\nIn welcher Zeitform steht der Satz?",
+     "a": "Plusquamperfekt",
+     "lvl": 2,
+     "th": "te",
+     "opts": [
+      "Präteritum",
+      "Perfekt",
+      "Plusquamperfekt",
+      "Futur I"
+     ],
+     "steps": [
+      [
+       "Plusquamperfekt",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Achte auf das Hilfsverb und die Verbform."
+     ]
+    },
+    {
+     "id": "zz41",
+     "q": "Die Klasse schreibt eine Prüfung.\nIn welcher Zeitform steht der Satz?",
+     "a": "Präsens",
+     "lvl": 2,
+     "th": "te",
+     "opts": [
+      "Präsens",
+      "Futur I",
+      "Perfekt",
+      "Präteritum"
+     ],
+     "steps": [
+      [
+       "Präsens",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Achte auf das Hilfsverb und die Verbform."
+     ]
+    },
+    {
+     "id": "zz42",
+     "q": "Sie hat den Brief geschrieben.\nIn welcher Zeitform steht der Satz?",
+     "a": "Perfekt",
+     "lvl": 2,
+     "th": "te",
+     "opts": [
+      "Perfekt",
+      "Präteritum",
+      "Präsens",
+      "Futur I"
+     ],
+     "steps": [
+      [
+       "Perfekt",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Achte auf das Hilfsverb und die Verbform."
+     ]
+    },
+    {
+     "id": "zz43",
+     "q": "Wir fanden den Weg.\nIn welcher Zeitform steht der Satz?",
+     "a": "Präteritum",
+     "lvl": 2,
+     "th": "te",
+     "opts": [
+      "Präsens",
+      "Präteritum",
+      "Futur I",
+      "Perfekt"
+     ],
+     "steps": [
+      [
+       "Präteritum",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Achte auf das Hilfsverb und die Verbform."
+     ]
+    },
+    {
+     "id": "zz44",
+     "q": "Er war schon gegangen, als ich kam.\nIn welcher Zeitform steht der Satz?",
+     "a": "Plusquamperfekt",
+     "lvl": 2,
+     "th": "te",
+     "opts": [
+      "Präteritum",
+      "Perfekt",
+      "Plusquamperfekt",
+      "Präsens"
+     ],
+     "steps": [
+      [
+       "Plusquamperfekt",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Achte auf das Hilfsverb und die Verbform."
+     ]
+    },
+    {
+     "id": "zz45",
+     "q": "Es wird bald regnen.\nIn welcher Zeitform steht der Satz?",
+     "a": "Futur I",
+     "lvl": 2,
+     "th": "te",
+     "opts": [
+      "Plusquamperfekt",
+      "Perfekt",
+      "Präsens",
+      "Futur I"
+     ],
+     "steps": [
+      [
+       "Futur I",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Achte auf das Hilfsverb und die Verbform."
+     ]
+    },
+    {
+     "id": "zz46",
+     "q": "Wir fahren morgen nach Bern.\nIn welcher Zeitform steht der Satz?",
+     "a": "Präsens",
+     "lvl": 2,
+     "th": "te",
+     "opts": [
+      "Perfekt",
+      "Präsens",
+      "Futur I",
+      "Präteritum"
+     ],
+     "steps": [
+      [
+       "Präsens",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Achte auf das Hilfsverb und die Verbform."
+     ]
+    },
+    {
+     "id": "zz47",
+     "q": "Wie heisst das Partizip II von «fahren»?",
+     "a": "gefahren",
+     "lvl": 3,
+     "th": "te",
+     "opts": [
+      "gefahrent",
+      "fahren",
+      "gefahren",
+      "fahrent"
+     ],
+     "steps": [
+      [
+       "gefahren",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Regelmässig: ge-…-t, unregelmässig: ge-…-en."
+     ]
+    },
+    {
+     "id": "zz48",
+     "q": "Wie heisst das Partizip II von «spielen»?",
+     "a": "gespielt",
+     "lvl": 3,
+     "th": "te",
+     "opts": [
+      "spielent",
+      "gespielten",
+      "gespielt",
+      "spielt"
+     ],
+     "steps": [
+      [
+       "gespielt",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Regelmässig: ge-…-t, unregelmässig: ge-…-en."
+     ]
+    },
+    {
+     "id": "zz49",
+     "q": "Wie heisst das Partizip II von «besuchen»?",
+     "a": "besucht",
+     "lvl": 3,
+     "th": "te",
+     "opts": [
+      "besuchent",
+      "besuchten",
+      "gebesucht",
+      "besucht"
+     ],
+     "steps": [
+      [
+       "besucht",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Regelmässig: ge-…-t, unregelmässig: ge-…-en."
+     ]
+    },
+    {
+     "id": "zz50",
+     "q": "Wie heisst das Partizip II von «singen»?",
+     "a": "gesungen",
+     "lvl": 3,
+     "th": "te",
+     "opts": [
+      "gesungent",
+      "singent",
+      "sungen",
+      "gesungen"
+     ],
+     "steps": [
+      [
+       "gesungen",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Regelmässig: ge-…-t, unregelmässig: ge-…-en."
+     ]
+    },
+    {
+     "id": "zz51",
+     "q": "Wie heisst das Partizip II von «verlieren»?",
+     "a": "verloren",
+     "lvl": 3,
+     "th": "te",
+     "opts": [
+      "verlorent",
+      "verloren",
+      "geverloren",
+      "verlierent"
+     ],
+     "steps": [
+      [
+       "verloren",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Regelmässig: ge-…-t, unregelmässig: ge-…-en."
+     ]
+    },
+    {
+     "id": "zz52",
+     "q": "Wie heisst das Partizip II von «lernen»?",
+     "a": "gelernt",
+     "lvl": 3,
+     "th": "te",
+     "opts": [
+      "lernent",
+      "lernt",
+      "gelernten",
+      "gelernt"
+     ],
+     "steps": [
+      [
+       "gelernt",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Regelmässig: ge-…-t, unregelmässig: ge-…-en."
+     ]
+    },
+    {
+     "id": "zz53",
+     "q": "Wie heisst das Partizip II von «schreiben»?",
+     "a": "geschrieben",
+     "lvl": 3,
+     "th": "te",
+     "opts": [
+      "geschrieben",
+      "geschriebent",
+      "schreibent",
+      "schrieben"
+     ],
+     "steps": [
+      [
+       "geschrieben",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Regelmässig: ge-…-t, unregelmässig: ge-…-en."
+     ]
+    },
+    {
+     "id": "zz54",
+     "q": "Wie heisst das Partizip II von «aufräumen»?",
+     "a": "aufgeräumt",
+     "lvl": 3,
+     "th": "te",
+     "opts": [
+      "aufräument",
+      "geaufgeräumt",
+      "aufgeräumten",
+      "aufgeräumt"
+     ],
+     "steps": [
+      [
+       "aufgeräumt",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Regelmässig: ge-…-t, unregelmässig: ge-…-en."
+     ]
+    },
+    {
+     "id": "zz55",
+     "q": "Welche Perfektform ist richtig: «er ___» (laufen)?",
+     "a": "ist gelaufen",
+     "lvl": 3,
+     "th": "te",
+     "opts": [
+      "ist gelaufen",
+      "hat gelaufen"
+     ],
+     "steps": [
+      [
+       "ist gelaufen",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Sein steht bei Bewegung und Zustandswechsel."
+     ]
+    },
+    {
+     "id": "zz56",
+     "q": "Welche Perfektform ist richtig: «er ___» (lesen)?",
+     "a": "hat gelesen",
+     "lvl": 3,
+     "th": "te",
+     "opts": [
+      "hat gelesen",
+      "ist gelesen"
+     ],
+     "steps": [
+      [
+       "hat gelesen",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Sein steht bei Bewegung und Zustandswechsel."
+     ]
+    },
+    {
+     "id": "zz57",
+     "q": "Welche Perfektform ist richtig: «er ___» (einschlafen)?",
+     "a": "ist eingeschlafen",
+     "lvl": 3,
+     "th": "te",
+     "opts": [
+      "hat eingeschlafen",
+      "ist eingeschlafen"
+     ],
+     "steps": [
+      [
+       "ist eingeschlafen",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Sein steht bei Bewegung und Zustandswechsel."
+     ]
+    },
+    {
+     "id": "zz58",
+     "q": "Welche Perfektform ist richtig: «er ___» (essen)?",
+     "a": "hat gegessen",
+     "lvl": 3,
+     "th": "te",
+     "opts": [
+      "ist gegessen",
+      "hat gegessen"
+     ],
+     "steps": [
+      [
+       "hat gegessen",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Sein steht bei Bewegung und Zustandswechsel."
+     ]
+    },
+    {
+     "id": "zz59",
+     "q": "Welche Perfektform ist richtig: «er ___» (fahren)?",
+     "a": "ist gefahren",
+     "lvl": 3,
+     "th": "te",
+     "opts": [
+      "hat gefahren",
+      "ist gefahren"
+     ],
+     "steps": [
+      [
+       "ist gefahren",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Sein steht bei Bewegung und Zustandswechsel."
+     ]
+    },
+    {
+     "id": "zz60",
+     "q": "Welche Perfektform ist richtig: «er ___» (schreiben)?",
+     "a": "hat geschrieben",
+     "lvl": 3,
+     "th": "te",
+     "opts": [
+      "hat geschrieben",
+      "ist geschrieben"
+     ],
+     "steps": [
+      [
+       "hat geschrieben",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Sein steht bei Bewegung und Zustandswechsel."
+     ]
+    },
+    {
+     "id": "zz61",
+     "q": "Die Lehrerin gibt dem Schüler eine Aufgabe.\nWelches Satzglied ist «Die Lehrerin»?",
+     "a": "Subjekt",
+     "lvl": 3,
+     "th": "sg",
+     "opts": [
+      "Akkusativobjekt",
+      "Subjekt",
+      "Dativobjekt",
+      "Prädikat"
+     ],
+     "steps": [
+      [
+       "Subjekt",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Stelle die Fragen: Wer? Was geschieht? Wem? Wen oder was?"
+     ]
+    },
+    {
+     "id": "zz62",
+     "q": "Die Lehrerin gibt dem Schüler eine Aufgabe.\nWelches Satzglied ist «dem Schüler»?",
+     "a": "Dativobjekt",
+     "lvl": 3,
+     "th": "sg",
+     "opts": [
+      "Subjekt",
+      "Prädikat",
+      "Dativobjekt",
+      "Akkusativobjekt"
+     ],
+     "steps": [
+      [
+       "Dativobjekt",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Stelle die Fragen: Wer? Was geschieht? Wem? Wen oder was?"
+     ]
+    },
+    {
+     "id": "zz63",
+     "q": "Die Lehrerin gibt dem Schüler eine Aufgabe.\nWelches Satzglied ist «eine Aufgabe»?",
+     "a": "Akkusativobjekt",
+     "lvl": 3,
+     "th": "sg",
+     "opts": [
+      "Prädikat",
+      "Subjekt",
+      "Akkusativobjekt",
+      "Dativobjekt"
+     ],
+     "steps": [
+      [
+       "Akkusativobjekt",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Stelle die Fragen: Wer? Was geschieht? Wem? Wen oder was?"
+     ]
+    },
+    {
+     "id": "zz64",
+     "q": "Die Lehrerin gibt dem Schüler eine Aufgabe.\nWelches Satzglied ist «gibt»?",
+     "a": "Prädikat",
+     "lvl": 3,
+     "th": "sg",
+     "opts": [
+      "Dativobjekt",
+      "Subjekt",
+      "Akkusativobjekt",
+      "Prädikat"
+     ],
+     "steps": [
+      [
+       "Prädikat",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Stelle die Fragen: Wer? Was geschieht? Wem? Wen oder was?"
+     ]
+    },
+    {
+     "id": "zz65",
+     "q": "Gestern hat der Trainer den Spielern die Taktik erklärt.\nWelches Satzglied ist «hat erklärt»?",
+     "a": "Prädikat",
+     "lvl": 3,
+     "th": "sg",
+     "opts": [
+      "Akkusativobjekt",
+      "Dativobjekt",
+      "Subjekt",
+      "Prädikat"
+     ],
+     "steps": [
+      [
+       "Prädikat",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Stelle die Fragen: Wer? Was geschieht? Wem? Wen oder was?"
+     ]
+    },
+    {
+     "id": "zz66",
+     "q": "Gestern hat der Trainer den Spielern die Taktik erklärt.\nWelches Satzglied ist «den Spielern»?",
+     "a": "Dativobjekt",
+     "lvl": 3,
+     "th": "sg",
+     "opts": [
+      "Akkusativobjekt",
+      "Dativobjekt",
+      "Subjekt",
+      "Prädikat"
+     ],
+     "steps": [
+      [
+       "Dativobjekt",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Stelle die Fragen: Wer? Was geschieht? Wem? Wen oder was?"
+     ]
+    },
+    {
+     "id": "zz67",
+     "q": "Gestern hat der Trainer den Spielern die Taktik erklärt.\nWelches Satzglied ist «die Taktik»?",
+     "a": "Akkusativobjekt",
+     "lvl": 3,
+     "th": "sg",
+     "opts": [
+      "Akkusativobjekt",
+      "Dativobjekt",
+      "Prädikat",
+      "Subjekt"
+     ],
+     "steps": [
+      [
+       "Akkusativobjekt",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Stelle die Fragen: Wer? Was geschieht? Wem? Wen oder was?"
+     ]
+    },
+    {
+     "id": "zz68",
+     "q": "Gestern hat der Trainer den Spielern die Taktik erklärt.\nWelches Satzglied ist «der Trainer»?",
+     "a": "Subjekt",
+     "lvl": 3,
+     "th": "sg",
+     "opts": [
+      "Akkusativobjekt",
+      "Dativobjekt",
+      "Subjekt",
+      "Prädikat"
+     ],
+     "steps": [
+      [
+       "Subjekt",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Stelle die Fragen: Wer? Was geschieht? Wem? Wen oder was?"
+     ]
+    },
+    {
+     "id": "zz69",
+     "q": "Wir besuchen unsere Grossmutter.\nWelches Satzglied ist «unsere Grossmutter»?",
+     "a": "Akkusativobjekt",
+     "lvl": 3,
+     "th": "sg",
+     "opts": [
+      "Dativobjekt",
+      "Subjekt",
+      "Prädikat",
+      "Akkusativobjekt"
+     ],
+     "steps": [
+      [
+       "Akkusativobjekt",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Stelle die Fragen: Wer? Was geschieht? Wem? Wen oder was?"
+     ]
+    },
+    {
+     "id": "zz70",
+     "q": "Das Kind hilft der Mutter.\nWelches Satzglied ist «der Mutter»?",
+     "a": "Dativobjekt",
+     "lvl": 3,
+     "th": "sg",
+     "opts": [
+      "Prädikat",
+      "Dativobjekt",
+      "Akkusativobjekt",
+      "Subjekt"
+     ],
+     "steps": [
+      [
+       "Dativobjekt",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Stelle die Fragen: Wer? Was geschieht? Wem? Wen oder was?"
+     ]
+    },
+    {
+     "id": "zz71",
+     "q": "Der Lehrer schreibt eine Zahl an die Tafel.\nWelches Satzglied ist «eine Zahl»?",
+     "a": "Akkusativobjekt",
+     "lvl": 3,
+     "th": "sg",
+     "opts": [
+      "Akkusativobjekt",
+      "Prädikat",
+      "Dativobjekt",
+      "Subjekt"
+     ],
+     "steps": [
+      [
+       "Akkusativobjekt",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Stelle die Fragen: Wer? Was geschieht? Wem? Wen oder was?"
+     ]
+    },
+    {
+     "id": "zz72",
+     "q": "Wir warten, bis der Bus kommt.\nIst «bis» eine Präposition oder eine Konjunktion?",
+     "a": "Konjunktion",
+     "lvl": 3,
+     "th": "wa",
+     "opts": [
+      "Adverb",
+      "Konjunktion",
+      "Präposition",
+      "Verb"
+     ],
+     "steps": [
+      [
+       "Konjunktion",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Was folgt: ein Nomen oder ein ganzer Satz?"
+     ]
+    },
+    {
+     "id": "zz73",
+     "q": "Wir warten bis zehn Uhr.\nIst «bis» eine Präposition oder eine Konjunktion?",
+     "a": "Präposition",
+     "lvl": 3,
+     "th": "wa",
+     "opts": [
+      "Adverb",
+      "Präposition",
+      "Konjunktion",
+      "Verb"
+     ],
+     "steps": [
+      [
+       "Präposition",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Was folgt: ein Nomen oder ein ganzer Satz?"
+     ]
+    },
+    {
+     "id": "zz74",
+     "q": "Seit dem Sommer lernt sie Gitarre.\nIst «Seit» eine Präposition oder eine Konjunktion?",
+     "a": "Präposition",
+     "lvl": 3,
+     "th": "wa",
+     "opts": [
+      "Verb",
+      "Adverb",
+      "Konjunktion",
+      "Präposition"
+     ],
+     "steps": [
+      [
+       "Präposition",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Was folgt: ein Nomen oder ein ganzer Satz?"
+     ]
+    },
+    {
+     "id": "zz75",
+     "q": "Seit sie Gitarre lernt, übt sie jeden Tag.\nIst «Seit» eine Präposition oder eine Konjunktion?",
+     "a": "Konjunktion",
+     "lvl": 3,
+     "th": "wa",
+     "opts": [
+      "Konjunktion",
+      "Präposition",
+      "Verb",
+      "Adverb"
+     ],
+     "steps": [
+      [
+       "Konjunktion",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Was folgt: ein Nomen oder ein ganzer Satz?"
+     ]
+    },
+    {
+     "id": "zz76",
+     "q": "Ohne einen Plan fahren wir los.\nIst «Ohne» eine Präposition oder eine Konjunktion?",
+     "a": "Präposition",
+     "lvl": 3,
+     "th": "wa",
+     "opts": [
+      "Präposition",
+      "Verb",
+      "Konjunktion",
+      "Adverb"
+     ],
+     "steps": [
+      [
+       "Präposition",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Was folgt: ein Nomen oder ein ganzer Satz?"
+     ]
+    },
+    {
+     "id": "zz77",
+     "q": "Er ging, ohne dass jemand es merkte.\nIst «ohne dass» eine Präposition oder eine Konjunktion?",
+     "a": "Konjunktion",
+     "lvl": 3,
+     "th": "wa",
+     "opts": [
+      "Konjunktion",
+      "Adverb",
+      "Verb",
+      "Präposition"
+     ],
+     "steps": [
+      [
+       "Konjunktion",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Was folgt: ein Nomen oder ein ganzer Satz?"
+     ]
     }
    ],
    "exam": {
@@ -9297,6 +14001,1835 @@
        "17",
        "8² + 15² = 64 + 225 = 289"
       ]
+     ]
+    },
+    {
+     "id": "zp1",
+     "q": "Rechtwinkliges Dreieck: a = 3 cm, b = 4 cm. Berechne c.",
+     "a": "5",
+     "lvl": 2,
+     "th": "hyp",
+     "ans": [
+      "5",
+      "5 cm"
+     ],
+     "steps": [
+      [
+       "3² + 4² = 9 + 16 = 25",
+       "Quadrate addieren"
+      ],
+      [
+       "c = √25 = 5 cm",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "c = √(a² + b²)"
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 3,
+       "nb": 4,
+       "la": "a = 3 cm",
+       "lb": "b = 4 cm",
+       "lc": "c = ?"
+      }
+     ]
+    },
+    {
+     "id": "zp2",
+     "q": "Rechtwinkliges Dreieck: c = 5 cm, a = 3 cm. Berechne b.",
+     "a": "4",
+     "lvl": 3,
+     "th": "kat",
+     "ans": [
+      "4",
+      "4 cm"
+     ],
+     "steps": [
+      [
+       "5² − 3² = 25 − 9 = 16",
+       "Quadrate subtrahieren"
+      ],
+      [
+       "b = √16 = 4 cm",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "Die Hypotenuse ist gegeben, also minus.",
+      "b = √(c² − a²)"
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 3,
+       "nb": 4,
+       "la": "a = 3 cm",
+       "lb": "b = ?",
+       "lc": "c = 5 cm"
+      }
+     ]
+    },
+    {
+     "id": "zp3",
+     "q": "Rechtwinkliges Dreieck: a = 5 cm, b = 12 cm. Berechne c.",
+     "a": "13",
+     "lvl": 2,
+     "th": "hyp",
+     "ans": [
+      "13",
+      "13 cm"
+     ],
+     "steps": [
+      [
+       "5² + 12² = 25 + 144 = 169",
+       "Quadrate addieren"
+      ],
+      [
+       "c = √169 = 13 cm",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "c = √(a² + b²)"
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 5,
+       "nb": 12,
+       "la": "a = 5 cm",
+       "lb": "b = 12 cm",
+       "lc": "c = ?"
+      }
+     ]
+    },
+    {
+     "id": "zp4",
+     "q": "Rechtwinkliges Dreieck: c = 13 cm, a = 5 cm. Berechne b.",
+     "a": "12",
+     "lvl": 3,
+     "th": "kat",
+     "ans": [
+      "12",
+      "12 cm"
+     ],
+     "steps": [
+      [
+       "13² − 5² = 169 − 25 = 144",
+       "Quadrate subtrahieren"
+      ],
+      [
+       "b = √144 = 12 cm",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "Die Hypotenuse ist gegeben, also minus.",
+      "b = √(c² − a²)"
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 5,
+       "nb": 12,
+       "la": "a = 5 cm",
+       "lb": "b = ?",
+       "lc": "c = 13 cm"
+      }
+     ]
+    },
+    {
+     "id": "zp5",
+     "q": "Rechtwinkliges Dreieck: a = 8 cm, b = 15 cm. Berechne c.",
+     "a": "17",
+     "lvl": 2,
+     "th": "hyp",
+     "ans": [
+      "17",
+      "17 cm"
+     ],
+     "steps": [
+      [
+       "8² + 15² = 64 + 225 = 289",
+       "Quadrate addieren"
+      ],
+      [
+       "c = √289 = 17 cm",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "c = √(a² + b²)"
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 8,
+       "nb": 15,
+       "la": "a = 8 cm",
+       "lb": "b = 15 cm",
+       "lc": "c = ?"
+      }
+     ]
+    },
+    {
+     "id": "zp6",
+     "q": "Rechtwinkliges Dreieck: c = 17 cm, a = 8 cm. Berechne b.",
+     "a": "15",
+     "lvl": 3,
+     "th": "kat",
+     "ans": [
+      "15",
+      "15 cm"
+     ],
+     "steps": [
+      [
+       "17² − 8² = 289 − 64 = 225",
+       "Quadrate subtrahieren"
+      ],
+      [
+       "b = √225 = 15 cm",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "Die Hypotenuse ist gegeben, also minus.",
+      "b = √(c² − a²)"
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 8,
+       "nb": 15,
+       "la": "a = 8 cm",
+       "lb": "b = ?",
+       "lc": "c = 17 cm"
+      }
+     ]
+    },
+    {
+     "id": "zp7",
+     "q": "Rechtwinkliges Dreieck: a = 7 cm, b = 24 cm. Berechne c.",
+     "a": "25",
+     "lvl": 2,
+     "th": "hyp",
+     "ans": [
+      "25",
+      "25 cm"
+     ],
+     "steps": [
+      [
+       "7² + 24² = 49 + 576 = 625",
+       "Quadrate addieren"
+      ],
+      [
+       "c = √625 = 25 cm",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "c = √(a² + b²)"
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 7,
+       "nb": 24,
+       "la": "a = 7 cm",
+       "lb": "b = 24 cm",
+       "lc": "c = ?"
+      }
+     ]
+    },
+    {
+     "id": "zp8",
+     "q": "Rechtwinkliges Dreieck: c = 25 cm, a = 7 cm. Berechne b.",
+     "a": "24",
+     "lvl": 3,
+     "th": "kat",
+     "ans": [
+      "24",
+      "24 cm"
+     ],
+     "steps": [
+      [
+       "25² − 7² = 625 − 49 = 576",
+       "Quadrate subtrahieren"
+      ],
+      [
+       "b = √576 = 24 cm",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "Die Hypotenuse ist gegeben, also minus.",
+      "b = √(c² − a²)"
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 7,
+       "nb": 24,
+       "la": "a = 7 cm",
+       "lb": "b = ?",
+       "lc": "c = 25 cm"
+      }
+     ]
+    },
+    {
+     "id": "zp9",
+     "q": "Rechtwinkliges Dreieck: a = 6 cm, b = 8 cm. Berechne c.",
+     "a": "10",
+     "lvl": 2,
+     "th": "hyp",
+     "ans": [
+      "10",
+      "10 cm"
+     ],
+     "steps": [
+      [
+       "6² + 8² = 36 + 64 = 100",
+       "Quadrate addieren"
+      ],
+      [
+       "c = √100 = 10 cm",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "c = √(a² + b²)"
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 6,
+       "nb": 8,
+       "la": "a = 6 cm",
+       "lb": "b = 8 cm",
+       "lc": "c = ?"
+      }
+     ]
+    },
+    {
+     "id": "zp10",
+     "q": "Rechtwinkliges Dreieck: c = 10 cm, a = 6 cm. Berechne b.",
+     "a": "8",
+     "lvl": 3,
+     "th": "kat",
+     "ans": [
+      "8",
+      "8 cm"
+     ],
+     "steps": [
+      [
+       "10² − 6² = 100 − 36 = 64",
+       "Quadrate subtrahieren"
+      ],
+      [
+       "b = √64 = 8 cm",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "Die Hypotenuse ist gegeben, also minus.",
+      "b = √(c² − a²)"
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 6,
+       "nb": 8,
+       "la": "a = 6 cm",
+       "lb": "b = ?",
+       "lc": "c = 10 cm"
+      }
+     ]
+    },
+    {
+     "id": "zp11",
+     "q": "Rechtwinkliges Dreieck: a = 9 cm, b = 12 cm. Berechne c.",
+     "a": "15",
+     "lvl": 2,
+     "th": "hyp",
+     "ans": [
+      "15",
+      "15 cm"
+     ],
+     "steps": [
+      [
+       "9² + 12² = 81 + 144 = 225",
+       "Quadrate addieren"
+      ],
+      [
+       "c = √225 = 15 cm",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "c = √(a² + b²)"
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 9,
+       "nb": 12,
+       "la": "a = 9 cm",
+       "lb": "b = 12 cm",
+       "lc": "c = ?"
+      }
+     ]
+    },
+    {
+     "id": "zp12",
+     "q": "Rechtwinkliges Dreieck: c = 15 cm, a = 9 cm. Berechne b.",
+     "a": "12",
+     "lvl": 3,
+     "th": "kat",
+     "ans": [
+      "12",
+      "12 cm"
+     ],
+     "steps": [
+      [
+       "15² − 9² = 225 − 81 = 144",
+       "Quadrate subtrahieren"
+      ],
+      [
+       "b = √144 = 12 cm",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "Die Hypotenuse ist gegeben, also minus.",
+      "b = √(c² − a²)"
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 9,
+       "nb": 12,
+       "la": "a = 9 cm",
+       "lb": "b = ?",
+       "lc": "c = 15 cm"
+      }
+     ]
+    },
+    {
+     "id": "zp13",
+     "q": "Rechtwinkliges Dreieck: a = 12 cm, b = 16 cm. Berechne c.",
+     "a": "20",
+     "lvl": 2,
+     "th": "hyp",
+     "ans": [
+      "20",
+      "20 cm"
+     ],
+     "steps": [
+      [
+       "12² + 16² = 144 + 256 = 400",
+       "Quadrate addieren"
+      ],
+      [
+       "c = √400 = 20 cm",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "c = √(a² + b²)"
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 12,
+       "nb": 16,
+       "la": "a = 12 cm",
+       "lb": "b = 16 cm",
+       "lc": "c = ?"
+      }
+     ]
+    },
+    {
+     "id": "zp14",
+     "q": "Rechtwinkliges Dreieck: c = 20 cm, a = 12 cm. Berechne b.",
+     "a": "16",
+     "lvl": 3,
+     "th": "kat",
+     "ans": [
+      "16",
+      "16 cm"
+     ],
+     "steps": [
+      [
+       "20² − 12² = 400 − 144 = 256",
+       "Quadrate subtrahieren"
+      ],
+      [
+       "b = √256 = 16 cm",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "Die Hypotenuse ist gegeben, also minus.",
+      "b = √(c² − a²)"
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 12,
+       "nb": 16,
+       "la": "a = 12 cm",
+       "lb": "b = ?",
+       "lc": "c = 20 cm"
+      }
+     ]
+    },
+    {
+     "id": "zp15",
+     "q": "Rechtwinkliges Dreieck: a = 15 cm, b = 20 cm. Berechne c.",
+     "a": "25",
+     "lvl": 2,
+     "th": "hyp",
+     "ans": [
+      "25",
+      "25 cm"
+     ],
+     "steps": [
+      [
+       "15² + 20² = 225 + 400 = 625",
+       "Quadrate addieren"
+      ],
+      [
+       "c = √625 = 25 cm",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "c = √(a² + b²)"
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 15,
+       "nb": 20,
+       "la": "a = 15 cm",
+       "lb": "b = 20 cm",
+       "lc": "c = ?"
+      }
+     ]
+    },
+    {
+     "id": "zp16",
+     "q": "Rechtwinkliges Dreieck: c = 25 cm, a = 15 cm. Berechne b.",
+     "a": "20",
+     "lvl": 3,
+     "th": "kat",
+     "ans": [
+      "20",
+      "20 cm"
+     ],
+     "steps": [
+      [
+       "25² − 15² = 625 − 225 = 400",
+       "Quadrate subtrahieren"
+      ],
+      [
+       "b = √400 = 20 cm",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "Die Hypotenuse ist gegeben, also minus.",
+      "b = √(c² − a²)"
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 15,
+       "nb": 20,
+       "la": "a = 15 cm",
+       "lb": "b = ?",
+       "lc": "c = 25 cm"
+      }
+     ]
+    },
+    {
+     "id": "zp17",
+     "q": "Rechtwinkliges Dreieck: a = 20 cm, b = 21 cm. Berechne c.",
+     "a": "29",
+     "lvl": 2,
+     "th": "hyp",
+     "ans": [
+      "29",
+      "29 cm"
+     ],
+     "steps": [
+      [
+       "20² + 21² = 400 + 441 = 841",
+       "Quadrate addieren"
+      ],
+      [
+       "c = √841 = 29 cm",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "c = √(a² + b²)"
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 20,
+       "nb": 21,
+       "la": "a = 20 cm",
+       "lb": "b = 21 cm",
+       "lc": "c = ?"
+      }
+     ]
+    },
+    {
+     "id": "zp18",
+     "q": "Rechtwinkliges Dreieck: c = 29 cm, a = 20 cm. Berechne b.",
+     "a": "21",
+     "lvl": 3,
+     "th": "kat",
+     "ans": [
+      "21",
+      "21 cm"
+     ],
+     "steps": [
+      [
+       "29² − 20² = 841 − 400 = 441",
+       "Quadrate subtrahieren"
+      ],
+      [
+       "b = √441 = 21 cm",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "Die Hypotenuse ist gegeben, also minus.",
+      "b = √(c² − a²)"
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 20,
+       "nb": 21,
+       "la": "a = 20 cm",
+       "lb": "b = ?",
+       "lc": "c = 29 cm"
+      }
+     ]
+    },
+    {
+     "id": "zp19",
+     "q": "Rechtwinkliges Dreieck: a = 12 cm, b = 6 cm. Berechne c. Runde auf eine Stelle nach dem Komma.",
+     "a": "13.4",
+     "lvl": 3,
+     "th": "hyp",
+     "ans": [
+      "13.4",
+      "13,4",
+      "13.4 cm"
+     ],
+     "steps": [
+      [
+       "12² + 6² = 144 + 36 = 180",
+       "Quadrate addieren"
+      ],
+      [
+       "c = √180 ≈ 13.4 cm",
+       "Wurzel ziehen, runden"
+      ]
+     ],
+     "hints": [
+      "c = √(a² + b²)",
+      "Wurzel mit dem Taschenrechner."
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 12,
+       "nb": 6,
+       "la": "a = 12 cm",
+       "lb": "b = 6 cm",
+       "lc": "c = ?"
+      }
+     ]
+    },
+    {
+     "id": "zp20",
+     "q": "Rechtwinkliges Dreieck: a = 5 cm, b = 14 cm. Berechne c. Runde auf eine Stelle nach dem Komma.",
+     "a": "14.9",
+     "lvl": 3,
+     "th": "hyp",
+     "ans": [
+      "14.9",
+      "14,9",
+      "14.9 cm"
+     ],
+     "steps": [
+      [
+       "5² + 14² = 25 + 196 = 221",
+       "Quadrate addieren"
+      ],
+      [
+       "c = √221 ≈ 14.9 cm",
+       "Wurzel ziehen, runden"
+      ]
+     ],
+     "hints": [
+      "c = √(a² + b²)",
+      "Wurzel mit dem Taschenrechner."
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 5,
+       "nb": 14,
+       "la": "a = 5 cm",
+       "lb": "b = 14 cm",
+       "lc": "c = ?"
+      }
+     ]
+    },
+    {
+     "id": "zp21",
+     "q": "Rechtwinkliges Dreieck: a = 5 cm, b = 4 cm. Berechne c. Runde auf eine Stelle nach dem Komma.",
+     "a": "6.4",
+     "lvl": 3,
+     "th": "hyp",
+     "ans": [
+      "6.4",
+      "6,4",
+      "6.4 cm"
+     ],
+     "steps": [
+      [
+       "5² + 4² = 25 + 16 = 41",
+       "Quadrate addieren"
+      ],
+      [
+       "c = √41 ≈ 6.4 cm",
+       "Wurzel ziehen, runden"
+      ]
+     ],
+     "hints": [
+      "c = √(a² + b²)",
+      "Wurzel mit dem Taschenrechner."
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 5,
+       "nb": 4,
+       "la": "a = 5 cm",
+       "lb": "b = 4 cm",
+       "lc": "c = ?"
+      }
+     ]
+    },
+    {
+     "id": "zp22",
+     "q": "Rechtwinkliges Dreieck: a = 5 cm, b = 9 cm. Berechne c. Runde auf eine Stelle nach dem Komma.",
+     "a": "10.3",
+     "lvl": 3,
+     "th": "hyp",
+     "ans": [
+      "10.3",
+      "10,3",
+      "10.3 cm"
+     ],
+     "steps": [
+      [
+       "5² + 9² = 25 + 81 = 106",
+       "Quadrate addieren"
+      ],
+      [
+       "c = √106 ≈ 10.3 cm",
+       "Wurzel ziehen, runden"
+      ]
+     ],
+     "hints": [
+      "c = √(a² + b²)",
+      "Wurzel mit dem Taschenrechner."
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 5,
+       "nb": 9,
+       "la": "a = 5 cm",
+       "lb": "b = 9 cm",
+       "lc": "c = ?"
+      }
+     ]
+    },
+    {
+     "id": "zp23",
+     "q": "Rechtwinkliges Dreieck: a = 11 cm, b = 15 cm. Berechne c. Runde auf eine Stelle nach dem Komma.",
+     "a": "18.6",
+     "lvl": 3,
+     "th": "hyp",
+     "ans": [
+      "18.6",
+      "18,6",
+      "18.6 cm"
+     ],
+     "steps": [
+      [
+       "11² + 15² = 121 + 225 = 346",
+       "Quadrate addieren"
+      ],
+      [
+       "c = √346 ≈ 18.6 cm",
+       "Wurzel ziehen, runden"
+      ]
+     ],
+     "hints": [
+      "c = √(a² + b²)",
+      "Wurzel mit dem Taschenrechner."
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 11,
+       "nb": 15,
+       "la": "a = 11 cm",
+       "lb": "b = 15 cm",
+       "lc": "c = ?"
+      }
+     ]
+    },
+    {
+     "id": "zp24",
+     "q": "Rechtwinkliges Dreieck: a = 14 cm, b = 3 cm. Berechne c. Runde auf eine Stelle nach dem Komma.",
+     "a": "14.3",
+     "lvl": 3,
+     "th": "hyp",
+     "ans": [
+      "14.3",
+      "14,3",
+      "14.3 cm"
+     ],
+     "steps": [
+      [
+       "14² + 3² = 196 + 9 = 205",
+       "Quadrate addieren"
+      ],
+      [
+       "c = √205 ≈ 14.3 cm",
+       "Wurzel ziehen, runden"
+      ]
+     ],
+     "hints": [
+      "c = √(a² + b²)",
+      "Wurzel mit dem Taschenrechner."
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 14,
+       "nb": 3,
+       "la": "a = 14 cm",
+       "lb": "b = 3 cm",
+       "lc": "c = ?"
+      }
+     ]
+    },
+    {
+     "id": "zp25",
+     "q": "Rechtwinkliges Dreieck: a = 9 cm, b = 8 cm. Berechne c. Runde auf eine Stelle nach dem Komma.",
+     "a": "12.0",
+     "lvl": 3,
+     "th": "hyp",
+     "ans": [
+      "12.0",
+      "12,0",
+      "12.0 cm"
+     ],
+     "steps": [
+      [
+       "9² + 8² = 81 + 64 = 145",
+       "Quadrate addieren"
+      ],
+      [
+       "c = √145 ≈ 12.0 cm",
+       "Wurzel ziehen, runden"
+      ]
+     ],
+     "hints": [
+      "c = √(a² + b²)",
+      "Wurzel mit dem Taschenrechner."
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 9,
+       "nb": 8,
+       "la": "a = 9 cm",
+       "lb": "b = 8 cm",
+       "lc": "c = ?"
+      }
+     ]
+    },
+    {
+     "id": "zp26",
+     "q": "√16 =",
+     "a": "4",
+     "lvl": 1,
+     "th": "sq",
+     "ans": [
+      "4"
+     ],
+     "steps": [
+      [
+       "4 · 4 = 16",
+       "Quadratzahl"
+      ]
+     ],
+     "hints": [
+      "Welche Zahl mal sich selbst ergibt das?"
+     ]
+    },
+    {
+     "id": "zp27",
+     "q": "4² =",
+     "a": "16",
+     "lvl": 1,
+     "th": "sq",
+     "ans": [
+      "16"
+     ],
+     "steps": [
+      [
+       "4 · 4 = 16",
+       "a² heisst a mal a"
+      ]
+     ],
+     "hints": [
+      "Zahl mal sich selbst."
+     ]
+    },
+    {
+     "id": "zp28",
+     "q": "√36 =",
+     "a": "6",
+     "lvl": 1,
+     "th": "sq",
+     "ans": [
+      "6"
+     ],
+     "steps": [
+      [
+       "6 · 6 = 36",
+       "Quadratzahl"
+      ]
+     ],
+     "hints": [
+      "Welche Zahl mal sich selbst ergibt das?"
+     ]
+    },
+    {
+     "id": "zp29",
+     "q": "6² =",
+     "a": "36",
+     "lvl": 1,
+     "th": "sq",
+     "ans": [
+      "36"
+     ],
+     "steps": [
+      [
+       "6 · 6 = 36",
+       "a² heisst a mal a"
+      ]
+     ],
+     "hints": [
+      "Zahl mal sich selbst."
+     ]
+    },
+    {
+     "id": "zp30",
+     "q": "√49 =",
+     "a": "7",
+     "lvl": 1,
+     "th": "sq",
+     "ans": [
+      "7"
+     ],
+     "steps": [
+      [
+       "7 · 7 = 49",
+       "Quadratzahl"
+      ]
+     ],
+     "hints": [
+      "Welche Zahl mal sich selbst ergibt das?"
+     ]
+    },
+    {
+     "id": "zp31",
+     "q": "7² =",
+     "a": "49",
+     "lvl": 1,
+     "th": "sq",
+     "ans": [
+      "49"
+     ],
+     "steps": [
+      [
+       "7 · 7 = 49",
+       "a² heisst a mal a"
+      ]
+     ],
+     "hints": [
+      "Zahl mal sich selbst."
+     ]
+    },
+    {
+     "id": "zp32",
+     "q": "√81 =",
+     "a": "9",
+     "lvl": 1,
+     "th": "sq",
+     "ans": [
+      "9"
+     ],
+     "steps": [
+      [
+       "9 · 9 = 81",
+       "Quadratzahl"
+      ]
+     ],
+     "hints": [
+      "Welche Zahl mal sich selbst ergibt das?"
+     ]
+    },
+    {
+     "id": "zp33",
+     "q": "9² =",
+     "a": "81",
+     "lvl": 1,
+     "th": "sq",
+     "ans": [
+      "81"
+     ],
+     "steps": [
+      [
+       "9 · 9 = 81",
+       "a² heisst a mal a"
+      ]
+     ],
+     "hints": [
+      "Zahl mal sich selbst."
+     ]
+    },
+    {
+     "id": "zp34",
+     "q": "√121 =",
+     "a": "11",
+     "lvl": 1,
+     "th": "sq",
+     "ans": [
+      "11"
+     ],
+     "steps": [
+      [
+       "11 · 11 = 121",
+       "Quadratzahl"
+      ]
+     ],
+     "hints": [
+      "Welche Zahl mal sich selbst ergibt das?"
+     ]
+    },
+    {
+     "id": "zp35",
+     "q": "11² =",
+     "a": "121",
+     "lvl": 1,
+     "th": "sq",
+     "ans": [
+      "121"
+     ],
+     "steps": [
+      [
+       "11 · 11 = 121",
+       "a² heisst a mal a"
+      ]
+     ],
+     "hints": [
+      "Zahl mal sich selbst."
+     ]
+    },
+    {
+     "id": "zp36",
+     "q": "√144 =",
+     "a": "12",
+     "lvl": 1,
+     "th": "sq",
+     "ans": [
+      "12"
+     ],
+     "steps": [
+      [
+       "12 · 12 = 144",
+       "Quadratzahl"
+      ]
+     ],
+     "hints": [
+      "Welche Zahl mal sich selbst ergibt das?"
+     ]
+    },
+    {
+     "id": "zp37",
+     "q": "12² =",
+     "a": "144",
+     "lvl": 1,
+     "th": "sq",
+     "ans": [
+      "144"
+     ],
+     "steps": [
+      [
+       "12 · 12 = 144",
+       "a² heisst a mal a"
+      ]
+     ],
+     "hints": [
+      "Zahl mal sich selbst."
+     ]
+    },
+    {
+     "id": "zp38",
+     "q": "√169 =",
+     "a": "13",
+     "lvl": 1,
+     "th": "sq",
+     "ans": [
+      "13"
+     ],
+     "steps": [
+      [
+       "13 · 13 = 169",
+       "Quadratzahl"
+      ]
+     ],
+     "hints": [
+      "Welche Zahl mal sich selbst ergibt das?"
+     ]
+    },
+    {
+     "id": "zp39",
+     "q": "13² =",
+     "a": "169",
+     "lvl": 1,
+     "th": "sq",
+     "ans": [
+      "169"
+     ],
+     "steps": [
+      [
+       "13 · 13 = 169",
+       "a² heisst a mal a"
+      ]
+     ],
+     "hints": [
+      "Zahl mal sich selbst."
+     ]
+    },
+    {
+     "id": "zp40",
+     "q": "√225 =",
+     "a": "15",
+     "lvl": 1,
+     "th": "sq",
+     "ans": [
+      "15"
+     ],
+     "steps": [
+      [
+       "15 · 15 = 225",
+       "Quadratzahl"
+      ]
+     ],
+     "hints": [
+      "Welche Zahl mal sich selbst ergibt das?"
+     ]
+    },
+    {
+     "id": "zp41",
+     "q": "15² =",
+     "a": "225",
+     "lvl": 1,
+     "th": "sq",
+     "ans": [
+      "225"
+     ],
+     "steps": [
+      [
+       "15 · 15 = 225",
+       "a² heisst a mal a"
+      ]
+     ],
+     "hints": [
+      "Zahl mal sich selbst."
+     ]
+    },
+    {
+     "id": "zp42",
+     "q": "Ein Rechteck ist 12 cm lang und 5 cm breit. Wie lang ist die Diagonale? (in cm)",
+     "a": "13",
+     "lvl": 3,
+     "th": "rechteck",
+     "ans": [
+      "13",
+      "13 cm"
+     ],
+     "steps": [
+      [
+       "12² + 5² = 144 + 25 = 169",
+       "die Diagonale ist die Hypotenuse"
+      ],
+      [
+       "d = √169 = 13 cm",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "Die Diagonale ist die Hypotenuse."
+     ],
+     "visuals": [
+      {
+       "type": "rect",
+       "w": 12,
+       "h": 5,
+       "lw": "12 cm",
+       "lh": "5 cm",
+       "ld": "d = ?"
+      }
+     ]
+    },
+    {
+     "id": "zp43",
+     "q": "Ein Rechteck ist 9 cm lang und 12 cm breit. Wie lang ist die Diagonale? (in cm)",
+     "a": "15",
+     "lvl": 3,
+     "th": "rechteck",
+     "ans": [
+      "15",
+      "15 cm"
+     ],
+     "steps": [
+      [
+       "9² + 12² = 81 + 144 = 225",
+       "die Diagonale ist die Hypotenuse"
+      ],
+      [
+       "d = √225 = 15 cm",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "Die Diagonale ist die Hypotenuse."
+     ],
+     "visuals": [
+      {
+       "type": "rect",
+       "w": 9,
+       "h": 12,
+       "lw": "9 cm",
+       "lh": "12 cm",
+       "ld": "d = ?"
+      }
+     ]
+    },
+    {
+     "id": "zp44",
+     "q": "Ein Rechteck ist 15 cm lang und 8 cm breit. Wie lang ist die Diagonale? (in cm)",
+     "a": "17",
+     "lvl": 3,
+     "th": "rechteck",
+     "ans": [
+      "17",
+      "17 cm"
+     ],
+     "steps": [
+      [
+       "15² + 8² = 225 + 64 = 289",
+       "die Diagonale ist die Hypotenuse"
+      ],
+      [
+       "d = √289 = 17 cm",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "Die Diagonale ist die Hypotenuse."
+     ],
+     "visuals": [
+      {
+       "type": "rect",
+       "w": 15,
+       "h": 8,
+       "lw": "15 cm",
+       "lh": "8 cm",
+       "ld": "d = ?"
+      }
+     ]
+    },
+    {
+     "id": "zp45",
+     "q": "Ein Rechteck ist 24 cm lang und 7 cm breit. Wie lang ist die Diagonale? (in cm)",
+     "a": "25",
+     "lvl": 3,
+     "th": "rechteck",
+     "ans": [
+      "25",
+      "25 cm"
+     ],
+     "steps": [
+      [
+       "24² + 7² = 576 + 49 = 625",
+       "die Diagonale ist die Hypotenuse"
+      ],
+      [
+       "d = √625 = 25 cm",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "Die Diagonale ist die Hypotenuse."
+     ],
+     "visuals": [
+      {
+       "type": "rect",
+       "w": 24,
+       "h": 7,
+       "lw": "24 cm",
+       "lh": "7 cm",
+       "ld": "d = ?"
+      }
+     ]
+    },
+    {
+     "id": "zp46",
+     "q": "Ein Rechteck ist 16 cm lang und 12 cm breit. Wie lang ist die Diagonale? (in cm)",
+     "a": "20",
+     "lvl": 3,
+     "th": "rechteck",
+     "ans": [
+      "20",
+      "20 cm"
+     ],
+     "steps": [
+      [
+       "16² + 12² = 256 + 144 = 400",
+       "die Diagonale ist die Hypotenuse"
+      ],
+      [
+       "d = √400 = 20 cm",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "Die Diagonale ist die Hypotenuse."
+     ],
+     "visuals": [
+      {
+       "type": "rect",
+       "w": 16,
+       "h": 12,
+       "lw": "16 cm",
+       "lh": "12 cm",
+       "ld": "d = ?"
+      }
+     ]
+    },
+    {
+     "id": "zp47",
+     "q": "Ein Rechteck ist 20 cm lang und 15 cm breit. Wie lang ist die Diagonale? (in cm)",
+     "a": "25",
+     "lvl": 3,
+     "th": "rechteck",
+     "ans": [
+      "25",
+      "25 cm"
+     ],
+     "steps": [
+      [
+       "20² + 15² = 400 + 225 = 625",
+       "die Diagonale ist die Hypotenuse"
+      ],
+      [
+       "d = √625 = 25 cm",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "Die Diagonale ist die Hypotenuse."
+     ],
+     "visuals": [
+      {
+       "type": "rect",
+       "w": 20,
+       "h": 15,
+       "lw": "20 cm",
+       "lh": "15 cm",
+       "ld": "d = ?"
+      }
+     ]
+    },
+    {
+     "id": "zp48",
+     "q": "Eine 5 m lange Leiter steht 3 m von der Wand entfernt. Wie hoch reicht sie? (in m)",
+     "a": "4",
+     "lvl": 3,
+     "th": "anw",
+     "ans": [
+      "4",
+      "4 m"
+     ],
+     "steps": [
+      [
+       "5² − 3² = 25 − 9 = 16",
+       "die Leiter ist die Hypotenuse, also minus"
+      ],
+      [
+       "h = √16 = 4 m",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "Zeichne eine Skizze: Die Leiter ist die Hypotenuse.",
+      "h = √(L² − Abstand²)"
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 3,
+       "nb": 4,
+       "la": "Abstand = 3 m",
+       "lb": "Höhe = ?",
+       "lc": "Leiter = 5 m"
+      }
+     ]
+    },
+    {
+     "id": "zp49",
+     "q": "Eine 10 m lange Leiter steht 6 m von der Wand entfernt. Wie hoch reicht sie? (in m)",
+     "a": "8",
+     "lvl": 3,
+     "th": "anw",
+     "ans": [
+      "8",
+      "8 m"
+     ],
+     "steps": [
+      [
+       "10² − 6² = 100 − 36 = 64",
+       "die Leiter ist die Hypotenuse, also minus"
+      ],
+      [
+       "h = √64 = 8 m",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "Zeichne eine Skizze: Die Leiter ist die Hypotenuse.",
+      "h = √(L² − Abstand²)"
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 6,
+       "nb": 8,
+       "la": "Abstand = 6 m",
+       "lb": "Höhe = ?",
+       "lc": "Leiter = 10 m"
+      }
+     ]
+    },
+    {
+     "id": "zp50",
+     "q": "Eine 13 m lange Leiter steht 5 m von der Wand entfernt. Wie hoch reicht sie? (in m)",
+     "a": "12",
+     "lvl": 3,
+     "th": "anw",
+     "ans": [
+      "12",
+      "12 m"
+     ],
+     "steps": [
+      [
+       "13² − 5² = 169 − 25 = 144",
+       "die Leiter ist die Hypotenuse, also minus"
+      ],
+      [
+       "h = √144 = 12 m",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "Zeichne eine Skizze: Die Leiter ist die Hypotenuse.",
+      "h = √(L² − Abstand²)"
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 5,
+       "nb": 12,
+       "la": "Abstand = 5 m",
+       "lb": "Höhe = ?",
+       "lc": "Leiter = 13 m"
+      }
+     ]
+    },
+    {
+     "id": "zp51",
+     "q": "Eine 15 m lange Leiter steht 9 m von der Wand entfernt. Wie hoch reicht sie? (in m)",
+     "a": "12",
+     "lvl": 3,
+     "th": "anw",
+     "ans": [
+      "12",
+      "12 m"
+     ],
+     "steps": [
+      [
+       "15² − 9² = 225 − 81 = 144",
+       "die Leiter ist die Hypotenuse, also minus"
+      ],
+      [
+       "h = √144 = 12 m",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "Zeichne eine Skizze: Die Leiter ist die Hypotenuse.",
+      "h = √(L² − Abstand²)"
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 9,
+       "nb": 12,
+       "la": "Abstand = 9 m",
+       "lb": "Höhe = ?",
+       "lc": "Leiter = 15 m"
+      }
+     ]
+    },
+    {
+     "id": "zp52",
+     "q": "Eine 17 m lange Leiter steht 8 m von der Wand entfernt. Wie hoch reicht sie? (in m)",
+     "a": "15",
+     "lvl": 3,
+     "th": "anw",
+     "ans": [
+      "15",
+      "15 m"
+     ],
+     "steps": [
+      [
+       "17² − 8² = 289 − 64 = 225",
+       "die Leiter ist die Hypotenuse, also minus"
+      ],
+      [
+       "h = √225 = 15 m",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "Zeichne eine Skizze: Die Leiter ist die Hypotenuse.",
+      "h = √(L² − Abstand²)"
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 8,
+       "nb": 15,
+       "la": "Abstand = 8 m",
+       "lb": "Höhe = ?",
+       "lc": "Leiter = 17 m"
+      }
+     ]
+    },
+    {
+     "id": "zp53",
+     "q": "Eine 25 m lange Leiter steht 7 m von der Wand entfernt. Wie hoch reicht sie? (in m)",
+     "a": "24",
+     "lvl": 3,
+     "th": "anw",
+     "ans": [
+      "24",
+      "24 m"
+     ],
+     "steps": [
+      [
+       "25² − 7² = 625 − 49 = 576",
+       "die Leiter ist die Hypotenuse, also minus"
+      ],
+      [
+       "h = √576 = 24 m",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "Zeichne eine Skizze: Die Leiter ist die Hypotenuse.",
+      "h = √(L² − Abstand²)"
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 7,
+       "nb": 24,
+       "la": "Abstand = 7 m",
+       "lb": "Höhe = ?",
+       "lc": "Leiter = 25 m"
+      }
+     ]
+    },
+    {
+     "id": "zp54",
+     "q": "Ein Dreieck hat die Seiten 6 cm, 8 cm und 10 cm. Ist es rechtwinklig?",
+     "a": "Ja",
+     "lvl": 3,
+     "th": "satz",
+     "opts": [
+      "Ja",
+      "Nein"
+     ],
+     "steps": [
+      [
+       "6² + 8² = 100",
+       "10² = 100"
+      ],
+      [
+       "Ja",
+       "stimmt"
+      ]
+     ],
+     "hints": [
+      "Prüfe, ob a² + b² = c² gilt (c ist die längste Seite)."
+     ]
+    },
+    {
+     "id": "zp55",
+     "q": "Ein Dreieck hat die Seiten 5 cm, 12 cm und 13 cm. Ist es rechtwinklig?",
+     "a": "Ja",
+     "lvl": 3,
+     "th": "satz",
+     "opts": [
+      "Ja",
+      "Nein"
+     ],
+     "steps": [
+      [
+       "5² + 12² = 169",
+       "13² = 169"
+      ],
+      [
+       "Ja",
+       "stimmt"
+      ]
+     ],
+     "hints": [
+      "Prüfe, ob a² + b² = c² gilt (c ist die längste Seite)."
+     ]
+    },
+    {
+     "id": "zp56",
+     "q": "Ein Dreieck hat die Seiten 4 cm, 5 cm und 6 cm. Ist es rechtwinklig?",
+     "a": "Nein",
+     "lvl": 3,
+     "th": "satz",
+     "opts": [
+      "Ja",
+      "Nein"
+     ],
+     "steps": [
+      [
+       "4² + 5² = 41",
+       "6² = 36"
+      ],
+      [
+       "Nein",
+       "stimmt nicht überein"
+      ]
+     ],
+     "hints": [
+      "Prüfe, ob a² + b² = c² gilt (c ist die längste Seite)."
+     ]
+    },
+    {
+     "id": "zp57",
+     "q": "Ein Dreieck hat die Seiten 7 cm, 24 cm und 25 cm. Ist es rechtwinklig?",
+     "a": "Ja",
+     "lvl": 3,
+     "th": "satz",
+     "opts": [
+      "Ja",
+      "Nein"
+     ],
+     "steps": [
+      [
+       "7² + 24² = 625",
+       "25² = 625"
+      ],
+      [
+       "Ja",
+       "stimmt"
+      ]
+     ],
+     "hints": [
+      "Prüfe, ob a² + b² = c² gilt (c ist die längste Seite)."
+     ]
+    },
+    {
+     "id": "zp58",
+     "q": "Ein Dreieck hat die Seiten 8 cm, 9 cm und 12 cm. Ist es rechtwinklig?",
+     "a": "Nein",
+     "lvl": 3,
+     "th": "satz",
+     "opts": [
+      "Ja",
+      "Nein"
+     ],
+     "steps": [
+      [
+       "8² + 9² = 145",
+       "12² = 144"
+      ],
+      [
+       "Nein",
+       "stimmt nicht überein"
+      ]
+     ],
+     "hints": [
+      "Prüfe, ob a² + b² = c² gilt (c ist die längste Seite)."
+     ]
+    },
+    {
+     "id": "zp59",
+     "q": "Ein Dreieck hat die Seiten 9 cm, 12 cm und 15 cm. Ist es rechtwinklig?",
+     "a": "Ja",
+     "lvl": 3,
+     "th": "satz",
+     "opts": [
+      "Ja",
+      "Nein"
+     ],
+     "steps": [
+      [
+       "9² + 12² = 225",
+       "15² = 225"
+      ],
+      [
+       "Ja",
+       "stimmt"
+      ]
+     ],
+     "hints": [
+      "Prüfe, ob a² + b² = c² gilt (c ist die längste Seite)."
+     ]
+    },
+    {
+     "id": "zp60",
+     "q": "Ein Dreieck hat die Seiten 5 cm, 6 cm und 8 cm. Ist es rechtwinklig?",
+     "a": "Nein",
+     "lvl": 3,
+     "th": "satz",
+     "opts": [
+      "Ja",
+      "Nein"
+     ],
+     "steps": [
+      [
+       "5² + 6² = 61",
+       "8² = 64"
+      ],
+      [
+       "Nein",
+       "stimmt nicht überein"
+      ]
+     ],
+     "hints": [
+      "Prüfe, ob a² + b² = c² gilt (c ist die längste Seite)."
+     ]
+    },
+    {
+     "id": "zp61",
+     "q": "Welche Seite ist die Hypotenuse?",
+     "a": "Die längste Seite gegenüber dem rechten Winkel",
+     "lvl": 1,
+     "th": "seiten",
+     "opts": [
+      "Die längste Seite gegenüber dem rechten Winkel",
+      "Die kürzeste Seite",
+      "Eine Seite am rechten Winkel",
+      "Die Höhe"
+     ],
+     "steps": [
+      [
+       "Die längste Seite gegenüber dem rechten Winkel",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Sie liegt dem rechten Winkel gegenüber."
+     ]
+    },
+    {
+     "id": "zp62",
+     "q": "Wann rechnest du bei Pythagoras minus?",
+     "a": "Wenn eine Kathete gesucht ist",
+     "lvl": 2,
+     "th": "kat",
+     "opts": [
+      "Wenn eine Kathete gesucht ist",
+      "Wenn die Hypotenuse gesucht ist",
+      "Immer",
+      "Nie"
+     ],
+     "steps": [
+      [
+       "Wenn eine Kathete gesucht ist",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Aus a² + b² = c² folgt b² = c² − a²."
+     ]
+    },
+    {
+     "id": "zp63",
+     "q": "Wie lang ist die Diagonale eines Quadrats mit Seite 10 cm? Runde auf eine Stelle nach dem Komma.",
+     "a": "14.1",
+     "lvl": 3,
+     "th": "rechteck",
+     "ans": [
+      "14.1",
+      "14,1",
+      "14.1 cm",
+      "14,1 cm"
+     ],
+     "steps": [
+      [
+       "10² + 10² = 200",
+       "beide Seiten sind gleich lang"
+      ],
+      [
+       "d = √200 ≈ 14,1 cm",
+       "Wurzel ziehen"
+      ]
+     ],
+     "hints": [
+      "Beide Katheten sind 10 cm."
      ]
     }
    ],
@@ -20582,6 +27115,1473 @@
        "Die dritte Säule."
       ]
      ]
+    },
+    {
+     "id": "zk1",
+     "q": "2 km = ___ m",
+     "a": "2000 m",
+     "lvl": 1,
+     "th": "mal",
+     "opts": [
+      "2000 m",
+      "20 m",
+      "20000 m",
+      "200 m"
+     ],
+     "steps": [
+      [
+       "2 · 1000 = 2000",
+       "km in m: mal 1000"
+      ]
+     ],
+     "hints": [
+      "1 km sind 1000 m."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "km",
+       "to": "m",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "Von km nach m: mal 1000"
+      }
+     ]
+    },
+    {
+     "id": "zk2",
+     "q": "2000 m = ___ km",
+     "a": "2 km",
+     "lvl": 1,
+     "th": "durch",
+     "opts": [
+      "200 km",
+      "2 km",
+      "20 km",
+      "0,2 km"
+     ],
+     "steps": [
+      [
+       "2000 : 1000 = 2",
+       "m in km: geteilt durch 1000"
+      ]
+     ],
+     "hints": [
+      "Drei Nullen streichen."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "m",
+       "to": "km",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "Von m nach km: geteilt durch 1000"
+      }
+     ]
+    },
+    {
+     "id": "zk3",
+     "q": "3 km = ___ m",
+     "a": "3000 m",
+     "lvl": 1,
+     "th": "mal",
+     "opts": [
+      "30 m",
+      "3000 m",
+      "30000 m",
+      "300 m"
+     ],
+     "steps": [
+      [
+       "3 · 1000 = 3000",
+       "km in m: mal 1000"
+      ]
+     ],
+     "hints": [
+      "1 km sind 1000 m."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "km",
+       "to": "m",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "Von km nach m: mal 1000"
+      }
+     ]
+    },
+    {
+     "id": "zk4",
+     "q": "3000 m = ___ km",
+     "a": "3 km",
+     "lvl": 1,
+     "th": "durch",
+     "opts": [
+      "300 km",
+      "0,3 km",
+      "30 km",
+      "3 km"
+     ],
+     "steps": [
+      [
+       "3000 : 1000 = 3",
+       "m in km: geteilt durch 1000"
+      ]
+     ],
+     "hints": [
+      "Drei Nullen streichen."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "m",
+       "to": "km",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "Von m nach km: geteilt durch 1000"
+      }
+     ]
+    },
+    {
+     "id": "zk5",
+     "q": "4 km = ___ m",
+     "a": "4000 m",
+     "lvl": 1,
+     "th": "mal",
+     "opts": [
+      "4000 m",
+      "40 m",
+      "40000 m",
+      "400 m"
+     ],
+     "steps": [
+      [
+       "4 · 1000 = 4000",
+       "km in m: mal 1000"
+      ]
+     ],
+     "hints": [
+      "1 km sind 1000 m."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "km",
+       "to": "m",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "Von km nach m: mal 1000"
+      }
+     ]
+    },
+    {
+     "id": "zk6",
+     "q": "4000 m = ___ km",
+     "a": "4 km",
+     "lvl": 1,
+     "th": "durch",
+     "opts": [
+      "40 km",
+      "0,4 km",
+      "400 km",
+      "4 km"
+     ],
+     "steps": [
+      [
+       "4000 : 1000 = 4",
+       "m in km: geteilt durch 1000"
+      ]
+     ],
+     "hints": [
+      "Drei Nullen streichen."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "m",
+       "to": "km",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "Von m nach km: geteilt durch 1000"
+      }
+     ]
+    },
+    {
+     "id": "zk7",
+     "q": "5 km = ___ m",
+     "a": "5000 m",
+     "lvl": 1,
+     "th": "mal",
+     "opts": [
+      "50000 m",
+      "50 m",
+      "500 m",
+      "5000 m"
+     ],
+     "steps": [
+      [
+       "5 · 1000 = 5000",
+       "km in m: mal 1000"
+      ]
+     ],
+     "hints": [
+      "1 km sind 1000 m."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "km",
+       "to": "m",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "Von km nach m: mal 1000"
+      }
+     ]
+    },
+    {
+     "id": "zk8",
+     "q": "5000 m = ___ km",
+     "a": "5 km",
+     "lvl": 1,
+     "th": "durch",
+     "opts": [
+      "5 km",
+      "50 km",
+      "500 km",
+      "0,5 km"
+     ],
+     "steps": [
+      [
+       "5000 : 1000 = 5",
+       "m in km: geteilt durch 1000"
+      ]
+     ],
+     "hints": [
+      "Drei Nullen streichen."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "m",
+       "to": "km",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "Von m nach km: geteilt durch 1000"
+      }
+     ]
+    },
+    {
+     "id": "zk9",
+     "q": "6 km = ___ m",
+     "a": "6000 m",
+     "lvl": 1,
+     "th": "mal",
+     "opts": [
+      "6000 m",
+      "600 m",
+      "60000 m",
+      "60 m"
+     ],
+     "steps": [
+      [
+       "6 · 1000 = 6000",
+       "km in m: mal 1000"
+      ]
+     ],
+     "hints": [
+      "1 km sind 1000 m."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "km",
+       "to": "m",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "Von km nach m: mal 1000"
+      }
+     ]
+    },
+    {
+     "id": "zk10",
+     "q": "6000 m = ___ km",
+     "a": "6 km",
+     "lvl": 1,
+     "th": "durch",
+     "opts": [
+      "600 km",
+      "60 km",
+      "6 km",
+      "0,6 km"
+     ],
+     "steps": [
+      [
+       "6000 : 1000 = 6",
+       "m in km: geteilt durch 1000"
+      ]
+     ],
+     "hints": [
+      "Drei Nullen streichen."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "m",
+       "to": "km",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "Von m nach km: geteilt durch 1000"
+      }
+     ]
+    },
+    {
+     "id": "zk11",
+     "q": "7 km = ___ m",
+     "a": "7000 m",
+     "lvl": 1,
+     "th": "mal",
+     "opts": [
+      "70000 m",
+      "7000 m",
+      "700 m",
+      "70 m"
+     ],
+     "steps": [
+      [
+       "7 · 1000 = 7000",
+       "km in m: mal 1000"
+      ]
+     ],
+     "hints": [
+      "1 km sind 1000 m."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "km",
+       "to": "m",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "Von km nach m: mal 1000"
+      }
+     ]
+    },
+    {
+     "id": "zk12",
+     "q": "7000 m = ___ km",
+     "a": "7 km",
+     "lvl": 1,
+     "th": "durch",
+     "opts": [
+      "7 km",
+      "70 km",
+      "0,7 km",
+      "700 km"
+     ],
+     "steps": [
+      [
+       "7000 : 1000 = 7",
+       "m in km: geteilt durch 1000"
+      ]
+     ],
+     "hints": [
+      "Drei Nullen streichen."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "m",
+       "to": "km",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "Von m nach km: geteilt durch 1000"
+      }
+     ]
+    },
+    {
+     "id": "zk13",
+     "q": "8 km = ___ m",
+     "a": "8000 m",
+     "lvl": 1,
+     "th": "mal",
+     "opts": [
+      "8000 m",
+      "80000 m",
+      "80 m",
+      "800 m"
+     ],
+     "steps": [
+      [
+       "8 · 1000 = 8000",
+       "km in m: mal 1000"
+      ]
+     ],
+     "hints": [
+      "1 km sind 1000 m."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "km",
+       "to": "m",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "Von km nach m: mal 1000"
+      }
+     ]
+    },
+    {
+     "id": "zk14",
+     "q": "8000 m = ___ km",
+     "a": "8 km",
+     "lvl": 1,
+     "th": "durch",
+     "opts": [
+      "0,8 km",
+      "80 km",
+      "800 km",
+      "8 km"
+     ],
+     "steps": [
+      [
+       "8000 : 1000 = 8",
+       "m in km: geteilt durch 1000"
+      ]
+     ],
+     "hints": [
+      "Drei Nullen streichen."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "m",
+       "to": "km",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "Von m nach km: geteilt durch 1000"
+      }
+     ]
+    },
+    {
+     "id": "zk15",
+     "q": "9 km = ___ m",
+     "a": "9000 m",
+     "lvl": 1,
+     "th": "mal",
+     "opts": [
+      "9000 m",
+      "90000 m",
+      "90 m",
+      "900 m"
+     ],
+     "steps": [
+      [
+       "9 · 1000 = 9000",
+       "km in m: mal 1000"
+      ]
+     ],
+     "hints": [
+      "1 km sind 1000 m."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "km",
+       "to": "m",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "Von km nach m: mal 1000"
+      }
+     ]
+    },
+    {
+     "id": "zk16",
+     "q": "9000 m = ___ km",
+     "a": "9 km",
+     "lvl": 1,
+     "th": "durch",
+     "opts": [
+      "90 km",
+      "9 km",
+      "0,9 km",
+      "900 km"
+     ],
+     "steps": [
+      [
+       "9000 : 1000 = 9",
+       "m in km: geteilt durch 1000"
+      ]
+     ],
+     "hints": [
+      "Drei Nullen streichen."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "m",
+       "to": "km",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "Von m nach km: geteilt durch 1000"
+      }
+     ]
+    },
+    {
+     "id": "zk17",
+     "q": "12 km = ___ m",
+     "a": "12000 m",
+     "lvl": 1,
+     "th": "mal",
+     "opts": [
+      "120 m",
+      "120000 m",
+      "12000 m",
+      "1200 m"
+     ],
+     "steps": [
+      [
+       "12 · 1000 = 12000",
+       "km in m: mal 1000"
+      ]
+     ],
+     "hints": [
+      "1 km sind 1000 m."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "km",
+       "to": "m",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "Von km nach m: mal 1000"
+      }
+     ]
+    },
+    {
+     "id": "zk18",
+     "q": "12000 m = ___ km",
+     "a": "12 km",
+     "lvl": 1,
+     "th": "durch",
+     "opts": [
+      "120 km",
+      "12 km",
+      "1200 km",
+      "1,2 km"
+     ],
+     "steps": [
+      [
+       "12000 : 1000 = 12",
+       "m in km: geteilt durch 1000"
+      ]
+     ],
+     "hints": [
+      "Drei Nullen streichen."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "m",
+       "to": "km",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "Von m nach km: geteilt durch 1000"
+      }
+     ]
+    },
+    {
+     "id": "zk19",
+     "q": "15 km = ___ m",
+     "a": "15000 m",
+     "lvl": 1,
+     "th": "mal",
+     "opts": [
+      "150000 m",
+      "150 m",
+      "15000 m",
+      "1500 m"
+     ],
+     "steps": [
+      [
+       "15 · 1000 = 15000",
+       "km in m: mal 1000"
+      ]
+     ],
+     "hints": [
+      "1 km sind 1000 m."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "km",
+       "to": "m",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "Von km nach m: mal 1000"
+      }
+     ]
+    },
+    {
+     "id": "zk20",
+     "q": "15000 m = ___ km",
+     "a": "15 km",
+     "lvl": 1,
+     "th": "durch",
+     "opts": [
+      "15 km",
+      "1500 km",
+      "150 km",
+      "1,5 km"
+     ],
+     "steps": [
+      [
+       "15000 : 1000 = 15",
+       "m in km: geteilt durch 1000"
+      ]
+     ],
+     "hints": [
+      "Drei Nullen streichen."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "m",
+       "to": "km",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "Von m nach km: geteilt durch 1000"
+      }
+     ]
+    },
+    {
+     "id": "zk21",
+     "q": "1 km 200 m = ___ m",
+     "a": "1200 m",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "300 m",
+      "10200 m",
+      "1200 m",
+      "201 m"
+     ],
+     "steps": [
+      [
+       "1 · 1000 = 1000",
+       "km in m"
+      ],
+      [
+       "1000 + 200 = 1200",
+       "zusammenzählen"
+      ]
+     ],
+     "hints": [
+      "1 km = 1000 m."
+     ]
+    },
+    {
+     "id": "zk22",
+     "q": "1200 m = ___ km ___ m",
+     "a": "1 km 200 m",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "10 km 200 m",
+      "1 km 200 m",
+      "1 km 2000 m",
+      "1 km 20 m"
+     ],
+     "steps": [
+      [
+       "1200 : 1000 = 1 Rest 200",
+       "ganze Tausender sind km"
+      ],
+      [
+       "1 km 200 m",
+       "Rest in Metern"
+      ]
+     ],
+     "hints": [
+      "Die Tausender sind Kilometer."
+     ]
+    },
+    {
+     "id": "zk23",
+     "q": "2 km 300 m = ___ m",
+     "a": "2300 m",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "20300 m",
+      "2300 m",
+      "500 m",
+      "302 m"
+     ],
+     "steps": [
+      [
+       "2 · 1000 = 2000",
+       "km in m"
+      ],
+      [
+       "2000 + 300 = 2300",
+       "zusammenzählen"
+      ]
+     ],
+     "hints": [
+      "2 km = 2000 m."
+     ]
+    },
+    {
+     "id": "zk24",
+     "q": "2300 m = ___ km ___ m",
+     "a": "2 km 300 m",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "2 km 300 m",
+      "2 km 30 m",
+      "2 km 3000 m",
+      "20 km 300 m"
+     ],
+     "steps": [
+      [
+       "2300 : 1000 = 2 Rest 300",
+       "ganze Tausender sind km"
+      ],
+      [
+       "2 km 300 m",
+       "Rest in Metern"
+      ]
+     ],
+     "hints": [
+      "Die Tausender sind Kilometer."
+     ]
+    },
+    {
+     "id": "zk25",
+     "q": "3 km 50 m = ___ m",
+     "a": "3050 m",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "350 m",
+      "3050 m",
+      "30050 m",
+      "53 m"
+     ],
+     "steps": [
+      [
+       "3 · 1000 = 3000",
+       "km in m"
+      ],
+      [
+       "3000 + 50 = 3050",
+       "zusammenzählen"
+      ]
+     ],
+     "hints": [
+      "3 km = 3000 m."
+     ]
+    },
+    {
+     "id": "zk26",
+     "q": "3050 m = ___ km ___ m",
+     "a": "3 km 50 m",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "30 km 50 m",
+      "3 km 500 m",
+      "3 km 50 m",
+      "3 km 5 m"
+     ],
+     "steps": [
+      [
+       "3050 : 1000 = 3 Rest 50",
+       "ganze Tausender sind km"
+      ],
+      [
+       "3 km 50 m",
+       "Rest in Metern"
+      ]
+     ],
+     "hints": [
+      "Die Tausender sind Kilometer."
+     ]
+    },
+    {
+     "id": "zk27",
+     "q": "4 km 500 m = ___ m",
+     "a": "4500 m",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "40500 m",
+      "4500 m",
+      "900 m",
+      "504 m"
+     ],
+     "steps": [
+      [
+       "4 · 1000 = 4000",
+       "km in m"
+      ],
+      [
+       "4000 + 500 = 4500",
+       "zusammenzählen"
+      ]
+     ],
+     "hints": [
+      "4 km = 4000 m."
+     ]
+    },
+    {
+     "id": "zk28",
+     "q": "4500 m = ___ km ___ m",
+     "a": "4 km 500 m",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "4 km 500 m",
+      "40 km 500 m",
+      "4 km 5000 m",
+      "4 km 50 m"
+     ],
+     "steps": [
+      [
+       "4500 : 1000 = 4 Rest 500",
+       "ganze Tausender sind km"
+      ],
+      [
+       "4 km 500 m",
+       "Rest in Metern"
+      ]
+     ],
+     "hints": [
+      "Die Tausender sind Kilometer."
+     ]
+    },
+    {
+     "id": "zk29",
+     "q": "2 km 750 m = ___ m",
+     "a": "2750 m",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "20750 m",
+      "2750 m",
+      "752 m",
+      "950 m"
+     ],
+     "steps": [
+      [
+       "2 · 1000 = 2000",
+       "km in m"
+      ],
+      [
+       "2000 + 750 = 2750",
+       "zusammenzählen"
+      ]
+     ],
+     "hints": [
+      "2 km = 2000 m."
+     ]
+    },
+    {
+     "id": "zk30",
+     "q": "2750 m = ___ km ___ m",
+     "a": "2 km 750 m",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "20 km 750 m",
+      "2 km 75 m",
+      "2 km 7500 m",
+      "2 km 750 m"
+     ],
+     "steps": [
+      [
+       "2750 : 1000 = 2 Rest 750",
+       "ganze Tausender sind km"
+      ],
+      [
+       "2 km 750 m",
+       "Rest in Metern"
+      ]
+     ],
+     "hints": [
+      "Die Tausender sind Kilometer."
+     ]
+    },
+    {
+     "id": "zk31",
+     "q": "5 km 20 m = ___ m",
+     "a": "5020 m",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "25 m",
+      "520 m",
+      "50020 m",
+      "5020 m"
+     ],
+     "steps": [
+      [
+       "5 · 1000 = 5000",
+       "km in m"
+      ],
+      [
+       "5000 + 20 = 5020",
+       "zusammenzählen"
+      ]
+     ],
+     "hints": [
+      "5 km = 5000 m."
+     ]
+    },
+    {
+     "id": "zk32",
+     "q": "5020 m = ___ km ___ m",
+     "a": "5 km 20 m",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "50 km 20 m",
+      "5 km 20 m",
+      "5 km 2 m",
+      "5 km 200 m"
+     ],
+     "steps": [
+      [
+       "5020 : 1000 = 5 Rest 20",
+       "ganze Tausender sind km"
+      ],
+      [
+       "5 km 20 m",
+       "Rest in Metern"
+      ]
+     ],
+     "hints": [
+      "Die Tausender sind Kilometer."
+     ]
+    },
+    {
+     "id": "zk33",
+     "q": "1 km 900 m = ___ m",
+     "a": "1900 m",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "901 m",
+      "10900 m",
+      "1000 m",
+      "1900 m"
+     ],
+     "steps": [
+      [
+       "1 · 1000 = 1000",
+       "km in m"
+      ],
+      [
+       "1000 + 900 = 1900",
+       "zusammenzählen"
+      ]
+     ],
+     "hints": [
+      "1 km = 1000 m."
+     ]
+    },
+    {
+     "id": "zk34",
+     "q": "1900 m = ___ km ___ m",
+     "a": "1 km 900 m",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "1 km 90 m",
+      "1 km 9000 m",
+      "1 km 900 m",
+      "10 km 900 m"
+     ],
+     "steps": [
+      [
+       "1900 : 1000 = 1 Rest 900",
+       "ganze Tausender sind km"
+      ],
+      [
+       "1 km 900 m",
+       "Rest in Metern"
+      ]
+     ],
+     "hints": [
+      "Die Tausender sind Kilometer."
+     ]
+    },
+    {
+     "id": "zk35",
+     "q": "6 km 100 m = ___ m",
+     "a": "6100 m",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "6100 m",
+      "106 m",
+      "700 m",
+      "60100 m"
+     ],
+     "steps": [
+      [
+       "6 · 1000 = 6000",
+       "km in m"
+      ],
+      [
+       "6000 + 100 = 6100",
+       "zusammenzählen"
+      ]
+     ],
+     "hints": [
+      "6 km = 6000 m."
+     ]
+    },
+    {
+     "id": "zk36",
+     "q": "6100 m = ___ km ___ m",
+     "a": "6 km 100 m",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "6 km 100 m",
+      "6 km 10 m",
+      "6 km 1000 m",
+      "60 km 100 m"
+     ],
+     "steps": [
+      [
+       "6100 : 1000 = 6 Rest 100",
+       "ganze Tausender sind km"
+      ],
+      [
+       "6 km 100 m",
+       "Rest in Metern"
+      ]
+     ],
+     "hints": [
+      "Die Tausender sind Kilometer."
+     ]
+    },
+    {
+     "id": "zk37",
+     "q": "3 km 250 m = ___ m",
+     "a": "3250 m",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "30250 m",
+      "253 m",
+      "550 m",
+      "3250 m"
+     ],
+     "steps": [
+      [
+       "3 · 1000 = 3000",
+       "km in m"
+      ],
+      [
+       "3000 + 250 = 3250",
+       "zusammenzählen"
+      ]
+     ],
+     "hints": [
+      "3 km = 3000 m."
+     ]
+    },
+    {
+     "id": "zk38",
+     "q": "3250 m = ___ km ___ m",
+     "a": "3 km 250 m",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "30 km 250 m",
+      "3 km 25 m",
+      "3 km 2500 m",
+      "3 km 250 m"
+     ],
+     "steps": [
+      [
+       "3250 : 1000 = 3 Rest 250",
+       "ganze Tausender sind km"
+      ],
+      [
+       "3 km 250 m",
+       "Rest in Metern"
+      ]
+     ],
+     "hints": [
+      "Die Tausender sind Kilometer."
+     ]
+    },
+    {
+     "id": "zk39",
+     "q": "7 km 5 m = ___ m",
+     "a": "7005 m",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "705 m",
+      "12 m",
+      "70005 m",
+      "7005 m"
+     ],
+     "steps": [
+      [
+       "7 · 1000 = 7000",
+       "km in m"
+      ],
+      [
+       "7000 + 5 = 7005",
+       "zusammenzählen"
+      ]
+     ],
+     "hints": [
+      "7 km = 7000 m."
+     ]
+    },
+    {
+     "id": "zk40",
+     "q": "7005 m = ___ km ___ m",
+     "a": "7 km 5 m",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "7 km 50 m",
+      "70 km 5 m",
+      "7 km 5 m"
+     ],
+     "steps": [
+      [
+       "7005 : 1000 = 7 Rest 5",
+       "ganze Tausender sind km"
+      ],
+      [
+       "7 km 5 m",
+       "Rest in Metern"
+      ]
+     ],
+     "hints": [
+      "Die Tausender sind Kilometer."
+     ]
+    },
+    {
+     "id": "zk41",
+     "q": "Ein halber Kilometer sind ___ m",
+     "a": "500 m",
+     "lvl": 2,
+     "th": "halb",
+     "opts": [
+      "100 m",
+      "750 m",
+      "500 m",
+      "250 m"
+     ],
+     "steps": [
+      [
+       "1000 m geteilt oder mal Bruch = 500 m",
+       ""
+      ]
+     ],
+     "hints": [
+      "1 km sind 1000 m."
+     ]
+    },
+    {
+     "id": "zk42",
+     "q": "Ein Viertel-Kilometer sind ___ m",
+     "a": "250 m",
+     "lvl": 2,
+     "th": "halb",
+     "opts": [
+      "750 m",
+      "100 m",
+      "250 m",
+      "500 m"
+     ],
+     "steps": [
+      [
+       "1000 m geteilt oder mal Bruch = 250 m",
+       ""
+      ]
+     ],
+     "hints": [
+      "1 km sind 1000 m."
+     ]
+    },
+    {
+     "id": "zk43",
+     "q": "Drei Viertel-Kilometer sind ___ m",
+     "a": "750 m",
+     "lvl": 2,
+     "th": "halb",
+     "opts": [
+      "500 m",
+      "100 m",
+      "250 m",
+      "750 m"
+     ],
+     "steps": [
+      [
+       "1000 m geteilt oder mal Bruch = 750 m",
+       ""
+      ]
+     ],
+     "hints": [
+      "1 km sind 1000 m."
+     ]
+    },
+    {
+     "id": "zk44",
+     "q": "Ein Zehntel-Kilometer sind ___ m",
+     "a": "100 m",
+     "lvl": 2,
+     "th": "halb",
+     "opts": [
+      "100 m",
+      "500 m",
+      "250 m",
+      "750 m"
+     ],
+     "steps": [
+      [
+       "1000 m geteilt oder mal Bruch = 100 m",
+       ""
+      ]
+     ],
+     "hints": [
+      "1 km sind 1000 m."
+     ]
+    },
+    {
+     "id": "zk45",
+     "q": "Anna läuft 500 m in 6 Minuten. Wie lange braucht sie für 500 m?",
+     "a": "6 Minuten",
+     "lvl": 3,
+     "th": "zeit",
+     "opts": [
+      "5 Minuten",
+      "12 Minuten",
+      "6 Minuten",
+      "9 Minuten"
+     ],
+     "steps": [
+      [
+       "500 m = 1 · 500 m",
+       "6 Minuten"
+      ]
+     ],
+     "hints": [
+      "Rechne mit dem Verdoppeln oder Halbieren."
+     ]
+    },
+    {
+     "id": "zk46",
+     "q": "Anna läuft 500 m in 6 Minuten. Wie lange braucht sie für 1000 m?",
+     "a": "12 Minuten",
+     "lvl": 3,
+     "th": "zeit",
+     "opts": [
+      "15 Minuten",
+      "12 Minuten",
+      "24 Minuten",
+      "10 Minuten"
+     ],
+     "steps": [
+      [
+       "1000 m = 2 · 500 m",
+       "12 Minuten"
+      ]
+     ],
+     "hints": [
+      "Rechne mit dem Verdoppeln oder Halbieren."
+     ]
+    },
+    {
+     "id": "zk47",
+     "q": "Anna läuft 500 m in 6 Minuten. Wie lange braucht sie für 2000 m?",
+     "a": "24 Minuten",
+     "lvl": 3,
+     "th": "zeit",
+     "opts": [
+      "48 Minuten",
+      "27 Minuten",
+      "20 Minuten",
+      "24 Minuten"
+     ],
+     "steps": [
+      [
+       "2000 m = 4 · 500 m",
+       "24 Minuten"
+      ]
+     ],
+     "hints": [
+      "Rechne mit dem Verdoppeln oder Halbieren."
+     ]
+    },
+    {
+     "id": "zk48",
+     "q": "300 m + 450 m = ___ m",
+     "a": "750 m",
+     "lvl": 1,
+     "th": "misch",
+     "opts": [
+      "850 m",
+      "750 m",
+      "650 m",
+      "150 m"
+     ],
+     "steps": [
+      [
+       "300 + 450 = 750",
+       ""
+      ]
+     ],
+     "hints": [
+      "Zähle die Meter zusammen."
+     ]
+    },
+    {
+     "id": "zk49",
+     "q": "700 m + 250 m = ___ m",
+     "a": "950 m",
+     "lvl": 1,
+     "th": "misch",
+     "opts": [
+      "1050 m",
+      "450 m",
+      "850 m",
+      "950 m"
+     ],
+     "steps": [
+      [
+       "700 + 250 = 950",
+       ""
+      ]
+     ],
+     "hints": [
+      "Zähle die Meter zusammen."
+     ]
+    },
+    {
+     "id": "zk50",
+     "q": "1200 m + 800 m = ___ m",
+     "a": "2000 m",
+     "lvl": 1,
+     "th": "misch",
+     "opts": [
+      "400 m",
+      "2100 m",
+      "1900 m",
+      "2000 m"
+     ],
+     "steps": [
+      [
+       "1200 + 800 = 2000",
+       ""
+      ]
+     ],
+     "hints": [
+      "Zähle die Meter zusammen."
+     ]
+    },
+    {
+     "id": "zk51",
+     "q": "2500 m + 1500 m = ___ m",
+     "a": "4000 m",
+     "lvl": 1,
+     "th": "misch",
+     "opts": [
+      "4100 m",
+      "1000 m",
+      "3900 m",
+      "4000 m"
+     ],
+     "steps": [
+      [
+       "2500 + 1500 = 4000",
+       ""
+      ]
+     ],
+     "hints": [
+      "Zähle die Meter zusammen."
+     ]
+    },
+    {
+     "id": "zk52",
+     "q": "Welche Einheit passt zu einem Schulweg?",
+     "a": "km",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "km",
+      "m",
+      "cm",
+      "g"
+     ],
+     "steps": [
+      [
+       "km",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Lange Strecken misst man in Kilometern."
+     ]
+    },
+    {
+     "id": "zk53",
+     "q": "Welche Einheit passt zur Länge eines Klassenzimmers?",
+     "a": "m",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "m",
+      "km",
+      "kg",
+      "g"
+     ],
+     "steps": [
+      [
+       "m",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Das Zimmer ist ein paar Meter lang."
+     ]
+    },
+    {
+     "id": "zk54",
+     "q": "Wie viele Nullen hängst du an, wenn du km in m umwandelst (ganze Zahl)?",
+     "a": "drei",
+     "lvl": 1,
+     "th": "mal",
+     "opts": [
+      "drei",
+      "zwei",
+      "eine",
+      "vier"
+     ],
+     "steps": [
+      [
+       "drei",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "1 km = 1000 m."
+     ]
     }
    ],
    "exam": {
@@ -22996,6 +30996,1620 @@
        "750 g",
        "Rechne 1000 − 250."
       ]
+     ]
+    },
+    {
+     "id": "zg1",
+     "q": "2 kg = ___ g",
+     "a": "2000 g",
+     "lvl": 1,
+     "th": "mal",
+     "opts": [
+      "2000 g",
+      "200 g",
+      "20 g",
+      "20000 g"
+     ],
+     "steps": [
+      [
+       "2 · 1000 = 2000",
+       "kg in g: mal 1000"
+      ]
+     ],
+     "hints": [
+      "1 kg sind 1000 g."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "kg",
+       "to": "g",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "Von kg nach g: mal 1000"
+      }
+     ]
+    },
+    {
+     "id": "zg2",
+     "q": "2000 g = ___ kg",
+     "a": "2 kg",
+     "lvl": 1,
+     "th": "durch",
+     "opts": [
+      "0,2 kg",
+      "20 kg",
+      "2 kg",
+      "200 kg"
+     ],
+     "steps": [
+      [
+       "2000 : 1000 = 2",
+       "g in kg: geteilt durch 1000"
+      ]
+     ],
+     "hints": [
+      "Drei Nullen streichen."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "g",
+       "to": "kg",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "Von g nach kg: geteilt durch 1000"
+      }
+     ]
+    },
+    {
+     "id": "zg3",
+     "q": "3 kg = ___ g",
+     "a": "3000 g",
+     "lvl": 1,
+     "th": "mal",
+     "opts": [
+      "30 g",
+      "30000 g",
+      "300 g",
+      "3000 g"
+     ],
+     "steps": [
+      [
+       "3 · 1000 = 3000",
+       "kg in g: mal 1000"
+      ]
+     ],
+     "hints": [
+      "1 kg sind 1000 g."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "kg",
+       "to": "g",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "Von kg nach g: mal 1000"
+      }
+     ]
+    },
+    {
+     "id": "zg4",
+     "q": "3000 g = ___ kg",
+     "a": "3 kg",
+     "lvl": 1,
+     "th": "durch",
+     "opts": [
+      "0,3 kg",
+      "300 kg",
+      "30 kg",
+      "3 kg"
+     ],
+     "steps": [
+      [
+       "3000 : 1000 = 3",
+       "g in kg: geteilt durch 1000"
+      ]
+     ],
+     "hints": [
+      "Drei Nullen streichen."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "g",
+       "to": "kg",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "Von g nach kg: geteilt durch 1000"
+      }
+     ]
+    },
+    {
+     "id": "zg5",
+     "q": "4 kg = ___ g",
+     "a": "4000 g",
+     "lvl": 1,
+     "th": "mal",
+     "opts": [
+      "400 g",
+      "4000 g",
+      "40000 g",
+      "40 g"
+     ],
+     "steps": [
+      [
+       "4 · 1000 = 4000",
+       "kg in g: mal 1000"
+      ]
+     ],
+     "hints": [
+      "1 kg sind 1000 g."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "kg",
+       "to": "g",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "Von kg nach g: mal 1000"
+      }
+     ]
+    },
+    {
+     "id": "zg6",
+     "q": "4000 g = ___ kg",
+     "a": "4 kg",
+     "lvl": 1,
+     "th": "durch",
+     "opts": [
+      "400 kg",
+      "40 kg",
+      "4 kg",
+      "0,4 kg"
+     ],
+     "steps": [
+      [
+       "4000 : 1000 = 4",
+       "g in kg: geteilt durch 1000"
+      ]
+     ],
+     "hints": [
+      "Drei Nullen streichen."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "g",
+       "to": "kg",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "Von g nach kg: geteilt durch 1000"
+      }
+     ]
+    },
+    {
+     "id": "zg7",
+     "q": "5 kg = ___ g",
+     "a": "5000 g",
+     "lvl": 1,
+     "th": "mal",
+     "opts": [
+      "5000 g",
+      "50000 g",
+      "500 g",
+      "50 g"
+     ],
+     "steps": [
+      [
+       "5 · 1000 = 5000",
+       "kg in g: mal 1000"
+      ]
+     ],
+     "hints": [
+      "1 kg sind 1000 g."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "kg",
+       "to": "g",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "Von kg nach g: mal 1000"
+      }
+     ]
+    },
+    {
+     "id": "zg8",
+     "q": "5000 g = ___ kg",
+     "a": "5 kg",
+     "lvl": 1,
+     "th": "durch",
+     "opts": [
+      "0,5 kg",
+      "5 kg",
+      "50 kg",
+      "500 kg"
+     ],
+     "steps": [
+      [
+       "5000 : 1000 = 5",
+       "g in kg: geteilt durch 1000"
+      ]
+     ],
+     "hints": [
+      "Drei Nullen streichen."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "g",
+       "to": "kg",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "Von g nach kg: geteilt durch 1000"
+      }
+     ]
+    },
+    {
+     "id": "zg9",
+     "q": "6 kg = ___ g",
+     "a": "6000 g",
+     "lvl": 1,
+     "th": "mal",
+     "opts": [
+      "60 g",
+      "60000 g",
+      "600 g",
+      "6000 g"
+     ],
+     "steps": [
+      [
+       "6 · 1000 = 6000",
+       "kg in g: mal 1000"
+      ]
+     ],
+     "hints": [
+      "1 kg sind 1000 g."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "kg",
+       "to": "g",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "Von kg nach g: mal 1000"
+      }
+     ]
+    },
+    {
+     "id": "zg10",
+     "q": "6000 g = ___ kg",
+     "a": "6 kg",
+     "lvl": 1,
+     "th": "durch",
+     "opts": [
+      "6 kg",
+      "600 kg",
+      "0,6 kg",
+      "60 kg"
+     ],
+     "steps": [
+      [
+       "6000 : 1000 = 6",
+       "g in kg: geteilt durch 1000"
+      ]
+     ],
+     "hints": [
+      "Drei Nullen streichen."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "g",
+       "to": "kg",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "Von g nach kg: geteilt durch 1000"
+      }
+     ]
+    },
+    {
+     "id": "zg11",
+     "q": "7 kg = ___ g",
+     "a": "7000 g",
+     "lvl": 1,
+     "th": "mal",
+     "opts": [
+      "70 g",
+      "700 g",
+      "7000 g",
+      "70000 g"
+     ],
+     "steps": [
+      [
+       "7 · 1000 = 7000",
+       "kg in g: mal 1000"
+      ]
+     ],
+     "hints": [
+      "1 kg sind 1000 g."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "kg",
+       "to": "g",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "Von kg nach g: mal 1000"
+      }
+     ]
+    },
+    {
+     "id": "zg12",
+     "q": "7000 g = ___ kg",
+     "a": "7 kg",
+     "lvl": 1,
+     "th": "durch",
+     "opts": [
+      "0,7 kg",
+      "70 kg",
+      "7 kg",
+      "700 kg"
+     ],
+     "steps": [
+      [
+       "7000 : 1000 = 7",
+       "g in kg: geteilt durch 1000"
+      ]
+     ],
+     "hints": [
+      "Drei Nullen streichen."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "g",
+       "to": "kg",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "Von g nach kg: geteilt durch 1000"
+      }
+     ]
+    },
+    {
+     "id": "zg13",
+     "q": "8 kg = ___ g",
+     "a": "8000 g",
+     "lvl": 1,
+     "th": "mal",
+     "opts": [
+      "8000 g",
+      "80000 g",
+      "80 g",
+      "800 g"
+     ],
+     "steps": [
+      [
+       "8 · 1000 = 8000",
+       "kg in g: mal 1000"
+      ]
+     ],
+     "hints": [
+      "1 kg sind 1000 g."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "kg",
+       "to": "g",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "Von kg nach g: mal 1000"
+      }
+     ]
+    },
+    {
+     "id": "zg14",
+     "q": "8000 g = ___ kg",
+     "a": "8 kg",
+     "lvl": 1,
+     "th": "durch",
+     "opts": [
+      "8 kg",
+      "0,8 kg",
+      "80 kg",
+      "800 kg"
+     ],
+     "steps": [
+      [
+       "8000 : 1000 = 8",
+       "g in kg: geteilt durch 1000"
+      ]
+     ],
+     "hints": [
+      "Drei Nullen streichen."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "g",
+       "to": "kg",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "Von g nach kg: geteilt durch 1000"
+      }
+     ]
+    },
+    {
+     "id": "zg15",
+     "q": "9 kg = ___ g",
+     "a": "9000 g",
+     "lvl": 1,
+     "th": "mal",
+     "opts": [
+      "900 g",
+      "90 g",
+      "90000 g",
+      "9000 g"
+     ],
+     "steps": [
+      [
+       "9 · 1000 = 9000",
+       "kg in g: mal 1000"
+      ]
+     ],
+     "hints": [
+      "1 kg sind 1000 g."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "kg",
+       "to": "g",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "Von kg nach g: mal 1000"
+      }
+     ]
+    },
+    {
+     "id": "zg16",
+     "q": "9000 g = ___ kg",
+     "a": "9 kg",
+     "lvl": 1,
+     "th": "durch",
+     "opts": [
+      "900 kg",
+      "90 kg",
+      "0,9 kg",
+      "9 kg"
+     ],
+     "steps": [
+      [
+       "9000 : 1000 = 9",
+       "g in kg: geteilt durch 1000"
+      ]
+     ],
+     "hints": [
+      "Drei Nullen streichen."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "g",
+       "to": "kg",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "Von g nach kg: geteilt durch 1000"
+      }
+     ]
+    },
+    {
+     "id": "zg17",
+     "q": "10 kg = ___ g",
+     "a": "10000 g",
+     "lvl": 1,
+     "th": "mal",
+     "opts": [
+      "1000 g",
+      "10000 g",
+      "100000 g",
+      "100 g"
+     ],
+     "steps": [
+      [
+       "10 · 1000 = 10000",
+       "kg in g: mal 1000"
+      ]
+     ],
+     "hints": [
+      "1 kg sind 1000 g."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "kg",
+       "to": "g",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "Von kg nach g: mal 1000"
+      }
+     ]
+    },
+    {
+     "id": "zg18",
+     "q": "10000 g = ___ kg",
+     "a": "10 kg",
+     "lvl": 1,
+     "th": "durch",
+     "opts": [
+      "10 kg",
+      "100 kg",
+      "1000 kg",
+      "1 kg"
+     ],
+     "steps": [
+      [
+       "10000 : 1000 = 10",
+       "g in kg: geteilt durch 1000"
+      ]
+     ],
+     "hints": [
+      "Drei Nullen streichen."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "g",
+       "to": "kg",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "Von g nach kg: geteilt durch 1000"
+      }
+     ]
+    },
+    {
+     "id": "zg19",
+     "q": "12 kg = ___ g",
+     "a": "12000 g",
+     "lvl": 1,
+     "th": "mal",
+     "opts": [
+      "1200 g",
+      "120000 g",
+      "12000 g",
+      "120 g"
+     ],
+     "steps": [
+      [
+       "12 · 1000 = 12000",
+       "kg in g: mal 1000"
+      ]
+     ],
+     "hints": [
+      "1 kg sind 1000 g."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "kg",
+       "to": "g",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "Von kg nach g: mal 1000"
+      }
+     ]
+    },
+    {
+     "id": "zg20",
+     "q": "12000 g = ___ kg",
+     "a": "12 kg",
+     "lvl": 1,
+     "th": "durch",
+     "opts": [
+      "1,2 kg",
+      "120 kg",
+      "12 kg",
+      "1200 kg"
+     ],
+     "steps": [
+      [
+       "12000 : 1000 = 12",
+       "g in kg: geteilt durch 1000"
+      ]
+     ],
+     "hints": [
+      "Drei Nullen streichen."
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "g",
+       "to": "kg",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "Von g nach kg: geteilt durch 1000"
+      }
+     ]
+    },
+    {
+     "id": "zg21",
+     "q": "1 kg 500 g = ___ g",
+     "a": "1500 g",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "1500 g",
+      "10500 g",
+      "501 g",
+      "600 g"
+     ],
+     "steps": [
+      [
+       "1 · 1000 = 1000",
+       "kg in g"
+      ],
+      [
+       "1000 + 500 = 1500",
+       "zusammenzählen"
+      ]
+     ],
+     "hints": [
+      "1 kg = 1000 g."
+     ]
+    },
+    {
+     "id": "zg22",
+     "q": "1500 g = ___ kg ___ g",
+     "a": "1 kg 500 g",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "1 kg 500 g",
+      "1 kg 5000 g",
+      "10 kg 500 g",
+      "1 kg 50 g"
+     ],
+     "steps": [
+      [
+       "1500 : 1000 = 1 Rest 500",
+       "ganze Tausender sind kg"
+      ],
+      [
+       "1 kg 500 g",
+       "Rest in Gramm"
+      ]
+     ],
+     "hints": [
+      "Die Tausender sind Kilogramm."
+     ]
+    },
+    {
+     "id": "zg23",
+     "q": "2 kg 250 g = ___ g",
+     "a": "2250 g",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "2250 g",
+      "450 g",
+      "20250 g",
+      "252 g"
+     ],
+     "steps": [
+      [
+       "2 · 1000 = 2000",
+       "kg in g"
+      ],
+      [
+       "2000 + 250 = 2250",
+       "zusammenzählen"
+      ]
+     ],
+     "hints": [
+      "2 kg = 2000 g."
+     ]
+    },
+    {
+     "id": "zg24",
+     "q": "2250 g = ___ kg ___ g",
+     "a": "2 kg 250 g",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "2 kg 250 g",
+      "2 kg 2500 g",
+      "2 kg 25 g",
+      "20 kg 250 g"
+     ],
+     "steps": [
+      [
+       "2250 : 1000 = 2 Rest 250",
+       "ganze Tausender sind kg"
+      ],
+      [
+       "2 kg 250 g",
+       "Rest in Gramm"
+      ]
+     ],
+     "hints": [
+      "Die Tausender sind Kilogramm."
+     ]
+    },
+    {
+     "id": "zg25",
+     "q": "3 kg 100 g = ___ g",
+     "a": "3100 g",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "3100 g",
+      "103 g",
+      "400 g",
+      "30100 g"
+     ],
+     "steps": [
+      [
+       "3 · 1000 = 3000",
+       "kg in g"
+      ],
+      [
+       "3000 + 100 = 3100",
+       "zusammenzählen"
+      ]
+     ],
+     "hints": [
+      "3 kg = 3000 g."
+     ]
+    },
+    {
+     "id": "zg26",
+     "q": "3100 g = ___ kg ___ g",
+     "a": "3 kg 100 g",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "3 kg 10 g",
+      "30 kg 100 g",
+      "3 kg 100 g",
+      "3 kg 1000 g"
+     ],
+     "steps": [
+      [
+       "3100 : 1000 = 3 Rest 100",
+       "ganze Tausender sind kg"
+      ],
+      [
+       "3 kg 100 g",
+       "Rest in Gramm"
+      ]
+     ],
+     "hints": [
+      "Die Tausender sind Kilogramm."
+     ]
+    },
+    {
+     "id": "zg27",
+     "q": "1 kg 750 g = ___ g",
+     "a": "1750 g",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "850 g",
+      "751 g",
+      "1750 g",
+      "10750 g"
+     ],
+     "steps": [
+      [
+       "1 · 1000 = 1000",
+       "kg in g"
+      ],
+      [
+       "1000 + 750 = 1750",
+       "zusammenzählen"
+      ]
+     ],
+     "hints": [
+      "1 kg = 1000 g."
+     ]
+    },
+    {
+     "id": "zg28",
+     "q": "1750 g = ___ kg ___ g",
+     "a": "1 kg 750 g",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "10 kg 750 g",
+      "1 kg 75 g",
+      "1 kg 750 g",
+      "1 kg 7500 g"
+     ],
+     "steps": [
+      [
+       "1750 : 1000 = 1 Rest 750",
+       "ganze Tausender sind kg"
+      ],
+      [
+       "1 kg 750 g",
+       "Rest in Gramm"
+      ]
+     ],
+     "hints": [
+      "Die Tausender sind Kilogramm."
+     ]
+    },
+    {
+     "id": "zg29",
+     "q": "4 kg 50 g = ___ g",
+     "a": "4050 g",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "4050 g",
+      "450 g",
+      "54 g",
+      "40050 g"
+     ],
+     "steps": [
+      [
+       "4 · 1000 = 4000",
+       "kg in g"
+      ],
+      [
+       "4000 + 50 = 4050",
+       "zusammenzählen"
+      ]
+     ],
+     "hints": [
+      "4 kg = 4000 g."
+     ]
+    },
+    {
+     "id": "zg30",
+     "q": "4050 g = ___ kg ___ g",
+     "a": "4 kg 50 g",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "40 kg 50 g",
+      "4 kg 500 g",
+      "4 kg 5 g",
+      "4 kg 50 g"
+     ],
+     "steps": [
+      [
+       "4050 : 1000 = 4 Rest 50",
+       "ganze Tausender sind kg"
+      ],
+      [
+       "4 kg 50 g",
+       "Rest in Gramm"
+      ]
+     ],
+     "hints": [
+      "Die Tausender sind Kilogramm."
+     ]
+    },
+    {
+     "id": "zg31",
+     "q": "2 kg 800 g = ___ g",
+     "a": "2800 g",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "20800 g",
+      "2800 g",
+      "802 g",
+      "1000 g"
+     ],
+     "steps": [
+      [
+       "2 · 1000 = 2000",
+       "kg in g"
+      ],
+      [
+       "2000 + 800 = 2800",
+       "zusammenzählen"
+      ]
+     ],
+     "hints": [
+      "2 kg = 2000 g."
+     ]
+    },
+    {
+     "id": "zg32",
+     "q": "2800 g = ___ kg ___ g",
+     "a": "2 kg 800 g",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "2 kg 8000 g",
+      "2 kg 80 g",
+      "2 kg 800 g",
+      "20 kg 800 g"
+     ],
+     "steps": [
+      [
+       "2800 : 1000 = 2 Rest 800",
+       "ganze Tausender sind kg"
+      ],
+      [
+       "2 kg 800 g",
+       "Rest in Gramm"
+      ]
+     ],
+     "hints": [
+      "Die Tausender sind Kilogramm."
+     ]
+    },
+    {
+     "id": "zg33",
+     "q": "5 kg 500 g = ___ g",
+     "a": "5500 g",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "1000 g",
+      "505 g",
+      "5500 g",
+      "50500 g"
+     ],
+     "steps": [
+      [
+       "5 · 1000 = 5000",
+       "kg in g"
+      ],
+      [
+       "5000 + 500 = 5500",
+       "zusammenzählen"
+      ]
+     ],
+     "hints": [
+      "5 kg = 5000 g."
+     ]
+    },
+    {
+     "id": "zg34",
+     "q": "5500 g = ___ kg ___ g",
+     "a": "5 kg 500 g",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "5 kg 5000 g",
+      "5 kg 500 g",
+      "5 kg 50 g",
+      "50 kg 500 g"
+     ],
+     "steps": [
+      [
+       "5500 : 1000 = 5 Rest 500",
+       "ganze Tausender sind kg"
+      ],
+      [
+       "5 kg 500 g",
+       "Rest in Gramm"
+      ]
+     ],
+     "hints": [
+      "Die Tausender sind Kilogramm."
+     ]
+    },
+    {
+     "id": "zg35",
+     "q": "1 kg 250 g = ___ g",
+     "a": "1250 g",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "350 g",
+      "10250 g",
+      "1250 g",
+      "251 g"
+     ],
+     "steps": [
+      [
+       "1 · 1000 = 1000",
+       "kg in g"
+      ],
+      [
+       "1000 + 250 = 1250",
+       "zusammenzählen"
+      ]
+     ],
+     "hints": [
+      "1 kg = 1000 g."
+     ]
+    },
+    {
+     "id": "zg36",
+     "q": "1250 g = ___ kg ___ g",
+     "a": "1 kg 250 g",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "1 kg 250 g",
+      "1 kg 25 g",
+      "1 kg 2500 g",
+      "10 kg 250 g"
+     ],
+     "steps": [
+      [
+       "1250 : 1000 = 1 Rest 250",
+       "ganze Tausender sind kg"
+      ],
+      [
+       "1 kg 250 g",
+       "Rest in Gramm"
+      ]
+     ],
+     "hints": [
+      "Die Tausender sind Kilogramm."
+     ]
+    },
+    {
+     "id": "zg37",
+     "q": "3 kg 900 g = ___ g",
+     "a": "3900 g",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "30900 g",
+      "3900 g",
+      "1200 g",
+      "903 g"
+     ],
+     "steps": [
+      [
+       "3 · 1000 = 3000",
+       "kg in g"
+      ],
+      [
+       "3000 + 900 = 3900",
+       "zusammenzählen"
+      ]
+     ],
+     "hints": [
+      "3 kg = 3000 g."
+     ]
+    },
+    {
+     "id": "zg38",
+     "q": "3900 g = ___ kg ___ g",
+     "a": "3 kg 900 g",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "3 kg 90 g",
+      "30 kg 900 g",
+      "3 kg 9000 g",
+      "3 kg 900 g"
+     ],
+     "steps": [
+      [
+       "3900 : 1000 = 3 Rest 900",
+       "ganze Tausender sind kg"
+      ],
+      [
+       "3 kg 900 g",
+       "Rest in Gramm"
+      ]
+     ],
+     "hints": [
+      "Die Tausender sind Kilogramm."
+     ]
+    },
+    {
+     "id": "zg39",
+     "q": "6 kg 20 g = ___ g",
+     "a": "6020 g",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "60020 g",
+      "620 g",
+      "26 g",
+      "6020 g"
+     ],
+     "steps": [
+      [
+       "6 · 1000 = 6000",
+       "kg in g"
+      ],
+      [
+       "6000 + 20 = 6020",
+       "zusammenzählen"
+      ]
+     ],
+     "hints": [
+      "6 kg = 6000 g."
+     ]
+    },
+    {
+     "id": "zg40",
+     "q": "6020 g = ___ kg ___ g",
+     "a": "6 kg 20 g",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "6 kg 200 g",
+      "60 kg 20 g",
+      "6 kg 20 g",
+      "6 kg 2 g"
+     ],
+     "steps": [
+      [
+       "6020 : 1000 = 6 Rest 20",
+       "ganze Tausender sind kg"
+      ],
+      [
+       "6 kg 20 g",
+       "Rest in Gramm"
+      ]
+     ],
+     "hints": [
+      "Die Tausender sind Kilogramm."
+     ]
+    },
+    {
+     "id": "zg41",
+     "q": "Ein halbes Kilogramm sind ___ g",
+     "a": "500 g",
+     "lvl": 2,
+     "th": "halb",
+     "opts": [
+      "750 g",
+      "100 g",
+      "500 g",
+      "250 g"
+     ],
+     "steps": [
+      [
+       "500 g",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "1 kg sind 1000 g."
+     ]
+    },
+    {
+     "id": "zg42",
+     "q": "Ein Viertel-Kilogramm sind ___ g",
+     "a": "250 g",
+     "lvl": 2,
+     "th": "halb",
+     "opts": [
+      "500 g",
+      "750 g",
+      "100 g",
+      "250 g"
+     ],
+     "steps": [
+      [
+       "250 g",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "1 kg sind 1000 g."
+     ]
+    },
+    {
+     "id": "zg43",
+     "q": "Drei Viertel-Kilogramm sind ___ g",
+     "a": "750 g",
+     "lvl": 2,
+     "th": "halb",
+     "opts": [
+      "500 g",
+      "750 g",
+      "250 g",
+      "100 g"
+     ],
+     "steps": [
+      [
+       "750 g",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "1 kg sind 1000 g."
+     ]
+    },
+    {
+     "id": "zg44",
+     "q": "Ein Zehntel-Kilogramm sind ___ g",
+     "a": "100 g",
+     "lvl": 2,
+     "th": "halb",
+     "opts": [
+      "100 g",
+      "250 g",
+      "500 g",
+      "750 g"
+     ],
+     "steps": [
+      [
+       "100 g",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "1 kg sind 1000 g."
+     ]
+    },
+    {
+     "id": "zg45",
+     "q": "Apfel 120 g, Joghurt 150 g, Brot 90 g. Wie schwer ist alles zusammen?",
+     "a": "360 g",
+     "lvl": 2,
+     "th": "add",
+     "opts": [
+      "360 g",
+      "460 g",
+      "270 g",
+      "350 g"
+     ],
+     "steps": [
+      [
+       "120 + 150 = 270",
+       "zuerst zwei"
+      ],
+      [
+       "270 + 90 = 360",
+       "dann das dritte"
+      ]
+     ],
+     "hints": [
+      "Zähle in Schritten zusammen."
+     ]
+    },
+    {
+     "id": "zg46",
+     "q": "Apfel 200 g, Joghurt 180 g, Brot 60 g. Wie schwer ist alles zusammen?",
+     "a": "440 g",
+     "lvl": 2,
+     "th": "add",
+     "opts": [
+      "540 g",
+      "440 g",
+      "380 g",
+      "430 g"
+     ],
+     "steps": [
+      [
+       "200 + 180 = 380",
+       "zuerst zwei"
+      ],
+      [
+       "380 + 60 = 440",
+       "dann das dritte"
+      ]
+     ],
+     "hints": [
+      "Zähle in Schritten zusammen."
+     ]
+    },
+    {
+     "id": "zg47",
+     "q": "Apfel 75 g, Joghurt 125 g, Brot 300 g. Wie schwer ist alles zusammen?",
+     "a": "500 g",
+     "lvl": 2,
+     "th": "add",
+     "opts": [
+      "600 g",
+      "490 g",
+      "200 g",
+      "500 g"
+     ],
+     "steps": [
+      [
+       "75 + 125 = 200",
+       "zuerst zwei"
+      ],
+      [
+       "200 + 300 = 500",
+       "dann das dritte"
+      ]
+     ],
+     "hints": [
+      "Zähle in Schritten zusammen."
+     ]
+    },
+    {
+     "id": "zg48",
+     "q": "Apfel 250 g, Joghurt 250 g, Brot 500 g. Wie schwer ist alles zusammen?",
+     "a": "1000 g",
+     "lvl": 2,
+     "th": "add",
+     "opts": [
+      "1100 g",
+      "1000 g",
+      "500 g",
+      "990 g"
+     ],
+     "steps": [
+      [
+       "250 + 250 = 500",
+       "zuerst zwei"
+      ],
+      [
+       "500 + 500 = 1000",
+       "dann das dritte"
+      ]
+     ],
+     "hints": [
+      "Zähle in Schritten zusammen."
+     ]
+    },
+    {
+     "id": "zg49",
+     "q": "Apfel 80 g, Joghurt 320 g, Brot 100 g. Wie schwer ist alles zusammen?",
+     "a": "500 g",
+     "lvl": 2,
+     "th": "add",
+     "opts": [
+      "400 g",
+      "490 g",
+      "500 g",
+      "600 g"
+     ],
+     "steps": [
+      [
+       "80 + 320 = 400",
+       "zuerst zwei"
+      ],
+      [
+       "400 + 100 = 500",
+       "dann das dritte"
+      ]
+     ],
+     "hints": [
+      "Zähle in Schritten zusammen."
+     ]
+    },
+    {
+     "id": "zg50",
+     "q": "Wie viele Gramm fehlen von 700 g bis 1 kg?",
+     "a": "300 g",
+     "lvl": 3,
+     "th": "ergaenz",
+     "opts": [
+      "700 g",
+      "400 g",
+      "250 g",
+      "300 g"
+     ],
+     "steps": [
+      [
+       "1000 − 700 = 300",
+       "von 1000 g abziehen"
+      ]
+     ],
+     "hints": [
+      "1 kg sind 1000 g."
+     ]
+    },
+    {
+     "id": "zg51",
+     "q": "Wie viele Gramm fehlen von 650 g bis 1 kg?",
+     "a": "350 g",
+     "lvl": 3,
+     "th": "ergaenz",
+     "opts": [
+      "350 g",
+      "450 g",
+      "650 g",
+      "300 g"
+     ],
+     "steps": [
+      [
+       "1000 − 650 = 350",
+       "von 1000 g abziehen"
+      ]
+     ],
+     "hints": [
+      "1 kg sind 1000 g."
+     ]
+    },
+    {
+     "id": "zg52",
+     "q": "Wie viele Gramm fehlen von 400 g bis 1 kg?",
+     "a": "600 g",
+     "lvl": 3,
+     "th": "ergaenz",
+     "opts": [
+      "400 g",
+      "550 g",
+      "600 g",
+      "700 g"
+     ],
+     "steps": [
+      [
+       "1000 − 400 = 600",
+       "von 1000 g abziehen"
+      ]
+     ],
+     "hints": [
+      "1 kg sind 1000 g."
+     ]
+    },
+    {
+     "id": "zg53",
+     "q": "Wie viele Gramm fehlen von 850 g bis 1 kg?",
+     "a": "150 g",
+     "lvl": 3,
+     "th": "ergaenz",
+     "opts": [
+      "150 g",
+      "850 g",
+      "100 g",
+      "250 g"
+     ],
+     "steps": [
+      [
+       "1000 − 850 = 150",
+       "von 1000 g abziehen"
+      ]
+     ],
+     "hints": [
+      "1 kg sind 1000 g."
+     ]
+    },
+    {
+     "id": "zg54",
+     "q": "Wie viele Gramm fehlen von 250 g bis 1 kg?",
+     "a": "750 g",
+     "lvl": 3,
+     "th": "ergaenz",
+     "opts": [
+      "250 g",
+      "850 g",
+      "750 g",
+      "700 g"
+     ],
+     "steps": [
+      [
+       "1000 − 250 = 750",
+       "von 1000 g abziehen"
+      ]
+     ],
+     "hints": [
+      "1 kg sind 1000 g."
+     ]
+    },
+    {
+     "id": "zg55",
+     "q": "Wie viele Gramm fehlen von 900 g bis 1 kg?",
+     "a": "100 g",
+     "lvl": 3,
+     "th": "ergaenz",
+     "opts": [
+      "900 g",
+      "100 g",
+      "50 g",
+      "200 g"
+     ],
+     "steps": [
+      [
+       "1000 − 900 = 100",
+       "von 1000 g abziehen"
+      ]
+     ],
+     "hints": [
+      "1 kg sind 1000 g."
+     ]
+    },
+    {
+     "id": "zg56",
+     "q": "Was ist schwerer: Orange (200 g) oder Apfel (150 g)?",
+     "a": "Orange",
+     "lvl": 1,
+     "th": "vergl",
+     "opts": [
+      "Orange",
+      "Apfel"
+     ],
+     "steps": [
+      [
+       "Orange",
+       "die grössere Zahl ist schwerer"
+      ]
+     ],
+     "hints": [
+      "Vergleiche die Zahlen."
+     ]
+    },
+    {
+     "id": "zg57",
+     "q": "Was ist schwerer: Tomate (90 g) oder Banane (120 g)?",
+     "a": "Banane",
+     "lvl": 1,
+     "th": "vergl",
+     "opts": [
+      "Tomate",
+      "Banane"
+     ],
+     "steps": [
+      [
+       "Banane",
+       "die grössere Zahl ist schwerer"
+      ]
+     ],
+     "hints": [
+      "Vergleiche die Zahlen."
+     ]
+    },
+    {
+     "id": "zg58",
+     "q": "Was ist schwerer: Joghurt (180 g) oder Orange (200 g)?",
+     "a": "Orange",
+     "lvl": 1,
+     "th": "vergl",
+     "opts": [
+      "Joghurt",
+      "Orange"
+     ],
+     "steps": [
+      [
+       "Orange",
+       "die grössere Zahl ist schwerer"
+      ]
+     ],
+     "hints": [
+      "Vergleiche die Zahlen."
+     ]
+    },
+    {
+     "id": "zg59",
+     "q": "Welche Einheit passt zu einer Packung Zucker?",
+     "a": "kg",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "kg",
+      "km",
+      "m",
+      "l"
+     ],
+     "steps": [
+      [
+       "kg",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Schwere Dinge wiegst du in Kilogramm."
+     ]
+    },
+    {
+     "id": "zg60",
+     "q": "Welche Einheit passt zu einer Büroklammer?",
+     "a": "g",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "g",
+      "kg",
+      "km",
+      "m"
+     ],
+     "steps": [
+      [
+       "g",
+       "richtig"
+      ]
+     ],
+     "hints": [
+      "Sie ist sehr leicht."
      ]
     }
    ],
