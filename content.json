@@ -10016,6 +10016,6918 @@
     }
    },
    "art": "travel"
+  },
+  {
+   "id": "kl6-franz-unit1-ou-quand",
+   "child": "kl6",
+   "subject": "franz",
+   "chapter": "Unit 1 · Où? Quand? Quoi?",
+   "title": "Unit 1 · Où? Quand? Quoi?",
+   "explain": [
+    {
+     "h": "Wörterliste zum Durchlernen",
+     "text": "So lernst du wie auf einem Blatt: Zuerst das Wort laut sagen. Dann tippe auf das Feld und decke die Lösung auf. Dann prüfe: Hast du es gewusst? Danach kommt das nächste Wort. Mit dem Knopf oben wechselst du die Richtung.",
+     "list": true
+    }
+   ],
+   "cards": [
+    {
+     "id": "6u1_1",
+     "fw": "faire les devoirs",
+     "de": [
+      "die Hausaufgaben machen"
+     ],
+     "grp": "ort"
+    },
+    {
+     "id": "6u1_2",
+     "fw": "à la maison",
+     "de": [
+      "zu Hause"
+     ],
+     "grp": "ort"
+    },
+    {
+     "id": "6u1_3",
+     "fw": "à l'école",
+     "de": [
+      "in der Schule"
+     ],
+     "grp": "ort"
+    },
+    {
+     "id": "6u1_4",
+     "fw": "sur une île",
+     "de": [
+      "auf einer Insel"
+     ],
+     "grp": "ort"
+    },
+    {
+     "id": "6u1_5",
+     "fw": "dans le métro",
+     "de": [
+      "in der Métro",
+      "in der U-Bahn"
+     ],
+     "grp": "ort"
+    },
+    {
+     "id": "6u1_6",
+     "fw": "dehors",
+     "de": [
+      "draussen"
+     ],
+     "grp": "ort"
+    },
+    {
+     "id": "6u1_7",
+     "fw": "dans l'eau",
+     "de": [
+      "im Wasser"
+     ],
+     "grp": "ort"
+    },
+    {
+     "id": "6u1_8",
+     "fw": "sur la tablette (numérique)",
+     "de": [
+      "auf dem Tabletcomputer"
+     ],
+     "grp": "ort"
+    },
+    {
+     "id": "6u1_9",
+     "fw": "Comment?",
+     "de": [
+      "Wie?"
+     ],
+     "grp": "qw"
+    },
+    {
+     "id": "6u1_10",
+     "fw": "Où?",
+     "de": [
+      "Wo?"
+     ],
+     "grp": "qw"
+    },
+    {
+     "id": "6u1_11",
+     "fw": "Quand?",
+     "de": [
+      "Wann?"
+     ],
+     "grp": "qw"
+    },
+    {
+     "id": "6u1_12",
+     "fw": "Quoi?",
+     "de": [
+      "Was?"
+     ],
+     "grp": "qw"
+    },
+    {
+     "id": "6u1_13",
+     "fw": "Qu'est-ce que tu fais?",
+     "de": [
+      "Was machst du?"
+     ],
+     "grp": "qw"
+    },
+    {
+     "id": "6u1_14",
+     "fw": "Qui?",
+     "de": [
+      "Wer?"
+     ],
+     "grp": "qw"
+    },
+    {
+     "id": "6u1_15",
+     "fw": "sur",
+     "de": [
+      "auf"
+     ],
+     "grp": "prep"
+    },
+    {
+     "id": "6u1_16",
+     "fw": "sous",
+     "de": [
+      "unter"
+     ],
+     "grp": "prep"
+    },
+    {
+     "id": "6u1_17",
+     "fw": "dans",
+     "de": [
+      "in"
+     ],
+     "grp": "prep"
+    },
+    {
+     "id": "6u1_18",
+     "fw": "au milieu de",
+     "de": [
+      "in der Mitte von"
+     ],
+     "grp": "prep"
+    },
+    {
+     "id": "6u1_19",
+     "fw": "à",
+     "de": [
+      "in",
+      "bei",
+      "zu",
+      "an"
+     ],
+     "grp": "prep"
+    },
+    {
+     "id": "6u1_20",
+     "fw": "devant",
+     "de": [
+      "vor"
+     ],
+     "grp": "prep"
+    },
+    {
+     "id": "6u1_21",
+     "fw": "derrière",
+     "de": [
+      "hinter"
+     ],
+     "grp": "prep"
+    },
+    {
+     "id": "6u1_22",
+     "fw": "entre … et",
+     "de": [
+      "zwischen … und"
+     ],
+     "grp": "prep"
+    },
+    {
+     "id": "6u1_23",
+     "fw": "dormir",
+     "de": [
+      "schlafen"
+     ],
+     "grp": "zeit"
+    },
+    {
+     "id": "6u1_24",
+     "fw": "lire",
+     "de": [
+      "lesen"
+     ],
+     "grp": "zeit"
+    },
+    {
+     "id": "6u1_25",
+     "fw": "à la mer",
+     "de": [
+      "am Meer"
+     ],
+     "grp": "zeit"
+    },
+    {
+     "id": "6u1_26",
+     "fw": "sous un arbre",
+     "de": [
+      "unter einem Baum"
+     ],
+     "grp": "zeit"
+    },
+    {
+     "id": "6u1_27",
+     "fw": "avec mon ami / amie",
+     "de": [
+      "mit meinem Freund / meiner Freundin"
+     ],
+     "grp": "zeit"
+    },
+    {
+     "id": "6u1_28",
+     "fw": "seul / seule",
+     "de": [
+      "alleine"
+     ],
+     "grp": "zeit"
+    },
+    {
+     "id": "6u1_29",
+     "fw": "le matin",
+     "de": [
+      "der Morgen",
+      "am Morgen"
+     ],
+     "grp": "zeit"
+    },
+    {
+     "id": "6u1_30",
+     "fw": "à midi",
+     "de": [
+      "am Mittag"
+     ],
+     "grp": "zeit"
+    },
+    {
+     "id": "6u1_31",
+     "fw": "l'après-midi",
+     "de": [
+      "der Nachmittag",
+      "am Nachmittag"
+     ],
+     "grp": "zeit"
+    },
+    {
+     "id": "6u1_32",
+     "fw": "le soir",
+     "de": [
+      "der Abend",
+      "am Abend"
+     ],
+     "grp": "zeit"
+    },
+    {
+     "id": "6u1_33",
+     "fw": "la nuit",
+     "de": [
+      "die Nacht",
+      "in der Nacht"
+     ],
+     "grp": "zeit"
+    },
+    {
+     "id": "6u1_34",
+     "fw": "le week-end",
+     "de": [
+      "das Wochenende",
+      "am Wochenende"
+     ],
+     "grp": "zeit"
+    },
+    {
+     "id": "6u1_35",
+     "fw": "le monde",
+     "de": [
+      "die Welt"
+     ],
+     "grp": "zeit"
+    },
+    {
+     "id": "6u1_36",
+     "fw": "partout",
+     "de": [
+      "überall"
+     ],
+     "grp": "zeit"
+    },
+    {
+     "id": "6u1_37",
+     "fw": "sous un cocotier",
+     "de": [
+      "unter einer Kokospalme"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u1_38",
+     "fw": "le lieu",
+     "de": [
+      "der Ort"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u1_39",
+     "fw": "dans le couloir",
+     "de": [
+      "auf dem Gang",
+      "im Flur"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u1_40",
+     "fw": "sur le sable",
+     "de": [
+      "auf dem Sand"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u1_41",
+     "fw": "dans le village",
+     "de": [
+      "im Dorf"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u1_42",
+     "fw": "à 19 heures",
+     "de": [
+      "um 19 Uhr"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u1_43",
+     "fw": "Pourquoi?",
+     "de": [
+      "Warum?"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u1_44",
+     "fw": "Quel / Quelle?",
+     "de": [
+      "Welcher / Welche?"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u1_45",
+     "fw": "réfléchir",
+     "de": [
+      "nachdenken"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u1_46",
+     "fw": "dans un hamac",
+     "de": [
+      "in einer Hängematte"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u1_47",
+     "fw": "sur une grande chaise confortable",
+     "de": [
+      "auf einem grossen",
+      "bequemen Stuhl"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u1_48",
+     "fw": "travailler",
+     "de": [
+      "arbeiten"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u1_49",
+     "fw": "pour être motivé / motivée",
+     "de": [
+      "um motiviert zu sein"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u1_50",
+     "fw": "pour rester concentré / concentrée",
+     "de": [
+      "um konzentriert zu bleiben"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u1_51",
+     "fw": "pour avoir de l'aide",
+     "de": [
+      "um Hilfe zu haben / bekommen"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u1_52",
+     "fw": "parce que c'est amusant",
+     "de": [
+      "weil es lustig ist"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u1_53",
+     "fw": "pour être libre le soir",
+     "de": [
+      "um am Abend frei zu sein"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u1_54",
+     "fw": "pour être libre après",
+     "de": [
+      "um danach frei zu sein"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u1_55",
+     "fw": "pour avoir l'aide de mes parents",
+     "de": [
+      "um Hilfe von meinen Eltern zu haben"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u1_56",
+     "fw": "pour avoir une semaine agréable",
+     "de": [
+      "um eine angenehme Woche zu haben"
+     ],
+     "grp": "plus"
+    }
+   ],
+   "exam": {
+    "minutes": 30,
+    "questions": [
+     {
+      "id": "q1",
+      "q": "Wie heisst «die Hausaufgaben machen» auf Französisch?",
+      "explain": "die Hausaufgaben machen = faire les devoirs",
+      "ref": "6u1_1",
+      "type": "input",
+      "answer": [
+       "faire les devoirs"
+      ]
+     },
+     {
+      "id": "q2",
+      "q": "Wie heisst «zu Hause» auf Französisch?",
+      "explain": "zu Hause = à la maison",
+      "ref": "6u1_2",
+      "type": "input",
+      "answer": [
+       "à la maison"
+      ]
+     },
+     {
+      "id": "q3",
+      "q": "Wie heisst «auf einer Insel» auf Französisch?",
+      "explain": "auf einer Insel = sur une île",
+      "ref": "6u1_4",
+      "type": "input",
+      "answer": [
+       "sur une île"
+      ]
+     },
+     {
+      "id": "q4",
+      "q": "Wie heisst «draussen» auf Französisch?",
+      "explain": "draussen = dehors",
+      "ref": "6u1_6",
+      "type": "input",
+      "answer": [
+       "dehors"
+      ]
+     },
+     {
+      "id": "q5",
+      "q": "Wie heisst «auf» auf Französisch?",
+      "explain": "auf = sur",
+      "ref": "6u1_15",
+      "type": "input",
+      "answer": [
+       "sur"
+      ]
+     },
+     {
+      "id": "q6",
+      "q": "Wie heisst «unter» auf Französisch?",
+      "explain": "unter = sous",
+      "ref": "6u1_16",
+      "type": "input",
+      "answer": [
+       "sous"
+      ]
+     },
+     {
+      "id": "q7",
+      "q": "Wie heisst «in der Mitte von» auf Französisch?",
+      "explain": "in der Mitte von = au milieu de",
+      "ref": "6u1_18",
+      "type": "input",
+      "answer": [
+       "au milieu de"
+      ]
+     },
+     {
+      "id": "q8",
+      "q": "Wie heisst «vor» auf Französisch?",
+      "explain": "vor = devant",
+      "ref": "6u1_20",
+      "type": "input",
+      "answer": [
+       "devant"
+      ]
+     },
+     {
+      "id": "q9",
+      "q": "Wie heisst «schlafen» auf Französisch?",
+      "explain": "schlafen = dormir",
+      "ref": "6u1_23",
+      "type": "input",
+      "answer": [
+       "dormir"
+      ]
+     },
+     {
+      "id": "q10",
+      "q": "Wie heisst «lesen» auf Französisch?",
+      "explain": "lesen = lire",
+      "ref": "6u1_24",
+      "type": "input",
+      "answer": [
+       "lire"
+      ]
+     },
+     {
+      "id": "q11",
+      "q": "Wie heisst «unter einem Baum» auf Französisch?",
+      "explain": "unter einem Baum = sous un arbre",
+      "ref": "6u1_26",
+      "type": "input",
+      "answer": [
+       "sous un arbre"
+      ]
+     },
+     {
+      "id": "q12",
+      "q": "Wie heisst «am Mittag» auf Französisch?",
+      "explain": "am Mittag = à midi",
+      "ref": "6u1_30",
+      "type": "input",
+      "answer": [
+       "à midi"
+      ]
+     },
+     {
+      "id": "q13",
+      "q": "Wie heisst «der Abend» auf Französisch?",
+      "explain": "der Abend = le soir",
+      "ref": "6u1_32",
+      "type": "input",
+      "answer": [
+       "le soir",
+       "soir"
+      ]
+     },
+     {
+      "id": "q14",
+      "q": "Wie heisst «die Nacht» auf Französisch?",
+      "explain": "die Nacht = la nuit",
+      "ref": "6u1_33",
+      "type": "input",
+      "answer": [
+       "la nuit",
+       "nuit"
+      ]
+     },
+     {
+      "id": "q15",
+      "q": "Wie heisst «die Welt» auf Französisch?",
+      "explain": "die Welt = le monde",
+      "ref": "6u1_35",
+      "type": "input",
+      "answer": [
+       "le monde",
+       "monde"
+      ]
+     },
+     {
+      "id": "q16",
+      "q": "Wie heisst «unter einer Kokospalme» auf Französisch?",
+      "explain": "unter einer Kokospalme = sous un cocotier",
+      "ref": "6u1_37",
+      "type": "input",
+      "answer": [
+       "sous un cocotier"
+      ]
+     },
+     {
+      "id": "q17",
+      "q": "Wie heisst «auf dem Gang» auf Französisch?",
+      "explain": "auf dem Gang = dans le couloir",
+      "ref": "6u1_39",
+      "type": "input",
+      "answer": [
+       "dans le couloir"
+      ]
+     },
+     {
+      "id": "q18",
+      "q": "Wie heisst «auf dem Sand» auf Französisch?",
+      "explain": "auf dem Sand = sur le sable",
+      "ref": "6u1_40",
+      "type": "input",
+      "answer": [
+       "sur le sable"
+      ]
+     },
+     {
+      "id": "q19",
+      "q": "Wie heisst «um 19 Uhr» auf Französisch?",
+      "explain": "um 19 Uhr = à 19 heures",
+      "ref": "6u1_42",
+      "type": "input",
+      "answer": [
+       "à 19 heures"
+      ]
+     },
+     {
+      "id": "q20",
+      "q": "Wie heisst «in einer Hängematte» auf Französisch?",
+      "explain": "in einer Hängematte = dans un hamac",
+      "ref": "6u1_46",
+      "type": "input",
+      "answer": [
+       "dans un hamac"
+      ]
+     }
+    ]
+   },
+   "theory": {
+    "ort": {
+     "h": "Wo und was?",
+     "text": "Mit à (in, zu, an), sur (auf), dans (in) und sous (unter) sagst du, wo etwas ist. à la maison = zu Hause, à l'école = in der Schule."
+    },
+    "qw": {
+     "h": "Fragewörter",
+     "text": "Comment? = Wie? Où? = Wo? Quand? = Wann? Quoi? = Was? Qui? = Wer? Mit Qu'est-ce que tu fais? fragst du: Was machst du?"
+    },
+    "prep": {
+     "h": "Präpositionen",
+     "text": "sur = auf, sous = unter, dans = in, devant = vor, derrière = hinter, entre … et = zwischen … und, au milieu de = in der Mitte von."
+    },
+    "zeit": {
+     "h": "Tageszeiten und Orte",
+     "text": "le matin = am Morgen, à midi = am Mittag, l'après-midi = am Nachmittag, le soir = am Abend, la nuit = in der Nacht, le week-end = am Wochenende."
+    },
+    "plus": {
+     "h": "Zusatzwörter",
+     "text": "Hier stehen die Wörter aus «Vocabulaire plus». Pourquoi? = Warum? Die Antwort beginnt oft mit pour (um zu) oder parce que (weil)."
+    }
+   },
+   "art": "franz"
+  },
+  {
+   "id": "kl6-franz-unit2-chez-moi",
+   "child": "kl6",
+   "subject": "franz",
+   "chapter": "Unit 2 · Chez moi",
+   "title": "Unit 2 · Chez moi",
+   "explain": [
+    {
+     "h": "Wörterliste zum Durchlernen",
+     "text": "So lernst du wie auf einem Blatt: Zuerst das Wort laut sagen. Dann tippe auf das Feld und decke die Lösung auf. Dann prüfe: Hast du es gewusst? Danach kommt das nächste Wort. Mit dem Knopf oben wechselst du die Richtung.",
+     "list": true
+    }
+   ],
+   "cards": [
+    {
+     "id": "6u2_1",
+     "fw": "la maison",
+     "de": [
+      "das Haus"
+     ],
+     "grp": "maison"
+    },
+    {
+     "id": "6u2_2",
+     "fw": "un appartement",
+     "de": [
+      "eine Wohnung"
+     ],
+     "grp": "maison"
+    },
+    {
+     "id": "6u2_3",
+     "fw": "la cuisine",
+     "de": [
+      "die Küche"
+     ],
+     "grp": "maison"
+    },
+    {
+     "id": "6u2_4",
+     "fw": "le salon",
+     "de": [
+      "das Wohnzimmer"
+     ],
+     "grp": "maison"
+    },
+    {
+     "id": "6u2_5",
+     "fw": "la chambre",
+     "de": [
+      "das Zimmer",
+      "das Schlafzimmer"
+     ],
+     "grp": "maison"
+    },
+    {
+     "id": "6u2_6",
+     "fw": "les toilettes, le WC",
+     "de": [
+      "die Toilette",
+      "das WC"
+     ],
+     "grp": "maison"
+    },
+    {
+     "id": "6u2_7",
+     "fw": "la salle de bains",
+     "de": [
+      "das Badezimmer"
+     ],
+     "grp": "maison"
+    },
+    {
+     "id": "6u2_8",
+     "fw": "un étage",
+     "de": [
+      "ein Stockwerk"
+     ],
+     "grp": "maison"
+    },
+    {
+     "id": "6u2_9",
+     "fw": "le rez-de-chaussée",
+     "de": [
+      "das Erdgeschoss"
+     ],
+     "grp": "maison"
+    },
+    {
+     "id": "6u2_10",
+     "fw": "le sous-sol",
+     "de": [
+      "das Untergeschoss"
+     ],
+     "grp": "maison"
+    },
+    {
+     "id": "6u2_11",
+     "fw": "J'habite au premier étage.",
+     "de": [
+      "Ich wohne im ersten Stock."
+     ],
+     "grp": "maison"
+    },
+    {
+     "id": "6u2_12",
+     "fw": "Tu habites au deuxième étage.",
+     "de": [
+      "Du wohnst im zweiten Stock."
+     ],
+     "grp": "maison"
+    },
+    {
+     "id": "6u2_13",
+     "fw": "Il habite au troisième étage.",
+     "de": [
+      "Er wohnt im dritten Stock."
+     ],
+     "grp": "maison"
+    },
+    {
+     "id": "6u2_14",
+     "fw": "travailler",
+     "de": [
+      "arbeiten"
+     ],
+     "grp": "maison"
+    },
+    {
+     "id": "6u2_15",
+     "fw": "Je travaille à la pharmacie.",
+     "de": [
+      "Ich arbeite in der Apotheke."
+     ],
+     "grp": "maison"
+    },
+    {
+     "id": "6u2_16",
+     "fw": "sur",
+     "de": [
+      "auf"
+     ],
+     "grp": "prep"
+    },
+    {
+     "id": "6u2_17",
+     "fw": "sous",
+     "de": [
+      "unter"
+     ],
+     "grp": "prep"
+    },
+    {
+     "id": "6u2_18",
+     "fw": "dans",
+     "de": [
+      "in"
+     ],
+     "grp": "prep"
+    },
+    {
+     "id": "6u2_19",
+     "fw": "au milieu de",
+     "de": [
+      "in der Mitte von"
+     ],
+     "grp": "prep"
+    },
+    {
+     "id": "6u2_20",
+     "fw": "à",
+     "de": [
+      "in",
+      "an",
+      "zu",
+      "bei"
+     ],
+     "grp": "prep"
+    },
+    {
+     "id": "6u2_21",
+     "fw": "devant",
+     "de": [
+      "vor"
+     ],
+     "grp": "prep"
+    },
+    {
+     "id": "6u2_22",
+     "fw": "derrière",
+     "de": [
+      "hinter"
+     ],
+     "grp": "prep"
+    },
+    {
+     "id": "6u2_23",
+     "fw": "entre … et",
+     "de": [
+      "zwischen … und"
+     ],
+     "grp": "prep"
+    },
+    {
+     "id": "6u2_24",
+     "fw": "en haut",
+     "de": [
+      "oben"
+     ],
+     "grp": "prep"
+    },
+    {
+     "id": "6u2_25",
+     "fw": "en bas",
+     "de": [
+      "unten"
+     ],
+     "grp": "prep"
+    },
+    {
+     "id": "6u2_26",
+     "fw": "la porte",
+     "de": [
+      "die Türe"
+     ],
+     "grp": "meuble"
+    },
+    {
+     "id": "6u2_27",
+     "fw": "la fenêtre",
+     "de": [
+      "das Fenster"
+     ],
+     "grp": "meuble"
+    },
+    {
+     "id": "6u2_28",
+     "fw": "le lit",
+     "de": [
+      "das Bett"
+     ],
+     "grp": "meuble"
+    },
+    {
+     "id": "6u2_29",
+     "fw": "la table",
+     "de": [
+      "der Tisch"
+     ],
+     "grp": "meuble"
+    },
+    {
+     "id": "6u2_30",
+     "fw": "la chaise",
+     "de": [
+      "der Stuhl"
+     ],
+     "grp": "meuble"
+    },
+    {
+     "id": "6u2_31",
+     "fw": "une étagère",
+     "de": [
+      "ein Gestell"
+     ],
+     "grp": "meuble"
+    },
+    {
+     "id": "6u2_32",
+     "fw": "une armoire",
+     "de": [
+      "ein Schrank"
+     ],
+     "grp": "meuble"
+    },
+    {
+     "id": "6u2_33",
+     "fw": "le fauteuil",
+     "de": [
+      "der Sessel"
+     ],
+     "grp": "meuble"
+    },
+    {
+     "id": "6u2_34",
+     "fw": "le tapis",
+     "de": [
+      "der Teppich"
+     ],
+     "grp": "meuble"
+    },
+    {
+     "id": "6u2_35",
+     "fw": "la commode",
+     "de": [
+      "die Kommode"
+     ],
+     "grp": "meuble"
+    },
+    {
+     "id": "6u2_36",
+     "fw": "la plante",
+     "de": [
+      "die Pflanze"
+     ],
+     "grp": "meuble"
+    },
+    {
+     "id": "6u2_37",
+     "fw": "une affiche",
+     "de": [
+      "ein Poster"
+     ],
+     "grp": "meuble"
+    },
+    {
+     "id": "6u2_38",
+     "fw": "à gauche de la lampe",
+     "de": [
+      "links von der Lampe"
+     ],
+     "grp": "meuble"
+    },
+    {
+     "id": "6u2_39",
+     "fw": "à gauche du piano",
+     "de": [
+      "links vom Klavier"
+     ],
+     "grp": "meuble"
+    },
+    {
+     "id": "6u2_40",
+     "fw": "à droite de l'étagère",
+     "de": [
+      "rechts vom Gestell"
+     ],
+     "grp": "meuble"
+    },
+    {
+     "id": "6u2_41",
+     "fw": "le séjour (le salon)",
+     "de": [
+      "das Wohnzimmer"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u2_42",
+     "fw": "la salle à manger",
+     "de": [
+      "das Esszimmer"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u2_43",
+     "fw": "la chambre d'amis",
+     "de": [
+      "das Gästezimmer"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u2_44",
+     "fw": "la buanderie",
+     "de": [
+      "die Waschküche"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u2_45",
+     "fw": "le grenier",
+     "de": [
+      "der Estrich"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u2_46",
+     "fw": "Combien de pièces a ta maison?",
+     "de": [
+      "Wie viele Zimmer hat dein Haus?"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u2_47",
+     "fw": "Qui habite avec toi?",
+     "de": [
+      "Wer wohnt mit dir?"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u2_48",
+     "fw": "Où est ta chambre?",
+     "de": [
+      "Wo ist dein Zimmer?"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u2_49",
+     "fw": "À quel étage est la chambre d'amis?",
+     "de": [
+      "Auf welchem Stockwerk ist das Gästezimmer?"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u2_50",
+     "fw": "le rideau",
+     "de": [
+      "der Vorhang"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u2_51",
+     "fw": "la bibliothèque",
+     "de": [
+      "das Büchergestell"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u2_52",
+     "fw": "la corbeille à papier",
+     "de": [
+      "der Papierkorb"
+     ],
+     "grp": "plus"
+    }
+   ],
+   "exam": {
+    "minutes": 30,
+    "questions": [
+     {
+      "id": "q1",
+      "q": "Wie heisst «das Haus» auf Französisch?",
+      "explain": "das Haus = la maison",
+      "ref": "6u2_1",
+      "type": "input",
+      "answer": [
+       "la maison",
+       "maison"
+      ]
+     },
+     {
+      "id": "q2",
+      "q": "Wie heisst «eine Wohnung» auf Französisch?",
+      "explain": "eine Wohnung = un appartement",
+      "ref": "6u2_2",
+      "type": "input",
+      "answer": [
+       "un appartement",
+       "appartement"
+      ]
+     },
+     {
+      "id": "q3",
+      "q": "Wie heisst «das Wohnzimmer» auf Französisch?",
+      "explain": "das Wohnzimmer = le salon",
+      "ref": "6u2_4",
+      "type": "input",
+      "answer": [
+       "le salon",
+       "salon"
+      ]
+     },
+     {
+      "id": "q4",
+      "q": "Wie heisst «ein Stockwerk» auf Französisch?",
+      "explain": "ein Stockwerk = un étage",
+      "ref": "6u2_8",
+      "type": "input",
+      "answer": [
+       "un étage",
+       "étage"
+      ]
+     },
+     {
+      "id": "q5",
+      "q": "Wie heisst «das Untergeschoss» auf Französisch?",
+      "explain": "das Untergeschoss = le sous-sol",
+      "ref": "6u2_10",
+      "type": "input",
+      "answer": [
+       "le sous-sol",
+       "sous-sol"
+      ]
+     },
+     {
+      "id": "q6",
+      "q": "Wie heisst «arbeiten» auf Französisch?",
+      "explain": "arbeiten = travailler",
+      "ref": "6u2_14",
+      "type": "input",
+      "answer": [
+       "travailler"
+      ]
+     },
+     {
+      "id": "q7",
+      "q": "Wie heisst «unter» auf Französisch?",
+      "explain": "unter = sous",
+      "ref": "6u2_17",
+      "type": "input",
+      "answer": [
+       "sous"
+      ]
+     },
+     {
+      "id": "q8",
+      "q": "Wie heisst «in der Mitte von» auf Französisch?",
+      "explain": "in der Mitte von = au milieu de",
+      "ref": "6u2_19",
+      "type": "input",
+      "answer": [
+       "au milieu de"
+      ]
+     },
+     {
+      "id": "q9",
+      "q": "Wie heisst «vor» auf Französisch?",
+      "explain": "vor = devant",
+      "ref": "6u2_21",
+      "type": "input",
+      "answer": [
+       "devant"
+      ]
+     },
+     {
+      "id": "q10",
+      "q": "Wie heisst «hinter» auf Französisch?",
+      "explain": "hinter = derrière",
+      "ref": "6u2_22",
+      "type": "input",
+      "answer": [
+       "derrière"
+      ]
+     },
+     {
+      "id": "q11",
+      "q": "Wie heisst «unten» auf Französisch?",
+      "explain": "unten = en bas",
+      "ref": "6u2_25",
+      "type": "input",
+      "answer": [
+       "en bas"
+      ]
+     },
+     {
+      "id": "q12",
+      "q": "Wie heisst «das Fenster» auf Französisch?",
+      "explain": "das Fenster = la fenêtre",
+      "ref": "6u2_27",
+      "type": "input",
+      "answer": [
+       "la fenêtre",
+       "fenêtre"
+      ]
+     },
+     {
+      "id": "q13",
+      "q": "Wie heisst «der Tisch» auf Französisch?",
+      "explain": "der Tisch = la table",
+      "ref": "6u2_29",
+      "type": "input",
+      "answer": [
+       "la table",
+       "table"
+      ]
+     },
+     {
+      "id": "q14",
+      "q": "Wie heisst «der Stuhl» auf Französisch?",
+      "explain": "der Stuhl = la chaise",
+      "ref": "6u2_30",
+      "type": "input",
+      "answer": [
+       "la chaise",
+       "chaise"
+      ]
+     },
+     {
+      "id": "q15",
+      "q": "Wie heisst «ein Schrank» auf Französisch?",
+      "explain": "ein Schrank = une armoire",
+      "ref": "6u2_32",
+      "type": "input",
+      "answer": [
+       "une armoire",
+       "e armoire"
+      ]
+     },
+     {
+      "id": "q16",
+      "q": "Wie heisst «der Teppich» auf Französisch?",
+      "explain": "der Teppich = le tapis",
+      "ref": "6u2_34",
+      "type": "input",
+      "answer": [
+       "le tapis",
+       "tapis"
+      ]
+     },
+     {
+      "id": "q17",
+      "q": "Wie heisst «die Pflanze» auf Französisch?",
+      "explain": "die Pflanze = la plante",
+      "ref": "6u2_36",
+      "type": "input",
+      "answer": [
+       "la plante",
+       "plante"
+      ]
+     },
+     {
+      "id": "q18",
+      "q": "Wie heisst «ein Poster» auf Französisch?",
+      "explain": "ein Poster = une affiche",
+      "ref": "6u2_37",
+      "type": "input",
+      "answer": [
+       "une affiche",
+       "e affiche"
+      ]
+     },
+     {
+      "id": "q19",
+      "q": "Wie heisst «die Waschküche» auf Französisch?",
+      "explain": "die Waschküche = la buanderie",
+      "ref": "6u2_44",
+      "type": "input",
+      "answer": [
+       "la buanderie",
+       "buanderie"
+      ]
+     },
+     {
+      "id": "q20",
+      "q": "Wie heisst «der Vorhang» auf Französisch?",
+      "explain": "der Vorhang = le rideau",
+      "ref": "6u2_50",
+      "type": "input",
+      "answer": [
+       "le rideau",
+       "rideau"
+      ]
+     }
+    ]
+   },
+   "theory": {
+    "maison": {
+     "h": "Das Haus",
+     "text": "la maison = das Haus, un appartement = eine Wohnung. Die Stockwerke: le rez-de-chaussée (Erdgeschoss), le premier étage, le deuxième étage …"
+    },
+    "prep": {
+     "h": "Wo ist es?",
+     "text": "sur, sous, dans, devant, derrière, entre … et sagen dir, wo etwas steht. en haut = oben, en bas = unten."
+    },
+    "meuble": {
+     "h": "Möbel und Zimmer",
+     "text": "à gauche de = links von, à droite de = rechts von. Vor Vokalen heisst es de l'…, sonst du (le) oder de la."
+    },
+    "plus": {
+     "h": "Zusatzwörter",
+     "text": "Wörter aus «Vocabulaire plus»: weitere Zimmer, Fragen zum Haus und Dinge im Zimmer."
+    }
+   },
+   "art": "franz"
+  },
+  {
+   "id": "kl6-franz-unit3-bouger",
+   "child": "kl6",
+   "subject": "franz",
+   "chapter": "Unit 3 · Un tas de verbes",
+   "title": "Unit 3 · Un tas de verbes",
+   "explain": [
+    {
+     "h": "Wörterliste zum Durchlernen",
+     "text": "So lernst du wie auf einem Blatt: Zuerst das Wort laut sagen. Dann tippe auf das Feld und decke die Lösung auf. Dann prüfe: Hast du es gewusst? Danach kommt das nächste Wort. Mit dem Knopf oben wechselst du die Richtung.",
+     "list": true
+    }
+   ],
+   "cards": [
+    {
+     "id": "6u3_1",
+     "fw": "sportif / sportive",
+     "de": [
+      "sportlich"
+     ],
+     "grp": "verbe"
+    },
+    {
+     "id": "6u3_2",
+     "fw": "nouveau / nouvelle",
+     "de": [
+      "neu"
+     ],
+     "grp": "verbe"
+    },
+    {
+     "id": "6u3_3",
+     "fw": "les personnes handicapées",
+     "de": [
+      "Menschen mit Behinderungen"
+     ],
+     "grp": "verbe"
+    },
+    {
+     "id": "6u3_4",
+     "fw": "rouler",
+     "de": [
+      "rollen",
+      "fahren"
+     ],
+     "grp": "verbe"
+    },
+    {
+     "id": "6u3_5",
+     "fw": "aider",
+     "de": [
+      "helfen"
+     ],
+     "grp": "verbe"
+    },
+    {
+     "id": "6u3_6",
+     "fw": "regarder",
+     "de": [
+      "schauen"
+     ],
+     "grp": "verbe"
+    },
+    {
+     "id": "6u3_7",
+     "fw": "parler",
+     "de": [
+      "sprechen"
+     ],
+     "grp": "verbe"
+    },
+    {
+     "id": "6u3_8",
+     "fw": "penser",
+     "de": [
+      "denken"
+     ],
+     "grp": "verbe"
+    },
+    {
+     "id": "6u3_9",
+     "fw": "manger",
+     "de": [
+      "essen"
+     ],
+     "grp": "verbe"
+    },
+    {
+     "id": "6u3_10",
+     "fw": "trouver",
+     "de": [
+      "finden"
+     ],
+     "grp": "verbe"
+    },
+    {
+     "id": "6u3_11",
+     "fw": "montrer",
+     "de": [
+      "zeigen"
+     ],
+     "grp": "verbe"
+    },
+    {
+     "id": "6u3_12",
+     "fw": "oublier",
+     "de": [
+      "vergessen"
+     ],
+     "grp": "verbe"
+    },
+    {
+     "id": "6u3_13",
+     "fw": "aller",
+     "de": [
+      "gehen"
+     ],
+     "grp": "verbe"
+    },
+    {
+     "id": "6u3_14",
+     "fw": "comme les autres",
+     "de": [
+      "wie die anderen"
+     ],
+     "grp": "verbe"
+    },
+    {
+     "id": "6u3_15",
+     "fw": "je peux",
+     "de": [
+      "ich kann",
+      "ich darf"
+     ],
+     "grp": "verbe"
+    },
+    {
+     "id": "6u3_16",
+     "fw": "tout le monde",
+     "de": [
+      "alle"
+     ],
+     "grp": "verbe"
+    },
+    {
+     "id": "6u3_17",
+     "fw": "la jambe",
+     "de": [
+      "das Bein"
+     ],
+     "grp": "verbe"
+    },
+    {
+     "id": "6u3_18",
+     "fw": "le bras",
+     "de": [
+      "der Arm"
+     ],
+     "grp": "verbe"
+    },
+    {
+     "id": "6u3_19",
+     "fw": "un oiseau",
+     "de": [
+      "ein Vogel"
+     ],
+     "grp": "verbe"
+    },
+    {
+     "id": "6u3_20",
+     "fw": "être",
+     "de": [
+      "sein"
+     ],
+     "grp": "etre"
+    },
+    {
+     "id": "6u3_21",
+     "fw": "avoir",
+     "de": [
+      "haben"
+     ],
+     "grp": "etre"
+    },
+    {
+     "id": "6u3_22",
+     "fw": "la soif",
+     "de": [
+      "der Durst"
+     ],
+     "grp": "etre"
+    },
+    {
+     "id": "6u3_23",
+     "fw": "la faim",
+     "de": [
+      "der Hunger"
+     ],
+     "grp": "etre"
+    },
+    {
+     "id": "6u3_24",
+     "fw": "J'ai faim.",
+     "de": [
+      "Ich habe Hunger."
+     ],
+     "grp": "etre"
+    },
+    {
+     "id": "6u3_25",
+     "fw": "droit / droite",
+     "de": [
+      "rechts"
+     ],
+     "grp": "corps"
+    },
+    {
+     "id": "6u3_26",
+     "fw": "gauche",
+     "de": [
+      "links"
+     ],
+     "grp": "corps"
+    },
+    {
+     "id": "6u3_27",
+     "fw": "le pied",
+     "de": [
+      "der Fuss"
+     ],
+     "grp": "corps"
+    },
+    {
+     "id": "6u3_28",
+     "fw": "taper du pied gauche",
+     "de": [
+      "mit dem linken Fuss stampfen"
+     ],
+     "grp": "corps"
+    },
+    {
+     "id": "6u3_29",
+     "fw": "le doigt",
+     "de": [
+      "der Finger"
+     ],
+     "grp": "corps"
+    },
+    {
+     "id": "6u3_30",
+     "fw": "claquer des doigts",
+     "de": [
+      "mit den Fingern schnippen"
+     ],
+     "grp": "corps"
+    },
+    {
+     "id": "6u3_31",
+     "fw": "la main",
+     "de": [
+      "die Hand"
+     ],
+     "grp": "corps"
+    },
+    {
+     "id": "6u3_32",
+     "fw": "frapper dans les mains",
+     "de": [
+      "in die Hände klatschen"
+     ],
+     "grp": "corps"
+    },
+    {
+     "id": "6u3_33",
+     "fw": "la poitrine",
+     "de": [
+      "die Brust"
+     ],
+     "grp": "corps"
+    },
+    {
+     "id": "6u3_34",
+     "fw": "frapper la main gauche sur la cuisse gauche",
+     "de": [
+      "mit der linken Hand auf den linken Oberschenkel schlagen"
+     ],
+     "grp": "corps"
+    },
+    {
+     "id": "6u3_35",
+     "fw": "la cuisse",
+     "de": [
+      "der Oberschenkel"
+     ],
+     "grp": "corps"
+    },
+    {
+     "id": "6u3_36",
+     "fw": "la joue",
+     "de": [
+      "die Wange"
+     ],
+     "grp": "corps"
+    },
+    {
+     "id": "6u3_37",
+     "fw": "frapper sur les joues",
+     "de": [
+      "auf die Wangen schlagen"
+     ],
+     "grp": "corps"
+    },
+    {
+     "id": "6u3_38",
+     "fw": "un entraînement",
+     "de": [
+      "ein Training"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u3_39",
+     "fw": "le front",
+     "de": [
+      "die Stirn"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u3_40",
+     "fw": "les gens",
+     "de": [
+      "die Leute"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u3_41",
+     "fw": "le fauteuil roulant",
+     "de": [
+      "der Rollstuhl"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u3_42",
+     "fw": "le rhume",
+     "de": [
+      "die Erkältung",
+      "der Schnupfen"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u3_43",
+     "fw": "une fois, deux fois",
+     "de": [
+      "einmal",
+      "zweimal"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u3_44",
+     "fw": "dans la rue",
+     "de": [
+      "auf der Strasse"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u3_45",
+     "fw": "difficile",
+     "de": [
+      "schwierig"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u3_46",
+     "fw": "différent / différente",
+     "de": [
+      "anders",
+      "verschieden"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u3_47",
+     "fw": "costaud / costaude",
+     "de": [
+      "kräftig",
+      "stark"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u3_48",
+     "fw": "capable",
+     "de": [
+      "fähig"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u3_49",
+     "fw": "traiter",
+     "de": [
+      "behandeln"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u3_50",
+     "fw": "traverser",
+     "de": [
+      "überqueren"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u3_51",
+     "fw": "imaginer",
+     "de": [
+      "sich vorstellen"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u3_52",
+     "fw": "fonctionner",
+     "de": [
+      "funktionieren"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u3_53",
+     "fw": "voler",
+     "de": [
+      "fliegen"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u3_54",
+     "fw": "monter",
+     "de": [
+      "hinaufsteigen",
+      "hinaufgehen"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u3_55",
+     "fw": "comprendre",
+     "de": [
+      "verstehen"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u3_56",
+     "fw": "le mouvement",
+     "de": [
+      "die Bewegung"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u3_57",
+     "fw": "bouger",
+     "de": [
+      "bewegen"
+     ],
+     "grp": "plus"
+    }
+   ],
+   "exam": {
+    "minutes": 30,
+    "questions": [
+     {
+      "id": "q1",
+      "q": "Wie heisst «Menschen mit Behinderungen» auf Französisch?",
+      "explain": "Menschen mit Behinderungen = les personnes handicapées",
+      "ref": "6u3_3",
+      "type": "input",
+      "answer": [
+       "les personnes handicapées"
+      ]
+     },
+     {
+      "id": "q2",
+      "q": "Wie heisst «helfen» auf Französisch?",
+      "explain": "helfen = aider",
+      "ref": "6u3_5",
+      "type": "input",
+      "answer": [
+       "aider"
+      ]
+     },
+     {
+      "id": "q3",
+      "q": "Wie heisst «sprechen» auf Französisch?",
+      "explain": "sprechen = parler",
+      "ref": "6u3_7",
+      "type": "input",
+      "answer": [
+       "parler"
+      ]
+     },
+     {
+      "id": "q4",
+      "q": "Wie heisst «essen» auf Französisch?",
+      "explain": "essen = manger",
+      "ref": "6u3_9",
+      "type": "input",
+      "answer": [
+       "manger"
+      ]
+     },
+     {
+      "id": "q5",
+      "q": "Wie heisst «vergessen» auf Französisch?",
+      "explain": "vergessen = oublier",
+      "ref": "6u3_12",
+      "type": "input",
+      "answer": [
+       "oublier"
+      ]
+     },
+     {
+      "id": "q6",
+      "q": "Wie heisst «wie die anderen» auf Französisch?",
+      "explain": "wie die anderen = comme les autres",
+      "ref": "6u3_14",
+      "type": "input",
+      "answer": [
+       "comme les autres"
+      ]
+     },
+     {
+      "id": "q7",
+      "q": "Wie heisst «alle» auf Französisch?",
+      "explain": "alle = tout le monde",
+      "ref": "6u3_16",
+      "type": "input",
+      "answer": [
+       "tout le monde"
+      ]
+     },
+     {
+      "id": "q8",
+      "q": "Wie heisst «ein Vogel» auf Französisch?",
+      "explain": "ein Vogel = un oiseau",
+      "ref": "6u3_19",
+      "type": "input",
+      "answer": [
+       "un oiseau",
+       "oiseau"
+      ]
+     },
+     {
+      "id": "q9",
+      "q": "Wie heisst «haben» auf Französisch?",
+      "explain": "haben = avoir",
+      "ref": "6u3_21",
+      "type": "input",
+      "answer": [
+       "avoir"
+      ]
+     },
+     {
+      "id": "q10",
+      "q": "Wie heisst «der Hunger» auf Französisch?",
+      "explain": "der Hunger = la faim",
+      "ref": "6u3_23",
+      "type": "input",
+      "answer": [
+       "la faim",
+       "faim"
+      ]
+     },
+     {
+      "id": "q11",
+      "q": "Wie heisst «der Finger» auf Französisch?",
+      "explain": "der Finger = le doigt",
+      "ref": "6u3_29",
+      "type": "input",
+      "answer": [
+       "le doigt",
+       "doigt"
+      ]
+     },
+     {
+      "id": "q12",
+      "q": "Wie heisst «die Hand» auf Französisch?",
+      "explain": "die Hand = la main",
+      "ref": "6u3_31",
+      "type": "input",
+      "answer": [
+       "la main",
+       "main"
+      ]
+     },
+     {
+      "id": "q13",
+      "q": "Wie heisst «der Oberschenkel» auf Französisch?",
+      "explain": "der Oberschenkel = la cuisse",
+      "ref": "6u3_35",
+      "type": "input",
+      "answer": [
+       "la cuisse",
+       "cuisse"
+      ]
+     },
+     {
+      "id": "q14",
+      "q": "Wie heisst «ein Training» auf Französisch?",
+      "explain": "ein Training = un entraînement",
+      "ref": "6u3_38",
+      "type": "input",
+      "answer": [
+       "un entraînement",
+       "entraînement"
+      ]
+     },
+     {
+      "id": "q15",
+      "q": "Wie heisst «der Rollstuhl» auf Französisch?",
+      "explain": "der Rollstuhl = le fauteuil roulant",
+      "ref": "6u3_41",
+      "type": "input",
+      "answer": [
+       "le fauteuil roulant"
+      ]
+     },
+     {
+      "id": "q16",
+      "q": "Wie heisst «auf der Strasse» auf Französisch?",
+      "explain": "auf der Strasse = dans la rue",
+      "ref": "6u3_44",
+      "type": "input",
+      "answer": [
+       "dans la rue"
+      ]
+     },
+     {
+      "id": "q17",
+      "q": "Wie heisst «fähig» auf Französisch?",
+      "explain": "fähig = capable",
+      "ref": "6u3_48",
+      "type": "input",
+      "answer": [
+       "capable"
+      ]
+     },
+     {
+      "id": "q18",
+      "q": "Wie heisst «sich vorstellen» auf Französisch?",
+      "explain": "sich vorstellen = imaginer",
+      "ref": "6u3_51",
+      "type": "input",
+      "answer": [
+       "imaginer"
+      ]
+     },
+     {
+      "id": "q19",
+      "q": "Wie heisst «fliegen» auf Französisch?",
+      "explain": "fliegen = voler",
+      "ref": "6u3_53",
+      "type": "input",
+      "answer": [
+       "voler"
+      ]
+     },
+     {
+      "id": "q20",
+      "q": "Wie heisst «verstehen» auf Französisch?",
+      "explain": "verstehen = comprendre",
+      "ref": "6u3_55",
+      "type": "input",
+      "answer": [
+       "comprendre"
+      ]
+     }
+    ]
+   },
+   "theory": {
+    "verbe": {
+     "h": "Verben auf -er",
+     "text": "Viele Verben enden auf -er: regarder, parler, penser, manger, trouver, montrer, aider. Mit je peux sagst du: ich kann / ich darf."
+    },
+    "etre": {
+     "h": "Sein und haben",
+     "text": "être = sein, avoir = haben. J'ai faim = ich habe Hunger (wörtlich: ich habe den Hunger). Auch la soif (der Durst) sagt man mit avoir."
+    },
+    "corps": {
+     "h": "Der Körper",
+     "text": "Links = gauche, rechts = droite. Merke: la main, le pied, le doigt, la jambe, le bras. Damit beschreibst du Bewegungen wie frapper dans les mains."
+    },
+    "plus": {
+     "h": "Zusatzwörter",
+     "text": "Wörter aus «Vocabulaire plus»: Eigenschaften, weitere Verben und Bewegung."
+    }
+   },
+   "art": "franz"
+  },
+  {
+   "id": "kl6-franz-unit4-restaurant",
+   "child": "kl6",
+   "subject": "franz",
+   "chapter": "Unit 4 · Au restaurant",
+   "title": "Unit 4 · Au restaurant",
+   "explain": [
+    {
+     "h": "Wörterliste zum Durchlernen",
+     "text": "So lernst du wie auf einem Blatt: Zuerst das Wort laut sagen. Dann tippe auf das Feld und decke die Lösung auf. Dann prüfe: Hast du es gewusst? Danach kommt das nächste Wort. Mit dem Knopf oben wechselst du die Richtung.",
+     "list": true
+    }
+   ],
+   "cards": [
+    {
+     "id": "6u4_1",
+     "fw": "le plat typique",
+     "de": [
+      "das typische Gericht"
+     ],
+     "grp": "plat"
+    },
+    {
+     "id": "6u4_2",
+     "fw": "le lait",
+     "de": [
+      "die Milch"
+     ],
+     "grp": "plat"
+    },
+    {
+     "id": "6u4_3",
+     "fw": "le train",
+     "de": [
+      "der Zug"
+     ],
+     "grp": "plat"
+    },
+    {
+     "id": "6u4_4",
+     "fw": "la voiture",
+     "de": [
+      "das Auto"
+     ],
+     "grp": "plat"
+    },
+    {
+     "id": "6u4_5",
+     "fw": "la plage",
+     "de": [
+      "der Strand"
+     ],
+     "grp": "plat"
+    },
+    {
+     "id": "6u4_6",
+     "fw": "une entrée",
+     "de": [
+      "eine Vorspeise"
+     ],
+     "grp": "menu"
+    },
+    {
+     "id": "6u4_7",
+     "fw": "la salade verte",
+     "de": [
+      "der grüne Salat"
+     ],
+     "grp": "menu"
+    },
+    {
+     "id": "6u4_8",
+     "fw": "la soupe aux légumes",
+     "de": [
+      "die Gemüsesuppe"
+     ],
+     "grp": "menu"
+    },
+    {
+     "id": "6u4_9",
+     "fw": "la tarte",
+     "de": [
+      "der Teigboden mit Belag (salzig oder süss)"
+     ],
+     "grp": "menu"
+    },
+    {
+     "id": "6u4_10",
+     "fw": "le jambon cru",
+     "de": [
+      "der Rohschinken"
+     ],
+     "grp": "menu"
+    },
+    {
+     "id": "6u4_11",
+     "fw": "le plat principal",
+     "de": [
+      "der Hauptgang"
+     ],
+     "grp": "menu"
+    },
+    {
+     "id": "6u4_12",
+     "fw": "le riz",
+     "de": [
+      "der Reis"
+     ],
+     "grp": "menu"
+    },
+    {
+     "id": "6u4_13",
+     "fw": "les nouilles",
+     "de": [
+      "die Nudeln"
+     ],
+     "grp": "menu"
+    },
+    {
+     "id": "6u4_14",
+     "fw": "les frites",
+     "de": [
+      "die Pommes frites"
+     ],
+     "grp": "menu"
+    },
+    {
+     "id": "6u4_15",
+     "fw": "la purée de pommes de terre",
+     "de": [
+      "der Kartoffelstock"
+     ],
+     "grp": "menu"
+    },
+    {
+     "id": "6u4_16",
+     "fw": "une escalope",
+     "de": [
+      "ein Schnitzel"
+     ],
+     "grp": "menu"
+    },
+    {
+     "id": "6u4_17",
+     "fw": "le steak haché",
+     "de": [
+      "das Hacksteak"
+     ],
+     "grp": "menu"
+    },
+    {
+     "id": "6u4_18",
+     "fw": "le dessert",
+     "de": [
+      "das Dessert"
+     ],
+     "grp": "menu"
+    },
+    {
+     "id": "6u4_19",
+     "fw": "la crêpe",
+     "de": [
+      "der Pfannkuchen",
+      "die Crêpe"
+     ],
+     "grp": "menu"
+    },
+    {
+     "id": "6u4_20",
+     "fw": "le gâteau au chocolat",
+     "de": [
+      "der Schokoladenkuchen"
+     ],
+     "grp": "menu"
+    },
+    {
+     "id": "6u4_21",
+     "fw": "la glace",
+     "de": [
+      "das Eis"
+     ],
+     "grp": "menu"
+    },
+    {
+     "id": "6u4_22",
+     "fw": "la boisson",
+     "de": [
+      "das Getränk"
+     ],
+     "grp": "menu"
+    },
+    {
+     "id": "6u4_23",
+     "fw": "une eau minérale",
+     "de": [
+      "ein Mineralwasser"
+     ],
+     "grp": "menu"
+    },
+    {
+     "id": "6u4_24",
+     "fw": "le café",
+     "de": [
+      "der Kaffee"
+     ],
+     "grp": "menu"
+    },
+    {
+     "id": "6u4_25",
+     "fw": "le thé froid",
+     "de": [
+      "der Eistee"
+     ],
+     "grp": "menu"
+    },
+    {
+     "id": "6u4_26",
+     "fw": "Vous avez une table pour deux personnes?",
+     "de": [
+      "Haben Sie einen Tisch für zwei Personen?"
+     ],
+     "grp": "bestell"
+    },
+    {
+     "id": "6u4_27",
+     "fw": "Voici le menu.",
+     "de": [
+      "Hier ist die Speisekarte."
+     ],
+     "grp": "bestell"
+    },
+    {
+     "id": "6u4_28",
+     "fw": "Comme entrée, nous avons…",
+     "de": [
+      "Als Vorspeise haben wir ..."
+     ],
+     "grp": "bestell"
+    },
+    {
+     "id": "6u4_29",
+     "fw": "Comme plat principal, nous avons…",
+     "de": [
+      "Als Hauptgang haben wir ..."
+     ],
+     "grp": "bestell"
+    },
+    {
+     "id": "6u4_30",
+     "fw": "Comme dessert, nous avons…",
+     "de": [
+      "Als Dessert haben wir ..."
+     ],
+     "grp": "bestell"
+    },
+    {
+     "id": "6u4_31",
+     "fw": "commander",
+     "de": [
+      "bestellen"
+     ],
+     "grp": "bestell"
+    },
+    {
+     "id": "6u4_32",
+     "fw": "Qu'est-ce que vous prenez?",
+     "de": [
+      "Was nehmen Sie?"
+     ],
+     "grp": "bestell"
+    },
+    {
+     "id": "6u4_33",
+     "fw": "je prends",
+     "de": [
+      "ich nehme"
+     ],
+     "grp": "bestell"
+    },
+    {
+     "id": "6u4_34",
+     "fw": "pour moi",
+     "de": [
+      "für mich"
+     ],
+     "grp": "bestell"
+    },
+    {
+     "id": "6u4_35",
+     "fw": "s'il te plaît / s'il vous plaît",
+     "de": [
+      "bitte"
+     ],
+     "grp": "bestell"
+    },
+    {
+     "id": "6u4_36",
+     "fw": "Un / Une…, qu'est-ce que c'est?",
+     "de": [
+      "Ein / Eine …, was ist das?"
+     ],
+     "grp": "bestell"
+    },
+    {
+     "id": "6u4_37",
+     "fw": "Je recommande le plat du jour.",
+     "de": [
+      "Ich empfehle den Tagesteller."
+     ],
+     "grp": "bestell"
+    },
+    {
+     "id": "6u4_38",
+     "fw": "C'était délicieux!",
+     "de": [
+      "Es war lecker."
+     ],
+     "grp": "bestell"
+    },
+    {
+     "id": "6u4_39",
+     "fw": "une addition",
+     "de": [
+      "eine Rechnung"
+     ],
+     "grp": "bestell"
+    },
+    {
+     "id": "6u4_40",
+     "fw": "le poisson",
+     "de": [
+      "der Fisch"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u4_41",
+     "fw": "la courgette",
+     "de": [
+      "die Zucchini"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u4_42",
+     "fw": "le voyage",
+     "de": [
+      "die Reise"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u4_43",
+     "fw": "le sel",
+     "de": [
+      "das Salz"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u4_44",
+     "fw": "les moules",
+     "de": [
+      "die Muscheln"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u4_45",
+     "fw": "le loup de mer",
+     "de": [
+      "der Wolfsbarsch"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u4_46",
+     "fw": "le filet de bœuf",
+     "de": [
+      "das Rindsfilet"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u4_47",
+     "fw": "une assiette de fromage",
+     "de": [
+      "ein Käseteller"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u4_48",
+     "fw": "la crème brûlée à la vanille",
+     "de": [
+      "die gebrannte Vanillecrème"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u4_49",
+     "fw": "un ingrédient",
+     "de": [
+      "eine Zutat"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u4_50",
+     "fw": "le vin blanc / rouge",
+     "de": [
+      "der Weiss- / Rotwein"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u4_51",
+     "fw": "un thé",
+     "de": [
+      "ein Tee"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u4_52",
+     "fw": "la bouteille",
+     "de": [
+      "die Flasche"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u4_53",
+     "fw": "le verre",
+     "de": [
+      "das Glas"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u4_54",
+     "fw": "Suivez-moi.",
+     "de": [
+      "Folgen Sie mir."
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u4_55",
+     "fw": "Installez-vous.",
+     "de": [
+      "Nehmen Sie Platz."
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u4_56",
+     "fw": "C'est une spécialité de…",
+     "de": [
+      "Das ist eine Spezialität von ..."
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u4_57",
+     "fw": "Vous avez choisi?",
+     "de": [
+      "Haben Sie ausgesucht?"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u4_58",
+     "fw": "Qu'est-ce que vous aimeriez boire?",
+     "de": [
+      "Was möchten Sie trinken?"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u4_59",
+     "fw": "j'aimerais",
+     "de": [
+      "ich hätte gerne"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u4_60",
+     "fw": "Qu'est-ce qu'il y a dans ce plat?",
+     "de": [
+      "Was hat es in diesem Gericht?"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u4_61",
+     "fw": "Qu'est-ce que vous recommandez?",
+     "de": [
+      "Was empfehlen Sie?"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u4_62",
+     "fw": "Quelle est la spécialité du chef?",
+     "de": [
+      "Was ist die Spezialität des Chefs?"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u4_63",
+     "fw": "Ça a été?",
+     "de": [
+      "War es gut?"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u4_64",
+     "fw": "Non, pas trop!",
+     "de": [
+      "Nein, nicht besonders!"
+     ],
+     "grp": "plus"
+    }
+   ],
+   "exam": {
+    "minutes": 30,
+    "questions": [
+     {
+      "id": "q1",
+      "q": "Wie heisst «das typische Gericht» auf Französisch?",
+      "explain": "das typische Gericht = le plat typique",
+      "ref": "6u4_1",
+      "type": "input",
+      "answer": [
+       "le plat typique"
+      ]
+     },
+     {
+      "id": "q2",
+      "q": "Wie heisst «die Milch» auf Französisch?",
+      "explain": "die Milch = le lait",
+      "ref": "6u4_2",
+      "type": "input",
+      "answer": [
+       "le lait",
+       "lait"
+      ]
+     },
+     {
+      "id": "q3",
+      "q": "Wie heisst «das Auto» auf Französisch?",
+      "explain": "das Auto = la voiture",
+      "ref": "6u4_4",
+      "type": "input",
+      "answer": [
+       "la voiture",
+       "voiture"
+      ]
+     },
+     {
+      "id": "q4",
+      "q": "Wie heisst «eine Vorspeise» auf Französisch?",
+      "explain": "eine Vorspeise = une entrée",
+      "ref": "6u4_6",
+      "type": "input",
+      "answer": [
+       "une entrée",
+       "e entrée"
+      ]
+     },
+     {
+      "id": "q5",
+      "q": "Wie heisst «der Teigboden mit Belag (salzig oder süss)» auf Französisch?",
+      "explain": "der Teigboden mit Belag (salzig oder süss) = la tarte",
+      "ref": "6u4_9",
+      "type": "input",
+      "answer": [
+       "la tarte",
+       "tarte"
+      ]
+     },
+     {
+      "id": "q6",
+      "q": "Wie heisst «der Hauptgang» auf Französisch?",
+      "explain": "der Hauptgang = le plat principal",
+      "ref": "6u4_11",
+      "type": "input",
+      "answer": [
+       "le plat principal"
+      ]
+     },
+     {
+      "id": "q7",
+      "q": "Wie heisst «der Reis» auf Französisch?",
+      "explain": "der Reis = le riz",
+      "ref": "6u4_12",
+      "type": "input",
+      "answer": [
+       "le riz",
+       "riz"
+      ]
+     },
+     {
+      "id": "q8",
+      "q": "Wie heisst «die Pommes frites» auf Französisch?",
+      "explain": "die Pommes frites = les frites",
+      "ref": "6u4_14",
+      "type": "input",
+      "answer": [
+       "les frites",
+       "s frites"
+      ]
+     },
+     {
+      "id": "q9",
+      "q": "Wie heisst «das Hacksteak» auf Französisch?",
+      "explain": "das Hacksteak = le steak haché",
+      "ref": "6u4_17",
+      "type": "input",
+      "answer": [
+       "le steak haché"
+      ]
+     },
+     {
+      "id": "q10",
+      "q": "Wie heisst «der Pfannkuchen» auf Französisch?",
+      "explain": "der Pfannkuchen = la crêpe",
+      "ref": "6u4_19",
+      "type": "input",
+      "answer": [
+       "la crêpe",
+       "crêpe"
+      ]
+     },
+     {
+      "id": "q11",
+      "q": "Wie heisst «das Getränk» auf Französisch?",
+      "explain": "das Getränk = la boisson",
+      "ref": "6u4_22",
+      "type": "input",
+      "answer": [
+       "la boisson",
+       "boisson"
+      ]
+     },
+     {
+      "id": "q12",
+      "q": "Wie heisst «ein Mineralwasser» auf Französisch?",
+      "explain": "ein Mineralwasser = une eau minérale",
+      "ref": "6u4_23",
+      "type": "input",
+      "answer": [
+       "une eau minérale"
+      ]
+     },
+     {
+      "id": "q13",
+      "q": "Wie heisst «der Eistee» auf Französisch?",
+      "explain": "der Eistee = le thé froid",
+      "ref": "6u4_25",
+      "type": "input",
+      "answer": [
+       "le thé froid"
+      ]
+     },
+     {
+      "id": "q14",
+      "q": "Wie heisst «ich nehme» auf Französisch?",
+      "explain": "ich nehme = je prends",
+      "ref": "6u4_33",
+      "type": "input",
+      "answer": [
+       "je prends"
+      ]
+     },
+     {
+      "id": "q15",
+      "q": "Wie heisst «eine Rechnung» auf Französisch?",
+      "explain": "eine Rechnung = une addition",
+      "ref": "6u4_39",
+      "type": "input",
+      "answer": [
+       "une addition",
+       "e addition"
+      ]
+     },
+     {
+      "id": "q16",
+      "q": "Wie heisst «die Zucchini» auf Französisch?",
+      "explain": "die Zucchini = la courgette",
+      "ref": "6u4_41",
+      "type": "input",
+      "answer": [
+       "la courgette",
+       "courgette"
+      ]
+     },
+     {
+      "id": "q17",
+      "q": "Wie heisst «die Reise» auf Französisch?",
+      "explain": "die Reise = le voyage",
+      "ref": "6u4_42",
+      "type": "input",
+      "answer": [
+       "le voyage",
+       "voyage"
+      ]
+     },
+     {
+      "id": "q18",
+      "q": "Wie heisst «die Muscheln» auf Französisch?",
+      "explain": "die Muscheln = les moules",
+      "ref": "6u4_44",
+      "type": "input",
+      "answer": [
+       "les moules",
+       "s moules"
+      ]
+     },
+     {
+      "id": "q19",
+      "q": "Wie heisst «ein Tee» auf Französisch?",
+      "explain": "ein Tee = un thé",
+      "ref": "6u4_51",
+      "type": "input",
+      "answer": [
+       "un thé",
+       "thé"
+      ]
+     },
+     {
+      "id": "q20",
+      "q": "Wie heisst «das Glas» auf Französisch?",
+      "explain": "das Glas = le verre",
+      "ref": "6u4_53",
+      "type": "input",
+      "answer": [
+       "le verre",
+       "verre"
+      ]
+     }
+    ]
+   },
+   "theory": {
+    "plat": {
+     "h": "Essen",
+     "text": "le plat typique = das typische Gericht. Eine Mahlzeit hat: une entrée (Vorspeise), le plat principal (Hauptgang) und le dessert."
+    },
+    "menu": {
+     "h": "Auf der Speisekarte",
+     "text": "Mit je prends sagst du, was du nimmst: je prends = ich nehme. Mit s'il vous plaît bittest du höflich."
+    },
+    "bestell": {
+     "h": "Im Restaurant sprechen",
+     "text": "Als Gast sagst du: Vous avez une table pour deux personnes? Der Kellner sagt: Voici le menu. Qu'est-ce que vous prenez?"
+    },
+    "plus": {
+     "h": "Zusatzwörter",
+     "text": "Wörter aus «Vocabulaire plus»: weitere Gerichte, Getränke und höfliche Sätze."
+    }
+   },
+   "art": "franz"
+  },
+  {
+   "id": "kl6-franz-unit5-couleurs",
+   "child": "kl6",
+   "subject": "franz",
+   "chapter": "Unit 5 · Couleurs",
+   "title": "Unit 5 · Couleurs",
+   "explain": [
+    {
+     "h": "Wörterliste zum Durchlernen",
+     "text": "So lernst du wie auf einem Blatt: Zuerst das Wort laut sagen. Dann tippe auf das Feld und decke die Lösung auf. Dann prüfe: Hast du es gewusst? Danach kommt das nächste Wort. Mit dem Knopf oben wechselst du die Richtung.",
+     "list": true
+    }
+   ],
+   "cards": [
+    {
+     "id": "6u5_1",
+     "fw": "un arc-en-ciel",
+     "de": [
+      "ein Regenbogen"
+     ],
+     "grp": "nature"
+    },
+    {
+     "id": "6u5_2",
+     "fw": "la vie",
+     "de": [
+      "das Leben"
+     ],
+     "grp": "nature"
+    },
+    {
+     "id": "6u5_3",
+     "fw": "un espoir",
+     "de": [
+      "eine Hoffnung"
+     ],
+     "grp": "nature"
+    },
+    {
+     "id": "6u5_4",
+     "fw": "un arbre",
+     "de": [
+      "ein Baum"
+     ],
+     "grp": "nature"
+    },
+    {
+     "id": "6u5_5",
+     "fw": "l'herbe",
+     "de": [
+      "das Gras"
+     ],
+     "grp": "nature"
+    },
+    {
+     "id": "6u5_6",
+     "fw": "la feuille",
+     "de": [
+      "das Blatt"
+     ],
+     "grp": "nature"
+    },
+    {
+     "id": "6u5_7",
+     "fw": "le ciel",
+     "de": [
+      "der Himmel"
+     ],
+     "grp": "nature"
+    },
+    {
+     "id": "6u5_8",
+     "fw": "le bonheur",
+     "de": [
+      "das Glück"
+     ],
+     "grp": "nature"
+    },
+    {
+     "id": "6u5_9",
+     "fw": "le monde",
+     "de": [
+      "die Welt"
+     ],
+     "grp": "nature"
+    },
+    {
+     "id": "6u5_10",
+     "fw": "le soleil",
+     "de": [
+      "die Sonne"
+     ],
+     "grp": "nature"
+    },
+    {
+     "id": "6u5_11",
+     "fw": "la lune",
+     "de": [
+      "der Mond"
+     ],
+     "grp": "nature"
+    },
+    {
+     "id": "6u5_12",
+     "fw": "une étoile",
+     "de": [
+      "ein Stern"
+     ],
+     "grp": "nature"
+    },
+    {
+     "id": "6u5_13",
+     "fw": "le plaisir",
+     "de": [
+      "die Freude",
+      "das Vergnügen"
+     ],
+     "grp": "nature"
+    },
+    {
+     "id": "6u5_14",
+     "fw": "la terre",
+     "de": [
+      "die Erde"
+     ],
+     "grp": "nature"
+    },
+    {
+     "id": "6u5_15",
+     "fw": "la santé",
+     "de": [
+      "die Gesundheit"
+     ],
+     "grp": "nature"
+    },
+    {
+     "id": "6u5_16",
+     "fw": "le sang",
+     "de": [
+      "das Blut"
+     ],
+     "grp": "nature"
+    },
+    {
+     "id": "6u5_17",
+     "fw": "le danger",
+     "de": [
+      "die Gefahr"
+     ],
+     "grp": "nature"
+    },
+    {
+     "id": "6u5_18",
+     "fw": "un amour",
+     "de": [
+      "eine Liebe"
+     ],
+     "grp": "nature"
+    },
+    {
+     "id": "6u5_19",
+     "fw": "la pluie",
+     "de": [
+      "der Regen"
+     ],
+     "grp": "nature"
+    },
+    {
+     "id": "6u5_20",
+     "fw": "pleuvoir, il pleut",
+     "de": [
+      "regnen",
+      "es regnet"
+     ],
+     "grp": "nature"
+    },
+    {
+     "id": "6u5_21",
+     "fw": "la raison",
+     "de": [
+      "der Grund"
+     ],
+     "grp": "nature"
+    },
+    {
+     "id": "6u5_22",
+     "fw": "demain",
+     "de": [
+      "morgen"
+     ],
+     "grp": "nature"
+    },
+    {
+     "id": "6u5_23",
+     "fw": "le nuage",
+     "de": [
+      "die Wolke"
+     ],
+     "grp": "gefuehl"
+    },
+    {
+     "id": "6u5_24",
+     "fw": "heureux / heureuse",
+     "de": [
+      "glücklich"
+     ],
+     "grp": "gefuehl"
+    },
+    {
+     "id": "6u5_25",
+     "fw": "amoureux / amoureuse",
+     "de": [
+      "verliebt"
+     ],
+     "grp": "gefuehl"
+    },
+    {
+     "id": "6u5_26",
+     "fw": "fâché / fâchée",
+     "de": [
+      "verärgert"
+     ],
+     "grp": "gefuehl"
+    },
+    {
+     "id": "6u5_27",
+     "fw": "surpris / surprise",
+     "de": [
+      "überrascht"
+     ],
+     "grp": "gefuehl"
+    },
+    {
+     "id": "6u5_28",
+     "fw": "fort / forte",
+     "de": [
+      "stark"
+     ],
+     "grp": "gefuehl"
+    },
+    {
+     "id": "6u5_29",
+     "fw": "calme",
+     "de": [
+      "ruhig"
+     ],
+     "grp": "gefuehl"
+    },
+    {
+     "id": "6u5_30",
+     "fw": "triste",
+     "de": [
+      "traurig"
+     ],
+     "grp": "gefuehl"
+    },
+    {
+     "id": "6u5_31",
+     "fw": "j'ai peur",
+     "de": [
+      "ich habe Angst"
+     ],
+     "grp": "gefuehl"
+    },
+    {
+     "id": "6u5_32",
+     "fw": "Le soleil me fait penser au jaune.",
+     "de": [
+      "Die Sonne lässt mich an Gelb denken."
+     ],
+     "grp": "farbe"
+    },
+    {
+     "id": "6u5_33",
+     "fw": "Le soleil me rappelle le jaune.",
+     "de": [
+      "Die Sonne erinnert mich an Gelb."
+     ],
+     "grp": "farbe"
+    },
+    {
+     "id": "6u5_34",
+     "fw": "Le vert me rend heureux / heureuse.",
+     "de": [
+      "Grün macht mich glücklich."
+     ],
+     "grp": "farbe"
+    },
+    {
+     "id": "6u5_35",
+     "fw": "Le bleu symbolise le ciel.",
+     "de": [
+      "Blau symbolisiert den Himmel."
+     ],
+     "grp": "farbe"
+    },
+    {
+     "id": "6u5_36",
+     "fw": "Le rouge représente l'amour.",
+     "de": [
+      "Rot steht für Liebe."
+     ],
+     "grp": "farbe"
+    },
+    {
+     "id": "6u5_37",
+     "fw": "la lumière",
+     "de": [
+      "das Licht"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u5_38",
+     "fw": "mourir, il meurt",
+     "de": [
+      "sterben",
+      "er stirbt"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u5_39",
+     "fw": "la paix",
+     "de": [
+      "der Frieden"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u5_40",
+     "fw": "rien",
+     "de": [
+      "nichts"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u5_41",
+     "fw": "le rire",
+     "de": [
+      "das Lachen"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u5_42",
+     "fw": "la gaieté",
+     "de": [
+      "die Fröhlichkeit",
+      "die Heiterkeit"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u5_43",
+     "fw": "la force",
+     "de": [
+      "die Kraft"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u5_44",
+     "fw": "la courge",
+     "de": [
+      "der Kürbis"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u5_45",
+     "fw": "le lever du soleil",
+     "de": [
+      "der Sonnenaufgang"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u5_46",
+     "fw": "le coucher du soleil",
+     "de": [
+      "der Sonnenuntergang"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u5_47",
+     "fw": "le silence",
+     "de": [
+      "die Stille"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u5_48",
+     "fw": "un équilibre",
+     "de": [
+      "ein Gleichgewicht"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u5_49",
+     "fw": "vivre ensemble",
+     "de": [
+      "zusammenleben"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u5_50",
+     "fw": "le signe",
+     "de": [
+      "das Zeichen"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u5_51",
+     "fw": "un éclair",
+     "de": [
+      "ein Blitz"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u5_52",
+     "fw": "une étoile filante",
+     "de": [
+      "eine Sternschnuppe"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u5_53",
+     "fw": "la grêle",
+     "de": [
+      "der Hagel"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u5_54",
+     "fw": "la neige",
+     "de": [
+      "der Schnee"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u5_55",
+     "fw": "la tempête",
+     "de": [
+      "der Sturm"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u5_56",
+     "fw": "le tremblement de terre",
+     "de": [
+      "das Erdbeben"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u5_57",
+     "fw": "le tonnerre",
+     "de": [
+      "der Donner"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u5_58",
+     "fw": "le volcan",
+     "de": [
+      "der Vulkan"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u5_59",
+     "fw": "le sentiment",
+     "de": [
+      "das Gefühl"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u5_60",
+     "fw": "optimiste",
+     "de": [
+      "optimistisch"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u5_61",
+     "fw": "pessimiste",
+     "de": [
+      "pessimistisch"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u5_62",
+     "fw": "préféré / préférée",
+     "de": [
+      "Lieblings…"
+     ],
+     "grp": "plus"
+    }
+   ],
+   "exam": {
+    "minutes": 30,
+    "questions": [
+     {
+      "id": "q1",
+      "q": "Wie heisst «ein Regenbogen» auf Französisch?",
+      "explain": "ein Regenbogen = un arc-en-ciel",
+      "ref": "6u5_1",
+      "type": "input",
+      "answer": [
+       "un arc-en-ciel",
+       "arc-en-ciel"
+      ]
+     },
+     {
+      "id": "q2",
+      "q": "Wie heisst «eine Hoffnung» auf Französisch?",
+      "explain": "eine Hoffnung = un espoir",
+      "ref": "6u5_3",
+      "type": "input",
+      "answer": [
+       "un espoir",
+       "espoir"
+      ]
+     },
+     {
+      "id": "q3",
+      "q": "Wie heisst «das Gras» auf Französisch?",
+      "explain": "das Gras = l'herbe",
+      "ref": "6u5_5",
+      "type": "input",
+      "answer": [
+       "l'herbe"
+      ]
+     },
+     {
+      "id": "q4",
+      "q": "Wie heisst «der Himmel» auf Französisch?",
+      "explain": "der Himmel = le ciel",
+      "ref": "6u5_7",
+      "type": "input",
+      "answer": [
+       "le ciel",
+       "ciel"
+      ]
+     },
+     {
+      "id": "q5",
+      "q": "Wie heisst «die Sonne» auf Französisch?",
+      "explain": "die Sonne = le soleil",
+      "ref": "6u5_10",
+      "type": "input",
+      "answer": [
+       "le soleil",
+       "soleil"
+      ]
+     },
+     {
+      "id": "q6",
+      "q": "Wie heisst «ein Stern» auf Französisch?",
+      "explain": "ein Stern = une étoile",
+      "ref": "6u5_12",
+      "type": "input",
+      "answer": [
+       "une étoile",
+       "e étoile"
+      ]
+     },
+     {
+      "id": "q7",
+      "q": "Wie heisst «die Erde» auf Französisch?",
+      "explain": "die Erde = la terre",
+      "ref": "6u5_14",
+      "type": "input",
+      "answer": [
+       "la terre",
+       "terre"
+      ]
+     },
+     {
+      "id": "q8",
+      "q": "Wie heisst «die Gefahr» auf Französisch?",
+      "explain": "die Gefahr = le danger",
+      "ref": "6u5_17",
+      "type": "input",
+      "answer": [
+       "le danger",
+       "danger"
+      ]
+     },
+     {
+      "id": "q9",
+      "q": "Wie heisst «der Regen» auf Französisch?",
+      "explain": "der Regen = la pluie",
+      "ref": "6u5_19",
+      "type": "input",
+      "answer": [
+       "la pluie",
+       "pluie"
+      ]
+     },
+     {
+      "id": "q10",
+      "q": "Wie heisst «morgen» auf Französisch?",
+      "explain": "morgen = demain",
+      "ref": "6u5_22",
+      "type": "input",
+      "answer": [
+       "demain"
+      ]
+     },
+     {
+      "id": "q11",
+      "q": "Wie heisst «traurig» auf Französisch?",
+      "explain": "traurig = triste",
+      "ref": "6u5_30",
+      "type": "input",
+      "answer": [
+       "triste"
+      ]
+     },
+     {
+      "id": "q12",
+      "q": "Wie heisst «das Licht» auf Französisch?",
+      "explain": "das Licht = la lumière",
+      "ref": "6u5_37",
+      "type": "input",
+      "answer": [
+       "la lumière",
+       "lumière"
+      ]
+     },
+     {
+      "id": "q13",
+      "q": "Wie heisst «nichts» auf Französisch?",
+      "explain": "nichts = rien",
+      "ref": "6u5_40",
+      "type": "input",
+      "answer": [
+       "rien"
+      ]
+     },
+     {
+      "id": "q14",
+      "q": "Wie heisst «die Fröhlichkeit» auf Französisch?",
+      "explain": "die Fröhlichkeit = la gaieté",
+      "ref": "6u5_42",
+      "type": "input",
+      "answer": [
+       "la gaieté",
+       "gaieté"
+      ]
+     },
+     {
+      "id": "q15",
+      "q": "Wie heisst «die Stille» auf Französisch?",
+      "explain": "die Stille = le silence",
+      "ref": "6u5_47",
+      "type": "input",
+      "answer": [
+       "le silence",
+       "silence"
+      ]
+     },
+     {
+      "id": "q16",
+      "q": "Wie heisst «zusammenleben» auf Französisch?",
+      "explain": "zusammenleben = vivre ensemble",
+      "ref": "6u5_49",
+      "type": "input",
+      "answer": [
+       "vivre ensemble"
+      ]
+     },
+     {
+      "id": "q17",
+      "q": "Wie heisst «ein Blitz» auf Französisch?",
+      "explain": "ein Blitz = un éclair",
+      "ref": "6u5_51",
+      "type": "input",
+      "answer": [
+       "un éclair",
+       "éclair"
+      ]
+     },
+     {
+      "id": "q18",
+      "q": "Wie heisst «der Schnee» auf Französisch?",
+      "explain": "der Schnee = la neige",
+      "ref": "6u5_54",
+      "type": "input",
+      "answer": [
+       "la neige",
+       "neige"
+      ]
+     },
+     {
+      "id": "q19",
+      "q": "Wie heisst «der Donner» auf Französisch?",
+      "explain": "der Donner = le tonnerre",
+      "ref": "6u5_57",
+      "type": "input",
+      "answer": [
+       "le tonnerre",
+       "tonnerre"
+      ]
+     },
+     {
+      "id": "q20",
+      "q": "Wie heisst «das Gefühl» auf Französisch?",
+      "explain": "das Gefühl = le sentiment",
+      "ref": "6u5_59",
+      "type": "input",
+      "answer": [
+       "le sentiment",
+       "sentiment"
+      ]
+     }
+    ]
+   },
+   "theory": {
+    "nature": {
+     "h": "Natur und Leben",
+     "text": "Nomen haben le, la oder un, une: le ciel, la lune, un arbre. Il pleut = es regnet (von pleuvoir)."
+    },
+    "gefuehl": {
+     "h": "Gefühle",
+     "text": "Mit j'ai peur sagst du: ich habe Angst. Eigenschaften ändern sich bei Mädchen: heureux / heureuse, fâché / fâchée."
+    },
+    "farbe": {
+     "h": "Farben und ihre Bedeutung",
+     "text": "Le soleil me fait penser au jaune. Le bleu symbolise le ciel. Le rouge représente l'amour. Farben sind männlich: le bleu, le rouge."
+    },
+    "plus": {
+     "h": "Zusatzwörter",
+     "text": "Wörter aus «Vocabulaire plus»: Wetter, Naturgewalten und Gefühle."
+    }
+   },
+   "art": "franz"
+  },
+  {
+   "id": "kl6-franz-unit6-baguette-magique",
+   "child": "kl6",
+   "subject": "franz",
+   "chapter": "Unit 6 · La baguette magique",
+   "title": "Unit 6 · La baguette magique",
+   "explain": [
+    {
+     "h": "Wörterliste zum Durchlernen",
+     "text": "So lernst du wie auf einem Blatt: Zuerst das Wort laut sagen. Dann tippe auf das Feld und decke die Lösung auf. Dann prüfe: Hast du es gewusst? Danach kommt das nächste Wort. Mit dem Knopf oben wechselst du die Richtung.",
+     "list": true
+    }
+   ],
+   "cards": [
+    {
+     "id": "6u6_1",
+     "fw": "le cinéma",
+     "de": [
+      "das Kino"
+     ],
+     "grp": "film"
+    },
+    {
+     "id": "6u6_2",
+     "fw": "Je suis une star de cinéma.",
+     "de": [
+      "Ich bin ein Kinostar."
+     ],
+     "grp": "film"
+    },
+    {
+     "id": "6u6_3",
+     "fw": "une araignée",
+     "de": [
+      "eine Spinne"
+     ],
+     "grp": "film"
+    },
+    {
+     "id": "6u6_4",
+     "fw": "un ennemi",
+     "de": [
+      "ein Feind"
+     ],
+     "grp": "film"
+    },
+    {
+     "id": "6u6_5",
+     "fw": "agile",
+     "de": [
+      "flink"
+     ],
+     "grp": "film"
+    },
+    {
+     "id": "6u6_6",
+     "fw": "fiable",
+     "de": [
+      "zuverlässig"
+     ],
+     "grp": "film"
+    },
+    {
+     "id": "6u6_7",
+     "fw": "le chevalier",
+     "de": [
+      "der Ritter"
+     ],
+     "grp": "film"
+    },
+    {
+     "id": "6u6_8",
+     "fw": "courageux / courageuse",
+     "de": [
+      "mutig"
+     ],
+     "grp": "film"
+    },
+    {
+     "id": "6u6_9",
+     "fw": "le courage",
+     "de": [
+      "der Mut"
+     ],
+     "grp": "film"
+    },
+    {
+     "id": "6u6_10",
+     "fw": "honnête",
+     "de": [
+      "ehrlich"
+     ],
+     "grp": "film"
+    },
+    {
+     "id": "6u6_11",
+     "fw": "cruel / cruelle",
+     "de": [
+      "grausam"
+     ],
+     "grp": "film"
+    },
+    {
+     "id": "6u6_12",
+     "fw": "méchant / méchante",
+     "de": [
+      "böse"
+     ],
+     "grp": "film"
+    },
+    {
+     "id": "6u6_13",
+     "fw": "la sorcière",
+     "de": [
+      "die Hexe"
+     ],
+     "grp": "film"
+    },
+    {
+     "id": "6u6_14",
+     "fw": "jaloux / jalouse",
+     "de": [
+      "eifersüchtig"
+     ],
+     "grp": "film"
+    },
+    {
+     "id": "6u6_15",
+     "fw": "le vampire",
+     "de": [
+      "der Vampir"
+     ],
+     "grp": "film"
+    },
+    {
+     "id": "6u6_16",
+     "fw": "immortel / immortelle",
+     "de": [
+      "unsterblich"
+     ],
+     "grp": "film"
+    },
+    {
+     "id": "6u6_17",
+     "fw": "bavard / bavarde",
+     "de": [
+      "schwatzhaft"
+     ],
+     "grp": "film"
+    },
+    {
+     "id": "6u6_18",
+     "fw": "ambitieux / ambitieuse",
+     "de": [
+      "ehrgeizig"
+     ],
+     "grp": "film"
+    },
+    {
+     "id": "6u6_19",
+     "fw": "le héros / l'héroïne",
+     "de": [
+      "der Held / die Heldin"
+     ],
+     "grp": "film"
+    },
+    {
+     "id": "6u6_20",
+     "fw": "géant / géante",
+     "de": [
+      "riesig"
+     ],
+     "grp": "film"
+    },
+    {
+     "id": "6u6_21",
+     "fw": "beau / belle",
+     "de": [
+      "schön"
+     ],
+     "grp": "film"
+    },
+    {
+     "id": "6u6_22",
+     "fw": "violent / violente",
+     "de": [
+      "gewalttätig"
+     ],
+     "grp": "film"
+    },
+    {
+     "id": "6u6_23",
+     "fw": "Il peut faire des sauts énormes.",
+     "de": [
+      "Er kann riesige Sprünge machen."
+     ],
+     "grp": "figur"
+    },
+    {
+     "id": "6u6_24",
+     "fw": "Il veut aider son peuple.",
+     "de": [
+      "Er will seinem Volk helfen."
+     ],
+     "grp": "figur"
+    },
+    {
+     "id": "6u6_25",
+     "fw": "Elle peut voler sur un balai.",
+     "de": [
+      "Sie kann auf einem Besen fliegen."
+     ],
+     "grp": "figur"
+    },
+    {
+     "id": "6u6_26",
+     "fw": "se transformer en",
+     "de": [
+      "sich verwandeln in"
+     ],
+     "grp": "figur"
+    },
+    {
+     "id": "6u6_27",
+     "fw": "manipuler les forces naturelles",
+     "de": [
+      "Naturgewalten manipulieren"
+     ],
+     "grp": "figur"
+    },
+    {
+     "id": "6u6_28",
+     "fw": "Elle a un grand cœur.",
+     "de": [
+      "Sie hat ein grosses Herz."
+     ],
+     "grp": "figur"
+    },
+    {
+     "id": "6u6_29",
+     "fw": "Elle aide à résoudre des problèmes.",
+     "de": [
+      "Sie hilft Probleme zu lösen."
+     ],
+     "grp": "figur"
+    },
+    {
+     "id": "6u6_30",
+     "fw": "Elle peut comprendre les émotions.",
+     "de": [
+      "Sie kann Gefühle verstehen."
+     ],
+     "grp": "figur"
+    },
+    {
+     "id": "6u6_31",
+     "fw": "Il a une force extraordinaire.",
+     "de": [
+      "Er hat eine aussergewöhnliche Kraft."
+     ],
+     "grp": "figur"
+    },
+    {
+     "id": "6u6_32",
+     "fw": "piéger ses ennemis",
+     "de": [
+      "seinen Feinden eine Falle stellen"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u6_33",
+     "fw": "Il est rapide.",
+     "de": [
+      "Er ist schnell."
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u6_34",
+     "fw": "Il a de bons réflexes.",
+     "de": [
+      "Er hat gute Reflexe."
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u6_35",
+     "fw": "le côté négatif",
+     "de": [
+      "die negative Seite"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u6_36",
+     "fw": "Il retrouve le côté positif.",
+     "de": [
+      "Er findet die positive Seite wieder."
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u6_37",
+     "fw": "Il tue son ennemi.",
+     "de": [
+      "Er tötet seinen Feind."
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u6_38",
+     "fw": "Elle vit entourée d'animaux.",
+     "de": [
+      "Sie lebt von Tieren umgeben."
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u6_39",
+     "fw": "colérique",
+     "de": [
+      "jähzornig"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u6_40",
+     "fw": "le château",
+     "de": [
+      "das Schloss"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u6_41",
+     "fw": "terrifiant / terrifiante",
+     "de": [
+      "furchterregend"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u6_42",
+     "fw": "surmonter des obstacles",
+     "de": [
+      "Hindernisse bewältigen"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u6_43",
+     "fw": "devenir une grande magicienne",
+     "de": [
+      "eine grosse Zauberin werden"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u6_44",
+     "fw": "Elle aime éclaircir des mystères.",
+     "de": [
+      "Sie mag es, Rätsel / Mysterien zu klären."
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "6u6_45",
+     "fw": "Il est blessé.",
+     "de": [
+      "Er ist verletzt."
+     ],
+     "grp": "plus"
+    }
+   ],
+   "exam": {
+    "minutes": 30,
+    "questions": [
+     {
+      "id": "q1",
+      "q": "Wie heisst «das Kino» auf Französisch?",
+      "explain": "das Kino = le cinéma",
+      "ref": "6u6_1",
+      "type": "input",
+      "answer": [
+       "le cinéma",
+       "cinéma"
+      ]
+     },
+     {
+      "id": "q2",
+      "q": "Wie heisst «eine Spinne» auf Französisch?",
+      "explain": "eine Spinne = une araignée",
+      "ref": "6u6_3",
+      "type": "input",
+      "answer": [
+       "une araignée",
+       "e araignée"
+      ]
+     },
+     {
+      "id": "q3",
+      "q": "Wie heisst «ein Feind» auf Französisch?",
+      "explain": "ein Feind = un ennemi",
+      "ref": "6u6_4",
+      "type": "input",
+      "answer": [
+       "un ennemi",
+       "ennemi"
+      ]
+     },
+     {
+      "id": "q4",
+      "q": "Wie heisst «flink» auf Französisch?",
+      "explain": "flink = agile",
+      "ref": "6u6_5",
+      "type": "input",
+      "answer": [
+       "agile"
+      ]
+     },
+     {
+      "id": "q5",
+      "q": "Wie heisst «zuverlässig» auf Französisch?",
+      "explain": "zuverlässig = fiable",
+      "ref": "6u6_6",
+      "type": "input",
+      "answer": [
+       "fiable"
+      ]
+     },
+     {
+      "id": "q6",
+      "q": "Wie heisst «der Ritter» auf Französisch?",
+      "explain": "der Ritter = le chevalier",
+      "ref": "6u6_7",
+      "type": "input",
+      "answer": [
+       "le chevalier",
+       "chevalier"
+      ]
+     },
+     {
+      "id": "q7",
+      "q": "Wie heisst «der Mut» auf Französisch?",
+      "explain": "der Mut = le courage",
+      "ref": "6u6_9",
+      "type": "input",
+      "answer": [
+       "le courage",
+       "courage"
+      ]
+     },
+     {
+      "id": "q8",
+      "q": "Wie heisst «ehrlich» auf Französisch?",
+      "explain": "ehrlich = honnête",
+      "ref": "6u6_10",
+      "type": "input",
+      "answer": [
+       "honnête"
+      ]
+     },
+     {
+      "id": "q9",
+      "q": "Wie heisst «die Hexe» auf Französisch?",
+      "explain": "die Hexe = la sorcière",
+      "ref": "6u6_13",
+      "type": "input",
+      "answer": [
+       "la sorcière",
+       "sorcière"
+      ]
+     },
+     {
+      "id": "q10",
+      "q": "Wie heisst «der Vampir» auf Französisch?",
+      "explain": "der Vampir = le vampire",
+      "ref": "6u6_15",
+      "type": "input",
+      "answer": [
+       "le vampire",
+       "vampire"
+      ]
+     },
+     {
+      "id": "q11",
+      "q": "Wie heisst «sich verwandeln in» auf Französisch?",
+      "explain": "sich verwandeln in = se transformer en",
+      "ref": "6u6_26",
+      "type": "input",
+      "answer": [
+       "se transformer en"
+      ]
+     },
+     {
+      "id": "q12",
+      "q": "Wie heisst «seinen Feinden eine Falle stellen» auf Französisch?",
+      "explain": "seinen Feinden eine Falle stellen = piéger ses ennemis",
+      "ref": "6u6_32",
+      "type": "input",
+      "answer": [
+       "piéger ses ennemis"
+      ]
+     },
+     {
+      "id": "q13",
+      "q": "Wie heisst «die negative Seite» auf Französisch?",
+      "explain": "die negative Seite = le côté négatif",
+      "ref": "6u6_35",
+      "type": "input",
+      "answer": [
+       "le côté négatif"
+      ]
+     },
+     {
+      "id": "q14",
+      "q": "Wie heisst «jähzornig» auf Französisch?",
+      "explain": "jähzornig = colérique",
+      "ref": "6u6_39",
+      "type": "input",
+      "answer": [
+       "colérique"
+      ]
+     },
+     {
+      "id": "q15",
+      "q": "Wie heisst «das Schloss» auf Französisch?",
+      "explain": "das Schloss = le château",
+      "ref": "6u6_40",
+      "type": "input",
+      "answer": [
+       "le château",
+       "château"
+      ]
+     },
+     {
+      "id": "q16",
+      "q": "Wie heisst «Hindernisse bewältigen» auf Französisch?",
+      "explain": "Hindernisse bewältigen = surmonter des obstacles",
+      "ref": "6u6_42",
+      "type": "input",
+      "answer": [
+       "surmonter des obstacles"
+      ]
+     }
+    ]
+   },
+   "theory": {
+    "film": {
+     "h": "Kino und Helden",
+     "text": "le héros = der Held, l'héroïne = die Heldin. Adjektive passen sich an: courageux / courageuse, cruel / cruelle, beau / belle."
+    },
+    "figur": {
+     "h": "Figuren beschreiben",
+     "text": "Mit Il peut … oder Elle peut … sagst du, was eine Figur kann: Il peut faire des sauts énormes. Elle peut voler sur un balai."
+    },
+    "plus": {
+     "h": "Zusatzwörter",
+     "text": "Wörter aus «Vocabulaire plus»: weitere Eigenschaften und Sätze über Figuren."
+    }
+   },
+   "art": "franz"
+  },
+  {
+   "id": "kl5-franz-unit3-loisirs",
+   "child": "kl5",
+   "subject": "franz",
+   "chapter": "Unit 3 · Un tas de loisirs!",
+   "title": "Unit 3 · Un tas de loisirs!",
+   "explain": [
+    {
+     "h": "Wörterliste zum Durchlernen",
+     "text": "So lernst du wie auf einem Blatt: Zuerst das Wort laut sagen. Dann tippe auf das Feld und decke die Lösung auf. Dann prüfe: Hast du es gewusst? Danach kommt das nächste Wort. Mit dem Knopf oben wechselst du die Richtung.",
+     "list": true
+    }
+   ],
+   "cards": [
+    {
+     "id": "5u3_1",
+     "fw": "le loisir",
+     "de": [
+      "die Freizeitbeschäftigung"
+     ],
+     "grp": "loisir"
+    },
+    {
+     "id": "5u3_2",
+     "fw": "un ordinateur",
+     "de": [
+      "ein Computer"
+     ],
+     "grp": "loisir"
+    },
+    {
+     "id": "5u3_3",
+     "fw": "la télé",
+     "de": [
+      "der Fernseher"
+     ],
+     "grp": "loisir"
+    },
+    {
+     "id": "5u3_4",
+     "fw": "la console",
+     "de": [
+      "die Spielkonsole"
+     ],
+     "grp": "loisir"
+    },
+    {
+     "id": "5u3_5",
+     "fw": "lire",
+     "de": [
+      "lesen"
+     ],
+     "grp": "loisir"
+    },
+    {
+     "id": "5u3_6",
+     "fw": "le foot, faire du foot",
+     "de": [
+      "Fussball (Spiel)",
+      "Fussball spielen"
+     ],
+     "grp": "loisir"
+    },
+    {
+     "id": "5u3_7",
+     "fw": "le vélo",
+     "de": [
+      "das Velo",
+      "das Fahrrad"
+     ],
+     "grp": "loisir"
+    },
+    {
+     "id": "5u3_8",
+     "fw": "le ski",
+     "de": [
+      "der Ski"
+     ],
+     "grp": "loisir"
+    },
+    {
+     "id": "5u3_9",
+     "fw": "l'unihockey, faire de l'unihockey",
+     "de": [
+      "das Unihockey",
+      "Unihockey spielen"
+     ],
+     "grp": "loisir"
+    },
+    {
+     "id": "5u3_10",
+     "fw": "danser",
+     "de": [
+      "tanzen"
+     ],
+     "grp": "loisir"
+    },
+    {
+     "id": "5u3_11",
+     "fw": "nager",
+     "de": [
+      "schwimmen"
+     ],
+     "grp": "loisir"
+    },
+    {
+     "id": "5u3_12",
+     "fw": "la guitare, jouer de la guitare",
+     "de": [
+      "die Gitarre",
+      "Gitarre spielen"
+     ],
+     "grp": "loisir"
+    },
+    {
+     "id": "5u3_13",
+     "fw": "la flûte",
+     "de": [
+      "die Flöte"
+     ],
+     "grp": "loisir"
+    },
+    {
+     "id": "5u3_14",
+     "fw": "le piano, jouer du piano",
+     "de": [
+      "das Klavier",
+      "Klavier spielen"
+     ],
+     "grp": "loisir"
+    },
+    {
+     "id": "5u3_15",
+     "fw": "jouer dehors",
+     "de": [
+      "draussen spielen"
+     ],
+     "grp": "loisir"
+    },
+    {
+     "id": "5u3_16",
+     "fw": "un animal, les animaux",
+     "de": [
+      "ein Tier",
+      "die Tiere"
+     ],
+     "grp": "loisir"
+    },
+    {
+     "id": "5u3_17",
+     "fw": "le bricolage",
+     "de": [
+      "das Basteln"
+     ],
+     "grp": "loisir"
+    },
+    {
+     "id": "5u3_18",
+     "fw": "écouter de la musique",
+     "de": [
+      "Musik hören"
+     ],
+     "grp": "loisir"
+    },
+    {
+     "id": "5u3_19",
+     "fw": "faire la cuisine",
+     "de": [
+      "kochen"
+     ],
+     "grp": "loisir"
+    },
+    {
+     "id": "5u3_20",
+     "fw": "faire du shopping",
+     "de": [
+      "shoppen"
+     ],
+     "grp": "loisir"
+    },
+    {
+     "id": "5u3_21",
+     "fw": "rencontrer des amis / amies",
+     "de": [
+      "Freunde / Freundinnen treffen"
+     ],
+     "grp": "loisir"
+    },
+    {
+     "id": "5u3_22",
+     "fw": "aimer, j'aime",
+     "de": [
+      "lieben",
+      "ich liebe"
+     ],
+     "grp": "gern"
+    },
+    {
+     "id": "5u3_23",
+     "fw": "adorer, j'adore",
+     "de": [
+      "sehr gerne haben",
+      "ich habe sehr gerne"
+     ],
+     "grp": "gern"
+    },
+    {
+     "id": "5u3_24",
+     "fw": "ma passion, c'est…",
+     "de": [
+      "meine Leidenschaft ist …"
+     ],
+     "grp": "gern"
+    },
+    {
+     "id": "5u3_25",
+     "fw": "mon hobby, c'est…",
+     "de": [
+      "mein Hobby ist …"
+     ],
+     "grp": "gern"
+    },
+    {
+     "id": "5u3_26",
+     "fw": "je suis fan de…",
+     "de": [
+      "ich bin Fan von …"
+     ],
+     "grp": "gern"
+    },
+    {
+     "id": "5u3_27",
+     "fw": "le nombre",
+     "de": [
+      "die Zahl"
+     ],
+     "grp": "zahl"
+    },
+    {
+     "id": "5u3_28",
+     "fw": "un élève / une élève",
+     "de": [
+      "ein Schüler",
+      "eine Schülerin"
+     ],
+     "grp": "zahl"
+    },
+    {
+     "id": "5u3_29",
+     "fw": "le garçon",
+     "de": [
+      "der Knabe"
+     ],
+     "grp": "zahl"
+    },
+    {
+     "id": "5u3_30",
+     "fw": "la fille",
+     "de": [
+      "das Mädchen",
+      "die Tochter"
+     ],
+     "grp": "zahl"
+    },
+    {
+     "id": "5u3_31",
+     "fw": "les médias",
+     "de": [
+      "die Medien"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u3_32",
+     "fw": "la BD (la bande dessinée)",
+     "de": [
+      "der Comic"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u3_33",
+     "fw": "l'équitation, faire de l'équitation",
+     "de": [
+      "das Reiten",
+      "reiten"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u3_34",
+     "fw": "les acrobaties, faire des acrobaties",
+     "de": [
+      "die Akrobatik",
+      "Akrobatik machen"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u3_35",
+     "fw": "la grimpe",
+     "de": [
+      "das Klettern"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u3_36",
+     "fw": "le tennis de table",
+     "de": [
+      "das Tischtennis"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u3_37",
+     "fw": "le hockey sur glace",
+     "de": [
+      "das Eishockey"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u3_38",
+     "fw": "la batterie",
+     "de": [
+      "das Schlagzeug"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u3_39",
+     "fw": "le violon",
+     "de": [
+      "die Geige",
+      "die Violine"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u3_40",
+     "fw": "le cirque",
+     "de": [
+      "der Zirkus"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u3_41",
+     "fw": "la construction",
+     "de": [
+      "der Modellbau"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u3_42",
+     "fw": "la pêche, pêcher",
+     "de": [
+      "das Fischen",
+      "fischen"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u3_43",
+     "fw": "les échecs, jouer aux échecs",
+     "de": [
+      "das Schachspiel",
+      "Schach spielen"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u3_44",
+     "fw": "le théâtre, jouer du théâtre",
+     "de": [
+      "das Theater",
+      "Theater spielen"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u3_45",
+     "fw": "être avec mes potes",
+     "de": [
+      "mit meinen Freunden sein"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u3_46",
+     "fw": "garder des enfants",
+     "de": [
+      "Kinder hüten"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u3_47",
+     "fw": "j'aime beaucoup…",
+     "de": [
+      "ich liebe sehr …"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u3_48",
+     "fw": "mon sport favori, c'est…",
+     "de": [
+      "mein Lieblingssport ist …"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u3_49",
+     "fw": "mes hobbies, ce sont…",
+     "de": [
+      "meine Hobbys sind …"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u3_50",
+     "fw": "détester, je déteste",
+     "de": [
+      "hassen",
+      "ich hasse"
+     ],
+     "grp": "plus"
+    }
+   ],
+   "exam": {
+    "minutes": 30,
+    "questions": [
+     {
+      "id": "q1",
+      "q": "Wie heisst «die Freizeitbeschäftigung» auf Französisch?",
+      "explain": "die Freizeitbeschäftigung = le loisir",
+      "ref": "5u3_1",
+      "type": "input",
+      "answer": [
+       "le loisir",
+       "loisir"
+      ]
+     },
+     {
+      "id": "q2",
+      "q": "Wie heisst «ein Computer» auf Französisch?",
+      "explain": "ein Computer = un ordinateur",
+      "ref": "5u3_2",
+      "type": "input",
+      "answer": [
+       "un ordinateur",
+       "ordinateur"
+      ]
+     },
+     {
+      "id": "q3",
+      "q": "Wie heisst «der Fernseher» auf Französisch?",
+      "explain": "der Fernseher = la télé",
+      "ref": "5u3_3",
+      "type": "input",
+      "answer": [
+       "la télé",
+       "télé"
+      ]
+     },
+     {
+      "id": "q4",
+      "q": "Wie heisst «die Spielkonsole» auf Französisch?",
+      "explain": "die Spielkonsole = la console",
+      "ref": "5u3_4",
+      "type": "input",
+      "answer": [
+       "la console",
+       "console"
+      ]
+     },
+     {
+      "id": "q5",
+      "q": "Wie heisst «lesen» auf Französisch?",
+      "explain": "lesen = lire",
+      "ref": "5u3_5",
+      "type": "input",
+      "answer": [
+       "lire"
+      ]
+     },
+     {
+      "id": "q6",
+      "q": "Wie heisst «der Ski» auf Französisch?",
+      "explain": "der Ski = le ski",
+      "ref": "5u3_8",
+      "type": "input",
+      "answer": [
+       "le ski",
+       "ski"
+      ]
+     },
+     {
+      "id": "q7",
+      "q": "Wie heisst «tanzen» auf Französisch?",
+      "explain": "tanzen = danser",
+      "ref": "5u3_10",
+      "type": "input",
+      "answer": [
+       "danser"
+      ]
+     },
+     {
+      "id": "q8",
+      "q": "Wie heisst «schwimmen» auf Französisch?",
+      "explain": "schwimmen = nager",
+      "ref": "5u3_11",
+      "type": "input",
+      "answer": [
+       "nager"
+      ]
+     },
+     {
+      "id": "q9",
+      "q": "Wie heisst «die Flöte» auf Französisch?",
+      "explain": "die Flöte = la flûte",
+      "ref": "5u3_13",
+      "type": "input",
+      "answer": [
+       "la flûte",
+       "flûte"
+      ]
+     },
+     {
+      "id": "q10",
+      "q": "Wie heisst «draussen spielen» auf Französisch?",
+      "explain": "draussen spielen = jouer dehors",
+      "ref": "5u3_15",
+      "type": "input",
+      "answer": [
+       "jouer dehors"
+      ]
+     },
+     {
+      "id": "q11",
+      "q": "Wie heisst «kochen» auf Französisch?",
+      "explain": "kochen = faire la cuisine",
+      "ref": "5u3_19",
+      "type": "input",
+      "answer": [
+       "faire la cuisine"
+      ]
+     },
+     {
+      "id": "q12",
+      "q": "Wie heisst «shoppen» auf Französisch?",
+      "explain": "shoppen = faire du shopping",
+      "ref": "5u3_20",
+      "type": "input",
+      "answer": [
+       "faire du shopping"
+      ]
+     },
+     {
+      "id": "q13",
+      "q": "Wie heisst «die Zahl» auf Französisch?",
+      "explain": "die Zahl = le nombre",
+      "ref": "5u3_27",
+      "type": "input",
+      "answer": [
+       "le nombre",
+       "nombre"
+      ]
+     },
+     {
+      "id": "q14",
+      "q": "Wie heisst «der Knabe» auf Französisch?",
+      "explain": "der Knabe = le garçon",
+      "ref": "5u3_29",
+      "type": "input",
+      "answer": [
+       "le garçon",
+       "garçon"
+      ]
+     },
+     {
+      "id": "q15",
+      "q": "Wie heisst «das Mädchen» auf Französisch?",
+      "explain": "das Mädchen = la fille",
+      "ref": "5u3_30",
+      "type": "input",
+      "answer": [
+       "la fille",
+       "fille"
+      ]
+     },
+     {
+      "id": "q16",
+      "q": "Wie heisst «das Klettern» auf Französisch?",
+      "explain": "das Klettern = la grimpe",
+      "ref": "5u3_35",
+      "type": "input",
+      "answer": [
+       "la grimpe",
+       "grimpe"
+      ]
+     },
+     {
+      "id": "q17",
+      "q": "Wie heisst «das Schlagzeug» auf Französisch?",
+      "explain": "das Schlagzeug = la batterie",
+      "ref": "5u3_38",
+      "type": "input",
+      "answer": [
+       "la batterie",
+       "batterie"
+      ]
+     },
+     {
+      "id": "q18",
+      "q": "Wie heisst «die Geige» auf Französisch?",
+      "explain": "die Geige = le violon",
+      "ref": "5u3_39",
+      "type": "input",
+      "answer": [
+       "le violon",
+       "violon"
+      ]
+     },
+     {
+      "id": "q19",
+      "q": "Wie heisst «der Zirkus» auf Französisch?",
+      "explain": "der Zirkus = le cirque",
+      "ref": "5u3_40",
+      "type": "input",
+      "answer": [
+       "le cirque",
+       "cirque"
+      ]
+     },
+     {
+      "id": "q20",
+      "q": "Wie heisst «der Modellbau» auf Französisch?",
+      "explain": "der Modellbau = la construction",
+      "ref": "5u3_41",
+      "type": "input",
+      "answer": [
+       "la construction",
+       "construction"
+      ]
+     }
+    ]
+   },
+   "theory": {
+    "loisir": {
+     "h": "Freizeit",
+     "text": "Mit faire du + Sportart sagst du, was du spielst: faire du foot, faire de l'unihockey. Bei Instrumenten sagt man jouer de: jouer de la guitare, jouer du piano."
+    },
+    "gern": {
+     "h": "Gern haben",
+     "text": "aimer = lieben, adorer = sehr gerne haben, je suis fan de … = ich bin Fan von … Mit Ma passion, c'est … und Mon hobby, c'est … nennst du dein Hobby."
+    },
+    "zahl": {
+     "h": "Schüler und Zahlen",
+     "text": "un élève / une élève = ein Schüler / eine Schülerin, le garçon = der Knabe, la fille = das Mädchen."
+    },
+    "plus": {
+     "h": "Zusatzwörter",
+     "text": "Wörter aus «Vocabulaire plus»: weitere Hobbys und Sätze zum Lieblingssport."
+    }
+   },
+   "art": "franz"
+  },
+  {
+   "id": "kl5-franz-unit4-ingredients",
+   "child": "kl5",
+   "subject": "franz",
+   "chapter": "Unit 4 · Quels ingrédients?",
+   "title": "Unit 4 · Quels ingrédients?",
+   "explain": [
+    {
+     "h": "Wörterliste zum Durchlernen",
+     "text": "So lernst du wie auf einem Blatt: Zuerst das Wort laut sagen. Dann tippe auf das Feld und decke die Lösung auf. Dann prüfe: Hast du es gewusst? Danach kommt das nächste Wort. Mit dem Knopf oben wechselst du die Richtung.",
+     "list": true
+    }
+   ],
+   "cards": [
+    {
+     "id": "5u4_1",
+     "fw": "un ingrédient",
+     "de": [
+      "eine Zutat"
+     ],
+     "grp": "zutat"
+    },
+    {
+     "id": "5u4_2",
+     "fw": "un ananas",
+     "de": [
+      "eine Ananas"
+     ],
+     "grp": "zutat"
+    },
+    {
+     "id": "5u4_3",
+     "fw": "le raisin vert / bleu",
+     "de": [
+      "die grüne / blaue Traube"
+     ],
+     "grp": "zutat"
+    },
+    {
+     "id": "5u4_4",
+     "fw": "la fraise",
+     "de": [
+      "die Erdbeere"
+     ],
+     "grp": "zutat"
+    },
+    {
+     "id": "5u4_5",
+     "fw": "le champignon blanc",
+     "de": [
+      "der weisse Champignon"
+     ],
+     "grp": "zutat"
+    },
+    {
+     "id": "5u4_6",
+     "fw": "la rondelle de concombre",
+     "de": [
+      "die Gurkenscheibe"
+     ],
+     "grp": "zutat"
+    },
+    {
+     "id": "5u4_7",
+     "fw": "la carotte",
+     "de": [
+      "die Karotte"
+     ],
+     "grp": "zutat"
+    },
+    {
+     "id": "5u4_8",
+     "fw": "la poire",
+     "de": [
+      "die Birne"
+     ],
+     "grp": "zutat"
+    },
+    {
+     "id": "5u4_9",
+     "fw": "la feuille d'ananas",
+     "de": [
+      "das Ananasblatt"
+     ],
+     "grp": "zutat"
+    },
+    {
+     "id": "5u4_10",
+     "fw": "la tomate (cerise)",
+     "de": [
+      "die (Kirsch-)Tomate"
+     ],
+     "grp": "zutat"
+    },
+    {
+     "id": "5u4_11",
+     "fw": "un peu de persil",
+     "de": [
+      "ein wenig Petersilie"
+     ],
+     "grp": "zutat"
+    },
+    {
+     "id": "5u4_12",
+     "fw": "le visage",
+     "de": [
+      "das Gesicht"
+     ],
+     "grp": "gesicht"
+    },
+    {
+     "id": "5u4_13",
+     "fw": "une oreille",
+     "de": [
+      "ein Ohr"
+     ],
+     "grp": "gesicht"
+    },
+    {
+     "id": "5u4_14",
+     "fw": "les yeux, un œil",
+     "de": [
+      "die Augen",
+      "ein Auge"
+     ],
+     "grp": "gesicht"
+    },
+    {
+     "id": "5u4_15",
+     "fw": "les cheveux",
+     "de": [
+      "die Haare"
+     ],
+     "grp": "gesicht"
+    },
+    {
+     "id": "5u4_16",
+     "fw": "la tête",
+     "de": [
+      "der Kopf"
+     ],
+     "grp": "gesicht"
+    },
+    {
+     "id": "5u4_17",
+     "fw": "le nez",
+     "de": [
+      "die Nase"
+     ],
+     "grp": "gesicht"
+    },
+    {
+     "id": "5u4_18",
+     "fw": "la bouche",
+     "de": [
+      "der Mund"
+     ],
+     "grp": "gesicht"
+    },
+    {
+     "id": "5u4_19",
+     "fw": "la rondelle de citron",
+     "de": [
+      "die Zitronenscheibe"
+     ],
+     "grp": "gesicht"
+    },
+    {
+     "id": "5u4_20",
+     "fw": "Pour le nez, je prends une carotte.",
+     "de": [
+      "Für die Nase nehme ich eine Karotte."
+     ],
+     "grp": "gesicht"
+    },
+    {
+     "id": "5u4_21",
+     "fw": "C'est quoi?",
+     "de": [
+      "Was ist das?"
+     ],
+     "grp": "gesicht"
+    },
+    {
+     "id": "5u4_22",
+     "fw": "la banane",
+     "de": [
+      "die Banane"
+     ],
+     "grp": "gesicht"
+    },
+    {
+     "id": "5u4_23",
+     "fw": "les nouilles",
+     "de": [
+      "die Nudeln"
+     ],
+     "grp": "gesicht"
+    },
+    {
+     "id": "5u4_24",
+     "fw": "Pique un raisin.",
+     "de": [
+      "Spiesse eine Traube auf."
+     ],
+     "grp": "imper"
+    },
+    {
+     "id": "5u4_25",
+     "fw": "Fixe le raisin sur la poire.",
+     "de": [
+      "Befestige die Traube an der Birne."
+     ],
+     "grp": "imper"
+    },
+    {
+     "id": "5u4_26",
+     "fw": "Coupe l'ananas (en deux).",
+     "de": [
+      "Schneide (halbiere) die Ananas."
+     ],
+     "grp": "imper"
+    },
+    {
+     "id": "5u4_27",
+     "fw": "Pose la fraise sur l'assiette.",
+     "de": [
+      "Stelle / Lege die Erdbeere auf den Teller."
+     ],
+     "grp": "imper"
+    },
+    {
+     "id": "5u4_28",
+     "fw": "Prends une poire pour le corps.",
+     "de": [
+      "Nimm eine Birne für den Körper."
+     ],
+     "grp": "imper"
+    },
+    {
+     "id": "5u4_29",
+     "fw": "Tu coupes. Coupe.",
+     "de": [
+      "Du schneidest. Schneide!"
+     ],
+     "grp": "imper"
+    },
+    {
+     "id": "5u4_30",
+     "fw": "Vous coupez. Coupez.",
+     "de": [
+      "Ihr schneidet. Schneidet!"
+     ],
+     "grp": "imper"
+    },
+    {
+     "id": "5u4_31",
+     "fw": "un alphabet",
+     "de": [
+      "ein Alphabet"
+     ],
+     "grp": "imper"
+    },
+    {
+     "id": "5u4_32",
+     "fw": "la soupe",
+     "de": [
+      "die Suppe"
+     ],
+     "grp": "imper"
+    },
+    {
+     "id": "5u4_33",
+     "fw": "la lettre",
+     "de": [
+      "der Buchstabe"
+     ],
+     "grp": "imper"
+    },
+    {
+     "id": "5u4_34",
+     "fw": "la souris",
+     "de": [
+      "die Maus"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u4_35",
+     "fw": "la voiture",
+     "de": [
+      "das Auto"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u4_36",
+     "fw": "la chenille",
+     "de": [
+      "die Raupe"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u4_37",
+     "fw": "le hérisson",
+     "de": [
+      "der Igel"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u4_38",
+     "fw": "la demi-rondelle de concombre",
+     "de": [
+      "die halbe Gurkenscheibe"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u4_39",
+     "fw": "la tige de ciboulette",
+     "de": [
+      "der Schnittlauchhalm"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u4_40",
+     "fw": "le clou de girofle",
+     "de": [
+      "die Gewürznelke"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u4_41",
+     "fw": "la groseille (rouge)",
+     "de": [
+      "die Johannisbeere"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u4_42",
+     "fw": "le raisin sec",
+     "de": [
+      "die Rosine (getrocknete Traube)"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u4_43",
+     "fw": "les parties du visage",
+     "de": [
+      "die Gesichtsteile"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u4_44",
+     "fw": "le bouquet de brocoli",
+     "de": [
+      "das Brokkoliröschen"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u4_45",
+     "fw": "le morceau de fromage",
+     "de": [
+      "das Stück Käse"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u4_46",
+     "fw": "le morceau de pastèque",
+     "de": [
+      "das Stück Wassermelone"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u4_47",
+     "fw": "Plante des cure-dents sur le dos.",
+     "de": [
+      "Pflanze Zahnstocher in den Rücken ein."
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u4_48",
+     "fw": "Fixe le raisin à l'aide d'un cure-dent.",
+     "de": [
+      "Befestige die Traube mithilfe eines Zahnstochers."
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u4_49",
+     "fw": "la patte",
+     "de": [
+      "die Pfote"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u4_50",
+     "fw": "Insère les feuilles dans la poire.",
+     "de": [
+      "Stecke die Blätter in die Birne."
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u4_51",
+     "fw": "pour la queue",
+     "de": [
+      "für den Schwanz"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u4_52",
+     "fw": "Enfile des raisins sur un fil de métal.",
+     "de": [
+      "Ziehe Trauben auf einen Metallfaden auf."
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u4_53",
+     "fw": "Prends la pâte bleue / verte / rouge.",
+     "de": [
+      "Nimm die blaue / grüne / rote Knete."
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u4_54",
+     "fw": "Forme une grande / petite boule pour le corps.",
+     "de": [
+      "Forme eine grosse / kleine Kugel für den Körper."
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u4_55",
+     "fw": "le pain",
+     "de": [
+      "das Brot"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u4_56",
+     "fw": "la pomme",
+     "de": [
+      "der Apfel"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u4_57",
+     "fw": "la pomme de terre",
+     "de": [
+      "die Kartoffel"
+     ],
+     "grp": "plus"
+    }
+   ],
+   "exam": {
+    "minutes": 30,
+    "questions": [
+     {
+      "id": "q1",
+      "q": "Wie heisst «eine Zutat» auf Französisch?",
+      "explain": "eine Zutat = un ingrédient",
+      "ref": "5u4_1",
+      "type": "input",
+      "answer": [
+       "un ingrédient",
+       "ingrédient"
+      ]
+     },
+     {
+      "id": "q2",
+      "q": "Wie heisst «eine Ananas» auf Französisch?",
+      "explain": "eine Ananas = un ananas",
+      "ref": "5u4_2",
+      "type": "input",
+      "answer": [
+       "un ananas",
+       "ananas"
+      ]
+     },
+     {
+      "id": "q3",
+      "q": "Wie heisst «die Erdbeere» auf Französisch?",
+      "explain": "die Erdbeere = la fraise",
+      "ref": "5u4_4",
+      "type": "input",
+      "answer": [
+       "la fraise",
+       "fraise"
+      ]
+     },
+     {
+      "id": "q4",
+      "q": "Wie heisst «die Karotte» auf Französisch?",
+      "explain": "die Karotte = la carotte",
+      "ref": "5u4_7",
+      "type": "input",
+      "answer": [
+       "la carotte",
+       "carotte"
+      ]
+     },
+     {
+      "id": "q5",
+      "q": "Wie heisst «die Birne» auf Französisch?",
+      "explain": "die Birne = la poire",
+      "ref": "5u4_8",
+      "type": "input",
+      "answer": [
+       "la poire",
+       "poire"
+      ]
+     },
+     {
+      "id": "q6",
+      "q": "Wie heisst «das Ananasblatt» auf Französisch?",
+      "explain": "das Ananasblatt = la feuille d'ananas",
+      "ref": "5u4_9",
+      "type": "input",
+      "answer": [
+       "la feuille d'ananas"
+      ]
+     },
+     {
+      "id": "q7",
+      "q": "Wie heisst «ein Ohr» auf Französisch?",
+      "explain": "ein Ohr = une oreille",
+      "ref": "5u4_13",
+      "type": "input",
+      "answer": [
+       "une oreille",
+       "e oreille"
+      ]
+     },
+     {
+      "id": "q8",
+      "q": "Wie heisst «die Haare» auf Französisch?",
+      "explain": "die Haare = les cheveux",
+      "ref": "5u4_15",
+      "type": "input",
+      "answer": [
+       "les cheveux",
+       "s cheveux"
+      ]
+     },
+     {
+      "id": "q9",
+      "q": "Wie heisst «der Kopf» auf Französisch?",
+      "explain": "der Kopf = la tête",
+      "ref": "5u4_16",
+      "type": "input",
+      "answer": [
+       "la tête",
+       "tête"
+      ]
+     },
+     {
+      "id": "q10",
+      "q": "Wie heisst «der Mund» auf Französisch?",
+      "explain": "der Mund = la bouche",
+      "ref": "5u4_18",
+      "type": "input",
+      "answer": [
+       "la bouche",
+       "bouche"
+      ]
+     },
+     {
+      "id": "q11",
+      "q": "Wie heisst «die Banane» auf Französisch?",
+      "explain": "die Banane = la banane",
+      "ref": "5u4_22",
+      "type": "input",
+      "answer": [
+       "la banane",
+       "banane"
+      ]
+     },
+     {
+      "id": "q12",
+      "q": "Wie heisst «die Nudeln» auf Französisch?",
+      "explain": "die Nudeln = les nouilles",
+      "ref": "5u4_23",
+      "type": "input",
+      "answer": [
+       "les nouilles",
+       "s nouilles"
+      ]
+     },
+     {
+      "id": "q13",
+      "q": "Wie heisst «die Suppe» auf Französisch?",
+      "explain": "die Suppe = la soupe",
+      "ref": "5u4_32",
+      "type": "input",
+      "answer": [
+       "la soupe",
+       "soupe"
+      ]
+     },
+     {
+      "id": "q14",
+      "q": "Wie heisst «der Buchstabe» auf Französisch?",
+      "explain": "der Buchstabe = la lettre",
+      "ref": "5u4_33",
+      "type": "input",
+      "answer": [
+       "la lettre",
+       "lettre"
+      ]
+     },
+     {
+      "id": "q15",
+      "q": "Wie heisst «die Maus» auf Französisch?",
+      "explain": "die Maus = la souris",
+      "ref": "5u4_34",
+      "type": "input",
+      "answer": [
+       "la souris",
+       "souris"
+      ]
+     },
+     {
+      "id": "q16",
+      "q": "Wie heisst «die Raupe» auf Französisch?",
+      "explain": "die Raupe = la chenille",
+      "ref": "5u4_36",
+      "type": "input",
+      "answer": [
+       "la chenille",
+       "chenille"
+      ]
+     },
+     {
+      "id": "q17",
+      "q": "Wie heisst «der Igel» auf Französisch?",
+      "explain": "der Igel = le hérisson",
+      "ref": "5u4_37",
+      "type": "input",
+      "answer": [
+       "le hérisson",
+       "hérisson"
+      ]
+     },
+     {
+      "id": "q18",
+      "q": "Wie heisst «die Rosine (getrocknete Traube)» auf Französisch?",
+      "explain": "die Rosine (getrocknete Traube) = le raisin sec",
+      "ref": "5u4_42",
+      "type": "input",
+      "answer": [
+       "le raisin sec"
+      ]
+     },
+     {
+      "id": "q19",
+      "q": "Wie heisst «für den Schwanz» auf Französisch?",
+      "explain": "für den Schwanz = pour la queue",
+      "ref": "5u4_51",
+      "type": "input",
+      "answer": [
+       "pour la queue"
+      ]
+     },
+     {
+      "id": "q20",
+      "q": "Wie heisst «das Brot» auf Französisch?",
+      "explain": "das Brot = le pain",
+      "ref": "5u4_55",
+      "type": "input",
+      "answer": [
+       "le pain",
+       "pain"
+      ]
+     }
+    ]
+   },
+   "theory": {
+    "zutat": {
+     "h": "Obst und Gemüse",
+     "text": "Vor jedem Nomen steht ein Begleiter: la fraise, la poire, la carotte, un ananas. Mit un peu de persil sagst du: ein wenig Petersilie."
+    },
+    "gesicht": {
+     "h": "Das Gesicht",
+     "text": "le visage = das Gesicht. Merke: les yeux (Mehrzahl) und un œil (Einzahl). Pour le nez, je prends une carotte = Für die Nase nehme ich eine Karotte."
+    },
+    "imper": {
+     "h": "Anweisungen",
+     "text": "Mit der Befehlsform sagst du, was man tun soll: Coupe l'ananas! Pose la fraise! Bei «ihr» wird es Coupez! Tu coupes → Coupe. Vous coupez → Coupez."
+    },
+    "plus": {
+     "h": "Zusatzwörter",
+     "text": "Wörter aus «Vocabulaire plus»: Tiere aus Früchten, Werkzeuge und weitere Anweisungen."
+    }
+   },
+   "art": "franz"
+  },
+  {
+   "id": "kl5-franz-unit5-animaux",
+   "child": "kl5",
+   "subject": "franz",
+   "chapter": "Unit 5 · Animaux et couleurs",
+   "title": "Unit 5 · Animaux et couleurs",
+   "explain": [
+    {
+     "h": "Wörterliste zum Durchlernen",
+     "text": "So lernst du wie auf einem Blatt: Zuerst das Wort laut sagen. Dann tippe auf das Feld und decke die Lösung auf. Dann prüfe: Hast du es gewusst? Danach kommt das nächste Wort. Mit dem Knopf oben wechselst du die Richtung.",
+     "list": true
+    }
+   ],
+   "cards": [
+    {
+     "id": "5u5_1",
+     "fw": "le loup",
+     "de": [
+      "der Wolf"
+     ],
+     "grp": "tier"
+    },
+    {
+     "id": "5u5_2",
+     "fw": "le hérisson",
+     "de": [
+      "der Igel"
+     ],
+     "grp": "tier"
+    },
+    {
+     "id": "5u5_3",
+     "fw": "la marmotte",
+     "de": [
+      "das Murmeltier"
+     ],
+     "grp": "tier"
+    },
+    {
+     "id": "5u5_4",
+     "fw": "une abeille",
+     "de": [
+      "eine Biene"
+     ],
+     "grp": "tier"
+    },
+    {
+     "id": "5u5_5",
+     "fw": "une adresse",
+     "de": [
+      "ein Wohnort"
+     ],
+     "grp": "tier"
+    },
+    {
+     "id": "5u5_6",
+     "fw": "la taille",
+     "de": [
+      "die Grösse"
+     ],
+     "grp": "tier"
+    },
+    {
+     "id": "5u5_7",
+     "fw": "le poids",
+     "de": [
+      "das Gewicht"
+     ],
+     "grp": "tier"
+    },
+    {
+     "id": "5u5_8",
+     "fw": "la nourriture",
+     "de": [
+      "die Nahrung"
+     ],
+     "grp": "tier"
+    },
+    {
+     "id": "5u5_9",
+     "fw": "cent",
+     "de": [
+      "hundert"
+     ],
+     "grp": "zahl"
+    },
+    {
+     "id": "5u5_10",
+     "fw": "mille",
+     "de": [
+      "tausend"
+     ],
+     "grp": "zahl"
+    },
+    {
+     "id": "5u5_11",
+     "fw": "le chat",
+     "de": [
+      "die Katze"
+     ],
+     "grp": "tier"
+    },
+    {
+     "id": "5u5_12",
+     "fw": "le cheval",
+     "de": [
+      "das Pferd"
+     ],
+     "grp": "tier"
+    },
+    {
+     "id": "5u5_13",
+     "fw": "le cochon",
+     "de": [
+      "das Schwein"
+     ],
+     "grp": "tier"
+    },
+    {
+     "id": "5u5_14",
+     "fw": "un escargot",
+     "de": [
+      "eine Schnecke"
+     ],
+     "grp": "tier"
+    },
+    {
+     "id": "5u5_15",
+     "fw": "le lapin",
+     "de": [
+      "das Kaninchen"
+     ],
+     "grp": "tier"
+    },
+    {
+     "id": "5u5_16",
+     "fw": "le perroquet",
+     "de": [
+      "der Papagei"
+     ],
+     "grp": "tier"
+    },
+    {
+     "id": "5u5_17",
+     "fw": "le poisson",
+     "de": [
+      "der Fisch"
+     ],
+     "grp": "tier"
+    },
+    {
+     "id": "5u5_18",
+     "fw": "la vache",
+     "de": [
+      "die Kuh"
+     ],
+     "grp": "tier"
+    },
+    {
+     "id": "5u5_19",
+     "fw": "la couleur",
+     "de": [
+      "die Farbe"
+     ],
+     "grp": "farbe"
+    },
+    {
+     "id": "5u5_20",
+     "fw": "blanc / blanche",
+     "de": [
+      "weiss"
+     ],
+     "grp": "farbe"
+    },
+    {
+     "id": "5u5_21",
+     "fw": "gris / grise",
+     "de": [
+      "grau"
+     ],
+     "grp": "farbe"
+    },
+    {
+     "id": "5u5_22",
+     "fw": "noir / noire",
+     "de": [
+      "schwarz"
+     ],
+     "grp": "farbe"
+    },
+    {
+     "id": "5u5_23",
+     "fw": "brun / brune, marron",
+     "de": [
+      "braun"
+     ],
+     "grp": "farbe"
+    },
+    {
+     "id": "5u5_24",
+     "fw": "bleu / bleue",
+     "de": [
+      "blau"
+     ],
+     "grp": "farbe"
+    },
+    {
+     "id": "5u5_25",
+     "fw": "vert / verte",
+     "de": [
+      "grün"
+     ],
+     "grp": "farbe"
+    },
+    {
+     "id": "5u5_26",
+     "fw": "rouge",
+     "de": [
+      "rot"
+     ],
+     "grp": "farbe"
+    },
+    {
+     "id": "5u5_27",
+     "fw": "jaune",
+     "de": [
+      "gelb"
+     ],
+     "grp": "farbe"
+    },
+    {
+     "id": "5u5_28",
+     "fw": "rose",
+     "de": [
+      "rosa"
+     ],
+     "grp": "farbe"
+    },
+    {
+     "id": "5u5_29",
+     "fw": "violet / violette",
+     "de": [
+      "violett"
+     ],
+     "grp": "farbe"
+    },
+    {
+     "id": "5u5_30",
+     "fw": "orange",
+     "de": [
+      "orange"
+     ],
+     "grp": "farbe"
+    },
+    {
+     "id": "5u5_31",
+     "fw": "Il / Elle vit dans les montagnes en Europe.",
+     "de": [
+      "Er / Sie lebt in den Bergen Europas."
+     ],
+     "grp": "tier"
+    },
+    {
+     "id": "5u5_32",
+     "fw": "Il / Elle mange des fruits.",
+     "de": [
+      "Er / Sie frisst (isst) Früchte."
+     ],
+     "grp": "tier"
+    },
+    {
+     "id": "5u5_33",
+     "fw": "Il / Elle mesure de 45 à 60 centimètres.",
+     "de": [
+      "Er / Sie misst 45 bis 60 Zentimeter."
+     ],
+     "grp": "tier"
+    },
+    {
+     "id": "5u5_34",
+     "fw": "Il / Elle pèse entre 5 et 10 kilos.",
+     "de": [
+      "Er / Sie wiegt zwischen 5 und 10 Kilogramm."
+     ],
+     "grp": "tier"
+    },
+    {
+     "id": "5u5_35",
+     "fw": "Il / Elle a un bec.",
+     "de": [
+      "Er / Sie hat einen Schnabel."
+     ],
+     "grp": "tier"
+    },
+    {
+     "id": "5u5_36",
+     "fw": "Il / Elle est gris/e et brun/e.",
+     "de": [
+      "Er / Sie ist grau und braun."
+     ],
+     "grp": "tier"
+    },
+    {
+     "id": "5u5_37",
+     "fw": "De quelle couleur est le cochon?",
+     "de": [
+      "Welche Farbe hat das Schwein?"
+     ],
+     "grp": "tier"
+    },
+    {
+     "id": "5u5_38",
+     "fw": "le chasseur",
+     "de": [
+      "der Jäger"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u5_39",
+     "fw": "le trouillard",
+     "de": [
+      "der Angsthase"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u5_40",
+     "fw": "le fainéant, la fainéante",
+     "de": [
+      "der Nichtstuer",
+      "der Faulpelz"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u5_41",
+     "fw": "le bosseur, la bosseuse",
+     "de": [
+      "das Arbeitstier"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u5_42",
+     "fw": "la caractéristique",
+     "de": [
+      "das Kennzeichen",
+      "das Merkmal"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u5_43",
+     "fw": "une apparence physique",
+     "de": [
+      "ein Aussehen"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u5_44",
+     "fw": "la portée",
+     "de": [
+      "der Wurf (Anzahl Jungtiere bei einer Geburt)"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u5_45",
+     "fw": "la durée de vie",
+     "de": [
+      "die Lebensdauer"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u5_46",
+     "fw": "le chien",
+     "de": [
+      "der Hund"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u5_47",
+     "fw": "un éléphant",
+     "de": [
+      "ein Elefant"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u5_48",
+     "fw": "le mouton",
+     "de": [
+      "das Schaf"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u5_49",
+     "fw": "le pingouin",
+     "de": [
+      "der Pinguin"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u5_50",
+     "fw": "la chouette",
+     "de": [
+      "die Eule"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u5_51",
+     "fw": "le serpent",
+     "de": [
+      "die Schlange"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u5_52",
+     "fw": "le lion",
+     "de": [
+      "der Löwe"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u5_53",
+     "fw": "le coq",
+     "de": [
+      "der Hahn"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u5_54",
+     "fw": "le rat",
+     "de": [
+      "die Ratte"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u5_55",
+     "fw": "le singe",
+     "de": [
+      "der Affe"
+     ],
+     "grp": "plus"
+    }
+   ],
+   "exam": {
+    "minutes": 30,
+    "questions": [
+     {
+      "id": "q1",
+      "q": "Wie heisst «der Wolf» auf Französisch?",
+      "explain": "der Wolf = le loup",
+      "ref": "5u5_1",
+      "type": "input",
+      "answer": [
+       "le loup",
+       "loup"
+      ]
+     },
+     {
+      "id": "q2",
+      "q": "Wie heisst «der Igel» auf Französisch?",
+      "explain": "der Igel = le hérisson",
+      "ref": "5u5_2",
+      "type": "input",
+      "answer": [
+       "le hérisson",
+       "hérisson"
+      ]
+     },
+     {
+      "id": "q3",
+      "q": "Wie heisst «eine Biene» auf Französisch?",
+      "explain": "eine Biene = une abeille",
+      "ref": "5u5_4",
+      "type": "input",
+      "answer": [
+       "une abeille",
+       "e abeille"
+      ]
+     },
+     {
+      "id": "q4",
+      "q": "Wie heisst «die Grösse» auf Französisch?",
+      "explain": "die Grösse = la taille",
+      "ref": "5u5_6",
+      "type": "input",
+      "answer": [
+       "la taille",
+       "taille"
+      ]
+     },
+     {
+      "id": "q5",
+      "q": "Wie heisst «die Nahrung» auf Französisch?",
+      "explain": "die Nahrung = la nourriture",
+      "ref": "5u5_8",
+      "type": "input",
+      "answer": [
+       "la nourriture",
+       "nourriture"
+      ]
+     },
+     {
+      "id": "q6",
+      "q": "Wie heisst «tausend» auf Französisch?",
+      "explain": "tausend = mille",
+      "ref": "5u5_10",
+      "type": "input",
+      "answer": [
+       "mille"
+      ]
+     },
+     {
+      "id": "q7",
+      "q": "Wie heisst «das Pferd» auf Französisch?",
+      "explain": "das Pferd = le cheval",
+      "ref": "5u5_12",
+      "type": "input",
+      "answer": [
+       "le cheval",
+       "cheval"
+      ]
+     },
+     {
+      "id": "q8",
+      "q": "Wie heisst «eine Schnecke» auf Französisch?",
+      "explain": "eine Schnecke = un escargot",
+      "ref": "5u5_14",
+      "type": "input",
+      "answer": [
+       "un escargot",
+       "escargot"
+      ]
+     },
+     {
+      "id": "q9",
+      "q": "Wie heisst «der Papagei» auf Französisch?",
+      "explain": "der Papagei = le perroquet",
+      "ref": "5u5_16",
+      "type": "input",
+      "answer": [
+       "le perroquet",
+       "perroquet"
+      ]
+     },
+     {
+      "id": "q10",
+      "q": "Wie heisst «die Kuh» auf Französisch?",
+      "explain": "die Kuh = la vache",
+      "ref": "5u5_18",
+      "type": "input",
+      "answer": [
+       "la vache",
+       "vache"
+      ]
+     },
+     {
+      "id": "q11",
+      "q": "Wie heisst «rot» auf Französisch?",
+      "explain": "rot = rouge",
+      "ref": "5u5_26",
+      "type": "input",
+      "answer": [
+       "rouge"
+      ]
+     },
+     {
+      "id": "q12",
+      "q": "Wie heisst «gelb» auf Französisch?",
+      "explain": "gelb = jaune",
+      "ref": "5u5_27",
+      "type": "input",
+      "answer": [
+       "jaune"
+      ]
+     },
+     {
+      "id": "q13",
+      "q": "Wie heisst «orange» auf Französisch?",
+      "explain": "orange = orange",
+      "ref": "5u5_30",
+      "type": "input",
+      "answer": [
+       "orange"
+      ]
+     },
+     {
+      "id": "q14",
+      "q": "Wie heisst «der Angsthase» auf Französisch?",
+      "explain": "der Angsthase = le trouillard",
+      "ref": "5u5_39",
+      "type": "input",
+      "answer": [
+       "le trouillard",
+       "trouillard"
+      ]
+     },
+     {
+      "id": "q15",
+      "q": "Wie heisst «ein Aussehen» auf Französisch?",
+      "explain": "ein Aussehen = une apparence physique",
+      "ref": "5u5_43",
+      "type": "input",
+      "answer": [
+       "une apparence physique"
+      ]
+     },
+     {
+      "id": "q16",
+      "q": "Wie heisst «der Hund» auf Französisch?",
+      "explain": "der Hund = le chien",
+      "ref": "5u5_46",
+      "type": "input",
+      "answer": [
+       "le chien",
+       "chien"
+      ]
+     },
+     {
+      "id": "q17",
+      "q": "Wie heisst «das Schaf» auf Französisch?",
+      "explain": "das Schaf = le mouton",
+      "ref": "5u5_48",
+      "type": "input",
+      "answer": [
+       "le mouton",
+       "mouton"
+      ]
+     },
+     {
+      "id": "q18",
+      "q": "Wie heisst «die Eule» auf Französisch?",
+      "explain": "die Eule = la chouette",
+      "ref": "5u5_50",
+      "type": "input",
+      "answer": [
+       "la chouette",
+       "chouette"
+      ]
+     },
+     {
+      "id": "q19",
+      "q": "Wie heisst «der Löwe» auf Französisch?",
+      "explain": "der Löwe = le lion",
+      "ref": "5u5_52",
+      "type": "input",
+      "answer": [
+       "le lion",
+       "lion"
+      ]
+     },
+     {
+      "id": "q20",
+      "q": "Wie heisst «die Ratte» auf Französisch?",
+      "explain": "die Ratte = le rat",
+      "ref": "5u5_54",
+      "type": "input",
+      "answer": [
+       "le rat",
+       "rat"
+      ]
+     }
+    ]
+   },
+   "theory": {
+    "tier": {
+     "h": "Tiere",
+     "text": "Lerne jedes Tier mit dem Begleiter: le loup, la marmotte, une abeille. Mit Il / Elle vit dans les montagnes sagst du, wo ein Tier lebt."
+    },
+    "zahl": {
+     "h": "Grosse Zahlen",
+     "text": "cent = hundert, mille = tausend. 200 = deux cents, 2000 = deux mille."
+    },
+    "farbe": {
+     "h": "Farben",
+     "text": "Farben passen sich an: blanc / blanche, gris / grise, noir / noire. Rouge, jaune, rose und orange bleiben immer gleich. De quelle couleur est le cochon? = Welche Farbe hat das Schwein?"
+    },
+    "plus": {
+     "h": "Zusatzwörter",
+     "text": "Wörter aus «Vocabulaire plus» und weitere Tiere der Unité."
+    }
+   },
+   "art": "franz"
+  },
+  {
+   "id": "kl5-franz-unit6-ville",
+   "child": "kl5",
+   "subject": "franz",
+   "chapter": "Unit 6 · Ville et vêtements",
+   "title": "Unit 6 · Ville et vêtements",
+   "explain": [
+    {
+     "h": "Wörterliste zum Durchlernen",
+     "text": "So lernst du wie auf einem Blatt: Zuerst das Wort laut sagen. Dann tippe auf das Feld und decke die Lösung auf. Dann prüfe: Hast du es gewusst? Danach kommt das nächste Wort. Mit dem Knopf oben wechselst du die Richtung.",
+     "list": true
+    }
+   ],
+   "cards": [
+    {
+     "id": "5u6_1",
+     "fw": "la ville",
+     "de": [
+      "die Stadt"
+     ],
+     "grp": "ort"
+    },
+    {
+     "id": "5u6_2",
+     "fw": "le pays",
+     "de": [
+      "das Land"
+     ],
+     "grp": "ort"
+    },
+    {
+     "id": "5u6_3",
+     "fw": "le monument",
+     "de": [
+      "das Bauwerk"
+     ],
+     "grp": "ort"
+    },
+    {
+     "id": "5u6_4",
+     "fw": "la tour",
+     "de": [
+      "der Turm"
+     ],
+     "grp": "ort"
+    },
+    {
+     "id": "5u6_5",
+     "fw": "grand / grande",
+     "de": [
+      "gross"
+     ],
+     "grp": "adj"
+    },
+    {
+     "id": "5u6_6",
+     "fw": "petit / petite",
+     "de": [
+      "klein"
+     ],
+     "grp": "adj"
+    },
+    {
+     "id": "5u6_7",
+     "fw": "rond / ronde",
+     "de": [
+      "rund"
+     ],
+     "grp": "adj"
+    },
+    {
+     "id": "5u6_8",
+     "fw": "rectangulaire",
+     "de": [
+      "rechteckig"
+     ],
+     "grp": "adj"
+    },
+    {
+     "id": "5u6_9",
+     "fw": "court / courte",
+     "de": [
+      "kurz"
+     ],
+     "grp": "adj"
+    },
+    {
+     "id": "5u6_10",
+     "fw": "long / longue",
+     "de": [
+      "lang"
+     ],
+     "grp": "adj"
+    },
+    {
+     "id": "5u6_11",
+     "fw": "chaud / chaude",
+     "de": [
+      "warm",
+      "heiss"
+     ],
+     "grp": "adj"
+    },
+    {
+     "id": "5u6_12",
+     "fw": "froid / froide",
+     "de": [
+      "kalt"
+     ],
+     "grp": "adj"
+    },
+    {
+     "id": "5u6_13",
+     "fw": "Le monsieur est grand.",
+     "de": [
+      "Der Mann ist gross."
+     ],
+     "grp": "adj"
+    },
+    {
+     "id": "5u6_14",
+     "fw": "La dame est grande.",
+     "de": [
+      "Die Frau ist gross."
+     ],
+     "grp": "adj"
+    },
+    {
+     "id": "5u6_15",
+     "fw": "Les enfants / garçons sont grands.",
+     "de": [
+      "Die Kinder / Knaben sind gross."
+     ],
+     "grp": "adj"
+    },
+    {
+     "id": "5u6_16",
+     "fw": "Les filles sont grandes.",
+     "de": [
+      "Die Mädchen sind gross."
+     ],
+     "grp": "adj"
+    },
+    {
+     "id": "5u6_17",
+     "fw": "le vêtement",
+     "de": [
+      "das Kleidungsstück"
+     ],
+     "grp": "kleid"
+    },
+    {
+     "id": "5u6_18",
+     "fw": "le tee-shirt",
+     "de": [
+      "das T-Shirt"
+     ],
+     "grp": "kleid"
+    },
+    {
+     "id": "5u6_19",
+     "fw": "le pull",
+     "de": [
+      "der Pullover"
+     ],
+     "grp": "kleid"
+    },
+    {
+     "id": "5u6_20",
+     "fw": "la chemise",
+     "de": [
+      "das Hemd"
+     ],
+     "grp": "kleid"
+    },
+    {
+     "id": "5u6_21",
+     "fw": "le pantalon",
+     "de": [
+      "die Hose"
+     ],
+     "grp": "kleid"
+    },
+    {
+     "id": "5u6_22",
+     "fw": "le short",
+     "de": [
+      "die Shorts",
+      "die kurze Hose"
+     ],
+     "grp": "kleid"
+    },
+    {
+     "id": "5u6_23",
+     "fw": "la robe",
+     "de": [
+      "das Kleid"
+     ],
+     "grp": "kleid"
+    },
+    {
+     "id": "5u6_24",
+     "fw": "la jupe",
+     "de": [
+      "der Rock",
+      "der Jupe"
+     ],
+     "grp": "kleid"
+    },
+    {
+     "id": "5u6_25",
+     "fw": "la chaussette",
+     "de": [
+      "die Socke"
+     ],
+     "grp": "kleid"
+    },
+    {
+     "id": "5u6_26",
+     "fw": "la chaussure",
+     "de": [
+      "der (Halb-)Schuh"
+     ],
+     "grp": "kleid"
+    },
+    {
+     "id": "5u6_27",
+     "fw": "la veste",
+     "de": [
+      "die Jacke"
+     ],
+     "grp": "kleid"
+    },
+    {
+     "id": "5u6_28",
+     "fw": "le chapeau",
+     "de": [
+      "der Hut"
+     ],
+     "grp": "kleid"
+    },
+    {
+     "id": "5u6_29",
+     "fw": "la casquette",
+     "de": [
+      "die (Schirm-)Mütze"
+     ],
+     "grp": "kleid"
+    },
+    {
+     "id": "5u6_30",
+     "fw": "le manteau",
+     "de": [
+      "der Mantel"
+     ],
+     "grp": "kleid"
+    },
+    {
+     "id": "5u6_31",
+     "fw": "la montre",
+     "de": [
+      "die Uhr"
+     ],
+     "grp": "kleid"
+    },
+    {
+     "id": "5u6_32",
+     "fw": "la cravate",
+     "de": [
+      "die Krawatte"
+     ],
+     "grp": "kleid"
+    },
+    {
+     "id": "5u6_33",
+     "fw": "Mon personnage porte un pantalon rouge.",
+     "de": [
+      "Meine Figur trägt eine rote Hose."
+     ],
+     "grp": "kleid"
+    },
+    {
+     "id": "5u6_34",
+     "fw": "C'est qui?",
+     "de": [
+      "Wer ist das?"
+     ],
+     "grp": "kleid"
+    },
+    {
+     "id": "5u6_35",
+     "fw": "Que porte ton monument?",
+     "de": [
+      "Was trägt dein Bauwerk?"
+     ],
+     "grp": "kleid"
+    },
+    {
+     "id": "5u6_36",
+     "fw": "le gratte-ciel",
+     "de": [
+      "der Wolkenkratzer"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u6_37",
+     "fw": "la hauteur",
+     "de": [
+      "die Höhe"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u6_38",
+     "fw": "un étage",
+     "de": [
+      "ein Stockwerk"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u6_39",
+     "fw": "la marche de l'escalier",
+     "de": [
+      "die Treppenstufe"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u6_40",
+     "fw": "un an, une année",
+     "de": [
+      "ein Jahr"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u6_41",
+     "fw": "la botte",
+     "de": [
+      "der Stiefel"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u6_42",
+     "fw": "une écharpe",
+     "de": [
+      "ein Schal"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u6_43",
+     "fw": "le parapluie",
+     "de": [
+      "der Schirm"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u6_44",
+     "fw": "les lunettes de soleil",
+     "de": [
+      "die Sonnenbrille"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u6_45",
+     "fw": "le sac à main",
+     "de": [
+      "die Handtasche"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u6_46",
+     "fw": "le collier",
+     "de": [
+      "die Halskette"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u6_47",
+     "fw": "la ceinture",
+     "de": [
+      "der Gürtel"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u6_48",
+     "fw": "le bikini",
+     "de": [
+      "der Bikini"
+     ],
+     "grp": "plus"
+    },
+    {
+     "id": "5u6_49",
+     "fw": "le collant",
+     "de": [
+      "die Strumpfhose"
+     ],
+     "grp": "plus"
+    }
+   ],
+   "exam": {
+    "minutes": 30,
+    "questions": [
+     {
+      "id": "q1",
+      "q": "Wie heisst «die Stadt» auf Französisch?",
+      "explain": "die Stadt = la ville",
+      "ref": "5u6_1",
+      "type": "input",
+      "answer": [
+       "la ville",
+       "ville"
+      ]
+     },
+     {
+      "id": "q2",
+      "q": "Wie heisst «das Land» auf Französisch?",
+      "explain": "das Land = le pays",
+      "ref": "5u6_2",
+      "type": "input",
+      "answer": [
+       "le pays",
+       "pays"
+      ]
+     },
+     {
+      "id": "q3",
+      "q": "Wie heisst «der Turm» auf Französisch?",
+      "explain": "der Turm = la tour",
+      "ref": "5u6_4",
+      "type": "input",
+      "answer": [
+       "la tour",
+       "tour"
+      ]
+     },
+     {
+      "id": "q4",
+      "q": "Wie heisst «rechteckig» auf Französisch?",
+      "explain": "rechteckig = rectangulaire",
+      "ref": "5u6_8",
+      "type": "input",
+      "answer": [
+       "rectangulaire"
+      ]
+     },
+     {
+      "id": "q5",
+      "q": "Wie heisst «das T-Shirt» auf Französisch?",
+      "explain": "das T-Shirt = le tee-shirt",
+      "ref": "5u6_18",
+      "type": "input",
+      "answer": [
+       "le tee-shirt",
+       "tee-shirt"
+      ]
+     },
+     {
+      "id": "q6",
+      "q": "Wie heisst «der Pullover» auf Französisch?",
+      "explain": "der Pullover = le pull",
+      "ref": "5u6_19",
+      "type": "input",
+      "answer": [
+       "le pull",
+       "pull"
+      ]
+     },
+     {
+      "id": "q7",
+      "q": "Wie heisst «die Hose» auf Französisch?",
+      "explain": "die Hose = le pantalon",
+      "ref": "5u6_21",
+      "type": "input",
+      "answer": [
+       "le pantalon",
+       "pantalon"
+      ]
+     },
+     {
+      "id": "q8",
+      "q": "Wie heisst «die Shorts» auf Französisch?",
+      "explain": "die Shorts = le short",
+      "ref": "5u6_22",
+      "type": "input",
+      "answer": [
+       "le short",
+       "short"
+      ]
+     },
+     {
+      "id": "q9",
+      "q": "Wie heisst «der Rock» auf Französisch?",
+      "explain": "der Rock = la jupe",
+      "ref": "5u6_24",
+      "type": "input",
+      "answer": [
+       "la jupe",
+       "jupe"
+      ]
+     },
+     {
+      "id": "q10",
+      "q": "Wie heisst «die Socke» auf Französisch?",
+      "explain": "die Socke = la chaussette",
+      "ref": "5u6_25",
+      "type": "input",
+      "answer": [
+       "la chaussette",
+       "chaussette"
+      ]
+     },
+     {
+      "id": "q11",
+      "q": "Wie heisst «die Jacke» auf Französisch?",
+      "explain": "die Jacke = la veste",
+      "ref": "5u6_27",
+      "type": "input",
+      "answer": [
+       "la veste",
+       "veste"
+      ]
+     },
+     {
+      "id": "q12",
+      "q": "Wie heisst «die (Schirm-)Mütze» auf Französisch?",
+      "explain": "die (Schirm-)Mütze = la casquette",
+      "ref": "5u6_29",
+      "type": "input",
+      "answer": [
+       "la casquette",
+       "casquette"
+      ]
+     },
+     {
+      "id": "q13",
+      "q": "Wie heisst «der Mantel» auf Französisch?",
+      "explain": "der Mantel = le manteau",
+      "ref": "5u6_30",
+      "type": "input",
+      "answer": [
+       "le manteau",
+       "manteau"
+      ]
+     },
+     {
+      "id": "q14",
+      "q": "Wie heisst «die Krawatte» auf Französisch?",
+      "explain": "die Krawatte = la cravate",
+      "ref": "5u6_32",
+      "type": "input",
+      "answer": [
+       "la cravate",
+       "cravate"
+      ]
+     },
+     {
+      "id": "q15",
+      "q": "Wie heisst «der Wolkenkratzer» auf Französisch?",
+      "explain": "der Wolkenkratzer = le gratte-ciel",
+      "ref": "5u6_36",
+      "type": "input",
+      "answer": [
+       "le gratte-ciel",
+       "gratte-ciel"
+      ]
+     },
+     {
+      "id": "q16",
+      "q": "Wie heisst «ein Stockwerk» auf Französisch?",
+      "explain": "ein Stockwerk = un étage",
+      "ref": "5u6_38",
+      "type": "input",
+      "answer": [
+       "un étage",
+       "étage"
+      ]
+     },
+     {
+      "id": "q17",
+      "q": "Wie heisst «der Stiefel» auf Französisch?",
+      "explain": "der Stiefel = la botte",
+      "ref": "5u6_41",
+      "type": "input",
+      "answer": [
+       "la botte",
+       "botte"
+      ]
+     },
+     {
+      "id": "q18",
+      "q": "Wie heisst «der Schirm» auf Französisch?",
+      "explain": "der Schirm = le parapluie",
+      "ref": "5u6_43",
+      "type": "input",
+      "answer": [
+       "le parapluie",
+       "parapluie"
+      ]
+     },
+     {
+      "id": "q19",
+      "q": "Wie heisst «die Halskette» auf Französisch?",
+      "explain": "die Halskette = le collier",
+      "ref": "5u6_46",
+      "type": "input",
+      "answer": [
+       "le collier",
+       "collier"
+      ]
+     },
+     {
+      "id": "q20",
+      "q": "Wie heisst «der Bikini» auf Französisch?",
+      "explain": "der Bikini = le bikini",
+      "ref": "5u6_48",
+      "type": "input",
+      "answer": [
+       "le bikini",
+       "bikini"
+      ]
+     }
+    ]
+   },
+   "theory": {
+    "ort": {
+     "h": "Stadt und Bauwerke",
+     "text": "la ville = die Stadt, le pays = das Land, le monument = das Bauwerk, la tour = der Turm."
+    },
+    "adj": {
+     "h": "Beschreiben",
+     "text": "Adjektive passen sich an: Le monsieur est grand. La dame est grande. Les enfants sont grands. Les filles sont grandes. Bei Mädchen kommt ein -e dazu, bei mehreren ein -s."
+    },
+    "kleid": {
+     "h": "Kleidung",
+     "text": "Mon personnage porte un pantalon rouge = Meine Figur trägt eine rote Hose. Que porte ton monument? = Was trägt dein Bauwerk?"
+    },
+    "plus": {
+     "h": "Zusatzwörter",
+     "text": "Wörter aus «Vocabulaire plus»: Wolkenkratzer, Höhe und weitere Kleidungsstücke."
+    }
+   },
+   "art": "franz"
   }
  ],
  "hero": "img/hero.webp"
