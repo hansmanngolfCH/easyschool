@@ -917,6 +917,17 @@ body.rwopen{overflow:hidden}
 .xg-end p{margin:0}
 .xg-trophy{font-size:4.5rem;animation:whpop .6s cubic-bezier(.2,1.6,.4,1)}
 @media (prefers-reduced-motion:reduce){.xg-tm i,.whpeng,.xs.ok,.xg-trophy{animation:none}}
+/* v3.89 Extra-XP: vier gleich grosse Buttons 2x2, kompakter */
+.xg-opts,.xg-opts.n2,.xg-opts.n3{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:92px;gap:10px}
+.xo{height:92px;min-height:0;width:100%;overflow:hidden;padding:6px;font-size:1rem}
+.xo svg{width:auto;height:58px;max-width:100%}
+.xo b{font-size:1.35rem}
+.xo .xg-sm{font-size:.8rem;line-height:1}
+.xg-pie svg{width:120px;height:120px}
+.xg-tri svg{max-height:150px}
+.xg-big{font-size:2.4rem;padding:6px 0}
+.xg{gap:10px;padding:12px}
+.xo.c0{background:linear-gradient(160deg,#FF5F6D,#FFC371)}.xo.c1{background:linear-gradient(160deg,#36D1DC,#5B86E5)}.xo.c2{background:linear-gradient(160deg,#A770EF,#F953C6)}.xo.c3{background:linear-gradient(160deg,#11998E,#38EF7D)}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -924,7 +935,7 @@ body.rwopen{overflow:hidden}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v3.88';
+var APP_VERSION='v3.89';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
