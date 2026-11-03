@@ -118,25 +118,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Ziehe die Wörter an den richtigen Platz.",
-      "drag": {
-       "slots": [
-        "oben im Bruch",
-        "unten im Bruch"
-       ],
-       "chips": [
-        "Nenner",
-        "Zähler"
-       ]
-      },
-      "a": [
-       "Zähler",
-       "Nenner"
-      ],
-      "hint": "Der Zähler zählt die Stücke, die du hast."
-     }
+     ]
     },
     {
      "h": "Kürzen: Stücke grösser machen",
@@ -166,20 +148,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Kürze 6/8 so weit wie möglich.",
-      "opts": [
-       "3/4",
-       "2/3",
-       "6/4",
-       "1/4"
-      ],
-      "a": [
-       "3/4"
-      ],
-      "hint": "Teile oben und unten durch 2."
-     }
+     ]
     },
     {
      "h": "Erweitern: Stücke kleiner machen",
@@ -225,20 +194,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "2/5 = ?/10. Welche Zahl fehlt?",
-      "opts": [
-       "2",
-       "4",
-       "5",
-       "10"
-      ],
-      "a": [
-       "4"
-      ],
-      "hint": "Der Nenner wurde mal 2 genommen."
-     }
+     ]
     },
     {
      "h": "Gemischte Zahl und unechter Bruch",
@@ -281,20 +237,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Wandle 1 1/2 in einen unechten Bruch um.",
-      "opts": [
-       "3/2",
-       "2/3",
-       "1/3",
-       "11/2"
-      ],
-      "a": [
-       "3/2"
-      ],
-      "hint": "1·2+1 = 3, der Nenner bleibt."
-     }
+     ]
     },
     {
      "h": "Mal rechnen: oben mal oben, unten mal unten",
@@ -334,15 +277,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Rechne 1/2 · 2/3 und kürze.",
-      "a": [
-       "1/3",
-       "2/6"
-      ],
-      "hint": "Oben 1·2 = 2, unten 2·3 = 6."
-     }
+     ]
     },
     {
      "h": "Hauptnenner: gleiche Stücke finden",
@@ -380,31 +315,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Bringe die Schritte in die richtige Reihenfolge.",
-      "drag": {
-       "slots": [
-        "1. Schritt",
-        "2. Schritt",
-        "3. Schritt",
-        "4. Schritt"
-       ],
-       "chips": [
-        "Zähler rechnen",
-        "Kürzen",
-        "Hauptnenner suchen",
-        "Brüche erweitern"
-       ]
-      },
-      "a": [
-       "Hauptnenner suchen",
-       "Brüche erweitern",
-       "Zähler rechnen",
-       "Kürzen"
-      ],
-      "hint": "Ohne gleichen Nenner geht Plus und Minus nicht."
-     }
+     ]
     },
     {
      "h": "Plus und Minus rechnen",
@@ -450,14 +361,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Rechne 1/2 + 1/4.",
-      "a": [
-       "3/4"
-      ],
-      "hint": "Hauptnenner 4: 2/4 + 1/4."
-     }
+     ]
     },
     {
      "h": "Erst die Klammer, dann Punkt vor Strich",
@@ -484,28 +388,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Ziehe in die richtige Reihenfolge: Was rechnest du zuerst?",
-      "drag": {
-       "slots": [
-        "zuerst",
-        "dann",
-        "zuletzt"
-       ],
-       "chips": [
-        "Plus und Minus",
-        "Klammer",
-        "Mal und Geteilt"
-       ]
-      },
-      "a": [
-       "Klammer",
-       "Mal und Geteilt",
-       "Plus und Minus"
-      ],
-      "hint": "Klammer geht immer zuerst."
-     }
+     ]
     },
     {
      "h": "Brüche teilen: den Kehrbruch nehmen",
@@ -551,20 +434,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Wie lautet der Kehrbruch von 15/12?",
-      "opts": [
-       "12/15",
-       "15/12",
-       "−15/12",
-       "27/12"
-      ],
-      "a": [
-       "12/15"
-      ],
-      "hint": "Zähler und Nenner tauschen."
-     }
+     ]
     },
     {
      "h": "Warum der Kehrbruch? (Herleitung)",
@@ -593,20 +463,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Wie viele Viertel passen in 1/2?",
-      "opts": [
-       "1",
-       "2",
-       "4",
-       "1/4"
-      ],
-      "a": [
-       "2"
-      ],
-      "hint": "Zähle die gefärbten Viertel im Bild."
-     }
+     ]
     },
     {
      "h": "Brüche abziehen: gleicher Nenner",
@@ -640,20 +497,7 @@
        ],
        "num": true
       }
-     ],
-     "try": {
-      "q": "Wie lautet der Hauptnenner von 4 und 3?",
-      "opts": [
-       "7",
-       "12",
-       "1",
-       "6"
-      ],
-      "a": [
-       "12"
-      ],
-      "hint": "Die kleinste Zahl, in der 4 und 3 aufgehen."
-     }
+     ]
     },
     {
      "h": "Warum erweitern? (Herleitung)",
@@ -688,14 +532,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "1/2 = ?/6. Welche Zahl fehlt?",
-      "a": [
-       "3"
-      ],
-      "hint": "Der Nenner wurde mal 3 genommen. Der Zähler auch."
-     }
+     ]
     },
     {
      "h": "Aufgabe mit Klammer",
@@ -727,14 +564,7 @@
        ],
        "num": true
       }
-     ],
-     "try": {
-      "q": "Rechne: 2/3 − 3/10 =",
-      "a": [
-       "11/30"
-      ],
-      "hint": "Hauptnenner 30. Erweitere beide Brüche."
-     }
+     ]
     }
    ],
    "cards": [
@@ -2745,6 +2575,373 @@
      ],
      "th": "div",
      "lvl": 4
+    },
+    {
+     "id": "tq1_1",
+     "q": "Ordne zu: «oben im Bruch»",
+     "a": "Zähler",
+     "lvl": 1,
+     "opts": [
+      "Nenner",
+      "Zähler"
+     ],
+     "hints": [
+      "Der Zähler zählt die Stücke, die du hast."
+     ],
+     "steps": [
+      [
+       "Zähler",
+       "Der Zähler zählt die Stücke, die du hast."
+      ]
+     ]
+    },
+    {
+     "id": "tq1_2",
+     "q": "Ordne zu: «unten im Bruch»",
+     "a": "Nenner",
+     "lvl": 1,
+     "opts": [
+      "Nenner",
+      "Zähler"
+     ],
+     "hints": [
+      "Der Zähler zählt die Stücke, die du hast."
+     ],
+     "steps": [
+      [
+       "Nenner",
+       "Der Zähler zählt die Stücke, die du hast."
+      ]
+     ]
+    },
+    {
+     "id": "tq2_3",
+     "q": "Kürze 6/8 so weit wie möglich.",
+     "a": "3/4",
+     "lvl": 1,
+     "opts": [
+      "3/4",
+      "2/3",
+      "6/4",
+      "1/4"
+     ],
+     "hints": [
+      "Teile oben und unten durch 2."
+     ],
+     "steps": [
+      [
+       "3/4",
+       "Teile oben und unten durch 2."
+      ]
+     ]
+    },
+    {
+     "id": "tq3_4",
+     "q": "2/5 = ?/10. Welche Zahl fehlt?",
+     "a": "4",
+     "lvl": 1,
+     "opts": [
+      "2",
+      "4",
+      "5",
+      "10"
+     ],
+     "hints": [
+      "Der Nenner wurde mal 2 genommen."
+     ],
+     "steps": [
+      [
+       "4",
+       "Der Nenner wurde mal 2 genommen."
+      ]
+     ]
+    },
+    {
+     "id": "tq5_5",
+     "q": "Rechne 1/2 · 2/3 und kürze.",
+     "a": "1/3",
+     "lvl": 1,
+     "ans": [
+      "1/3",
+      "2/6"
+     ],
+     "hints": [
+      "Oben 1·2 = 2, unten 2·3 = 6."
+     ],
+     "steps": [
+      [
+       "1/3",
+       "Oben 1·2 = 2, unten 2·3 = 6."
+      ]
+     ]
+    },
+    {
+     "id": "tq6_6",
+     "q": "Reihenfolge – welcher Schritt kommt als «1. Schritt»?",
+     "a": "Hauptnenner suchen",
+     "lvl": 1,
+     "opts": [
+      "Zähler rechnen",
+      "Kürzen",
+      "Hauptnenner suchen",
+      "Brüche erweitern"
+     ],
+     "hints": [
+      "Ohne gleichen Nenner geht Plus und Minus nicht."
+     ],
+     "steps": [
+      [
+       "Hauptnenner suchen",
+       "Ohne gleichen Nenner geht Plus und Minus nicht."
+      ]
+     ]
+    },
+    {
+     "id": "tq6_7",
+     "q": "Reihenfolge – welcher Schritt kommt als «2. Schritt»?",
+     "a": "Brüche erweitern",
+     "lvl": 1,
+     "opts": [
+      "Zähler rechnen",
+      "Kürzen",
+      "Hauptnenner suchen",
+      "Brüche erweitern"
+     ],
+     "hints": [
+      "Ohne gleichen Nenner geht Plus und Minus nicht."
+     ],
+     "steps": [
+      [
+       "Brüche erweitern",
+       "Ohne gleichen Nenner geht Plus und Minus nicht."
+      ]
+     ]
+    },
+    {
+     "id": "tq6_8",
+     "q": "Reihenfolge – welcher Schritt kommt als «3. Schritt»?",
+     "a": "Zähler rechnen",
+     "lvl": 1,
+     "opts": [
+      "Zähler rechnen",
+      "Kürzen",
+      "Hauptnenner suchen",
+      "Brüche erweitern"
+     ],
+     "hints": [
+      "Ohne gleichen Nenner geht Plus und Minus nicht."
+     ],
+     "steps": [
+      [
+       "Zähler rechnen",
+       "Ohne gleichen Nenner geht Plus und Minus nicht."
+      ]
+     ]
+    },
+    {
+     "id": "tq6_9",
+     "q": "Reihenfolge – welcher Schritt kommt als «4. Schritt»?",
+     "a": "Kürzen",
+     "lvl": 1,
+     "opts": [
+      "Zähler rechnen",
+      "Kürzen",
+      "Hauptnenner suchen",
+      "Brüche erweitern"
+     ],
+     "hints": [
+      "Ohne gleichen Nenner geht Plus und Minus nicht."
+     ],
+     "steps": [
+      [
+       "Kürzen",
+       "Ohne gleichen Nenner geht Plus und Minus nicht."
+      ]
+     ]
+    },
+    {
+     "id": "tq7_10",
+     "q": "Rechne 1/2 + 1/4.",
+     "a": "3/4",
+     "lvl": 1,
+     "ans": [
+      "3/4"
+     ],
+     "hints": [
+      "Hauptnenner 4: 2/4 + 1/4."
+     ],
+     "steps": [
+      [
+       "3/4",
+       "Hauptnenner 4: 2/4 + 1/4."
+      ]
+     ]
+    },
+    {
+     "id": "tq8_11",
+     "q": "Was rechnest du «zuerst»?",
+     "a": "Klammer",
+     "lvl": 1,
+     "opts": [
+      "Plus und Minus",
+      "Klammer",
+      "Mal und Geteilt"
+     ],
+     "hints": [
+      "Klammer geht immer zuerst."
+     ],
+     "steps": [
+      [
+       "Klammer",
+       "Klammer geht immer zuerst."
+      ]
+     ]
+    },
+    {
+     "id": "tq8_12",
+     "q": "Was rechnest du «dann»?",
+     "a": "Mal und Geteilt",
+     "lvl": 1,
+     "opts": [
+      "Plus und Minus",
+      "Klammer",
+      "Mal und Geteilt"
+     ],
+     "hints": [
+      "Klammer geht immer zuerst."
+     ],
+     "steps": [
+      [
+       "Mal und Geteilt",
+       "Klammer geht immer zuerst."
+      ]
+     ]
+    },
+    {
+     "id": "tq8_13",
+     "q": "Was rechnest du «zuletzt»?",
+     "a": "Plus und Minus",
+     "lvl": 1,
+     "opts": [
+      "Plus und Minus",
+      "Klammer",
+      "Mal und Geteilt"
+     ],
+     "hints": [
+      "Klammer geht immer zuerst."
+     ],
+     "steps": [
+      [
+       "Plus und Minus",
+       "Klammer geht immer zuerst."
+      ]
+     ]
+    },
+    {
+     "id": "tq9_14",
+     "q": "Wie lautet der Kehrbruch von 15/12?",
+     "a": "12/15",
+     "lvl": 1,
+     "opts": [
+      "12/15",
+      "15/12",
+      "−15/12",
+      "27/12"
+     ],
+     "hints": [
+      "Zähler und Nenner tauschen."
+     ],
+     "steps": [
+      [
+       "12/15",
+       "Zähler und Nenner tauschen."
+      ]
+     ]
+    },
+    {
+     "id": "tq10_15",
+     "q": "Wie viele Viertel passen in 1/2?",
+     "a": "2",
+     "lvl": 1,
+     "opts": [
+      "1",
+      "2",
+      "4",
+      "1/4"
+     ],
+     "hints": [
+      "Zähle die gefärbten Viertel im Bild."
+     ],
+     "steps": [
+      [
+       "2",
+       "Zähle die gefärbten Viertel im Bild."
+      ]
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 4,
+       "filled": 2
+      }
+     ]
+    },
+    {
+     "id": "tq11_16",
+     "q": "Wie lautet der Hauptnenner von 4 und 3?",
+     "a": "12",
+     "lvl": 1,
+     "opts": [
+      "7",
+      "12",
+      "1",
+      "6"
+     ],
+     "hints": [
+      "Die kleinste Zahl, in der 4 und 3 aufgehen."
+     ],
+     "steps": [
+      [
+       "12",
+       "Die kleinste Zahl, in der 4 und 3 aufgehen."
+      ]
+     ]
+    },
+    {
+     "id": "tq12_17",
+     "q": "1/2 = ?/6. Welche Zahl fehlt?",
+     "a": "3",
+     "lvl": 1,
+     "ans": [
+      "3"
+     ],
+     "hints": [
+      "Der Nenner wurde mal 3 genommen. Der Zähler auch."
+     ],
+     "steps": [
+      [
+       "3",
+       "Der Nenner wurde mal 3 genommen. Der Zähler auch."
+      ]
+     ]
+    },
+    {
+     "id": "tq13_18",
+     "q": "Rechne: 2/3 − 3/10 =",
+     "a": "11/30",
+     "lvl": 1,
+     "ans": [
+      "11/30"
+     ],
+     "hints": [
+      "Hauptnenner 30. Erweitere beide Brüche."
+     ],
+     "steps": [
+      [
+       "11/30",
+       "Hauptnenner 30. Erweitere beide Brüche."
+      ]
+     ]
     }
    ],
    "exam": {
@@ -4723,20 +4920,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Welches Wort ist richtig geschrieben?",
-      "opts": [
-       "Wiese",
-       "Wise",
-       "Wiehse",
-       "Wiße"
-      ],
-      "a": [
-       "Wiese"
-      ],
-      "hint": "Du hörst ein langes i."
-     }
+     ]
     },
     {
      "h": "Ausnahmen: nur i",
@@ -4768,20 +4952,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Welches Wort wird nur mit i geschrieben?",
-      "opts": [
-       "Brief",
-       "Kino",
-       "Wiese",
-       "fliegen"
-      ],
-      "a": [
-       "Kino"
-      ],
-      "hint": "Kino gehört zu den Ausnahmen."
-     }
+     ]
     },
     {
      "h": "Wann schreibe ich ein h?",
@@ -4813,20 +4984,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Was zeigt das h in «fahren» oft?",
-      "opts": [
-       "Der Vokal davor ist lang.",
-       "Der Vokal davor ist kurz.",
-       "Das Wort ist ein Verb.",
-       "Das Wort ist gross."
-      ],
-      "a": [
-       "Der Vokal davor ist lang."
-      ],
-      "hint": "Das h steht nach einem langen Vokal."
-     }
+     ]
     },
     {
      "h": "Manchmal hört man das h",
@@ -4846,28 +5004,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Ziehe die Wörter in die richtige Spalte.",
-      "drag": {
-       "slots": [
-        "Wort mit ie",
-        "Wort mit h",
-        "Wort mit nur i"
-       ],
-       "chips": [
-        "Tiger",
-        "Wiese",
-        "fahren"
-       ]
-      },
-      "a": [
-       "Wiese",
-       "fahren",
-       "Tiger"
-      ],
-      "hint": "Wiese hat ein langes i mit ie. Tiger ist eine Ausnahme."
-     }
+     ]
     },
     {
      "h": "Ein kleiner Trick: das Wort verlängern",
@@ -4895,14 +5032,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Wie heisst die Grundform von «sieht»?",
-      "a": [
-       "sehen"
-      ],
-      "hint": "Denk an «sehen»."
-     }
+     ]
     },
     {
      "h": "Wichtig",
@@ -4926,20 +5056,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Was machst du, wenn du unsicher bist?",
-      "opts": [
-       "Wort nachschlagen und merken",
-       "Immer ie schreiben",
-       "Immer h einsetzen",
-       "Das Wort weglassen"
-      ],
-      "a": [
-       "Wort nachschlagen und merken"
-      ],
-      "hint": "Ein Wörterbuch hilft dir."
-     }
+     ]
     }
    ],
    "cards": [
@@ -6418,6 +6535,147 @@
        "richtig ergänzt"
       ]
      ]
+    },
+    {
+     "id": "tq2_1",
+     "q": "Welches Wort wird nur mit i geschrieben?",
+     "a": "Kino",
+     "lvl": 1,
+     "opts": [
+      "Brief",
+      "Kino",
+      "Wiese",
+      "fliegen"
+     ],
+     "hints": [
+      "Kino gehört zu den Ausnahmen."
+     ],
+     "steps": [
+      [
+       "Kino",
+       "Kino gehört zu den Ausnahmen."
+      ]
+     ]
+    },
+    {
+     "id": "tq3_2",
+     "q": "Was zeigt das h in «fahren» oft?",
+     "a": "Der Vokal davor ist lang.",
+     "lvl": 1,
+     "opts": [
+      "Der Vokal davor ist lang.",
+      "Der Vokal davor ist kurz.",
+      "Das Wort ist ein Verb.",
+      "Das Wort ist gross."
+     ],
+     "hints": [
+      "Das h steht nach einem langen Vokal."
+     ],
+     "steps": [
+      [
+       "Der Vokal davor ist lang.",
+       "Das h steht nach einem langen Vokal."
+      ]
+     ]
+    },
+    {
+     "id": "tq4_3",
+     "q": "Ordne zu: «Wort mit ie»",
+     "a": "Wiese",
+     "lvl": 1,
+     "opts": [
+      "Tiger",
+      "Wiese",
+      "fahren"
+     ],
+     "hints": [
+      "Wiese hat ein langes i mit ie. Tiger ist eine Ausnahme."
+     ],
+     "steps": [
+      [
+       "Wiese",
+       "Wiese hat ein langes i mit ie. Tiger ist eine Ausnahme."
+      ]
+     ]
+    },
+    {
+     "id": "tq4_4",
+     "q": "Ordne zu: «Wort mit h»",
+     "a": "fahren",
+     "lvl": 1,
+     "opts": [
+      "Tiger",
+      "Wiese",
+      "fahren"
+     ],
+     "hints": [
+      "Wiese hat ein langes i mit ie. Tiger ist eine Ausnahme."
+     ],
+     "steps": [
+      [
+       "fahren",
+       "Wiese hat ein langes i mit ie. Tiger ist eine Ausnahme."
+      ]
+     ]
+    },
+    {
+     "id": "tq4_5",
+     "q": "Ordne zu: «Wort mit nur i»",
+     "a": "Tiger",
+     "lvl": 1,
+     "opts": [
+      "Tiger",
+      "Wiese",
+      "fahren"
+     ],
+     "hints": [
+      "Wiese hat ein langes i mit ie. Tiger ist eine Ausnahme."
+     ],
+     "steps": [
+      [
+       "Tiger",
+       "Wiese hat ein langes i mit ie. Tiger ist eine Ausnahme."
+      ]
+     ]
+    },
+    {
+     "id": "tq5_6",
+     "q": "Wie heisst die Grundform von «sieht»?",
+     "a": "sehen",
+     "lvl": 1,
+     "ans": [
+      "sehen"
+     ],
+     "hints": [
+      "Denk an «sehen»."
+     ],
+     "steps": [
+      [
+       "sehen",
+       "Denk an «sehen»."
+      ]
+     ]
+    },
+    {
+     "id": "tq6_7",
+     "q": "Was machst du, wenn du unsicher bist?",
+     "a": "Wort nachschlagen und merken",
+     "lvl": 1,
+     "opts": [
+      "Wort nachschlagen und merken",
+      "Immer ie schreiben",
+      "Immer h einsetzen",
+      "Das Wort weglassen"
+     ],
+     "hints": [
+      "Ein Wörterbuch hilft dir."
+     ],
+     "steps": [
+      [
+       "Wort nachschlagen und merken",
+       "Ein Wörterbuch hilft dir."
+      ]
+     ]
     }
    ],
    "exam": {
@@ -6664,20 +6922,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Welche Wortart ist «ruhig» in: Sie erklärt die Lösung ruhig?",
-      "opts": [
-       "Adverb",
-       "Adjektiv",
-       "Nomen",
-       "Pronomen"
-      ],
-      "a": [
-       "Adverb"
-      ],
-      "hint": "Es sagt, wie sie erklärt, und gehört zum Verb."
-     }
+     ]
     },
     {
      "h": "Präposition oder Konjunktion?",
@@ -6701,20 +6946,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Welche Wortart ist «Während» in: Während die Lehrerin erklärt, schreiben wir mit?",
-      "opts": [
-       "Konjunktion",
-       "Präposition",
-       "Adverb",
-       "Pronomen"
-      ],
-      "a": [
-       "Konjunktion"
-      ],
-      "hint": "Danach folgt ein ganzer Satz mit Verb."
-     }
+     ]
     },
     {
      "h": "Die vier Fälle (Kasus)",
@@ -6742,31 +6974,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Ordne die Frage dem Fall zu.",
-      "drag": {
-       "slots": [
-        "wer oder was?",
-        "wessen?",
-        "wem?",
-        "wen oder was?"
-       ],
-       "chips": [
-        "Nominativ",
-        "Genitiv",
-        "Dativ",
-        "Akkusativ"
-       ]
-      },
-      "a": [
-       "Nominativ",
-       "Genitiv",
-       "Dativ",
-       "Akkusativ"
-      ],
-      "hint": "Wem = Dativ, wessen = Genitiv."
-     }
+     ]
     },
     {
      "h": "Endungen im Fall anpassen",
@@ -6794,14 +7002,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Setze ein: Ich gebe ___ die Unterlagen. (der neue Schüler)",
-      "a": [
-       "dem neuen Schüler"
-      ],
-      "hint": "Wem gebe ich etwas? Dativ männlich."
-     }
+     ]
     },
     {
      "h": "Zeitformen (Tempus)",
@@ -6833,20 +7034,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Wie heisst der Satz «Wir fahren nach Bern» im Perfekt?",
-      "opts": [
-       "Wir sind nach Bern gefahren.",
-       "Wir haben nach Bern gefahren.",
-       "Wir fuhren nach Bern.",
-       "Wir werden nach Bern fahren."
-      ],
-      "a": [
-       "Wir sind nach Bern gefahren."
-      ],
-      "hint": "Bei Bewegung steht «sein»."
-     }
+     ]
     },
     {
      "h": "Satzglieder bestimmen",
@@ -6874,20 +7062,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Welches Satzglied ist «den Kindern» in: Heute erzählt die Grossmutter den Kindern eine Geschichte?",
-      "opts": [
-       "DO",
-       "AO",
-       "S",
-       "P"
-      ],
-      "a": [
-       "DO"
-      ],
-      "hint": "Wem erzählt sie etwas?"
-     }
+     ]
     }
    ],
    "cards": [
@@ -8171,6 +8346,192 @@
        "richtig"
       ]
      ]
+    },
+    {
+     "id": "tq1_1",
+     "q": "Welche Wortart ist «ruhig» in: Sie erklärt die Lösung ruhig?",
+     "a": "Adverb",
+     "lvl": 1,
+     "opts": [
+      "Adverb",
+      "Adjektiv",
+      "Nomen",
+      "Pronomen"
+     ],
+     "hints": [
+      "Es sagt, wie sie erklärt, und gehört zum Verb."
+     ],
+     "steps": [
+      [
+       "Adverb",
+       "Es sagt, wie sie erklärt, und gehört zum Verb."
+      ]
+     ]
+    },
+    {
+     "id": "tq2_2",
+     "q": "Welche Wortart ist «Während» in: Während die Lehrerin erklärt, schreiben wir mit?",
+     "a": "Konjunktion",
+     "lvl": 1,
+     "opts": [
+      "Konjunktion",
+      "Präposition",
+      "Adverb",
+      "Pronomen"
+     ],
+     "hints": [
+      "Danach folgt ein ganzer Satz mit Verb."
+     ],
+     "steps": [
+      [
+       "Konjunktion",
+       "Danach folgt ein ganzer Satz mit Verb."
+      ]
+     ]
+    },
+    {
+     "id": "tq3_3",
+     "q": "Ordne zu: «wer oder was?»",
+     "a": "Nominativ",
+     "lvl": 1,
+     "opts": [
+      "Nominativ",
+      "Genitiv",
+      "Dativ",
+      "Akkusativ"
+     ],
+     "hints": [
+      "Wem = Dativ, wessen = Genitiv."
+     ],
+     "steps": [
+      [
+       "Nominativ",
+       "Wem = Dativ, wessen = Genitiv."
+      ]
+     ]
+    },
+    {
+     "id": "tq3_4",
+     "q": "Ordne zu: «wessen?»",
+     "a": "Genitiv",
+     "lvl": 1,
+     "opts": [
+      "Nominativ",
+      "Genitiv",
+      "Dativ",
+      "Akkusativ"
+     ],
+     "hints": [
+      "Wem = Dativ, wessen = Genitiv."
+     ],
+     "steps": [
+      [
+       "Genitiv",
+       "Wem = Dativ, wessen = Genitiv."
+      ]
+     ]
+    },
+    {
+     "id": "tq3_5",
+     "q": "Ordne zu: «wem?»",
+     "a": "Dativ",
+     "lvl": 1,
+     "opts": [
+      "Nominativ",
+      "Genitiv",
+      "Dativ",
+      "Akkusativ"
+     ],
+     "hints": [
+      "Wem = Dativ, wessen = Genitiv."
+     ],
+     "steps": [
+      [
+       "Dativ",
+       "Wem = Dativ, wessen = Genitiv."
+      ]
+     ]
+    },
+    {
+     "id": "tq3_6",
+     "q": "Ordne zu: «wen oder was?»",
+     "a": "Akkusativ",
+     "lvl": 1,
+     "opts": [
+      "Nominativ",
+      "Genitiv",
+      "Dativ",
+      "Akkusativ"
+     ],
+     "hints": [
+      "Wem = Dativ, wessen = Genitiv."
+     ],
+     "steps": [
+      [
+       "Akkusativ",
+       "Wem = Dativ, wessen = Genitiv."
+      ]
+     ]
+    },
+    {
+     "id": "tq4_7",
+     "q": "Setze ein: Ich gebe ___ die Unterlagen. (der neue Schüler)",
+     "a": "dem neuen Schüler",
+     "lvl": 1,
+     "ans": [
+      "dem neuen Schüler"
+     ],
+     "hints": [
+      "Wem gebe ich etwas? Dativ männlich."
+     ],
+     "steps": [
+      [
+       "dem neuen Schüler",
+       "Wem gebe ich etwas? Dativ männlich."
+      ]
+     ]
+    },
+    {
+     "id": "tq5_8",
+     "q": "Wie heisst der Satz «Wir fahren nach Bern» im Perfekt?",
+     "a": "Wir sind nach Bern gefahren.",
+     "lvl": 1,
+     "opts": [
+      "Wir sind nach Bern gefahren.",
+      "Wir haben nach Bern gefahren.",
+      "Wir fuhren nach Bern.",
+      "Wir werden nach Bern fahren."
+     ],
+     "hints": [
+      "Bei Bewegung steht «sein»."
+     ],
+     "steps": [
+      [
+       "Wir sind nach Bern gefahren.",
+       "Bei Bewegung steht «sein»."
+      ]
+     ]
+    },
+    {
+     "id": "tq6_9",
+     "q": "Welches Satzglied ist «den Kindern» in: Heute erzählt die Grossmutter den Kindern eine Geschichte?",
+     "a": "DO",
+     "lvl": 1,
+     "opts": [
+      "DO",
+      "AO",
+      "S",
+      "P"
+     ],
+     "hints": [
+      "Wem erzählt sie etwas?"
+     ],
+     "steps": [
+      [
+       "DO",
+       "Wem erzählt sie etwas?"
+      ]
+     ]
     }
    ],
    "exam": {
@@ -8447,20 +8808,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Welche Seite ist die Hypotenuse?",
-      "opts": [
-       "Die Seite gegenüber dem rechten Winkel",
-       "Die kürzeste Seite",
-       "Eine Seite am rechten Winkel",
-       "Die Höhe"
-      ],
-      "a": [
-       "Die Seite gegenüber dem rechten Winkel"
-      ],
-      "hint": "Sie ist die längste Seite."
-     }
+     ]
     },
     {
      "h": "Der Satz des Pythagoras",
@@ -8490,20 +8838,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Wie lautet die Formel?",
-      "opts": [
-       "a² + b² = c²",
-       "a + b = c",
-       "a² − b² = c²",
-       "a · b = c²"
-      ],
-      "a": [
-       "a² + b² = c²"
-      ],
-      "hint": "Quadrate der Katheten zusammen = Quadrat der Hypotenuse."
-     }
+     ]
     },
     {
      "h": "Die Hypotenuse berechnen",
@@ -8535,14 +8870,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "a = 3 cm, b = 4 cm. Wie lang ist c in cm?",
-      "a": [
-       "5"
-      ],
-      "hint": "9 + 16 = 25, die Wurzel aus 25 ist 5."
-     }
+     ]
     },
     {
      "h": "Eine Kathete berechnen",
@@ -8574,28 +8902,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Ordne zu: Was ist gesucht, welche Formel passt?",
-      "drag": {
-       "slots": [
-        "c gesucht",
-        "a gesucht",
-        "b gesucht"
-       ],
-       "chips": [
-        "√(a² + b²)",
-        "√(c² − b²)",
-        "√(c² − a²)"
-       ]
-      },
-      "a": [
-       "√(a² + b²)",
-       "√(c² − b²)",
-       "√(c² − a²)"
-      ],
-      "hint": "Die Hypotenuse c wird addiert, eine Kathete subtrahiert."
-     }
+     ]
     },
     {
      "h": "Rechteck und Diagonale",
@@ -8627,20 +8934,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Rechteck mit Seiten 12 cm und 5 cm. Wie lang ist die Diagonale in cm?",
-      "opts": [
-       "13",
-       "17",
-       "7",
-       "11"
-      ],
-      "a": [
-       "13"
-      ],
-      "hint": "12² + 5² = 144 + 25 = 169"
-     }
+     ]
     },
     {
      "h": "Anwendungen: Schritt für Schritt",
@@ -8676,20 +8970,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Ein Baum ist 8 m über dem Boden abgeknickt, die Spitze berührt 15 m entfernt den Boden. Wie lang ist der abgeknickte Teil in m?",
-      "opts": [
-       "17",
-       "23",
-       "12.7",
-       "7"
-      ],
-      "a": [
-       "17"
-      ],
-      "hint": "8² + 15² = 64 + 225 = 289"
-     }
+     ]
     }
    ],
    "cards": [
@@ -9707,6 +9988,168 @@
        "lh": "30 cm",
        "ld": "Diagonale = ?"
       }
+     ]
+    },
+    {
+     "id": "tq1_1",
+     "q": "Welche Seite ist die Hypotenuse?",
+     "a": "Die Seite gegenüber dem rechten Winkel",
+     "lvl": 1,
+     "opts": [
+      "Die Seite gegenüber dem rechten Winkel",
+      "Die kürzeste Seite",
+      "Eine Seite am rechten Winkel",
+      "Die Höhe"
+     ],
+     "hints": [
+      "Sie ist die längste Seite."
+     ],
+     "steps": [
+      [
+       "Die Seite gegenüber dem rechten Winkel",
+       "Sie ist die längste Seite."
+      ]
+     ]
+    },
+    {
+     "id": "tq2_2",
+     "q": "Wie lautet die Formel?",
+     "a": "a² + b² = c²",
+     "lvl": 1,
+     "opts": [
+      "a² + b² = c²",
+      "a + b = c",
+      "a² − b² = c²",
+      "a · b = c²"
+     ],
+     "hints": [
+      "Quadrate der Katheten zusammen = Quadrat der Hypotenuse."
+     ],
+     "steps": [
+      [
+       "a² + b² = c²",
+       "Quadrate der Katheten zusammen = Quadrat der Hypotenuse."
+      ]
+     ]
+    },
+    {
+     "id": "tq3_3",
+     "q": "a = 3 cm, b = 4 cm. Wie lang ist c in cm?",
+     "a": "5",
+     "lvl": 1,
+     "ans": [
+      "5"
+     ],
+     "hints": [
+      "9 + 16 = 25, die Wurzel aus 25 ist 5."
+     ],
+     "steps": [
+      [
+       "5",
+       "9 + 16 = 25, die Wurzel aus 25 ist 5."
+      ]
+     ]
+    },
+    {
+     "id": "tq4_4",
+     "q": "Ordne zu: «c gesucht»",
+     "a": "√(a² + b²)",
+     "lvl": 1,
+     "opts": [
+      "√(a² + b²)",
+      "√(c² − b²)",
+      "√(c² − a²)"
+     ],
+     "hints": [
+      "Die Hypotenuse c wird addiert, eine Kathete subtrahiert."
+     ],
+     "steps": [
+      [
+       "√(a² + b²)",
+       "Die Hypotenuse c wird addiert, eine Kathete subtrahiert."
+      ]
+     ]
+    },
+    {
+     "id": "tq4_5",
+     "q": "Ordne zu: «a gesucht»",
+     "a": "√(c² − b²)",
+     "lvl": 1,
+     "opts": [
+      "√(a² + b²)",
+      "√(c² − b²)",
+      "√(c² − a²)"
+     ],
+     "hints": [
+      "Die Hypotenuse c wird addiert, eine Kathete subtrahiert."
+     ],
+     "steps": [
+      [
+       "√(c² − b²)",
+       "Die Hypotenuse c wird addiert, eine Kathete subtrahiert."
+      ]
+     ]
+    },
+    {
+     "id": "tq4_6",
+     "q": "Ordne zu: «b gesucht»",
+     "a": "√(c² − a²)",
+     "lvl": 1,
+     "opts": [
+      "√(a² + b²)",
+      "√(c² − b²)",
+      "√(c² − a²)"
+     ],
+     "hints": [
+      "Die Hypotenuse c wird addiert, eine Kathete subtrahiert."
+     ],
+     "steps": [
+      [
+       "√(c² − a²)",
+       "Die Hypotenuse c wird addiert, eine Kathete subtrahiert."
+      ]
+     ]
+    },
+    {
+     "id": "tq5_7",
+     "q": "Rechteck mit Seiten 12 cm und 5 cm. Wie lang ist die Diagonale in cm?",
+     "a": "13",
+     "lvl": 1,
+     "opts": [
+      "13",
+      "17",
+      "7",
+      "11"
+     ],
+     "hints": [
+      "12² + 5² = 144 + 25 = 169"
+     ],
+     "steps": [
+      [
+       "13",
+       "12² + 5² = 144 + 25 = 169"
+      ]
+     ]
+    },
+    {
+     "id": "tq6_8",
+     "q": "Ein Baum ist 8 m über dem Boden abgeknickt, die Spitze berührt 15 m entfernt den Boden. Wie lang ist der abgeknickte Teil in m?",
+     "a": "17",
+     "lvl": 1,
+     "opts": [
+      "17",
+      "23",
+      "12.7",
+      "7"
+     ],
+     "hints": [
+      "8² + 15² = 64 + 225 = 289"
+     ],
+     "steps": [
+      [
+       "17",
+       "8² + 15² = 64 + 225 = 289"
+      ]
      ]
     }
    ],
@@ -19132,20 +19575,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "1 km = ___ m",
-      "opts": [
-       "10",
-       "100",
-       "1000",
-       "10 000"
-      ],
-      "a": [
-       "1000"
-      ],
-      "hint": "Kilo heisst tausend."
-     }
+     ]
     },
     {
      "h": "📏 Von km zu m: mal 1000",
@@ -19176,20 +19606,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "4 km = ___ m",
-      "opts": [
-       "40",
-       "400",
-       "4000",
-       "40 000"
-      ],
-      "a": [
-       "4000"
-      ],
-      "hint": "Hänge drei Nullen an die 4."
-     }
+     ]
     },
     {
      "h": "📏 Von m zu km: geteilt durch 1000",
@@ -19220,20 +19637,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "7000 m = ___ km",
-      "opts": [
-       "7",
-       "70",
-       "700",
-       "7000"
-      ],
-      "a": [
-       "7"
-      ],
-      "hint": "Streiche drei Nullen."
-     }
+     ]
     },
     {
      "h": "📏 km und m zusammen",
@@ -19276,20 +19680,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "3 km 500 m = ___ m",
-      "opts": [
-       "350",
-       "3500",
-       "3050",
-       "35 000"
-      ],
-      "a": [
-       "3500"
-      ],
-      "hint": "3 km sind 3000 m. Dazu kommen 500 m."
-     }
+     ]
     },
     {
      "h": "📏 Halber und Viertel-Kilometer",
@@ -19350,20 +19741,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Wie viele Meter sind ein halber km?",
-      "opts": [
-       "50",
-       "250",
-       "500",
-       "5000"
-      ],
-      "a": [
-       "500"
-      ],
-      "hint": "Halbiere 1000."
-     }
+     ]
     },
     {
      "h": "📏 Wie lange dauert der Schulweg?",
@@ -19414,20 +19792,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Wie lange braucht ein Kind für 3 km?",
-      "opts": [
-       "40 min",
-       "50 min",
-       "60 min",
-       "80 min"
-      ],
-      "a": [
-       "60 min"
-      ],
-      "hint": "3 · 20 Minuten."
-     }
+     ]
     },
     {
      "h": "📏 Ein Diagramm lesen",
@@ -19465,20 +19830,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Wie viele Kinder haben einen Schulweg zwischen 1 km und 3 km?",
-      "opts": [
-       "3",
-       "6",
-       "8",
-       "21"
-      ],
-      "a": [
-       "8"
-      ],
-      "hint": "Die dritte Säule."
-     }
+     ]
     }
    ],
    "cards": [
@@ -20737,6 +21089,153 @@
        "unit": "Kinder"
       }
      ]
+    },
+    {
+     "id": "tq1_1",
+     "q": "1 km = ___ m",
+     "a": "1000",
+     "lvl": 1,
+     "opts": [
+      "10",
+      "100",
+      "1000",
+      "10 000"
+     ],
+     "hints": [
+      "Kilo heisst tausend."
+     ],
+     "steps": [
+      [
+       "1000",
+       "Kilo heisst tausend."
+      ]
+     ]
+    },
+    {
+     "id": "tq2_2",
+     "q": "4 km = ___ m",
+     "a": "4000",
+     "lvl": 1,
+     "opts": [
+      "40",
+      "400",
+      "4000",
+      "40 000"
+     ],
+     "hints": [
+      "Hänge drei Nullen an die 4."
+     ],
+     "steps": [
+      [
+       "4000",
+       "Hänge drei Nullen an die 4."
+      ]
+     ]
+    },
+    {
+     "id": "tq3_3",
+     "q": "7000 m = ___ km",
+     "a": "7",
+     "lvl": 1,
+     "opts": [
+      "7",
+      "70",
+      "700",
+      "7000"
+     ],
+     "hints": [
+      "Streiche drei Nullen."
+     ],
+     "steps": [
+      [
+       "7",
+       "Streiche drei Nullen."
+      ]
+     ]
+    },
+    {
+     "id": "tq4_4",
+     "q": "3 km 500 m = ___ m",
+     "a": "3500",
+     "lvl": 1,
+     "opts": [
+      "350",
+      "3500",
+      "3050",
+      "35 000"
+     ],
+     "hints": [
+      "3 km sind 3000 m. Dazu kommen 500 m."
+     ],
+     "steps": [
+      [
+       "3500",
+       "3 km sind 3000 m. Dazu kommen 500 m."
+      ]
+     ]
+    },
+    {
+     "id": "tq5_5",
+     "q": "Wie viele Meter sind ein halber km?",
+     "a": "500",
+     "lvl": 1,
+     "opts": [
+      "50",
+      "250",
+      "500",
+      "5000"
+     ],
+     "hints": [
+      "Halbiere 1000."
+     ],
+     "steps": [
+      [
+       "500",
+       "Halbiere 1000."
+      ]
+     ]
+    },
+    {
+     "id": "tq6_6",
+     "q": "Wie lange braucht ein Kind für 3 km?",
+     "a": "60 min",
+     "lvl": 1,
+     "opts": [
+      "40 min",
+      "50 min",
+      "60 min",
+      "80 min"
+     ],
+     "hints": [
+      "3 · 20 Minuten."
+     ],
+     "steps": [
+      [
+       "60 min",
+       "3 · 20 Minuten."
+      ]
+     ]
+    },
+    {
+     "id": "tq7_7",
+     "q": "Wie viele Kinder haben einen Schulweg zwischen 1 km und 3 km?",
+     "a": "8",
+     "lvl": 1,
+     "opts": [
+      "3",
+      "6",
+      "8",
+      "21"
+     ],
+     "hints": [
+      "Die dritte Säule."
+     ],
+     "steps": [
+      [
+       "8",
+       "Die dritte Säule."
+      ]
+     ]
     }
    ],
    "exam": {
@@ -21222,20 +21721,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "1 kg = ___ g",
-      "opts": [
-       "10",
-       "100",
-       "1000",
-       "10 000"
-      ],
-      "a": [
-       "1000"
-      ],
-      "hint": "Kilo heisst tausend."
-     }
+     ]
     },
     {
      "h": "⚖️ Wie schwer ist das?",
@@ -21293,20 +21779,7 @@
        ],
        "unit": "Gramm (g)"
       }
-     ],
-     "try": {
-      "q": "Welches Obst ist am schwersten?",
-      "opts": [
-       "Banane",
-       "Apfel",
-       "Orange",
-       "Tomate"
-      ],
-      "a": [
-       "Orange"
-      ],
-      "hint": "Schau, welche Zahl am grössten ist."
-     }
+     ]
     },
     {
      "h": "⚖️ Gewichte zusammenzählen",
@@ -21341,20 +21814,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Banane 120 g + Tomate 90 g = ___ g",
-      "opts": [
-       "190 g",
-       "210 g",
-       "230 g",
-       "310 g"
-      ],
-      "a": [
-       "210 g"
-      ],
-      "hint": "120 + 90"
-     }
+     ]
     },
     {
      "h": "⚖️ Von kg zu g: mal 1000",
@@ -21385,20 +21845,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "3 kg = ___ g",
-      "opts": [
-       "30",
-       "300",
-       "3000",
-       "30 000"
-      ],
-      "a": [
-       "3000"
-      ],
-      "hint": "Hänge drei Nullen an die 3."
-     }
+     ]
     },
     {
      "h": "⚖️ Von g zu kg: geteilt durch 1000",
@@ -21429,20 +21876,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "5000 g = ___ kg",
-      "opts": [
-       "5",
-       "50",
-       "500",
-       "5000"
-      ],
-      "a": [
-       "5"
-      ],
-      "hint": "Streiche drei Nullen."
-     }
+     ]
     },
     {
      "h": "⚖️ Halbes und Viertel-Kilo",
@@ -21503,20 +21937,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Wie viele Gramm fehlen? 250 g + ___ g = 1000 g",
-      "opts": [
-       "500 g",
-       "650 g",
-       "750 g",
-       "850 g"
-      ],
-      "a": [
-       "750 g"
-      ],
-      "hint": "Rechne 1000 − 250."
-     }
+     ]
     },
     {
      "h": "⚖️ Dinge suchen, die zusammen 1 kg wiegen",
@@ -21568,20 +21989,7 @@
         ]
        ]
       }
-     ],
-     "try": {
-      "q": "Wie viele Gramm fehlen? 400 g + ___ g = 1000 g",
-      "opts": [
-       "500 g",
-       "600 g",
-       "700 g",
-       "550 g"
-      ],
-      "a": [
-       "600 g"
-      ],
-      "hint": "Ergänze in Schritten: erst auf 500, dann auf 1000."
-     }
+     ]
     }
    ],
    "cards": [
@@ -22924,6 +23332,111 @@
        "cap": "Fehlt noch etwas bis 1 kg?",
        "col": 0
       }
+     ]
+    },
+    {
+     "id": "tq1_1",
+     "q": "1 kg = ___ g",
+     "a": "1000",
+     "lvl": 1,
+     "opts": [
+      "10",
+      "100",
+      "1000",
+      "10 000"
+     ],
+     "hints": [
+      "Kilo heisst tausend."
+     ],
+     "steps": [
+      [
+       "1000",
+       "Kilo heisst tausend."
+      ]
+     ]
+    },
+    {
+     "id": "tq3_2",
+     "q": "Banane 120 g + Tomate 90 g = ___ g",
+     "a": "210 g",
+     "lvl": 1,
+     "opts": [
+      "190 g",
+      "210 g",
+      "230 g",
+      "310 g"
+     ],
+     "hints": [
+      "120 + 90"
+     ],
+     "steps": [
+      [
+       "210 g",
+       "120 + 90"
+      ]
+     ]
+    },
+    {
+     "id": "tq4_3",
+     "q": "3 kg = ___ g",
+     "a": "3000",
+     "lvl": 1,
+     "opts": [
+      "30",
+      "300",
+      "3000",
+      "30 000"
+     ],
+     "hints": [
+      "Hänge drei Nullen an die 3."
+     ],
+     "steps": [
+      [
+       "3000",
+       "Hänge drei Nullen an die 3."
+      ]
+     ]
+    },
+    {
+     "id": "tq5_4",
+     "q": "5000 g = ___ kg",
+     "a": "5",
+     "lvl": 1,
+     "opts": [
+      "5",
+      "50",
+      "500",
+      "5000"
+     ],
+     "hints": [
+      "Streiche drei Nullen."
+     ],
+     "steps": [
+      [
+       "5",
+       "Streiche drei Nullen."
+      ]
+     ]
+    },
+    {
+     "id": "tq6_5",
+     "q": "Wie viele Gramm fehlen? 250 g + ___ g = 1000 g",
+     "a": "750 g",
+     "lvl": 1,
+     "opts": [
+      "500 g",
+      "650 g",
+      "750 g",
+      "850 g"
+     ],
+     "hints": [
+      "Rechne 1000 − 250."
+     ],
+     "steps": [
+      [
+       "750 g",
+       "Rechne 1000 − 250."
+      ]
      ]
     }
    ],

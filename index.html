@@ -1032,6 +1032,28 @@ body.rwopen{overflow:hidden}
 @keyframes twb{0%,100%{transform:translateX(-40px)}50%{transform:translateX(40px)}}
 .dm-tw i{position:absolute;bottom:0;background:#B0BEC5;border:2px solid #78909C;border-radius:3px;height:18px}
 .dm-tw .tw1{left:70px;width:70px}.dm-tw .tw2{left:80px;width:50px;bottom:18px;background:#D9A25B;border-color:#A8722F}.dm-tw .tw3{left:96px;width:34px;bottom:36px;background:#D9644A;border-color:#9E3B28}
+/* v3.99 Theorie-Ansicht */
+.thx{--sc:#1A73E8}.thx.s-mathe{--sc:#34A853}.thx.s-deu{--sc:#FBBC05}
+.thpath{display:flex;align-items:center;margin:8px 0 2px}
+.thn{all:unset;box-sizing:border-box;width:26px;height:26px;border-radius:50%;background:var(--track);color:#5f6368;font:800 .78rem/26px var(--font-d,inherit);text-align:center;flex:none}
+.thn.cur{background:var(--sc);color:#fff;box-shadow:0 0 0 4px rgba(0,0,0,.07)}.thn.done{background:var(--sc);color:#fff}
+.thln{flex:1;height:3px;background:var(--track);min-width:4px}.thln.on{background:var(--sc)}
+.thcard{border:1.5px solid var(--line);border-top:6px solid var(--sc);border-radius:22px;padding:16px;background:var(--surface);display:flex;flex-direction:column;gap:12px}
+.thh{display:flex;align-items:center;gap:12px}.thh h1{margin:0;font-size:1.35rem;line-height:1.2}
+.thnum{flex:none;width:38px;height:38px;border-radius:50%;background:var(--sc);color:#fff;font:900 1.1rem/38px var(--font-d,inherit);text-align:center}
+.thtxt{display:flex;flex-direction:column;gap:8px}
+.thl{margin:0;display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border-radius:14px;background:#F4F6FA;border-left:4px solid var(--sc);font-size:1.02rem;line-height:1.45}
+.thl.mk{background:#FFF8E1;border-left-color:#FBBC05;font-weight:700}.thd{flex:none}.thd:empty{display:none}
+.thsum{display:flex;flex-direction:column;gap:8px}.thsr{display:flex;align-items:center;gap:10px}.thsh{font-weight:600}
+.thchip{flex:none;min-width:128px;text-align:center;padding:5px 10px;border-radius:999px;font-weight:800;font-size:.82rem;color:#fff;background:#34A853}
+.thchip.c1{background:#1A73E8}.thchip.c2{background:#A142F4}.thchip.c3{background:#F29900}.thchip.c4{background:#EA4335}.thchip.c5{background:#12A4AF}
+.thok{min-width:60%}
+/* Spiel-Balken wie auf der Startseite */
+.xbt{height:8px;border-radius:99px;background:var(--track)}
+.xbt i{background:var(--accent)!important;border-radius:99px}
+.xbt i.hi,.xbt i.top{background:var(--accent)!important}
+.xbt u{top:-3px;bottom:-3px;background:#9AA0A6}
+.thbar{display:flex;align-items:center;gap:10px;margin:8px 0 2px}.thbar .bar{flex:1;height:10px}.thbar span{font-weight:800;font-size:.82rem;color:#5f6368;white-space:nowrap}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1039,7 +1061,7 @@ body.rwopen{overflow:hidden}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v3.98';
+var APP_VERSION='v3.99';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -1670,7 +1692,7 @@ function topicCard(ch,t){
   var m=/^Unit\s*(\d+(?:\+\d+)?)\s*·\s*(.*)$/.exec(t.title),badge=m?'<span class="tcun"><small>UNIT</small><b>'+esc(m[1])+'</b></span>':'<span class="tcart">'+artSvg(t)+'</span>',title=m?m[2]:t.title;
   return '<article class="card topic tc s-'+esc(t.subject)+(open?' open':'')+'"><button class="tchead tctog" data-act="ttog" data-id="'+id+'" aria-expanded="'+open+'">'+badge+'<div class="tcmain"><h3 class="tt">'+esc(title)+'</h3><p class="sub tcsub">'+(t.src?'<span class="src">'+esc(t.src)+'</span> · ':'')+(prog(ch.id).vis[t.id]||0)+'× besucht</p></div><span class="tcpct">'+w+'%</span><span class="tcchev" aria-hidden="true">'+(open?'▲':'▼')+'</span></button>'
   +'<div class="bar thin" role="img" aria-label="'+w+' Prozent"><i style="width:'+w+'%"></i></div>'
-  +(open?'<div class="tc4"><button class="tb4 m-v" data-act="learn" data-id="'+id+'">AI-Theorie</button>'
+  +(open?'<div class="tc4"><button class="tb4 m-v" data-act="learn" data-id="'+id+'">'+(t.subject==='mathe'||t.subject==='deu'?'Thema erklären':'AI-Theorie')+'</button>'
   +'<button class="tb4 m-u" data-act="practice" data-scope="topic:'+id+'" data-force="1">AI-Lernen</button>'
   +'<button class="tb4 m-p" data-act="exam" data-id="'+id+'">Prüfung</button>'
   +'<button class="tb4 m-x" data-act="xgame" data-id="'+id+'">⚡ Extra XP</button></div>':'')+'</article>';
@@ -1695,6 +1717,26 @@ function vSubject(){
   return html+'</div>';
 }
 
+
+var STG=['Verstanden','Kapiert','Gespeichert','Gecheckt','Sitzt','Alles klar'],STI=['👀','💡','💾','✅','🧠','🎯'];
+function stg(i){return STG[i%STG.length]}
+function thSplit(text){return String(text).replace(/([.!?])\s+(?=[A-ZÄÖÜ«])/g,'$1\u0001').split('\u0001').filter(Boolean)}
+function vTheory(t){
+  var n=t.explain.length,i=Math.min(nav.step,n),conf=nav.conf||(nav.conf={}),k;
+  var path='<div class="thpath" role="img" aria-label="Schritt '+(i+1)+' von '+(n+1)+'">';
+  for(k=0;k<=n;k++){path+=(k?'<b class="thln'+(i>=k?' on':'')+'"></b>':'')+'<i class="thn'+(i>k?' done':i===k?' cur':'')+'">'+(k===n?'🏁':(i>k?'✓':(k+1)))+'</i>'}
+  path+='</div>';
+  if(n>8)path='<div class="thbar"><div class="bar"><i style="width:'+Math.round(i/n*100)+'%;background:var(--sc)"></i></div><span>Block '+Math.min(i+1,n)+' von '+n+'</span></div>';
+  var head='<div class="thtop"><p class="eyebrow">Thema erklären · '+esc(t.title)+'</p>'+path+'</div>';
+  if(i>=n){
+    return '<div class="stack explain thx s-'+t.subject+'">'+head+'<section class="thcard sum"><div class="thh"><span class="thnum">🏁</span><h1>Geschafft!</h1></div><p class="txt">Du hast alle '+n+' Blöcke durchgearbeitet. Jetzt weisst du, wie es geht. Im nächsten Schritt übst du mit Aufgaben.</p><div class="thsum">'
+      +t.explain.map(function(st,j){var lb=conf[j]||stg(j);return '<div class="thsr"><span class="thchip c'+(j%6)+'">'+STI[j%6]+' '+lb+'</span><span class="thsh">'+esc(st.h)+'</span></div>'}).join('')+'</div></section>'
+      +'<div class="row"><button class="btn" data-act="prev">Zurück</button><button class="btn pri big" data-act="practice" data-scope="topic:'+esc(t.id)+'" data-force="1">Jetzt üben</button></div></div>';
+  }
+  var st=t.explain[i],lines=thSplit(st.text),body=lines.map(function(l){var mk=/^(Merke|Wichtig|Tipp)/.test(l);return '<p class="thl'+(mk?' mk':'')+'"><span class="thd">'+(mk?'💡':'')+'</span><span>'+rt(l)+'</span></p>'}).join('');
+  return '<div class="stack explain thx s-'+t.subject+'">'+head+'<section class="thcard"><div class="thh"><span class="thnum">'+(i+1)+'</span><h1>'+esc(st.h)+'</h1></div>'+visuals(st.visuals)+'<div class="thtxt">'+body+'</div></section>'
+    +'<div class="row">'+(i>0?'<button class="btn" data-act="prev">Zurück</button>':'')+'<button class="btn pri big thok" data-act="thnext">'+STI[i%6]+' '+stg(i)+'</button></div></div>';
+}
 function quizFor(step){
   var v=(step.visuals||[]).filter(function(x){return x.type==='flip'})[0];if(!v||!step.quiz)return [];
   var it=v.items,n=it.length,out=[],idx=[0,Math.floor(n/3),Math.floor(2*n/3)].filter(function(x,i,a){return a.indexOf(x)===i});
@@ -1723,6 +1765,7 @@ function vWordList(t){
   });
   return h+'</div></div>'}
 function vLearn(){
+  var t0=topicById(nav.topicId);if(t0.subject==='mathe'||t0.subject==='deu')return vTheory(t0);
   var t=topicById(nav.topicId),st=t.explain[nav.step],last=nav.step===t.explain.length-1,first=nav.step===0;
   var dots='<div class="dotsrow" aria-label="Schritt '+(nav.step+1)+' von '+t.explain.length+'">'+t.explain.map(function(_,i){return '<i class="'+(i<=nav.step?'on':'')+'"></i>'}).join('')+'</div>';
   var say=first?'Los geht\'s. Lies in Ruhe, dann probier es aus.':last?'Letzter Schritt. Danach darfst du üben.':pick(['Schau dir die Bilder genau an, sie verraten viel.','Kleine Schritte, grosse Wirkung.','Das merkst du dir schneller, als du denkst.'],nav.step);
@@ -1990,7 +2033,7 @@ function render(){
   }
   if(nav.view==='learn'){
     var t=topicById(nav.topicId);
-    if(nav.step===t.explain.length-1){var p=prog(nav.child);if(!p.seen[t.id]){p.seen[t.id]=Date.now();addXp(nav.child,10);toast('+10 XP fürs Anschauen','');ach(nav.child,'learn');save(nav.child)}}
+    if(nav.step>=t.explain.length-1){var p=prog(nav.child);if(!p.seen[t.id]){p.seen[t.id]=Date.now();addXp(nav.child,10);toast('+10 XP fürs Anschauen','');ach(nav.child,'learn');save(nav.child)}}
   }
   if(nav.view==='exam'&&nav.phase==='run'){
     var tick=function(){var el=document.getElementById('timer');if(!el)return;var rem=Math.round(topicById(nav.topicId).exam.minutes*60-(Date.now()-nav.started)/1000);el.textContent=mmss(rem);el.classList.toggle('late',rem<0)};
@@ -2062,6 +2105,7 @@ var ACT={
   subject:function(b){go({view:'subject',child:nav.child,subject:b.dataset.id})},
   learn:function(b){go({view:'learn',child:nav.child,topicId:b.dataset.id,step:0,qz:{}})},
   next:function(){nav.step++;nav.fails=0;render();window.scrollTo(0,0)},
+  thnext:function(){nav.conf=nav.conf||{};nav.conf[nav.step]=stg(nav.step);nav.step++;nav.fails=0;render();window.scrollTo(0,0)},
   prev:function(){nav.step--;nav.fails=0;render();window.scrollTo(0,0)},
   ttog:function(b){nav.topen=nav.topen||{};nav.topen[b.dataset.id]=!nav.topen[b.dataset.id];var y=window.scrollY;render();window.scrollTo(0,y)},
   chtoggle:function(el){var k=el.getAttribute('data-key');nav.chopen=nav.chopen||{};var def=!(topicsOf(nav.child,nav.subject).length>8);nav.chopen[k]=!((k in nav.chopen)?nav.chopen[k]:def);render()},
