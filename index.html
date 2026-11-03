@@ -1149,6 +1149,12 @@ body.rwopen{overflow:hidden}
 .tcun small{font:800 .78rem/1 var(--font-d);letter-spacing:.14em;opacity:1;text-shadow:0 1px 2px rgba(0,0,0,.35)}
 .tcun b{font:900 2.5rem/1 var(--font-d);text-shadow:0 2px 3px rgba(0,0,0,.35)}
 .s-deu .tcun small,.s-deu .tcun b{text-shadow:none}
+/* v4.09 einheitliche Themen-Kachel (alle Fächer gleich gross, Google-Look) */
+.tcun,.tcart{flex:none;width:72px;height:72px;min-width:72px;border-radius:20px;box-sizing:border-box;border:0!important;box-shadow:none!important;display:flex;flex-direction:column;align-items:center;justify-content:center;background:color-mix(in srgb,var(--sc,#4285F4) 15%,#fff)!important;color:var(--sd,#1A4FA0)!important;padding:0}
+.tcart svg{width:48px;height:48px;display:block}
+.tcun small{font:700 .7rem/1 var(--font-d);letter-spacing:.12em;color:var(--sd,#1A4FA0);opacity:.85;text-shadow:none!important}
+.tcun b{font:800 2.3rem/1 var(--font-d);color:var(--sd,#1A4FA0);text-shadow:none!important}
+.s-deu .tcun,.s-deu .tcun small,.s-deu .tcun b{color:#7A5A00!important}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1156,7 +1162,7 @@ body.rwopen{overflow:hidden}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v4.08';
+var APP_VERSION='v4.09';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
