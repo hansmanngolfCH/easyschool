@@ -3756,7 +3756,8 @@
      "text": "c'est la rentrée = es ist Schulanfang. Mit chouette sagst du toll, mit zut sagst du oje."
     }
    },
-   "art": "school"
+   "art": "school",
+   "src": "dis donc! 5"
   },
   {
    "id": "kl5-franz-unit2-famille",
@@ -4294,7 +4295,8 @@
      "text": "C'est = das ist (eine Person oder Sache). Ce sont = das sind (mehrere). «Ma» heisst meine und gehört zu einem weiblichen Nomen (ma famille), «mes» zu mehreren (mes grands-parents)."
     }
    },
-   "art": "family"
+   "art": "family",
+   "src": "dis donc! 5"
   },
   {
    "id": "kl8-deu-rechtschreibung1",
@@ -10721,7 +10723,8 @@
      "text": "Hier stehen die Wörter aus «Vocabulaire plus». Pourquoi? = Warum? Die Antwort beginnt oft mit pour (um zu) oder parce que (weil)."
     }
    },
-   "art": "franz"
+   "art": "franz",
+   "src": "dis donc! 6"
   },
   {
    "id": "kl6-franz-unit2-chez-moi",
@@ -11396,7 +11399,8 @@
      "text": "Wörter aus «Vocabulaire plus»: weitere Zimmer, Fragen zum Haus und Dinge im Zimmer."
     }
    },
-   "art": "franz"
+   "art": "franz",
+   "src": "dis donc! 6"
   },
   {
    "id": "kl6-franz-unit3-bouger",
@@ -12105,7 +12109,8 @@
      "text": "Wörter aus «Vocabulaire plus»: Eigenschaften, weitere Verben und Bewegung."
     }
    },
-   "art": "franz"
+   "art": "franz",
+   "src": "dis donc! 6"
   },
   {
    "id": "kl6-franz-unit4-restaurant",
@@ -12872,7 +12877,8 @@
      "text": "Wörter aus «Vocabulaire plus»: weitere Gerichte, Getränke und höfliche Sätze."
     }
    },
-   "art": "franz"
+   "art": "franz",
+   "src": "dis donc! 6"
   },
   {
    "id": "kl6-franz-unit5-couleurs",
@@ -13627,7 +13633,8 @@
      "text": "Wörter aus «Vocabulaire plus»: Wetter, Naturgewalten und Gefühle."
     }
    },
-   "art": "franz"
+   "art": "franz",
+   "src": "dis donc! 6"
   },
   {
    "id": "kl6-franz-unit6-baguette-magique",
@@ -14191,7 +14198,8 @@
      "text": "Wörter aus «Vocabulaire plus»: weitere Eigenschaften und Sätze über Figuren."
     }
    },
-   "art": "franz"
+   "art": "franz",
+   "src": "dis donc! 6"
   },
   {
    "id": "kl5-franz-unit3-loisirs",
@@ -14862,7 +14870,8 @@
      "text": "Wörter aus «Vocabulaire plus»: weitere Hobbys und Sätze zum Lieblingssport."
     }
    },
-   "art": "franz"
+   "art": "franz",
+   "src": "dis donc! 5"
   },
   {
    "id": "kl5-franz-unit4-ingredients",
@@ -15576,7 +15585,8 @@
      "text": "Wörter aus «Vocabulaire plus»: Tiere aus Früchten, Werkzeuge und weitere Anweisungen."
     }
    },
-   "art": "franz"
+   "art": "franz",
+   "src": "dis donc! 5"
   },
   {
    "id": "kl5-franz-unit5-animaux",
@@ -16273,7 +16283,8 @@
      "text": "Wörter aus «Vocabulaire plus» und weitere Tiere der Unité."
     }
    },
-   "art": "franz"
+   "art": "franz",
+   "src": "dis donc! 5"
   },
   {
    "id": "kl5-franz-unit6-ville",
@@ -16927,7 +16938,8 @@
      "text": "Wörter aus «Vocabulaire plus»: Wolkenkratzer, Höhe und weitere Kleidungsstücke."
     }
    },
-   "art": "franz"
+   "art": "franz",
+   "src": "dis donc! 5"
   },
   {
    "id": "kl5-franz-unit12-plus",
@@ -17473,7 +17485,8 @@
      "text": "Hier stehen die Zusatzwörter aus Unit 2: Familie, Angaben zur Person und Sprachen. Lerne jedes Nomen mit seinem Begleiter."
     }
    },
-   "art": "franz"
+   "art": "franz",
+   "src": "dis donc! 5"
   },
   {
    "id": "kl5-franz-zahlen",
@@ -18362,7 +18375,8 @@
      "text": "cent = 100, mille = 1000. Bei 200 und 300 kommt ein -s (deux cents), aber nicht mehr, wenn noch eine Zahl folgt (deux cent un). mille bekommt nie ein -s."
     }
    },
-   "art": "franz"
+   "art": "franz",
+   "src": "dis donc! 5"
   }
  ],
  "hero": "img/hero.webp"
