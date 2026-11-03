@@ -847,7 +847,7 @@ body.rwopen{overflow:hidden}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v3.83';
+var APP_VERSION='v3.84';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -1805,17 +1805,17 @@ var ACT={
   skin:function(b){var p=prog(nav.child);p.skin=b.dataset.id;p.skinT=Date.now();save(nav.child);render()},
   flip:function(b){if(b.classList)b.classList.toggle('on')},
   speak:function(b){try{var u=new SpeechSynthesisUtterance(b.dataset.t);u.lang=b.dataset.lang||'en-GB';u.rate=.9;speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){}},
-  qz:function(b){nav.qz=nav.qz||{};var key=nav.step+'_'+b.dataset.q;if(nav.qz[key]!=null)return;nav.qz[key]=+b.dataset.i;render()},
+  qz:function(b){nav.qz=nav.qz||{};var key=nav.step+'_'+b.dataset.q;if(nav.qz[key]!=null)return;nav.qz[key]=+b.dataset.i;theoryTask();render()},
   ldir:function(b){nav.lst=nav.lst||{open:{},mark:{}};nav.lst.mark=nav.lst.mark||{};nav.lst.dir=b.dataset.d;nav.lst.open={};render()},
   lopen:function(b){var L=nav.lst||(nav.lst={dir:'fw',open:{},mark:{}});L.open[b.dataset.id]=!L.open[b.dataset.id];render()},
   lmark:function(b){var L=nav.lst;L.mark[b.dataset.id]=b.dataset.v;render()},
   lreset:function(){var L=nav.lst;if(L){L.open={};L.mark={}}render()},
-  topt:function(b){var T=topicById(nav.topicId).explain[nav.step].try,o=T.opts[+b.dataset.i],i=nav.step;nav.topt=nav.topt||{};var ch=nav.topt[i]||(nav.topt[i]={});if(o===T.a[0])ch.ok=true;else{ch.bad=(ch.bad||[]).concat([o])}render()},
+  topt:function(b){theoryTask();var T=topicById(nav.topicId).explain[nav.step].try,o=T.opts[+b.dataset.i],i=nav.step;nav.topt=nav.topt||{};var ch=nav.topt[i]||(nav.topt[i]={});if(o===T.a[0])ch.ok=true;else{ch.bad=(ch.bad||[]).concat([o])}render()},
   dslot:function(b){var i=nav.step,si=+b.dataset.si,pl=nav.dr[i];if(pl[si]){pl[si]=null;nav.dr[i+'ok']=undefined}else if(nav.dsel){pl[si]=nav.dsel;nav.dsel=null}render()},
-  dcheck:function(){var T=topicById(nav.topicId).explain[nav.step].try,i=nav.step,pl=nav.dr[i];nav.dr[i+'ok']=pl.every(function(x,k){return x===T.a[k]});render()},
+  dcheck:function(){theoryTask();var T=topicById(nav.topicId).explain[nav.step].try,i=nav.step,pl=nav.dr[i];nav.dr[i+'ok']=pl.every(function(x,k){return x===T.a[k]});render()},
   dreset:function(){var T=topicById(nav.topicId).explain[nav.step].try,i=nav.step;nav.dr[i]=T.drag.slots.map(function(){return null});nav.dr[i+'ok']=undefined;nav.dsel=null;render()},
   mpick:function(b){var n=nav,o=n.opts[+b.dataset.i];n.typed=o.t;n.chosen=+b.dataset.i;n.revealed=true;n.verdict=o.ok?'ok':'no';render()},
-  try:function(){
+  try:function(){theoryTask();
     var st=topicById(nav.topicId).explain[nav.step].try,inp=document.getElementById('tryin'),fb=document.getElementById('tryfb'),r=checkAns(inp.value,st.a);
     if(r.empty){fb.className='fb no';fb.textContent='Schreibe zuerst deine Antwort auf.';return}
     if(r.ok){fb.className='fb ok';fb.textContent='Richtig!'+(r.accent?' Achte auf die Schreibweise: '+r.accent:'')}
@@ -1922,7 +1922,7 @@ function finishExam(){
     return {q:q,g:g,ok:ok,note:note};
   });
   var max=qsx.length,note=grade(score,max),xp=5*score+(note>=5?30:0)+(note>=5.75?20:0);
-  p.exams.push({topic:t.id,score:score,max:max,note:note,t:now});if(note>=5)setTimeout(function(){showReward('Prüfung mit Note '+fmt(note)+' geschafft!')},900);
+  p.exams.push({topic:t.id,score:score,max:max,note:note,t:now});setTimeout(function(){showReward('Prüfung fertig: Note '+fmt(note)+'!')},900);
   addXp(n.child,xp);if(note>=5)ach(n.child,'exam5');checkPassive(n.child);
   save(n.child);n.phase='result';n.result={items:items,score:score,max:max,note:note,xp:xp};render();window.scrollTo(0,0);
 }
@@ -1976,29 +1976,32 @@ fetch('content.json',{cache:'no-cache'}).then(function(r){if(!r.ok)throw new Err
  window.addEventListener('pointercancel',function(){if(drag&&drag.ghost)drag.ghost.remove();drag=null});
 })();
 /* ---------- Belohnung: Extra-XP-Runde ---------- */
-var STREAK=0,RW=null;
+var STREAK=0,QN=0,TT=0,LT=0,RW=null;
+function rwReset(){STREAK=0;QN=0;TT=0;LT=0}
 function rewardAfter(ok){
   if(!nav||nav.view!=='practice')return;
-  if(!ok){STREAK=0;return}
-  STREAK++;
-  if(STREAK>=5){STREAK=0;showReward('5 richtige Antworten in Folge!')}
+  QN++;if(ok)STREAK++;else STREAK=0;
+  if(STREAK>=3){rwReset();showReward('3 richtige Antworten in Folge!')}
+  else if(QN>=5){rwReset();showReward('5 Fragen geschafft!')}
 }
+function theoryTask(){if(!nav||nav.view!=='learn')return;TT++;if(TT>=3){rwReset();setTimeout(function(){showReward('3 Aufgaben gelöst!')},600)}}
+(function(){var last=Date.now();setInterval(function(){var n=Date.now(),d=n-last;last=n;if(d>5000)d=5000;if(document.hidden||RW||document.getElementById('rwd'))return;if(nav&&(nav.view==='learn'||nav.view==='practice')){LT+=d;if(LT>=180000){rwReset();showReward('3 Minuten gelernt!')}}},1000)})();
 function T3(f){f=Math.ceil(f*1.1);return [Math.ceil(f*.5),Math.ceil(f*.8),f]}
 var GAMES=[
- {id:'flappy',n:'Vogelflucht',e:'🕊️',g:T3(20),time:100,d:'cave',ctl:'Tippen = flattern',how:'Flieh als weisser Vogel durch die Felsenhöhle! Bleib im Gang zwischen den Wänden. Er wird enger, vorne wird es heller.'},
- {id:'tetris',n:'Tetris',e:'🧱',g:T3(600),time:100,d:'tet',ctl:'Knöpfe unten: bewegen, drehen, fallen lassen',how:'Volle Reihen geben Punkte!'},
- {id:'cannon',n:'Taubenjagd',e:'🔫',g:[5,8,10],time:120,d:'shoot',ctl:'Tippen = schiessen',how:'Du hast genau 10 Patronen (unten). Schiess im richtigen Moment auf die schwarzen Tauben: Triffst du mit allen 10, gibt es alle XP. Bunte Vögel kosten eine Extra-Patrone!'},
- {id:'runner',n:'Tsunami-Flucht',e:'🌊',g:T3(20),time:90,d:'run',ctl:'Tippen = springen',how:'Renn vor dem Tsunami davon! Spring über Liegestühle, Sandburgen und Palmen. Krabben darfst du anspringen. Möwen fliegen tief: nicht zu hoch springen!'},
- {id:'stack',n:'Burger-Turm',e:'🍔',g:T3(45),time:100,d:'drop',ctl:'Tippen = Zutat fallen lassen',how:'Baue einen riesigen Burger mit vielen Lagen! Triff genau, sonst wird die Lage schmaler.'},
- {id:'catch',n:'Naschmund',e:'😋',g:T3(40),time:80,d:'mouth',ctl:'Links oder rechts tippen = Mund bewegen',how:'Fang Süssigkeiten mit dem offenen Mund. Gold-Bonbons zählen dreifach. Gemüse schmeckt schlecht!'},
- {id:'moto',n:'Dirtbike',e:'🏍️',g:T3(20),time:100,d:'moto',ctl:'Links tippen = linke Spur · Rechts tippen = rechte Spur',how:'Fahr von oben gesehen die Piste hinunter! Tippe links oder rechts, um die Spur zu wechseln, und weiche Fässern, Reifen, Strohballen, Steinen und Pfützen aus.'},
- {id:'pong',n:'Samurai',e:'🥥',g:T3(24),time:100,d:'sam',ctl:'Finger ziehen oder tippen = Samurai bewegen',how:'Der Affe wirft Kokosnüsse! Stell dich unter die Nuss, dein Schwert halbiert sie. Mehrere Treffer hintereinander geben eine Kombi. Triffst du nicht, gibt es ein Bonk.'},
+ {id:'flappy',n:'Vogelflucht',e:'🕊️',g:T3(14),time:60,d:'cave',ctl:'Tippen = flattern',how:'Flieh als weisser Vogel durch die Felsenhöhle! Bleib im Gang zwischen den Wänden. Er wird enger, vorne wird es heller.'},
+ {id:'tetris',n:'Tetris',e:'🧱',g:T3(400),time:60,d:'tet',ctl:'Knöpfe unten: bewegen, drehen, fallen lassen',how:'Volle Reihen geben Punkte!'},
+ {id:'cannon',n:'Taubenjagd',e:'🔫',g:[5,8,10],time:60,d:'shoot',ctl:'Tippen = schiessen',how:'Du hast genau 10 Patronen (unten). Schiess im richtigen Moment auf die schwarzen Tauben: Triffst du mit allen 10, gibt es alle XP. Bunte Vögel kosten eine Extra-Patrone!'},
+ {id:'runner',n:'Tsunami-Flucht',e:'🌊',g:T3(14),time:60,d:'run',ctl:'Tippen = springen',how:'Renn vor dem Tsunami davon! Spring über Liegestühle, Sandburgen und Palmen. Krabben darfst du anspringen. Möwen fliegen tief: nicht zu hoch springen!'},
+ {id:'stack',n:'Burger-Turm',e:'🍔',g:T3(28),time:60,d:'drop',ctl:'Tippen = Zutat fallen lassen',how:'Baue einen riesigen Burger mit vielen Lagen! Triff genau, sonst wird die Lage schmaler.'},
+ {id:'catch',n:'Naschmund',e:'😋',g:T3(26),time:60,d:'mouth',ctl:'Links oder rechts tippen = Mund bewegen',how:'Fang Süssigkeiten mit dem offenen Mund. Gold-Bonbons zählen dreifach. Gemüse schmeckt schlecht!'},
+ {id:'moto',n:'Dirtbike',e:'🏍️',g:T3(14),time:60,d:'moto',ctl:'Links tippen = linke Spur · Rechts tippen = rechte Spur',how:'Fahr von oben gesehen die Piste hinunter! Tippe links oder rechts, um die Spur zu wechseln, und weiche Fässern, Reifen, Strohballen, Steinen und Pfützen aus.'},
+ {id:'pong',n:'Samurai',e:'🥥',g:T3(16),time:60,d:'sam',ctl:'Finger ziehen oder tippen = Samurai bewegen',how:'Der Affe wirft Kokosnüsse! Stell dich unter die Nuss, dein Schwert halbiert sie. Mehrere Treffer hintereinander geben eine Kombi. Triffst du nicht, gibt es ein Bonk.'},
  {id:'roulette',n:'Roulette',e:'🎰',g:[1,2,3],time:60,d:'roul',ctl:'Ein Feld antippen, dann DREHEN',how:'Du setzt einen Jeton und hast 2 Versuche. Gewinnt der erste, ist das Spiel fertig. Rot/Schwarz gibt 50 XP, eine Viererreihe 150 XP, eine einzelne Zahl sogar 300 XP. Verlierst du, gibt es nichts. Die grüne 0 verliert immer!'},
- {id:'snake',n:'Snake',e:'🐍',g:T3(18),time:100,d:'train',ctl:'Links tippen = nach links · Rechts tippen = nach rechts',how:'Lenke die leuchtende Schlange zu den goldenen Münzen. Mit jeder Münze wird sie länger. Wand und eigener Körper sind tödlich.'},
- {id:'basket',n:'Basketball',e:'🏀',g:T3(20),time:100,d:'bball',ctl:'Tippen = werfen (im grünen Bereich)',how:'Tippe, wenn der Zeiger im grünen Bereich ist. Swish = 2 Punkte. Du darfst 3 Mal danebenwerfen.'},
- {id:'round',n:'Kreisverkehr',e:'🚗',g:T3(14),time:100,d:'round',ctl:'Tippen = vorderstes Auto von unten fährt los',how:'Im Kreisel fahren immer mehr Autos. Lass von unten einzelne Autos einfahren, wenn eine Lücke da ist. Jedes Auto gibt einen Punkt. Crash = Herz weg.'},
- {id:'base',n:'Baseball',e:'⚾',g:T3(16),time:100,d:'bat',ctl:'Tippen = schlagen',how:'Tippe, wenn der Ball im leuchtenden Ring ist. Perfekt = Home Run (2 Punkte). 3 Fehler und du bist raus.'},
- {id:'arch',n:'Bogenschiessen',e:'🏹',g:T3(40),time:100,d:'arch',ctl:'Tippen = Pfeil schiessen',how:'Das Fadenkreuz wandert über die Scheibe. Tippe, wenn es in der Mitte ist. Du hast 19 Bolzen. Die Armbrust zielt mit. Zehn = 5 Punkte.'},
+ {id:'snake',n:'Snake',e:'🐍',g:T3(12),time:60,d:'train',ctl:'Links tippen = nach links · Rechts tippen = nach rechts',how:'Lenke die leuchtende Schlange zu den goldenen Münzen. Mit jeder Münze wird sie länger. Wand und eigener Körper sind tödlich.'},
+ {id:'basket',n:'Basketball',e:'🏀',g:T3(13),time:60,d:'bball',ctl:'Tippen = werfen (im grünen Bereich)',how:'Tippe, wenn der Zeiger im grünen Bereich ist. Swish = 2 Punkte. Du darfst 3 Mal danebenwerfen.'},
+ {id:'round',n:'Kreisverkehr',e:'🚗',g:T3(10),time:60,d:'round',ctl:'Tippen = vorderstes Auto von unten fährt los',how:'Im Kreisel fahren immer mehr Autos. Lass von unten einzelne Autos einfahren, wenn eine Lücke da ist. Jedes Auto gibt einen Punkt. Crash = Herz weg.'},
+ {id:'base',n:'Baseball',e:'⚾',g:T3(11),time:60,d:'bat',ctl:'Tippen = schlagen',how:'Tippe, wenn der Ball im leuchtenden Ring ist. Perfekt = Home Run (2 Punkte). 3 Fehler und du bist raus.'},
+ {id:'arch',n:'Bogenschiessen',e:'🏹',g:T3(32),time:60,d:'arch',ctl:'Tippen = Pfeil schiessen',how:'Das Fadenkreuz wandert über die Scheibe. Tippe, wenn es in der Mitte ist. Du hast 19 Bolzen. Die Armbrust zielt mit. Zehn = 5 Punkte.'},
 ];
 function demoHTML(g){var d=g.d,sp=g.e;
   if(d==='cave')return '<div class="dm dm-cave2"><span class="ct"></span><span class="cb"></span><span class="dpl"></span><span class="dpl b"></span><span class="dbd">🕊️</span><span class="dfin">👆</span></div>';
@@ -2026,7 +2029,7 @@ function showPicker(){
   o.querySelectorAll('.rwg').forEach(function(b){b.onclick=function(){o.remove();showReward('Testmodus.',b.dataset.g)}});
 }
 function showReward(why,force){
-  if(document.getElementById('rwd'))return;
+  if(document.getElementById('rwd'))return;rwReset();
   var pool=GAMES.filter(function(g){return g.id!==(RW_LAST||'')}),g=force?GAMES.filter(function(x){return x.id===force})[0]:pool[Math.floor(Math.random()*pool.length)];RW_LAST=g.id;
   RW={child:nav.child,g:g,stop:null,score:0,done:false,why:why,test:!!force};
   var o=document.createElement('div');o.id='rwd';o.className='rwd';
