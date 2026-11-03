@@ -928,6 +928,21 @@ body.rwopen{overflow:hidden}
 .xg-big{font-size:2.4rem;padding:6px 0}
 .xg{gap:10px;padding:12px}
 .xo.c0{background:linear-gradient(160deg,#FF5F6D,#FFC371)}.xo.c1{background:linear-gradient(160deg,#36D1DC,#5B86E5)}.xo.c2{background:linear-gradient(160deg,#A770EF,#F953C6)}.xo.c3{background:linear-gradient(160deg,#11998E,#38EF7D)}
+/* v3.90 Themenkarte: grosse Unit-Nummer, aufklappbar, 2x2 Buttons */
+.tctog{all:unset;box-sizing:border-box;display:flex;align-items:center;gap:12px;width:100%;cursor:pointer;touch-action:manipulation}
+.tctog:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:12px}
+.tcun{flex:none;width:58px;height:58px;border-radius:16px;background:linear-gradient(150deg,#3b6cf0,#7b2ff7);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;box-shadow:0 3px 8px rgba(59,108,240,.3)}
+.tcun small{font:700 .6rem var(--font-d);letter-spacing:.1em;opacity:.85}
+.tcun b{font:800 1.7rem var(--font-d)}
+.card.topic.tc h3.tt{font-size:1.3rem;font-weight:700}
+.tcchev{flex:none;color:#80868b;font-size:.8rem;width:18px;text-align:center}
+.tcpct{flex:none}
+.tc4{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:64px;gap:10px;margin-top:12px}
+.tb4{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;justify-content:center;text-align:center;border-radius:16px;color:#fff;font:700 1.05rem var(--font-d);box-shadow:0 4px 0 rgba(0,0,0,.18);touch-action:manipulation}
+.tb4:active{transform:translateY(2px)}
+.tb4:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.tb4.m-v{background:#1a56c8}.tb4.m-u{background:#1e9e3e}.tb4.m-p{background:#e8710a}
+.tb4.m-x{background:linear-gradient(120deg,#7B2FF7,#F107A3 60%,#FF8A3C)}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -935,7 +950,7 @@ body.rwopen{overflow:hidden}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v3.89';
+var APP_VERSION='v3.90';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -1486,12 +1501,15 @@ engl:'<path d="M8 12h40a6 6 0 0 1 6 6v20a6 6 0 0 1-6 6H26l-10 10V44H8a6 6 0 0 1-
 deu:'<rect x="6" y="6" width="52" height="52" rx="12" fill="'+Y+'"/><text x="32" y="46" text-anchor="middle" font-family="Arial" font-weight="700" font-size="36" fill="#fff">A</text>'};
 function artSvg(t){var k=t.art&&ART[t.art]?t.art:(ART[t.subject]?t.subject:'mathe');return '<svg viewBox="0 0 64 64" width="100%" height="100%" aria-hidden="true">'+ART[k]+'</svg>'}
 function topicCard(ch,t){
-  var st=stats(ch.id,[t]),seen=prog(ch.id).seen[t.id],best=bestNote(ch.id,t.id),hasV=t.cards.some(isV),L=level(ch.id,[t]),w=Math.max(L.seen?4:0,Math.round(L.pct*100));
-  return '<article class="card topic tc"><div class="tchead"><span class="tcart">'+artSvg(t)+'</span><div class="tcmain"><h3 class="tt">'+esc(t.title)+'</h3><p class="sub tcsub">'+(t.src?'<span class="src">'+esc(t.src)+'</span> · ':'')+(prog(ch.id).vis[t.id]||0)+'× besucht</p></div><span class="tcpct">'+w+'%</span></div>'
+  var L=level(ch.id,[t]),w=Math.max(L.seen?4:0,Math.round(L.pct*100)),id=esc(t.id);
+  nav.topen=nav.topen||{};var open=!!nav.topen[t.id];
+  var m=/^Unit\s*(\d+(?:\+\d+)?)\s*·\s*(.*)$/.exec(t.title),badge=m?'<span class="tcun"><small>UNIT</small><b>'+esc(m[1])+'</b></span>':'<span class="tcart">'+artSvg(t)+'</span>',title=m?m[2]:t.title;
+  return '<article class="card topic tc'+(open?' open':'')+'"><button class="tchead tctog" data-act="ttog" data-id="'+id+'" aria-expanded="'+open+'">'+badge+'<div class="tcmain"><h3 class="tt">'+esc(title)+'</h3><p class="sub tcsub">'+(t.src?'<span class="src">'+esc(t.src)+'</span> · ':'')+(prog(ch.id).vis[t.id]||0)+'× besucht</p></div><span class="tcpct">'+w+'%</span><span class="tcchev" aria-hidden="true">'+(open?'▲':'▼')+'</span></button>'
   +'<div class="bar thin" role="img" aria-label="'+w+' Prozent"><i style="width:'+w+'%"></i></div>'
-  +'<div class="mods3"><button class="mod3 m-v" data-act="learn" data-id="'+esc(t.id)+'">AI-Theorie</button>'
-  +'<button class="mod3 m-u" data-act="practice" data-scope="topic:'+esc(t.id)+'" data-force="1">AI-Lernen</button>'
-  +'<button class="mod3 m-p" data-act="exam" data-id="'+esc(t.id)+'">Prüfung</button></div><button class="tcx" data-act="xgame" data-id="'+esc(t.id)+'">⚡ Extra XP holen</button></article>';
+  +(open?'<div class="tc4"><button class="tb4 m-v" data-act="learn" data-id="'+id+'">AI-Theorie</button>'
+  +'<button class="tb4 m-u" data-act="practice" data-scope="topic:'+id+'" data-force="1">AI-Lernen</button>'
+  +'<button class="tb4 m-p" data-act="exam" data-id="'+id+'">Prüfung</button>'
+  +'<button class="tb4 m-x" data-act="xgame" data-id="'+id+'">⚡ Extra XP</button></div>':'')+'</article>';
 }
 function vSubject(){
   var ch=C.children.filter(function(c){return c.id===nav.child})[0],ts=topicsOf(ch.id,nav.subject),chapters=[],sb=C.subjects.filter(function(x){return x.id===nav.subject})[0];
@@ -1881,6 +1899,7 @@ var ACT={
   learn:function(b){go({view:'learn',child:nav.child,topicId:b.dataset.id,step:0,qz:{}})},
   next:function(){nav.step++;nav.fails=0;render();window.scrollTo(0,0)},
   prev:function(){nav.step--;nav.fails=0;render();window.scrollTo(0,0)},
+  ttog:function(b){nav.topen=nav.topen||{};nav.topen[b.dataset.id]=!nav.topen[b.dataset.id];var y=window.scrollY;render();window.scrollTo(0,y)},
   chtoggle:function(el){var k=el.getAttribute('data-key');nav.chopen=nav.chopen||{};var def=!(topicsOf(nav.child,nav.subject).length>8);nav.chopen[k]=!((k in nav.chopen)?nav.chopen[k]:def);render()},
   avopen:function(){nav.avpick=true;render()},
   avclose:function(){nav.avpick=false;render();if(String(myName()).trim().toLowerCase()==='spielplatz'){setMyName('');render();showPicker();return}if(nav.view!=='home')return},
