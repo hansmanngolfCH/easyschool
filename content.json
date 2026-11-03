@@ -16928,6 +16928,552 @@
     }
    },
    "art": "franz"
+  },
+  {
+   "id": "kl5-franz-unit12-plus",
+   "child": "kl5",
+   "subject": "franz",
+   "chapter": "Unit 1+2 · Vocabulaire plus",
+   "title": "Unit 1+2 · Vocabulaire plus",
+   "explain": [
+    {
+     "h": "Wörterliste zum Durchlernen",
+     "text": "So lernst du wie auf einem Blatt: Zuerst das Wort laut sagen. Dann tippe auf das Feld und decke die Lösung auf. Dann prüfe: Hast du es gewusst? Danach kommt das nächste Wort. Mit dem Knopf oben wechselst du die Richtung.",
+     "list": true
+    }
+   ],
+   "cards": [
+    {
+     "id": "5p_1",
+     "fw": "le cartable",
+     "de": [
+      "der Schulthek"
+     ],
+     "grp": "schule"
+    },
+    {
+     "id": "5p_2",
+     "fw": "un agenda",
+     "de": [
+      "eine Agenda"
+     ],
+     "grp": "schule"
+    },
+    {
+     "id": "5p_3",
+     "fw": "les ciseaux",
+     "de": [
+      "die Schere"
+     ],
+     "grp": "schule"
+    },
+    {
+     "id": "5p_4",
+     "fw": "le dessin",
+     "de": [
+      "das Zeichnen"
+     ],
+     "grp": "schule"
+    },
+    {
+     "id": "5p_5",
+     "fw": "la géo",
+     "de": [
+      "die Geografie"
+     ],
+     "grp": "schule"
+    },
+    {
+     "id": "5p_6",
+     "fw": "l'histoire",
+     "de": [
+      "die Geschichte"
+     ],
+     "grp": "schule"
+    },
+    {
+     "id": "5p_7",
+     "fw": "la gym",
+     "de": [
+      "das Turnen"
+     ],
+     "grp": "schule"
+    },
+    {
+     "id": "5p_8",
+     "fw": "les sciences de la nature",
+     "de": [
+      "die Natur und Technik (NT)"
+     ],
+     "grp": "schule"
+    },
+    {
+     "id": "5p_9",
+     "fw": "la musique",
+     "de": [
+      "die Musik"
+     ],
+     "grp": "schule"
+    },
+    {
+     "id": "5p_10",
+     "fw": "ACM",
+     "de": [
+      "Textiles und Technisches Gestalten"
+     ],
+     "grp": "schule"
+    },
+    {
+     "id": "5p_11",
+     "fw": "parler anglais",
+     "de": [
+      "Englisch sprechen"
+     ],
+     "grp": "schule"
+    },
+    {
+     "id": "5p_12",
+     "fw": "explorer l'étranger",
+     "de": [
+      "das Ausland erkunden"
+     ],
+     "grp": "schule"
+    },
+    {
+     "id": "5p_13",
+     "fw": "visiter un musée",
+     "de": [
+      "ein Museum besuchen"
+     ],
+     "grp": "schule"
+    },
+    {
+     "id": "5p_14",
+     "fw": "tricoter",
+     "de": [
+      "stricken"
+     ],
+     "grp": "schule"
+    },
+    {
+     "id": "5p_15",
+     "fw": "réciter un poème",
+     "de": [
+      "ein Gedicht aufsagen"
+     ],
+     "grp": "schule"
+    },
+    {
+     "id": "5p_16",
+     "fw": "bricoler",
+     "de": [
+      "basteln"
+     ],
+     "grp": "schule"
+    },
+    {
+     "id": "5p_17",
+     "fw": "sauter",
+     "de": [
+      "springen"
+     ],
+     "grp": "schule"
+    },
+    {
+     "id": "5p_18",
+     "fw": "grimper",
+     "de": [
+      "klettern"
+     ],
+     "grp": "schule"
+    },
+    {
+     "id": "5p_19",
+     "fw": "un acteur",
+     "de": [
+      "ein Schauspieler"
+     ],
+     "grp": "fam"
+    },
+    {
+     "id": "5p_20",
+     "fw": "le cinéma muet",
+     "de": [
+      "der Stummfilm"
+     ],
+     "grp": "fam"
+    },
+    {
+     "id": "5p_21",
+     "fw": "marié / mariée",
+     "de": [
+      "verheiratet"
+     ],
+     "grp": "fam"
+    },
+    {
+     "id": "5p_22",
+     "fw": "onze",
+     "de": [
+      "elf"
+     ],
+     "grp": "fam"
+    },
+    {
+     "id": "5p_23",
+     "fw": "le petit-fils",
+     "de": [
+      "der Enkel"
+     ],
+     "grp": "fam"
+    },
+    {
+     "id": "5p_24",
+     "fw": "la petite-fille",
+     "de": [
+      "die Enkelin"
+     ],
+     "grp": "fam"
+    },
+    {
+     "id": "5p_25",
+     "fw": "le chien",
+     "de": [
+      "der Hund"
+     ],
+     "grp": "fam"
+    },
+    {
+     "id": "5p_26",
+     "fw": "le chat",
+     "de": [
+      "die Katze"
+     ],
+     "grp": "fam"
+    },
+    {
+     "id": "5p_27",
+     "fw": "le membre de la famille",
+     "de": [
+      "das Familienmitglied"
+     ],
+     "grp": "fam"
+    },
+    {
+     "id": "5p_28",
+     "fw": "un arbre généalogique",
+     "de": [
+      "ein Stammbaum"
+     ],
+     "grp": "fam"
+    },
+    {
+     "id": "5p_29",
+     "fw": "le sexe",
+     "de": [
+      "das Geschlecht"
+     ],
+     "grp": "fam"
+    },
+    {
+     "id": "5p_30",
+     "fw": "l'âge",
+     "de": [
+      "das Alter"
+     ],
+     "grp": "fam"
+    },
+    {
+     "id": "5p_31",
+     "fw": "l'adresse",
+     "de": [
+      "die Adresse"
+     ],
+     "grp": "fam"
+    },
+    {
+     "id": "5p_32",
+     "fw": "le pays",
+     "de": [
+      "das Land"
+     ],
+     "grp": "fam"
+    },
+    {
+     "id": "5p_33",
+     "fw": "la signature",
+     "de": [
+      "die Unterschrift"
+     ],
+     "grp": "fam"
+    },
+    {
+     "id": "5p_34",
+     "fw": "néerlandais",
+     "de": [
+      "niederländisch"
+     ],
+     "grp": "fam"
+    },
+    {
+     "id": "5p_35",
+     "fw": "suédois",
+     "de": [
+      "schwedisch"
+     ],
+     "grp": "fam"
+    },
+    {
+     "id": "5p_36",
+     "fw": "italien",
+     "de": [
+      "italienisch"
+     ],
+     "grp": "fam"
+    },
+    {
+     "id": "5p_37",
+     "fw": "espagnol",
+     "de": [
+      "spanisch"
+     ],
+     "grp": "fam"
+    },
+    {
+     "id": "5p_38",
+     "fw": "le drapeau",
+     "de": [
+      "die Fahne",
+      "die Flagge"
+     ],
+     "grp": "fam"
+    }
+   ],
+   "exam": {
+    "minutes": 30,
+    "questions": [
+     {
+      "id": "q1",
+      "q": "Wie heisst «der Schulthek» auf Französisch?",
+      "explain": "der Schulthek = le cartable",
+      "ref": "5p_1",
+      "type": "input",
+      "answer": [
+       "le cartable",
+       "cartable"
+      ]
+     },
+     {
+      "id": "q2",
+      "q": "Wie heisst «eine Agenda» auf Französisch?",
+      "explain": "eine Agenda = un agenda",
+      "ref": "5p_2",
+      "type": "input",
+      "answer": [
+       "un agenda",
+       "agenda"
+      ]
+     },
+     {
+      "id": "q3",
+      "q": "Wie heisst «das Zeichnen» auf Französisch?",
+      "explain": "das Zeichnen = le dessin",
+      "ref": "5p_4",
+      "type": "input",
+      "answer": [
+       "le dessin",
+       "dessin"
+      ]
+     },
+     {
+      "id": "q4",
+      "q": "Wie heisst «die Geschichte» auf Französisch?",
+      "explain": "die Geschichte = l'histoire",
+      "ref": "5p_6",
+      "type": "input",
+      "answer": [
+       "l'histoire"
+      ]
+     },
+     {
+      "id": "q5",
+      "q": "Wie heisst «die Musik» auf Französisch?",
+      "explain": "die Musik = la musique",
+      "ref": "5p_9",
+      "type": "input",
+      "answer": [
+       "la musique",
+       "musique"
+      ]
+     },
+     {
+      "id": "q6",
+      "q": "Wie heisst «Textiles und Technisches Gestalten» auf Französisch?",
+      "explain": "Textiles und Technisches Gestalten = ACM",
+      "ref": "5p_10",
+      "type": "input",
+      "answer": [
+       "ACM"
+      ]
+     },
+     {
+      "id": "q7",
+      "q": "Wie heisst «das Ausland erkunden» auf Französisch?",
+      "explain": "das Ausland erkunden = explorer l'étranger",
+      "ref": "5p_12",
+      "type": "input",
+      "answer": [
+       "explorer l'étranger"
+      ]
+     },
+     {
+      "id": "q8",
+      "q": "Wie heisst «stricken» auf Französisch?",
+      "explain": "stricken = tricoter",
+      "ref": "5p_14",
+      "type": "input",
+      "answer": [
+       "tricoter"
+      ]
+     },
+     {
+      "id": "q9",
+      "q": "Wie heisst «basteln» auf Französisch?",
+      "explain": "basteln = bricoler",
+      "ref": "5p_16",
+      "type": "input",
+      "answer": [
+       "bricoler"
+      ]
+     },
+     {
+      "id": "q10",
+      "q": "Wie heisst «springen» auf Französisch?",
+      "explain": "springen = sauter",
+      "ref": "5p_17",
+      "type": "input",
+      "answer": [
+       "sauter"
+      ]
+     },
+     {
+      "id": "q11",
+      "q": "Wie heisst «ein Schauspieler» auf Französisch?",
+      "explain": "ein Schauspieler = un acteur",
+      "ref": "5p_19",
+      "type": "input",
+      "answer": [
+       "un acteur",
+       "acteur"
+      ]
+     },
+     {
+      "id": "q12",
+      "q": "Wie heisst «elf» auf Französisch?",
+      "explain": "elf = onze",
+      "ref": "5p_22",
+      "type": "input",
+      "answer": [
+       "onze"
+      ]
+     },
+     {
+      "id": "q13",
+      "q": "Wie heisst «die Enkelin» auf Französisch?",
+      "explain": "die Enkelin = la petite-fille",
+      "ref": "5p_24",
+      "type": "input",
+      "answer": [
+       "la petite-fille",
+       "petite-fille"
+      ]
+     },
+     {
+      "id": "q14",
+      "q": "Wie heisst «der Hund» auf Französisch?",
+      "explain": "der Hund = le chien",
+      "ref": "5p_25",
+      "type": "input",
+      "answer": [
+       "le chien",
+       "chien"
+      ]
+     },
+     {
+      "id": "q15",
+      "q": "Wie heisst «ein Stammbaum» auf Französisch?",
+      "explain": "ein Stammbaum = un arbre généalogique",
+      "ref": "5p_28",
+      "type": "input",
+      "answer": [
+       "un arbre généalogique"
+      ]
+     },
+     {
+      "id": "q16",
+      "q": "Wie heisst «das Alter» auf Französisch?",
+      "explain": "das Alter = l'âge",
+      "ref": "5p_30",
+      "type": "input",
+      "answer": [
+       "l'âge"
+      ]
+     },
+     {
+      "id": "q17",
+      "q": "Wie heisst «das Land» auf Französisch?",
+      "explain": "das Land = le pays",
+      "ref": "5p_32",
+      "type": "input",
+      "answer": [
+       "le pays",
+       "pays"
+      ]
+     },
+     {
+      "id": "q18",
+      "q": "Wie heisst «die Unterschrift» auf Französisch?",
+      "explain": "die Unterschrift = la signature",
+      "ref": "5p_33",
+      "type": "input",
+      "answer": [
+       "la signature",
+       "signature"
+      ]
+     },
+     {
+      "id": "q19",
+      "q": "Wie heisst «schwedisch» auf Französisch?",
+      "explain": "schwedisch = suédois",
+      "ref": "5p_35",
+      "type": "input",
+      "answer": [
+       "suédois"
+      ]
+     },
+     {
+      "id": "q20",
+      "q": "Wie heisst «spanisch» auf Französisch?",
+      "explain": "spanisch = espagnol",
+      "ref": "5p_37",
+      "type": "input",
+      "answer": [
+       "espagnol"
+      ]
+     }
+    ]
+   },
+   "theory": {
+    "schule": {
+     "h": "Schule und Freizeit (Unit 1)",
+     "text": "Hier stehen die Zusatzwörter aus Unit 1: Schulsachen, Fächer und Tätigkeiten. Bei Tätigkeiten sagst du je + Verb, zum Beispiel je tricote = ich stricke."
+    },
+    "fam": {
+     "h": "Familie und Personen (Unit 2)",
+     "text": "Hier stehen die Zusatzwörter aus Unit 2: Familie, Angaben zur Person und Sprachen. Lerne jedes Nomen mit seinem Begleiter."
+    }
+   },
+   "art": "franz"
   }
  ],
  "hero": "img/hero.webp"
