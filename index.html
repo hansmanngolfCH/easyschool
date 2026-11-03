@@ -981,7 +981,7 @@ body.rwopen{overflow:hidden}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v3.93';
+var APP_VERSION='v3.94';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -1320,7 +1320,7 @@ var VC=['#34A853','#4285F4','#FBBC04','#EA4335'];
 function vBar(v){
   var tot=0,i,x=10,W=580,g=3,s='';v.segs.forEach(function(q){tot+=q[0]});
   v.segs.forEach(function(q,k){
-    var w=Math.max(6,(W-g*(v.segs.length-1))*q[0]/tot),col=VC[((v.col||0)+k%2)%4];
+    var w=Math.max(6,(W-g*(v.segs.length-1))*q[0]/tot),col=q[2]===-1?'#CFD3DA':VC[((v.col||0)+k%2)%4];
     s+='<rect x="'+x.toFixed(1)+'" y="14" width="'+w.toFixed(1)+'" height="54" rx="8" fill="'+col+'"/>';
     if(q[1]&&w>46)s+='<text x="'+(x+w/2).toFixed(1)+'" y="47" text-anchor="middle" font-size="'+(w<80?15:19)+'" font-weight="800" fill="#fff" font-family="Arial,sans-serif">'+esc(q[1])+'</text>';
     x+=w+g;
@@ -1354,9 +1354,43 @@ function vScale(v){
   s+=pan(130,50-dy,v.l,v.le,VC[1])+pan(470,50+dy,v.r,v.re,VC[0]);
   return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 220" width="100%" role="img" aria-label="Waage: '+esc(v.l)+' und '+esc(v.r)+'">'+s+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
+function vPill(x,y,t,col){var w=Math.max(34,String(t).length*10.5+16),q=String(t).indexOf('?')>=0;return '<g><rect x="'+(x-w/2).toFixed(1)+'" y="'+(y-15)+'" width="'+w.toFixed(1)+'" height="28" rx="10" fill="'+(q?'#FFD93D':'#fff')+'" stroke="'+(q?'#fff':col)+'" stroke-width="2.5"/><text x="'+x.toFixed(1)+'" y="'+(y+5)+'" text-anchor="middle" font-size="16" font-weight="800" fill="'+(q?'#4a2a00':col)+'" font-family="Arial,sans-serif">'+esc(t)+'</text></g>'}
+function vTri(v){
+  var na=v.na,nb=v.nb,pw=function(t){return Math.max(34,String(t).length*10.5+16)},la=v.la||'a',lb=v.lb||'b',lc=v.lc||'c',
+  s=Math.min(190/nb,130/na),A=[pw(la)+22,168],B=[A[0]+nb*s,168],C=[A[0],168-na*s],W=Math.round(Math.max(B[0]+pw(lc)/2+10,B[0]+16)),
+  cA='#4285F4',cB='#34A853',cC='#EA4335';
+  var o='<polygon points="'+A+' '+B+' '+C+'" fill="#FFF8E1"/><path d="M'+A+'L'+C+'" stroke="'+cA+'" stroke-width="6" stroke-linecap="round"/><path d="M'+A+'L'+B+'" stroke="'+cB+'" stroke-width="6" stroke-linecap="round"/><path d="M'+C+'L'+B+'" stroke="'+cC+'" stroke-width="6" stroke-linecap="round"/><path d="M'+A[0]+' '+(A[1]-16)+'h16v16" fill="none" stroke="#5f6368" stroke-width="3"/>';
+  o+=vPill(A[0]-pw(la)/2-10,(A[1]+C[1])/2,la,cA)+vPill((A[0]+B[0])/2,A[1]+22,lb,cB)+vPill((B[0]+C[0])/2+pw(lc)/2*.7,(B[1]+C[1])/2-14,lc,cC);
+  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 '+W+' 205" width="100%" style="max-width:'+W+'px" role="img" aria-label="Rechtwinkliges Dreieck">'+o+'</svg></figure>';
+}
+function vPyth(v){
+  var na=v.na,nb=v.nb,s=100/Math.max(na,nb),ax=0,ay=0,Bx=nb*s,Cy=-na*s,nx=na*s,ny=-nb*s,pts=[[0,0],[Bx,0],[0,Cy],[Bx,Bx],[0,Bx],[-na*s,Cy],[-na*s,0],[Bx+nx,ny],[nx,Cy+ny]],
+  x0=Math.min.apply(null,pts.map(function(p){return p[0]}))-8,x1=Math.max.apply(null,pts.map(function(p){return p[0]}))+8,y0=Math.min.apply(null,pts.map(function(p){return p[1]}))-8,y1=Math.max.apply(null,pts.map(function(p){return p[1]}))+8;
+  function P(a){return a.map(function(p){return p[0].toFixed(1)+','+p[1].toFixed(1)}).join(' ')}
+  function cen(a){var x=0,y=0;a.forEach(function(p){x+=p[0];y+=p[1]});return [x/a.length,y/a.length]}
+  var sa=[[0,Cy],[-na*s,Cy],[-na*s,0],[0,0]],sb=[[0,0],[Bx,0],[Bx,nb*s],[0,nb*s]],sc=[[0,Cy],[Bx,0],[Bx+nx,ny],[nx,Cy+ny]],o='';
+  o+='<polygon points="'+P(sa)+'" fill="#4285F4" fill-opacity=".85" stroke="#fff" stroke-width="2"/><polygon points="'+P(sb)+'" fill="#34A853" fill-opacity=".85" stroke="#fff" stroke-width="2"/><polygon points="'+P(sc)+'" fill="#EA4335" fill-opacity=".85" stroke="#fff" stroke-width="2"/><polygon points="0,0 '+Bx+',0 0,'+Cy+'" fill="#FFF8E1" stroke="#3c4043" stroke-width="2.5" stroke-linejoin="round"/>';
+  [[sa,v.fa||('a² = '+na*na)],[sb,v.fb||('b² = '+nb*nb)],[sc,v.fc||('c² = '+(na*na+nb*nb))]].forEach(function(q){var c=cen(q[0]);o+='<text x="'+c[0].toFixed(1)+'" y="'+(c[1]+6).toFixed(1)+'" text-anchor="middle" font-size="'+Math.max(14,Math.min(20,s*4))+'" font-weight="800" fill="#fff" font-family="Arial,sans-serif">'+esc(q[1])+'</text>'});
+  return '<figure class="vis" style="width:100%"><svg viewBox="'+x0.toFixed(0)+' '+y0.toFixed(0)+' '+(x1-x0).toFixed(0)+' '+(y1-y0).toFixed(0)+'" width="100%" style="max-width:340px" role="img" aria-label="Quadrate auf den Seiten des Dreiecks">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+}
+function vRect(v){
+  var s=Math.min(220/v.w,120/v.h),W=v.w*s,H=v.h*s,x=40,y=24,o='<rect x="'+x+'" y="'+y+'" width="'+W+'" height="'+H+'" rx="4" fill="#E8F0FE" stroke="#4285F4" stroke-width="5"/><path d="M'+x+' '+(y+H)+'L'+(x+W)+' '+y+'" stroke="#EA4335" stroke-width="5" stroke-dasharray="10 7" stroke-linecap="round"/>';
+  o+=vPill(x+W/2,y+H+22,v.lw,'#34A853')+vPill(x-6,y+H/2,v.lh,'#4285F4')+vPill(x+W/2+10,y+H/2-10,v.ld||'d','#EA4335');
+  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 '+Math.round(W+90)+' '+Math.round(H+68)+'" width="100%" style="max-width:'+Math.round(W+90)+'px" role="img" aria-label="Rechteck mit Diagonale">'+o+'</svg></figure>';
+}
+function vFbar(v){
+  var s='',y=6;
+  v.rows.forEach(function(r){
+    var n=r[0],k=r[1],w=440/n,i;
+    s+='<text x="8" y="'+(y+27)+'" font-size="19" font-weight="800" fill="#202124" font-family="Arial,sans-serif">'+esc(r[2]||(k+'/'+n))+'</text>';
+    for(i=0;i<n;i++)s+='<rect x="'+(152+i*w).toFixed(1)+'" y="'+y+'" width="'+(w-3).toFixed(1)+'" height="38" rx="7" fill="'+(i<k?VC[(r[3]||0)%4]:'#EEF1F7')+'"/>';
+    y+=50;
+  });
+  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 '+y+'" width="100%" role="img" aria-label="Bruchstreifen">'+s+'</svg></figure>';
+}
 function visuals(list){
   if(!list||!list.length)return '';
-  var map={dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale};
+  var map={dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar};
   return '<div class="visrow">'+list.map(function(v){return map[v.type]?map[v.type](v):''}).join('')+'</div>';
 }
 

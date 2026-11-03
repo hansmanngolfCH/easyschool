@@ -186,6 +186,28 @@
      "text": "Erweitern ist das Gegenteil: Zähler und Nenner mit derselben Zahl malnehmen. Der Wert bleibt gleich. Das brauchst du später für den Hauptnenner.",
      "visuals": [
       {
+       "type": "fbar",
+       "rows": [
+        [
+         3,
+         2,
+         "2/3"
+        ],
+        [
+         6,
+         4,
+         "4/6",
+         1
+        ],
+        [
+         9,
+         6,
+         "6/9",
+         2
+        ]
+       ]
+      },
+      {
        "type": "lines",
        "num": true,
        "items": [
@@ -223,6 +245,25 @@
      "text": "Eine gemischte Zahl hat ganze Zahlen und einen Bruch, zum Beispiel 2 1/3. Zum Rechnen wandelst du sie um: ganze Zahl mal Nenner, plus Zähler. Das Ergebnis steht über dem gleichen Nenner.",
      "visuals": [
       {
+       "type": "pie",
+       "parts": 2,
+       "filled": 2
+      },
+      {
+       "type": "pie",
+       "parts": 2,
+       "filled": 1
+      },
+      {
+       "type": "lines",
+       "items": [
+        [
+         "1 1/2",
+         "= 2/2 + 1/2 = 3/2"
+        ]
+       ]
+      },
+      {
        "type": "lines",
        "num": true,
        "items": [
@@ -259,6 +300,22 @@
      "h": "Mal rechnen: oben mal oben, unten mal unten",
      "text": "Beim Malnehmen brauchst du keinen gleichen Nenner. Zähler mal Zähler, Nenner mal Nenner. Danach kürzt du. Tipp: Kürze schon vorher über Kreuz, dann sind die Zahlen kleiner.",
      "visuals": [
+      {
+       "type": "fbar",
+       "rows": [
+        [
+         2,
+         1,
+         "1/2"
+        ],
+        [
+         6,
+         1,
+         "1/6",
+         1
+        ]
+       ]
+      },
       {
        "type": "lines",
        "num": true,
@@ -353,6 +410,28 @@
      "h": "Plus und Minus rechnen",
      "text": "Erst den Hauptnenner suchen und beide Brüche erweitern. Dann nur die Zähler zusammenzählen oder abziehen. Der Nenner bleibt gleich. Am Schluss kürzen.",
      "visuals": [
+      {
+       "type": "fbar",
+       "rows": [
+        [
+         8,
+         3,
+         "3/8"
+        ],
+        [
+         8,
+         2,
+         "2/8",
+         1
+        ],
+        [
+         8,
+         5,
+         "5/8",
+         2
+        ]
+       ]
+      },
       {
        "type": "lines",
        "num": true,
@@ -703,6 +782,14 @@
      "hints": [
       "Zähler = Stücke, die du hast.",
       "Oben 3, unten 8."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 8,
+       "filled": 3,
+       "nocap": true
+      }
      ]
     },
     {
@@ -726,6 +813,13 @@
      "hints": [
       "Kürze mit 4.",
       "4/8 : 4 oben und unten."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 8,
+       "filled": 4
+      }
      ]
     },
     {
@@ -841,6 +935,24 @@
      "hints": [
       "Gleicher Nenner: nur Zähler zusammenzählen.",
       "2 + 3 = 5, Nenner bleibt 7."
+     ],
+     "visuals": [
+      {
+       "type": "fbar",
+       "rows": [
+        [
+         7,
+         2,
+         "2/7"
+        ],
+        [
+         7,
+         3,
+         "3/7",
+         1
+        ]
+       ]
+      }
      ]
     },
     {
@@ -926,6 +1038,13 @@
      "hints": [
       "Welche Zahl geht in Zähler und Nenner auf?",
       "Teile beide durch 2."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 8,
+       "filled": 6
+      }
      ]
     },
     {
@@ -986,6 +1105,13 @@
      "hints": [
       "Welche Zahl geht in Zähler und Nenner auf?",
       "Teile beide durch 3."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 12,
+       "filled": 9
+      }
      ]
     },
     {
@@ -1031,11 +1157,11 @@
     {
      "id": "m17",
      "q": "Erweitere 2/3 mit 4:",
-     "a": "2/3",
+     "a": "8/12",
      "lvl": 2,
      "th": "order",
      "ans": [
-      "2/3"
+      "8/12"
      ],
      "steps": [
       [
@@ -1046,16 +1172,33 @@
      "hints": [
       "Zähler und Nenner mit derselben Zahl malnehmen.",
       "Beide mal 4."
+     ],
+     "visuals": [
+      {
+       "type": "fbar",
+       "rows": [
+        [
+         3,
+         2,
+         "2/3"
+        ],
+        [
+         12,
+         8,
+         "= ?"
+        ]
+       ]
+      }
      ]
     },
     {
      "id": "m18",
      "q": "Erweitere 3/5 mit 3:",
-     "a": "3/5",
+     "a": "9/15",
      "lvl": 2,
      "th": "order",
      "ans": [
-      "3/5"
+      "9/15"
      ],
      "steps": [
       [
@@ -1066,16 +1209,33 @@
      "hints": [
       "Zähler und Nenner mit derselben Zahl malnehmen.",
       "Beide mal 3."
+     ],
+     "visuals": [
+      {
+       "type": "fbar",
+       "rows": [
+        [
+         5,
+         3,
+         "3/5"
+        ],
+        [
+         15,
+         9,
+         "= ?"
+        ]
+       ]
+      }
      ]
     },
     {
      "id": "m19",
      "q": "Erweitere 5/6 mit 2:",
-     "a": "5/6",
+     "a": "10/12",
      "lvl": 2,
      "th": "order",
      "ans": [
-      "5/6"
+      "10/12"
      ],
      "steps": [
       [
@@ -1086,6 +1246,23 @@
      "hints": [
       "Zähler und Nenner mit derselben Zahl malnehmen.",
       "Beide mal 2."
+     ],
+     "visuals": [
+      {
+       "type": "fbar",
+       "rows": [
+        [
+         6,
+         5,
+         "5/6"
+        ],
+        [
+         12,
+         10,
+         "= ?"
+        ]
+       ]
+      }
      ]
     },
     {
@@ -1106,6 +1283,23 @@
      "hints": [
       "Ganze mal Nenner plus Zähler.",
       "2·3+1 gibt den Zähler."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 3,
+       "filled": 3
+      },
+      {
+       "type": "pie",
+       "parts": 3,
+       "filled": 3
+      },
+      {
+       "type": "pie",
+       "parts": 3,
+       "filled": 1
+      }
      ]
     },
     {
@@ -1126,6 +1320,28 @@
      "hints": [
       "Ganze mal Nenner plus Zähler.",
       "3·5+2 gibt den Zähler."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 5,
+       "filled": 5
+      },
+      {
+       "type": "pie",
+       "parts": 5,
+       "filled": 5
+      },
+      {
+       "type": "pie",
+       "parts": 5,
+       "filled": 5
+      },
+      {
+       "type": "pie",
+       "parts": 5,
+       "filled": 2
+      }
      ]
     },
     {
@@ -1146,6 +1362,18 @@
      "hints": [
       "Ganze mal Nenner plus Zähler.",
       "1·4+3 gibt den Zähler."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 4,
+       "filled": 4
+      },
+      {
+       "type": "pie",
+       "parts": 4,
+       "filled": 3
+      }
      ]
     },
     {
@@ -1170,6 +1398,24 @@
      "hints": [
       "Der Nenner bleibt gleich.",
       "Rechne nur die Zähler und kürze."
+     ],
+     "visuals": [
+      {
+       "type": "fbar",
+       "rows": [
+        [
+         8,
+         3,
+         "3/8"
+        ],
+        [
+         8,
+         2,
+         "2/8",
+         1
+        ]
+       ]
+      }
      ]
     },
     {
@@ -1194,6 +1440,24 @@
      "hints": [
       "Der Nenner bleibt gleich.",
       "Rechne nur die Zähler und kürze."
+     ],
+     "visuals": [
+      {
+       "type": "fbar",
+       "rows": [
+        [
+         9,
+         5,
+         "5/9"
+        ],
+        [
+         9,
+         1,
+         "1/9",
+         1
+        ]
+       ]
+      }
      ]
     },
     {
@@ -1218,6 +1482,24 @@
      "hints": [
       "Der Nenner bleibt gleich.",
       "Rechne nur die Zähler und kürze."
+     ],
+     "visuals": [
+      {
+       "type": "fbar",
+       "rows": [
+        [
+         10,
+         7,
+         "7/10"
+        ],
+        [
+         10,
+         3,
+         "3/10",
+         1
+        ]
+       ]
+      }
      ]
     },
     {
@@ -1242,6 +1524,24 @@
      "hints": [
       "Der Nenner bleibt gleich.",
       "Rechne nur die Zähler und kürze."
+     ],
+     "visuals": [
+      {
+       "type": "fbar",
+       "rows": [
+        [
+         11,
+         8,
+         "8/11"
+        ],
+        [
+         11,
+         5,
+         "5/11",
+         1
+        ]
+       ]
+      }
      ]
     },
     {
@@ -1439,6 +1739,18 @@
       "Zuerst den Hauptnenner suchen.",
       "Der Hauptnenner ist 6.",
       "Beide Brüche erweitern, dann Zähler rechnen."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 2,
+       "filled": 1
+      },
+      {
+       "type": "pie",
+       "parts": 3,
+       "filled": 1
+      }
      ]
     },
     {
@@ -1468,6 +1780,18 @@
       "Zuerst den Hauptnenner suchen.",
       "Der Hauptnenner ist 12.",
       "Beide Brüche erweitern, dann Zähler rechnen."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 4,
+       "filled": 3
+      },
+      {
+       "type": "pie",
+       "parts": 6,
+       "filled": 1
+      }
      ]
     },
     {
@@ -1497,6 +1821,18 @@
       "Zuerst den Hauptnenner suchen.",
       "Der Hauptnenner ist 12.",
       "Beide Brüche erweitern, dann Zähler rechnen."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 3,
+       "filled": 2
+      },
+      {
+       "type": "pie",
+       "parts": 4,
+       "filled": 1
+      }
      ]
     },
     {
@@ -1526,6 +1862,18 @@
       "Zuerst den Hauptnenner suchen.",
       "Der Hauptnenner ist 12.",
       "Beide Brüche erweitern, dann Zähler rechnen."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 6,
+       "filled": 5
+      },
+      {
+       "type": "pie",
+       "parts": 4,
+       "filled": 1
+      }
      ]
     },
     {
@@ -1556,6 +1904,18 @@
       "Zuerst den Hauptnenner suchen.",
       "Der Hauptnenner ist 10.",
       "Beide Brüche erweitern, dann Zähler rechnen."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 5,
+       "filled": 3
+      },
+      {
+       "type": "pie",
+       "parts": 2,
+       "filled": 1
+      }
      ]
     },
     {
@@ -1585,6 +1945,18 @@
       "Zuerst den Hauptnenner suchen.",
       "Der Hauptnenner ist 8.",
       "Beide Brüche erweitern, dann Zähler rechnen."
+     ],
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 8,
+       "filled": 7
+      },
+      {
+       "type": "pie",
+       "parts": 4,
+       "filled": 3
+      }
      ]
     },
     {
@@ -1844,7 +2216,19 @@
       }
      ],
      "th": "hn",
-     "lvl": 4
+     "lvl": 4,
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 4,
+       "filled": 3
+      },
+      {
+       "type": "pie",
+       "parts": 3,
+       "filled": 2
+      }
+     ]
     },
     {
      "id": "c10",
@@ -1866,7 +2250,19 @@
       "Dann nur die Zähler abziehen."
      ],
      "th": "hn",
-     "lvl": 4
+     "lvl": 4,
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 3,
+       "filled": 2
+      },
+      {
+       "type": "pie",
+       "parts": 10,
+       "filled": 3
+      }
+     ]
     },
     {
      "id": "c11",
@@ -8026,6 +8422,14 @@
      "text": "Ein rechtwinkliges Dreieck hat einen rechten Winkel. Die zwei Seiten am rechten Winkel heissen Katheten (a und b). Die längste Seite gegenüber heisst Hypotenuse (c).",
      "visuals": [
       {
+       "type": "tri",
+       "na": 3,
+       "nb": 4,
+       "la": "Kathete a",
+       "lb": "Kathete b",
+       "lc": "Hypotenuse c"
+      },
+      {
        "type": "lines",
        "num": false,
        "items": [
@@ -8062,6 +8466,12 @@
      "h": "Der Satz des Pythagoras",
      "text": "In jedem rechtwinkligen Dreieck gilt: Die Quadrate der beiden Katheten ergeben zusammen das Quadrat der Hypotenuse. Formel: a² + b² = c².",
      "visuals": [
+      {
+       "type": "pyth",
+       "na": 3,
+       "nb": 4,
+       "cap": "9 + 16 = 25: Die zwei kleinen Quadrate sind zusammen so gross wie das grosse."
+      },
       {
        "type": "lines",
        "num": false,
@@ -8100,6 +8510,14 @@
      "text": "Sind a und b gegeben, rechnest du c = √(a² + b²). Beispiel: a = 6 cm und b = 8 cm. Dann ist c² = 36 + 64 = 100 und c = 10 cm.",
      "visuals": [
       {
+       "type": "tri",
+       "na": 3,
+       "nb": 4,
+       "la": "a = 3 cm",
+       "lb": "b = 4 cm",
+       "lc": "c = ?"
+      },
+      {
        "type": "lines",
        "num": true,
        "items": [
@@ -8130,6 +8548,14 @@
      "h": "Eine Kathete berechnen",
      "text": "Ist die Hypotenuse c gegeben, wird subtrahiert: b = √(c² − a²). Beispiel: c = 10 cm und a = 6 cm. Dann ist b² = 100 − 36 = 64 und b = 8 cm.",
      "visuals": [
+      {
+       "type": "tri",
+       "na": 6,
+       "nb": 8,
+       "la": "a = 6 cm",
+       "lb": "b = ?",
+       "lc": "c = 10 cm"
+      },
       {
        "type": "lines",
        "num": true,
@@ -8176,6 +8602,14 @@
      "text": "Die Diagonale teilt ein Rechteck in zwei rechtwinklige Dreiecke. Die Diagonale d ist die Hypotenuse, die zwei Seiten des Rechtecks sind die Katheten.",
      "visuals": [
       {
+       "type": "rect",
+       "w": 12,
+       "h": 5,
+       "lw": "12 cm",
+       "lh": "5 cm",
+       "ld": "d = ?"
+      },
+      {
        "type": "lines",
        "num": false,
        "items": [
@@ -8212,6 +8646,14 @@
      "h": "Anwendungen: Schritt für Schritt",
      "text": "Zeichne eine Skizze und suche das rechtwinklige Dreieck. Dann: Was wird gesucht? Wie wird es berechnet? Werte einsetzen. Resultat mit Einheit, wenn verlangt gerundet. Beispiel Baum: 8 m und 15 m ergeben die Hypotenuse 17 m, der Baum war 8 + 17 = 25 m hoch.",
      "visuals": [
+      {
+       "type": "tri",
+       "na": 4,
+       "nb": 3,
+       "la": "Wand = ?",
+       "lb": "Boden = 3 m",
+       "lc": "Leiter = 5 m"
+      },
       {
        "type": "lines",
        "num": true,
@@ -8450,6 +8892,16 @@
        "c = √25 = 5 cm",
        "Wurzel ziehen"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 3.0,
+       "nb": 4.0,
+       "la": "a = 3 cm",
+       "lb": "b = 4 cm",
+       "lc": "c = ?"
+      }
      ]
     },
     {
@@ -8475,6 +8927,16 @@
        "c = √100 = 10 cm",
        "Wurzel ziehen"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 6.0,
+       "nb": 8.0,
+       "la": "a = 6 cm",
+       "lb": "b = 8 cm",
+       "lc": "c = ?"
+      }
      ]
     },
     {
@@ -8500,6 +8962,16 @@
        "c = √169 = 13 cm",
        "Wurzel ziehen"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 5.0,
+       "nb": 12.0,
+       "la": "a = 5 cm",
+       "lb": "b = 12 cm",
+       "lc": "c = ?"
+      }
      ]
     },
     {
@@ -8525,6 +8997,16 @@
        "c = √225 = 15 cm",
        "Wurzel ziehen"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 9.0,
+       "nb": 12.0,
+       "la": "a = 9 cm",
+       "lb": "b = 12 cm",
+       "lc": "c = ?"
+      }
      ]
     },
     {
@@ -8550,6 +9032,16 @@
        "b = √64 = 8 cm",
        "Wurzel ziehen"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 6.0,
+       "nb": 8.0,
+       "la": "a = 6 cm",
+       "lb": "b = ?",
+       "lc": "c = 10 cm"
+      }
      ]
     },
     {
@@ -8575,6 +9067,16 @@
        "b = √144 = 12 cm",
        "Wurzel ziehen"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 5.0,
+       "nb": 12.0,
+       "la": "a = 5 cm",
+       "lb": "b = ?",
+       "lc": "c = 13 cm"
+      }
      ]
     },
     {
@@ -8600,6 +9102,16 @@
        "b = √144 = 12 cm",
        "Wurzel ziehen"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 9.0,
+       "nb": 12.0,
+       "la": "a = 9 cm",
+       "lb": "b = ?",
+       "lc": "c = 15 cm"
+      }
      ]
     },
     {
@@ -8625,6 +9137,16 @@
        "b = √225 = 15 cm",
        "Wurzel ziehen"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 8.0,
+       "nb": 15.0,
+       "la": "a = 8 cm",
+       "lb": "b = ?",
+       "lc": "c = 17 cm"
+      }
      ]
     },
     {
@@ -8805,6 +9327,16 @@
        "c = √625 = 25 cm",
        "Wurzel ziehen"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 7.0,
+       "nb": 24.0,
+       "la": "a = 7 cm",
+       "lb": "b = 24 cm",
+       "lc": "c = ?"
+      }
      ]
     },
     {
@@ -8832,6 +9364,16 @@
        "b = √70.56 = 8.4 cm",
        "Wurzel ziehen, auf eine Stelle runden"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 1.3,
+       "nb": 8.4,
+       "la": "a = 1.3 cm",
+       "lb": "b = ?",
+       "lc": "c = 8.5 cm"
+      }
      ]
     },
     {
@@ -8861,6 +9403,16 @@
        "√784 = 28.0 cm",
        "Wurzel ziehen"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "rect",
+       "w": 28.0,
+       "h": 21.0,
+       "lw": "? cm",
+       "lh": "21 cm",
+       "ld": "d = 35 cm"
+      }
      ]
     },
     {
@@ -8885,6 +9437,16 @@
        "d = √169 = 13 cm",
        "Wurzel ziehen"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "rect",
+       "w": 12.0,
+       "h": 5.0,
+       "lw": "12 cm",
+       "lh": "5 cm",
+       "ld": "d = ?"
+      }
      ]
     },
     {
@@ -8911,6 +9473,16 @@
        "d = √200 = 14.1 cm",
        "Wurzel ziehen, runden"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "rect",
+       "w": 10.0,
+       "h": 10.0,
+       "lw": "10 cm",
+       "lh": "10 cm",
+       "ld": "d = ?"
+      }
      ]
     },
     {
@@ -8958,6 +9530,16 @@
        "AB = √896 = 29.9 cm",
        "Wurzel ziehen, runden"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 20.0,
+       "nb": 29.93325909419153,
+       "la": "AC = 20 cm",
+       "lb": "AB = ?",
+       "lc": "BC = 36 cm"
+      }
      ]
     },
     {
@@ -9043,6 +9625,16 @@
        "Baumhöhe = 8 + 17 = 25 m",
        "Stamm plus abgeknickter Teil"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 8.0,
+       "nb": 15.0,
+       "la": "Stamm = 8 m",
+       "lb": "Abstand = 15 m",
+       "lc": "abgeknickter Teil = ?"
+      }
      ]
     },
     {
@@ -9071,6 +9663,16 @@
        "h = √23.04 = 4.8 m",
        "Wurzel ziehen"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "tri",
+       "na": 4.8,
+       "nb": 1.4,
+       "la": "Wand = ?",
+       "lb": "Boden = 1.4 m",
+       "lc": "Leiter = 5 m"
+      }
      ]
     },
     {
@@ -9095,6 +9697,16 @@
        "d = √2500 = 50 cm",
        "Wurzel ziehen"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "rect",
+       "w": 40.0,
+       "h": 30.0,
+       "lw": "40 cm",
+       "lh": "30 cm",
+       "ld": "Diagonale = ?"
+      }
      ]
     }
    ],
@@ -9172,6 +9784,16 @@
       "answer": [
        "25",
        "25 cm"
+      ],
+      "visuals": [
+       {
+        "type": "tri",
+        "na": 7.0,
+        "nb": 24.0,
+        "la": "a = 7 cm",
+        "lb": "b = 24 cm",
+        "lc": "c = ?"
+       }
       ]
      },
      {
@@ -9221,6 +9843,16 @@
        "8,4",
        "8.4 cm",
        "8,4 cm"
+      ],
+      "visuals": [
+       {
+        "type": "tri",
+        "na": 1.3,
+        "nb": 8.4,
+        "la": "a = 1.3 cm",
+        "lb": "b = ?",
+        "lc": "c = 8.5 cm"
+       }
       ]
      },
      {
@@ -9235,6 +9867,16 @@
        "28,0",
        "28.0 cm",
        "28,0 cm"
+      ],
+      "visuals": [
+       {
+        "type": "rect",
+        "w": 28.0,
+        "h": 21.0,
+        "lw": "? cm",
+        "lh": "21 cm",
+        "ld": "d = 35 cm"
+       }
       ]
      },
      {
@@ -9273,6 +9915,16 @@
        "4.8 cm",
        "4,8 cm",
        "4.8 m"
+      ],
+      "visuals": [
+       {
+        "type": "tri",
+        "na": 4.8,
+        "nb": 1.4,
+        "la": "Wand = ?",
+        "lb": "Boden = 1.4 m",
+        "lc": "Leiter = 5 m"
+       }
       ]
      },
      {
@@ -9286,7 +9938,17 @@
        "10 cm"
       ],
       "answer": 0,
-      "explain": "√(40² + 30²) = 50"
+      "explain": "√(40² + 30²) = 50",
+      "visuals": [
+       {
+        "type": "rect",
+        "w": 40.0,
+        "h": 30.0,
+        "lw": "40 cm",
+        "lh": "30 cm",
+        "ld": "Diagonale = ?"
+       }
+      ]
      },
      {
       "id": "e14",
@@ -9298,6 +9960,16 @@
        "29,9",
        "29.9 cm",
        "29,9 cm"
+      ],
+      "visuals": [
+       {
+        "type": "tri",
+        "na": 20.0,
+        "nb": 29.93325909419153,
+        "la": "AC = 20 cm",
+        "lb": "AB = ?",
+        "lc": "BC = 36 cm"
+       }
       ]
      },
      {
@@ -9322,6 +9994,16 @@
        "25 cm",
        "25 m",
        "25m"
+      ],
+      "visuals": [
+       {
+        "type": "tri",
+        "na": 8.0,
+        "nb": 15.0,
+        "la": "Stamm = 8 m",
+        "lb": "Abstand = 15 m",
+        "lc": "abgeknickter Teil = ?"
+       }
       ]
      }
     ]
@@ -18386,7 +19068,7 @@
    "title": "Meter und Kilometer",
    "explain": [
     {
-     "h": "Meter und Kilometer",
+     "h": "📏 Meter und Kilometer",
      "text": "Kurze Strecken misst du in Metern (m). Lange Strecken, zum Beispiel den Schulweg, misst du in Kilometern (km). 1 Kilometer ist genau 1000 Meter. Kilo heisst tausend.",
      "visuals": [
       {
@@ -18452,7 +19134,7 @@
       }
      ],
      "try": {
-      "q": "1 km = ? m",
+      "q": "1 km = ___ m",
       "opts": [
        "10",
        "100",
@@ -18466,7 +19148,7 @@
      }
     },
     {
-     "h": "Von km zu m: mal 1000",
+     "h": "📏 Von km zu m: mal 1000",
      "text": "Wenn du von Kilometern zu Metern wechselst, wird die Zahl grösser. Du rechnest mal 1000. Bei ganzen Zahlen hängst du einfach drei Nullen an.",
      "visuals": [
       {
@@ -18496,7 +19178,7 @@
       }
      ],
      "try": {
-      "q": "4 km = ? m",
+      "q": "4 km = ___ m",
       "opts": [
        "40",
        "400",
@@ -18510,7 +19192,7 @@
      }
     },
     {
-     "h": "Von m zu km: geteilt durch 1000",
+     "h": "📏 Von m zu km: geteilt durch 1000",
      "text": "Von Metern zu Kilometern wird die Zahl kleiner. Du rechnest geteilt durch 1000. Bei vollen Tausendern streichst du drei Nullen.",
      "visuals": [
       {
@@ -18540,7 +19222,7 @@
       }
      ],
      "try": {
-      "q": "7000 m = ? km",
+      "q": "7000 m = ___ km",
       "opts": [
        "7",
        "70",
@@ -18554,7 +19236,7 @@
      }
     },
     {
-     "h": "km und m zusammen",
+     "h": "📏 km und m zusammen",
      "text": "Oft hat eine Strecke beides, zum Beispiel 2 km 300 m. Rechne zuerst die km in m um: 2 km sind 2000 m. Dann zählst du 300 m dazu. Das gibt 2300 m.",
      "visuals": [
       {
@@ -18596,7 +19278,7 @@
       }
      ],
      "try": {
-      "q": "3 km 500 m = ? m",
+      "q": "3 km 500 m = ___ m",
       "opts": [
        "350",
        "3500",
@@ -18610,7 +19292,7 @@
      }
     },
     {
-     "h": "Halber und Viertel-Kilometer",
+     "h": "📏 Halber und Viertel-Kilometer",
      "text": "Ein halber Kilometer sind 500 m. Ein Viertel-Kilometer sind 250 m. Drei Viertel-Kilometer sind 750 m. Vier Viertel ergeben einen ganzen Kilometer.",
      "visuals": [
       {
@@ -18684,7 +19366,7 @@
      }
     },
     {
-     "h": "Wie lange dauert der Schulweg?",
+     "h": "📏 Wie lange dauert der Schulweg?",
      "text": "Ein Kind geht zu Fuss etwa 1 km in 20 Minuten. Doppelt so weit heisst doppelt so lange. 3 mal 20 Minuten sind 60 Minuten, also 1 Stunde.",
      "visuals": [
       {
@@ -18748,7 +19430,7 @@
      }
     },
     {
-     "h": "Ein Diagramm lesen",
+     "h": "📏 Ein Diagramm lesen",
      "text": "Ein Säulendiagramm zeigt, wie viele Kinder einen Schulweg einer bestimmten Länge haben. Die Säule ist so hoch wie die Anzahl. Lies die Zahl oben an der Säule ab. Das ist ein eigenes Übungsbeispiel.",
      "visuals": [
       {
@@ -18908,6 +19590,16 @@
        "2 · 1000 = 2000",
        "mal 1000"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "km",
+       "to": "m",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "km nach m: mal 1000"
+      }
      ]
     },
     {
@@ -18930,6 +19622,16 @@
        "5000 m",
        "Ergebnis"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "km",
+       "to": "m",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "km nach m: mal 1000"
+      }
      ]
     },
     {
@@ -18952,6 +19654,16 @@
        "8000 m",
        "Ergebnis"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "km",
+       "to": "m",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "km nach m: mal 1000"
+      }
      ]
     },
     {
@@ -18974,11 +19686,21 @@
        "10 000 m",
        "Ergebnis"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "km",
+       "to": "m",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "km nach m: mal 1000"
+      }
      ]
     },
     {
      "id": "k9",
-     "q": "6 km = ? m (nur die Zahl)",
+     "q": "6 km = ___ m (Schreibe nur die Zahl.)",
      "a": "6000",
      "lvl": 2,
      "th": "mal",
@@ -18994,11 +19716,21 @@
        "6 · 1000 = 6000",
        "mal 1000"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "km",
+       "to": "m",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "km nach m: mal 1000"
+      }
      ]
     },
     {
      "id": "k10",
-     "q": "12 km = ? m (nur die Zahl)",
+     "q": "12 km = ___ m (Schreibe nur die Zahl.)",
      "a": "12000",
      "lvl": 2,
      "th": "mal",
@@ -19016,11 +19748,21 @@
        "12 · 1000 = 12000",
        "mal 1000"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "km",
+       "to": "m",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "km nach m: mal 1000"
+      }
      ]
     },
     {
      "id": "k11",
-     "q": "20 km = ? m (nur die Zahl)",
+     "q": "20 km = ___ m (Schreibe nur die Zahl.)",
      "a": "20000",
      "lvl": 2,
      "th": "mal",
@@ -19038,6 +19780,16 @@
        "20 · 1000 = 20000",
        "mal 1000"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "km",
+       "to": "m",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "km nach m: mal 1000"
+      }
      ]
     },
     {
@@ -19060,6 +19812,16 @@
        "3000 : 1000 = 3",
        "geteilt durch 1000"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "m",
+       "to": "km",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "m nach km: geteilt durch 1000"
+      }
      ]
     },
     {
@@ -19082,6 +19844,16 @@
        "6 km",
        "Ergebnis"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "m",
+       "to": "km",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "m nach km: geteilt durch 1000"
+      }
      ]
     },
     {
@@ -19104,6 +19876,16 @@
        "9 km",
        "Ergebnis"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "m",
+       "to": "km",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "m nach km: geteilt durch 1000"
+      }
      ]
     },
     {
@@ -19126,11 +19908,21 @@
        "10 km",
        "Ergebnis"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "m",
+       "to": "km",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "m nach km: geteilt durch 1000"
+      }
      ]
     },
     {
      "id": "k16",
-     "q": "4000 m = ? km (nur die Zahl)",
+     "q": "4000 m = ___ km (Schreibe nur die Zahl.)",
      "a": "4",
      "lvl": 2,
      "th": "durch",
@@ -19146,11 +19938,21 @@
        "4000 : 1000 = 4",
        "geteilt durch 1000"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "m",
+       "to": "km",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "m nach km: geteilt durch 1000"
+      }
      ]
     },
     {
      "id": "k17",
-     "q": "15 000 m = ? km (nur die Zahl)",
+     "q": "15 000 m = ___ km (Schreibe nur die Zahl.)",
      "a": "15",
      "lvl": 2,
      "th": "durch",
@@ -19166,11 +19968,21 @@
        "15 000 : 1000 = 15",
        "geteilt durch 1000"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "m",
+       "to": "km",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "m nach km: geteilt durch 1000"
+      }
      ]
     },
     {
      "id": "k18",
-     "q": "2 km 300 m = ? m",
+     "q": "2 km 300 m = ___ m",
      "a": "2300 m",
      "lvl": 2,
      "th": "misch",
@@ -19188,11 +20000,32 @@
        "2000 + 300 = 2300",
        "km in m, dann zusammenzählen"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         1000,
+         "1 km"
+        ],
+        [
+         1000,
+         "1 km"
+        ],
+        [
+         300,
+         "300 m"
+        ]
+       ],
+       "cap": "2 km 300 m",
+       "col": 1
+      }
      ]
     },
     {
      "id": "k19",
-     "q": "1 km 500 m = ? m",
+     "q": "1 km 500 m = ___ m",
      "a": "1500 m",
      "lvl": 2,
      "th": "misch",
@@ -19210,11 +20043,28 @@
        "1500 m",
        "Ergebnis"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         1000,
+         "1 km"
+        ],
+        [
+         500,
+         "500 m"
+        ]
+       ],
+       "cap": "1 km 500 m",
+       "col": 1
+      }
      ]
     },
     {
      "id": "k20",
-     "q": "4 km 250 m = ? m (nur die Zahl)",
+     "q": "4 km 250 m = ___ m (Schreibe nur die Zahl.)",
      "a": "4250",
      "lvl": 2,
      "th": "misch",
@@ -19231,11 +20081,40 @@
        "4000 + 250 = 4250",
        "zusammenzählen"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         1000,
+         "1 km"
+        ],
+        [
+         1000,
+         "1 km"
+        ],
+        [
+         1000,
+         "1 km"
+        ],
+        [
+         1000,
+         "1 km"
+        ],
+        [
+         250,
+         "250 m"
+        ]
+       ],
+       "cap": "4 km 250 m",
+       "col": 1
+      }
      ]
     },
     {
      "id": "k21",
-     "q": "3 km 50 m = ? m",
+     "q": "3 km 50 m = ___ m",
      "a": "3050 m",
      "lvl": 3,
      "th": "misch",
@@ -19253,11 +20132,36 @@
        "3000 + 50 = 3050",
        "Achtung: 50, nicht 500"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         1000,
+         "1 km"
+        ],
+        [
+         1000,
+         "1 km"
+        ],
+        [
+         1000,
+         "1 km"
+        ],
+        [
+         50,
+         "50 m"
+        ]
+       ],
+       "cap": "3 km 50 m",
+       "col": 1
+      }
      ]
     },
     {
      "id": "k22",
-     "q": "5 km 5 m = ? m (nur die Zahl)",
+     "q": "5 km 5 m = ___ m (Schreibe nur die Zahl.)",
      "a": "5005",
      "lvl": 3,
      "th": "misch",
@@ -19273,11 +20177,44 @@
        "5000 + 5 = 5005",
        "zusammenzählen"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         1000,
+         "1 km"
+        ],
+        [
+         1000,
+         "1 km"
+        ],
+        [
+         1000,
+         "1 km"
+        ],
+        [
+         1000,
+         "1 km"
+        ],
+        [
+         1000,
+         "1 km"
+        ],
+        [
+         5,
+         "5 m"
+        ]
+       ],
+       "cap": "5 km 5 m",
+       "col": 1
+      }
      ]
     },
     {
      "id": "k23",
-     "q": "1700 m = ? km ? m",
+     "q": "1700 m = ___ km ___ m",
      "a": "1 km 700 m",
      "lvl": 2,
      "th": "misch",
@@ -19295,11 +20232,28 @@
        "1700 = 1000 + 700",
        "1 km und 700 m"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         1000,
+         "1 km"
+        ],
+        [
+         700,
+         "700 m"
+        ]
+       ],
+       "cap": "1 km 700 m",
+       "col": 1
+      }
      ]
     },
     {
      "id": "k24",
-     "q": "3050 m = ? km ? m",
+     "q": "3050 m = ___ km ___ m",
      "a": "3 km 50 m",
      "lvl": 3,
      "th": "misch",
@@ -19317,6 +20271,31 @@
        "3050 = 3000 + 50",
        "3 km und 50 m"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         1000,
+         "1 km"
+        ],
+        [
+         1000,
+         "1 km"
+        ],
+        [
+         1000,
+         "1 km"
+        ],
+        [
+         50,
+         "50 m"
+        ]
+       ],
+       "cap": "3 km 50 m",
+       "col": 1
+      }
      ]
     },
     {
@@ -19429,7 +20408,7 @@
     },
     {
      "id": "k28",
-     "q": "750 m + 250 m = ? km",
+     "q": "750 m + 250 m = ___ km",
      "a": "1 km",
      "lvl": 2,
      "th": "halb",
@@ -19791,23 +20770,43 @@
      },
      {
       "id": "q3",
-      "q": "7 km = ? m (nur die Zahl)",
+      "q": "7 km = ___ m (Schreibe nur die Zahl.)",
       "explain": "7 · 1000 = 7000",
       "type": "input",
       "answer": [
        "7000",
        "7000 m",
        "7 000"
+      ],
+      "visuals": [
+       {
+        "type": "conv",
+        "from": "km",
+        "to": "m",
+        "up": "· 1000",
+        "down": ": 1000",
+        "cap": "km nach m: mal 1000"
+       }
       ]
      },
      {
       "id": "q4",
-      "q": "9000 m = ? km (nur die Zahl)",
+      "q": "9000 m = ___ km (Schreibe nur die Zahl.)",
       "explain": "9000 : 1000 = 9",
       "type": "input",
       "answer": [
        "9",
        "9 km"
+      ],
+      "visuals": [
+       {
+        "type": "conv",
+        "from": "m",
+        "to": "km",
+        "up": ": 1000",
+        "down": "· 1000",
+        "cap": "m nach km: geteilt durch 1000"
+       }
       ]
      },
      {
@@ -19842,18 +20841,39 @@
      },
      {
       "id": "q6",
-      "q": "2 km 400 m = ? m (nur die Zahl)",
+      "q": "2 km 400 m = ___ m (Schreibe nur die Zahl.)",
       "explain": "2000 + 400 = 2400",
       "type": "input",
       "answer": [
        "2400",
        "2400 m",
        "2 400"
+      ],
+      "visuals": [
+       {
+        "type": "bar",
+        "segs": [
+         [
+          1000,
+          "1 km"
+         ],
+         [
+          1000,
+          "1 km"
+         ],
+         [
+          400,
+          "400 m"
+         ]
+        ],
+        "cap": "2 km 400 m",
+        "col": 1
+       }
       ]
      },
      {
       "id": "q7",
-      "q": "3 km 50 m = ?",
+      "q": "3 km 50 m = ___",
       "explain": "3000 + 50 = 3050 m",
       "type": "mc",
       "options": [
@@ -19862,11 +20882,36 @@
        "3500 m",
        "3005 m"
       ],
-      "answer": 1
+      "answer": 1,
+      "visuals": [
+       {
+        "type": "bar",
+        "segs": [
+         [
+          1000,
+          "1 km"
+         ],
+         [
+          1000,
+          "1 km"
+         ],
+         [
+          1000,
+          "1 km"
+         ],
+         [
+          50,
+          "50 m"
+         ]
+        ],
+        "cap": "3 km 50 m",
+        "col": 1
+       }
+      ]
      },
      {
       "id": "q8",
-      "q": "1800 m = ?",
+      "q": "1800 m = ___",
       "explain": "1000 + 800 = 1 km 800 m",
       "type": "mc",
       "options": [
@@ -19879,7 +20924,7 @@
      },
      {
       "id": "q9",
-      "q": "Ein Weg ist 1 km lang. Du bist 650 m gegangen. Wie viele Meter fehlen noch? (nur die Zahl)",
+      "q": "Ein Weg ist 1 km lang. Du bist 650 m gegangen. Wie viele Meter fehlen noch? (Schreibe nur die Zahl.)",
       "explain": "1000 − 650 = 350",
       "type": "input",
       "answer": [
@@ -19915,7 +20960,7 @@
      },
      {
       "id": "q12",
-      "q": "Ein Kind geht 1 km in 20 min. Wie viele Minuten braucht es für 4 km? (nur die Zahl)",
+      "q": "Ein Kind geht 1 km in 20 min. Wie viele Minuten braucht es für 4 km? (Schreibe nur die Zahl.)",
       "explain": "4 · 20 = 80",
       "type": "input",
       "answer": [
@@ -19962,7 +21007,7 @@
      },
      {
       "id": "q14",
-      "q": "Wie viele Kinder sind insgesamt in der Klasse? (nur die Zahl)",
+      "q": "Wie viele Kinder sind insgesamt in der Klasse? (Schreibe nur die Zahl.)",
       "explain": "4 + 6 + 8 + 3 = 21",
       "type": "input",
       "answer": [
@@ -20150,10 +21195,10 @@
    "child": "kl3",
    "subject": "mathe",
    "chapter": "Messen: Länge und Gewicht",
-   "title": "Gramm und Kilo",
+   "title": "Gramm und Kilogramm",
    "explain": [
     {
-     "h": "Gramm und Kilogramm",
+     "h": "⚖️ Gramm und Kilogramm",
      "text": "Leichte Dinge wiegst du in Gramm (g). Schwere Dinge wiegst du in Kilogramm (kg). 1 Kilogramm ist genau 1000 Gramm. Kilo heisst tausend.",
      "visuals": [
       {
@@ -20179,7 +21224,7 @@
       }
      ],
      "try": {
-      "q": "1 kg = ? g",
+      "q": "1 kg = ___ g",
       "opts": [
        "10",
        "100",
@@ -20193,35 +21238,35 @@
      }
     },
     {
-     "h": "Wie schwer ist das?",
-     "text": "Ein Znüni besteht aus verschiedenen Dingen. Jedes Ding hat ein eigenes Gewicht. Du vergleichst die Gewichte: Die grösste Zahl ist das schwerste Ding.",
+     "h": "⚖️ Wie schwer ist das?",
+     "text": "Jedes Ding hat sein eigenes Gewicht. Du vergleichst die Zahlen: Die grösste Zahl ist das schwerste Ding. Das ist ein eigenes Beispiel zum Üben.",
      "visuals": [
       {
        "type": "pairs",
        "items": [
         [
          "Banane",
-         "170 g",
+         "120 g",
          "🍌"
         ],
         [
          "Apfel",
-         "140 g",
+         "150 g",
          "🍎"
         ],
         [
          "Orange",
-         "145 g",
+         "200 g",
          "🍊"
         ],
         [
          "Joghurt",
-         "125 g",
+         "180 g",
          "🥛"
         ],
         [
          "Tomate",
-         "80 g",
+         "90 g",
          "🍅"
         ]
        ]
@@ -20231,19 +21276,19 @@
        "items": [
         [
          "Tomate",
-         80
-        ],
-        [
-         "Apfel",
-         140
-        ],
-        [
-         "Orange",
-         145
+         90
         ],
         [
          "Banane",
-         170
+         120
+        ],
+        [
+         "Apfel",
+         150
+        ],
+        [
+         "Orange",
+         200
         ]
        ],
        "unit": "Gramm (g)"
@@ -20258,61 +21303,61 @@
        "Tomate"
       ],
       "a": [
-       "Banane"
+       "Orange"
       ],
       "hint": "Schau, welche Zahl am grössten ist."
      }
     },
     {
-     "h": "Gewichte zusammenzählen",
-     "text": "Wenn du wissen willst, wie viel ein Zvieri wiegt, zählst du die Gewichte zusammen. Rechne in Schritten, wenn es mehr als zwei Dinge sind.",
+     "h": "⚖️ Gewichte zusammenzählen",
+     "text": "Wenn du wissen willst, wie viel ein Zvieri wiegt, zählst du die Gewichte zusammen. Bei mehr als zwei Dingen rechnest du in Schritten.",
      "visuals": [
       {
        "type": "bar",
        "segs": [
         [
-         140,
-         "Apfel 140 g"
+         150,
+         "Apfel 150 g"
         ],
         [
-         125,
-         "Joghurt 125 g"
+         180,
+         "Joghurt 180 g"
         ]
        ],
-       "cap": "140 g + 125 g = 265 g",
-       "col": 1
+       "cap": "150 g + 180 g = 330 g",
+       "col": 0
       },
       {
        "type": "lines",
        "num": true,
        "items": [
         [
-         "140 g + 125 g",
+         "150 g + 180 g",
          "Apfel und Joghurt"
         ],
         [
-         "= 265 g",
+         "= 330 g",
          "zusammen"
         ]
        ]
       }
      ],
      "try": {
-      "q": "Banane 170 g + Tomate 80 g = ? g",
+      "q": "Banane 120 g + Tomate 90 g = ___ g",
       "opts": [
-       "240 g",
-       "250 g",
-       "260 g",
-       "350 g"
+       "190 g",
+       "210 g",
+       "230 g",
+       "310 g"
       ],
       "a": [
-       "250 g"
+       "210 g"
       ],
-      "hint": "170 + 80"
+      "hint": "120 + 90"
      }
     },
     {
-     "h": "Von kg zu g: mal 1000",
+     "h": "⚖️ Von kg zu g: mal 1000",
      "text": "Wenn du von Kilogramm zu Gramm wechselst, wird die Zahl grösser. Du rechnest mal 1000. Bei ganzen Zahlen hängst du drei Nullen an.",
      "visuals": [
       {
@@ -20342,7 +21387,7 @@
       }
      ],
      "try": {
-      "q": "3 kg = ? g",
+      "q": "3 kg = ___ g",
       "opts": [
        "30",
        "300",
@@ -20356,7 +21401,7 @@
      }
     },
     {
-     "h": "Von g zu kg: geteilt durch 1000",
+     "h": "⚖️ Von g zu kg: geteilt durch 1000",
      "text": "Von Gramm zu Kilogramm wird die Zahl kleiner. Du rechnest geteilt durch 1000. Bei vollen Tausendern streichst du drei Nullen.",
      "visuals": [
       {
@@ -20386,7 +21431,7 @@
       }
      ],
      "try": {
-      "q": "5000 g = ? kg",
+      "q": "5000 g = ___ kg",
       "opts": [
        "5",
        "50",
@@ -20400,7 +21445,7 @@
      }
     },
     {
-     "h": "Halbes und Viertel-Kilo",
+     "h": "⚖️ Halbes und Viertel-Kilo",
      "text": "Ein halbes Kilogramm sind 500 g. Ein Viertel-Kilogramm sind 250 g. Drei Viertel-Kilogramm sind 750 g. Vier Viertel ergeben ein ganzes Kilo.",
      "visuals": [
       {
@@ -20460,7 +21505,7 @@
       }
      ],
      "try": {
-      "q": "250 g + ? = 1000 g",
+      "q": "Wie viele Gramm fehlen? 250 g + ___ g = 1000 g",
       "opts": [
        "500 g",
        "650 g",
@@ -20474,15 +21519,15 @@
      }
     },
     {
-     "h": "Dinge suchen, die zusammen 1 kg wiegen",
-     "text": "Ein Buch wiegt 650 g. Dazu kommen vier Scheren mit je 80 g. Zusammen sind das 970 g. Das ist fast ein Kilogramm. Es fehlen noch 30 g.",
+     "h": "⚖️ Dinge suchen, die zusammen 1 kg wiegen",
+     "text": "Ein Buch wiegt 700 g. Dazu kommen 3 Scheren mit je 80 g. Zusammen sind das 940 g. Das ist fast ein Kilogramm. Es fehlen noch 60 g.",
      "visuals": [
       {
        "type": "bar",
        "segs": [
         [
-         650,
-         "Buch 650 g"
+         700,
+         "Buch 700 g"
         ],
         [
          80,
@@ -20497,11 +21542,12 @@
          ""
         ],
         [
-         80,
-         ""
+         60,
+         "?",
+         -1
         ]
        ],
-       "cap": "650 g + 4 · 80 g = 970 g",
+       "cap": "700 g + 3 · 80 g = 940 g",
        "col": 1
       },
       {
@@ -20509,32 +21555,32 @@
        "num": true,
        "items": [
         [
-         "4 · 80 g",
-         "= 320 g"
+         "3 · 80 g",
+         "= 240 g"
         ],
         [
-         "650 g + 320 g",
-         "= 970 g"
+         "700 g + 240 g",
+         "= 940 g"
         ],
         [
-         "1000 g − 970 g",
-         "= 30 g fehlen"
+         "1000 g − 940 g",
+         "= 60 g fehlen"
         ]
        ]
       }
      ],
      "try": {
-      "q": "625 g + ? = 1000 g",
+      "q": "Wie viele Gramm fehlen? 400 g + ___ g = 1000 g",
       "opts": [
-       "275 g",
-       "375 g",
-       "475 g",
-       "385 g"
+       "500 g",
+       "600 g",
+       "700 g",
+       "550 g"
       ],
       "a": [
-       "375 g"
+       "600 g"
       ],
-      "hint": "Ergänze in Schritten: erst auf 700, dann auf 1000."
+      "hint": "Ergänze in Schritten: erst auf 500, dann auf 1000."
      }
     }
    ],
@@ -20591,11 +21637,21 @@
        "Gramm",
        "Ergebnis"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "scale",
+       "l": "1 Apfel",
+       "r": "150 g",
+       "le": "🍎",
+       "re": "⚖️",
+       "cap": "Leichte Dinge wiegst du in Gramm"
+      }
      ]
     },
     {
      "id": "g3",
-     "q": "Womit wiegst du einen Schulrucksack am besten?",
+     "q": "Womit wiegst du einen vollen Schulrucksack am besten?",
      "a": "Kilogramm",
      "lvl": 1,
      "th": "basis",
@@ -20613,6 +21669,16 @@
        "Kilogramm",
        "Ergebnis"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "scale",
+       "l": "Rucksack",
+       "r": "kg",
+       "le": "🎒",
+       "re": "⚖️",
+       "cap": "Schwere Dinge wiegst du in Kilogramm"
+      }
      ]
     },
     {
@@ -20632,30 +21698,41 @@
      ],
      "steps": [
       [
-       "1 kg",
-       "Ergebnis"
+       "1 kg = 1000 g",
+       "1000 ist mehr als 900."
       ]
+     ],
+     "visuals": [
+      {
+       "type": "scale",
+       "l": "1 kg",
+       "r": "900 g",
+       "le": "⚖️",
+       "re": "⚖️",
+       "tilt": -1,
+       "cap": "1 kg ist schwerer"
+      }
      ]
     },
     {
      "id": "g5",
      "q": "Welches Obst ist am schwersten?",
-     "a": "Banane (170 g)",
+     "a": "Orange (200 g)",
      "lvl": 1,
      "th": "vergl",
      "opts": [
-      "Banane (170 g)",
-      "Apfel (140 g)",
-      "Orange (145 g)",
-      "Tomate (80 g)"
+      "Orange (200 g)",
+      "Banane (120 g)",
+      "Apfel (150 g)",
+      "Tomate (90 g)"
      ],
      "hints": [
       "Vergleiche die Zahlen."
      ],
      "steps": [
       [
-       "170 g ist die grösste Zahl",
-       "Banane"
+       "200 g ist die grösste Zahl",
+       "Orange"
       ]
      ],
      "visuals": [
@@ -20664,27 +21741,27 @@
        "items": [
         [
          "Banane",
-         "170 g",
+         "120 g",
          "🍌"
         ],
         [
          "Apfel",
-         "140 g",
+         "150 g",
          "🍎"
         ],
         [
          "Orange",
-         "145 g",
+         "200 g",
          "🍊"
         ],
         [
          "Joghurt",
-         "125 g",
+         "180 g",
          "🥛"
         ],
         [
          "Tomate",
-         "80 g",
+         "90 g",
          "🍅"
         ]
        ]
@@ -20693,22 +21770,22 @@
     },
     {
      "id": "g6",
-     "q": "Welches ist am leichtesten?",
-     "a": "Tomate (80 g)",
+     "q": "Welches Obst ist am leichtesten?",
+     "a": "Tomate (90 g)",
      "lvl": 1,
      "th": "vergl",
      "opts": [
-      "Apfel (140 g)",
-      "Tomate (80 g)",
-      "Orange (145 g)",
-      "Banane (170 g)"
+      "Banane (120 g)",
+      "Tomate (90 g)",
+      "Apfel (150 g)",
+      "Orange (200 g)"
      ],
      "hints": [
       "Die kleinste Zahl."
      ],
      "steps": [
       [
-       "80 g ist die kleinste Zahl",
+       "90 g ist die kleinste Zahl",
        "Tomate"
       ]
      ],
@@ -20718,19 +21795,19 @@
        "items": [
         [
          "Tomate",
-         80
-        ],
-        [
-         "Apfel",
-         140
-        ],
-        [
-         "Orange",
-         145
+         90
         ],
         [
          "Banane",
-         170
+         120
+        ],
+        [
+         "Apfel",
+         150
+        ],
+        [
+         "Orange",
+         200
         ]
        ],
        "unit": "Gramm (g)"
@@ -20740,21 +21817,21 @@
     {
      "id": "g7",
      "q": "Welche Reihenfolge ist richtig (leicht → schwer)?",
-     "a": "Tomate, Apfel, Orange, Banane",
+     "a": "Tomate, Banane, Apfel, Orange",
      "lvl": 2,
      "th": "vergl",
      "opts": [
-      "Banane, Orange, Apfel, Tomate",
-      "Apfel, Tomate, Orange, Banane",
-      "Tomate, Apfel, Orange, Banane",
-      "Tomate, Orange, Apfel, Banane"
+      "Orange, Apfel, Banane, Tomate",
+      "Banane, Tomate, Apfel, Orange",
+      "Tomate, Banane, Apfel, Orange",
+      "Tomate, Apfel, Banane, Orange"
      ],
      "hints": [
-      "Beginne mit der kleinsten Zahl: 80, 140, 145, 170."
+      "Beginne mit der kleinsten Zahl: 90, 120, 150, 200."
      ],
      "steps": [
       [
-       "80 < 140 < 145 < 170",
+       "90 < 120 < 150 < 200",
        "von leicht nach schwer"
       ]
      ],
@@ -20764,19 +21841,19 @@
        "items": [
         [
          "Tomate",
-         80
-        ],
-        [
-         "Apfel",
-         140
-        ],
-        [
-         "Orange",
-         145
+         90
         ],
         [
          "Banane",
-         170
+         120
+        ],
+        [
+         "Apfel",
+         150
+        ],
+        [
+         "Orange",
+         200
         ]
        ],
        "unit": "Gramm (g)"
@@ -20785,22 +21862,20 @@
     },
     {
      "id": "g8",
-     "q": "Apfel 140 g + Joghurt 125 g wiegen zusammen ?",
-     "a": "265 g",
+     "q": "Apfel 150 g + Joghurt 180 g wiegen zusammen: ___ g (Schreibe nur die Zahl.)",
+     "a": "330",
      "lvl": 2,
      "th": "add",
-     "opts": [
-      "255 g",
-      "175 g",
-      "365 g",
-      "265 g"
+     "ans": [
+      "330",
+      "330 g"
      ],
      "hints": [
-      "Zähle 140 + 125 zusammen."
+      "Zähle 150 + 180 zusammen."
      ],
      "steps": [
       [
-       "140 + 125 = 265",
+       "150 + 180 = 330",
        "zusammenzählen"
       ]
      ],
@@ -20809,81 +21884,136 @@
        "type": "bar",
        "segs": [
         [
-         140,
-         "Apfel 140 g"
+         150,
+         "Apfel 150 g"
         ],
         [
-         125,
-         "Joghurt 125 g"
+         180,
+         "Joghurt 180 g"
         ]
        ],
-       "cap": "140 g + 125 g = 265 g",
+       "cap": "150 g + 180 g = 330 g",
        "col": 0
       }
      ]
     },
     {
      "id": "g9",
-     "q": "Banane 170 g + Tomate 80 g wiegen zusammen ? (nur die Zahl)",
-     "a": "250",
+     "q": "Banane 120 g + Tomate 90 g wiegen zusammen: ___ g (Schreibe nur die Zahl.)",
+     "a": "210",
      "lvl": 2,
      "th": "add",
      "ans": [
-      "250",
-      "250 g"
+      "210",
+      "210 g"
      ],
      "hints": [
-      "170 + 80"
+      "Zähle 120 + 90 zusammen."
      ],
      "steps": [
       [
-       "170 + 80 = 250",
+       "120 + 90 = 210",
        "zusammenzählen"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         120,
+         "Banane 120 g"
+        ],
+        [
+         90,
+         "Tomate 90 g"
+        ]
+       ],
+       "cap": "120 g + 90 g = 210 g",
+       "col": 0
+      }
      ]
     },
     {
      "id": "g10",
-     "q": "Apfel 140 g + Orange 145 g wiegen zusammen ? (nur die Zahl)",
-     "a": "285",
+     "q": "Apfel 150 g + Orange 200 g wiegen zusammen: ___ g (Schreibe nur die Zahl.)",
+     "a": "350",
      "lvl": 2,
      "th": "add",
      "ans": [
-      "285",
-      "285 g"
+      "350",
+      "350 g"
      ],
      "hints": [
-      "140 + 145"
+      "Zähle 150 + 200 zusammen."
      ],
      "steps": [
       [
-       "140 + 145 = 285",
+       "150 + 200 = 350",
        "zusammenzählen"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         150,
+         "Apfel 150 g"
+        ],
+        [
+         200,
+         "Orange 200 g"
+        ]
+       ],
+       "cap": "150 g + 200 g = 350 g",
+       "col": 0
+      }
      ]
     },
     {
      "id": "g11",
-     "q": "Banane 170 g + Apfel 140 g + Tomate 80 g wiegen zusammen ? (nur die Zahl)",
-     "a": "390",
+     "q": "Banane 120 g + Apfel 150 g + Tomate 90 g wiegen zusammen: ___ g (Schreibe nur die Zahl.)",
+     "a": "360",
      "lvl": 3,
      "th": "add",
      "ans": [
-      "390",
-      "390 g"
+      "360",
+      "360 g"
      ],
      "hints": [
-      "Zuerst 170 + 140, dann + 80."
+      "Zuerst 120 + 150, dann + 90."
      ],
      "steps": [
       [
-       "170 + 140 = 310",
+       "120 + 150 = 270",
        "zwei zusammen"
       ],
       [
-       "310 + 80 = 390 g",
+       "270 + 90 = 360 g",
        "dritte dazu"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         120,
+         "Banane 120 g"
+        ],
+        [
+         150,
+         "Apfel 150 g"
+        ],
+        [
+         90,
+         "Tomate 90 g"
+        ]
+       ],
+       "cap": "120 g + 150 g + 90 g = 360 g",
+       "col": 0
+      }
      ]
     },
     {
@@ -20899,13 +22029,23 @@
       "2000 g"
      ],
      "hints": [
-      "Mal 1000."
+      "Mal 1000: drei Nullen anhängen."
      ],
      "steps": [
       [
        "2 · 1000 = 2000",
        "mal 1000"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "kg",
+       "to": "g",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "kg nach g: mal 1000"
+      }
      ]
     },
     {
@@ -20918,16 +22058,26 @@
       "5000 g",
       "500 g",
       "50 g",
-      "5100 g"
+      "5 g"
      ],
      "hints": [
-      "Drei Nullen anhängen."
+      "Mal 1000: drei Nullen anhängen."
      ],
      "steps": [
       [
-       "5000 g",
-       "Ergebnis"
+       "5 · 1000 = 5000",
+       "mal 1000"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "kg",
+       "to": "g",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "kg nach g: mal 1000"
+      }
      ]
     },
     {
@@ -20943,18 +22093,28 @@
       "9 g"
      ],
      "hints": [
-      "Mal 1000."
+      "Mal 1000: drei Nullen anhängen."
      ],
      "steps": [
       [
-       "9000 g",
-       "Ergebnis"
+       "9 · 1000 = 9000",
+       "mal 1000"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "kg",
+       "to": "g",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "kg nach g: mal 1000"
+      }
      ]
     },
     {
      "id": "g15",
-     "q": "7 kg = ? g (nur die Zahl)",
+     "q": "7 kg = ___ g (Schreibe nur die Zahl.)",
      "a": "7000",
      "lvl": 2,
      "th": "mal",
@@ -20971,27 +22131,47 @@
        "7 · 1000 = 7000",
        "mal 1000"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "kg",
+       "to": "g",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "kg nach g: mal 1000"
+      }
      ]
     },
     {
      "id": "g16",
-     "q": "12 kg = ? g (nur die Zahl)",
+     "q": "12 kg = ___ g (Schreibe nur die Zahl.)",
      "a": "12000",
      "lvl": 2,
      "th": "mal",
      "ans": [
       "12000",
-      "12 000",
-      "12000 g"
+      "12000 g",
+      "12 000"
      ],
      "hints": [
-      "12 · 1000"
+      "Drei Nullen anhängen."
      ],
      "steps": [
       [
        "12 · 1000 = 12000",
        "mal 1000"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "kg",
+       "to": "g",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "kg nach g: mal 1000"
+      }
      ]
     },
     {
@@ -21007,13 +22187,23 @@
       "3000 kg"
      ],
      "hints": [
-      "Teile durch 1000."
+      "Teile durch 1000: drei Nullen streichen."
      ],
      "steps": [
       [
        "3000 : 1000 = 3",
        "geteilt durch 1000"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "g",
+       "to": "kg",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "g nach kg: geteilt durch 1000"
+      }
      ]
     },
     {
@@ -21026,16 +22216,26 @@
       "60 kg",
       "6 kg",
       "600 kg",
-      "6 g"
+      "6000 kg"
      ],
      "hints": [
-      "Streiche drei Nullen."
+      "Teile durch 1000: drei Nullen streichen."
      ],
      "steps": [
       [
-       "6 kg",
-       "Ergebnis"
+       "6000 : 1000 = 6",
+       "geteilt durch 1000"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "g",
+       "to": "kg",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "g nach kg: geteilt durch 1000"
+      }
      ]
     },
     {
@@ -21055,14 +22255,24 @@
      ],
      "steps": [
       [
-       "10 kg",
-       "Ergebnis"
+       "10 000 : 1000 = 10",
+       "geteilt durch 1000"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "g",
+       "to": "kg",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "g nach kg: geteilt durch 1000"
+      }
      ]
     },
     {
      "id": "g20",
-     "q": "8000 g = ? kg (nur die Zahl)",
+     "q": "8000 g = ___ kg (Schreibe nur die Zahl.)",
      "a": "8",
      "lvl": 2,
      "th": "durch",
@@ -21071,26 +22281,36 @@
       "8 kg"
      ],
      "hints": [
-      "Streiche drei Nullen."
+      "Drei Nullen streichen."
      ],
      "steps": [
       [
        "8000 : 1000 = 8",
        "geteilt durch 1000"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "g",
+       "to": "kg",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "g nach kg: geteilt durch 1000"
+      }
      ]
     },
     {
      "id": "g21",
-     "q": "2 kg 500 g = ? g",
+     "q": "2 kg 500 g = ___ g",
      "a": "2500 g",
      "lvl": 2,
      "th": "misch",
      "opts": [
       "2500 g",
       "250 g",
-      "2050 g",
-      "7000 g"
+      "7000 g",
+      "700 g"
      ],
      "hints": [
       "2 kg = 2000 g."
@@ -21100,11 +22320,32 @@
        "2000 + 500 = 2500",
        "zusammenzählen"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         1000,
+         "1 kg"
+        ],
+        [
+         1000,
+         "1 kg"
+        ],
+        [
+         500,
+         "500 g"
+        ]
+       ],
+       "cap": "2 kg 500 g",
+       "col": 1
+      }
      ]
     },
     {
      "id": "g22",
-     "q": "1 kg 200 g = ? g (nur die Zahl)",
+     "q": "1 kg 200 g = ___ g (Schreibe nur die Zahl.)",
      "a": "1200",
      "lvl": 2,
      "th": "misch",
@@ -21121,33 +22362,75 @@
        "1000 + 200 = 1200",
        "zusammenzählen"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         1000,
+         "1 kg"
+        ],
+        [
+         200,
+         "200 g"
+        ]
+       ],
+       "cap": "1 kg 200 g",
+       "col": 1
+      }
      ]
     },
     {
      "id": "g23",
-     "q": "3 kg 50 g = ? g",
+     "q": "3 kg 50 g = ___ g",
      "a": "3050 g",
      "lvl": 3,
      "th": "misch",
      "opts": [
-      "350 g",
+      "305 g",
       "3500 g",
       "3050 g",
-      "3005 g"
+      "350 g"
      ],
      "hints": [
-      "3 kg = 3000 g. Dazu kommen nur 50 g."
+      "3 kg = 3000 g."
      ],
      "steps": [
       [
        "3000 + 50 = 3050",
-       "Achtung: 50, nicht 500"
+       "zusammenzählen"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         1000,
+         "1 kg"
+        ],
+        [
+         1000,
+         "1 kg"
+        ],
+        [
+         1000,
+         "1 kg"
+        ],
+        [
+         50,
+         "50 g"
+        ]
+       ],
+       "cap": "3 kg 50 g",
+       "col": 1
+      }
      ]
     },
     {
      "id": "g24",
-     "q": "1700 g = ? kg ? g",
+     "q": "1700 g = ___ kg ___ g",
      "a": "1 kg 700 g",
      "lvl": 2,
      "th": "misch",
@@ -21165,6 +22448,23 @@
        "1700 = 1000 + 700",
        "1 kg und 700 g"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         1000,
+         "1 kg"
+        ],
+        [
+         700,
+         "700 g"
+        ]
+       ],
+       "cap": "1 kg 700 g",
+       "col": 1
+      }
      ]
     },
     {
@@ -21249,7 +22549,7 @@
         ]
        ],
        "cap": "1 kg = 4 · 250 g",
-       "col": 0
+       "col": 2
       }
      ]
     },
@@ -21273,33 +22573,77 @@
        "3 · 250 = 750",
        "drei Viertel"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         250,
+         "250 g"
+        ],
+        [
+         250,
+         "250 g"
+        ],
+        [
+         250,
+         "250 g"
+        ],
+        [
+         250,
+         "",
+         -1
+        ]
+       ],
+       "cap": "3/4 kg",
+       "col": 2
+      }
      ]
     },
     {
      "id": "g28",
-     "q": "Wie viel fehlt? 500 g + ? = 1000 g",
+     "q": "Wie viele Gramm fehlen? 500 g + ___ g = 1000 g",
      "a": "500 g",
      "lvl": 1,
      "th": "ergaenz",
      "opts": [
-      "250 g",
       "600 g",
-      "1000 g",
+      "400 g",
+      "550 g",
       "500 g"
      ],
      "hints": [
-      "1000 − 500"
+      "Rechne 1000 − 500."
      ],
      "steps": [
       [
        "1000 − 500 = 500",
        "ergänzen auf 1 kg"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         500,
+         "500 g"
+        ],
+        [
+         500,
+         "?",
+         -1
+        ]
+       ],
+       "cap": "500 g + ___ = 1000 g",
+       "col": 1
+      }
      ]
     },
     {
      "id": "g29",
-     "q": "Wie viel fehlt? 750 g + ? = 1000 g",
+     "q": "Wie viele Gramm fehlen? 750 g + ___ g = 1000 g",
      "a": "250 g",
      "lvl": 1,
      "th": "ergaenz",
@@ -21307,108 +22651,212 @@
       "250 g",
       "350 g",
       "150 g",
-      "750 g"
+      "300 g"
      ],
      "hints": [
-      "1000 − 750"
+      "Rechne 1000 − 750."
      ],
      "steps": [
       [
        "1000 − 750 = 250",
        "ergänzen auf 1 kg"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         750,
+         "750 g"
+        ],
+        [
+         250,
+         "?",
+         -1
+        ]
+       ],
+       "cap": "750 g + ___ = 1000 g",
+       "col": 1
+      }
      ]
     },
     {
      "id": "g30",
-     "q": "Wie viel fehlt? 625 g + ? = 1000 g",
-     "a": "375 g",
+     "q": "Wie viele Gramm fehlen? 400 g + ___ g = 1000 g",
+     "a": "600 g",
      "lvl": 2,
      "th": "ergaenz",
      "opts": [
-      "275 g",
-      "375 g",
-      "475 g",
-      "385 g"
+      "700 g",
+      "600 g",
+      "500 g",
+      "650 g"
      ],
      "hints": [
-      "Erst auf 700, dann auf 1000: 75 + 300."
+      "Rechne 1000 − 400."
      ],
      "steps": [
       [
-       "625 + 75 = 700",
-       "erster Schritt"
-      ],
-      [
-       "700 + 300 = 1000",
-       "zweiter Schritt"
-      ],
-      [
-       "75 + 300 = 375 g",
-       "Zusammen"
+       "1000 − 400 = 600",
+       "ergänzen auf 1 kg"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         400,
+         "400 g"
+        ],
+        [
+         600,
+         "?",
+         -1
+        ]
+       ],
+       "cap": "400 g + ___ = 1000 g",
+       "col": 1
+      }
      ]
     },
     {
      "id": "g31",
-     "q": "Wie viel fehlt? 125 g + ? = 1000 g (nur die Zahl)",
-     "a": "875",
-     "lvl": 3,
+     "q": "Wie viele Gramm fehlen? 350 g + ___ g = 1000 g",
+     "a": "650 g",
+     "lvl": 2,
      "th": "ergaenz",
-     "ans": [
-      "875",
-      "875 g"
+     "opts": [
+      "750 g",
+      "550 g",
+      "650 g",
+      "700 g"
      ],
      "hints": [
-      "1000 − 125"
+      "Rechne 1000 − 350."
      ],
      "steps": [
       [
-       "1000 − 125 = 875",
+       "1000 − 350 = 650",
        "ergänzen auf 1 kg"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         350,
+         "350 g"
+        ],
+        [
+         650,
+         "?",
+         -1
+        ]
+       ],
+       "cap": "350 g + ___ = 1000 g",
+       "col": 1
+      }
      ]
     },
     {
      "id": "g32",
-     "q": "Wie viel fehlt? 175 g + ? = 1000 g (nur die Zahl)",
-     "a": "825",
+     "q": "Wie viele Gramm fehlen? 880 g + ___ g = 1000 g (Schreibe nur die Zahl.)",
+     "a": "120",
      "lvl": 3,
      "th": "ergaenz",
      "ans": [
-      "825",
-      "825 g"
+      "120",
+      "120 g"
      ],
      "hints": [
-      "1000 − 175"
+      "Rechne 1000 − 880."
      ],
      "steps": [
       [
-       "1000 − 175 = 825",
+       "1000 − 880 = 120",
        "ergänzen auf 1 kg"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         880,
+         "880 g"
+        ],
+        [
+         120,
+         "?",
+         -1
+        ]
+       ],
+       "cap": "880 g + ___ = 1000 g",
+       "col": 1
+      }
      ]
     },
     {
      "id": "g33",
-     "q": "Ein Buch wiegt 650 g. Vier Scheren wiegen je 80 g. Wie viel wiegen sie zusammen? (nur die Zahl)",
-     "a": "970",
+     "q": "Wie viele Gramm fehlen? 345 g + ___ g = 1000 g (Schreibe nur die Zahl.)",
+     "a": "655",
      "lvl": 3,
      "th": "ergaenz",
      "ans": [
-      "970",
-      "970 g"
+      "655",
+      "655 g"
      ],
      "hints": [
-      "Erst 4 · 80, dann + 650."
+      "Rechne 1000 − 345."
      ],
      "steps": [
       [
-       "4 · 80 = 320",
-       "vier Scheren"
+       "1000 − 345 = 655",
+       "ergänzen auf 1 kg"
+      ]
+     ],
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         345,
+         "345 g"
+        ],
+        [
+         655,
+         "?",
+         -1
+        ]
+       ],
+       "cap": "345 g + ___ = 1000 g",
+       "col": 1
+      }
+     ]
+    },
+    {
+     "id": "g34",
+     "q": "Ein Buch wiegt 700 g. 3 Scheren wiegen je 80 g. Wie viel wiegen sie zusammen? Schreibe nur die Zahl.",
+     "a": "940",
+     "lvl": 3,
+     "th": "ergaenz",
+     "ans": [
+      "940",
+      "940 g"
+     ],
+     "hints": [
+      "Erst 3 · 80, dann + 700."
+     ],
+     "steps": [
+      [
+       "3 · 80 = 240",
+       "3 Scheren"
       ],
       [
-       "650 + 320 = 970 g",
+       "700 + 240 = 940 g",
        "mit dem Buch"
       ]
      ],
@@ -21417,12 +22865,8 @@
        "type": "bar",
        "segs": [
         [
-         650,
-         "Buch 650 g"
-        ],
-        [
-         80,
-         ""
+         700,
+         "Buch 700 g"
         ],
         [
          80,
@@ -21437,31 +22881,49 @@
          ""
         ]
        ],
-       "cap": "650 g + 4 · 80 g = 970 g",
+       "cap": "700 g + 3 · 80 g",
        "col": 0
       }
      ]
     },
     {
-     "id": "g34",
-     "q": "Ein Buch und vier Scheren wiegen 970 g. Das ist ... 1 kg.",
+     "id": "g35",
+     "q": "Ein Buch und 3 Scheren wiegen 940 g. Das ist ___ 1 kg.",
      "a": "etwas weniger als",
      "lvl": 2,
      "th": "ergaenz",
      "opts": [
       "genau",
-      "etwas weniger als",
       "etwas mehr als",
+      "etwas weniger als",
       "viel mehr als"
      ],
      "hints": [
-      "970 ist kleiner als 1000."
+      "940 ist kleiner als 1000."
      ],
      "steps": [
       [
-       "970 < 1000",
-       "fast 1 kg"
+       "940 < 1000",
+       "es fehlen noch 60 g"
       ]
+     ],
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         940,
+         "940 g"
+        ],
+        [
+         60,
+         "?",
+         -1
+        ]
+       ],
+       "cap": "Fehlt noch etwas bis 1 kg?",
+       "col": 0
+      }
      ]
     }
    ],
@@ -21484,7 +22946,7 @@
      {
       "id": "q2",
       "q": "Welches Obst ist am leichtesten?",
-      "explain": "Tomate wiegt 80 g, das ist am wenigsten.",
+      "explain": "Tomate wiegt 90 g, das ist am wenigsten.",
       "type": "mc",
       "options": [
        "Banane",
@@ -21499,19 +22961,19 @@
         "items": [
          [
           "Tomate",
-          80
-         ],
-         [
-          "Apfel",
-          140
-         ],
-         [
-          "Orange",
-          145
+          90
          ],
          [
           "Banane",
-          170
+          120
+         ],
+         [
+          "Apfel",
+          150
+         ],
+         [
+          "Orange",
+          200
          ]
         ],
         "unit": "Gramm (g)"
@@ -21521,13 +22983,13 @@
      {
       "id": "q3",
       "q": "Welche Reihenfolge ist richtig (leicht → schwer)?",
-      "explain": "80 g, 140 g, 145 g, 170 g",
+      "explain": "90 < 120 < 150 < 200",
       "type": "mc",
       "options": [
-       "Banane, Orange, Apfel, Tomate",
-       "Tomate, Apfel, Orange, Banane",
-       "Apfel, Tomate, Orange, Banane",
-       "Tomate, Orange, Apfel, Banane"
+       "Orange, Apfel, Banane, Tomate",
+       "Tomate, Banane, Apfel, Orange",
+       "Banane, Tomate, Apfel, Orange",
+       "Tomate, Apfel, Banane, Orange"
       ],
       "answer": 1,
       "visuals": [
@@ -21536,19 +22998,19 @@
         "items": [
          [
           "Tomate",
-          80
-         ],
-         [
-          "Apfel",
-          140
-         ],
-         [
-          "Orange",
-          145
+          90
          ],
          [
           "Banane",
-          170
+          120
+         ],
+         [
+          "Apfel",
+          150
+         ],
+         [
+          "Orange",
+          200
          ]
         ],
         "unit": "Gramm (g)"
@@ -21557,22 +23019,60 @@
      },
      {
       "id": "q4",
-      "q": "Apfel 140 g + Joghurt 125 g wiegen zusammen ? g (nur die Zahl)",
-      "explain": "140 + 125 = 265",
+      "q": "Apfel 150 g + Joghurt 180 g wiegen zusammen: ___ g (Schreibe nur die Zahl.)",
+      "explain": "150 + 180 = 330",
       "type": "input",
       "answer": [
-       "265",
-       "265 g"
+       "330",
+       "330 g"
+      ],
+      "visuals": [
+       {
+        "type": "bar",
+        "segs": [
+         [
+          150,
+          "Apfel 150 g"
+         ],
+         [
+          180,
+          "Joghurt 180 g"
+         ]
+        ],
+        "cap": "150 g + 180 g = 330 g",
+        "col": 0
+       }
       ]
      },
      {
       "id": "q5",
-      "q": "Banane 170 g + Tomate 80 g + Apfel 140 g wiegen zusammen ? g (nur die Zahl)",
-      "explain": "170 + 80 + 140 = 390",
+      "q": "Banane 120 g + Apfel 150 g + Tomate 90 g wiegen zusammen: ___ g (Schreibe nur die Zahl.)",
+      "explain": "120 + 150 + 90 = 360",
       "type": "input",
       "answer": [
-       "390",
-       "390 g"
+       "360",
+       "360 g"
+      ],
+      "visuals": [
+       {
+        "type": "bar",
+        "segs": [
+         [
+          120,
+          "Banane 120 g"
+         ],
+         [
+          150,
+          "Apfel 150 g"
+         ],
+         [
+          90,
+          "Tomate 90 g"
+         ]
+        ],
+        "cap": "120 g + 150 g + 90 g = 360 g",
+        "col": 0
+       }
       ]
      },
      {
@@ -21590,7 +23090,7 @@
      },
      {
       "id": "q7",
-      "q": "6 kg = ? g (nur die Zahl)",
+      "q": "6 kg = ___ g (Schreibe nur die Zahl.)",
       "explain": "6 · 1000 = 6000",
       "type": "input",
       "answer": [
@@ -21601,7 +23101,7 @@
      },
      {
       "id": "q8",
-      "q": "9000 g = ? kg (nur die Zahl)",
+      "q": "9000 g = ___ kg (Schreibe nur die Zahl.)",
       "explain": "9000 : 1000 = 9",
       "type": "input",
       "answer": [
@@ -21641,7 +23141,7 @@
      },
      {
       "id": "q10",
-      "q": "2 kg 300 g = ?",
+      "q": "2 kg 300 g = ___ g",
       "explain": "2000 + 300 = 2300 g",
       "type": "mc",
       "options": [
@@ -21650,11 +23150,32 @@
        "2300 g",
        "5000 g"
       ],
-      "answer": 2
+      "answer": 2,
+      "visuals": [
+       {
+        "type": "bar",
+        "segs": [
+         [
+          1000,
+          "1 kg"
+         ],
+         [
+          1000,
+          "1 kg"
+         ],
+         [
+          300,
+          "300 g"
+         ]
+        ],
+        "cap": "2 kg 300 g",
+        "col": 1
+       }
+      ]
      },
      {
       "id": "q11",
-      "q": "3 kg 50 g = ?",
+      "q": "3 kg 50 g = ___ g",
       "explain": "3000 + 50 = 3050 g",
       "type": "mc",
       "options": [
@@ -21663,11 +23184,36 @@
        "3500 g",
        "3005 g"
       ],
-      "answer": 1
+      "answer": 1,
+      "visuals": [
+       {
+        "type": "bar",
+        "segs": [
+         [
+          1000,
+          "1 kg"
+         ],
+         [
+          1000,
+          "1 kg"
+         ],
+         [
+          1000,
+          "1 kg"
+         ],
+         [
+          50,
+          "50 g"
+         ]
+        ],
+        "cap": "3 kg 50 g",
+        "col": 1
+       }
+      ]
      },
      {
       "id": "q12",
-      "q": "1800 g = ?",
+      "q": "1800 g = ___ kg ___ g",
       "explain": "1000 + 800 = 1 kg 800 g",
       "type": "mc",
       "options": [
@@ -21680,22 +23226,58 @@
      },
      {
       "id": "q13",
-      "q": "750 g + ? = 1000 g (nur die Zahl)",
-      "explain": "1000 − 750 = 250",
+      "q": "Wie viele Gramm fehlen? 700 g + ___ g = 1000 g (Schreibe nur die Zahl.)",
+      "explain": "1000 − 700 = 300",
       "type": "input",
       "answer": [
-       "250",
-       "250 g"
+       "300",
+       "300 g"
+      ],
+      "visuals": [
+       {
+        "type": "bar",
+        "segs": [
+         [
+          700,
+          "700 g"
+         ],
+         [
+          300,
+          "?",
+          -1
+         ]
+        ],
+        "cap": "700 g + ___ = 1000 g",
+        "col": 1
+       }
       ]
      },
      {
       "id": "q14",
-      "q": "625 g + ? = 1000 g (nur die Zahl)",
-      "explain": "625 + 375 = 1000",
+      "q": "Wie viele Gramm fehlen? 650 g + ___ g = 1000 g (Schreibe nur die Zahl.)",
+      "explain": "1000 − 650 = 350",
       "type": "input",
       "answer": [
-       "375",
-       "375 g"
+       "350",
+       "350 g"
+      ],
+      "visuals": [
+       {
+        "type": "bar",
+        "segs": [
+         [
+          650,
+          "650 g"
+         ],
+         [
+          350,
+          "?",
+          -1
+         ]
+        ],
+        "cap": "650 g + ___ = 1000 g",
+        "col": 1
+       }
       ]
      },
      {
@@ -21709,16 +23291,67 @@
        "750 g",
        "3250 g"
       ],
-      "answer": 2
+      "answer": 2,
+      "visuals": [
+       {
+        "type": "bar",
+        "segs": [
+         [
+          250,
+          "250 g"
+         ],
+         [
+          250,
+          "250 g"
+         ],
+         [
+          250,
+          "250 g"
+         ],
+         [
+          250,
+          "",
+          -1
+         ]
+        ],
+        "cap": "3/4 kg",
+        "col": 2
+       }
+      ]
      },
      {
       "id": "q16",
-      "q": "Ein Buch wiegt 650 g, vier Scheren je 80 g. Wie viel wiegen sie zusammen? (nur die Zahl)",
-      "explain": "650 + 4 · 80 = 970",
+      "q": "Ein Buch wiegt 700 g, 3 Scheren wiegen je 80 g. Wie viel wiegen sie zusammen? (Schreibe nur die Zahl.)",
+      "explain": "700 + 3 · 80 = 940",
       "type": "input",
       "answer": [
-       "970",
-       "970 g"
+       "940",
+       "940 g"
+      ],
+      "visuals": [
+       {
+        "type": "bar",
+        "segs": [
+         [
+          700,
+          "Buch 700 g"
+         ],
+         [
+          80,
+          ""
+         ],
+         [
+          80,
+          ""
+         ],
+         [
+          80,
+          ""
+         ]
+        ],
+        "cap": "700 g + 3 · 80 g",
+        "col": 0
+       }
       ]
      }
     ]
@@ -21743,8 +23376,8 @@
      "text": "Zähle die Gramm zusammen, wie bei normalen Zahlen. Rechne in Schritten: zuerst zwei, dann die dritte dazu.",
      "lines": [
       [
-       "140 g + 125 g",
-       "= 265 g"
+       "150 g + 180 g",
+       "= 330 g"
       ]
      ]
     },
@@ -21810,7 +23443,7 @@
     },
     "ergaenz": {
      "h": "Auf 1 kg ergänzen",
-     "text": "Wenn du wissen willst, wie viel zu 1000 g fehlt, rechnest du 1000 minus das Gewicht. Oder du ergänzt in Schritten bis 1000.",
+     "text": "Wie viel fehlt bis 1000 g? Rechne 1000 minus das Gewicht. Oder ergänze in Schritten bis 1000.",
      "lines": [
       [
        "500 g + 500 g",
@@ -21821,7 +23454,7 @@
        "= 1000 g"
       ],
       [
-       "625 g + 375 g",
+       "400 g + 600 g",
        "= 1000 g"
       ]
      ]
