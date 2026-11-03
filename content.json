@@ -18377,6 +18377,3457 @@
    },
    "art": "franz",
    "src": "dis donc! 5"
+  },
+  {
+   "id": "kl3-mathe-meter-km",
+   "child": "kl3",
+   "subject": "mathe",
+   "chapter": "Messen: Länge und Gewicht",
+   "title": "Meter und Kilometer",
+   "explain": [
+    {
+     "h": "Meter und Kilometer",
+     "text": "Kurze Strecken misst du in Metern (m). Lange Strecken, zum Beispiel den Schulweg, misst du in Kilometern (km). 1 Kilometer ist genau 1000 Meter. Kilo heisst tausend.",
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         100,
+         "100 m"
+        ],
+        [
+         100,
+         "100 m"
+        ],
+        [
+         100,
+         "100 m"
+        ],
+        [
+         100,
+         "100 m"
+        ],
+        [
+         100,
+         "100 m"
+        ],
+        [
+         100,
+         "100 m"
+        ],
+        [
+         100,
+         "100 m"
+        ],
+        [
+         100,
+         "100 m"
+        ],
+        [
+         100,
+         "100 m"
+        ],
+        [
+         100,
+         "100 m"
+        ]
+       ],
+       "cap": "1 km = 10 · 100 m = 1000 m",
+       "col": 0
+      },
+      {
+       "type": "lines",
+       "num": false,
+       "items": [
+        [
+         "1 km",
+         "= 1000 m"
+        ],
+        [
+         "1 m",
+         "= 100 cm"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "1 km = ? m",
+      "opts": [
+       "10",
+       "100",
+       "1000",
+       "10 000"
+      ],
+      "a": [
+       "1000"
+      ],
+      "hint": "Kilo heisst tausend."
+     }
+    },
+    {
+     "h": "Von km zu m: mal 1000",
+     "text": "Wenn du von Kilometern zu Metern wechselst, wird die Zahl grösser. Du rechnest mal 1000. Bei ganzen Zahlen hängst du einfach drei Nullen an.",
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "km",
+       "to": "m",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "Der Pfeil nach rechts: mal 1000"
+      },
+      {
+       "type": "lines",
+       "items": [
+        [
+         "2 km",
+         "= 2000 m"
+        ],
+        [
+         "5 km",
+         "= 5000 m"
+        ],
+        [
+         "9 km",
+         "= 9000 m"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "4 km = ? m",
+      "opts": [
+       "40",
+       "400",
+       "4000",
+       "40 000"
+      ],
+      "a": [
+       "4000"
+      ],
+      "hint": "Hänge drei Nullen an die 4."
+     }
+    },
+    {
+     "h": "Von m zu km: geteilt durch 1000",
+     "text": "Von Metern zu Kilometern wird die Zahl kleiner. Du rechnest geteilt durch 1000. Bei vollen Tausendern streichst du drei Nullen.",
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "m",
+       "to": "km",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "Von m nach km: geteilt durch 1000"
+      },
+      {
+       "type": "lines",
+       "items": [
+        [
+         "3000 m",
+         "= 3 km"
+        ],
+        [
+         "6000 m",
+         "= 6 km"
+        ],
+        [
+         "10 000 m",
+         "= 10 km"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "7000 m = ? km",
+      "opts": [
+       "7",
+       "70",
+       "700",
+       "7000"
+      ],
+      "a": [
+       "7"
+      ],
+      "hint": "Streiche drei Nullen."
+     }
+    },
+    {
+     "h": "km und m zusammen",
+     "text": "Oft hat eine Strecke beides, zum Beispiel 2 km 300 m. Rechne zuerst die km in m um: 2 km sind 2000 m. Dann zählst du 300 m dazu. Das gibt 2300 m.",
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         1000,
+         "1 km"
+        ],
+        [
+         1000,
+         "1 km"
+        ],
+        [
+         300,
+         "300 m"
+        ]
+       ],
+       "cap": "2 km 300 m = 2300 m",
+       "col": 1
+      },
+      {
+       "type": "lines",
+       "num": true,
+       "items": [
+        [
+         "2 km 300 m",
+         "Start"
+        ],
+        [
+         "2000 m + 300 m",
+         "km in m umrechnen"
+        ],
+        [
+         "= 2300 m",
+         "zusammenzählen"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "3 km 500 m = ? m",
+      "opts": [
+       "350",
+       "3500",
+       "3050",
+       "35 000"
+      ],
+      "a": [
+       "3500"
+      ],
+      "hint": "3 km sind 3000 m. Dazu kommen 500 m."
+     }
+    },
+    {
+     "h": "Halber und Viertel-Kilometer",
+     "text": "Ein halber Kilometer sind 500 m. Ein Viertel-Kilometer sind 250 m. Drei Viertel-Kilometer sind 750 m. Vier Viertel ergeben einen ganzen Kilometer.",
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         500,
+         "500 m"
+        ],
+        [
+         500,
+         "500 m"
+        ]
+       ],
+       "cap": "1/2 km = 500 m",
+       "col": 0
+      },
+      {
+       "type": "bar",
+       "segs": [
+        [
+         250,
+         "250 m"
+        ],
+        [
+         250,
+         "250 m"
+        ],
+        [
+         250,
+         "250 m"
+        ],
+        [
+         250,
+         "250 m"
+        ]
+       ],
+       "cap": "1/4 km = 250 m",
+       "col": 2
+      },
+      {
+       "type": "lines",
+       "items": [
+        [
+         "1/2 km",
+         "= 500 m"
+        ],
+        [
+         "1/4 km",
+         "= 250 m"
+        ],
+        [
+         "3/4 km",
+         "= 750 m"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Wie viele Meter sind ein halber km?",
+      "opts": [
+       "50",
+       "250",
+       "500",
+       "5000"
+      ],
+      "a": [
+       "500"
+      ],
+      "hint": "Halbiere 1000."
+     }
+    },
+    {
+     "h": "Wie lange dauert der Schulweg?",
+     "text": "Ein Kind geht zu Fuss etwa 1 km in 20 Minuten. Doppelt so weit heisst doppelt so lange. 3 mal 20 Minuten sind 60 Minuten, also 1 Stunde.",
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         1,
+         "1 km"
+        ],
+        [
+         1,
+         "1 km"
+        ],
+        [
+         1,
+         "1 km"
+        ],
+        [
+         1,
+         "1 km"
+        ]
+       ],
+       "cap": "4 km = 4 · 20 min = 80 min",
+       "col": 1
+      },
+      {
+       "type": "lines",
+       "num": false,
+       "items": [
+        [
+         "1 km",
+         "20 min"
+        ],
+        [
+         "2 km",
+         "40 min"
+        ],
+        [
+         "3 km",
+         "60 min = 1 Stunde"
+        ],
+        [
+         "4 km",
+         "80 min"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Wie lange braucht ein Kind für 3 km?",
+      "opts": [
+       "40 min",
+       "50 min",
+       "60 min",
+       "80 min"
+      ],
+      "a": [
+       "60 min"
+      ],
+      "hint": "3 · 20 Minuten."
+     }
+    },
+    {
+     "h": "Ein Diagramm lesen",
+     "text": "Ein Säulendiagramm zeigt, wie viele Kinder einen Schulweg einer bestimmten Länge haben. Die Säule ist so hoch wie die Anzahl. Lies die Zahl oben an der Säule ab. Das ist ein eigenes Übungsbeispiel.",
+     "visuals": [
+      {
+       "type": "bars",
+       "items": [
+        [
+         "kürzer als 500 m",
+         4
+        ],
+        [
+         "500 m bis 1 km",
+         6
+        ],
+        [
+         "1 km bis 3 km",
+         8
+        ],
+        [
+         "länger als 3 km",
+         3
+        ]
+       ],
+       "unit": "Kinder"
+      },
+      {
+       "type": "lines",
+       "num": false,
+       "items": [
+        [
+         "4 + 6 + 8 + 3",
+         "= 21 Kinder in der Klasse"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Wie viele Kinder haben einen Schulweg zwischen 1 km und 3 km?",
+      "opts": [
+       "3",
+       "6",
+       "8",
+       "21"
+      ],
+      "a": [
+       "8"
+      ],
+      "hint": "Die dritte Säule."
+     }
+    }
+   ],
+   "cards": [
+    {
+     "id": "k1",
+     "q": "Wie viele Meter sind 1 km?",
+     "a": "1000 m",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "1000 m",
+      "100 m",
+      "10 m",
+      "10 000 m"
+     ],
+     "hints": [
+      "Kilo heisst tausend."
+     ],
+     "steps": [
+      [
+       "1 km = 1000 m",
+       "Ein Kilometer ist tausend Meter."
+      ]
+     ]
+    },
+    {
+     "id": "k2",
+     "q": "Womit misst du den Schulweg am besten?",
+     "a": "Kilometer",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "Zentimeter",
+      "Kilometer",
+      "Gramm",
+      "Liter"
+     ],
+     "hints": [
+      "Der Schulweg ist ein langer Weg."
+     ],
+     "steps": [
+      [
+       "Kilometer",
+       "Ergebnis"
+      ]
+     ]
+    },
+    {
+     "id": "k3",
+     "q": "Was ist länger?",
+     "a": "1 km",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "100 m",
+      "500 m",
+      "1 km",
+      "900 m"
+     ],
+     "hints": [
+      "1 km sind 1000 m."
+     ],
+     "steps": [
+      [
+       "1 km",
+       "Ergebnis"
+      ]
+     ]
+    },
+    {
+     "id": "k4",
+     "q": "Welche Länge passt zu einem langen Wanderweg?",
+     "a": "8 km",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "8 cm",
+      "8 mm",
+      "8 g",
+      "8 km"
+     ],
+     "hints": [
+      "Lange Wege misst du in Kilometern."
+     ],
+     "steps": [
+      [
+       "8 km",
+       "Ergebnis"
+      ]
+     ]
+    },
+    {
+     "id": "k5",
+     "q": "Wie viele Meter sind 2 km?",
+     "a": "2000 m",
+     "lvl": 1,
+     "th": "mal",
+     "opts": [
+      "2000 m",
+      "200 m",
+      "20 m",
+      "2 m"
+     ],
+     "hints": [
+      "1 km = 1000 m. Rechne mal 2."
+     ],
+     "steps": [
+      [
+       "2 · 1000 = 2000",
+       "mal 1000"
+      ]
+     ]
+    },
+    {
+     "id": "k6",
+     "q": "Wie viele Meter sind 5 km?",
+     "a": "5000 m",
+     "lvl": 1,
+     "th": "mal",
+     "opts": [
+      "500 m",
+      "5000 m",
+      "50 m",
+      "5 m"
+     ],
+     "hints": [
+      "Mal 1000 heisst: drei Nullen anhängen."
+     ],
+     "steps": [
+      [
+       "5000 m",
+       "Ergebnis"
+      ]
+     ]
+    },
+    {
+     "id": "k7",
+     "q": "Wie viele Meter sind 8 km?",
+     "a": "8000 m",
+     "lvl": 1,
+     "th": "mal",
+     "opts": [
+      "800 m",
+      "80 m",
+      "8000 m",
+      "8100 m"
+     ],
+     "hints": [
+      "Mal 1000."
+     ],
+     "steps": [
+      [
+       "8000 m",
+       "Ergebnis"
+      ]
+     ]
+    },
+    {
+     "id": "k8",
+     "q": "Wie viele Meter sind 10 km?",
+     "a": "10 000 m",
+     "lvl": 1,
+     "th": "mal",
+     "opts": [
+      "1000 m",
+      "100 m",
+      "10 m",
+      "10 000 m"
+     ],
+     "hints": [
+      "10 · 1000"
+     ],
+     "steps": [
+      [
+       "10 000 m",
+       "Ergebnis"
+      ]
+     ]
+    },
+    {
+     "id": "k9",
+     "q": "6 km = ? m (nur die Zahl)",
+     "a": "6000",
+     "lvl": 2,
+     "th": "mal",
+     "ans": [
+      "6000",
+      "6000 m"
+     ],
+     "hints": [
+      "Hänge drei Nullen an."
+     ],
+     "steps": [
+      [
+       "6 · 1000 = 6000",
+       "mal 1000"
+      ]
+     ]
+    },
+    {
+     "id": "k10",
+     "q": "12 km = ? m (nur die Zahl)",
+     "a": "12000",
+     "lvl": 2,
+     "th": "mal",
+     "ans": [
+      "12000",
+      "12 000",
+      "12000 m",
+      "12 000 m"
+     ],
+     "hints": [
+      "12 · 1000"
+     ],
+     "steps": [
+      [
+       "12 · 1000 = 12000",
+       "mal 1000"
+      ]
+     ]
+    },
+    {
+     "id": "k11",
+     "q": "20 km = ? m (nur die Zahl)",
+     "a": "20000",
+     "lvl": 2,
+     "th": "mal",
+     "ans": [
+      "20000",
+      "20 000",
+      "20000 m",
+      "20 000 m"
+     ],
+     "hints": [
+      "20 · 1000"
+     ],
+     "steps": [
+      [
+       "20 · 1000 = 20000",
+       "mal 1000"
+      ]
+     ]
+    },
+    {
+     "id": "k12",
+     "q": "Wie viele km sind 3000 m?",
+     "a": "3 km",
+     "lvl": 1,
+     "th": "durch",
+     "opts": [
+      "30 km",
+      "300 km",
+      "3000 km",
+      "3 km"
+     ],
+     "hints": [
+      "Teile durch 1000."
+     ],
+     "steps": [
+      [
+       "3000 : 1000 = 3",
+       "geteilt durch 1000"
+      ]
+     ]
+    },
+    {
+     "id": "k13",
+     "q": "Wie viele km sind 6000 m?",
+     "a": "6 km",
+     "lvl": 1,
+     "th": "durch",
+     "opts": [
+      "6 km",
+      "60 km",
+      "600 km",
+      "6100 km"
+     ],
+     "hints": [
+      "Streiche drei Nullen."
+     ],
+     "steps": [
+      [
+       "6 km",
+       "Ergebnis"
+      ]
+     ]
+    },
+    {
+     "id": "k14",
+     "q": "Wie viele km sind 9000 m?",
+     "a": "9 km",
+     "lvl": 1,
+     "th": "durch",
+     "opts": [
+      "90 km",
+      "9 km",
+      "900 km",
+      "9 m"
+     ],
+     "hints": [
+      "Streiche drei Nullen."
+     ],
+     "steps": [
+      [
+       "9 km",
+       "Ergebnis"
+      ]
+     ]
+    },
+    {
+     "id": "k15",
+     "q": "Wie viele km sind 10 000 m?",
+     "a": "10 km",
+     "lvl": 2,
+     "th": "durch",
+     "opts": [
+      "100 km",
+      "1 km",
+      "10 km",
+      "1000 km"
+     ],
+     "hints": [
+      "10 000 : 1000"
+     ],
+     "steps": [
+      [
+       "10 km",
+       "Ergebnis"
+      ]
+     ]
+    },
+    {
+     "id": "k16",
+     "q": "4000 m = ? km (nur die Zahl)",
+     "a": "4",
+     "lvl": 2,
+     "th": "durch",
+     "ans": [
+      "4",
+      "4 km"
+     ],
+     "hints": [
+      "Teile durch 1000."
+     ],
+     "steps": [
+      [
+       "4000 : 1000 = 4",
+       "geteilt durch 1000"
+      ]
+     ]
+    },
+    {
+     "id": "k17",
+     "q": "15 000 m = ? km (nur die Zahl)",
+     "a": "15",
+     "lvl": 2,
+     "th": "durch",
+     "ans": [
+      "15",
+      "15 km"
+     ],
+     "hints": [
+      "Streiche drei Nullen."
+     ],
+     "steps": [
+      [
+       "15 000 : 1000 = 15",
+       "geteilt durch 1000"
+      ]
+     ]
+    },
+    {
+     "id": "k18",
+     "q": "2 km 300 m = ? m",
+     "a": "2300 m",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "230 m",
+      "2300 m",
+      "2030 m",
+      "5000 m"
+     ],
+     "hints": [
+      "2 km = 2000 m. Dazu kommen 300 m."
+     ],
+     "steps": [
+      [
+       "2000 + 300 = 2300",
+       "km in m, dann zusammenzählen"
+      ]
+     ]
+    },
+    {
+     "id": "k19",
+     "q": "1 km 500 m = ? m",
+     "a": "1500 m",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "150 m",
+      "1050 m",
+      "1500 m",
+      "6000 m"
+     ],
+     "hints": [
+      "1 km = 1000 m."
+     ],
+     "steps": [
+      [
+       "1500 m",
+       "Ergebnis"
+      ]
+     ]
+    },
+    {
+     "id": "k20",
+     "q": "4 km 250 m = ? m (nur die Zahl)",
+     "a": "4250",
+     "lvl": 2,
+     "th": "misch",
+     "ans": [
+      "4250",
+      "4250 m",
+      "4 250"
+     ],
+     "hints": [
+      "4 km = 4000 m."
+     ],
+     "steps": [
+      [
+       "4000 + 250 = 4250",
+       "zusammenzählen"
+      ]
+     ]
+    },
+    {
+     "id": "k21",
+     "q": "3 km 50 m = ? m",
+     "a": "3050 m",
+     "lvl": 3,
+     "th": "misch",
+     "opts": [
+      "3050 m",
+      "350 m",
+      "3500 m",
+      "3005 m"
+     ],
+     "hints": [
+      "3 km = 3000 m. Dazu kommen nur 50 m."
+     ],
+     "steps": [
+      [
+       "3000 + 50 = 3050",
+       "Achtung: 50, nicht 500"
+      ]
+     ]
+    },
+    {
+     "id": "k22",
+     "q": "5 km 5 m = ? m (nur die Zahl)",
+     "a": "5005",
+     "lvl": 3,
+     "th": "misch",
+     "ans": [
+      "5005",
+      "5005 m"
+     ],
+     "hints": [
+      "5 km = 5000 m."
+     ],
+     "steps": [
+      [
+       "5000 + 5 = 5005",
+       "zusammenzählen"
+      ]
+     ]
+    },
+    {
+     "id": "k23",
+     "q": "1700 m = ? km ? m",
+     "a": "1 km 700 m",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "17 km",
+      "1 km 70 m",
+      "1 km 700 m",
+      "7 km 100 m"
+     ],
+     "hints": [
+      "1000 m sind 1 km. Der Rest bleibt in Metern."
+     ],
+     "steps": [
+      [
+       "1700 = 1000 + 700",
+       "1 km und 700 m"
+      ]
+     ]
+    },
+    {
+     "id": "k24",
+     "q": "3050 m = ? km ? m",
+     "a": "3 km 50 m",
+     "lvl": 3,
+     "th": "misch",
+     "opts": [
+      "3 km 500 m",
+      "30 km 50 m",
+      "305 km",
+      "3 km 50 m"
+     ],
+     "hints": [
+      "3000 m sind 3 km."
+     ],
+     "steps": [
+      [
+       "3050 = 3000 + 50",
+       "3 km und 50 m"
+      ]
+     ]
+    },
+    {
+     "id": "k25",
+     "q": "Wie viele Meter sind ein halber Kilometer?",
+     "a": "500 m",
+     "lvl": 1,
+     "th": "halb",
+     "opts": [
+      "500 m",
+      "50 m",
+      "5000 m",
+      "250 m"
+     ],
+     "hints": [
+      "Die Hälfte von 1000."
+     ],
+     "steps": [
+      [
+       "1000 : 2 = 500",
+       "halbieren"
+      ]
+     ],
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         500,
+         "500 m"
+        ],
+        [
+         500,
+         "500 m"
+        ]
+       ],
+       "cap": "1 km = 2 × 500 m",
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "k26",
+     "q": "Wie viele Meter sind ein Viertel-Kilometer?",
+     "a": "250 m",
+     "lvl": 2,
+     "th": "halb",
+     "opts": [
+      "25 m",
+      "250 m",
+      "400 m",
+      "2500 m"
+     ],
+     "hints": [
+      "1000 : 4"
+     ],
+     "steps": [
+      [
+       "1000 : 4 = 250",
+       "vierteln"
+      ]
+     ],
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         250,
+         "250 m"
+        ],
+        [
+         250,
+         "250 m"
+        ],
+        [
+         250,
+         "250 m"
+        ],
+        [
+         250,
+         "250 m"
+        ]
+       ],
+       "cap": "1 km = 4 × 250 m",
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "k27",
+     "q": "Wie viele Meter sind drei Viertel-Kilometer?",
+     "a": "750 m",
+     "lvl": 2,
+     "th": "halb",
+     "opts": [
+      "300 m",
+      "340 m",
+      "750 m",
+      "3250 m"
+     ],
+     "hints": [
+      "3 mal 250 m."
+     ],
+     "steps": [
+      [
+       "3 · 250 = 750",
+       "drei Viertel"
+      ]
+     ]
+    },
+    {
+     "id": "k28",
+     "q": "750 m + 250 m = ? km",
+     "a": "1 km",
+     "lvl": 2,
+     "th": "halb",
+     "opts": [
+      "10 km",
+      "100 m",
+      "2 km",
+      "1 km"
+     ],
+     "hints": [
+      "Zähle die Meter zusammen."
+     ],
+     "steps": [
+      [
+       "750 + 250 = 1000 m = 1 km",
+       "zusammenzählen, dann umrechnen"
+      ]
+     ]
+    },
+    {
+     "id": "k29",
+     "q": "Ein Weg ist 1 km lang. Du bist 400 m gegangen. Wie viele Meter fehlen noch?",
+     "a": "600",
+     "lvl": 3,
+     "th": "halb",
+     "ans": [
+      "600",
+      "600 m"
+     ],
+     "hints": [
+      "Rechne 1000 − 400."
+     ],
+     "steps": [
+      [
+       "1000 − 400 = 600",
+       "ergänzen auf 1000 m"
+      ]
+     ]
+    },
+    {
+     "id": "k30",
+     "q": "Ein Kind geht 1 km in etwa 20 Minuten. Wie lange braucht es für 2 km?",
+     "a": "40 min",
+     "lvl": 1,
+     "th": "zeit",
+     "opts": [
+      "20 min",
+      "40 min",
+      "30 min",
+      "60 min"
+     ],
+     "hints": [
+      "Doppelt so weit heisst doppelt so lange."
+     ],
+     "steps": [
+      [
+       "2 · 20 = 40",
+       "Minuten"
+      ]
+     ]
+    },
+    {
+     "id": "k31",
+     "q": "Ein Kind geht 1 km in etwa 20 Minuten. Wie lange braucht es für 3 km?",
+     "a": "60 min",
+     "lvl": 2,
+     "th": "zeit",
+     "opts": [
+      "40 min",
+      "50 min",
+      "60 min",
+      "80 min"
+     ],
+     "hints": [
+      "3 · 20 Minuten."
+     ],
+     "steps": [
+      [
+       "3 · 20 = 60 min = 1 Stunde",
+       "Minuten"
+      ]
+     ]
+    },
+    {
+     "id": "k32",
+     "q": "Ein Kind geht 1 km in etwa 20 Minuten. Wie lange braucht es für 4 km?",
+     "a": "80 min",
+     "lvl": 2,
+     "th": "zeit",
+     "opts": [
+      "60 min",
+      "40 min",
+      "100 min",
+      "80 min"
+     ],
+     "hints": [
+      "4 · 20 Minuten."
+     ],
+     "steps": [
+      [
+       "4 · 20 = 80 min",
+       "1 Stunde und 20 Minuten"
+      ]
+     ]
+    },
+    {
+     "id": "k33",
+     "q": "Ein Kind geht 1 km in etwa 20 Minuten. Wie lange braucht es für 5 km? (in Minuten, nur die Zahl)",
+     "a": "100",
+     "lvl": 3,
+     "th": "zeit",
+     "ans": [
+      "100",
+      "100 min"
+     ],
+     "hints": [
+      "5 · 20"
+     ],
+     "steps": [
+      [
+       "5 · 20 = 100 min",
+       "1 Std. 40 min"
+      ]
+     ]
+    },
+    {
+     "id": "k34",
+     "q": "Ein Kind braucht 40 Minuten zu Fuss. Wie lang ist die Strecke ungefähr? (1 km = 20 min)",
+     "a": "2 km",
+     "lvl": 3,
+     "th": "zeit",
+     "opts": [
+      "1 km",
+      "2 km",
+      "4 km",
+      "40 km"
+     ],
+     "hints": [
+      "40 : 20 = ?"
+     ],
+     "steps": [
+      [
+       "40 : 20 = 2",
+       "2 km"
+      ]
+     ]
+    },
+    {
+     "id": "k35",
+     "q": "Wie viele Kinder sind insgesamt in der Klasse?",
+     "a": "21",
+     "lvl": 2,
+     "th": "diag",
+     "opts": [
+      "8",
+      "18",
+      "21",
+      "20"
+     ],
+     "hints": [
+      "Zähle alle Säulen zusammen."
+     ],
+     "steps": [
+      [
+       "4 + 6 + 8 + 3 = 21",
+       "alle Säulen zusammenzählen"
+      ]
+     ],
+     "visuals": [
+      {
+       "type": "bars",
+       "items": [
+        [
+         "kürzer als 500 m",
+         4
+        ],
+        [
+         "500 m bis 1 km",
+         6
+        ],
+        [
+         "1 km bis 3 km",
+         8
+        ],
+        [
+         "länger als 3 km",
+         3
+        ]
+       ],
+       "unit": "Kinder"
+      }
+     ]
+    },
+    {
+     "id": "k36",
+     "q": "Welcher Schulweg kommt am häufigsten vor?",
+     "a": "1 km bis 3 km",
+     "lvl": 1,
+     "th": "diag",
+     "opts": [
+      "kürzer als 500 m",
+      "500 m bis 1 km",
+      "länger als 3 km",
+      "1 km bis 3 km"
+     ],
+     "hints": [
+      "Die höchste Säule."
+     ],
+     "steps": [
+      [
+       "höchste Säule",
+       "1 km bis 3 km"
+      ]
+     ],
+     "visuals": [
+      {
+       "type": "bars",
+       "items": [
+        [
+         "kürzer als 500 m",
+         4
+        ],
+        [
+         "500 m bis 1 km",
+         6
+        ],
+        [
+         "1 km bis 3 km",
+         8
+        ],
+        [
+         "länger als 3 km",
+         3
+        ]
+       ],
+       "unit": "Kinder"
+      }
+     ]
+    },
+    {
+     "id": "k37",
+     "q": "Wie viele Kinder haben einen Schulweg länger als 1 km?",
+     "a": "11",
+     "lvl": 3,
+     "th": "diag",
+     "opts": [
+      "11",
+      "8",
+      "3",
+      "14"
+     ],
+     "hints": [
+      "Das sind zwei Säulen."
+     ],
+     "steps": [
+      [
+       "8 + 3 = 11",
+       "1 km bis 3 km und länger als 3 km"
+      ]
+     ],
+     "visuals": [
+      {
+       "type": "bars",
+       "items": [
+        [
+         "kürzer als 500 m",
+         4
+        ],
+        [
+         "500 m bis 1 km",
+         6
+        ],
+        [
+         "1 km bis 3 km",
+         8
+        ],
+        [
+         "länger als 3 km",
+         3
+        ]
+       ],
+       "unit": "Kinder"
+      }
+     ]
+    },
+    {
+     "id": "k38",
+     "q": "Stimmt das? 4 Kinder haben einen Schulweg, der kürzer ist als 500 m.",
+     "a": "Ja",
+     "lvl": 2,
+     "th": "diag",
+     "opts": [
+      "Nein",
+      "Ja"
+     ],
+     "hints": [
+      "Schau die erste Säule an."
+     ],
+     "steps": [
+      [
+       "erste Säule = 4",
+       "stimmt"
+      ]
+     ],
+     "visuals": [
+      {
+       "type": "bars",
+       "items": [
+        [
+         "kürzer als 500 m",
+         4
+        ],
+        [
+         "500 m bis 1 km",
+         6
+        ],
+        [
+         "1 km bis 3 km",
+         8
+        ],
+        [
+         "länger als 3 km",
+         3
+        ]
+       ],
+       "unit": "Kinder"
+      }
+     ]
+    }
+   ],
+   "exam": {
+    "minutes": 20,
+    "questions": [
+     {
+      "id": "q1",
+      "q": "Wie viele Meter sind 1 km?",
+      "explain": "1 km = 1000 m",
+      "type": "mc",
+      "options": [
+       "10 m",
+       "100 m",
+       "1000 m",
+       "10 000 m"
+      ],
+      "answer": 2
+     },
+     {
+      "id": "q2",
+      "q": "Wie viele Meter sind 3 km?",
+      "explain": "3 · 1000 = 3000 m",
+      "type": "mc",
+      "options": [
+       "30 m",
+       "300 m",
+       "3000 m",
+       "3 m"
+      ],
+      "answer": 2
+     },
+     {
+      "id": "q3",
+      "q": "7 km = ? m (nur die Zahl)",
+      "explain": "7 · 1000 = 7000",
+      "type": "input",
+      "answer": [
+       "7000",
+       "7000 m",
+       "7 000"
+      ]
+     },
+     {
+      "id": "q4",
+      "q": "9000 m = ? km (nur die Zahl)",
+      "explain": "9000 : 1000 = 9",
+      "type": "input",
+      "answer": [
+       "9",
+       "9 km"
+      ]
+     },
+     {
+      "id": "q5",
+      "q": "Wie viele Meter sind ein halber km?",
+      "explain": "1000 : 2 = 500 m",
+      "type": "mc",
+      "options": [
+       "50 m",
+       "250 m",
+       "500 m",
+       "5000 m"
+      ],
+      "answer": 2,
+      "visuals": [
+       {
+        "type": "bar",
+        "segs": [
+         [
+          500,
+          "500 m"
+         ],
+         [
+          500,
+          "500 m"
+         ]
+        ],
+        "cap": "1 km = 2 × 500 m",
+        "col": 0
+       }
+      ]
+     },
+     {
+      "id": "q6",
+      "q": "2 km 400 m = ? m (nur die Zahl)",
+      "explain": "2000 + 400 = 2400",
+      "type": "input",
+      "answer": [
+       "2400",
+       "2400 m",
+       "2 400"
+      ]
+     },
+     {
+      "id": "q7",
+      "q": "3 km 50 m = ?",
+      "explain": "3000 + 50 = 3050 m",
+      "type": "mc",
+      "options": [
+       "350 m",
+       "3050 m",
+       "3500 m",
+       "3005 m"
+      ],
+      "answer": 1
+     },
+     {
+      "id": "q8",
+      "q": "1800 m = ?",
+      "explain": "1000 + 800 = 1 km 800 m",
+      "type": "mc",
+      "options": [
+       "18 km",
+       "1 km 80 m",
+       "1 km 800 m",
+       "8 km 100 m"
+      ],
+      "answer": 2
+     },
+     {
+      "id": "q9",
+      "q": "Ein Weg ist 1 km lang. Du bist 650 m gegangen. Wie viele Meter fehlen noch? (nur die Zahl)",
+      "explain": "1000 − 650 = 350",
+      "type": "input",
+      "answer": [
+       "350",
+       "350 m"
+      ]
+     },
+     {
+      "id": "q10",
+      "q": "Wie viele Meter sind drei Viertel-km?",
+      "explain": "3 · 250 = 750 m",
+      "type": "mc",
+      "options": [
+       "300 m",
+       "340 m",
+       "750 m",
+       "3250 m"
+      ],
+      "answer": 2
+     },
+     {
+      "id": "q11",
+      "q": "Ein Kind geht 1 km in 20 min. Wie lange braucht es für 3 km?",
+      "explain": "3 · 20 = 60 min",
+      "type": "mc",
+      "options": [
+       "40 min",
+       "50 min",
+       "60 min",
+       "80 min"
+      ],
+      "answer": 2
+     },
+     {
+      "id": "q12",
+      "q": "Ein Kind geht 1 km in 20 min. Wie viele Minuten braucht es für 4 km? (nur die Zahl)",
+      "explain": "4 · 20 = 80",
+      "type": "input",
+      "answer": [
+       "80",
+       "80 min"
+      ]
+     },
+     {
+      "id": "q13",
+      "q": "Wie viele Kinder haben einen Schulweg zwischen 1 km und 3 km?",
+      "explain": "Lies die dritte Säule ab: 8",
+      "type": "mc",
+      "options": [
+       "3",
+       "6",
+       "8",
+       "21"
+      ],
+      "answer": 2,
+      "visuals": [
+       {
+        "type": "bars",
+        "items": [
+         [
+          "kürzer als 500 m",
+          4
+         ],
+         [
+          "500 m bis 1 km",
+          6
+         ],
+         [
+          "1 km bis 3 km",
+          8
+         ],
+         [
+          "länger als 3 km",
+          3
+         ]
+        ],
+        "unit": "Kinder"
+       }
+      ]
+     },
+     {
+      "id": "q14",
+      "q": "Wie viele Kinder sind insgesamt in der Klasse? (nur die Zahl)",
+      "explain": "4 + 6 + 8 + 3 = 21",
+      "type": "input",
+      "answer": [
+       "21"
+      ],
+      "visuals": [
+       {
+        "type": "bars",
+        "items": [
+         [
+          "kürzer als 500 m",
+          4
+         ],
+         [
+          "500 m bis 1 km",
+          6
+         ],
+         [
+          "1 km bis 3 km",
+          8
+         ],
+         [
+          "länger als 3 km",
+          3
+         ]
+        ],
+        "unit": "Kinder"
+       }
+      ]
+     },
+     {
+      "id": "q15",
+      "q": "Wie viele Kinder haben einen Schulweg unter 1 km?",
+      "explain": "4 + 6 = 10",
+      "type": "mc",
+      "options": [
+       "4",
+       "6",
+       "10",
+       "14"
+      ],
+      "answer": 2,
+      "visuals": [
+       {
+        "type": "bars",
+        "items": [
+         [
+          "kürzer als 500 m",
+          4
+         ],
+         [
+          "500 m bis 1 km",
+          6
+         ],
+         [
+          "1 km bis 3 km",
+          8
+         ],
+         [
+          "länger als 3 km",
+          3
+         ]
+        ],
+        "unit": "Kinder"
+       }
+      ]
+     },
+     {
+      "id": "q16",
+      "q": "Womit misst du eine lange Strecke wie einen Wanderweg?",
+      "explain": "Lange Strecken misst du in km",
+      "type": "mc",
+      "options": [
+       "Zentimeter",
+       "Gramm",
+       "Kilometer",
+       "Liter"
+      ],
+      "answer": 2
+     }
+    ]
+   },
+   "theory": {
+    "basis": {
+     "h": "Meter und Kilometer",
+     "text": "Kurze Strecken misst du in Metern (m), lange in Kilometern (km). 1 km = 1000 m.",
+     "lines": [
+      [
+       "1 km",
+       "= 1000 m"
+      ],
+      [
+       "1 m",
+       "= 100 cm"
+      ]
+     ]
+    },
+    "mal": {
+     "h": "Von km zu m: mal 1000",
+     "text": "Wenn du von km zu m wechselst, rechnest du mal 1000. Hänge drei Nullen an.",
+     "lines": [
+      [
+       "2 km",
+       "= 2000 m"
+      ],
+      [
+       "5 km",
+       "= 5000 m"
+      ]
+     ]
+    },
+    "durch": {
+     "h": "Von m zu km: durch 1000",
+     "text": "Wenn du von m zu km wechselst, rechnest du geteilt durch 1000. Streiche drei Nullen.",
+     "lines": [
+      [
+       "3000 m",
+       "= 3 km"
+      ],
+      [
+       "8000 m",
+       "= 8 km"
+      ]
+     ]
+    },
+    "misch": {
+     "h": "km und m zusammen",
+     "text": "Rechne zuerst die km in m um. Dann zähle die Meter zusammen. Achtung bei Nullen: 3 km 50 m sind 3050 m.",
+     "lines": [
+      [
+       "2 km 300 m",
+       "= 2000 m + 300 m"
+      ],
+      [
+       "",
+       "= 2300 m"
+      ]
+     ]
+    },
+    "halb": {
+     "h": "Halber und Viertel-Kilometer",
+     "text": "Ein halber km sind 500 m. Ein Viertel-km sind 250 m. Drei Viertel-km sind 750 m.",
+     "lines": [
+      [
+       "1/2 km",
+       "= 500 m"
+      ],
+      [
+       "1/4 km",
+       "= 250 m"
+      ],
+      [
+       "3/4 km",
+       "= 750 m"
+      ]
+     ]
+    },
+    "zeit": {
+     "h": "Strecke und Zeit",
+     "text": "Ein Kind geht etwa 1 km in 20 Minuten. Doppelt so weit braucht doppelt so lange.",
+     "lines": [
+      [
+       "1 km",
+       "20 min"
+      ],
+      [
+       "2 km",
+       "40 min"
+      ],
+      [
+       "3 km",
+       "60 min"
+      ]
+     ]
+    },
+    "diag": {
+     "h": "Diagramm lesen",
+     "text": "Die Säule ist so hoch wie die Anzahl. Lies die Zahl oben an der Säule ab. Für «insgesamt» zählst du alle Säulen zusammen."
+    }
+   },
+   "art": "laenge"
+  },
+  {
+   "id": "kl3-mathe-gramm-kg",
+   "child": "kl3",
+   "subject": "mathe",
+   "chapter": "Messen: Länge und Gewicht",
+   "title": "Gramm und Kilo",
+   "explain": [
+    {
+     "h": "Gramm und Kilogramm",
+     "text": "Leichte Dinge wiegst du in Gramm (g). Schwere Dinge wiegst du in Kilogramm (kg). 1 Kilogramm ist genau 1000 Gramm. Kilo heisst tausend.",
+     "visuals": [
+      {
+       "type": "scale",
+       "l": "1 kg",
+       "r": "1000 g",
+       "le": "⚖️",
+       "re": "⚖️",
+       "cap": "1 kg wiegt gleich viel wie 1000 g"
+      },
+      {
+       "type": "lines",
+       "items": [
+        [
+         "1 kg",
+         "= 1000 g"
+        ],
+        [
+         "1 kg",
+         "= 2 · 500 g"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "1 kg = ? g",
+      "opts": [
+       "10",
+       "100",
+       "1000",
+       "10 000"
+      ],
+      "a": [
+       "1000"
+      ],
+      "hint": "Kilo heisst tausend."
+     }
+    },
+    {
+     "h": "Wie schwer ist das?",
+     "text": "Ein Znüni besteht aus verschiedenen Dingen. Jedes Ding hat ein eigenes Gewicht. Du vergleichst die Gewichte: Die grösste Zahl ist das schwerste Ding.",
+     "visuals": [
+      {
+       "type": "pairs",
+       "items": [
+        [
+         "Banane",
+         "170 g",
+         "🍌"
+        ],
+        [
+         "Apfel",
+         "140 g",
+         "🍎"
+        ],
+        [
+         "Orange",
+         "145 g",
+         "🍊"
+        ],
+        [
+         "Joghurt",
+         "125 g",
+         "🥛"
+        ],
+        [
+         "Tomate",
+         "80 g",
+         "🍅"
+        ]
+       ]
+      },
+      {
+       "type": "bars",
+       "items": [
+        [
+         "Tomate",
+         80
+        ],
+        [
+         "Apfel",
+         140
+        ],
+        [
+         "Orange",
+         145
+        ],
+        [
+         "Banane",
+         170
+        ]
+       ],
+       "unit": "Gramm (g)"
+      }
+     ],
+     "try": {
+      "q": "Welches Obst ist am schwersten?",
+      "opts": [
+       "Banane",
+       "Apfel",
+       "Orange",
+       "Tomate"
+      ],
+      "a": [
+       "Banane"
+      ],
+      "hint": "Schau, welche Zahl am grössten ist."
+     }
+    },
+    {
+     "h": "Gewichte zusammenzählen",
+     "text": "Wenn du wissen willst, wie viel ein Zvieri wiegt, zählst du die Gewichte zusammen. Rechne in Schritten, wenn es mehr als zwei Dinge sind.",
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         140,
+         "Apfel 140 g"
+        ],
+        [
+         125,
+         "Joghurt 125 g"
+        ]
+       ],
+       "cap": "140 g + 125 g = 265 g",
+       "col": 1
+      },
+      {
+       "type": "lines",
+       "num": true,
+       "items": [
+        [
+         "140 g + 125 g",
+         "Apfel und Joghurt"
+        ],
+        [
+         "= 265 g",
+         "zusammen"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "Banane 170 g + Tomate 80 g = ? g",
+      "opts": [
+       "240 g",
+       "250 g",
+       "260 g",
+       "350 g"
+      ],
+      "a": [
+       "250 g"
+      ],
+      "hint": "170 + 80"
+     }
+    },
+    {
+     "h": "Von kg zu g: mal 1000",
+     "text": "Wenn du von Kilogramm zu Gramm wechselst, wird die Zahl grösser. Du rechnest mal 1000. Bei ganzen Zahlen hängst du drei Nullen an.",
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "kg",
+       "to": "g",
+       "up": "· 1000",
+       "down": ": 1000",
+       "cap": "Von kg nach g: mal 1000"
+      },
+      {
+       "type": "lines",
+       "items": [
+        [
+         "2 kg",
+         "= 2000 g"
+        ],
+        [
+         "5 kg",
+         "= 5000 g"
+        ],
+        [
+         "9 kg",
+         "= 9000 g"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "3 kg = ? g",
+      "opts": [
+       "30",
+       "300",
+       "3000",
+       "30 000"
+      ],
+      "a": [
+       "3000"
+      ],
+      "hint": "Hänge drei Nullen an die 3."
+     }
+    },
+    {
+     "h": "Von g zu kg: geteilt durch 1000",
+     "text": "Von Gramm zu Kilogramm wird die Zahl kleiner. Du rechnest geteilt durch 1000. Bei vollen Tausendern streichst du drei Nullen.",
+     "visuals": [
+      {
+       "type": "conv",
+       "from": "g",
+       "to": "kg",
+       "up": ": 1000",
+       "down": "· 1000",
+       "cap": "Von g nach kg: geteilt durch 1000"
+      },
+      {
+       "type": "lines",
+       "items": [
+        [
+         "3000 g",
+         "= 3 kg"
+        ],
+        [
+         "6000 g",
+         "= 6 kg"
+        ],
+        [
+         "10 000 g",
+         "= 10 kg"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "5000 g = ? kg",
+      "opts": [
+       "5",
+       "50",
+       "500",
+       "5000"
+      ],
+      "a": [
+       "5"
+      ],
+      "hint": "Streiche drei Nullen."
+     }
+    },
+    {
+     "h": "Halbes und Viertel-Kilo",
+     "text": "Ein halbes Kilogramm sind 500 g. Ein Viertel-Kilogramm sind 250 g. Drei Viertel-Kilogramm sind 750 g. Vier Viertel ergeben ein ganzes Kilo.",
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         500,
+         "500 g"
+        ],
+        [
+         500,
+         "500 g"
+        ]
+       ],
+       "cap": "1/2 kg = 500 g",
+       "col": 0
+      },
+      {
+       "type": "bar",
+       "segs": [
+        [
+         250,
+         "250 g"
+        ],
+        [
+         250,
+         "250 g"
+        ],
+        [
+         250,
+         "250 g"
+        ],
+        [
+         250,
+         "250 g"
+        ]
+       ],
+       "cap": "1/4 kg = 250 g",
+       "col": 2
+      },
+      {
+       "type": "lines",
+       "items": [
+        [
+         "1/2 kg",
+         "= 500 g"
+        ],
+        [
+         "1/4 kg",
+         "= 250 g"
+        ],
+        [
+         "3/4 kg",
+         "= 750 g"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "250 g + ? = 1000 g",
+      "opts": [
+       "500 g",
+       "650 g",
+       "750 g",
+       "850 g"
+      ],
+      "a": [
+       "750 g"
+      ],
+      "hint": "Rechne 1000 − 250."
+     }
+    },
+    {
+     "h": "Dinge suchen, die zusammen 1 kg wiegen",
+     "text": "Ein Buch wiegt 650 g. Dazu kommen vier Scheren mit je 80 g. Zusammen sind das 970 g. Das ist fast ein Kilogramm. Es fehlen noch 30 g.",
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         650,
+         "Buch 650 g"
+        ],
+        [
+         80,
+         ""
+        ],
+        [
+         80,
+         ""
+        ],
+        [
+         80,
+         ""
+        ],
+        [
+         80,
+         ""
+        ]
+       ],
+       "cap": "650 g + 4 · 80 g = 970 g",
+       "col": 1
+      },
+      {
+       "type": "lines",
+       "num": true,
+       "items": [
+        [
+         "4 · 80 g",
+         "= 320 g"
+        ],
+        [
+         "650 g + 320 g",
+         "= 970 g"
+        ],
+        [
+         "1000 g − 970 g",
+         "= 30 g fehlen"
+        ]
+       ]
+      }
+     ],
+     "try": {
+      "q": "625 g + ? = 1000 g",
+      "opts": [
+       "275 g",
+       "375 g",
+       "475 g",
+       "385 g"
+      ],
+      "a": [
+       "375 g"
+      ],
+      "hint": "Ergänze in Schritten: erst auf 700, dann auf 1000."
+     }
+    }
+   ],
+   "cards": [
+    {
+     "id": "g1",
+     "q": "Wie viele Gramm sind 1 kg?",
+     "a": "1000 g",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "1000 g",
+      "10 g",
+      "100 g",
+      "10 000 g"
+     ],
+     "hints": [
+      "Kilo heisst tausend."
+     ],
+     "steps": [
+      [
+       "1 kg = 1000 g",
+       "Ein Kilogramm ist tausend Gramm."
+      ]
+     ],
+     "visuals": [
+      {
+       "type": "scale",
+       "l": "1 kg",
+       "r": "1000 g",
+       "le": "⚖️",
+       "re": "⚖️",
+       "cap": "1 kg = 1000 g"
+      }
+     ]
+    },
+    {
+     "id": "g2",
+     "q": "Womit wiegst du einen Apfel am besten?",
+     "a": "Gramm",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "Kilogramm",
+      "Gramm",
+      "Meter",
+      "Liter"
+     ],
+     "hints": [
+      "Ein Apfel ist leicht."
+     ],
+     "steps": [
+      [
+       "Gramm",
+       "Ergebnis"
+      ]
+     ]
+    },
+    {
+     "id": "g3",
+     "q": "Womit wiegst du einen Schulrucksack am besten?",
+     "a": "Kilogramm",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "Gramm",
+      "Meter",
+      "Kilogramm",
+      "Zentimeter"
+     ],
+     "hints": [
+      "Ein Rucksack ist schwer."
+     ],
+     "steps": [
+      [
+       "Kilogramm",
+       "Ergebnis"
+      ]
+     ]
+    },
+    {
+     "id": "g4",
+     "q": "Was ist schwerer?",
+     "a": "1 kg",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "900 g",
+      "500 g",
+      "100 g",
+      "1 kg"
+     ],
+     "hints": [
+      "1 kg sind 1000 g."
+     ],
+     "steps": [
+      [
+       "1 kg",
+       "Ergebnis"
+      ]
+     ]
+    },
+    {
+     "id": "g5",
+     "q": "Welches Obst ist am schwersten?",
+     "a": "Banane (170 g)",
+     "lvl": 1,
+     "th": "vergl",
+     "opts": [
+      "Banane (170 g)",
+      "Apfel (140 g)",
+      "Orange (145 g)",
+      "Tomate (80 g)"
+     ],
+     "hints": [
+      "Vergleiche die Zahlen."
+     ],
+     "steps": [
+      [
+       "170 g ist die grösste Zahl",
+       "Banane"
+      ]
+     ],
+     "visuals": [
+      {
+       "type": "pairs",
+       "items": [
+        [
+         "Banane",
+         "170 g",
+         "🍌"
+        ],
+        [
+         "Apfel",
+         "140 g",
+         "🍎"
+        ],
+        [
+         "Orange",
+         "145 g",
+         "🍊"
+        ],
+        [
+         "Joghurt",
+         "125 g",
+         "🥛"
+        ],
+        [
+         "Tomate",
+         "80 g",
+         "🍅"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "g6",
+     "q": "Welches ist am leichtesten?",
+     "a": "Tomate (80 g)",
+     "lvl": 1,
+     "th": "vergl",
+     "opts": [
+      "Apfel (140 g)",
+      "Tomate (80 g)",
+      "Orange (145 g)",
+      "Banane (170 g)"
+     ],
+     "hints": [
+      "Die kleinste Zahl."
+     ],
+     "steps": [
+      [
+       "80 g ist die kleinste Zahl",
+       "Tomate"
+      ]
+     ],
+     "visuals": [
+      {
+       "type": "bars",
+       "items": [
+        [
+         "Tomate",
+         80
+        ],
+        [
+         "Apfel",
+         140
+        ],
+        [
+         "Orange",
+         145
+        ],
+        [
+         "Banane",
+         170
+        ]
+       ],
+       "unit": "Gramm (g)"
+      }
+     ]
+    },
+    {
+     "id": "g7",
+     "q": "Welche Reihenfolge ist richtig (leicht → schwer)?",
+     "a": "Tomate, Apfel, Orange, Banane",
+     "lvl": 2,
+     "th": "vergl",
+     "opts": [
+      "Banane, Orange, Apfel, Tomate",
+      "Apfel, Tomate, Orange, Banane",
+      "Tomate, Apfel, Orange, Banane",
+      "Tomate, Orange, Apfel, Banane"
+     ],
+     "hints": [
+      "Beginne mit der kleinsten Zahl: 80, 140, 145, 170."
+     ],
+     "steps": [
+      [
+       "80 < 140 < 145 < 170",
+       "von leicht nach schwer"
+      ]
+     ],
+     "visuals": [
+      {
+       "type": "bars",
+       "items": [
+        [
+         "Tomate",
+         80
+        ],
+        [
+         "Apfel",
+         140
+        ],
+        [
+         "Orange",
+         145
+        ],
+        [
+         "Banane",
+         170
+        ]
+       ],
+       "unit": "Gramm (g)"
+      }
+     ]
+    },
+    {
+     "id": "g8",
+     "q": "Apfel 140 g + Joghurt 125 g wiegen zusammen ?",
+     "a": "265 g",
+     "lvl": 2,
+     "th": "add",
+     "opts": [
+      "255 g",
+      "175 g",
+      "365 g",
+      "265 g"
+     ],
+     "hints": [
+      "Zähle 140 + 125 zusammen."
+     ],
+     "steps": [
+      [
+       "140 + 125 = 265",
+       "zusammenzählen"
+      ]
+     ],
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         140,
+         "Apfel 140 g"
+        ],
+        [
+         125,
+         "Joghurt 125 g"
+        ]
+       ],
+       "cap": "140 g + 125 g = 265 g",
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "g9",
+     "q": "Banane 170 g + Tomate 80 g wiegen zusammen ? (nur die Zahl)",
+     "a": "250",
+     "lvl": 2,
+     "th": "add",
+     "ans": [
+      "250",
+      "250 g"
+     ],
+     "hints": [
+      "170 + 80"
+     ],
+     "steps": [
+      [
+       "170 + 80 = 250",
+       "zusammenzählen"
+      ]
+     ]
+    },
+    {
+     "id": "g10",
+     "q": "Apfel 140 g + Orange 145 g wiegen zusammen ? (nur die Zahl)",
+     "a": "285",
+     "lvl": 2,
+     "th": "add",
+     "ans": [
+      "285",
+      "285 g"
+     ],
+     "hints": [
+      "140 + 145"
+     ],
+     "steps": [
+      [
+       "140 + 145 = 285",
+       "zusammenzählen"
+      ]
+     ]
+    },
+    {
+     "id": "g11",
+     "q": "Banane 170 g + Apfel 140 g + Tomate 80 g wiegen zusammen ? (nur die Zahl)",
+     "a": "390",
+     "lvl": 3,
+     "th": "add",
+     "ans": [
+      "390",
+      "390 g"
+     ],
+     "hints": [
+      "Zuerst 170 + 140, dann + 80."
+     ],
+     "steps": [
+      [
+       "170 + 140 = 310",
+       "zwei zusammen"
+      ],
+      [
+       "310 + 80 = 390 g",
+       "dritte dazu"
+      ]
+     ]
+    },
+    {
+     "id": "g12",
+     "q": "Wie viele Gramm sind 2 kg?",
+     "a": "2000 g",
+     "lvl": 1,
+     "th": "mal",
+     "opts": [
+      "200 g",
+      "20 g",
+      "2 g",
+      "2000 g"
+     ],
+     "hints": [
+      "Mal 1000."
+     ],
+     "steps": [
+      [
+       "2 · 1000 = 2000",
+       "mal 1000"
+      ]
+     ]
+    },
+    {
+     "id": "g13",
+     "q": "Wie viele Gramm sind 5 kg?",
+     "a": "5000 g",
+     "lvl": 1,
+     "th": "mal",
+     "opts": [
+      "5000 g",
+      "500 g",
+      "50 g",
+      "5100 g"
+     ],
+     "hints": [
+      "Drei Nullen anhängen."
+     ],
+     "steps": [
+      [
+       "5000 g",
+       "Ergebnis"
+      ]
+     ]
+    },
+    {
+     "id": "g14",
+     "q": "Wie viele Gramm sind 9 kg?",
+     "a": "9000 g",
+     "lvl": 1,
+     "th": "mal",
+     "opts": [
+      "900 g",
+      "9000 g",
+      "90 g",
+      "9 g"
+     ],
+     "hints": [
+      "Mal 1000."
+     ],
+     "steps": [
+      [
+       "9000 g",
+       "Ergebnis"
+      ]
+     ]
+    },
+    {
+     "id": "g15",
+     "q": "7 kg = ? g (nur die Zahl)",
+     "a": "7000",
+     "lvl": 2,
+     "th": "mal",
+     "ans": [
+      "7000",
+      "7000 g",
+      "7 000"
+     ],
+     "hints": [
+      "Drei Nullen anhängen."
+     ],
+     "steps": [
+      [
+       "7 · 1000 = 7000",
+       "mal 1000"
+      ]
+     ]
+    },
+    {
+     "id": "g16",
+     "q": "12 kg = ? g (nur die Zahl)",
+     "a": "12000",
+     "lvl": 2,
+     "th": "mal",
+     "ans": [
+      "12000",
+      "12 000",
+      "12000 g"
+     ],
+     "hints": [
+      "12 · 1000"
+     ],
+     "steps": [
+      [
+       "12 · 1000 = 12000",
+       "mal 1000"
+      ]
+     ]
+    },
+    {
+     "id": "g17",
+     "q": "Wie viele kg sind 3000 g?",
+     "a": "3 kg",
+     "lvl": 1,
+     "th": "durch",
+     "opts": [
+      "3 kg",
+      "30 kg",
+      "300 kg",
+      "3000 kg"
+     ],
+     "hints": [
+      "Teile durch 1000."
+     ],
+     "steps": [
+      [
+       "3000 : 1000 = 3",
+       "geteilt durch 1000"
+      ]
+     ]
+    },
+    {
+     "id": "g18",
+     "q": "Wie viele kg sind 6000 g?",
+     "a": "6 kg",
+     "lvl": 1,
+     "th": "durch",
+     "opts": [
+      "60 kg",
+      "6 kg",
+      "600 kg",
+      "6 g"
+     ],
+     "hints": [
+      "Streiche drei Nullen."
+     ],
+     "steps": [
+      [
+       "6 kg",
+       "Ergebnis"
+      ]
+     ]
+    },
+    {
+     "id": "g19",
+     "q": "Wie viele kg sind 10 000 g?",
+     "a": "10 kg",
+     "lvl": 2,
+     "th": "durch",
+     "opts": [
+      "100 kg",
+      "1 kg",
+      "10 kg",
+      "1000 kg"
+     ],
+     "hints": [
+      "10 000 : 1000"
+     ],
+     "steps": [
+      [
+       "10 kg",
+       "Ergebnis"
+      ]
+     ]
+    },
+    {
+     "id": "g20",
+     "q": "8000 g = ? kg (nur die Zahl)",
+     "a": "8",
+     "lvl": 2,
+     "th": "durch",
+     "ans": [
+      "8",
+      "8 kg"
+     ],
+     "hints": [
+      "Streiche drei Nullen."
+     ],
+     "steps": [
+      [
+       "8000 : 1000 = 8",
+       "geteilt durch 1000"
+      ]
+     ]
+    },
+    {
+     "id": "g21",
+     "q": "2 kg 500 g = ? g",
+     "a": "2500 g",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "2500 g",
+      "250 g",
+      "2050 g",
+      "7000 g"
+     ],
+     "hints": [
+      "2 kg = 2000 g."
+     ],
+     "steps": [
+      [
+       "2000 + 500 = 2500",
+       "zusammenzählen"
+      ]
+     ]
+    },
+    {
+     "id": "g22",
+     "q": "1 kg 200 g = ? g (nur die Zahl)",
+     "a": "1200",
+     "lvl": 2,
+     "th": "misch",
+     "ans": [
+      "1200",
+      "1200 g",
+      "1 200"
+     ],
+     "hints": [
+      "1 kg = 1000 g."
+     ],
+     "steps": [
+      [
+       "1000 + 200 = 1200",
+       "zusammenzählen"
+      ]
+     ]
+    },
+    {
+     "id": "g23",
+     "q": "3 kg 50 g = ? g",
+     "a": "3050 g",
+     "lvl": 3,
+     "th": "misch",
+     "opts": [
+      "350 g",
+      "3500 g",
+      "3050 g",
+      "3005 g"
+     ],
+     "hints": [
+      "3 kg = 3000 g. Dazu kommen nur 50 g."
+     ],
+     "steps": [
+      [
+       "3000 + 50 = 3050",
+       "Achtung: 50, nicht 500"
+      ]
+     ]
+    },
+    {
+     "id": "g24",
+     "q": "1700 g = ? kg ? g",
+     "a": "1 kg 700 g",
+     "lvl": 2,
+     "th": "misch",
+     "opts": [
+      "17 kg",
+      "1 kg 70 g",
+      "7 kg 100 g",
+      "1 kg 700 g"
+     ],
+     "hints": [
+      "1000 g sind 1 kg."
+     ],
+     "steps": [
+      [
+       "1700 = 1000 + 700",
+       "1 kg und 700 g"
+      ]
+     ]
+    },
+    {
+     "id": "g25",
+     "q": "Wie viele Gramm sind ein halbes Kilogramm?",
+     "a": "500 g",
+     "lvl": 1,
+     "th": "halb",
+     "opts": [
+      "500 g",
+      "50 g",
+      "250 g",
+      "5000 g"
+     ],
+     "hints": [
+      "Die Hälfte von 1000."
+     ],
+     "steps": [
+      [
+       "1000 : 2 = 500",
+       "halbieren"
+      ]
+     ],
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         500,
+         "500 g"
+        ],
+        [
+         500,
+         "500 g"
+        ]
+       ],
+       "cap": "1 kg = 2 · 500 g",
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "g26",
+     "q": "Wie viele Gramm sind ein Viertel-Kilogramm?",
+     "a": "250 g",
+     "lvl": 2,
+     "th": "halb",
+     "opts": [
+      "25 g",
+      "250 g",
+      "400 g",
+      "2500 g"
+     ],
+     "hints": [
+      "1000 : 4"
+     ],
+     "steps": [
+      [
+       "1000 : 4 = 250",
+       "vierteln"
+      ]
+     ],
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         250,
+         "250 g"
+        ],
+        [
+         250,
+         "250 g"
+        ],
+        [
+         250,
+         "250 g"
+        ],
+        [
+         250,
+         "250 g"
+        ]
+       ],
+       "cap": "1 kg = 4 · 250 g",
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "g27",
+     "q": "Wie viele Gramm sind drei Viertel-Kilogramm?",
+     "a": "750 g",
+     "lvl": 2,
+     "th": "halb",
+     "opts": [
+      "300 g",
+      "340 g",
+      "750 g",
+      "3250 g"
+     ],
+     "hints": [
+      "3 mal 250 g."
+     ],
+     "steps": [
+      [
+       "3 · 250 = 750",
+       "drei Viertel"
+      ]
+     ]
+    },
+    {
+     "id": "g28",
+     "q": "Wie viel fehlt? 500 g + ? = 1000 g",
+     "a": "500 g",
+     "lvl": 1,
+     "th": "ergaenz",
+     "opts": [
+      "250 g",
+      "600 g",
+      "1000 g",
+      "500 g"
+     ],
+     "hints": [
+      "1000 − 500"
+     ],
+     "steps": [
+      [
+       "1000 − 500 = 500",
+       "ergänzen auf 1 kg"
+      ]
+     ]
+    },
+    {
+     "id": "g29",
+     "q": "Wie viel fehlt? 750 g + ? = 1000 g",
+     "a": "250 g",
+     "lvl": 1,
+     "th": "ergaenz",
+     "opts": [
+      "250 g",
+      "350 g",
+      "150 g",
+      "750 g"
+     ],
+     "hints": [
+      "1000 − 750"
+     ],
+     "steps": [
+      [
+       "1000 − 750 = 250",
+       "ergänzen auf 1 kg"
+      ]
+     ]
+    },
+    {
+     "id": "g30",
+     "q": "Wie viel fehlt? 625 g + ? = 1000 g",
+     "a": "375 g",
+     "lvl": 2,
+     "th": "ergaenz",
+     "opts": [
+      "275 g",
+      "375 g",
+      "475 g",
+      "385 g"
+     ],
+     "hints": [
+      "Erst auf 700, dann auf 1000: 75 + 300."
+     ],
+     "steps": [
+      [
+       "625 + 75 = 700",
+       "erster Schritt"
+      ],
+      [
+       "700 + 300 = 1000",
+       "zweiter Schritt"
+      ],
+      [
+       "75 + 300 = 375 g",
+       "Zusammen"
+      ]
+     ]
+    },
+    {
+     "id": "g31",
+     "q": "Wie viel fehlt? 125 g + ? = 1000 g (nur die Zahl)",
+     "a": "875",
+     "lvl": 3,
+     "th": "ergaenz",
+     "ans": [
+      "875",
+      "875 g"
+     ],
+     "hints": [
+      "1000 − 125"
+     ],
+     "steps": [
+      [
+       "1000 − 125 = 875",
+       "ergänzen auf 1 kg"
+      ]
+     ]
+    },
+    {
+     "id": "g32",
+     "q": "Wie viel fehlt? 175 g + ? = 1000 g (nur die Zahl)",
+     "a": "825",
+     "lvl": 3,
+     "th": "ergaenz",
+     "ans": [
+      "825",
+      "825 g"
+     ],
+     "hints": [
+      "1000 − 175"
+     ],
+     "steps": [
+      [
+       "1000 − 175 = 825",
+       "ergänzen auf 1 kg"
+      ]
+     ]
+    },
+    {
+     "id": "g33",
+     "q": "Ein Buch wiegt 650 g. Vier Scheren wiegen je 80 g. Wie viel wiegen sie zusammen? (nur die Zahl)",
+     "a": "970",
+     "lvl": 3,
+     "th": "ergaenz",
+     "ans": [
+      "970",
+      "970 g"
+     ],
+     "hints": [
+      "Erst 4 · 80, dann + 650."
+     ],
+     "steps": [
+      [
+       "4 · 80 = 320",
+       "vier Scheren"
+      ],
+      [
+       "650 + 320 = 970 g",
+       "mit dem Buch"
+      ]
+     ],
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         650,
+         "Buch 650 g"
+        ],
+        [
+         80,
+         ""
+        ],
+        [
+         80,
+         ""
+        ],
+        [
+         80,
+         ""
+        ],
+        [
+         80,
+         ""
+        ]
+       ],
+       "cap": "650 g + 4 · 80 g = 970 g",
+       "col": 0
+      }
+     ]
+    },
+    {
+     "id": "g34",
+     "q": "Ein Buch und vier Scheren wiegen 970 g. Das ist ... 1 kg.",
+     "a": "etwas weniger als",
+     "lvl": 2,
+     "th": "ergaenz",
+     "opts": [
+      "genau",
+      "etwas weniger als",
+      "etwas mehr als",
+      "viel mehr als"
+     ],
+     "hints": [
+      "970 ist kleiner als 1000."
+     ],
+     "steps": [
+      [
+       "970 < 1000",
+       "fast 1 kg"
+      ]
+     ]
+    }
+   ],
+   "exam": {
+    "minutes": 20,
+    "questions": [
+     {
+      "id": "q1",
+      "q": "Wie viele Gramm sind 1 kg?",
+      "explain": "1 kg = 1000 g",
+      "type": "mc",
+      "options": [
+       "10 g",
+       "100 g",
+       "1000 g",
+       "10 000 g"
+      ],
+      "answer": 2
+     },
+     {
+      "id": "q2",
+      "q": "Welches Obst ist am leichtesten?",
+      "explain": "Tomate wiegt 80 g, das ist am wenigsten.",
+      "type": "mc",
+      "options": [
+       "Banane",
+       "Apfel",
+       "Orange",
+       "Tomate"
+      ],
+      "answer": 3,
+      "visuals": [
+       {
+        "type": "bars",
+        "items": [
+         [
+          "Tomate",
+          80
+         ],
+         [
+          "Apfel",
+          140
+         ],
+         [
+          "Orange",
+          145
+         ],
+         [
+          "Banane",
+          170
+         ]
+        ],
+        "unit": "Gramm (g)"
+       }
+      ]
+     },
+     {
+      "id": "q3",
+      "q": "Welche Reihenfolge ist richtig (leicht → schwer)?",
+      "explain": "80 g, 140 g, 145 g, 170 g",
+      "type": "mc",
+      "options": [
+       "Banane, Orange, Apfel, Tomate",
+       "Tomate, Apfel, Orange, Banane",
+       "Apfel, Tomate, Orange, Banane",
+       "Tomate, Orange, Apfel, Banane"
+      ],
+      "answer": 1,
+      "visuals": [
+       {
+        "type": "bars",
+        "items": [
+         [
+          "Tomate",
+          80
+         ],
+         [
+          "Apfel",
+          140
+         ],
+         [
+          "Orange",
+          145
+         ],
+         [
+          "Banane",
+          170
+         ]
+        ],
+        "unit": "Gramm (g)"
+       }
+      ]
+     },
+     {
+      "id": "q4",
+      "q": "Apfel 140 g + Joghurt 125 g wiegen zusammen ? g (nur die Zahl)",
+      "explain": "140 + 125 = 265",
+      "type": "input",
+      "answer": [
+       "265",
+       "265 g"
+      ]
+     },
+     {
+      "id": "q5",
+      "q": "Banane 170 g + Tomate 80 g + Apfel 140 g wiegen zusammen ? g (nur die Zahl)",
+      "explain": "170 + 80 + 140 = 390",
+      "type": "input",
+      "answer": [
+       "390",
+       "390 g"
+      ]
+     },
+     {
+      "id": "q6",
+      "q": "Wie viele Gramm sind 4 kg?",
+      "explain": "4 · 1000 = 4000 g",
+      "type": "mc",
+      "options": [
+       "40 g",
+       "400 g",
+       "4000 g",
+       "4 g"
+      ],
+      "answer": 2
+     },
+     {
+      "id": "q7",
+      "q": "6 kg = ? g (nur die Zahl)",
+      "explain": "6 · 1000 = 6000",
+      "type": "input",
+      "answer": [
+       "6000",
+       "6000 g",
+       "6 000"
+      ]
+     },
+     {
+      "id": "q8",
+      "q": "9000 g = ? kg (nur die Zahl)",
+      "explain": "9000 : 1000 = 9",
+      "type": "input",
+      "answer": [
+       "9",
+       "9 kg"
+      ]
+     },
+     {
+      "id": "q9",
+      "q": "Wie viele Gramm sind ein halbes kg?",
+      "explain": "1000 : 2 = 500 g",
+      "type": "mc",
+      "options": [
+       "50 g",
+       "250 g",
+       "500 g",
+       "5000 g"
+      ],
+      "answer": 2,
+      "visuals": [
+       {
+        "type": "bar",
+        "segs": [
+         [
+          500,
+          "500 g"
+         ],
+         [
+          500,
+          "500 g"
+         ]
+        ],
+        "cap": "1 kg = 2 · 500 g",
+        "col": 0
+       }
+      ]
+     },
+     {
+      "id": "q10",
+      "q": "2 kg 300 g = ?",
+      "explain": "2000 + 300 = 2300 g",
+      "type": "mc",
+      "options": [
+       "230 g",
+       "2030 g",
+       "2300 g",
+       "5000 g"
+      ],
+      "answer": 2
+     },
+     {
+      "id": "q11",
+      "q": "3 kg 50 g = ?",
+      "explain": "3000 + 50 = 3050 g",
+      "type": "mc",
+      "options": [
+       "350 g",
+       "3050 g",
+       "3500 g",
+       "3005 g"
+      ],
+      "answer": 1
+     },
+     {
+      "id": "q12",
+      "q": "1800 g = ?",
+      "explain": "1000 + 800 = 1 kg 800 g",
+      "type": "mc",
+      "options": [
+       "18 kg",
+       "1 kg 80 g",
+       "1 kg 800 g",
+       "8 kg 100 g"
+      ],
+      "answer": 2
+     },
+     {
+      "id": "q13",
+      "q": "750 g + ? = 1000 g (nur die Zahl)",
+      "explain": "1000 − 750 = 250",
+      "type": "input",
+      "answer": [
+       "250",
+       "250 g"
+      ]
+     },
+     {
+      "id": "q14",
+      "q": "625 g + ? = 1000 g (nur die Zahl)",
+      "explain": "625 + 375 = 1000",
+      "type": "input",
+      "answer": [
+       "375",
+       "375 g"
+      ]
+     },
+     {
+      "id": "q15",
+      "q": "Wie viele Gramm sind drei Viertel-kg?",
+      "explain": "3 · 250 = 750 g",
+      "type": "mc",
+      "options": [
+       "300 g",
+       "340 g",
+       "750 g",
+       "3250 g"
+      ],
+      "answer": 2
+     },
+     {
+      "id": "q16",
+      "q": "Ein Buch wiegt 650 g, vier Scheren je 80 g. Wie viel wiegen sie zusammen? (nur die Zahl)",
+      "explain": "650 + 4 · 80 = 970",
+      "type": "input",
+      "answer": [
+       "970",
+       "970 g"
+      ]
+     }
+    ]
+   },
+   "theory": {
+    "basis": {
+     "h": "Gramm und Kilogramm",
+     "text": "Leichte Dinge wiegst du in Gramm (g), schwere in Kilogramm (kg). 1 kg = 1000 g.",
+     "lines": [
+      [
+       "1 kg",
+       "= 1000 g"
+      ]
+     ]
+    },
+    "vergl": {
+     "h": "Gewichte vergleichen",
+     "text": "Vergleiche die Zahlen. Die kleinste Zahl ist am leichtesten, die grösste am schwersten. Achte darauf, dass alle in g stehen."
+    },
+    "add": {
+     "h": "Gewichte zusammenzählen",
+     "text": "Zähle die Gramm zusammen, wie bei normalen Zahlen. Rechne in Schritten: zuerst zwei, dann die dritte dazu.",
+     "lines": [
+      [
+       "140 g + 125 g",
+       "= 265 g"
+      ]
+     ]
+    },
+    "mal": {
+     "h": "Von kg zu g: mal 1000",
+     "text": "Von kg zu g rechnest du mal 1000. Hänge drei Nullen an.",
+     "lines": [
+      [
+       "2 kg",
+       "= 2000 g"
+      ],
+      [
+       "5 kg",
+       "= 5000 g"
+      ]
+     ]
+    },
+    "durch": {
+     "h": "Von g zu kg: durch 1000",
+     "text": "Von g zu kg rechnest du geteilt durch 1000. Streiche drei Nullen.",
+     "lines": [
+      [
+       "3000 g",
+       "= 3 kg"
+      ],
+      [
+       "8000 g",
+       "= 8 kg"
+      ]
+     ]
+    },
+    "misch": {
+     "h": "kg und g zusammen",
+     "text": "Rechne zuerst die kg in g um. Dann zähle die Gramm zusammen. Achtung: 3 kg 50 g sind 3050 g.",
+     "lines": [
+      [
+       "2 kg 500 g",
+       "= 2000 g + 500 g"
+      ],
+      [
+       "",
+       "= 2500 g"
+      ]
+     ]
+    },
+    "halb": {
+     "h": "Halbes und Viertel-Kilo",
+     "text": "Ein halbes kg sind 500 g. Ein Viertel-kg sind 250 g. Drei Viertel-kg sind 750 g.",
+     "lines": [
+      [
+       "1/2 kg",
+       "= 500 g"
+      ],
+      [
+       "1/4 kg",
+       "= 250 g"
+      ],
+      [
+       "3/4 kg",
+       "= 750 g"
+      ]
+     ]
+    },
+    "ergaenz": {
+     "h": "Auf 1 kg ergänzen",
+     "text": "Wenn du wissen willst, wie viel zu 1000 g fehlt, rechnest du 1000 minus das Gewicht. Oder du ergänzt in Schritten bis 1000.",
+     "lines": [
+      [
+       "500 g + 500 g",
+       "= 1000 g"
+      ],
+      [
+       "750 g + 250 g",
+       "= 1000 g"
+      ],
+      [
+       "625 g + 375 g",
+       "= 1000 g"
+      ]
+     ]
+    }
+   },
+   "art": "gewicht"
   }
  ],
  "hero": "img/hero.webp"
