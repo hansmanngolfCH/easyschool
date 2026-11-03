@@ -1165,6 +1165,10 @@ body.rwopen{overflow:hidden}
 .tb4{font-size:.9rem;border-radius:14px;box-shadow:0 3px 0 rgba(0,0,0,.18)}
 .tb4,.tb4.m-v,.tb4.m-u,.tb4.m-p{box-shadow:0 3px 0 var(--sd)}
 .tb4.m-x{box-shadow:0 3px 0 rgba(0,0,0,.25)}
+/* v4.12 lange Themenbeschreibung: umbrechen, kleinere Schrift */
+.card.topic.tc h3.tt{white-space:normal!important;overflow:visible!important;text-overflow:clip!important;font-size:1.02rem!important;line-height:1.22;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden!important;overflow-wrap:anywhere}
+.tcsub.empty{display:none}
+.tcsub{font-size:.74rem}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1172,7 +1176,7 @@ body.rwopen{overflow:hidden}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v4.11';
+var APP_VERSION='v4.12';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -1801,7 +1805,7 @@ function topicCard(ch,t){
   var L=level(ch.id,[t]),w=Math.max(L.seen?4:0,Math.round(L.pct*100)),id=esc(t.id);
   nav.topen=nav.topen||{};var open=!!nav.topen[t.id];
   var m=/^Unit\s*(\d+(?:\+\d+)?)\s*·\s*(.*)$/.exec(t.title),badge=m?'<span class="tcun"><small>UNIT</small><b'+(m[1].length>2?' style="font-size:1.8rem"':'')+'>'+esc(m[1])+'</b></span>':'<span class="tcart">'+artSvg(t)+'</span>',title=m?m[2]:t.title;
-  return '<article class="card topic tc s-'+esc(t.subject)+(open?' open':'')+'"><button class="tchead tctog" data-act="ttog" data-id="'+id+'" aria-expanded="'+open+'">'+badge+'<div class="tcmain"><h3 class="tt">'+esc(title)+'</h3><p class="sub tcsub">'+(t.src?'<span class="src">'+esc(t.src)+'</span> · ':'')+(prog(ch.id).vis[t.id]||0)+'× besucht</p></div><span class="tcpct">'+w+'%</span><span class="tcchev" aria-hidden="true">'+(open?'▲':'▼')+'</span></button>'
+  return '<article class="card topic tc s-'+esc(t.subject)+(open?' open':'')+'"><button class="tchead tctog" data-act="ttog" data-id="'+id+'" aria-expanded="'+open+'">'+badge+'<div class="tcmain"><h3 class="tt">'+esc(title)+'</h3><p class="sub tcsub'+(t.src?'':' empty')+'">'+(t.src?'<span class="src">'+esc(t.src)+'</span>':'')+'</p></div><span class="tcpct">'+w+'%</span><span class="tcchev" aria-hidden="true">'+(open?'▲':'▼')+'</span></button>'
   +'<div class="bar thin" role="img" aria-label="'+w+' Prozent"><i style="width:'+w+'%"></i></div>'
   +(open?'<div class="tc4"><button class="tb4 m-v" data-act="learn" data-id="'+id+'">'+'AI-Theorie'+'</button>'
   +'<button class="tb4 m-u" data-act="practice" data-scope="topic:'+id+'" data-force="1">AI-Lernen</button>'
