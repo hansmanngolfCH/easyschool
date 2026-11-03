@@ -1118,6 +1118,32 @@ body.rwopen{overflow:hidden}
 .lines.num .ln code{font-size:1.1rem}
 .ln code{font-family:inherit;font-weight:700;font-size:1.12rem;line-height:1.35}
 .ln em{font-family:inherit;font-weight:500;font-size:.95rem;line-height:1.35;color:var(--ink2)}
+/* v4.07 XP-Zahlen gross, Rad-Show, Countdown */
+.xp2{height:40px;margin-bottom:14px}.xp2t{top:16px;height:10px}
+.xp2c{height:40px;min-width:46px;padding:0 8px;font-size:1.05rem;line-height:36px;font-weight:900;color:#202124;border-width:3px}
+.xp2c.on{color:#3a2100}
+.whwin{display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#FFE082,#FFB300);border-radius:16px;padding:8px 14px;margin:2px 0 4px;box-shadow:0 4px 14px rgba(255,160,0,.45);animation:whwn 1.6s ease-in-out infinite}
+.whwin b{font-size:1.05rem;color:#4a2a00;font-weight:900}.whstar{font-size:1.6rem;animation:whst 1.6s ease-in-out infinite}
+@keyframes whwn{50%{transform:scale(1.04)}}@keyframes whst{50%{transform:rotate(15deg) scale(1.2)}}
+.whin{animation:whbg .4s ease-out}@keyframes whbg{from{background:rgba(0,0,0,0)}}
+.whin .whbox{animation:whpop .8s cubic-bezier(.2,1.3,.3,1)}
+@keyframes whpop{0%{transform:scale(.2) rotate(-12deg);opacity:0}60%{transform:scale(1.06) rotate(2deg);opacity:1}100%{transform:scale(1) rotate(0)}}
+.whin .whw{animation:whwheel 1.3s cubic-bezier(.15,.8,.25,1)}
+@keyframes whwheel{from{transform:rotate(-540deg) scale(.4);opacity:0}to{transform:none;opacity:1}}
+.whin .whb{animation-delay:calc(var(--i,0)*30ms)}
+.whgloss{position:absolute;border-radius:50%;pointer-events:none;z-index:2;background:radial-gradient(ellipse 70% 45% at 32% 22%,rgba(255,255,255,.65),rgba(255,255,255,0) 70%),linear-gradient(160deg,rgba(255,255,255,.28),rgba(255,255,255,0) 45%,rgba(0,0,0,.12));overflow:hidden}
+.whgloss::after{content:"";position:absolute;top:-20%;bottom:-20%;width:26%;left:-40%;transform:rotate(18deg);background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.55),rgba(255,255,255,0));animation:whshine 2.6s ease-in-out infinite}
+@keyframes whshine{0%,35%{left:-40%}75%,100%{left:130%}}
+.whspin .whgloss::after{animation-duration:.9s}
+.rwcdw{position:relative;display:grid;place-items:center;width:200px;height:200px}
+.cdr{position:absolute;inset:20px;border-radius:50%;border:6px solid rgba(255,255,255,.8);animation:cdring .8s ease-out infinite}.cdr.r2{animation-delay:.25s;border-color:rgba(255,213,79,.8)}
+@keyframes cdring{from{transform:scale(.5);opacity:1}to{transform:scale(1.9);opacity:0}}
+.rwcd{font-size:7.5rem;font-weight:900;line-height:1;background:linear-gradient(180deg,#fff 10%,var(--c1,#FFD54F) 70%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:3px rgba(0,0,0,.35);filter:drop-shadow(0 6px 0 rgba(0,0,0,.35)) drop-shadow(0 0 22px var(--c1,#FFD54F));animation:cdpop2 .8s cubic-bezier(.2,1.4,.3,1)!important}
+.rwcd.c3{--c1:#FF5252}.rwcd.c2{--c1:#FF9800}.rwcd.c1{--c1:#FFEB3B}
+.rwcd.go{--c1:#69F0AE;font-size:5rem;animation:cdgo .7s cubic-bezier(.2,1.5,.3,1)!important}
+@keyframes cdpop2{0%{transform:scale(3);opacity:0;rotate:-15deg}45%{transform:scale(.85);opacity:1;rotate:4deg}100%{transform:scale(1);rotate:0deg}}
+@keyframes cdgo{0%{transform:scale(.2);opacity:0}60%{transform:scale(1.35)}100%{transform:scale(1)}}
+.xp2{margin:2px 34px 14px}.xp2c:last-of-type{transform:translateX(-50%)}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1125,7 +1151,7 @@ body.rwopen{overflow:hidden}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v4.06';
+var APP_VERSION='v4.07';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -2418,10 +2444,10 @@ function rwWheel(why,g){
   var lines=GAMES.map(function(x,k){return '<i class="whln" style="transform:rotate('+(k*seg)+'deg)"></i>'}).join('');
   var bulbs='';for(i=0;i<24;i++)bulbs+='<b class="whb" style="transform:rotate('+(i*15)+'deg) translateY(-'+Math.round(R+9)+'px);animation-delay:'+(i%2?0:.25)+'s"></b>';
   var o=document.createElement('div');o.id='rwd';o.className='rwd';
-  o.innerHTML='<div class="rwbox whbox" role="dialog" aria-modal="true"><div class="rwtop"><b>🎡 Glücksrad</b><button class="rwx" aria-label="Schliessen">×</button></div><p class="rwwhy">'+why+'</p><p class="whsub" id="whsub">Wische das Rad an! Schneller wischen = stärker drehen.</p>'
-   +'<div class="whw" id="whw" style="width:'+(sz+40)+'px;height:'+(sz+60)+'px"><span class="whp" id="whp">▼</span><div class="whring" style="width:'+sz+'px;height:'+sz+'px;top:34px;left:20px">'+bulbs+'</div><div class="wheel" id="wheel" style="width:'+sz+'px;height:'+sz+'px;top:34px;left:20px;background:conic-gradient('+cols.join(',')+')">'+lines+em+'<span class="whc">🎮</span></div><div class="whhand" id="whhand">👆</div></div>'
+  o.innerHTML='<div class="rwbox whbox" role="dialog" aria-modal="true"><div class="rwtop"><b>🎡 Glücksrad</b><button class="rwx" aria-label="Schliessen">×</button></div><div class="whwin"><span class="whstar">🏆</span><b>Du hast dir ein Mini-Game verdient!</b></div><p class="rwwhy">'+why+'</p><p class="whsub" id="whsub">Wische das Rad an! Schneller wischen = stärker drehen.</p>'
+   +'<div class="whw" id="whw" style="width:'+(sz+40)+'px;height:'+(sz+60)+'px"><span class="whp" id="whp">▼</span><div class="whring" style="width:'+sz+'px;height:'+sz+'px;top:34px;left:20px">'+bulbs+'</div><div class="wheel" id="wheel" style="width:'+sz+'px;height:'+sz+'px;top:34px;left:20px;background:conic-gradient('+cols.join(',')+')">'+lines+em+'<span class="whc">🎮</span></div><div class="whgloss" style="width:'+sz+'px;height:'+sz+'px;top:34px;left:20px"></div><div class="whhand" id="whhand">👆</div></div>'
    +'<div class="whpw"><i id="whpwf"></i></div><p class="whpwt" id="whpwt">Kraft</p></div>';
-  document.body.appendChild(o);document.body.classList.add('rwopen');
+  document.body.appendChild(o);document.body.classList.add('rwopen');o.classList.add('whin');
   o.querySelector('.rwx').onclick=closeReward;
   var me=RW,spun=false,wh=document.getElementById('wheel'),box=document.getElementById('whw'),ang=0,dragging=false,lastA=0,samples=[];
   function pa(e){var r=wh.getBoundingClientRect(),cx0=r.left+r.width/2,cy0=r.top+r.height/2;return Math.atan2(e.clientY-cy0,e.clientX-cx0)*180/Math.PI}
@@ -2445,11 +2471,13 @@ function rwWheel(why,g){
   box.addEventListener('pointerdown',down);box.addEventListener('pointermove',move);box.addEventListener('pointerup',up);box.addEventListener('pointercancel',up);
   box.style.touchAction='none';
 }
+function xpPos(g){var p=[g.g[0]/g.g[2],g.g[1]/g.g[2],1];if(p[2]-p[1]<.2)p[1]=p[2]-.2;if(p[1]-p[0]<.2)p[0]=p[1]-.2;if(p[0]<.12)p[0]=.12;return p}
+function xpFrac(g,v){var p=xpPos(g),T=[0,g.g[0],g.g[1],g.g[2]],P=[0,p[0],p[1],1];for(var i=1;i<4;i++)if(v<=T[i])return P[i-1]+(P[i]-P[i-1])*(v-T[i-1])/(T[i]-T[i-1]);return 1}
 function rwOpen(why,g,force){
   RW={child:nav.child,g:g,stop:null,score:0,done:false,why:why,test:!!force};
   var o=document.createElement('div');o.id='rwd';o.className='rwd';
   o.innerHTML='<div class="rwbox" role="dialog" aria-modal="true"><div class="rwtop"><b>'+g.e+' '+g.n+'</b><span id="rwt" class="rwtime">'+fmtT(g.time)+'</span><button class="rwx" aria-label="Schliessen">×</button></div>'
-   +'<div class="xp2"><div class="xp2t"><i id="rwf"></i></div>'+[0,1,2].map(function(i){return '<b class="xp2c" data-t="'+g.g[i]+'" style="--p:'+(g.g[i]/g.g[2])+'">'+['50','150','300'][i]+'</b>'}).join('')+'</div>'
+   +'<div class="xp2"><div class="xp2t"><i id="rwf"></i></div>'+xpPos(g).map(function(p,i){return '<b class="xp2c" data-t="'+g.g[i]+'" style="--p:'+p+'">'+['50','150','300'][i]+'</b>'}).join('')+'</div>'
    +'<div class="rwcvw"><canvas id="rwc" class="rwcv"></canvas><div id="rwst" class="rwstart"><p class="rwwhy">'+why+'</p>'+demoHTML(g)+''+gzHTML(g)+'<p class="rwhow">'+g.how+'</p><button class="btn pri big" id="rwgo">Los!</button></div></div><div id="rwctl"></div><div id="rwmsg" class="rwmsg"></div></div>';
   document.body.appendChild(o);document.body.classList.add('rwopen');
   o.querySelector('.rwx').onclick=closeReward;
@@ -2462,11 +2490,11 @@ function rwOpen(why,g,force){
 }
 var RW_LAST='';
 function fmtT(s){return Math.floor(s/60)+':'+('0'+(s%60)).slice(-2)}
-function rwCount(){var st=document.getElementById('rwst');st.innerHTML='<div class="rwcd" id="rwcd">3</div>';var n=3,me=RW,iv=setInterval(function(){var e=document.getElementById('rwcd');if(RW!==me||!e){clearInterval(iv);return}n--;if(n>0){e.textContent=n;e.style.animation='none';void e.offsetWidth;e.style.animation=''}else if(n===0){e.textContent='LOS!';e.classList.add('go')}else{clearInterval(iv);st.remove();rwBegin()}},800)}
+function rwCount(){var st=document.getElementById('rwst');st.innerHTML='<div class="rwcdw"><i class="cdr r1"></i><i class="cdr r2"></i><div class="rwcd c3" id="rwcd">3</div></div>';var n=3,me=RW,iv=setInterval(function(){var e=document.getElementById('rwcd');if(RW!==me||!e){clearInterval(iv);return}n--;if(n>0){e.textContent=n;e.className='rwcd c'+n;e.style.animation='none';void e.offsetWidth;e.style.animation=''}else if(n===0){e.textContent='LOS!';e.className='rwcd go'}else{clearInterval(iv);st.remove();rwBegin()}},800)}
 function rwBegin(){
   var g=RW.g;
   var left=g.time,tick=setInterval(function(){left--;var t=document.getElementById('rwt');if(t)t.textContent=fmtT(Math.max(0,left));if(left<=0&&RW&&!RW.dying)rwEnd()},1000);
-  var score=function(v){RW.score=v;var f=document.getElementById('rwf');if(f)f.style.width=Math.min(100,v/g.g[2]*100)+'%';document.querySelectorAll('.xp2c').forEach(function(c){if(v>=+c.dataset.t&&!c.classList.contains('on')){c.classList.add('on');c.classList.add('pop')}});if(f&&v>=g.g[0])f.classList.add('hi');if(f&&v>=g.g[1])f.classList.add('top');if(v>=g.g[2]&&!RW.fin){RW.fin=1;setTimeout(rwEnd,500)}};
+  var score=function(v){RW.score=v;var f=document.getElementById('rwf');if(f)f.style.width=(xpFrac(g,v)*100)+'%';document.querySelectorAll('.xp2c').forEach(function(c){if(v>=+c.dataset.t&&!c.classList.contains('on')){c.classList.add('on');c.classList.add('pop')}});if(f&&v>=g.g[0])f.classList.add('hi');if(f&&v>=g.g[1])f.classList.add('top');if(v>=g.g[2]&&!RW.fin){RW.fin=1;setTimeout(rwEnd,500)}};
   var stop=GAMEFN[g.id](RW.cv,RW.cx,RW.W,RW.H,score,function(){rwDrama()},document.getElementById('rwctl'));
   RW.stop=function(){clearInterval(tick);stop()};
 }
