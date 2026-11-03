@@ -17474,6 +17474,895 @@
     }
    },
    "art": "franz"
+  },
+  {
+   "id": "kl5-franz-zahlen",
+   "child": "kl5",
+   "subject": "franz",
+   "chapter": "Zahlen · 0 bis 2000",
+   "title": "Zahlen · 0 bis 2000",
+   "explain": [
+    {
+     "h": "Zahlen zum Durchlernen",
+     "text": "So lernst du wie auf einem Blatt: Zuerst das Wort laut sagen. Dann tippe auf das Feld und decke die Lösung auf. Dann prüfe: Hast du es gewusst? Danach kommt das nächste Wort. Mit dem Knopf oben wechselst du die Richtung.",
+     "list": true
+    }
+   ],
+   "cards": [
+    {
+     "id": "z1",
+     "fw": "zéro",
+     "de": [
+      "0",
+      "null"
+     ],
+     "grp": "klein"
+    },
+    {
+     "id": "z2",
+     "fw": "un",
+     "de": [
+      "1"
+     ],
+     "grp": "klein"
+    },
+    {
+     "id": "z3",
+     "fw": "deux",
+     "de": [
+      "2"
+     ],
+     "grp": "klein"
+    },
+    {
+     "id": "z4",
+     "fw": "trois",
+     "de": [
+      "3"
+     ],
+     "grp": "klein"
+    },
+    {
+     "id": "z5",
+     "fw": "quatre",
+     "de": [
+      "4"
+     ],
+     "grp": "klein"
+    },
+    {
+     "id": "z6",
+     "fw": "cinq",
+     "de": [
+      "5"
+     ],
+     "grp": "klein"
+    },
+    {
+     "id": "z7",
+     "fw": "six",
+     "de": [
+      "6"
+     ],
+     "grp": "klein"
+    },
+    {
+     "id": "z8",
+     "fw": "sept",
+     "de": [
+      "7"
+     ],
+     "grp": "klein"
+    },
+    {
+     "id": "z9",
+     "fw": "huit",
+     "de": [
+      "8"
+     ],
+     "grp": "klein"
+    },
+    {
+     "id": "z10",
+     "fw": "neuf",
+     "de": [
+      "9"
+     ],
+     "grp": "klein"
+    },
+    {
+     "id": "z11",
+     "fw": "dix",
+     "de": [
+      "10"
+     ],
+     "grp": "klein"
+    },
+    {
+     "id": "z12",
+     "fw": "onze",
+     "de": [
+      "11"
+     ],
+     "grp": "klein"
+    },
+    {
+     "id": "z13",
+     "fw": "douze",
+     "de": [
+      "12"
+     ],
+     "grp": "klein"
+    },
+    {
+     "id": "z14",
+     "fw": "treize",
+     "de": [
+      "13"
+     ],
+     "grp": "klein"
+    },
+    {
+     "id": "z15",
+     "fw": "quatorze",
+     "de": [
+      "14"
+     ],
+     "grp": "klein"
+    },
+    {
+     "id": "z16",
+     "fw": "quinze",
+     "de": [
+      "15"
+     ],
+     "grp": "klein"
+    },
+    {
+     "id": "z17",
+     "fw": "seize",
+     "de": [
+      "16"
+     ],
+     "grp": "klein"
+    },
+    {
+     "id": "z18",
+     "fw": "dix-sept",
+     "de": [
+      "17"
+     ],
+     "grp": "klein"
+    },
+    {
+     "id": "z19",
+     "fw": "dix-huit",
+     "de": [
+      "18"
+     ],
+     "grp": "klein"
+    },
+    {
+     "id": "z20",
+     "fw": "dix-neuf",
+     "de": [
+      "19"
+     ],
+     "grp": "klein"
+    },
+    {
+     "id": "z21",
+     "fw": "vingt",
+     "de": [
+      "20"
+     ],
+     "grp": "zehner"
+    },
+    {
+     "id": "z22",
+     "fw": "trente",
+     "de": [
+      "30"
+     ],
+     "grp": "zehner"
+    },
+    {
+     "id": "z23",
+     "fw": "quarante",
+     "de": [
+      "40"
+     ],
+     "grp": "zehner"
+    },
+    {
+     "id": "z24",
+     "fw": "cinquante",
+     "de": [
+      "50"
+     ],
+     "grp": "zehner"
+    },
+    {
+     "id": "z25",
+     "fw": "soixante",
+     "de": [
+      "60"
+     ],
+     "grp": "zehner"
+    },
+    {
+     "id": "z26",
+     "fw": "soixante-dix",
+     "de": [
+      "70"
+     ],
+     "grp": "zehner"
+    },
+    {
+     "id": "z27",
+     "fw": "quatre-vingts",
+     "de": [
+      "80"
+     ],
+     "grp": "zehner"
+    },
+    {
+     "id": "z28",
+     "fw": "quatre-vingt-dix",
+     "de": [
+      "90"
+     ],
+     "grp": "zehner"
+    },
+    {
+     "id": "z29",
+     "fw": "vingt et un",
+     "de": [
+      "21"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z30",
+     "fw": "vingt-deux",
+     "de": [
+      "22"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z31",
+     "fw": "vingt-trois",
+     "de": [
+      "23"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z32",
+     "fw": "trente et un",
+     "de": [
+      "31"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z33",
+     "fw": "trente-deux",
+     "de": [
+      "32"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z34",
+     "fw": "quarante et un",
+     "de": [
+      "41"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z35",
+     "fw": "cinquante et un",
+     "de": [
+      "51"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z36",
+     "fw": "soixante et un",
+     "de": [
+      "61"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z37",
+     "fw": "soixante-deux",
+     "de": [
+      "62"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z38",
+     "fw": "soixante-neuf",
+     "de": [
+      "69"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z39",
+     "fw": "soixante et onze",
+     "de": [
+      "71"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z40",
+     "fw": "soixante-douze",
+     "de": [
+      "72"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z41",
+     "fw": "soixante-treize",
+     "de": [
+      "73"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z42",
+     "fw": "soixante-quatorze",
+     "de": [
+      "74"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z43",
+     "fw": "soixante-quinze",
+     "de": [
+      "75"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z44",
+     "fw": "soixante-seize",
+     "de": [
+      "76"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z45",
+     "fw": "soixante-dix-sept",
+     "de": [
+      "77"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z46",
+     "fw": "soixante-dix-huit",
+     "de": [
+      "78"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z47",
+     "fw": "soixante-dix-neuf",
+     "de": [
+      "79"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z48",
+     "fw": "quatre-vingt-un",
+     "de": [
+      "81"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z49",
+     "fw": "quatre-vingt-deux",
+     "de": [
+      "82"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z50",
+     "fw": "quatre-vingt-neuf",
+     "de": [
+      "89"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z51",
+     "fw": "quatre-vingt-onze",
+     "de": [
+      "91"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z52",
+     "fw": "quatre-vingt-douze",
+     "de": [
+      "92"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z53",
+     "fw": "quatre-vingt-treize",
+     "de": [
+      "93"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z54",
+     "fw": "quatre-vingt-quatorze",
+     "de": [
+      "94"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z55",
+     "fw": "quatre-vingt-quinze",
+     "de": [
+      "95"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z56",
+     "fw": "quatre-vingt-seize",
+     "de": [
+      "96"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z57",
+     "fw": "quatre-vingt-dix-sept",
+     "de": [
+      "97"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z58",
+     "fw": "quatre-vingt-dix-huit",
+     "de": [
+      "98"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z59",
+     "fw": "quatre-vingt-dix-neuf",
+     "de": [
+      "99"
+     ],
+     "grp": "mittel"
+    },
+    {
+     "id": "z60",
+     "fw": "cent",
+     "de": [
+      "100"
+     ],
+     "grp": "gross"
+    },
+    {
+     "id": "z61",
+     "fw": "cent un",
+     "de": [
+      "101"
+     ],
+     "grp": "gross"
+    },
+    {
+     "id": "z62",
+     "fw": "cent deux",
+     "de": [
+      "102"
+     ],
+     "grp": "gross"
+    },
+    {
+     "id": "z63",
+     "fw": "cent dix",
+     "de": [
+      "110"
+     ],
+     "grp": "gross"
+    },
+    {
+     "id": "z64",
+     "fw": "cent douze",
+     "de": [
+      "112"
+     ],
+     "grp": "gross"
+    },
+    {
+     "id": "z65",
+     "fw": "cent dix-sept",
+     "de": [
+      "117"
+     ],
+     "grp": "gross"
+    },
+    {
+     "id": "z66",
+     "fw": "cent vingt",
+     "de": [
+      "120"
+     ],
+     "grp": "gross"
+    },
+    {
+     "id": "z67",
+     "fw": "cent vingt et un",
+     "de": [
+      "121"
+     ],
+     "grp": "gross"
+    },
+    {
+     "id": "z68",
+     "fw": "cent vingt-deux",
+     "de": [
+      "122"
+     ],
+     "grp": "gross"
+    },
+    {
+     "id": "z69",
+     "fw": "deux cents",
+     "de": [
+      "200"
+     ],
+     "grp": "gross"
+    },
+    {
+     "id": "z70",
+     "fw": "deux cent un",
+     "de": [
+      "201"
+     ],
+     "grp": "gross"
+    },
+    {
+     "id": "z71",
+     "fw": "deux cent dix",
+     "de": [
+      "210"
+     ],
+     "grp": "gross"
+    },
+    {
+     "id": "z72",
+     "fw": "deux cent vingt",
+     "de": [
+      "220"
+     ],
+     "grp": "gross"
+    },
+    {
+     "id": "z73",
+     "fw": "deux cent vingt-trois",
+     "de": [
+      "223"
+     ],
+     "grp": "gross"
+    },
+    {
+     "id": "z74",
+     "fw": "trois cents",
+     "de": [
+      "300"
+     ],
+     "grp": "gross"
+    },
+    {
+     "id": "z75",
+     "fw": "mille",
+     "de": [
+      "1000"
+     ],
+     "grp": "gross"
+    },
+    {
+     "id": "z76",
+     "fw": "mille un",
+     "de": [
+      "1001"
+     ],
+     "grp": "gross"
+    },
+    {
+     "id": "z77",
+     "fw": "mille dix",
+     "de": [
+      "1010"
+     ],
+     "grp": "gross"
+    },
+    {
+     "id": "z78",
+     "fw": "mille vingt et un",
+     "de": [
+      "1021"
+     ],
+     "grp": "gross"
+    },
+    {
+     "id": "z79",
+     "fw": "mille cent",
+     "de": [
+      "1100"
+     ],
+     "grp": "gross"
+    },
+    {
+     "id": "z80",
+     "fw": "mille deux cents",
+     "de": [
+      "1200"
+     ],
+     "grp": "gross"
+    },
+    {
+     "id": "z81",
+     "fw": "deux mille",
+     "de": [
+      "2000"
+     ],
+     "grp": "gross"
+    }
+   ],
+   "exam": {
+    "minutes": 20,
+    "questions": [
+     {
+      "id": "q1",
+      "q": "Wie heisst «0» auf Französisch?",
+      "explain": "0 = zéro",
+      "ref": "z1",
+      "type": "input",
+      "answer": [
+       "zéro"
+      ]
+     },
+     {
+      "id": "q2",
+      "q": "Wie heisst «5» auf Französisch?",
+      "explain": "5 = cinq",
+      "ref": "z6",
+      "type": "input",
+      "answer": [
+       "cinq"
+      ]
+     },
+     {
+      "id": "q3",
+      "q": "Wie heisst «13» auf Französisch?",
+      "explain": "13 = treize",
+      "ref": "z14",
+      "type": "input",
+      "answer": [
+       "treize"
+      ]
+     },
+     {
+      "id": "q4",
+      "q": "Wie heisst «19» auf Französisch?",
+      "explain": "19 = dix-neuf",
+      "ref": "z20",
+      "type": "input",
+      "answer": [
+       "dix-neuf"
+      ]
+     },
+     {
+      "id": "q5",
+      "q": "Wie heisst «50» auf Französisch?",
+      "explain": "50 = cinquante",
+      "ref": "z24",
+      "type": "input",
+      "answer": [
+       "cinquante"
+      ]
+     },
+     {
+      "id": "q6",
+      "q": "Wie heisst «90» auf Französisch?",
+      "explain": "90 = quatre-vingt-dix",
+      "ref": "z28",
+      "type": "input",
+      "answer": [
+       "quatre-vingt-dix"
+      ]
+     },
+     {
+      "id": "q7",
+      "q": "Wie heisst «23» auf Französisch?",
+      "explain": "23 = vingt-trois",
+      "ref": "z31",
+      "type": "input",
+      "answer": [
+       "vingt-trois"
+      ]
+     },
+     {
+      "id": "q8",
+      "q": "Wie heisst «51» auf Französisch?",
+      "explain": "51 = cinquante et un",
+      "ref": "z35",
+      "type": "input",
+      "answer": [
+       "cinquante et un"
+      ]
+     },
+     {
+      "id": "q9",
+      "q": "Wie heisst «69» auf Französisch?",
+      "explain": "69 = soixante-neuf",
+      "ref": "z38",
+      "type": "input",
+      "answer": [
+       "soixante-neuf"
+      ]
+     },
+     {
+      "id": "q10",
+      "q": "Wie heisst «74» auf Französisch?",
+      "explain": "74 = soixante-quatorze",
+      "ref": "z42",
+      "type": "input",
+      "answer": [
+       "soixante-quatorze"
+      ]
+     },
+     {
+      "id": "q11",
+      "q": "Wie heisst «78» auf Französisch?",
+      "explain": "78 = soixante-dix-huit",
+      "ref": "z46",
+      "type": "input",
+      "answer": [
+       "soixante-dix-huit"
+      ]
+     },
+     {
+      "id": "q12",
+      "q": "Wie heisst «82» auf Französisch?",
+      "explain": "82 = quatre-vingt-deux",
+      "ref": "z49",
+      "type": "input",
+      "answer": [
+       "quatre-vingt-deux"
+      ]
+     },
+     {
+      "id": "q13",
+      "q": "Wie heisst «93» auf Französisch?",
+      "explain": "93 = quatre-vingt-treize",
+      "ref": "z53",
+      "type": "input",
+      "answer": [
+       "quatre-vingt-treize"
+      ]
+     },
+     {
+      "id": "q14",
+      "q": "Wie heisst «96» auf Französisch?",
+      "explain": "96 = quatre-vingt-seize",
+      "ref": "z56",
+      "type": "input",
+      "answer": [
+       "quatre-vingt-seize"
+      ]
+     },
+     {
+      "id": "q15",
+      "q": "Wie heisst «100» auf Französisch?",
+      "explain": "100 = cent",
+      "ref": "z60",
+      "type": "input",
+      "answer": [
+       "cent"
+      ]
+     },
+     {
+      "id": "q16",
+      "q": "Wie heisst «112» auf Französisch?",
+      "explain": "112 = cent douze",
+      "ref": "z64",
+      "type": "input",
+      "answer": [
+       "cent douze"
+      ]
+     },
+     {
+      "id": "q17",
+      "q": "Wie heisst «121» auf Französisch?",
+      "explain": "121 = cent vingt et un",
+      "ref": "z67",
+      "type": "input",
+      "answer": [
+       "cent vingt et un"
+      ]
+     },
+     {
+      "id": "q18",
+      "q": "Wie heisst «210» auf Französisch?",
+      "explain": "210 = deux cent dix",
+      "ref": "z71",
+      "type": "input",
+      "answer": [
+       "deux cent dix"
+      ]
+     },
+     {
+      "id": "q19",
+      "q": "Wie heisst «300» auf Französisch?",
+      "explain": "300 = trois cents",
+      "ref": "z74",
+      "type": "input",
+      "answer": [
+       "trois cents"
+      ]
+     },
+     {
+      "id": "q20",
+      "q": "Wie heisst «1021» auf Französisch?",
+      "explain": "1021 = mille vingt et un",
+      "ref": "z78",
+      "type": "input",
+      "answer": [
+       "mille vingt et un"
+      ]
+     }
+    ]
+   },
+   "theory": {
+    "klein": {
+     "h": "Die Zahlen 0 bis 19",
+     "text": "Diese Zahlen musst du auswendig kennen. Sie bilden die Grundlage für alle anderen Zahlen."
+    },
+    "zehner": {
+     "h": "Die Zehnerzahlen",
+     "text": "Ab 20 gibt es eigene Wörter für die Zehner. Achtung bei 70, 80 und 90: soixante-dix (60+10), quatre-vingts (4×20) und quatre-vingt-dix (4×20+10)."
+    },
+    "mittel": {
+     "h": "Zahlen dazwischen",
+     "text": "Bei 21, 31, 41, 51, 61 sagt man «et un» (vingt et un). Bei 22, 23 … kommt ein Bindestrich (vingt-deux). Ab 70 und 90 zählt man auf 60 beziehungsweise 80 weiter: 71 = soixante et onze, 91 = quatre-vingt-onze."
+    },
+    "gross": {
+     "h": "Hunderter und Tausender",
+     "text": "cent = 100, mille = 1000. Bei 200 und 300 kommt ein -s (deux cents), aber nicht mehr, wenn noch eine Zahl folgt (deux cent un). mille bekommt nie ein -s."
+    }
+   },
+   "art": "franz"
   }
  ],
  "hero": "img/hero.webp"
