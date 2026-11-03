@@ -1155,6 +1155,11 @@ body.rwopen{overflow:hidden}
 .tcun small{font:700 .7rem/1 var(--font-d);letter-spacing:.12em;color:var(--sd,#1A4FA0);opacity:.85;text-shadow:none!important}
 .tcun b{font:800 2.3rem/1 var(--font-d);color:var(--sd,#1A4FA0);text-shadow:none!important}
 .s-deu .tcun,.s-deu .tcun small,.s-deu .tcun b{color:#7A5A00!important}
+/* v4.10 kleinere Kachel 50px */
+.tcun,.tcart{width:50px!important;height:50px!important;min-width:50px!important;border-radius:14px!important}
+.tcart svg{width:34px;height:34px}
+.tcun small{font-size:.5rem;letter-spacing:.1em}
+.tcun b{font-size:1.6rem!important}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1162,7 +1167,7 @@ body.rwopen{overflow:hidden}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v4.09';
+var APP_VERSION='v4.10';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
