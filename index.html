@@ -974,6 +974,38 @@ body.rwopen{overflow:hidden}
 .xg-msg.ok{color:#fff}.xg-msg.bad{color:#fff}
 .xg.s-deu .xg-msg{color:#3b2a00}
 .xs.ok{color:#2b2f5e}
+
+/* v3.95 swipe demos */
+.swk{position:absolute;left:0;right:0;bottom:36px;display:flex;justify-content:center;gap:10px;z-index:3}
+.swk b{background:rgba(255,255,255,.92);color:#222;border-radius:12px;min-width:38px;height:38px;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 2px 6px rgba(0,0,0,.35)}
+.swf{position:absolute;left:50%;bottom:-2px;font-size:34px;z-index:4;animation:swf 1.6s ease-in-out infinite;pointer-events:none}
+@keyframes swf{0%,100%{transform:translateX(-46px)}50%{transform:translateX(46px)}}
+.rwctlt{font-size:1.05rem}
+.rwcv{touch-action:none}
+.swk{bottom:auto!important;top:6px}.swk b{min-width:32px;height:32px;font-size:18px}
+/* v3.95 Steuerung */
+#rwc,.rwcv{touch-action:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+.gpad{display:flex;justify-content:center;gap:12px;padding:6px 0;touch-action:manipulation}
+.gpad button{all:unset;box-sizing:border-box;width:84px;height:68px;border-radius:20px;background:#fff;border:2px solid #DADCE0;box-shadow:0 4px 0 #DADCE0;font-size:1.9rem;text-align:center;line-height:64px;color:#3C4043;cursor:pointer;touch-action:manipulation;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+.gpad button.on,.gpad button:active{background:#E8F0FE;box-shadow:0 1px 0 #DADCE0;transform:translateY(3px)}
+.gp4{display:grid;grid-template-columns:repeat(3,84px);grid-template-rows:68px 68px;justify-content:center;gap:10px}
+.gp4 .gp-U{grid-column:2;grid-row:1}.gp4 .gp-L{grid-column:1;grid-row:2}.gp4 .gp-D{grid-column:2;grid-row:2}.gp4 .gp-R{grid-column:3;grid-row:2}
+.gp2 button{width:132px;height:76px;line-height:72px;font-size:2.2rem}
+.rwpad2{gap:10px}.rwpad2 button{min-width:60px;height:62px;font-size:1.6rem;border-width:2px;box-shadow:0 4px 0 #DADCE0;border-radius:18px}
+.gz{position:relative;margin:10px auto 2px;height:92px;display:flex;align-items:center;justify-content:center;gap:14px}
+.gzl{margin:0 0 6px;font-weight:700;font-size:.95rem;color:#5F6368;text-align:center}
+.gzf,.gzc{font-size:2.6rem;display:inline-block}
+.gz-tap .gzf{animation:gztap 1.1s ease-in-out infinite}.gz-tap .gzr{position:absolute;width:62px;height:62px;border-radius:50%;border:4px solid #4285F4;animation:gzring 1.1s ease-out infinite}
+@keyframes gztap{0%,100%{transform:translateY(8px) scale(1)}45%{transform:translateY(-4px) scale(.88)}}
+@keyframes gzring{0%,30%{transform:scale(.4);opacity:0}45%{opacity:.9}100%{transform:scale(1.35);opacity:0}}
+.ga{font-size:2rem;color:#4285F4;font-weight:900;animation:gzar 1.2s ease-in-out infinite}.ga.r{animation-delay:.6s}
+@keyframes gzar{0%,100%{opacity:.25;transform:scale(.9)}50%{opacity:1;transform:scale(1.2)}}
+.gz-lr .gzf{animation:gzsw 1.6s ease-in-out infinite}
+@keyframes gzsw{0%,100%{transform:translateX(-18px)}50%{transform:translateX(18px)}}
+.gz-s4{display:grid;grid-template-columns:44px 56px 44px;grid-template-rows:30px 40px 30px;gap:0;justify-content:center;align-content:center}
+.gz-s4 .ga{text-align:center;font-size:1.5rem;line-height:1}.gz-s4 .u{grid-column:2;grid-row:1}.gz-s4 .l{grid-column:1;grid-row:2}.gz-s4 .r{grid-column:3;grid-row:2}.gz-s4 .d{grid-column:2;grid-row:3}.gz-s4 .gzc{grid-column:2;grid-row:2;font-size:2rem;text-align:center;line-height:40px}
+.gz-s4 .u{animation-delay:0s}.gz-s4 .r{animation-delay:.3s}.gz-s4 .d{animation-delay:.6s}.gz-s4 .l{animation-delay:.9s}
+.rwstart .gzl{color:#fff}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -981,7 +1013,7 @@ body.rwopen{overflow:hidden}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v3.94';
+var APP_VERSION='v3.95';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -1714,7 +1746,7 @@ function curCard(n){
   var k=n.queue[n.idx],x=cardIdx[k];
   if(!n.cur){
     var g=x.c.gen?genCard(x.c.gen):null;
-    n.cur=g?{id:x.c.id,q:g.q,a:g.a,steps:g.steps,hints:g.hints,solvis:g.solvis,gen:x.c.gen,th:x.c.th}:x.c;
+    n.cur=g?{id:x.c.id,q:g.q,a:g.a,steps:g.steps,hints:g.hints,solvis:g.solvis,gen:x.c.gen,th:x.c.th}:(x.t&&x.t.subject==='mathe'?varyItem(x.c,false):x.c);
     n.qs=n.qs||{};n.qs[k]=n.cur;
   }
   return n.cur;
@@ -1863,7 +1895,7 @@ function vGame(){
 function mmss(sec){var s=Math.abs(sec);return (sec<0?'−':'')+Math.floor(s/60)+':'+String(s%60).padStart(2,'0')}
 function examQs(n,t){if(n.qlist)return n.qlist;return mkQs(n,t)}
 function isLangT(t){return t.subject==='franz'||t.subject==='engl'}
-function mkQs(n,t){if(!isLangT(t))return t.exam.questions;
+function mkQs(n,t){if(!isLangT(t)){var qq=t.exam.questions;if(t.subject==='mathe')qq=shuffle(qq.map(function(q){return varyItem(q,true)}));return qq}
   var cs=t.cards.filter(function(c){return c.fw&&c.de});if(n.mode==='kurz')cs=shuffle(cs).slice(0,7);
   return cs.map(function(c){return {id:c.id,q:c.de.join(' / '),type:'input',answer:[c.fw],ref:c.id,explain:''}})}
 function langHead(n,t){return 'Übersetze ins '+(t.subject==='engl'?'Englische':'Französische')}
@@ -2199,28 +2231,28 @@ function rewardAfter(ok){
 }
 function theoryTask(){if(!nav||nav.view!=='learn')return;TT++;if(TT>=3){rwReset();setTimeout(function(){showReward('3 Aufgaben gelöst!')},600)}}
 (function(){var last=Date.now();setInterval(function(){var n=Date.now(),d=n-last;last=n;if(d>5000)d=5000;if(document.hidden||RW||document.getElementById('rwd'))return;if(nav&&(nav.view==='learn'||nav.view==='practice')){LT+=d;if(LT>=180000){rwReset();showReward('3 Minuten gelernt!')}}},1000)})();
-function T3(f){f=Math.ceil(f*1.1);return [Math.ceil(f*.5),Math.ceil(f*.8),f]}
+function T3(f){f=Math.ceil(f*.8);return [Math.ceil(f*.5),Math.ceil(f*.8),f]}
 var GAMES=[
- {id:'flappy',n:'Vogelflucht',e:'🕊️',g:T3(14),time:60,d:'cave',ctl:'Tippen = flattern',how:'Flieh als weisser Vogel durch die Felsenhöhle! Bleib im Gang zwischen den Wänden. Er wird enger, vorne wird es heller.'},
- {id:'tetris',n:'Tetris',e:'🧱',g:T3(400),time:60,d:'tet',ctl:'Knöpfe unten: bewegen, drehen, fallen lassen',how:'Volle Reihen geben Punkte!'},
- {id:'cannon',n:'Taubenjagd',e:'🔫',g:[5,8,10],time:60,d:'shoot',ctl:'Tippen = schiessen',how:'Du hast genau 10 Patronen (unten). Schiess im richtigen Moment auf die schwarzen Tauben: Triffst du mit allen 10, gibt es alle XP. Bunte Vögel kosten eine Extra-Patrone!'},
- {id:'runner',n:'Tsunami-Flucht',e:'🌊',g:T3(14),time:60,d:'run',ctl:'Tippen = springen',how:'Renn vor dem Tsunami davon! Spring über Liegestühle, Sandburgen und Palmen. Krabben darfst du anspringen. Möwen fliegen tief: nicht zu hoch springen!'},
- {id:'stack',n:'Burger-Turm',e:'🍔',g:T3(28),time:60,d:'drop',ctl:'Tippen = Zutat fallen lassen',how:'Baue einen riesigen Burger mit vielen Lagen! Triff genau, sonst wird die Lage schmaler.'},
- {id:'moto',n:'Dirtbike',e:'🏍️',g:T3(14),time:60,d:'moto',ctl:'Links tippen = linke Spur · Rechts tippen = rechte Spur',how:'Fahr von oben gesehen die Piste hinunter! Tippe links oder rechts, um die Spur zu wechseln, und weiche Fässern, Reifen, Strohballen, Steinen und Pfützen aus.'},
- {id:'pong',n:'Samurai',e:'🥥',g:T3(16),time:60,d:'sam',ctl:'Finger ziehen oder tippen = Samurai bewegen',how:'Der Affe wirft Kokosnüsse! Stell dich unter die Nuss, dein Schwert halbiert sie. Mehrere Treffer hintereinander geben eine Kombi. Triffst du nicht, gibt es ein Bonk.'},
- {id:'roulette',n:'Roulette',e:'🎰',g:[1,2,3],time:60,d:'roul',ctl:'Ein Feld antippen, dann DREHEN',how:'Du setzt einen Jeton und hast 2 Versuche. Gewinnt der erste, ist das Spiel fertig. Rot/Schwarz gibt 50 XP, eine Viererreihe 150 XP, eine einzelne Zahl sogar 300 XP. Verlierst du, gibt es nichts. Die grüne 0 verliert immer!'},
- {id:'snake',n:'Snake',e:'🐍',g:T3(12),time:60,d:'train',ctl:'Links tippen = nach links · Rechts tippen = nach rechts',how:'Lenke die leuchtende Schlange zu den goldenen Münzen. Mit jeder Münze wird sie länger. Wand und eigener Körper sind tödlich.'},
- {id:'basket',n:'Basketball',e:'🏀',g:T3(13),time:60,d:'bball',ctl:'Tippen = werfen (im grünen Bereich)',how:'Tippe, wenn der Zeiger im grünen Bereich ist. Swish = 2 Punkte. Du darfst 3 Mal danebenwerfen.'},
- {id:'round',n:'Kreisverkehr',e:'🚗',g:T3(10),time:60,d:'round',ctl:'Tippen = vorderstes Auto von unten fährt los',how:'Im Kreisel fahren immer mehr Autos. Lass von unten einzelne Autos einfahren, wenn eine Lücke da ist. Jedes Auto gibt einen Punkt. Crash = Herz weg.'},
- {id:'base',n:'Baseball',e:'⚾',g:T3(11),time:60,d:'bat',ctl:'Tippen = schlagen',how:'Tippe, wenn der Ball im leuchtenden Ring ist. Perfekt = Home Run (2 Punkte). 3 Fehler und du bist raus.'},
- {id:'arch',n:'Bogenschiessen',e:'🏹',g:T3(32),time:60,d:'arch',ctl:'Tippen = Pfeil schiessen',how:'Das Fadenkreuz wandert über die Scheibe. Tippe, wenn es in der Mitte ist. Du hast 19 Bolzen. Die Armbrust zielt mit. Zehn = 5 Punkte.'},
+ {id:'flappy',n:'Vogelflucht',e:'🕊️',g:T3(14),time:60,d:'cave',gs:'tap',lb:'Tippen',ctl:'👆 Tippen = flattern',how:'Flieg durch den Gang!'},
+ {id:'tetris',n:'Tetris',e:'🧱',g:T3(400),time:60,d:'tet',gs:'tet',lb:'Wischen · Tippen',ctl:'👆 Tippen = drehen · ↔ wischen = bewegen · ↓ wischen = fallen',how:'Volle Reihen geben Punkte!'},
+ {id:'cannon',n:'Taubenjagd',e:'🔫',g:[5,8,10],time:60,d:'shoot',gs:'tap',lb:'Tippen',ctl:'👆 Tippen = schiessen',how:'10 Patronen. Triff die schwarzen Tauben, nicht die bunten!'},
+ {id:'runner',n:'Tsunami-Flucht',e:'🌊',g:T3(14),time:60,d:'run',gs:'tap',lb:'Tippen',ctl:'👆 Tippen = springen',how:'Spring über Hindernisse. Krabben darfst du anspringen.'},
+ {id:'stack',n:'Burger-Turm',e:'🍔',g:T3(28),time:60,d:'drop',gs:'tap',lb:'Tippen',ctl:'👆 Tippen = Zutat fallen lassen',how:'Triff genau, sonst wird die Lage schmaler.'},
+ {id:'moto',n:'Dirtbike',e:'🏍️',g:T3(14),time:60,d:'moto',gs:'lr',lb:'Wischen',ctl:'👈 👉 Wischen oder links/rechts tippen',how:'Weiche den Hindernissen aus.'},
+ {id:'pong',n:'Samurai',e:'🥥',g:T3(16),time:60,d:'sam',gs:'drag',lb:'Ziehen',ctl:'☝️ Finger ziehen = Samurai bewegen',how:'Fang die Kokosnüsse mit dem Schwert.'},
+ {id:'roulette',n:'Roulette',e:'🎰',g:[1,2,3],time:60,d:'roul',gs:'tap',lb:'Tippen',ctl:'👆 Feld antippen, dann DREHEN',how:'Du hast 2 Versuche. Die grüne 0 verliert immer!'},
+ {id:'snake',n:'Snake',e:'🐍',g:T3(12),time:60,d:'train',gs:'s4',lb:'Wischen',ctl:'☝️ Wische ⬅ ➡ ⬆ ⬇',how:'Sammle die Münzen. Wand und eigener Körper sind tödlich.'},
+ {id:'basket',n:'Basketball',e:'🏀',g:T3(13),time:60,d:'bball',gs:'tap',lb:'Tippen',ctl:'👆 Tippen im grünen Bereich',how:'Du darfst 3 Mal danebenwerfen.'},
+ {id:'round',n:'Kreisverkehr',e:'🚗',g:T3(10),time:60,d:'round',gs:'tap',lb:'Tippen',ctl:'👆 Tippen = Auto fährt los',how:'Fahr in eine Lücke. Crash = Herz weg.'},
+ {id:'base',n:'Baseball',e:'⚾',g:T3(11),time:60,d:'bat',gs:'tap',lb:'Tippen',ctl:'👆 Tippen, wenn der Ball im Ring ist',how:'3 Fehler und du bist raus.'},
+ {id:'arch',n:'Bogenschiessen',e:'🏹',g:T3(32),time:60,d:'arch',gs:'tap',lb:'Tippen',ctl:'👆 Tippen, wenn es in der Mitte ist',how:'Du hast 19 Bolzen.'},
 ];
 function demoHTML(g){var d=g.d,sp=g.e;
   if(d==='cave')return '<div class="dm dm-cave2"><span class="ct"></span><span class="cb"></span><span class="dpl"></span><span class="dpl b"></span><span class="dbd">🕊️</span><span class="dfin">👆</span></div>';
   if(d==='mouth')return '<div class="dm dm-mouth"><div class="dh l">◀</div><div class="dh r">▶</div><span class="dc c1">🍬</span><span class="dc c2">🍭</span><span class="dc c3">🥦</span><span class="dkid">😋</span></div>';
-  if(d==='train')return '<div class="dm dm-snk"><span class="sd s0"></span><span class="sd s1"></span><span class="sd s2"></span><span class="sd s3"></span><span class="sd s4"></span><span class="sd s5"></span><span class="sd hd"></span><span class="dit">🪙</span><div class="dh l">◀</div><div class="dh r">▶</div></div>';
+  if(d==='train')return '<div class="dm dm-snk"><span class="sd s0"></span><span class="sd s1"></span><span class="sd s2"></span><span class="sd s3"></span><span class="sd s4"></span><span class="sd s5"></span><span class="sd hd"></span><span class="dit">🪙</span><div class="swk"><b>⬅</b><b>⬆</b><b>⬇</b><b>➡</b></div><span class="swf">👆</span></div>';
   if(d==='sam')return '<div class="dm dm-sam"><span class="dpm">🌴</span><span class="dmk">🐒</span><span class="dcc">🥥</span><span class="dsl">ZACK!</span><span class="dnj">🥷</span><span class="dfin">👆</span></div>';
-  if(d==='moto')return '<div class="dm dm-moto2"><span class="dr1"></span><span class="dr2"></span><span class="dob">🛢️</span><span class="dsp">🏍️</span><div class="dh l"><b>◀</b></div><div class="dh r"><b>▶</b></div></div>';
+  if(d==='moto')return '<div class="dm dm-moto2"><span class="dr1"></span><span class="dr2"></span><span class="dob">🛢️</span><span class="dsp">🏍️</span><div class="swk"><b>⬅</b><b>➡</b></div><span class="swf">👆</span></div>';
   if(d==='bball')return '<div class="dm dm-bball"><span class="dhp"></span><span class="dbl">🏀</span><div class="dbar"><i></i></div><span class="dfin">👆</span></div>';
   if(d==='round')return '<div class="dm dm-round"><span class="drg"></span><span class="dcr"><b>🚙</b><b style="left:-6px;top:34px;transform:rotate(90deg)">🚕</b><b style="left:34px;top:74px;transform:rotate(90deg)">🚓</b></span><span class="dqc">🚗</span><span class="dfin">👆</span></div>';
   if(d==='bat')return '<div class="dm dm-bat"><span class="dring"></span><span class="dbb">⚾</span><span class="dfin">👆</span></div>';
@@ -2231,7 +2263,7 @@ function demoHTML(g){var d=g.d,sp=g.e;
   if(d==='shoot')return '<div class="dm dm-shoot"><span class="dbal">🐦</span><span class="dbal b2">🦜</span><span class="dshot"></span><span class="dcan"></span><div class="dam">'+'<i></i>'.repeat(10)+'</div><span class="dfin">👆</span></div>';
   if(d==='drop')return '<div class="dm dm-bg"><i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="l4"></i><i class="mv"></i><span class="dfin">👆</span></div>';
   if(d==='slide')return '<div class="dm dm-slide"><span class="dnet"></span><span class="dball"></span><span class="dpad"></span><span class="dfin">👆</span></div>';
-  if(d==='tet')return '<div class="dm dm-tet"><span class="dtp">🟪</span><div class="dbtn"><i>◀</i><i>⟳</i><i>▶</i><i>⤓</i></div></div>';
+  if(d==='tet')return '<div class="dm dm-tet"><span class="dtp">🟪</span><div class="dbtn"><i>◀</i><i>⟳</i><i>▶</i><i>⤓</i></div><div class="swk"><b>⬅</b><b>👆</b><b>⬇</b><b>➡</b></div><span class="swf">👆</span></div>';
   return '<div class="dm dm-roul"><span class="dwh"></span><span class="dchip"></span><div class="drb"><i class="r">ROT 50</i><i class="g">1–4 150</i><i class="b">7 · 300</i></div><span class="dfin">👆</span></div>';}
 function showPicker(){
   var o=document.createElement('div');o.id='rwd';o.className='rwd';
@@ -2268,7 +2300,7 @@ function rwOpen(why,g,force){
   var o=document.createElement('div');o.id='rwd';o.className='rwd';
   o.innerHTML='<div class="rwbox" role="dialog" aria-modal="true"><div class="rwtop"><b>'+g.e+' '+g.n+'</b><span id="rwt" class="rwtime">'+fmtT(g.time)+'</span><button class="rwx" aria-label="Schliessen">×</button></div>'
    +'<div class="xb"><div class="xbt"><i id="rwf"></i>'+[0,1].map(function(i){return '<u style="left:'+(g.g[i]/g.g[2]*100)+'%"></u>'}).join('')+'</div><div class="xbl">'+['50','150','300'].map(function(x,i){return '<span style="left:'+(g.g[i]/g.g[2]*100)+'%">'+x+' XP</span>'}).join('')+'</div></div>'
-   +'<div class="rwcvw"><canvas id="rwc" class="rwcv"></canvas><div id="rwst" class="rwstart"><p class="rwwhy">'+why+'</p>'+demoHTML(g)+'<p class="rwctlt">'+g.ctl+'</p><p class="rwhow">'+g.how+'</p><button class="btn pri big" id="rwgo">Los!</button></div></div><div id="rwctl"></div><div id="rwmsg" class="rwmsg"></div></div>';
+   +'<div class="rwcvw"><canvas id="rwc" class="rwcv"></canvas><div id="rwst" class="rwstart"><p class="rwwhy">'+why+'</p>'+demoHTML(g)+''+gzHTML(g)+'<p class="rwhow">'+g.how+'</p><button class="btn pri big" id="rwgo">Los!</button></div></div><div id="rwctl"></div><div id="rwmsg" class="rwmsg"></div></div>';
   document.body.appendChild(o);document.body.classList.add('rwopen');
   o.querySelector('.rwx').onclick=closeReward;
   var W=Math.floor(Math.min(window.innerWidth-48,440)),H=Math.floor(Math.min(W*1.1,window.innerHeight-270));if(H<200)H=200;
@@ -2309,8 +2341,32 @@ function closeReward(){if(RW&&!RW.done&&RW.stop)RW.stop();RW=null;var o=document
 function rr(cx,x,y,w,h,r){cx.beginPath();cx.moveTo(x+r,y);cx.arcTo(x+w,y,x+w,y+h,r);cx.arcTo(x+w,y+h,x,y+h,r);cx.arcTo(x,y+h,x,y,r);cx.arcTo(x,y,x+w,y,r);cx.closePath()}
 function grad(cx,x0,y0,x1,y1,a,b){var g=cx.createLinearGradient(x0,y0,x1,y1);g.addColorStop(0,a);g.addColorStop(1,b);return g}
 function glossBlock(cx,x,y,s,c1,c2,r){cx.save();cx.shadowColor='rgba(0,0,0,.25)';cx.shadowBlur=s*.12;cx.shadowOffsetY=s*.06;rr(cx,x,y,s,s,r||s*.25);cx.fillStyle=grad(cx,x,y,x,y+s,c1,c2);cx.fill();cx.restore();cx.save();rr(cx,x+s*.12,y+s*.1,s*.76,s*.28,s*.14);cx.fillStyle='rgba(255,255,255,.35)';cx.fill();cx.restore()}
-function loopRun(step){var alive=true,last=performance.now(),raf;function t(now){if(!alive)return;var f=Math.min(3,(now-last)/16.667);last=now;step(f);if(alive)raf=requestAnimationFrame(t)}raf=requestAnimationFrame(t);return {stop:function(){alive=false;cancelAnimationFrame(raf)}}}
+var GSLOW=.72;
+function loopRun(step){var alive=true,last=performance.now(),raf;function t(now){if(!alive)return;var f=Math.min(3,(now-last)/16.667)*GSLOW;last=now;step(f);if(alive)raf=requestAnimationFrame(t)}raf=requestAnimationFrame(t);return {stop:function(){alive=false;cancelAnimationFrame(raf)}}}
+
+function gzHTML(g){var a=g.gs,h='';
+  if(a==='tap')h='<div class="gz gz-tap"><i class="gzr"></i><b class="gzf">👆</b></div>';
+  else if(a==='lr')h='<div class="gz gz-lr"><b class="ga l">◀</b><b class="gzf">👆</b><b class="ga r">▶</b></div>';
+  else if(a==='drag')h='<div class="gz gz-lr gz-drag"><b class="ga l">◀</b><b class="gzf">☝️</b><b class="ga r">▶</b></div>';
+  else if(a==='s4')h='<div class="gz gz-s4"><b class="ga u">▲</b><b class="ga l">◀</b><b class="gzc">👆</b><b class="ga r">▶</b><b class="ga d">▼</b></div>';
+  else if(a==='tet')h='<div class="gz gz-s4"><b class="ga u">⟳</b><b class="ga l">◀</b><b class="gzc">👆</b><b class="ga r">▶</b><b class="ga d">⤓</b></div>';
+  return h+'<p class="gzl">'+(g.lb||'')+'</p>'}
+function gpad(ctl,keys){if(!ctl)return;var M={U:['ArrowUp','▲'],D:['ArrowDown','▼'],L:['ArrowLeft','◀'],R:['ArrowRight','▶']};
+  ctl.innerHTML='<div class="gpad gp'+keys.length+'">'+keys.map(function(k){return '<button class="gp-'+k+'" data-k="'+k+'">'+M[k][1]+'</button>'}).join('')+'</div>';
+  ctl.querySelectorAll('button').forEach(function(b){var f=function(e){e.preventDefault();e.stopPropagation();document.dispatchEvent(new KeyboardEvent('keydown',{key:M[b.dataset.k][0],bubbles:true}));b.classList.add('on');setTimeout(function(){b.classList.remove('on')},120)};b.addEventListener('touchstart',f,{passive:false});b.addEventListener('mousedown',f)})}
 function bindTap(cv,fn){var d=function(e){var t=e.touches?e.touches[0]:e,r=cv.getBoundingClientRect();if(e.cancelable)e.preventDefault();fn(t.clientX-r.left,t.clientY-r.top)};var k=function(e){if(e.key===' '||e.key==='ArrowUp'){e.preventDefault();fn(null)}};cv.addEventListener('touchstart',d,{passive:false});cv.addEventListener('mousedown',d);document.addEventListener('keydown',k);return function(){cv.removeEventListener('touchstart',d);cv.removeEventListener('mousedown',d);document.removeEventListener('keydown',k)}}
+
+function bindSwipe(cv,fn,steps){var st=null;
+  function pt(e){var t=(e.touches&&e.touches[0])||(e.changedTouches&&e.changedTouches[0])||e;return {x:t.clientX,y:t.clientY}}
+  function dn(e){if(e.cancelable)e.preventDefault();var p=pt(e),r=cv.getBoundingClientRect();st={x:p.x,y:p.y,ox:p.x,oy:p.y,rx:p.x-r.left,ry:p.y-r.top,mv:false,fired:false}}
+  function mv(e){if(!st)return;if(e.cancelable)e.preventDefault();var p=pt(e),dx=p.x-st.ox,dy=p.y-st.oy,T=14;
+    if(Math.abs(dx)>=T&&Math.abs(dx)>=Math.abs(dy)*.8){st.mv=true;st.fired=true;fn(dx<0?'L':'R');st.ox=p.x;st.oy=p.y;if(!steps)st.ox=1e9*(dx<0?-1:1)}
+    else if(Math.abs(dy)>=T&&Math.abs(dy)>Math.abs(dx)){st.mv=true;st.fired=true;fn(dy<0?'U':'D');st.oy=p.y;st.ox=p.x;if(!steps)st.oy=1e9*(dy<0?-1:1)}}
+  function up(e){if(!st)return;var s0=st;st=null;if(!s0.fired&&!s0.mv)fn('tap',s0.rx,s0.ry)}
+  cv.addEventListener('touchstart',dn,{passive:false});cv.addEventListener('touchmove',mv,{passive:false});cv.addEventListener('touchend',up);cv.addEventListener('touchcancel',function(){st=null});
+  cv.addEventListener('mousedown',dn);window.addEventListener('mousemove',mv);window.addEventListener('mouseup',up);
+  var k=function(e){var m={ArrowLeft:'L',ArrowRight:'R',ArrowUp:'U',ArrowDown:'D'}[e.key];if(m){e.preventDefault();fn(m)}else if(e.key===' '){e.preventDefault();fn('tap',null,null)}};document.addEventListener('keydown',k);
+  return function(){cv.removeEventListener('touchstart',dn);cv.removeEventListener('touchmove',mv);cv.removeEventListener('touchend',up);cv.removeEventListener('mousedown',dn);window.removeEventListener('mousemove',mv);window.removeEventListener('mouseup',up);document.removeEventListener('keydown',k)}}
 function shakeBox(){var b=document.querySelector('.rwbox'),c=document.querySelector('.rwcvw');if(b){b.classList.remove('shake');void b.offsetWidth;b.classList.add('shake')}if(c){c.classList.add('hurt');setTimeout(function(){c.classList.remove('hurt')},450)}}
 function hearts(cx,n,w,mx){if(RW){if(RW.hl!=null&&n<RW.hl)shakeBox();RW.hl=n}cx.font=Math.floor(w*.06)+'px sans-serif';cx.textBaseline='top';cx.textAlign='left';for(var i=0;i<(mx||3);i++)cx.fillText(i<n?'❤️':'🖤',w*.025+i*w*.075,w*.02)}
 function bigScore(cx,w,s){cx.save();cx.font='bold '+Math.floor(w*.11)+'px sans-serif';cx.textAlign='right';cx.textBaseline='top';cx.lineWidth=5;cx.strokeStyle='rgba(0,0,0,.35)';cx.strokeText(s,w-w*.04,w*.02);cx.fillStyle='#fff';cx.fillText(s,w-w*.04,w*.02);cx.restore()}
@@ -2515,10 +2571,11 @@ catch:function(cv,cx,w,h,score,over){
     items.forEach(function(it){draw(it,lw*.27)});
     stepP(cx,P,f);floatTxt(cx,F,f);hearts(cx,lives,w);bigScore(cx,w,s)});
   return function(){L.stop();unb()}},
-snake:function(cv,cx,w,h,score,over){
+snake:function(cv,cx,w,h,score,over,ctl){gpad(ctl,['L','U','D','R']);
   var N=13,S=Math.floor(Math.min(w,h-6)/N),W=N*S,ox=Math.floor((w-W)/2),oy=Math.floor((h-W)/2),sn=[{x:6,y:6},{x:5,y:6},{x:4,y:6},{x:3,y:6}],pv=sn.map(function(c){return {x:c.x,y:c.y}}),d={x:1,y:0},q=[],f0,s=0,acc=0,dead=false,fr=0,P=[],F=[],lastD=d,i,IV=9;
   function food(){do{f0={x:Math.floor(Math.random()*N),y:Math.floor(Math.random()*N)}}while(sn.some(function(c){return c.x===f0.x&&c.y===f0.y}))}food();
-  var unb=bindTap(cv,function(x){if(x==null)return;q.push(x<w/2?'L':'R');if(q.length>2)q.shift()});
+  var qd=d;function pushT(m){if(m==='L')qd={x:qd.y,y:-qd.x};else qd={x:-qd.y,y:qd.x};q.push(m);if(q.length>2)q.shift()}
+  var unb=bindSwipe(cv,function(k,x){var V={U:{x:0,y:-1},D:{x:0,y:1},L:{x:-1,y:0},R:{x:1,y:0}};if(k==='tap'){if(x!=null)pushT(x<w/2?'L':'R');return}var n=V[k];if(!n)return;if(n.x===qd.y&&n.y===-qd.x)pushT('L');else if(n.x===-qd.y&&n.y===qd.x)pushT('R')});
   function step(){var m=q.shift();if(m==='L')d={x:d.y,y:-d.x};else if(m==='R')d={x:-d.y,y:d.x};
     var h0={x:sn[0].x+d.x,y:sn[0].y+d.y},eat=h0.x===f0.x&&h0.y===f0.y;
     if(h0.x<0||h0.y<0||h0.x>=N||h0.y>=N||sn.slice(0,eat?sn.length:sn.length-1).some(function(c){return c.x===h0.x&&c.y===h0.y})){dead=true;burst(P,ox+sn[0].x*S+S/2,oy+sn[0].y*S+S/2,30,['#69F0AE','#00E676','#fff'],10);L.stop();unb();over();return}
@@ -2542,10 +2599,10 @@ snake:function(cv,cx,w,h,score,over){
     [-1,1].forEach(function(sg){cx.fillStyle='#fff';cx.beginPath();cx.arc(S*.18,sg*S*.24,S*.15,0,7);cx.fill();cx.fillStyle='#111';cx.beginPath();cx.ellipse(S*.23,sg*S*.24,S*.07,S*.1,0,0,7);cx.fill();cx.fillStyle='#fff';cx.beginPath();cx.arc(S*.26,sg*S*.21,S*.025,0,7);cx.fill()});cx.restore();
     stepP(cx,P,f);floatTxt(cx,F,f);bigScore(cx,w,s)});
   return function(){L.stop();unb()}},
-moto:function(cv,cx,w,h,score,over){
+moto:function(cv,cx,w,h,score,over,ctl){gpad(ctl,['L','R']);
   var LW=w*.235,RX=w/2-1.5*LW,by=h*.78,lane=1,mx=1,s=0,lives=3,rows=[],sc=0,nxt=h*.55,inv=0,fr=0,P=[],GG=RW.g.g,i,spT=0,ls=LW*1.0;
   function lx(l){return w/2+(l-1)*LW}
-  var unb=bindTap(cv,function(x){if(x==null)return;if(x<w/2)lane=Math.max(0,lane-1);else lane=Math.min(2,lane+1)});
+  var unb=bindSwipe(cv,function(k,x){if(k==='L')lane=Math.max(0,lane-1);else if(k==='R')lane=Math.min(2,lane+1);else if(k==='tap'&&x!=null){if(x<w/2)lane=Math.max(0,lane-1);else lane=Math.min(2,lane+1)}},true)
   function obst(k,x,y,seed){var ow=LW*.8;cx.save();cx.translate(x,y);cx.fillStyle='rgba(0,0,0,.3)';cx.beginPath();cx.ellipse(ow*.12,ow*.14,ow*.46,ow*.4,0,0,7);cx.fill();
     cx.shadowColor='rgba(255,235,59,.9)';cx.shadowBlur=14;
     if(k==='barrel'){cx.fillStyle=grad(cx,-ow*.4,-ow*.4,ow*.4,ow*.4,'#EF5350','#8E1B1B');cx.beginPath();cx.arc(0,0,ow*.4,0,7);cx.fill();cx.shadowBlur=0;cx.strokeStyle='#FFEB3B';cx.lineWidth=ow*.09;cx.beginPath();cx.arc(0,0,ow*.3,0,7);cx.stroke();cx.strokeStyle='#212121';cx.lineWidth=ow*.04;cx.beginPath();cx.arc(0,0,ow*.4,0,7);cx.stroke();cx.fillStyle='#B71C1C';cx.beginPath();cx.arc(0,0,ow*.18,0,7);cx.fill();cx.fillStyle='rgba(255,255,255,.4)';cx.beginPath();cx.ellipse(-ow*.12,-ow*.14,ow*.1,ow*.05,-.6,0,7);cx.fill();cx.fillStyle='#fff';cx.font='bold '+ow*.2+'px sans-serif';cx.textAlign='center';cx.textBaseline='middle';cx.fillText('!',0,1)}
@@ -2587,13 +2644,15 @@ moto:function(cv,cx,w,h,score,over){
     if(inv<=0||Math.floor(inv/5)%2)bike();
     stepP(cx,P,f);hearts(cx,lives,w);bigScore(cx,w,s)});
   return function(){L.stop();unb()}},
-pong:function(cv,cx,w,h,score,over){
+pong:function(cv,cx,w,h,score,over,ctl){var pdv=0;
   var yF=h*.3,yN=h*.87,hwF=w*.17,hwN=w*.44;
   function pj(u,v){var hw=hwF+(hwN-hwF)*v;return {x:w/2+(u-.5)*2*hw,y:yF+(yN-yF)*v,k:.55+.5*v}}
   var ru=.5,tu=.5,s=0,lives=3,cmb=0,flashT=0,fr=0,P=[],F=[],swing=0,oswing=0,pause=35,B=null,hv=null,slash=null,i;
   var unb=bindTap(cv,function(x){if(x!=null)tu=Math.max(0,Math.min(1,(x-w/2)/(2*hwN)+.5))});
   function mv(e){var t=e.touches?e.touches[0]:e,rc=cv.getBoundingClientRect();if(e.touches||e.buttons){tu=Math.max(0,Math.min(1,(t.clientX-rc.left-w/2)/(2*hwN)+.5));if(e.cancelable)e.preventDefault()}}
   cv.addEventListener('touchmove',mv,{passive:false});cv.addEventListener('mousemove',mv);
+  if(ctl){ctl.innerHTML='<div class="gpad gp2"><button data-d="-1">◀</button><button data-d="1">▶</button></div>';ctl.querySelectorAll('button').forEach(function(b){var on=function(e){e.preventDefault();pdv=+b.dataset.d;b.classList.add('on')},off=function(){pdv=0;b.classList.remove('on')};b.addEventListener('touchstart',on,{passive:false});b.addEventListener('mousedown',on);b.addEventListener('touchend',off);b.addEventListener('touchcancel',off);window.addEventListener('mouseup',off)})}
+  var pit=setInterval(function(){if(!document.getElementById('rwc')){clearInterval(pit);return}if(pdv)tu=Math.max(0,Math.min(1,tu+pdv*.03))},30);
   function pickU(){return Math.random()<.7?(ru>.5?.08+Math.random()*.35:.57+Math.random()*.35):.08+Math.random()*.84}
   function dur(){return Math.max(34,78-s*1.5)}
   function serve(){B={t:0,u0:.5,v0:.04,u1:pickU(),v1:.93,T:dur()};oswing=1}
@@ -2636,32 +2695,32 @@ pong:function(cv,cx,w,h,score,over){
     stepP(cx,P,f);floatTxt(cx,F,f);hearts(cx,lives,w);bigScore(cx,w,s)});
   return function(){L.stop();unb();cv.removeEventListener('touchmove',mv);cv.removeEventListener('mousemove',mv)}},
 roulette:function(cv,cx,w,h,score,over){
-  var fr=0,SEG=13,A=Math.PI*2/SEG,rot=0,state='pick',s=0,tm=0,rot0=0,rotD=0,idx=0,msg='Versuch 1 von 2: Wähle ein Feld',mcol='#fff',P=[],F=[],ccx=w/2,ccy=h*.185,R=Math.min(w*.26,h*.135),ba=0,Af=0,rb=R*.93,sel=null,tries=2,res='',RED=[1,3,6,8,10,11],FD=[],i;
+  var fr=0,SEG=13,A=Math.PI*2/SEG,rot=0,state='pick',s=0,tm=0,rot0=0,rotD=0,idx=0,msg='Versuch 1 von 2: Wähle ein Feld',mcol='#fff',P=[],F=[],ccx=w/2,ccy=h*.19,R=Math.min(w*.31,h*.158),ba=0,Af=0,rb=R*.93,sel=null,tries=2,res='',RED=[1,3,6,8,10,11],FD=[],i;
   function col(n){return n===0?'#00A650':RED.indexOf(n)>=0?'#D32F2F':'#212121'}
   var gx=w*.04,gw=w*.92;
-  FD.push({k:'r',t:'ROT',x:gx,y:h*.41,w:gw/2-4,h:h*.085,c:['#E53935','#8E0E0E'],pts:1,sub:'50 XP'},{k:'b',t:'SCHWARZ',x:gx+gw/2+4,y:h*.41,w:gw/2-4,h:h*.085,c:['#3A3A3A','#0C0C0C'],pts:1,sub:'50 XP'});
-  [['r1','1–4',1,4],['r2','5–8',5,8],['r3','9–12',9,12]].forEach(function(a,j){FD.push({k:a[0],t:a[1],lo:a[2],hi:a[3],x:gx+j*(gw/3),y:h*.51,w:gw/3-5,h:h*.085,c:['#1E6BD6','#0D3C8A'],pts:2,sub:'150 XP'})});
-  for(i=1;i<=12;i++)FD.push({k:'n',n:i,t:''+i,x:gx+((i-1)%6)*(gw/6),y:h*.61+(((i-1)/6)|0)*h*.085,w:gw/6-4,h:h*.075,c:RED.indexOf(i)>=0?['#E53935','#8E0E0E']:['#3A3A3A','#0C0C0C'],pts:3,sub:'300 XP'});
+  FD.push({k:'r',t:'ROT',x:gx,y:h*.455,w:gw/2-4,h:h*.115,c:['#E53935','#8E0E0E'],pts:1,sub:'50 XP'},{k:'b',t:'SCHWARZ',x:gx+gw/2+4,y:h*.455,w:gw/2-4,h:h*.115,c:['#3A3A3A','#0C0C0C'],pts:1,sub:'50 XP'});
+  [['r1','1–4',1,4],['r2','5–8',5,8],['r3','9–12',9,12]].forEach(function(a,j){FD.push({k:a[0],t:a[1],lo:a[2],hi:a[3],x:gx+j*(gw/3),y:h*.585,w:gw/3-5,h:h*.115,c:['#1E6BD6','#0D3C8A'],pts:2,sub:'150 XP'})});
+  [3,7,11].forEach(function(n,j){FD.push({k:'n',n:n,t:''+n,x:gx+j*(gw/3),y:h*.715,w:gw/3-5,h:h*.115,c:RED.indexOf(n)>=0?['#E53935','#8E0E0E']:['#3A3A3A','#0C0C0C'],pts:3,sub:'300 XP'})});
   function win(f,n){if(n===0)return false;if(f.k==='r')return RED.indexOf(n)>=0;if(f.k==='b')return RED.indexOf(n)<0;if(f.k==='n')return n===f.n;return n>=f.lo&&n<=f.hi}
-  var BTN={x:w*.2,y:h*.835,w:w*.6,h:h*.11};
+  var BTN={x:w*.15,y:h*.855,w:w*.7,h:h*.115};
   var unb=bindTap(cv,function(x,y){if(state!=='pick'||x==null)return;
     if(x>BTN.x&&x<BTN.x+BTN.w&&y>BTN.y&&y<BTN.y+BTN.h){if(!sel){msg='Setze zuerst deinen Jeton!';mcol='#FFD54F';return}state='spin';idx=Math.floor(Math.random()*SEG);rot0=rot;rotD=Math.PI*2*(3+Math.random()*2)+Math.random()*Math.PI*2;Af=-Math.PI/2+(idx+.5)*A+rot0+rotD;tm=0;msg='Rien ne va plus …';mcol='#FFD54F';return}
     FD.forEach(function(f){if(x>f.x&&x<f.x+f.w&&y>f.y&&y<f.y+f.h){sel=f;msg=f.t+' gewählt: '+f.sub+' bei Treffer';mcol='#fff'}})});
   function chip(x,y,r,c){cx.save();cx.shadowColor='rgba(0,0,0,.5)';cx.shadowBlur=5;cx.shadowOffsetY=2;cx.fillStyle=c;cx.beginPath();cx.ellipse(x,y,r,r*.78,0,0,7);cx.fill();cx.restore();cx.strokeStyle='#fff';cx.lineWidth=r*.2;cx.setLineDash([r*.38,r*.38]);cx.beginPath();cx.ellipse(x,y,r*.88,r*.69,0,0,7);cx.stroke();cx.setLineDash([])}
   var L=loopRun(function(f){fr+=f;
-    if(state==='spin'){tm+=f;var k=Math.min(1,tm/230),e=1-Math.pow(1-k,3),e2=1-Math.pow(1-k,2);rot=rot0+rotD*e;ba=Af-Math.PI*2*5*Math.pow(1-e2,2);rb=k<.72?R*.93:R*.93-R*.2*Math.min(1,(k-.72)/.2)+Math.sin(tm*.9)*R*.015*(1-k);
-      if(k>=1){tm=0;state='wait';if(win(sel,idx)){res='win';s=sel.pts;msg='Gewonnen! '+sel.sub;mcol='#FFD54F';burst(P,w/2,h*.2,50,['#FFD54F','#fff','#FF80AB','#80D8FF'],13)}else{res='lose';tries--;msg=idx===0?'Grün! Leider verloren.':'Leider verloren!';mcol='#FF8A80'}}}
+    if(state==='spin'){tm+=f;var k=Math.min(1,tm/170),e=1-Math.pow(1-k,3),e2=1-Math.pow(1-k,2);rot=rot0+rotD*e;ba=Af-Math.PI*2*5*Math.pow(1-e2,2);rb=k<.72?R*.93:R*.93-R*.2*Math.min(1,(k-.72)/.2)+Math.sin(tm*.9)*R*.015*(1-k);
+      if(k>=1){tm=0;state='wait';if(win(sel,idx)){res='win';s=sel.pts;msg='Gewonnen! '+sel.sub;mcol='#FFD54F';burst(P,w/2,h*.21,50,['#FFD54F','#fff','#FF80AB','#80D8FF'],13)}else{res='lose';tries--;msg=idx===0?'Grün! Leider verloren.':'Leider verloren!';mcol='#FF8A80'}}}
     else if(state==='wait'){tm+=f;if(tm>(res==='win'?80:70)){if(res==='lose'&&tries>0){state='pick';sel=null;res='';rb=R*.93;msg='Noch 1 Versuch! Wähle ein Feld';mcol='#FFD54F';FD.forEach(function(q){q.pt=0});return}state='end';L.stop();unb();if(res==='win'){score(s);if(RW&&!RW.done)rwEnd()}else over();return}}
     var bg=cx.createRadialGradient(w/2,h*.65,10,w/2,h*.65,w*.8);bg.addColorStop(0,'#1E9A55');bg.addColorStop(1,'#07391F');cx.fillStyle=bg;cx.fillRect(0,0,w,h);
-    cx.fillStyle=grad(cx,0,0,0,h*.39,'#4E2A10','#2A1406');cx.fillRect(0,0,w,h*.39);cx.strokeStyle='rgba(0,0,0,.25)';cx.lineWidth=1;for(i=0;i<11;i++){cx.beginPath();cx.moveTo(0,i*h*.035);cx.quadraticCurveTo(w/2,i*h*.035+6*Math.sin(i),w,i*h*.035);cx.stroke()}
-    glow(cx,w/2,ccy,w*.5,'rgba(255,215,120,.35)');cx.fillStyle='#D4AF37';cx.fillRect(0,h*.388,w,4);
+    cx.fillStyle=grad(cx,0,0,0,h*.445,'#4E2A10','#2A1406');cx.fillRect(0,0,w,h*.445);cx.strokeStyle='rgba(0,0,0,.25)';cx.lineWidth=1;for(i=0;i<11;i++){cx.beginPath();cx.moveTo(0,i*h*.035);cx.quadraticCurveTo(w/2,i*h*.035+6*Math.sin(i),w,i*h*.035);cx.stroke()}
+    glow(cx,w/2,ccy,w*.5,'rgba(255,215,120,.35)');cx.fillStyle='#D4AF37';cx.fillRect(0,h*.443,w,4);
     cx.save();cx.translate(ccx,ccy);cx.shadowColor='rgba(0,0,0,.6)';cx.shadowBlur=14;cx.fillStyle=grad(cx,-R,-R,R,R,'#B87333','#4E2C0E');cx.beginPath();cx.arc(0,0,R*1.16,0,7);cx.fill();cx.shadowBlur=0;cx.strokeStyle='#E7C766';cx.lineWidth=3;cx.beginPath();cx.arc(0,0,R*1.1,0,7);cx.stroke();
     cx.rotate(rot);for(i=0;i<SEG;i++){cx.fillStyle=col(i);cx.beginPath();cx.moveTo(0,0);cx.arc(0,0,R,-Math.PI/2+i*A,-Math.PI/2+(i+1)*A);cx.fill();cx.strokeStyle='#D4AF37';cx.lineWidth=1.5;cx.stroke();cx.save();cx.rotate(-Math.PI/2+(i+.5)*A+Math.PI/2);cx.fillStyle='#fff';cx.font='bold '+R*.17+'px sans-serif';cx.textAlign='center';cx.textBaseline='middle';cx.fillText(i,0,-R*.84);cx.restore()}
     cx.fillStyle=grad(cx,0,-R*.6,0,R*.6,'#3A2412','#1A0F07');cx.beginPath();cx.arc(0,0,R*.6,0,7);cx.fill();cx.strokeStyle='#D4AF37';cx.lineWidth=2;cx.stroke();cx.fillStyle=grad(cx,-R*.4,-R*.4,R*.4,R*.4,'#FFE082','#B8860B');cx.beginPath();cx.arc(0,0,R*.34,0,7);cx.fill();cx.restore();
     if(state==='spin'||state==='wait'){if(state==='wait')ba=Af;var bxx=ccx+Math.cos(ba)*rb,byy=ccy+Math.sin(ba)*rb;glow(cx,bxx,byy,R*.18,'rgba(255,255,255,.7)');cx.fillStyle='#fff';cx.beginPath();cx.arc(bxx,byy,R*.07,0,7);cx.fill()}
-    cx.font='bold '+Math.floor(w*.044)+'px sans-serif';cx.textAlign='center';cx.textBaseline='middle';cx.lineWidth=4;cx.strokeStyle='rgba(0,0,0,.55)';cx.strokeText(msg,w/2,h*.373);cx.fillStyle=mcol;cx.fillText(msg,w/2,h*.373);
+    cx.font='bold '+Math.floor(w*.046)+'px sans-serif';cx.textAlign='center';cx.textBaseline='middle';cx.lineWidth=4;cx.strokeStyle='rgba(0,0,0,.55)';cx.strokeText(msg,w/2,h*.425);cx.fillStyle=mcol;cx.fillText(msg,w/2,h*.425);
     FD.forEach(function(f){var on=sel===f,wn=state==='wait'&&on&&res==='win';cx.save();cx.shadowColor=on?'#FFD54F':'rgba(0,0,0,.4)';cx.shadowBlur=wn?24:on?12:4;cx.fillStyle=grad(cx,0,f.y,0,f.y+f.h,f.c[0],f.c[1]);rr(cx,f.x,f.y,f.w,f.h,9);cx.fill();cx.restore();cx.strokeStyle=on?'#FFD54F':'#D4AF37';cx.lineWidth=on?4:1.5;rr(cx,f.x+2,f.y+2,f.w-4,f.h-4,7);cx.stroke();
-      cx.fillStyle='#fff';cx.textAlign='center';cx.textBaseline='middle';cx.font='bold '+Math.floor(w*(f.k==='n'?.045:.04))+'px sans-serif';cx.fillText(f.t,f.x+f.w/2,f.y+f.h*(f.k==='n'?.38:.34));cx.font='bold '+Math.floor(w*.026)+'px sans-serif';cx.fillStyle='#FFE082';cx.fillText(f.sub,f.x+f.w/2,f.y+f.h*(f.k==='n'?.78:.75));
+      cx.fillStyle='#fff';cx.textAlign='center';cx.textBaseline='middle';cx.font='bold '+Math.floor(w*(f.k==='n'?.065:.048))+'px sans-serif';cx.fillText(f.t,f.x+f.w/2,f.y+f.h*(f.k==='n'?.38:.34));cx.font='bold '+Math.floor(w*.026)+'px sans-serif';cx.fillStyle='#FFE082';cx.fillText(f.sub,f.x+f.w/2,f.y+f.h*(f.k==='n'?.78:.75));
       if(on){var pop=Math.min(1,(fr-(f.pt||(f.pt=fr)))/8);chip(f.x+f.w*.82,f.y+f.h*.5,Math.min(w*.04,f.h*.32)*(.6+.4*pop),'#1E88E5')}});
     var can=state==='pick'&&sel;cx.save();cx.shadowColor=can?'#FFD54F':'transparent';cx.shadowBlur=can?16+4*Math.sin(fr*.2):0;cx.fillStyle=grad(cx,0,BTN.y,0,BTN.y+BTN.h,can?'#FFD54F':'#8A8A8A',can?'#F57F17':'#555');rr(cx,BTN.x,BTN.y,BTN.w,BTN.h,16);cx.fill();cx.restore();cx.fillStyle=can?'#4A2C00':'#ddd';cx.font='bold '+Math.floor(w*.06)+'px sans-serif';cx.textAlign='center';cx.textBaseline='middle';cx.fillText('DREHEN',BTN.x+BTN.w/2,BTN.y+BTN.h/2);
     stepP(cx,P,f);floatTxt(cx,F,f)});
@@ -2839,11 +2898,12 @@ tetris:function(cv,cx0,w,h,score,over,ctl){
   function down(){if(dead)return;if(!hit(p.m,p.x,p.y+1))p.y++;else lock();draw()}
   function act(k){if(dead)return;if(k==='L'&&!hit(p.m,p.x-1,p.y))p.x--;else if(k==='R'&&!hit(p.m,p.x+1,p.y))p.x++;else if(k==='U')rot();else if(k==='D')down();else if(k==='drop'){while(!hit(p.m,p.x,p.y+1))p.y++;lock()}draw()}
   function draw(){cx.fillStyle=grad(cx,0,0,0,R*S,'#1B1F4B','#3A1C71');cx.fillRect(0,0,C*S,R*S);cx.strokeStyle='rgba(255,255,255,.07)';for(var gx=1;gx<C;gx++){cx.beginPath();cx.moveTo(gx*S,0);cx.lineTo(gx*S,R*S);cx.stroke()}for(var gy=1;gy<R;gy++){cx.beginPath();cx.moveTo(0,gy*S);cx.lineTo(C*S,gy*S);cx.stroke()}var tms=Date.now()*.02;twinkle(cx,C*S,R*S,tms,40);for(var bi=0;bi<8;bi++)glow(cx,(bi*61+tms*(1+bi%3)*.3)%(C*S),((bi*97)+Math.sin(tms*.05+bi)*30+R*S)%(R*S),S*2.4,'rgba('+(bi%2?'255,64,129':'64,196,255')+',.12)');function cell(x,y,c){var k=COL[c-1];glossBlock(cx,x*S+1,y*S+1,S-2,k,shade(k),S*.2)}if(p){var gyy=p.y;while(!hit(p.m,p.x,gyy+1))gyy++;p.m.forEach(function(r,y){r.forEach(function(v,x){if(v){cx.fillStyle='rgba(255,255,255,.14)';rr(cx,(p.x+x)*S+2,(gyy+y)*S+2,S-4,S-4,S*.2);cx.fill()}})})}g.forEach(function(r,y){r.forEach(function(v,x){if(v)cell(x,y,v)})});if(p)p.m.forEach(function(r,y){r.forEach(function(v,x){if(v)cell(p.x+x,p.y+y,p.c)})})}
-  var t=setInterval(down,465),an=setInterval(function(){if(!dead)draw()},60);function stop(){clearInterval(t);clearInterval(an);document.removeEventListener('keydown',kd)}
+  var t=setInterval(down,640),an=setInterval(function(){if(!dead)draw()},60);function stop(){clearInterval(t);clearInterval(an);document.removeEventListener('keydown',kd)}
   var kd=function(e){var m={ArrowUp:'U',ArrowDown:'D',ArrowLeft:'L',ArrowRight:'R',' ':'drop'}[e.key];if(m){e.preventDefault();act(m)}};document.addEventListener('keydown',kd);
   ctl.innerHTML='<div class="rwpad2">'+[['L','◀'],['U','⟳'],['R','▶'],['D','▼'],['drop','⤓']].map(function(k){return '<button data-k="'+k[0]+'">'+k[1]+'</button>'}).join('')+'</div>';
   ctl.querySelectorAll('button').forEach(function(x){var fn=function(e){e.preventDefault();act(x.dataset.k)};x.addEventListener('touchstart',fn,{passive:false});x.addEventListener('mousedown',fn)});
-  nw();draw();return stop}
+  var ub=bindSwipe(cv,function(k){if(k==='L')act('L');else if(k==='R')act('R');else if(k==='D')act('drop');else if(k==='U'||k==='tap')act('U')},true);
+  nw();draw();return function(){stop();ub()}}
 };
 
 
@@ -3006,6 +3066,134 @@ ACT.xgt=function(b){
     if(r.wr>=4)xgFail(false);
   }
 };
+
+
+/* ---------- Variation: neue Zahlen bei Mathe-Aufgaben (gleiche Aufgabe, gleiches Niveau) ---------- */
+function vri(a,b){return a+Math.floor(Math.random()*(b-a+1))}
+function vpick(a){return a[Math.floor(Math.random()*a.length)]}
+function vnot(gen,orig,tries){var x,i=0;do{x=gen();i++}while(String(x)===String(orig)&&i<(tries||40));return x}
+function vth(n){return n>=10000?String(n).replace(/\B(?=(\d{3})+$)/g,' '):String(n)}
+function vfmt(x){return String(Number(x))}
+function vdis(correct,cands,k){var out=[],seen={};seen[correct]=1;shuffle(cands).forEach(function(c){c=String(c);if(!seen[c]&&out.length<k){seen[c]=1;out.push(c)}});return out}
+function vFr(p,q){var g=gcd(p,q)||1;return [p/g,q/g]}
+function vFs(f){return f[1]===1?String(f[0]):f[0]+'/'+f[1]}
+function vFalt(f){return f[0]>f[1]&&f[1]>1?[vFs(f),Math.floor(f[0]/f[1])+(f[0]%f[1]?' '+(f[0]%f[1])+'/'+f[1]:'')]:[vFs(f)]}
+function vFdist(f){var p=f[0],q=f[1],c=[(p+1)+'/'+q,Math.max(1,p-1)+'/'+q,p+'/'+(q+1),(q>1?p+'/'+(q-1):''),q+'/'+p,(p*2)+'/'+q,p+'/'+(q*2),(p+q)+'/'+q].filter(function(s){var m=s.split('/');return s&&m[1]!=='0'&&m[0]*f[1]!==f[0]*m[1]&&s!==vFs(f)});return c}
+var VTR=[[3,4,5],[6,8,10],[5,12,13],[9,12,15],[8,15,17],[12,16,20],[7,24,25],[15,20,25],[20,21,29],[9,40,41],[10,24,26],[18,24,30],[12,35,37],[16,30,34]];
+function vtri(hard){var t=vpick(hard?VTR:VTR.slice(0,8)).slice();if(Math.random()<.5){var x=t[0];t[0]=t[1];t[1]=x}return t}
+function vTriVis(a,b,la,lb,lc){return {type:'tri',na:a,nb:b,la:la,lb:lb,lc:lc}}
+function vBarKm(a,b,U,u){var segs=[],i;for(i=0;i<a;i++)segs.push([1000,'1 '+U]);if(b)segs.push([b,b+' '+u]);return {type:'bar',segs:segs,cap:a+' '+U+(b?' '+b+' '+u:''),col:1}}
+function vNum(s){return Number(String(s).replace(/ /g,'').replace(',','.'))}
+var VLAB=['kürzer als 500 m','500 m bis 1 km','1 km bis 3 km','länger als 3 km'];
+function vDiag(v){return {type:'bars',items:VLAB.map(function(l,i){return [l,v[i]]}),unit:'Kinder'}}
+function vData(){var v;do{v=[vri(2,9),vri(2,9),vri(3,9),vri(2,8)]}while(new Set(v).size<4||(v.indexOf(Math.max.apply(null,v))!==v.lastIndexOf(Math.max.apply(null,v))));return v}
+var VFRUIT=['Tomate','Banane','Apfel','Orange'],VEM={Tomate:'🍅',Banane:'🍌',Apfel:'🍎',Orange:'🍊',Joghurt:'🥛'};
+function vWeights(){var v=[],w;while(v.length<4){w=vri(6,25)*10;if(v.every(function(x){return Math.abs(x-w)>=20}))v.push(w)}return v}
+function vSumBar(items){var tot=0;items.forEach(function(x){tot+=x[1]});return {type:'bar',segs:items.map(function(x){return [x[1],x[0]+' '+x[1]+' g']}),cap:items.map(function(x){return x[1]+' g'}).join(' + ')+' = '+tot+' g',col:0}}
+function vGapBar(x){return {type:'bar',segs:[[x,x+' g'],[1000-x,'?',-1]],cap:x+' g + ___ = 1000 g',col:1}}
+
+/* Rueckgabe: {q, a, ans, dist, steps, vis, expl} oder null */
+function vGen(it){
+  var q=it.q,m,r;
+  /* --- Längen/Gewichte: Umrechnen --- */
+  if(m=/^(.*?)(\d[\d ]*) (km|kg) = ___ (m|g)(.*)$/.exec(q)){var N=vNum(m[2]),big=N>10;N=vnot(function(){return big?vri(11,25):vri(2,9)},N);return {q:m[1]+vth(N)+' '+m[3]+' = ___ '+m[4]+m[5],a:vth(N*1000),ans:[String(N*1000),vth(N*1000),N*1000+' '+m[4],vth(N*1000)+' '+m[4]],aU:vth(N*1000)+' '+m[4],dist:[vth(N*100)+' '+m[4],vth(N*10)+' '+m[4],vth(N)+' '+m[4]],steps:[[N+' · 1000 = '+vth(N*1000),'mal 1000']]}}
+  if(m=/^Wie viele (Meter|Gramm) sind (\d[\d ]*) (km|kg)\?$/.exec(q)){var u=m[1]==='Meter'?'m':'g',N=vnot(function(){return vri(2,9)},vNum(m[2]));return {q:'Wie viele '+m[1]+' sind '+N+' '+m[3]+'?',a:vth(N*1000)+' '+u,aU:vth(N*1000)+' '+u,dist:[vth(N*100)+' '+u,vth(N*10)+' '+u,N+' '+u],steps:[[N+' · 1000 = '+vth(N*1000),'mal 1000']]}}
+  if(m=/^Wie viele (km|kg) sind (\d[\d ]*) (m|g)\?$/.exec(q)){var K=vnot(function(){return vNum(m[2])>9000?vri(11,30):vri(2,9)},vNum(m[2])/1000);return {q:'Wie viele '+m[1]+' sind '+vth(K*1000)+' '+m[3]+'?',a:K+' '+m[1],aU:K+' '+m[1],dist:[K*10+' '+m[1],K*100+' '+m[1],vth(K*1000)+' '+m[1]],steps:[[vth(K*1000)+' : 1000 = '+K,'geteilt durch 1000']]}}
+  if(m=/^(.*?)(\d[\d ]*) (m|g) = ___ (km|kg)(.*)$/.exec(q)){if(/___ (m|g)/.test(q))return null;var K=vnot(function(){return vNum(m[2])>9000?vri(11,30):vri(2,9)},vNum(m[2])/1000);return {q:m[1]+vth(K*1000)+' '+m[3]+' = ___ '+m[4]+m[5],a:String(K),ans:[String(K),K+' '+m[4]],aU:K+' '+m[4],dist:[K*10+' '+m[4],K*100+' '+m[4],vth(K*1000)+' '+m[4]],steps:[[vth(K*1000)+' : 1000 = '+K,'geteilt durch 1000']]}}
+  if(m=/^(\d+) (km|kg) (\d+) (m|g) = ___ (m|g)$/.exec(q)){var a=vri(1,5),b0=+m[3],b=b0<100?vnot(function(){return vpick([5,15,25,50,60,75])},b0):vnot(function(){return vri(2,19)*50},b0),t=a*1000+b;return {q:a+' '+m[2]+' '+b+' '+m[4]+' = ___ '+m[5],a:vth(t)+' '+m[5],aU:vth(t)+' '+m[5],dist:[a*100+b+' '+m[5],a*1000+b*10+' '+m[5],a*1000+b+100+' '+m[5],a*10+b+' '+m[5]],steps:[[a*1000+' + '+b+' = '+t,'zusammenzählen']],vis:[vBarKm(a,b,m[2],m[4])]}}
+  if(m=/^(\d+) (km|kg) (\d+) (m|g) = ___ (m|g) \(Schreibe nur die Zahl\.\)$/.exec(q)){var a=vri(1,5),b0=+m[3],b=b0<100?vnot(function(){return vpick([5,15,25,50,60,75])},b0):vnot(function(){return vri(2,19)*50},b0),t=a*1000+b;return {q:a+' '+m[2]+' '+b+' '+m[4]+' = ___ '+m[5]+' (Schreibe nur die Zahl.)',a:String(t),ans:[String(t),t+' '+m[5],a+' '+String(b).padStart(3,'0')],steps:[[a*1000+' + '+b+' = '+t,'zusammenzählen']],vis:[vBarKm(a,b,m[2],m[4])]}}
+  if(m=/^(\d+) (m|g) = ___ (km|kg) ___ (m|g)$/.exec(q)){var k=vri(1,4),r0=vnot(function(){return vri(2,19)*50},+m[1]%1000),n=k*1000+r0;return {q:n+' '+m[2]+' = ___ '+m[3]+' ___ '+m[4],a:k+' '+m[3]+' '+r0+' '+m[4],aU:k+' '+m[3]+' '+r0+' '+m[4],dist:[n/100+' '+m[3],k+' '+m[3]+' '+r0/10+' '+m[4],(n/10)+' '+m[3]],steps:[[n+' = '+k*1000+' + '+r0,k+' '+m[3]+' und '+r0+' '+m[4]]],vis:[vBarKm(k,r0,m[3],m[4])]}}
+  /* --- Ergaenzen auf 1000 --- */
+  if(m=/^Wie viele Gramm fehlen\? (\d+) g \+ ___ g = 1000 g(.*)$/.exec(q)){var x0=+m[1],x;
+    if(x0%250===0)x=vnot(function(){return vpick([250,500,750])},x0);else if(x0%50===0)x=vnot(function(){return vpick([100,150,200,300,350,400,450,550,600,650,700,800,850,900])},x0);else if(x0%10===0)x=vnot(function(){return vri(10,98)*10+(Math.random()<.5?0:0)},x0);else x=vnot(function(){return vri(10,198)*5+ (vri(0,1)?0:0)},x0);
+    if(x0%50!==0&&x0%10===0){do{x=vri(10,98)*10}while(x%50===0||x===x0)}
+    if(x0%10!==0){do{x=vri(21,198)*5}while(x%10===0||x===x0||x>995)}
+    var y=1000-x;return {q:'Wie viele Gramm fehlen? '+x+' g + ___ g = 1000 g'+m[2],a:y+' g',ans:[String(y),y+' g'],aU:y+' g',dist:[y+100+' g',(y>100?y-100:y+200)+' g',y+50+' g'],steps:[['1000 − '+x+' = '+y,'ergänzen auf 1 kg']],vis:[vGapBar(x)]}}
+  if(m=/^Ein Weg ist 1 km lang\. Du bist (\d+) m gegangen\. Wie viele Meter fehlen noch\?(.*)$/.exec(q)){var x=vnot(function(){return vri(2,19)*50},+m[1]),y=1000-x;return {q:'Ein Weg ist 1 km lang. Du bist '+x+' m gegangen. Wie viele Meter fehlen noch?'+m[2],a:String(y),ans:[String(y),y+' m'],aU:y+' m',dist:[y+100+' m',y-100+' m',y+50+' m'],steps:[['1000 − '+x+' = '+y,'ergänzen auf 1000 m']]}}
+  /* --- Gewichte zusammenzaehlen --- */
+  if(/wiegen zusammen: ___ g/.test(q)){var items=[],re=/(Tomate|Banane|Apfel|Orange|Joghurt) (\d+) g/g,mm;while(mm=re.exec(q))items.push([mm[1],vnot(function(){return vri(6,26)*10},mm[2])]);if(items.length<2)return null;var tot=0;items.forEach(function(x){tot+=x[1]});
+    var head=items.map(function(x){return x[0]+' '+x[1]+' g'}).join(' + '),tail=/\(Schreibe nur die Zahl\.\)$/.test(q)?' (Schreibe nur die Zahl.)':'';
+    var st=items.length===3?[[items[0][1]+' + '+items[1][1]+' = '+(items[0][1]+items[1][1]),'zwei zusammen'],[(items[0][1]+items[1][1])+' + '+items[2][1]+' = '+tot+' g','dritte dazu']]:[[items.map(function(x){return x[1]}).join(' + ')+' = '+tot,'zusammenzählen']];
+    return {q:head+' wiegen zusammen: ___ g'+tail,a:String(tot),ans:[String(tot),tot+' g'],aU:tot+' g',dist:[tot-20+' g',tot+20+' g',tot+100+' g'],steps:st,vis:[vSumBar(items)]}}
+  if(m=/^(Apfel|Banane|Orange|Tomate|Joghurt) (\d+) g \+ (Apfel|Banane|Orange|Tomate|Joghurt) (\d+) g wiegen zusammen ?: ?___ g/.exec(q))return null;
+  /* --- Obst vergleichen --- */
+  if(/^Welches Obst ist am (schwersten|leichtesten)\?$/.test(q)||/^Welche Reihenfolge ist richtig \(leicht → schwer\)\?$/.test(q)){
+    var W=vWeights(),obj=VFRUIT.map(function(n,i){return [n,W[i]]}),sorted=obj.slice().sort(function(a,b){return a[1]-b[1]}),withNum=(it.opts||[]).some(function(o){return /\(/.test(o)})||false,vis=[{type:'bars',items:sorted.map(function(x){return [x[0],x[1]]}),unit:'Gramm (g)'}];
+    if(/schwersten|leichtesten/.test(q)){var tgt=/schwersten/.test(q)?sorted[3]:sorted[0],lab=function(x){return withNum?x[0]+' ('+x[1]+' g)':x[0]};return {q:q,a:lab(tgt),dist:obj.filter(function(x){return x!==tgt}).map(lab),steps:[[tgt[1]+' g ist die '+(/schwersten/.test(q)?'grösste':'kleinste')+' Zahl',tgt[0]]],vis:vis,fixedDist:true}}
+    var ord=sorted.map(function(x){return x[0]}),d=[ord.slice().reverse().join(', '),[ord[1],ord[0],ord[2],ord[3]].join(', '),[ord[0],ord[2],ord[1],ord[3]].join(', '),[ord[3],ord[0],ord[1],ord[2]].join(', ')];
+    return {q:q,a:ord.join(', '),dist:d,hints:['Beginne mit der kleinsten Zahl: '+sorted.map(function(x){return x[1]}).join(', ')+'.'],steps:[[sorted.map(function(x){return x[1]}).join(' < '),'von leicht nach schwer']],vis:vis}}
+  /* --- Buch und Scheren --- */
+  if(m=/^Ein Buch wiegt (\d+) g[.,] (\d+) Scheren wiegen je (\d+) g\. Wie viel wiegen sie zusammen\?(.*)$/.exec(q)){var B,n,s,t;do{B=vpick([500,600,650,700,750,800]);n=vri(2,4);s=vpick([50,60,80,100]);t=B+n*s}while(t>=1000);return {q:'Ein Buch wiegt '+B+' g. '+n+' Scheren wiegen je '+s+' g. Wie viel wiegen sie zusammen?'+m[4],a:String(t),ans:[String(t),t+' g'],steps:[[n+' · '+s+' = '+n*s,n+' Scheren'],[B+' + '+n*s+' = '+t+' g','mit dem Buch']],vis:[{type:'bar',segs:[[B,'Buch '+B+' g']].concat(Array.apply(null,Array(n)).map(function(){return [s,'']})),cap:B+' g + '+n+' · '+s+' g',col:0}]}}
+  if(m=/^Ein Buch wiegt (\d+) g, (\d+) Scheren wiegen je (\d+) g\. Wie viel wiegen sie zusammen\?(.*)$/.exec(q)){var B,n,s,t;do{B=vpick([500,600,650,700,750,800]);n=vri(2,4);s=vpick([50,60,80,100]);t=B+n*s}while(t>=1000);return {q:'Ein Buch wiegt '+B+' g, '+n+' Scheren wiegen je '+s+' g. Wie viel wiegen sie zusammen?'+m[4],a:String(t),ans:[String(t),t+' g'],steps:[[B+' + '+n+' · '+s+' = '+t,'zusammen']],vis:[{type:'bar',segs:[[B,'Buch '+B+' g']].concat(Array.apply(null,Array(n)).map(function(){return [s,'']})),cap:B+' g + '+n+' · '+s+' g',col:0}]}}
+  if(m=/^Ein Buch und (\d+) Scheren wiegen (\d+) g\. Das ist ___ 1 kg\.$/.exec(q)){var B=vpick([500,600,650,700,750,800]),n=vri(2,4),s=vpick([50,60,80,100,120,150]),t=B+n*s;if(t===1000)t+=0;var ans=t<1000?'etwas weniger als':t>1000?'etwas mehr als':'genau';return {q:'Ein Buch und '+n+' Scheren wiegen '+t+' g. Das ist ___ 1 kg.',a:ans,dist:['genau','etwas mehr als','etwas weniger als','viel mehr als'].filter(function(x){return x!==ans}),steps:[[t+(t<1000?' < ':t>1000?' > ':' = ')+'1000',t<1000?'es fehlen noch '+(1000-t)+' g':t>1000?'es sind '+(t-1000)+' g zu viel':'genau 1 kg']],vis:[{type:'bar',segs:t<1000?[[t,t+' g'],[1000-t,'?',-1]]:[[1000,'1 kg'],[t-1000,'+ '+(t-1000)+' g',-1]],cap:'Ein Buch und '+n+' Scheren',col:0}]}}
+  /* --- Zeit --- */
+  if(m=/^(Ein Kind geht 1 km in etwa 20 Minuten\. Wie lange braucht es für )(\d+) km\?(.*)$/.exec(q)){var N=vnot(function(){return vri(2,6)},+m[2]),T=N*20,inMin=/in Minuten/.test(m[3]);return {q:m[1]+N+' km?'+m[3],a:inMin?String(T):T+' min',ans:[String(T),T+' min'],aU:T+' min',dist:[T-20+' min',T+20+' min',N*10+' min',T+40+' min'],steps:[[N+' · 20 = '+T,'Minuten']]}}
+  if(m=/^Ein Kind braucht (\d+) Minuten zu Fuss\./.exec(q)){var N=vnot(function(){return vri(2,6)},+m[1]/20);return {q:'Ein Kind braucht '+N*20+' Minuten zu Fuss. Wie lang ist die Strecke ungefähr? (1 km = 20 min)',a:N+' km',dist:[N*2+' km',N+2+' km',N*20+' km',Math.max(1,N-1)+' km'],steps:[[N*20+' : 20 = '+N,N+' km']]}}
+  /* --- Diagramm --- */
+  if(/Schulweg|Klasse/.test(q)&&it.visuals&&it.visuals.some(function(v){return v.type==='bars'})){
+    var v=vData(),vis=[vDiag(v)],tot=v[0]+v[1]+v[2]+v[3];
+    if(/insgesamt in der Klasse/.test(q))return {q:q,a:String(tot),ans:[String(tot)],dist:[tot-1,tot+1,tot-3,v[2]],steps:[[v.join(' + ')+' = '+tot,'alle Säulen zusammenzählen']],vis:vis};
+    if(/am häufigsten/.test(q)){var mx=v.indexOf(Math.max.apply(null,v));return {q:q,a:VLAB[mx],dist:VLAB.filter(function(x,i){return i!==mx}),steps:[['höchste Säule',VLAB[mx]]],vis:vis}}
+    if(/länger als 1 km\?/.test(q)){var s2=v[2]+v[3];return {q:q,a:String(s2),dist:[v[2],v[3],s2+3,tot-v[0]+1],steps:[[v[2]+' + '+v[3]+' = '+s2,'1 km bis 3 km und länger als 3 km']],vis:vis}}
+    if(/unter 1 km/.test(q)){var s3=v[0]+v[1];return {q:q,a:String(s3),dist:[v[0],v[1],s3+2,s3-1],steps:[[v[0]+' + '+v[1]+' = '+s3,'zwei Säulen']],vis:vis}}
+    if(/zwischen 1 km und 3 km\?/.test(q))return {q:q,a:String(v[2]),dist:[v[1],v[3],tot,v[0]],steps:[['dritte Säule = '+v[2],'ablesen']],vis:vis};
+    if(m=/^Stimmt das\? (\d+) Kinder haben einen Schulweg, der kürzer ist als 500 m\.$/.exec(q)){var yes=Math.random()<.5,sh=yes?v[0]:v[0]+vpick([-1,1,2]);if(sh<1)sh=v[0]+1;return {q:'Stimmt das? '+sh+' Kinder haben einen Schulweg, der kürzer ist als 500 m.',a:sh===v[0]?'Ja':'Nein',dist:[sh===v[0]?'Nein':'Ja'],steps:[['erste Säule = '+v[0],sh===v[0]?'stimmt':'stimmt nicht']],vis:vis}}
+  }
+  /* --- Pythagoras --- */
+  if(m=/^(Berechne c: |)a = (\d+) cm, b = (\d+) cm\.?(.*)$/.exec(q)){if(/\./.test(m[2]+m[3]))return null;var t=vtri(it.lvl>=3);return {q:m[1]+'a = '+t[0]+' cm, b = '+t[1]+' cm'+(m[1]?'.':'.')+m[4],a:String(t[2]),ans:[String(t[2]),t[2]+' cm'],aU:t[2]+' cm',dist:[t[0]+t[1]+' cm',t[2]+1+' cm',t[2]-1+' cm',Math.abs(t[0]-t[1])+' cm'],steps:[[t[0]+'² + '+t[1]+'² = '+t[0]*t[0]+' + '+t[1]*t[1]+' = '+t[2]*t[2],'Quadrate addieren'],['c = √'+t[2]*t[2]+' = '+t[2]+' cm','Wurzel ziehen']],vis:[vTriVis(t[0],t[1],'a = '+t[0]+' cm','b = '+t[1]+' cm','c = ?')],keepDot:true}}
+  if(m=/^(Berechne b: |)a = (\d+) cm, c = (\d+) cm\.?(.*)$/.exec(q)){if(/\./.test(m[2]+m[3]))return null;var t=vtri(it.lvl>=3);return {q:m[1]+'a = '+t[0]+' cm, c = '+t[2]+' cm.'+m[4].replace(/^\s*Berechne c\./,''),a:String(t[1]),ans:[String(t[1]),t[1]+' cm'],aU:t[1]+' cm',dist:[t[2]-t[0]+' cm',t[2]+t[0]+' cm',t[1]+1+' cm',t[1]-1+' cm'],steps:[[t[2]+'² − '+t[0]+'² = '+t[2]*t[2]+' − '+t[0]*t[0]+' = '+t[1]*t[1],'Quadrate subtrahieren'],['b = √'+t[1]*t[1]+' = '+t[1]+' cm','Wurzel ziehen']],vis:[vTriVis(t[0],t[1],'a = '+t[0]+' cm','b = ?','c = '+t[2]+' cm')]}}
+  if(m=/^(Berechne das Quadrat: )([\d.]+)² =$/.exec(q)){var dec=/\./.test(m[2]),n=dec?vnot(function(){return vpick([0.7,1.2,1.4,1.5,1.7,2.5,3.5,4.5,6.5,7.5,8.5,9.5,2.3,3.2])},+m[2]):vnot(function(){return vri(6,30)},+m[2]),sq=Number((n*n).toFixed(2));return {q:m[1]+n+'² =',a:String(sq),ans:[String(sq),String(sq).replace('.',',')],steps:[[n+' · '+n+' = '+sq,'Zahl mal sich selbst']]}}
+  if(m=/^(Ziehe die Wurzel: )√([\d.]+) =$/.exec(q)){var dec=/\./.test(m[2]),n=dec?vnot(function(){return vpick([1.2,1.4,1.5,2.5,3.5,4.5,6.5,7.5,8.5,9.5,2.3,3.2,0.8,1.6])},Math.sqrt(+m[2])):vnot(function(){return vri(11,32)},Math.sqrt(+m[2])),sq=Number((n*n).toFixed(2));return {q:m[1]+'√'+sq+' =',a:String(n),ans:[String(n),String(n).replace('.',',')],steps:[[n+' · '+n+' = '+sq,'Probe: '+n+'²']]}}
+  if(m=/^(Ein Rechteck hat die Seiten |Rechteck mit den Seiten |Ein Fernseher hat die Breite |Fernseher: Breite )(\d+) cm( und die Höhe |, Höhe | und )(\d+) cm(\.|)(.*)$/.exec(q)){var t=vtri(it.lvl>=3),k=1,a=t[0],b=t[1],c=t[2];if(/Fernseher/.test(q)){k=vri(10,20);a=4*k;b=3*k;c=5*k}
+    var txt=/Fernseher/.test(q)?m[1]+a+' cm'+m[3]+b+' cm'+m[5]+m[6]:m[1]+a+' cm'+m[3]+b+' cm'+m[5]+m[6];return {q:txt,a:String(c),ans:[String(c),c+' cm'],aU:c+' cm',dist:[a+b+' cm',c+1+' cm',c-1+' cm',Math.abs(a-b)+' cm'],steps:[[a+'² + '+b+'² = '+(a*a+b*b),'Quadrate addieren'],['d = √'+(a*a+b*b)+' = '+c+' cm','Wurzel ziehen']],vis:[{type:'rect',w:Math.max(a,b),h:Math.min(a,b),lw:Math.max(a,b)+' cm',lh:Math.min(a,b)+' cm',ld:/Fernseher/.test(q)?'Diagonale = ?':'d = ?'}]}}
+  if(m=/^Eine Leiter ist (\d+) m lang(\.| und) ?(Sie steht|steht) ([\d.]+) m von der Wand( entfernt)?\. Wie hoch reicht sie\?(.*)$/.exec(q)){var L=vnot(function(){return vpick([4,5,6,7,8])},+m[1]),x=vri(8,Math.min(26,Math.floor(L*4.4)))/10,hh=Math.round(Math.sqrt(L*L-x*x)*10)/10;return {q:'Eine Leiter ist '+L+' m lang'+m[2]+(m[2]==='.'?' Sie steht ':' steht ')+x+' m von der Wand'+(m[5]||'')+'. Wie hoch reicht sie?'+m[6],a:hh.toFixed(1),ans:[hh.toFixed(1),hh.toFixed(1).replace('.',','),hh.toFixed(1)+' m',hh.toFixed(1).replace('.',',')+' m'],steps:[[L+'² − '+x+'² = '+(L*L)+' − '+(x*x).toFixed(2)+' = '+(L*L-x*x).toFixed(2),'Quadrate subtrahieren'],['h = √'+(L*L-x*x).toFixed(2)+' ≈ '+hh.toFixed(1)+' m','Wurzel ziehen, runden']],vis:[vTriVis(Math.sqrt(L*L-x*x),x,'Wand = ?','Boden = '+x+' m','Leiter = '+L+' m')]}}
+  if(m=/^Ein Quadrat hat die Seite (\d+) cm\. Wie lang ist die Diagonale\?(.*)$/.exec(q)){var s=vnot(function(){return vri(6,15)},+m[1]),dg=Math.round(s*Math.SQRT2*10)/10;return {q:'Ein Quadrat hat die Seite '+s+' cm. Wie lang ist die Diagonale?'+m[2],a:dg.toFixed(1),ans:[dg.toFixed(1),dg.toFixed(1).replace('.',','),dg.toFixed(1)+' cm',dg.toFixed(1).replace('.',',')+' cm'],steps:[[s+'² + '+s+'² = '+2*s*s,'Quadrate addieren'],['d = √'+2*s*s+' ≈ '+dg.toFixed(1)+' cm','Wurzel ziehen, runden']],vis:[{type:'rect',w:s,h:s,lw:s+' cm',lh:s+' cm',ld:'d = ?'}]}}
+  if(m=/^Ein Baum ist bei einem Sturm (\d+) m über dem Boden abgeknickt(\.|,) (?:Seine Spitze berührt|die Spitze berührt) (\d+) m (?:in )?(?:Entfernung|entfernt)/.exec(q)){}
+  if(m=/^Ein Dreieck hat die Seiten (\d+) cm, (\d+) cm und (\d+) cm\. Ist es rechtwinklig\?(.*)$/.exec(q)){var t=vtri(true).sort(function(a,b){return a-b}),ok=Math.random()<.5,c=ok?t[2]:t[2]+vpick([1,2]);return {q:'Ein Dreieck hat die Seiten '+t[0]+' cm, '+t[1]+' cm und '+c+' cm. Ist es rechtwinklig?'+m[4],a:ok?'ja':'nein',ans:[ok?'ja':'nein'],dist:[ok?'nein':'ja'],steps:[[t[0]+'² + '+t[1]+'² = '+(t[0]*t[0]+t[1]*t[1])+(ok?' = ':' ≠ ')+c+'² = '+c*c,ok?'stimmt, rechtwinklig':'stimmt nicht']]}}
+  /* --- Brueche --- */
+  if(m=/^Kürze so weit wie möglich: (\d+)\/(\d+) =$/.exec(q)){var f,p,qq,k;do{qq=vri(2,9);p=vri(1,qq-1);k=vri(2,5)}while(gcd(p,qq)!==1||qq*k>30||(p*k===+m[1]&&qq*k===+m[2]));return {q:'Kürze so weit wie möglich: '+p*k+'/'+qq*k+' =',a:p+'/'+qq,steps:[[p*k+'/'+qq*k+' = '+p+'/'+qq,'Zähler und Nenner durch '+k+']'.replace(']','')]],vis:qq*k<=12?[{type:'pie',parts:qq*k,filled:p*k}]:null}}
+  if(m=/^Erweitere (\d+)\/(\d+) mit (\d+):$/.exec(q)){var qq,p,k;do{qq=vri(2,8);p=vri(1,qq-1);k=vri(2,5)}while(gcd(p,qq)!==1||(p===+m[1]&&qq===+m[2]&&k===+m[3]));var a=p*k+'/'+qq*k;return {q:'Erweitere '+p+'/'+qq+' mit '+k+':',a:a,steps:[[p+'/'+qq+' = '+a,'beide mal '+k]],vis:qq*k<=24?[{type:'fbar',rows:[[qq,p,p+'/'+qq],[qq*k,p*k,'= ?']]}]:null}}
+  if(m=/^Wandle (um in einen unechten Bruch: |in einen unechten Bruch um: )(\d+) (\d+)\/(\d+)( =|)$/.exec(q)){var w,z,n;do{w=vri(1,4);n=vri(2,9);z=vri(1,n-1)}while(gcd(z,n)!==1||(w===+m[2]&&z===+m[3]&&n===+m[4]));var a=(w*n+z)+'/'+n;return {q:'Wandle '+m[1]+w+' '+z+'/'+n+m[5],a:a,steps:[[w+' · '+n+' + '+z+' = '+(w*n+z),'Zähler berechnen'],[a,'Nenner bleibt']],vis:n<=8&&w<=3?Array.apply(null,Array(w)).map(function(){return {type:'pie',parts:n,filled:n}}).concat([{type:'pie',parts:n,filled:z}]):null}}
+  if((m=/^(Rechne: |)(\d+)\/(\d+) ([+−]) (\d+)\/(\d+)( =)(.*)$/.exec(q))&&m[3]===m[6]){
+    var n=vri(5,12),plus=m[4]==='+',z1,z2,tr=0;do{z1=vri(1,n-2);z2=vri(1,n-1);tr++}while(tr<200&&(plus?(z1+z2>=n):(z1<=z2)));
+    if(tr>=200)return null;var sm=plus?z1+z2:z1-z2,res=vFr(sm,n);return {q:m[1]+z1+'/'+n+' '+m[4]+' '+z2+'/'+n+m[7]+m[8],a:vFs(res),ans:vFalt(res),steps:[[z1+'/'+n+' '+m[4]+' '+z2+'/'+n+' = '+sm+'/'+n+(res[0]!==sm?' = '+vFs(res):''),'Zähler '+(plus?'zusammenzählen':'abziehen')]],vis:[{type:'fbar',rows:[[n,z1,z1+'/'+n],[n,z2,z2+'/'+n,1]]}]}}
+  if(m=/^(\d+)\/(\d+) · (\d+)\/(\d+) =(.*)$/.exec(q)){var a,b,c,d,res;do{a=vri(1,5);b=vri(a+1,9);c=vri(1,5);d=vri(c+1,9);res=vFr(a*c,b*d)}while(gcd(a,b)!==1||gcd(c,d)!==1||res[1]>40);return {q:a+'/'+b+' · '+c+'/'+d+' ='+m[5],a:vFs(res),ans:vFalt(res),steps:[[a+'/'+b+' · '+c+'/'+d+' = '+a*c+'/'+b*d+(res[0]!==a*c?' = '+vFs(res):''),'oben mal oben, unten mal unten']]}}
+  if(m=/^(\d+)\/(\d+) : (\d+)\/(\d+) =(.*)$/.exec(q)){var a,b,c,d,res;do{a=vri(1,5);b=vri(a+1,9);c=vri(1,5);d=vri(c+1,9);res=vFr(a*d,b*c)}while(gcd(a,b)!==1||gcd(c,d)!==1||res[1]>40||res[0]>40);return {q:a+'/'+b+' : '+c+'/'+d+' ='+m[5],a:vFs(res),ans:vFalt(res),steps:[[a+'/'+b+' : '+c+'/'+d+' = '+a+'/'+b+' · '+d+'/'+c+' = '+a*d+'/'+b*c+(res[0]!==a*d?' = '+vFs(res):''),'Kehrbruch nehmen']]}}
+  if((m=/^(\d+)\/(\d+) ([+−]) (\d+)\/(\d+) =(.*)$/.exec(q))&&m[2]===m[5]){return vGen({q:'Rechne: '+m[1]+'/'+m[2]+' '+m[3]+' '+m[4]+'/'+m[5]+' ='+m[6],lvl:it.lvl})&&(function(){var r=vGen({q:'Rechne: '+m[1]+'/'+m[2]+' '+m[3]+' '+m[4]+'/'+m[5]+' =',lvl:it.lvl});if(r)r.q=r.q.replace(/^Rechne: /,'')+m[6];return r})()}
+  if((m=/^(\d+)\/(\d+) ([+−]) (\d+)\/(\d+) =(.*)$/.exec(q))&&m[2]!==m[5]){var D=[2,3,4,5,6,8,10,12],d1,d2,z1,z2,L,plus=m[3]==='+',res;var tries=0;do{d1=vpick(D);d2=vpick(D);L=lcm(d1,d2);z1=vri(1,d1-1);z2=vri(1,d2-1);tries++;if(tries>400)return null}while(d1===d2||L>24||gcd(z1,d1)!==1||gcd(z2,d2)!==1||(!plus&&z1*L/d1<=z2*L/d2)||(plus&&L===Math.max(d1,d2)&&false));
+    var x=z1*L/d1,y=z2*L/d2,s=plus?x+y:x-y;res=vFr(s,L);return {q:z1+'/'+d1+' '+m[3]+' '+z2+'/'+d2+' ='+m[6],a:vFs(res),ans:vFalt(res),steps:[[z1+'/'+d1+' '+m[3]+' '+z2+'/'+d2+' = '+x+'/'+L+' '+m[3]+' '+y+'/'+L,'Hauptnenner '+L],['= '+s+'/'+L+(res[0]!==s?' = '+vFs(res):''),'Zähler '+(plus?'zusammenzählen':'abziehen')]],vis:L<=12?[{type:'pie',parts:d1,filled:z1},{type:'pie',parts:d2,filled:z2}]:null}}
+  if(m=/^(\d+) (\d+)\/(\d+) : (\d+)( =|)(.*)$/.exec(q)){var w,z,n,k,res;do{w=vri(1,4);n=vri(2,9);z=vri(1,n-1);k=vri(2,9);res=vFr(w*n+z,n*k)}while(gcd(z,n)!==1||res[1]>40);return {q:w+' '+z+'/'+n+' : '+k+m[5]+m[6],a:vFs(res),ans:vFalt(res),steps:[[w+' '+z+'/'+n+' = '+(w*n+z)+'/'+n,'gemischte Zahl umwandeln'],[(w*n+z)+'/'+n+' : '+k+' = '+(w*n+z)+'/'+n*k+(res[0]!==w*n+z?' = '+vFs(res):''),'durch '+k+' = mal 1/'+k]]}}
+  if(m=/^Wie lautet der Kehrbruch von (\d+)\/(\d+)\?$/.exec(q)){var a=vri(1,9),b=vri(2,9);while(a===b||(a===+m[1]&&b===+m[2]))b=vri(2,9);return {q:'Wie lautet der Kehrbruch von '+a+'/'+b+'?',a:b+'/'+a,dist:[a+'/'+b,'−'+a+'/'+b,(a+b)+'/'+b],steps:[[b+'/'+a,'Tausche oben und unten.']]}}
+  if(m=/^Wie lautet der Hauptnenner von (\d+) und (\d+)\?$/.exec(q)){var D=[2,3,4,5,6,8,9,10,12],a,b;do{a=vpick(D);b=vpick(D)}while(a===b||(a===+m[1]&&b===+m[2])||gcd(a,b)===1&&false);var L=lcm(a,b);return {q:'Wie lautet der Hauptnenner von '+a+' und '+b+'?',a:String(L),dist:[a*b===L?a+b:a*b,Math.max(a,b),a+b,L*2],steps:[[String(L),'kleinste gemeinsame Zahl in beiden Einmaleins-Reihen']]}}
+  if(m=/^Bei (\d+)\/(\d+): Welche Zahl ist der Nenner\?$/.exec(q)){var a=vri(1,9),b=vri(2,9);while(a===b)b=vri(2,9);return {q:'Bei '+a+'/'+b+': Welche Zahl ist der Nenner?',a:String(b),dist:[a,a+b,Math.abs(b-a)||1],steps:[[String(b),'Zähler oben, Nenner unten.']]}}
+  if(m=/^Welcher Bruch zeigt (\d+) von (\d+) Stücken\?$/.exec(q)){var n=vri(3,10),z=vri(1,n-1);return {q:'Welcher Bruch zeigt '+z+' von '+n+' Stücken?',a:z+'/'+n,dist:[n+'/'+z,(z+1)+'/'+n,z+'/'+(n+1)],steps:[[z+'/'+n,'Zähler oben, Nenner unten.']],vis:[{type:'pie',parts:n,filled:z,nocap:true}]}}
+  return null;
+}
+function varyItem(it,isExam){
+  var g=null;try{g=vGen(it)}catch(e){g=null}
+  if(!g||!g.q||g.a==null)return it;
+  var o={},k;for(k in it)o[k]=it[k];
+  o.q=g.q;
+  if(g.vis!==undefined){if(g.vis)o.visuals=g.vis;else delete o.visuals}
+  else if(!(g.keepVis))delete o.visuals&&0;
+  if(isExam){
+    o.explain=g.steps?g.steps.map(function(x){return x[0]}).join(' → '):'';
+    if(it.type==='mc'){
+      var corr=g.aU||g.a,suf=(it.options||[]).some(function(x){return /\s(cm|m|g|kg|km|min)$/.test(x)})?'':'';
+      var dist=(g.dist||[]).map(String);dist=vdis(corr,dist,3);
+      if(dist.length<(/^(Ja|Nein|ja|nein)$/.test(corr)?1:2)){return it}
+      var opts=shuffle([corr].concat(dist));o.options=opts;o.answer=opts.indexOf(corr);
+    }else{o.answer=g.ans||[g.a]}
+  }else{
+    o.a=g.aU&&it.opts?g.aU:g.a;
+    if(it.opts){var corr=g.aU||g.a,dist=vdis(corr,(g.dist||[]).map(String),3);if(dist.length<(/^(Ja|Nein|ja|nein)$/.test(corr)?1:2))return it;var opts=shuffle([corr].concat(dist));o.opts=opts;o.a=corr}
+    else if(it.ans||!it.opts){o.ans=g.ans||[g.a]}
+    if(g.steps)o.steps=g.steps;
+    if(g.hints)o.hints=g.hints;else delete o.hints;
+    o.vary=1;
+  }
+  return o;
+}
 
 
 })();
