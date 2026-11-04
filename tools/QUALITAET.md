@@ -16,3 +16,12 @@ Die Erklärung (`explain`) besteht aus höchstens 6–8 Schritten in dieser Reih
 5. **Beispiele:** nur 2–3 wenige, gut gewählte.
 6. **Das Wichtigste:** ein Merksatz.
 Keine «Nochmal anders»-Wiederholungen, keine Schritte nur zum Wiederholen. Gilt für Mathe und Deutsch, Klasse 3 bis 8.
+
+## Grafik-Regel (verbindlich): Je höher die Klasse und das Niveau, desto weniger Grafik
+- Klasse 3 bis 5: viele Grafiken, Balken, Farben, Bilder, Zwischenschritte. Gilt für Theorie, Lernen, KI-Lernen und Prüfungsaufgaben.
+- Klasse 6 und 7: Grafik nur dort, wo sie das Verständnis wirklich stützt. Tabellen und kurze Schritt-für-Schritt-Karten bleiben.
+- Klasse 8 und höher: sparsam. Hauptsächlich Tabellen, Formeln und Rechenwege. Grafik nur, wenn nötig.
+- Ausnahme Inhalt: Bei Themen, die selbst grafisch sind (Geometrie, Formen, Winkel, Flächen, Körper, Diagramme, Funktionsgraphen), braucht es auch in hohen Klassen Grafiken. Dort gilt: so viele wie nötig, damit man es sieht.
+- In Prüfungsaufgaben nur mit Vorsicht: Grafik nur, wenn die Aufgabe ohne sie nicht lösbar ist (zum Beispiel Dreieck, Diagramm). Nie als Hinweis auf die Lösung. Prüfungen bleiben klassisch.
+- Vor jedem neuen Thema prüfen: Klasse, Niveau und Themenart, dann den Grafikanteil festlegen.
+- Hinweis zum Bestand: Bruchrechnen und Deutsch Klasse 8 haben aktuell noch viele Grafiken (Stand v4.45). Beim nächsten Überarbeiten nach dieser Regel straffen.
