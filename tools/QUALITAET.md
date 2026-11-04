@@ -72,3 +72,11 @@ Keine «Nochmal anders»-Wiederholungen, keine Schritte nur zum Wiederholen. Gil
 - **Schritt-Texte (v4.66)**: Unter jeder Schritt-Rechnung steht eine kurze Handlung in ganzen Worten (z. B. «bis zum nächsten Zehner gehen», «den Rest dazunehmen»), links bündig, nicht nur ein Stichwort.
 - **Schritte schwarz (v4.67)**: Nummern und Text der Schritte schwarz, nie blau (Farben sind für die Grafik reserviert).
 - **Rechner (v4.71)**: Ab Klasse 7 in Mathe: Knopf «Rechner» neben «Notiz» (beide 15 % kleiner) bei jeder Lernkarte und Prüfungsfrage; in der Theorie kein Rechner.
+
+## Regeln Deutsch (v4.75)
+- Zurückhaltende Grafiken, dafür Tabellen, Boxen und farbig markierte Satzglieder (`{farbe|text}`); immer Beispielsätze in der Theorie.
+- Wortwahl und Länge der Klasse anpassen; Antworten eindeutig (keine zwei richtigen Optionen); Prüfung ≠ Karten.
+- Kartentypen: Auswahl, Eingabe, Korrektur-Feld (`pre`, falsches Wort vorgegeben; unverändert = falsch), Mehrfachauswahl (`multi`), Zuordnen (`match`), Nachspuren (`trace`).
+- Rechtschreibung/Zeichensetzung: oft das Korrektur-Feld verwenden.
+## Mathe Kl. 7–9 (v4.76)
+- Generator tools/lp/k7.py (Aufgabenfamilien, Theorie über theory_steps mit Alltags-Szene); Taschenrechner ab Kl. 7.
