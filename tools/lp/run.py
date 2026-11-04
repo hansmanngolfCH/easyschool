@@ -1,6 +1,6 @@
 import sys,json,importlib
 sys.path.insert(0,'.')
-mods=['k1','k1b','k2','k2b','k3']
+mods=['k1','k1b','k2','k2b','k3','k4','k5','k5b','k6']
 topics=[];bad=0
 for m in mods:
     for f in importlib.import_module(m).T:

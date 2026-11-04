@@ -16,3 +16,10 @@ def wr(a,lo,hi,rnd,k=3,deltas=(1,2,3,10,5)):
     return r
 def word(n):
     return str(n)
+def f(n):
+    s='{:,}'.format(n).replace(',',"'")
+    return s
+def fv(n):return [str(n),f(n)] if n>=1000 else [str(n)]
+def wrs(a,rnd,pool):
+    """falsche Optionen aus Pool (ohne a)"""
+    w=[x for x in pool if x!=a];rnd.shuffle(w);return w[:3]
