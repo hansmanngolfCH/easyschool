@@ -266,6 +266,28 @@ function vJumps(v){
     o+='<path d="M'+a+' '+(y-6)+'Q'+m+' '+(y-6-2*h)+' '+b+' '+(y-6)+'" fill="none" stroke="'+jc+'" stroke-width="4" stroke-linecap="round" marker-end="url(#jh'+jm+')"/><rect x="'+(m-Math.max(38,String(j[1]).length*9.5))+'" y="'+(y-h-48)+'" width="'+Math.max(76,String(j[1]).length*19)+'" height="38" rx="19" fill="#fff" stroke="'+jc+'" stroke-width="2"/><text x="'+m+'" y="'+(y-h-21)+'" text-anchor="middle" font-size="26" font-weight="900" fill="'+jc+'" font-family="Arial,sans-serif">'+esc(j[1])+'</text>'});
   return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 204" width="100%" role="img" aria-label="Rechenstrich">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
+function vScene(v){
+  var o='',i,k=v.kind,F='font-family="Arial,sans-serif" font-weight="800"';
+  if(k==='shop'){
+    o+='<rect width="600" height="230" fill="#EAF3FF"/><rect y="188" width="600" height="42" fill="#CFE8C8"/>';
+    for(i=0;i<6;i++)o+='<path d="M'+(40+i*52)+' 38h52l-4 34a26 26 0 0 1-44 0z" fill="'+(i%2?'#fff':'#EA4335')+'" stroke="#B3261E" stroke-width="2"/>';
+    o+='<rect x="44" y="70" width="8" height="118" fill="#8D6E63"/><rect x="340" y="70" width="8" height="118" fill="#8D6E63"/><rect x="36" y="140" width="320" height="16" rx="5" fill="#A1764A"/><rect x="48" y="156" width="296" height="32" fill="#8D6E63"/>';
+    o+='<rect x="70" y="112" width="110" height="34" rx="6" fill="#C69C6D" stroke="#8D6E63" stroke-width="3"/>';
+    [[88,112],[110,106],[132,112],[154,106],[99,100],[143,100]].forEach(function(a){o+='<circle cx="'+a[0]+'" cy="'+a[1]+'" r="12" fill="#E53935" stroke="#B3261E" stroke-width="2"/><path d="M'+a[0]+' '+(a[1]-12)+'q3-8 8-9" stroke="#2E7D32" stroke-width="3" fill="none"/>'});
+    o+='<g class="sc-tag"><rect x="206" y="104" width="86" height="34" rx="8" fill="#FFF3C4" stroke="#F29900" stroke-width="2.5"/><text x="249" y="127" text-anchor="middle" font-size="18" fill="#7A4A00" '+F+'>Äpfel</text></g>';
+    for(i=0;i<3;i++)o+='<g class="sc-hop" style="animation-delay:'+(i*.9)+'s"><circle cx="150" cy="104" r="12" fill="#E53935" stroke="#B3261E" stroke-width="2"/><path d="M150 92q3-8 8-9" stroke="#2E7D32" stroke-width="3" fill="none"/></g>';
+    o+='<path d="M410 150h120l-14 38h-92z" fill="#C69C6D" stroke="#8D6E63" stroke-width="3"/><path d="M420 150q50-70 100 0" fill="none" stroke="#8D6E63" stroke-width="5"/>';
+    o+='<g class="sc-pop"><rect x="392" y="22" width="150" height="46" rx="23" fill="#fff" stroke="#4285F4" stroke-width="3"/><text x="467" y="53" text-anchor="middle" font-size="24" fill="#1A56C8" '+F+'>34 + 25 = ?</text></g>';
+  }else if(k==='plates'){
+    o+='<rect width="600" height="230" fill="#FFF6E5"/><rect y="170" width="600" height="60" fill="#E8C99B"/>';
+    for(i=0;i<3;i++){var cx=130+i*170;
+      o+='<ellipse cx="'+cx+'" cy="168" rx="70" ry="22" fill="#fff" stroke="#9AA3B5" stroke-width="3"/><ellipse cx="'+cx+'" cy="165" rx="52" ry="14" fill="#F1F3F8"/>';
+      [[-30,160],[-10,168],[10,160],[30,168]].forEach(function(c,j){o+='<g class="sc-cookie" style="animation-delay:'+(i*.5+j*.18)+'s"><circle cx="'+(cx+c[0])+'" cy="'+(c[1]-10)+'" r="13" fill="#D9A25B" stroke="#A8702E" stroke-width="2"/><circle cx="'+(cx+c[0]-4)+'" cy="'+(c[1]-14)+'" r="2.5" fill="#5D3A1A"/><circle cx="'+(cx+c[0]+5)+'" cy="'+(c[1]-8)+'" r="2.5" fill="#5D3A1A"/></g>'});
+    }
+    o+='<g class="sc-pop"><rect x="150" y="14" width="300" height="48" rx="24" fill="#fff" stroke="#34A853" stroke-width="3"/><text x="300" y="47" text-anchor="middle" font-size="24" fill="#188038" '+F+'>3 Teller · je 4 Kekse</text></g>';
+  }
+  return '<figure class="vis scn" style="width:100%"><svg viewBox="0 0 600 230" width="100%" role="img" aria-label="'+esc(v.cap||'Bild zum Thema')+'" style="border-radius:16px">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+}
 function vArr(v){
   var P=24,r=v.r,c=v.c,sp=v.split||0,W=c*P+10,H=r*P+10,o='',i,j;
   for(j=0;j<r;j++)for(i=0;i<c;i++){var f=(v.splitRows?j<sp:i<sp)?VC[1]:VC[v.col===undefined?0:v.col];if(!sp)f=VC[v.col===undefined?0:v.col];
@@ -302,7 +324,7 @@ function vCol(v){
 }
 function visuals(list){
   if(!list||!list.length)return '';
-  var map={dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar,tbl:vTbl,chips:vChips,tline:vTline,flow:vFlow,cards:vCards,area:vArea,emo:vEmo,field:vField,clock:vClock,coins:vCoins,shape:vShape,nline:vNline,angle:vAngle,circle:vCircle,jug:vJug,quader:vQuader,par:vPar,blocks:vBlocks,jumps:vJumps,arr:vArr,col:vCol,wall:vWall};
+  var map={dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar,tbl:vTbl,chips:vChips,tline:vTline,flow:vFlow,cards:vCards,area:vArea,emo:vEmo,field:vField,clock:vClock,coins:vCoins,shape:vShape,nline:vNline,angle:vAngle,circle:vCircle,jug:vJug,quader:vQuader,par:vPar,blocks:vBlocks,jumps:vJumps,arr:vArr,col:vCol,wall:vWall,scene:vScene};
   return '<div class="visrow">'+list.map(function(v){return map[v.type]?map[v.type](v):''}).join('')+'</div>';
 }
 

@@ -35599,7 +35599,7 @@
        "pts": [
         7
        ],
-       "lab": "alt"
+       "lab": "ends"
       }
      ]
     },
@@ -35624,8 +35624,7 @@
        "step": 1,
        "pts": [
         9
-       ],
-       "lab": "alt"
+       ]
       }
      ]
     },
@@ -35735,7 +35734,8 @@
        "step": 1,
        "pts": [
         10
-       ]
+       ],
+       "lab": "alt"
       }
      ]
     },
@@ -37477,7 +37477,8 @@
        "pts": [
         12,
         18
-       ]
+       ],
+       "lab": "alt"
       }
      ]
     },
@@ -57774,7 +57775,8 @@
        "minor": 5,
        "pts": [
         40
-       ]
+       ],
+       "lab": "ends"
       }
      ]
     },
@@ -57892,7 +57894,8 @@
        "minor": 5,
        "pts": [
         70
-       ]
+       ],
+       "lab": "ends"
       },
       {
        "type": "chips",
@@ -57990,7 +57993,7 @@
        "pts": [
         65
        ],
-       "lab": "ends"
+       "lab": "alt"
       },
       {
        "type": "jumps",
@@ -58194,7 +58197,7 @@
        "step": 10,
        "minor": 5,
        "q": 15,
-       "lab": "alt"
+       "lab": "ends"
       }
      ]
     },
@@ -58226,8 +58229,7 @@
        "max": 100,
        "step": 10,
        "minor": 5,
-       "q": 25,
-       "lab": "alt"
+       "q": 25
       }
      ]
     },
@@ -58260,7 +58262,7 @@
        "step": 10,
        "minor": 5,
        "q": 35,
-       "lab": "ends"
+       "lab": "alt"
       }
      ]
     },
@@ -58292,7 +58294,8 @@
        "max": 100,
        "step": 10,
        "minor": 5,
-       "q": 45
+       "q": 45,
+       "lab": "alt"
       }
      ]
     },
@@ -58324,8 +58327,7 @@
        "max": 100,
        "step": 10,
        "minor": 5,
-       "q": 55,
-       "lab": "alt"
+       "q": 55
       }
      ]
     },
@@ -58357,8 +58359,7 @@
        "max": 100,
        "step": 10,
        "minor": 5,
-       "q": 65,
-       "lab": "alt"
+       "q": 65
       }
      ]
     },
@@ -58391,7 +58392,7 @@
        "step": 10,
        "minor": 5,
        "q": 75,
-       "lab": "alt"
+       "lab": "ends"
       }
      ]
     },
@@ -58456,7 +58457,7 @@
        "step": 10,
        "minor": 5,
        "q": 95,
-       "lab": "alt"
+       "lab": "ends"
       }
      ]
     },
@@ -58488,7 +58489,8 @@
        "max": 100,
        "step": 10,
        "minor": 5,
-       "q": 10
+       "q": 10,
+       "lab": "alt"
       }
      ]
     },
@@ -58520,8 +58522,7 @@
        "max": 100,
        "step": 10,
        "minor": 5,
-       "q": 30,
-       "lab": "ends"
+       "q": 30
       }
      ]
     },
@@ -58587,7 +58588,7 @@
        "step": 10,
        "minor": 5,
        "q": 70,
-       "lab": "alt"
+       "lab": "ends"
       }
      ]
     },
@@ -58652,7 +58653,7 @@
        "step": 10,
        "minor": 5,
        "q": 20,
-       "lab": "alt"
+       "lab": "ends"
       }
      ]
     },
@@ -58684,7 +58685,8 @@
        "max": 100,
        "step": 10,
        "minor": 5,
-       "q": 40
+       "q": 40,
+       "lab": "alt"
       }
      ]
     },
@@ -58716,7 +58718,8 @@
        "max": 100,
        "step": 10,
        "minor": 5,
-       "q": 60
+       "q": 60,
+       "lab": "alt"
       }
      ]
     },
@@ -58780,8 +58783,7 @@
        "min": 20,
        "max": 30,
        "step": 1,
-       "q": 23,
-       "lab": "alt"
+       "q": 23
       }
      ]
     },
@@ -58813,7 +58815,7 @@
        "max": 30,
        "step": 1,
        "q": 27,
-       "lab": "alt"
+       "lab": "ends"
       }
      ]
     },
@@ -58844,7 +58846,8 @@
        "min": 30,
        "max": 40,
        "step": 1,
-       "q": 33
+       "q": 33,
+       "lab": "alt"
       }
      ]
     },
@@ -58875,8 +58878,7 @@
        "min": 30,
        "max": 40,
        "step": 1,
-       "q": 37,
-       "lab": "alt"
+       "q": 37
       }
      ]
     },
@@ -58939,7 +58941,8 @@
        "min": 40,
        "max": 50,
        "step": 1,
-       "q": 47
+       "q": 47,
+       "lab": "ends"
       }
      ]
     },
@@ -59001,7 +59004,8 @@
        "min": 50,
        "max": 60,
        "step": 1,
-       "q": 57
+       "q": 57,
+       "lab": "alt"
       }
      ]
     },
@@ -59032,7 +59036,8 @@
        "min": 60,
        "max": 70,
        "step": 1,
-       "q": 63
+       "q": 63,
+       "lab": "alt"
       }
      ]
     },
@@ -59063,8 +59068,7 @@
        "min": 60,
        "max": 70,
        "step": 1,
-       "q": 67,
-       "lab": "ends"
+       "q": 67
       }
      ]
     },
@@ -59095,7 +59099,8 @@
        "min": 70,
        "max": 80,
        "step": 1,
-       "q": 73
+       "q": 73,
+       "lab": "alt"
       }
      ]
     },
@@ -59158,7 +59163,7 @@
        "max": 90,
        "step": 1,
        "q": 83,
-       "lab": "ends"
+       "lab": "alt"
       }
      ]
     },
@@ -59189,7 +59194,8 @@
        "min": 80,
        "max": 90,
        "step": 1,
-       "q": 87
+       "q": 87,
+       "lab": "alt"
       }
      ]
     },
@@ -59335,8 +59341,7 @@
        "step": 10,
        "pts": [
         20
-       ],
-       "lab": "ends"
+       ]
       }
      ]
     },
@@ -59402,8 +59407,7 @@
        "step": 10,
        "pts": [
         30
-       ],
-       "lab": "alt"
+       ]
       }
      ]
     },
@@ -59436,8 +59440,7 @@
        "step": 10,
        "pts": [
         40
-       ],
-       "lab": "alt"
+       ]
       }
      ]
     },
@@ -59471,7 +59474,7 @@
        "pts": [
         40
        ],
-       "lab": "ends"
+       "lab": "alt"
       }
      ]
     },
@@ -59504,7 +59507,8 @@
        "step": 10,
        "pts": [
         50
-       ]
+       ],
+       "lab": "ends"
       }
      ]
     },
@@ -59537,8 +59541,7 @@
        "step": 10,
        "pts": [
         50
-       ],
-       "lab": "alt"
+       ]
       }
      ]
     },
@@ -59605,7 +59608,8 @@
        "step": 10,
        "pts": [
         60
-       ]
+       ],
+       "lab": "ends"
       }
      ]
     },
@@ -59638,8 +59642,7 @@
        "step": 10,
        "pts": [
         70
-       ],
-       "lab": "alt"
+       ]
       }
      ]
     },
@@ -59672,8 +59675,7 @@
        "step": 10,
        "pts": [
         70
-       ],
-       "lab": "alt"
+       ]
       }
      ]
     },
@@ -59741,7 +59743,7 @@
        "pts": [
         80
        ],
-       "lab": "alt"
+       "lab": "ends"
       }
      ]
     },
@@ -60087,7 +60089,7 @@
         "step": 10,
         "minor": 5,
         "q": 15,
-        "lab": "alt"
+        "lab": "ends"
        }
       ]
      },
@@ -60110,8 +60112,7 @@
         "max": 100,
         "step": 10,
         "minor": 5,
-        "q": 45,
-        "lab": "alt"
+        "q": 45
        }
       ]
      },
@@ -60135,7 +60136,7 @@
         "step": 10,
         "minor": 5,
         "q": 75,
-        "lab": "ends"
+        "lab": "alt"
        }
       ]
      },
@@ -60158,7 +60159,8 @@
         "max": 100,
         "step": 10,
         "minor": 5,
-        "q": 30
+        "q": 30,
+        "lab": "ends"
        }
       ]
      },
@@ -60181,7 +60183,8 @@
         "max": 100,
         "step": 10,
         "minor": 5,
-        "q": 60
+        "q": 60,
+        "lab": "alt"
        }
       ]
      },
@@ -60227,8 +60230,7 @@
         "max": 100,
         "step": 10,
         "minor": 5,
-        "q": 25,
-        "lab": "alt"
+        "q": 25
        }
       ]
      },
@@ -60251,7 +60253,8 @@
         "max": 100,
         "step": 10,
         "minor": 5,
-        "q": 55
+        "q": 55,
+        "lab": "ends"
        }
       ]
      },
@@ -60274,8 +60277,7 @@
         "max": 100,
         "step": 10,
         "minor": 5,
-        "q": 90,
-        "lab": "ends"
+        "q": 90
        }
       ]
      },
@@ -60298,8 +60300,7 @@
         "max": 100,
         "step": 10,
         "minor": 5,
-        "q": 40,
-        "lab": "alt"
+        "q": 40
        }
       ]
      },
@@ -60322,7 +60323,8 @@
         "max": 100,
         "step": 10,
         "minor": 5,
-        "q": 35
+        "q": 35,
+        "lab": "ends"
        }
       ]
      },
@@ -60345,7 +60347,8 @@
         "max": 100,
         "step": 10,
         "minor": 5,
-        "q": 65
+        "q": 65,
+        "lab": "ends"
        }
       ]
      },
@@ -60363,8 +60366,7 @@
         "min": 30,
         "max": 40,
         "step": 1,
-        "q": 34,
-        "lab": "alt"
+        "q": 34
        }
       ]
      },
@@ -60382,7 +60384,8 @@
         "min": 60,
         "max": 70,
         "step": 1,
-        "q": 68
+        "q": 68,
+        "lab": "ends"
        }
       ]
      },
@@ -60400,7 +60403,8 @@
         "min": 10,
         "max": 20,
         "step": 1,
-        "q": 15
+        "q": 15,
+        "lab": "alt"
        }
       ]
      },
@@ -60419,7 +60423,7 @@
         "max": 50,
         "step": 1,
         "q": 47,
-        "lab": "ends"
+        "lab": "alt"
        }
       ]
      },
@@ -60541,8 +60545,7 @@
         "step": 10,
         "pts": [
          20
-        ],
-        "lab": "ends"
+        ]
        }
       ]
      },
@@ -60590,8 +60593,7 @@
         "step": 10,
         "pts": [
          30
-        ],
-        "lab": "alt"
+        ]
        }
       ]
      },
@@ -60615,8 +60617,7 @@
         "step": 10,
         "pts": [
          40
-        ],
-        "lab": "alt"
+        ]
        }
       ]
      },
@@ -60641,7 +60642,7 @@
         "pts": [
          40
         ],
-        "lab": "ends"
+        "lab": "alt"
        }
       ]
      },
@@ -60665,7 +60666,8 @@
         "step": 10,
         "pts": [
          50
-        ]
+        ],
+        "lab": "ends"
        }
       ]
      },
@@ -60689,8 +60691,7 @@
         "step": 10,
         "pts": [
          50
-        ],
-        "lab": "alt"
+        ]
        }
       ]
      },
@@ -60739,7 +60740,8 @@
         "step": 10,
         "pts": [
          60
-        ]
+        ],
+        "lab": "ends"
        }
       ]
      },
@@ -60763,8 +60765,7 @@
         "step": 10,
         "pts": [
          70
-        ],
-        "lab": "alt"
+        ]
        }
       ]
      },
@@ -60788,8 +60789,7 @@
         "step": 10,
         "pts": [
          70
-        ],
-        "lab": "alt"
+        ]
        }
       ]
      },
@@ -60839,7 +60839,7 @@
         "pts": [
          80
         ],
-        "lab": "alt"
+        "lab": "ends"
        }
       ]
      },
@@ -61077,7 +61077,7 @@
        "pts": [
         39
        ],
-       "lab": "alt"
+       "lab": "ends"
       }
      ]
     },
@@ -61187,8 +61187,7 @@
        "step": 1,
        "pts": [
         49
-       ],
-       "lab": "alt"
+       ]
       },
       {
        "type": "chips",
@@ -61281,7 +61280,8 @@
        "pts": [
         62,
         64
-       ]
+       ],
+       "lab": "alt"
       },
       {
        "type": "chips",
@@ -63297,34 +63297,31 @@
    "explain": [
     {
      "h": "Worum geht es?",
-     "text": "In diesem Thema rechnest du Plus mit Zahlen bis 100. Zum Beispiel 34 + 25. Du lernst vier Dinge: Zahlen zerlegen, in Schritten rechnen, geschickt rechnen und mit der Probe prüfen.",
+     "text": "Du kaufst auf dem Markt ein: 34 Äpfel und noch 25 Äpfel. Wie viele sind es zusammen? Das rechnest du mit Plus. Hier lernst du Plus mit Zahlen bis 100.",
      "visuals": [
       {
-       "type": "cards",
+       "type": "scene",
+       "kind": "shop"
+      },
+      {
+       "type": "lines",
+       "num": true,
        "items": [
         [
-         "Zerlegen",
-         "Zehner und Einer trennen",
-         "25 = 20 + 5",
-         0
+         "Zahlen zerlegen",
+         ""
         ],
         [
-         "In Schritten",
-         "erst Zehner, dann Einer",
-         "34 + 20 + 5",
-         3
+         "In Schritten rechnen",
+         ""
         ],
         [
-         "Geschickt",
-         "tauschen und verdoppeln",
-         "35 + 36",
-         2
+         "Geschickt rechnen",
+         ""
         ],
         [
-         "Probe",
-         "mit Minus zurückrechnen",
-         "59 − 25 = 34",
-         4
+         "Probe machen",
+         ""
         ]
        ]
       }
@@ -73668,7 +73665,8 @@
        "step": 1,
        "pts": [
         7
-       ]
+       ],
+       "lab": "alt"
       },
       {
        "type": "chips",
@@ -74211,7 +74209,8 @@
        "pts": [
         5
        ],
-       "cap": "Lineal"
+       "cap": "Lineal",
+       "lab": "alt"
       }
      ]
     },
@@ -74245,8 +74244,7 @@
        "pts": [
         7
        ],
-       "cap": "Lineal",
-       "lab": "ends"
+       "cap": "Lineal"
       }
      ]
     },
@@ -74280,8 +74278,7 @@
        "pts": [
         9
        ],
-       "cap": "Lineal",
-       "lab": "alt"
+       "cap": "Lineal"
       }
      ]
     },
@@ -74384,8 +74381,7 @@
        "pts": [
         16
        ],
-       "cap": "Lineal",
-       "lab": "alt"
+       "cap": "Lineal"
       }
      ]
     },
@@ -74419,8 +74415,7 @@
        "pts": [
         18
        ],
-       "cap": "Lineal",
-       "lab": "alt"
+       "cap": "Lineal"
       }
      ]
     },
@@ -74971,8 +74966,7 @@
         "pts": [
          4
         ],
-        "cap": "Lineal",
-        "lab": "ends"
+        "cap": "Lineal"
        }
       ]
      },
@@ -74997,7 +74991,8 @@
         "pts": [
          8
         ],
-        "cap": "Lineal"
+        "cap": "Lineal",
+        "lab": "alt"
        }
       ]
      },
@@ -75022,8 +75017,7 @@
         "pts": [
          11
         ],
-        "cap": "Lineal",
-        "lab": "alt"
+        "cap": "Lineal"
        }
       ]
      },
@@ -77103,7 +77097,8 @@
        "minor": 50,
        "pts": [
         600
-       ]
+       ],
+       "lab": "ends"
       }
      ]
     },
@@ -79522,7 +79517,7 @@
        "pts": [
         34
        ],
-       "lab": "alt"
+       "lab": "ends"
       }
      ]
     },
@@ -79574,7 +79569,7 @@
        "pts": [
         34
        ],
-       "lab": "ends"
+       "lab": "alt"
       },
       {
        "type": "chips",
@@ -79609,8 +79604,7 @@
        "step": 1,
        "pts": [
         36
-       ],
-       "lab": "ends"
+       ]
       },
       {
        "type": "chips",
@@ -79645,8 +79639,7 @@
        "step": 1,
        "pts": [
         35
-       ],
-       "lab": "alt"
+       ]
       },
       {
        "type": "chips",
@@ -79790,7 +79783,8 @@
        "step": 10,
        "pts": [
         249
-       ]
+       ],
+       "lab": "ends"
       },
       {
        "type": "chips",
@@ -79867,7 +79861,7 @@
         38,
         41
        ],
-       "lab": "alt"
+       "lab": "ends"
       }
      ]
     },
@@ -85261,41 +85255,27 @@
    "explain": [
     {
      "h": "Worum geht es?",
-     "text": "Hier lernst du das kleine Einmaleins. Es besteht aus den Malaufgaben von 1 × 1 bis 10 × 10. Du lernst, wie Malaufgaben gehen und wie du schwere Aufgaben aus leichten findest.",
+     "text": "Auf jedem Teller liegen 4 Kekse. Es sind 3 Teller. Wie viele Kekse sind es? Das rechnest du mit Mal. Hier lernst du das kleine Einmaleins.",
      "visuals": [
       {
-       "type": "arr",
-       "r": 3,
-       "c": 4,
-       "split": 0,
-       "col": 0
+       "type": "scene",
+       "kind": "plates"
       },
       {
-       "type": "cards",
+       "type": "lines",
+       "num": true,
        "items": [
         [
-         "Gruppen",
-         "Mal heisst gleiche Gruppen",
-         "3 × 4",
-         0
+         "Gleiche Gruppen und Tauschen",
+         ""
         ],
         [
-         "Tauschen",
-         "Die Reihenfolge ist egal",
-         "3 × 4 = 4 × 3",
-         3
+         "Schwere Aufgaben aus leichten ableiten",
+         ""
         ],
         [
-         "Ableiten",
-         "Aus leichten Aufgaben",
-         "4 × 7 aus 2 × 7",
-         7
-        ],
-        [
-         "Teilen",
-         "Die Umkehrung",
-         "12 : 3 = 4",
-         7
+         "Zerlegen und Teilen",
+         ""
         ]
        ]
       }
@@ -91633,8 +91613,7 @@
        "step": 100000,
        "pts": [
         300000
-       ],
-       "lab": "alt"
+       ]
       }
      ]
     },
@@ -100327,7 +100306,8 @@
        "step": 100000,
        "pts": [
         1000000
-       ]
+       ],
+       "lab": "alt"
       }
      ]
     },

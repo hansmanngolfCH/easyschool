@@ -1316,3 +1316,13 @@ body.hascalc #app{padding-bottom:84px}
 .exstat{gap:6px;margin-bottom:8px}.exstat>div{padding:6px 4px;border-radius:10px}.exstat b{font-size:1.15rem}.exstat span{font-size:.66rem}
 .exn{height:28px;font-size:1rem;border-radius:6px}.exc>span{font-size:.62rem}.exbar{gap:2px;margin-top:2px}
 .exbon{flex-direction:row!important;flex-wrap:wrap;gap:4px 10px!important;margin-top:8px!important;font-size:.74rem!important}
+
+.scn svg{max-height:none!important}
+.sc-hop,.sc-cookie,.sc-pop,.sc-tag{transform-box:fill-box;transform-origin:center}
+.sc-hop{animation:schop 2.7s ease-in-out infinite}
+@keyframes schop{0%{transform:translate(0,0);opacity:0}10%{opacity:1}50%{transform:translate(135px,-55px)}85%{transform:translate(262px,44px);opacity:1}100%{transform:translate(262px,44px);opacity:0}}
+.sc-cookie{animation:sccook 3.2s ease-out infinite;opacity:0}
+@keyframes sccook{0%{transform:scale(.2);opacity:0}12%{transform:scale(1.15);opacity:1}20%{transform:scale(1)}85%{opacity:1}100%{opacity:0}}
+.sc-pop{animation:scpop 3s ease-in-out infinite}
+@keyframes scpop{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+@media (prefers-reduced-motion:reduce){.sc-hop,.sc-cookie,.sc-pop{animation:none;opacity:1}}
