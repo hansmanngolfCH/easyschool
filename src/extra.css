@@ -1217,3 +1217,4 @@ body.rwopen{overflow:hidden}
 .dsent mark{background:#FFE08A;color:#202124;border-radius:6px;padding:1px 6px;box-shadow:0 2px 0 #F29900;font-weight:800}
 .dqq{margin:0;font:600 1.02rem/1.45 inherit;font-family:inherit;color:var(--ink);text-align:left}
 .dtg{background:var(--surface2);border-radius:6px;padding:1px 7px;color:var(--ink)}
+.dcd{grid-template-columns:repeat(auto-fit,minmax(125px,1fr))}
