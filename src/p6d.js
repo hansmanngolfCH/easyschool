@@ -27,7 +27,7 @@ function runLike(T,cv,cx,w,h,score,over){
     stepP(cx,P,f);floatTxt(cx,F,f);hearts(cx,lives,w);bigScore(cx,w,s)});
   return function(){L.stop();unb()}}
 /* ----- Ski ----- */
-GAMEFN.ski=function(cv,cx,w,h,score,over){return runLike({gy:.8,sp:.0072,ramp:1,tilt:.15,jv:.036,gap:function(s){return 1.15-.5*Math.min(1,s/14)},G:.0015,ouch:'AUA!',dust:['#fff','#CFE8FF'],jet:['#fff'],pass:['#fff','#B3E5FC','#FFD54F'],hitc:['#fff','#90CAF9','#CFD8DC'],
+GAMEFN.ski=function(cv,cx,w,h,score,over){return runLike({gy:.8,sp:.0072,ramp:1,tilt:.15,jv:.026,gap:function(s){return 1.15-.5*Math.min(1,s/14)},G:.0009,ouch:'AUA!',dust:['#fff','#CFE8FF'],jet:['#fff'],pass:['#fff','#B3E5FC','#FFD54F'],hitc:['#fff','#90CAF9','#CFD8DC'],
   spawn:function(h,w,s,n){var dd=Math.min(1,s/14),sz=h*.135;if(n<1)return {k:'ball',wd:sz*.7,ht:sz*.7,mv:0};if(Math.random()<.5)return {k:'ball',wd:sz*(.65+dd*.6+Math.random()*.25),ht:sz*(.65+dd*.7+Math.random()*.25),mv:.0006+dd*.0034};return {k:'fence',wd:sz*(1.1+dd*.6),ht:sz*(.6+dd*.3)}},
   bg:function(x,w,h,gy){var sk=x.createLinearGradient(0,0,0,gy);sk.addColorStop(0,'#5FA8E8');sk.addColorStop(.6,'#BFE0FA');sk.addColorStop(1,'#F0F8FF');x.fillStyle=sk;x.fillRect(0,0,w,gy+2);
     glow(x,w*.8,h*.14,w*.3,'rgba(255,255,230,.7)');x.fillStyle='#FFF9C4';x.beginPath();x.arc(w*.8,h*.14,w*.045,0,7);x.fill();

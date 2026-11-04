@@ -14,6 +14,13 @@ for k,v in th_txt.X.items():
         assert len(v)==len(THEORY[k]),k
         for b,t in zip(THEORY[k],v):
             if t:b['text']=t
+import th_add
+for k,v in th_add.A.items():
+    assert len(v)==len(THEORY[k]),k
+    for b,t in zip(THEORY[k],v):
+        if t and not t.startswith('Diese Wörter'):b['text']=t
+import th_fix
+for k,v in THEORY.items():th_fix.apply(k,v)
 topics=[];bad=0;missing=[]
 for m in mods:
     for f in importlib.import_module(m).T:
