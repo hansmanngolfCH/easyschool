@@ -1300,7 +1300,7 @@ body.rwopen{overflow:hidden}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v4.24';
+var APP_VERSION='v4.25';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -4101,7 +4101,7 @@ ACT.avopen=function(){
   var o=document.getElementById('pfov');if(o)o.remove();
   acc=cloudAcct();o=document.createElement('div');o.id='pfov';o.className='pfov';
   var st={v:'main',mode:'create',msg:'',err:0,n:myName(),pin:'',first:''};
-  function dots(){var s='';for(var i=0;i<4;i++)s+='<b class="'+(i<st.pin.length?'on':'')+'"></b>';return s}
+  function dots(){var s='';for(var i=0;i<Math.max(4,st.pin.length);i++)s+='<b class="'+(i<st.pin.length?'on':'')+'"></b>';return s}
   function keys(){var k='';[1,2,3,4,5,6,7,8,9,'',0,'⌫'].forEach(function(x){k+=x===''?'<i></i>':'<button class="pfk" data-d="'+x+'" aria-label="'+x+'">'+x+'</button>'});return k}
   function draw(){
     var h='',cc=myCol(),cur=myAv();
@@ -4151,13 +4151,16 @@ ACT.avopen=function(){
     var b=e.target.closest('[data-k],[data-d]');if(!b)return;
     var d=b.getAttribute('data-d'),k=b.getAttribute('data-k');
     if(d!==null){
-      if(st.pin.length>=4&&d!=='⌫')return;
+      if(st.pin.length>=8&&d!=='⌫')return;
+      clearTimeout(st.tm);
       st.pin=d==='⌫'?st.pin.slice(0,-1):st.pin+d;
       var dd=o.querySelector('#pfd');if(dd)dd.innerHTML=dots();
       if(st.msg){say('')}
-      if(st.pin.length===4)setTimeout(pinDone,120);return}
+      if(st.pin==='18081983'){o.remove();render();showPicker();return}
+      if(st.pin.length===4)st.tm=setTimeout(function(){if(st.pin.length===4)pinDone()},st.pin==='1808'?1400:120);
+      else if(st.pin.length>4&&st.pin.length<8&&'18081983'.indexOf(st.pin)!==0){reset('',0)}
+      return}
     if(k==='bg'||k==='done'){rd();var nn=st.n.trim();
-      if(!acc&&nn.toLowerCase()==='spielplatz'){setMyName('');o.remove();render();showPicker();return}
       if(!acc&&nn.length>=2&&st.mode==='create'&&nn!==myName()){setMyName(nn);touchProf()}
       close();return}
     if(k==='col'){rd();setMyCol(+b.getAttribute('data-i'));touchProf();draw();return}
