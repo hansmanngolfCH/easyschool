@@ -4,7 +4,7 @@ import random,re
 ID='kl2-mathe-plus100'
 Z,E,SUM,ERR=0,3,2,1   # Chip-Farben: Zehner blau, Einer orange, Ergebnis grün, Rot nur für Fehler
 def theory():
-    ZH,EI,GR,ST,BI=0,3,2,4,5   # Zehner blau, Einer orange, Ergebnis grün, Start violett, Brücke zum Zehner türkis
+    ZH,EI,GR,ST,BI=0,3,7,7,5   # Zehner blau, Einer orange, Ergebnis grün, Start violett, Brücke zum Zehner türkis
     return [
     S("Worum geht es?","In diesem Thema rechnest du Plus mit Zahlen bis 100. Zum Beispiel 34 + 25. Du lernst vier Dinge: Zahlen zerlegen, in Schritten rechnen, geschickt rechnen und mit der Probe prüfen.",KD([['Zerlegen','Zehner und Einer trennen','25 = 20 + 5',0],['In Schritten','erst Zehner, dann Einer','34 + 20 + 5',3],['Geschickt','tauschen und verdoppeln','35 + 36',2],['Probe','mit Minus zurückrechnen','59 − 25 = 34',4]])),
     S("Zahlen zerlegen","Jede Zahl hat Zehner und Einer. Die 25 hat 2 Zehner und 5 Einer. Das ist 20 und 5. Unten steht die Rechnung dazu.",BLK(0,2,5),BAR2([[20,'20',ZH],[5,'5',EI]],'',1),CHN((25,'',ST),('=','',2),(20,'2 Zehner',ZH),('+','',2),(5,'5 Einer',EI))),

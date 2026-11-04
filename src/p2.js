@@ -106,7 +106,7 @@ function vTbl(v){
   return '<div class="dtb"><table class="'+(v.hc?'nh':'')+'">'+h+b+'</table></div>'+(v.cap?'<p class="dcap">'+bd(v.cap)+'</p>':'');
 }
 function vChips(v){
-  return '<div class="dchw"><div class="dch">'+v.parts.map(function(p){return '<div class="dc'+(/^[+−×:=<>➜→≈\-]$/.test(String(p[0]).trim())?' op':'')+'" style="--c:'+dcol(p[2])+'"><b>'+bd(p[0])+'</b>'+(p[1]?'<i>'+bd(p[1])+'</i>':'')+'</div>'}).join('')+'</div>'+(v.cap?'<p class="dcap">'+bd(v.cap)+'</p>':'')+'</div>';
+  return '<div class="dchw"><div class="dch">'+v.parts.map(function(p){return '<div class="dc'+(/^[+−×:=<>➜→≈\-]$/.test(String(p[0]).trim())?' op':'')+(p[2]===7?' neu':'')+'" style="--c:'+dcol(p[2])+'"><b>'+bd(p[0])+'</b>'+(p[1]?'<i>'+bd(p[1])+'</i>':'')+'</div>'}).join('')+'</div>'+(v.cap?'<p class="dcap">'+bd(v.cap)+'</p>':'')+'</div>';
 }
 function vTline(v){
   return '<ol class="dtl">'+v.items.map(function(p,i){return '<li class="'+(i===v.now?'now':'')+'" style="--c:'+dcol(p[3])+'"><span class="dot"></span><div><b>'+bd(p[0])+'</b><span>'+bd(p[1])+'</span>'+(p[2]?'<em>'+bd(p[2])+'</em>':'')+'</div></li>'}).join('')+'</ol>';
