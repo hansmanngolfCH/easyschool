@@ -90,7 +90,7 @@ function topicCard(ch,t){
   if(m&&lg){var vl=t.subject==='franz'?'Vocabulaire':'Vocabulary';title=/vocab/i.test(m[2])?m[2]:vl;usub='Unit '+m[1]}
   return '<article class="card topic tc s-'+esc(t.subject)+(open?' open':'')+'"><button class="tchead tctog" data-act="ttog" data-id="'+id+'" aria-expanded="'+open+'">'+badge+'<div class="tcmain"><h3 class="tt">'+esc(title)+'</h3><p class="sub tcsub">'+(usub?'<span class="vtag">'+usub+'</span> · ':vocTag(t,1))+(t.src?'<span class="src">'+esc(t.src)+'</span>':'<span class="src orig o-'+(t.origin==='lehr'?'l':'k')+'">'+(t.origin==='lehr'?'Lehrmittel':'KI-Inhalt')+'</span>')+'</p></div><span class="tcpct">'+w+'%</span><span class="tcchev" aria-hidden="true">'+(open?'▲':'▼')+'</span></button>'
   +'<div class="bar thin" role="img" aria-label="'+w+' Prozent"><i style="width:'+w+'%"></i></div>'
-  +(open?'<div class="tc4"><button class="tb4 m-v" data-act="learn" data-id="'+id+'">'+((t.subject==='franz'||t.subject==='engl')?'Wörterliste':'AI-Theorie')+'</button>'
+  +(open?'<div class="tc4"><button class="tb4 m-v" data-act="learn" data-id="'+id+'">'+((t.subject==='franz'||t.subject==='engl')?'Wörterliste':'Theorie')+'</button>'
   +'<button class="tb4 m-u" data-act="practice" data-scope="topic:'+id+'" data-force="1">AI-Lernen</button>'
   +'<button class="tb4 m-p" data-act="exam" data-id="'+id+'">Prüfung</button>'
   +'<button class="tb4 m-x" data-act="xgame" data-id="'+id+'">⚡ Extra XP</button></div>':'')+'</article>';
@@ -117,7 +117,7 @@ function vSubject(){
 }
 
 
-var STG=['Verstanden','Kapiert','Gespeichert','Gecheckt','Sitzt','Alles klar'],STI=['👀','💡','💾','✅','🧠','🎯'];
+var STG=['Verstanden','Kapiert','Gemerkt','Gecheckt','Sitzt','Alles klar'],STI=['👀','💡','💾','✅','🧠','🎯'];
 function stg(i){return STG[i%STG.length]}
 function thSplit(text){return String(text).replace(/([.!?])\s+(?=[A-ZÄÖÜ«])/g,'$1\u0001').split('\u0001').filter(Boolean)}
 function vTheory(t){
@@ -126,7 +126,7 @@ function vTheory(t){
   for(k=0;k<=n;k++){path+=(k?'<b class="thln'+(i>=k?' on':'')+'"></b>':'')+'<i class="thn'+(i>k?' done':i===k?' cur':'')+'">'+(k===n?'🏁':(i>k?'✓':(k+1)))+'</i>'}
   path+='</div>';
   if(n>8)path='<div class="thbar"><div class="bar"><i style="width:'+Math.round(i/n*100)+'%;background:var(--sc)"></i></div><span>Block '+Math.min(i+1,n)+' von '+n+'</span></div>';
-  var head='<div class="thtop"><p class="eyebrow">'+((t.subject==='franz'||t.subject==='engl')?'Wörterliste':'AI-Theorie')+' · '+esc(t.title)+'</p>'+path+'</div>';
+  var head='<div class="thtop"><p class="eyebrow">'+((t.subject==='franz'||t.subject==='engl')?'Wörterliste':'Theorie')+' · '+esc(t.title)+'</p>'+path+'</div>';
   if(i>=n){
     return '<div class="stack explain thx s-'+t.subject+'">'+head+'<section class="thcard sum"><div class="thh"><span class="thnum">🏁</span><h1>Geschafft!</h1></div><p class="txt">Jetzt bist du bereit. Mach mit Lernen weiter oder geh zur Prüfung.</p></section>'
       +'<div class="row"><button class="btn" data-act="prev">Zurück</button><button class="btn pri big" data-act="practice" data-scope="topic:'+esc(t.id)+'" data-force="1">Lernen</button><button class="btn big" data-act="exam" data-id="'+esc(t.id)+'">Prüfung</button></div></div>';

@@ -1,0 +1,1574 @@
+{
+ "id": "kl2-mathe-plus100",
+ "child": "kl2",
+ "subject": "mathe",
+ "chapter": "Operationen",
+ "title": "Plusrechnen bis 100",
+ "art": "mathe",
+ "origin": "ki",
+ "explain": [
+  {
+   "h": "Worum geht es?",
+   "text": "Zehner und Einer werden einzeln gerechnet.",
+   "visuals": [
+    {
+     "type": "bar",
+     "segs": [
+      [
+       34,
+       "34"
+      ],
+      [
+       25,
+       "25"
+      ]
+     ],
+     "cap": "34 + 25 = 59",
+     "col": 0
+    }
+   ]
+  },
+  {
+   "h": "Im Bild",
+   "text": "Hier siehst du beide Zahlen mit Reihen und Punkten.",
+   "visuals": [
+    {
+     "type": "blocks",
+     "h": 0,
+     "z": 3,
+     "e": 4,
+     "cap": "34"
+    },
+    {
+     "type": "blocks",
+     "h": 0,
+     "z": 2,
+     "e": 5,
+     "cap": "25"
+    }
+   ]
+  },
+  {
+   "h": "Zerlegen",
+   "text": "Die zweite Zahl wird in Zehner und Einer zerlegt: 25 = 20 + 5.",
+   "visuals": [
+    {
+     "type": "bar",
+     "segs": [
+      [
+       20,
+       "20"
+      ],
+      [
+       5,
+       "5"
+      ]
+     ],
+     "cap": "25 = 20 + 5",
+     "col": 2
+    }
+   ]
+  },
+  {
+   "h": "Zehner dazu",
+   "text": "Zuerst springst du die Zehner: 34 + 20 = 54.",
+   "visuals": [
+    {
+     "type": "jumps",
+     "from": 34,
+     "jumps": [
+      [
+       20,
+       "+20"
+      ]
+     ],
+     "cap": "34 + 20 = 54"
+    },
+    {
+     "type": "chips",
+     "parts": [
+      [
+       "34 + 20",
+       "",
+       0
+      ],
+      [
+       "=",
+       "",
+       2
+      ],
+      [
+       "54",
+       "Zwischenstand",
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "h": "Einer dazu",
+   "text": "Dann die Einer: 54 + 5 = 59.",
+   "visuals": [
+    {
+     "type": "jumps",
+     "from": 54,
+     "jumps": [
+      [
+       5,
+       "+5"
+      ]
+     ],
+     "cap": "54 + 5 = 59"
+    },
+    {
+     "type": "chips",
+     "parts": [
+      [
+       "54 + 5",
+       "",
+       0
+      ],
+      [
+       "=",
+       "",
+       2
+      ],
+      [
+       "59",
+       "Zwischenstand",
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "h": "Alles zusammen",
+   "text": "Beide Sprünge zusammen: 34 + 20 + 5 = 59.",
+   "visuals": [
+    {
+     "type": "jumps",
+     "from": 34,
+     "jumps": [
+      [
+       20,
+       "+20"
+      ],
+      [
+       5,
+       "+5"
+      ]
+     ],
+     "cap": "34 + 25 = 59"
+    },
+    {
+     "type": "chips",
+     "parts": [
+      [
+       "34",
+       "Start",
+       0
+      ],
+      [
+       "+20",
+       "",
+       2
+      ],
+      [
+       "+5",
+       "",
+       2
+      ],
+      [
+       "=",
+       "",
+       2
+      ],
+      [
+       "59",
+       "Ergebnis",
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "h": "Beispiel: 47 + 26",
+   "text": "Gleicher Weg: 47 + 20 = 67, dann + 6 = 73.",
+   "visuals": [
+    {
+     "type": "bar",
+     "segs": [
+      [
+       47,
+       "47"
+      ],
+      [
+       26,
+       "26"
+      ]
+     ],
+     "cap": "47 + 26 = 73",
+     "col": 0
+    },
+    {
+     "type": "jumps",
+     "from": 47,
+     "jumps": [
+      [
+       20,
+       "+20"
+      ],
+      [
+       6,
+       "+6"
+      ]
+     ]
+    },
+    {
+     "type": "chips",
+     "parts": [
+      [
+       "47",
+       "Start",
+       0
+      ],
+      [
+       "+20",
+       "",
+       2
+      ],
+      [
+       "+6",
+       "",
+       2
+      ],
+      [
+       "=",
+       "",
+       2
+      ],
+      [
+       "73",
+       "Ergebnis",
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "h": "Beispiel: 58 + 31",
+   "text": "Gleicher Weg: 58 + 30 = 88, dann + 1 = 89.",
+   "visuals": [
+    {
+     "type": "bar",
+     "segs": [
+      [
+       58,
+       "58"
+      ],
+      [
+       31,
+       "31"
+      ]
+     ],
+     "cap": "58 + 31 = 89",
+     "col": 0
+    },
+    {
+     "type": "jumps",
+     "from": 58,
+     "jumps": [
+      [
+       30,
+       "+30"
+      ],
+      [
+       1,
+       "+1"
+      ]
+     ]
+    },
+    {
+     "type": "chips",
+     "parts": [
+      [
+       "58",
+       "Start",
+       0
+      ],
+      [
+       "+30",
+       "",
+       2
+      ],
+      [
+       "+1",
+       "",
+       2
+      ],
+      [
+       "=",
+       "",
+       2
+      ],
+      [
+       "89",
+       "Ergebnis",
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "h": "Probe",
+   "text": "Mit Minus rechnest du zurück: 59 − 25 = 34.",
+   "visuals": [
+    {
+     "type": "jumps",
+     "from": 59,
+     "jumps": [
+      [
+       -25,
+       "−25"
+      ]
+     ],
+     "cap": "59 − 25 = 34"
+    },
+    {
+     "type": "chips",
+     "parts": [
+      [
+       "59",
+       "",
+       0
+      ],
+      [
+       "−",
+       "",
+       2
+      ],
+      [
+       "25",
+       "",
+       1
+      ],
+      [
+       "34",
+       "stimmt!",
+       2
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "h": "Über den Zehner",
+   "text": "Gehe zuerst zum vollen Zehner.",
+   "visuals": [
+    {
+     "type": "jumps",
+     "from": 67,
+     "jumps": [
+      [
+       3,
+       "+3"
+      ],
+      [
+       3,
+       "+3"
+      ]
+     ],
+     "cap": "67 + 6 = 73"
+    },
+    {
+     "type": "chips",
+     "parts": [
+      [
+       "67 + 3",
+       "",
+       0
+      ],
+      [
+       "70",
+       "voller Zehner",
+       1
+      ],
+      [
+       "+ 3",
+       "",
+       2
+      ],
+      [
+       "73",
+       "",
+       3
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "h": "Regeln und Wichtigstes",
+   "text": "Merke dir diese drei Karten.",
+   "visuals": [
+    {
+     "type": "cards",
+     "items": [
+      [
+       "Zehner",
+       "zuerst",
+       "30 + 20",
+       0
+      ],
+      [
+       "Einer",
+       "dann",
+       "4 + 5",
+       1
+      ],
+      [
+       "Probe",
+       "mit Minus",
+       "59 − 25",
+       2
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "theory": {
+  "basis": {
+   "h": "Zehner und Einer trennen",
+   "text": "Rechne zuerst die Zehner. Dann die Einer. Am Schluss zählst du beides zusammen.",
+   "lines": [
+    [
+     "34 + 25",
+     "30 + 20 = 50, 4 + 5 = 9, 59"
+    ]
+   ]
+  },
+  "uber": {
+   "h": "Wenn die Einer über 10 gehen",
+   "text": "Auch dann rechnest du Zehner und Einer getrennt. Die Summe der Einer kann mehr als 10 sein.",
+   "lines": [
+    [
+     "47 + 26",
+     "60 + 13 = 73"
+    ]
+   ]
+  }
+ },
+ "cards": [
+  {
+   "id": "c1",
+   "q": "16 + 41 = ?",
+   "a": "57",
+   "lvl": 1,
+   "th": "basis",
+   "opts": [
+    "56",
+    "58",
+    "57",
+    "60"
+   ],
+   "hints": [
+    "Rechne Schritt für Schritt."
+   ],
+   "steps": [
+    [
+     "10 + 40 = 50",
+     "Zehner"
+    ],
+    [
+     "6 + 1 = 7",
+     "Einer"
+    ],
+    [
+     "50 + 7 = 57",
+     "Zusammen"
+    ]
+   ]
+  },
+  {
+   "id": "c2",
+   "q": "57 + 32 = ?",
+   "a": "89",
+   "lvl": 1,
+   "th": "basis",
+   "opts": [
+    "88",
+    "89",
+    "87",
+    "91"
+   ],
+   "hints": [
+    "Rechne Schritt für Schritt."
+   ],
+   "steps": [
+    [
+     "50 + 30 = 80",
+     "Zehner"
+    ],
+    [
+     "7 + 2 = 9",
+     "Einer"
+    ],
+    [
+     "80 + 9 = 89",
+     "Zusammen"
+    ]
+   ]
+  },
+  {
+   "id": "c3",
+   "q": "81 + 14 = ?",
+   "a": "95",
+   "lvl": 1,
+   "th": "basis",
+   "opts": [
+    "97",
+    "95",
+    "98",
+    "92"
+   ],
+   "hints": [
+    "Rechne Schritt für Schritt."
+   ],
+   "steps": [
+    [
+     "80 + 10 = 90",
+     "Zehner"
+    ],
+    [
+     "1 + 4 = 5",
+     "Einer"
+    ],
+    [
+     "90 + 5 = 95",
+     "Zusammen"
+    ]
+   ]
+  },
+  {
+   "id": "c4",
+   "q": "35 + 31 = ?",
+   "a": "66",
+   "lvl": 1,
+   "th": "basis",
+   "opts": [
+    "67",
+    "69",
+    "66",
+    "68"
+   ],
+   "hints": [
+    "Rechne Schritt für Schritt."
+   ],
+   "steps": [
+    [
+     "30 + 30 = 60",
+     "Zehner"
+    ],
+    [
+     "5 + 1 = 6",
+     "Einer"
+    ],
+    [
+     "60 + 6 = 66",
+     "Zusammen"
+    ]
+   ]
+  },
+  {
+   "id": "c5",
+   "q": "14 + 82 = ?",
+   "a": "96",
+   "lvl": 1,
+   "th": "basis",
+   "opts": [
+    "95",
+    "94",
+    "96",
+    "99"
+   ],
+   "hints": [
+    "Rechne Schritt für Schritt."
+   ],
+   "steps": [
+    [
+     "10 + 80 = 90",
+     "Zehner"
+    ],
+    [
+     "4 + 2 = 6",
+     "Einer"
+    ],
+    [
+     "90 + 6 = 96",
+     "Zusammen"
+    ]
+   ]
+  },
+  {
+   "id": "c6",
+   "q": "16 + 11 = ?",
+   "a": "27",
+   "lvl": 1,
+   "th": "basis",
+   "opts": [
+    "27",
+    "26",
+    "25",
+    "28"
+   ],
+   "hints": [
+    "Rechne Schritt für Schritt."
+   ],
+   "steps": [
+    [
+     "10 + 10 = 20",
+     "Zehner"
+    ],
+    [
+     "6 + 1 = 7",
+     "Einer"
+    ],
+    [
+     "20 + 7 = 27",
+     "Zusammen"
+    ]
+   ]
+  },
+  {
+   "id": "c7",
+   "q": "24 + 42 = ?",
+   "a": "66",
+   "lvl": 1,
+   "th": "basis",
+   "opts": [
+    "66",
+    "63",
+    "68",
+    "64"
+   ],
+   "hints": [
+    "Rechne Schritt für Schritt."
+   ],
+   "steps": [
+    [
+     "20 + 40 = 60",
+     "Zehner"
+    ],
+    [
+     "4 + 2 = 6",
+     "Einer"
+    ],
+    [
+     "60 + 6 = 66",
+     "Zusammen"
+    ]
+   ]
+  },
+  {
+   "id": "c8",
+   "q": "74 + 13 = ?",
+   "a": "87",
+   "lvl": 1,
+   "th": "basis",
+   "opts": [
+    "87",
+    "86",
+    "85",
+    "89"
+   ],
+   "hints": [
+    "Rechne Schritt für Schritt."
+   ],
+   "steps": [
+    [
+     "70 + 10 = 80",
+     "Zehner"
+    ],
+    [
+     "4 + 3 = 7",
+     "Einer"
+    ],
+    [
+     "80 + 7 = 87",
+     "Zusammen"
+    ]
+   ]
+  },
+  {
+   "id": "c9",
+   "q": "65 + 21 = ?",
+   "a": "86",
+   "lvl": 1,
+   "th": "basis",
+   "opts": [
+    "83",
+    "88",
+    "86",
+    "87"
+   ],
+   "hints": [
+    "Rechne Schritt für Schritt."
+   ],
+   "steps": [
+    [
+     "60 + 20 = 80",
+     "Zehner"
+    ],
+    [
+     "5 + 1 = 6",
+     "Einer"
+    ],
+    [
+     "80 + 6 = 86",
+     "Zusammen"
+    ]
+   ]
+  },
+  {
+   "id": "c10",
+   "q": "23 + 73 = ?",
+   "a": "96",
+   "lvl": 1,
+   "th": "basis",
+   "opts": [
+    "98",
+    "96",
+    "93",
+    "94"
+   ],
+   "hints": [
+    "Rechne Schritt für Schritt."
+   ],
+   "steps": [
+    [
+     "20 + 70 = 90",
+     "Zehner"
+    ],
+    [
+     "3 + 3 = 6",
+     "Einer"
+    ],
+    [
+     "90 + 6 = 96",
+     "Zusammen"
+    ]
+   ]
+  },
+  {
+   "id": "c11",
+   "q": "16 + 42 = ?",
+   "a": "58",
+   "lvl": 1,
+   "th": "basis",
+   "opts": [
+    "61",
+    "58",
+    "60",
+    "57"
+   ],
+   "hints": [
+    "Rechne Schritt für Schritt."
+   ],
+   "steps": [
+    [
+     "10 + 40 = 50",
+     "Zehner"
+    ],
+    [
+     "6 + 2 = 8",
+     "Einer"
+    ],
+    [
+     "50 + 8 = 58",
+     "Zusammen"
+    ]
+   ]
+  },
+  {
+   "id": "c12",
+   "q": "12 + 45 = ?",
+   "a": "57",
+   "lvl": 1,
+   "th": "basis",
+   "opts": [
+    "60",
+    "56",
+    "57",
+    "55"
+   ],
+   "hints": [
+    "Rechne Schritt für Schritt."
+   ],
+   "steps": [
+    [
+     "10 + 40 = 50",
+     "Zehner"
+    ],
+    [
+     "2 + 5 = 7",
+     "Einer"
+    ],
+    [
+     "50 + 7 = 57",
+     "Zusammen"
+    ]
+   ]
+  },
+  {
+   "id": "c13",
+   "q": "34 + 33 = ?",
+   "a": "67",
+   "lvl": 1,
+   "th": "basis",
+   "opts": [
+    "66",
+    "67",
+    "69",
+    "68"
+   ],
+   "hints": [
+    "Rechne Schritt für Schritt."
+   ],
+   "steps": [
+    [
+     "30 + 30 = 60",
+     "Zehner"
+    ],
+    [
+     "4 + 3 = 7",
+     "Einer"
+    ],
+    [
+     "60 + 7 = 67",
+     "Zusammen"
+    ]
+   ]
+  },
+  {
+   "id": "c14",
+   "q": "11 + 54 = ?",
+   "a": "65",
+   "lvl": 1,
+   "th": "basis",
+   "opts": [
+    "65",
+    "68",
+    "67",
+    "64"
+   ],
+   "hints": [
+    "Rechne Schritt für Schritt."
+   ],
+   "steps": [
+    [
+     "10 + 50 = 60",
+     "Zehner"
+    ],
+    [
+     "1 + 4 = 5",
+     "Einer"
+    ],
+    [
+     "60 + 5 = 65",
+     "Zusammen"
+    ]
+   ]
+  },
+  {
+   "id": "c15",
+   "q": "23 + ? = 56",
+   "a": "33",
+   "lvl": 2,
+   "th": "basis",
+   "opts": [
+    "31",
+    "34",
+    "33",
+    "32"
+   ],
+   "hints": [
+    "Rechne zurück mit Minus."
+   ],
+   "steps": [
+    [
+     "56 − 23 = 33",
+     "Umkehren"
+    ]
+   ]
+  },
+  {
+   "id": "c16",
+   "q": "33 + ? = 99",
+   "a": "66",
+   "lvl": 2,
+   "th": "basis",
+   "opts": [
+    "68",
+    "65",
+    "64",
+    "66"
+   ],
+   "hints": [
+    "Rechne zurück mit Minus."
+   ],
+   "steps": [
+    [
+     "99 − 33 = 66",
+     "Umkehren"
+    ]
+   ]
+  },
+  {
+   "id": "c17",
+   "q": "12 + ? = 26",
+   "a": "14",
+   "lvl": 2,
+   "th": "basis",
+   "opts": [
+    "12",
+    "15",
+    "14",
+    "13"
+   ],
+   "hints": [
+    "Rechne zurück mit Minus."
+   ],
+   "steps": [
+    [
+     "26 − 12 = 14",
+     "Umkehren"
+    ]
+   ]
+  },
+  {
+   "id": "c18",
+   "q": "35 + ? = 77",
+   "a": "42",
+   "lvl": 2,
+   "th": "basis",
+   "opts": [
+    "39",
+    "42",
+    "40",
+    "41"
+   ],
+   "hints": [
+    "Rechne zurück mit Minus."
+   ],
+   "steps": [
+    [
+     "77 − 35 = 42",
+     "Umkehren"
+    ]
+   ]
+  },
+  {
+   "id": "c19",
+   "q": "21 + ? = 68",
+   "a": "47",
+   "lvl": 2,
+   "th": "basis",
+   "opts": [
+    "50",
+    "49",
+    "47",
+    "46"
+   ],
+   "hints": [
+    "Rechne zurück mit Minus."
+   ],
+   "steps": [
+    [
+     "68 − 21 = 47",
+     "Umkehren"
+    ]
+   ]
+  },
+  {
+   "id": "c20",
+   "q": "61 + ? = 95",
+   "a": "34",
+   "lvl": 2,
+   "th": "basis",
+   "opts": [
+    "32",
+    "34",
+    "37",
+    "31"
+   ],
+   "hints": [
+    "Rechne zurück mit Minus."
+   ],
+   "steps": [
+    [
+     "95 − 61 = 34",
+     "Umkehren"
+    ]
+   ]
+  },
+  {
+   "id": "c21",
+   "q": "Mia hat 22 Äpfel. Dann kommen 64 dazu. Wie viele sind es jetzt?",
+   "a": "86",
+   "lvl": 3,
+   "th": "basis",
+   "opts": [
+    "85",
+    "87",
+    "86",
+    "84"
+   ],
+   "hints": [
+    "Welche Rechnung passt zur Geschichte?"
+   ],
+   "steps": [
+    [
+     "22 + 64 = 86",
+     "Rechnung"
+    ]
+   ]
+  },
+  {
+   "id": "c22",
+   "q": "Leo hat 42 Murmeln. Dann kommen 42 dazu. Wie viele sind es jetzt?",
+   "a": "84",
+   "lvl": 3,
+   "th": "basis",
+   "opts": [
+    "85",
+    "83",
+    "81",
+    "84"
+   ],
+   "hints": [
+    "Welche Rechnung passt zur Geschichte?"
+   ],
+   "steps": [
+    [
+     "42 + 42 = 84",
+     "Rechnung"
+    ]
+   ]
+  },
+  {
+   "id": "c23",
+   "q": "Nora hat 13 Stifte. Dann kommen 44 dazu. Wie viele sind es jetzt?",
+   "a": "57",
+   "lvl": 3,
+   "th": "basis",
+   "opts": [
+    "56",
+    "58",
+    "57",
+    "59"
+   ],
+   "hints": [
+    "Welche Rechnung passt zur Geschichte?"
+   ],
+   "steps": [
+    [
+     "13 + 44 = 57",
+     "Rechnung"
+    ]
+   ]
+  },
+  {
+   "id": "c24",
+   "q": "Ben hat 13 Karten. Dann kommen 85 dazu. Wie viele sind es jetzt?",
+   "a": "98",
+   "lvl": 3,
+   "th": "basis",
+   "opts": [
+    "98",
+    "99",
+    "100",
+    "95"
+   ],
+   "hints": [
+    "Welche Rechnung passt zur Geschichte?"
+   ],
+   "steps": [
+    [
+     "13 + 85 = 98",
+     "Rechnung"
+    ]
+   ]
+  },
+  {
+   "id": "c25",
+   "q": "Lea hat 52 Steine. Dann kommen 11 dazu. Wie viele sind es jetzt?",
+   "a": "63",
+   "lvl": 3,
+   "th": "basis",
+   "opts": [
+    "63",
+    "60",
+    "64",
+    "66"
+   ],
+   "hints": [
+    "Welche Rechnung passt zur Geschichte?"
+   ],
+   "steps": [
+    [
+     "52 + 11 = 63",
+     "Rechnung"
+    ]
+   ]
+  },
+  {
+   "id": "c26",
+   "q": "Noah hat 63 Bücher. Dann kommen 14 dazu. Wie viele sind es jetzt?",
+   "a": "77",
+   "lvl": 3,
+   "th": "basis",
+   "opts": [
+    "77",
+    "74",
+    "76",
+    "78"
+   ],
+   "hints": [
+    "Welche Rechnung passt zur Geschichte?"
+   ],
+   "steps": [
+    [
+     "63 + 14 = 77",
+     "Rechnung"
+    ]
+   ]
+  },
+  {
+   "id": "c27",
+   "q": "24 + 26 = ?",
+   "a": "50",
+   "lvl": 2,
+   "th": "uber",
+   "opts": [
+    "47",
+    "50",
+    "51",
+    "48"
+   ],
+   "hints": [
+    "Zehner und Einer getrennt."
+   ],
+   "steps": [
+    [
+     "20 + 20 = 40",
+     "Zehner"
+    ],
+    [
+     "4 + 6 = 10",
+     "Einer"
+    ],
+    [
+     "40 + 10 = 50",
+     "Zusammen"
+    ]
+   ]
+  },
+  {
+   "id": "c28",
+   "q": "19 + 76 = ?",
+   "a": "95",
+   "lvl": 2,
+   "th": "uber",
+   "opts": [
+    "95",
+    "94",
+    "97",
+    "98"
+   ],
+   "hints": [
+    "Zehner und Einer getrennt."
+   ],
+   "steps": [
+    [
+     "10 + 70 = 80",
+     "Zehner"
+    ],
+    [
+     "9 + 6 = 15",
+     "Einer"
+    ],
+    [
+     "80 + 15 = 95",
+     "Zusammen"
+    ]
+   ]
+  },
+  {
+   "id": "c29",
+   "q": "33 + 29 = ?",
+   "a": "62",
+   "lvl": 2,
+   "th": "uber",
+   "opts": [
+    "59",
+    "62",
+    "63",
+    "65"
+   ],
+   "hints": [
+    "Zehner und Einer getrennt."
+   ],
+   "steps": [
+    [
+     "30 + 20 = 50",
+     "Zehner"
+    ],
+    [
+     "3 + 9 = 12",
+     "Einer"
+    ],
+    [
+     "50 + 12 = 62",
+     "Zusammen"
+    ]
+   ]
+  },
+  {
+   "id": "c30",
+   "q": "21 + 59 = ?",
+   "a": "80",
+   "lvl": 2,
+   "th": "uber",
+   "opts": [
+    "80",
+    "82",
+    "79",
+    "77"
+   ],
+   "hints": [
+    "Zehner und Einer getrennt."
+   ],
+   "steps": [
+    [
+     "20 + 50 = 70",
+     "Zehner"
+    ],
+    [
+     "1 + 9 = 10",
+     "Einer"
+    ],
+    [
+     "70 + 10 = 80",
+     "Zusammen"
+    ]
+   ]
+  },
+  {
+   "id": "c31",
+   "q": "47 + 17 = ?",
+   "a": "64",
+   "lvl": 2,
+   "th": "uber",
+   "opts": [
+    "62",
+    "66",
+    "63",
+    "64"
+   ],
+   "hints": [
+    "Zehner und Einer getrennt."
+   ],
+   "steps": [
+    [
+     "40 + 10 = 50",
+     "Zehner"
+    ],
+    [
+     "7 + 7 = 14",
+     "Einer"
+    ],
+    [
+     "50 + 14 = 64",
+     "Zusammen"
+    ]
+   ]
+  },
+  {
+   "id": "c32",
+   "q": "44 + 36 = ?",
+   "a": "80",
+   "lvl": 2,
+   "th": "uber",
+   "opts": [
+    "80",
+    "83",
+    "79",
+    "77"
+   ],
+   "hints": [
+    "Zehner und Einer getrennt."
+   ],
+   "steps": [
+    [
+     "40 + 30 = 70",
+     "Zehner"
+    ],
+    [
+     "4 + 6 = 10",
+     "Einer"
+    ],
+    [
+     "70 + 10 = 80",
+     "Zusammen"
+    ]
+   ]
+  },
+  {
+   "id": "c33",
+   "q": "57 + 13 = ?",
+   "a": "70",
+   "lvl": 2,
+   "th": "uber",
+   "opts": [
+    "73",
+    "67",
+    "69",
+    "70"
+   ],
+   "hints": [
+    "Zehner und Einer getrennt."
+   ],
+   "steps": [
+    [
+     "50 + 10 = 60",
+     "Zehner"
+    ],
+    [
+     "7 + 3 = 10",
+     "Einer"
+    ],
+    [
+     "60 + 10 = 70",
+     "Zusammen"
+    ]
+   ]
+  },
+  {
+   "id": "c34",
+   "q": "45 + 45 = ?",
+   "a": "90",
+   "lvl": 2,
+   "th": "uber",
+   "opts": [
+    "90",
+    "89",
+    "92",
+    "87"
+   ],
+   "hints": [
+    "Zehner und Einer getrennt."
+   ],
+   "steps": [
+    [
+     "40 + 40 = 80",
+     "Zehner"
+    ],
+    [
+     "5 + 5 = 10",
+     "Einer"
+    ],
+    [
+     "80 + 10 = 90",
+     "Zusammen"
+    ]
+   ]
+  }
+ ],
+ "exam": {
+  "minutes": 20,
+  "questions": [
+   {
+    "id": "q1",
+    "q": "42 + 34 = ?",
+    "explain": "42 + 34 = 76",
+    "type": "mc",
+    "options": [
+     "77",
+     "73",
+     "74",
+     "76"
+    ],
+    "answer": 3
+   },
+   {
+    "id": "q2",
+    "q": "51 + 35 = ?",
+    "explain": "51 + 35 = 86",
+    "type": "input",
+    "answer": [
+     "86"
+    ]
+   },
+   {
+    "id": "q3",
+    "q": "24 + 35 = ?",
+    "explain": "24 + 35 = 59",
+    "type": "mc",
+    "options": [
+     "59",
+     "56",
+     "61",
+     "57"
+    ],
+    "answer": 0
+   },
+   {
+    "id": "q4",
+    "q": "61 + 36 = ?",
+    "explain": "61 + 36 = 97",
+    "type": "input",
+    "answer": [
+     "97"
+    ]
+   },
+   {
+    "id": "q5",
+    "q": "46 + 33 = ?",
+    "explain": "46 + 33 = 79",
+    "type": "mc",
+    "options": [
+     "82",
+     "77",
+     "79",
+     "81"
+    ],
+    "answer": 2
+   },
+   {
+    "id": "q6",
+    "q": "16 + 82 = ?",
+    "explain": "16 + 82 = 98",
+    "type": "input",
+    "answer": [
+     "98"
+    ]
+   },
+   {
+    "id": "q7",
+    "q": "24 + 53 = ?",
+    "explain": "24 + 53 = 77",
+    "type": "mc",
+    "options": [
+     "78",
+     "77",
+     "76",
+     "74"
+    ],
+    "answer": 1
+   },
+   {
+    "id": "q8",
+    "q": "55 + 14 = ?",
+    "explain": "55 + 14 = 69",
+    "type": "input",
+    "answer": [
+     "69"
+    ]
+   },
+   {
+    "id": "q9",
+    "q": "43 + 33 = ?",
+    "explain": "43 + 33 = 76",
+    "type": "mc",
+    "options": [
+     "76",
+     "74",
+     "79",
+     "78"
+    ],
+    "answer": 0
+   },
+   {
+    "id": "q10",
+    "q": "11 + 25 = ?",
+    "explain": "11 + 25 = 36",
+    "type": "input",
+    "answer": [
+     "36"
+    ]
+   },
+   {
+    "id": "q11",
+    "q": "34 + 61 = ?",
+    "explain": "34 + 61 = 95",
+    "type": "mc",
+    "options": [
+     "97",
+     "93",
+     "95",
+     "96"
+    ],
+    "answer": 2
+   },
+   {
+    "id": "q12",
+    "q": "31 + 32 = ?",
+    "explain": "31 + 32 = 63",
+    "type": "input",
+    "answer": [
+     "63"
+    ]
+   },
+   {
+    "id": "q13",
+    "q": "11 + 45 = ?",
+    "explain": "11 + 45 = 56",
+    "type": "mc",
+    "options": [
+     "58",
+     "53",
+     "56",
+     "54"
+    ],
+    "answer": 2
+   },
+   {
+    "id": "q14",
+    "q": "51 + 33 = ?",
+    "explain": "51 + 33 = 84",
+    "type": "input",
+    "answer": [
+     "84"
+    ]
+   },
+   {
+    "id": "q15",
+    "q": "34 + 24 = ?",
+    "explain": "34 + 24 = 58",
+    "type": "mc",
+    "options": [
+     "55",
+     "56",
+     "59",
+     "58"
+    ],
+    "answer": 3
+   },
+   {
+    "id": "q16",
+    "q": "16 + 13 = ?",
+    "explain": "16 + 13 = 29",
+    "type": "input",
+    "answer": [
+     "29"
+    ]
+   }
+  ]
+ }
+}

@@ -1264,3 +1264,8 @@ body.hascalc #app{padding-bottom:84px}
 
 .say{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:50%;border:2px solid #8AB4F8;background:#E8F0FE;font-size:1.4rem;cursor:pointer;margin:6px 0 0 8px;vertical-align:middle}
 .say:active{transform:scale(.94)}
+
+/* v4.55 Chips einheitlich */
+.dc{min-height:58px;min-width:44px;justify-content:center;align-items:center;text-align:center}
+.dc i{font-size:.8rem;color:color-mix(in srgb,var(--c) 60%,#000)}
+.dch{row-gap:10px}

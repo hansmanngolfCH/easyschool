@@ -29,7 +29,7 @@ function vBar(v){
   v.segs.forEach(function(q,k){
     var w=Math.max(6,(W-g*(v.segs.length-1))*q[0]/tot),col=q[2]===-1?'#CFD3DA':VC[((v.col||0)+k%2)%4];
     s+='<rect x="'+x.toFixed(1)+'" y="17" width="'+w.toFixed(1)+'" height="54" rx="10" fill="rgba(40,60,100,.18)"/><rect x="'+x.toFixed(1)+'" y="14" width="'+w.toFixed(1)+'" height="54" rx="10" fill="'+col+'" stroke="rgba(0,0,0,.12)" stroke-width="1.5"/><rect x="'+(x+3).toFixed(1)+'" y="17" width="'+Math.max(0,w-6).toFixed(1)+'" height="16" rx="7" fill="#fff" opacity=".28"/>';
-    if(q[1]&&w>26)s+='<text x="'+(x+w/2).toFixed(1)+'" y="47" text-anchor="middle" font-size="'+(w<46?12:w<80?15:19)+'" font-weight="800" fill="#fff" font-family="Arial,sans-serif">'+esc(q[1])+'</text>';
+    if(q[1]&&w>26)s+='<text x="'+(x+w/2).toFixed(1)+'" y="49" text-anchor="middle" font-size="'+(w<46?17:w<80?21:27)+'" font-weight="800" fill="#fff" font-family="Arial,sans-serif">'+esc(q[1])+'</text>';
     x+=w+g;
   });
   s+='<path d="M10 78q0 10 10 10h550q10 0 10-10" fill="none" stroke="#5f6368" stroke-width="3" stroke-linecap="round"/>';
@@ -197,6 +197,13 @@ function vNline(v){var dec=(v.step%1!==0)||(v.min%1!==0),fmt=function(n){n=Math.
   if(v.q!==undefined&&v.q!==null)o+='<g filter="url(#nsh)"><circle cx="'+X(v.q)+'" cy="'+y+'" r="15" fill="#FFD93D" stroke="#fff" stroke-width="3"/></g><text x="'+X(v.q)+'" y="'+(y+7)+'" text-anchor="middle" font-size="21" font-weight="900" fill="#4a2a00" font-family="Arial,sans-serif">?</text>';
   return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 100" width="100%" role="img" aria-label="Zahlenstrahl">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
+function vWall(v){
+  var R=v.rows,n=R.length,bw=96,bh=46,g=6,W=n*bw+(n-1)*g+20,o='',i,j,cols=['#8AB4F8','#81C995','#FDD663'];
+  for(i=0;i<n;i++){var cnt=R[i].length,x0=(W-(cnt*bw+(cnt-1)*g))/2,y=8+i*(bh+g);
+    for(j=0;j<cnt;j++){var t=String(R[i][j]),q=t==='?',x=x0+j*(bw+g);
+      o+='<rect x="'+x+'" y="'+y+'" width="'+bw+'" height="'+bh+'" rx="9" fill="'+(q?'#FFF3C4':cols[i%3])+'" stroke="'+(q?'#E37400':'rgba(0,0,0,.18)')+'" stroke-width="'+(q?3:1.5)+'" '+(q?'stroke-dasharray="6 4"':'')+'/><text x="'+(x+bw/2)+'" y="'+(y+31)+'" text-anchor="middle" font-size="'+(q?26:24)+'" font-weight="900" fill="'+(q?'#B06000':'#1b2433')+'" font-family="Arial,sans-serif">'+esc(t)+'</text>'}}
+  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 '+W+' '+(n*(bh+g)+10)+'" width="100%" style="max-width:'+Math.min(420,W*1.4)+'px;display:block;margin:0 auto" role="img" aria-label="Zahlenmauer">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+}
 function vAngle(v){
   var cx=120,cy=122,R=100,o='<defs><radialGradient id="pg" cx=".5" cy="1" r="1"><stop offset="0" stop-color="#E8F0FE"/><stop offset="1" stop-color="#C6DAFC"/></radialGradient></defs>',i,a;
   o+='<path d="M'+(cx-R)+' '+cy+'A'+R+' '+R+' 0 0 1 '+(cx+R)+' '+cy+'Z" fill="url(#pg)" stroke="#1A56C4" stroke-width="3"/><path d="M'+(cx-60)+' '+cy+'A60 60 0 0 1 '+(cx+60)+' '+cy+'Z" fill="#fff" fill-opacity=".55" stroke="#8AB4F8" stroke-width="1.5"/>';
@@ -242,8 +249,8 @@ function vPar(v){
 }
 function vBlocks(v){
   var h=v.h||0,z=v.z||0,e=v.e||0,o='',x=6,i,j,k;
-  for(k=0;k<h;k++){o+='<rect x="'+x+'" y="8" width="64" height="64" rx="6" fill="#CFE0FC" stroke="#1A56C4" stroke-width="2.5"/>';for(i=1;i<10;i++)o+='<line x1="'+(x+i*6.4)+'" y1="10" x2="'+(x+i*6.4)+'" y2="70" stroke="#1A56C4" stroke-opacity=".35" stroke-width="1"/><line x1="'+(x+2)+'" y1="'+(8+i*6.4)+'" x2="'+(x+62)+'" y2="'+(8+i*6.4)+'" stroke="#1A56C4" stroke-opacity=".35" stroke-width="1"/>';x+=72}
-  for(k=0;k<z;k++){o+='<rect x="'+x+'" y="8" width="12" height="64" rx="4" fill="#CDEBD3" stroke="#137333" stroke-width="2.5"/>';for(j=1;j<10;j++)o+='<line x1="'+(x+1)+'" y1="'+(8+j*6.4)+'" x2="'+(x+11)+'" y2="'+(8+j*6.4)+'" stroke="#137333" stroke-opacity=".45" stroke-width="1"/>';x+=18}
+  for(k=0;k<h;k++){o+='<rect x="'+x+'" y="8" width="64" height="64" rx="6" fill="#E9DCFA" stroke="#7B3FC4" stroke-width="2.5"/>';for(i=1;i<10;i++)o+='<line x1="'+(x+i*6.4)+'" y1="10" x2="'+(x+i*6.4)+'" y2="70" stroke="#7B3FC4" stroke-opacity=".35" stroke-width="1"/><line x1="'+(x+2)+'" y1="'+(8+i*6.4)+'" x2="'+(x+62)+'" y2="'+(8+i*6.4)+'" stroke="#7B3FC4" stroke-opacity=".35" stroke-width="1"/>';x+=72}
+  for(k=0;k<z;k++){o+='<rect x="'+x+'" y="8" width="12" height="64" rx="4" fill="#CFE0FC" stroke="#1A56C4" stroke-width="2.5"/>';for(j=1;j<10;j++)o+='<line x1="'+(x+1)+'" y1="'+(8+j*6.4)+'" x2="'+(x+11)+'" y2="'+(8+j*6.4)+'" stroke="#1A56C4" stroke-opacity=".45" stroke-width="1"/>';x+=18}
   x+=(z?8:0);
   for(k=0;k<e;k++){o+='<rect x="'+x+'" y="60" width="12" height="12" rx="3" fill="#FDE9A6" stroke="#B06000" stroke-width="2.2"/>';x+=17}
   var W=Math.max(60,x+4);
@@ -251,13 +258,13 @@ function vBlocks(v){
 }
 function vJumps(v){
   var pts=[v.from],i;(v.jumps||[]).forEach(function(j){pts.push(pts[pts.length-1]+j[0])});
-  var mn=Math.min.apply(null,pts),mx=Math.max.apply(null,pts),pad=(mx-mn)*.06||1,lo=mn-pad,hi=mx+pad,x0=24,x1=576,y=100;
+  var mn=Math.min.apply(null,pts),mx=Math.max.apply(null,pts),pad=(mx-mn)*.06||1,lo=mn-pad,hi=mx+pad,x0=24,x1=576,y=142;
   function X(n){return x0+(x1-x0)*(n-lo)/(hi-lo)}
   var o='<defs><marker id="jh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#EA4335"/></marker></defs><line x1="'+(x0-8)+'" y1="'+y+'" x2="'+(x1+8)+'" y2="'+y+'" stroke="#2f3a4a" stroke-width="3" stroke-linecap="round"/>';
-  pts.forEach(function(p,k){o+='<line x1="'+X(p)+'" y1="'+(y-8)+'" x2="'+X(p)+'" y2="'+(y+8)+'" stroke="#2f3a4a" stroke-width="3"/><circle cx="'+X(p)+'" cy="'+y+'" r="5.5" fill="'+(k===0?'#34A853':k===pts.length-1?'#4285F4':'#FBBC04')+'" stroke="#fff" stroke-width="2"/><text x="'+X(p)+'" y="'+(y+30)+'" text-anchor="middle" font-size="'+(v.fs||17)+'" font-weight="800" fill="#202124" font-family="Arial,sans-serif">'+(k===pts.length-1&&v.hideEnd?'?':(v.fmt?v.fmt[k]:p))+'</text>'});
-  (v.jumps||[]).forEach(function(j,k){var a=X(pts[k]),b=X(pts[k+1]),m=(a+b)/2,r=Math.abs(b-a)/2,h=Math.min(46,10+r*.55),dir=b>=a?1:-1;
-    o+='<path d="M'+a+' '+(y-6)+'Q'+m+' '+(y-6-2*h)+' '+b+' '+(y-6)+'" fill="none" stroke="#EA4335" stroke-width="3.2" stroke-linecap="round" marker-end="url(#jh)"/><rect x="'+(m-Math.max(30,String(j[1]).length*7.5))+'" y="'+(y-h-40)+'" width="'+Math.max(60,String(j[1]).length*15)+'" height="30" rx="15" fill="#fff" stroke="#EA4335" stroke-width="2"/><text x="'+m+'" y="'+(y-h-19)+'" text-anchor="middle" font-size="20" font-weight="900" fill="#B3261E" font-family="Arial,sans-serif">'+esc(j[1])+'</text>'});
-  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 138" width="100%" role="img" aria-label="Rechenstrich">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  pts.forEach(function(p,k){o+='<line x1="'+X(p)+'" y1="'+(y-8)+'" x2="'+X(p)+'" y2="'+(y+8)+'" stroke="#2f3a4a" stroke-width="3"/><circle cx="'+X(p)+'" cy="'+y+'" r="7" fill="'+(k===0?'#34A853':k===pts.length-1?'#4285F4':'#FBBC04')+'" stroke="#fff" stroke-width="2"/><text x="'+X(p)+'" y="'+(y+36)+'" text-anchor="middle" font-size="'+(v.fs||24)+'" font-weight="800" fill="#202124" font-family="Arial,sans-serif">'+(k===pts.length-1&&v.hideEnd?'?':(v.fmt?v.fmt[k]:p))+'</text>'});
+  (v.jumps||[]).forEach(function(j,k){var a=X(pts[k]),b=X(pts[k+1]),m=(a+b)/2,r=Math.abs(b-a)/2,h=Math.min(46,Math.max(22,10+r*.55))+((k%2&&(v.jumps.some(function(q,qi){return Math.abs(X(pts[qi+1])-X(pts[qi]))<120})))?34:0),dir=b>=a?1:-1;
+    o+='<path d="M'+a+' '+(y-6)+'Q'+m+' '+(y-6-2*h)+' '+b+' '+(y-6)+'" fill="none" stroke="#EA4335" stroke-width="4" stroke-linecap="round" marker-end="url(#jh)"/><rect x="'+(m-Math.max(38,String(j[1]).length*9.5))+'" y="'+(y-h-48)+'" width="'+Math.max(76,String(j[1]).length*19)+'" height="38" rx="19" fill="#fff" stroke="#EA4335" stroke-width="2"/><text x="'+m+'" y="'+(y-h-21)+'" text-anchor="middle" font-size="26" font-weight="900" fill="#B3261E" font-family="Arial,sans-serif">'+esc(j[1])+'</text>'});
+  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 204" width="100%" role="img" aria-label="Rechenstrich">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vArr(v){
   var P=24,r=v.r,c=v.c,sp=v.split||0,W=c*P+10,H=r*P+10,o='',i,j;
@@ -295,7 +302,7 @@ function vCol(v){
 }
 function visuals(list){
   if(!list||!list.length)return '';
-  var map={dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar,tbl:vTbl,chips:vChips,tline:vTline,flow:vFlow,cards:vCards,area:vArea,emo:vEmo,field:vField,clock:vClock,coins:vCoins,shape:vShape,nline:vNline,angle:vAngle,circle:vCircle,jug:vJug,quader:vQuader,par:vPar,blocks:vBlocks,jumps:vJumps,arr:vArr,col:vCol};
+  var map={dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar,tbl:vTbl,chips:vChips,tline:vTline,flow:vFlow,cards:vCards,area:vArea,emo:vEmo,field:vField,clock:vClock,coins:vCoins,shape:vShape,nline:vNline,angle:vAngle,circle:vCircle,jug:vJug,quader:vQuader,par:vPar,blocks:vBlocks,jumps:vJumps,arr:vArr,col:vCol,wall:vWall};
   return '<div class="visrow">'+list.map(function(v){return map[v.type]?map[v.type](v):''}).join('')+'</div>';
 }
 
