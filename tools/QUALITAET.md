@@ -24,4 +24,4 @@ Keine «Nochmal anders»-Wiederholungen, keine Schritte nur zum Wiederholen. Gil
 - Ausnahme Inhalt: Bei Themen, die selbst grafisch sind (Geometrie, Formen, Winkel, Flächen, Körper, Diagramme, Funktionsgraphen), braucht es auch in hohen Klassen Grafiken. Dort gilt: so viele wie nötig, damit man es sieht.
 - In Prüfungsaufgaben nur mit Vorsicht: Grafik nur, wenn die Aufgabe ohne sie nicht lösbar ist (zum Beispiel Dreieck, Diagramm). Nie als Hinweis auf die Lösung. Prüfungen bleiben klassisch.
 - Vor jedem neuen Thema prüfen: Klasse, Niveau und Themenart, dann den Grafikanteil festlegen.
-- Hinweis zum Bestand: Bruchrechnen und Deutsch Klasse 8 haben aktuell noch viele Grafiken (Stand v4.45). Beim nächsten Überarbeiten nach dieser Regel straffen.
+- Bestand (Stand v4.46): Deutsch und Mathe Klasse 8 sind nach dieser Regel gestrafft (Tabellen, Rechenwege; Grafik nur bei Dreieck, Quadrate, Zeitstrahl, Beispielsätzen). Klasse 3 (Länge, Gewicht) bleibt bewusst grafisch.
