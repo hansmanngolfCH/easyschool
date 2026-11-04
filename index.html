@@ -1321,6 +1321,40 @@ body.rwopen{overflow:hidden}
 .pgd{font-size:.78rem;font-weight:700;color:#5f6368}
 .pgdot{width:10px;height:10px;border-radius:50%;background:#1A73E8;margin-top:5px}.pgdot.ex{background:#E8710A}
 .pgev b{display:block;font:800 .95rem/1.25 var(--font-d);color:#1f2430}.pgev small{color:#5f6368;font-weight:600}
+/* v4.29 Dashboard-Look */
+.pghero{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px;border-radius:24px;color:#fff;background:linear-gradient(135deg,#1A73E8,#7B2FF7);box-shadow:0 6px 18px rgba(26,115,232,.3)}
+.pghero h1{margin:2px 0 4px;color:#fff;font-size:1.5rem}.pghero .eyebrow{color:rgba(255,255,255,.8);margin:0}
+.pghs{margin:0 0 10px;font-weight:700;opacity:.92;font-size:.9rem}
+.pghc{display:flex;flex-wrap:wrap;gap:6px}.pghc span{background:rgba(255,255,255,.2);border-radius:99px;padding:5px 11px;font:800 .8rem var(--font-d)}
+.pgring{position:relative;flex:none}.pgring svg{display:block}
+.pgrt2{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1}
+.pgrt2 b{font:800 1.5rem var(--font-d)}.pgrt2 small{font-size:.7rem;font-weight:700}
+.pghero .pgrt2 b{font-size:1.7rem}
+.pgt{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pgk{background:#fff;border:1px solid #E8EAED;border-radius:18px;padding:14px;box-shadow:0 1px 3px rgba(60,64,67,.12);display:flex;flex-direction:column;gap:2px}
+.pgki{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:6px}
+.pgk b{font:800 1.7rem/1.1 var(--font-d);color:#1f2430}.pgk small{color:#5f6368;font-weight:600;font-size:.76rem}
+.pgch{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:10px}.pgch h2{margin:0}
+.pgsum{color:#5f6368;font-weight:700;font-size:.78rem}
+.pgplot{position:relative;height:128px;padding-bottom:16px}
+.pggrid{position:absolute;inset:0 0 16px 0;display:flex;flex-direction:column;justify-content:space-between}
+.pggrid i{display:block;border-top:1px dashed #E8EAED;position:relative;height:0}
+.pggrid u{position:absolute;left:0;top:-8px;background:#fff;padding-right:4px;text-decoration:none;font-size:.62rem;color:#9aa0a6;font-weight:700}
+.pgplot .pgb{position:absolute;inset:0 0 0 22px;display:flex;align-items:stretch;gap:4px;height:auto}
+.pgplot .pgcol{position:relative;justify-content:flex-end;align-items:center;height:auto}
+.pgplot .pgcol i{width:100%;max-width:16px;margin-bottom:16px;border-radius:6px 6px 2px 2px}
+.pgcol i.td{background:#7B2FF7}
+.pgplot .pgl{position:absolute;bottom:0;left:0;right:0;text-align:center}
+.pgs{padding:0!important;overflow:hidden}
+.pgsh{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:12px;width:100%;padding:14px;touch-action:manipulation}
+.pgsh:active{background:#F8F9FA}
+.pgsm{flex:1;min-width:0;display:block}.pgsm b{display:block;font:800 1.1rem var(--font-d);color:#1f2430;margin-bottom:4px}
+.pgsc{display:flex;flex-wrap:wrap;gap:4px;align-items:center}
+.pgnote{font-size:.72rem;font-weight:800;color:#5f6368}
+.pgchev{color:#9aa0a6;font-size:1.1rem;width:14px;text-align:center}
+.pgrows{padding:0 14px 8px;border-top:1px solid #F1F3F4}
+.pgrows .pgr:first-child{border-top:0}
+.pgmore{all:unset;cursor:pointer;display:block;text-align:center;margin:8px auto 0;padding:8px 14px;color:#1A73E8;font:800 .9rem var(--font-d)}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1328,7 +1362,7 @@ body.rwopen{overflow:hidden}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v4.28';
+var APP_VERSION='v4.30';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -1895,7 +1929,7 @@ function nextReward(pl){
 function banner(){
   if(!nav.child||(nav.view!=='child'&&nav.view!=='subject'))return '';
   var id=nav.child,pl=plinfo(id),L=level(id,topicsOf(id));
-  return '<div class="banner">'+av(L.lvl,40)+'<div class="bn-m"><div class="bn-row"><span class="bn-lv">'+'<b style="color:'+(myCol()>=0?AVCOL[myCol()][1]:'inherit')+'">'+(esc(myName())||'Schüler')+'</b> · '+'Level '+pl.L+'</span><span class="bn-xp">'+fx(pl.xp)+' XP</span></div><div class="xpg sm" role="img" aria-label="XP"><i style="width:'+Math.max(5,Math.round(pl.pct*100))+'%"></i><u></u></div></div>'+shield(pl.L,40)+'</div>';
+  return '<div class="banner">'+av(L.lvl,40)+'<div class="bn-m"><div class="bn-row"><span class="bn-lv">'+'<b style="color:'+(myCol()>=0?AVCOL[myCol()][1]:'inherit')+'">'+(esc(myName())||'NoName')+'</b> · '+'Level '+pl.L+'</span><span class="bn-xp">'+fx(pl.xp)+' XP</span></div><div class="xpg sm" role="img" aria-label="XP"><i style="width:'+Math.max(5,Math.round(pl.pct*100))+'%"></i><u></u></div></div>'+shield(pl.L,40)+'</div>';
 }
 function xpbar(pl){return '<div class="xpbar"><div class="bar" role="img" aria-label="XP"><i style="width:'+Math.max(3,Math.round(pl.pct*100))+'%"></i></div><span class="pct">'+pl.xp+' / '+pl.next+' XP</span></div>'}
 
@@ -1911,10 +1945,10 @@ function vHome(){
   var prim=kids.filter(function(c){return (c.grade||0)<=6}),ober=kids.filter(function(c){return (c.grade||0)>=7});
   var cards=(prim.length?'<div class="clist cl-p">'+prim.map(cclass).join('')+'</div>':'')+(ober.length?'<div class="clist cl-o">'+ober.map(cclass).join('')+'</div>':'');
   var tot=0;C.children.forEach(function(c){tot+=xpTotal(c.id)});var HL=plv(tot),hp=(tot%1000)/1000;
-  var hb='<div class="banner hbn"><span class="av" style="width:40px;height:40px">'+avPic(myAv(),40)+'</span><div class="bn-m"><div class="bn-row"><span class="bn-lv"><b style="color:'+AVCOL[myCol()][1]+'">'+(esc(myName())||'Schüler')+'</b> · Level '+HL+'</span><span class="bn-xp">'+fx(tot)+' XP</span></div><div class="xpg sm" role="img" aria-label="XP"><i style="width:'+Math.max(5,Math.round(hp*100))+'%"></i><u></u></div></div>'+shield(HL,40)+'</div>';
+  var hb='<div class="banner hbn"><span class="av" style="width:40px;height:40px">'+avPic(myAv(),40)+'</span><div class="bn-m"><div class="bn-row"><span class="bn-lv"><b style="color:'+AVCOL[myCol()][1]+'">'+(esc(myName())||'NoName')+'</b> · Level '+HL+'</span><span class="bn-xp">'+fx(tot)+' XP</span></div><div class="xpg sm" role="img" aria-label="XP"><i style="width:'+Math.max(5,Math.round(hp*100))+'%"></i><u></u></div></div>'+shield(HL,40)+'</div>';
   var picker='';
   if(nav.avpick){var cur=myAv(),cc=myCol();picker='<div class="avmodal"><div class="avback" data-act="avclose"></div><div class="avsheet" role="dialog" aria-label="Avatar aussuchen"><div class="avhead"><b>Dein Avatar</b><button class="btn sm" data-act="avclose">Fertig</button></div><label class="lab2" for="avname">Dein Name (freiwillig)</label><input class="inp avname" id="avname" maxlength="14" placeholder="Zum Beispiel Luca" value="'+esc(myName())+'" autocomplete="off"><p class="lab2" style="margin-top:12px">Farbe</p><div class="avcols">'+AVCOL.map(function(c,i){return '<button class="avcol'+(i===cc?' on':'')+'" style="background:linear-gradient(135deg,'+c[0]+','+c[1]+')" data-act="avcol" data-id="'+i+'" aria-label="Farbe '+(i+1)+'"></button>'}).join('')+'</div><p class="lab2" style="margin-top:12px">Bild</p><div class="avgrid">'+Array.apply(null,{length:AV_N}).map(function(_,i){return '<button class="avopt'+(i===cur?' on':'')+'" data-act="avpick" data-id="'+i+'" aria-label="Avatar '+(i+1)+'">'+avPic(i,56)+'</button>'}).join('')+'</div></div></div>'}
-  return '<div class="home"><button class="avbtn" data-act="avopen" aria-label="Avatar aussuchen"><span class="avdot">'+avPic(myAv(),34)+'</span><span class="avn">'+(esc(myName())||'Schüler')+'</span></button><div class="brandrow">'+logoSvg(76)+'<h1>EasySchool</h1></div>'+hb+'<p class="ask">Wähle deine Klasse</p>'+cards+''+picker+'</div>';
+  return '<div class="home"><button class="avbtn" data-act="avopen" aria-label="Avatar aussuchen"><span class="avdot">'+avPic(myAv(),34)+'</span><span class="avn">'+(esc(myName())||'NoName')+'</span></button><div class="brandrow">'+logoSvg(76)+'<h1>EasySchool</h1></div>'+hb+'<p class="ask">Wähle deine Klasse</p>'+cards+''+picker+'</div>';
 }
 
 function vChild(){
@@ -4211,33 +4245,41 @@ function dl(ts){var d=new Date(ts),k0=dkey(0),k1=dkey(1),k=d.getFullYear()+'-'+S
 function dur(sec){var m=Math.round(sec/60);if(m<60)return m+' Min';return Math.floor(m/60)+' Std '+('0'+(m%60)).slice(-2)+' Min'}
 function ago(t){if(!t)return '';var d=Math.floor((Date.now()-t)/DAY);return d<=0?'heute geübt':d===1?'gestern geübt':'vor '+d+' Tagen geübt'}
 function nc(n){return n>=5?'g':n>=4?'am':'r'}
+function ring(pct,sz,sw,col,txt,sub,trk){var r=(sz-sw)/2,c=2*Math.PI*r,o=c*(1-Math.max(0,Math.min(1,pct)));return '<div class="pgring" style="width:'+sz+'px;height:'+sz+'px"><svg viewBox="0 0 '+sz+' '+sz+'" width="'+sz+'" height="'+sz+'"><circle cx="'+sz/2+'" cy="'+sz/2+'" r="'+r+'" fill="none" stroke="'+(trk||'#E8EAED')+'" stroke-width="'+sw+'"/><circle cx="'+sz/2+'" cy="'+sz/2+'" r="'+r+'" fill="none" stroke="'+col+'" stroke-width="'+sw+'" stroke-linecap="round" stroke-dasharray="'+c.toFixed(1)+'" stroke-dashoffset="'+o.toFixed(1)+'" transform="rotate(-90 '+sz/2+' '+sz/2+')"/></svg><div class="pgrt2"><b>'+txt+'</b>'+(sub?'<small>'+sub+'</small>':'')+'</div></div>'}
+function kpi(ic,col,val,lab){return '<div class="pgk"><span class="pgki" style="background:'+col[0]+';color:'+col[1]+'">'+ic+'</span><b>'+val+'</b><small>'+lab+'</small></div>'}
 VIEWS.progress=function(){
-  var ch=C.children.filter(function(c){return c.id===nav.child})[0],p=prog(ch.id),i,k,
-  html='<div class="stack pgv"><div class="row"><div><p class="eyebrow">Fortschritt</p><h1>'+esc(label(ch))+'</h1></div></div>';
+  var ch=C.children.filter(function(c){return c.id===nav.child})[0],p=prog(ch.id),i,k,po=nav.pgo=nav.pgo||{},
+  all=topicsOf(ch.id),Lall=level(ch.id,all),pl=plinfo(ch.id);
   var sec=0,n=0,ok=0;for(k in p.days){sec+=p.days[k].sec||0;n+=p.days[k].n||0;ok+=p.days[k].ok||0}
-  var ex=p.exams,avg=ex.length?ex.reduce(function(a,e){return a+e.note},0)/ex.length:0;
-  html+='<div class="pgt"><div><b>'+dur(sec)+'</b><small>gelernt</small></div><div><b>'+n+'</b><small>Antworten · '+(n?Math.round(100*ok/n):0)+' % richtig</small></div><div><b>'+(ex.length?fmt(avg):'–')+'</b><small>Ø Prüfungsnote ('+ex.length+')</small></div><div><b>'+streak(ch.id)+'</b><small>Tage in Serie</small></div></div>';
+  var ex=p.exams,avg=ex.length?ex.reduce(function(a,e){return a+e.note},0)/ex.length:0,rate=n?ok/n:0;
+  var html='<div class="stack pgv"><section class="pghero"><div class="pghl"><p class="eyebrow">Fortschritt</p><h1>'+esc(label(ch))+'</h1><p class="pghs">'+(myName()?esc(myName())+' · ':'')+'Level '+pl.L+' · '+pl.xp+' XP</p><div class="pghc"><span>🔥 '+streak(ch.id)+' Tage</span><span>⏱ '+dur(sec)+'</span></div></div>'+ring(Lall.pct,104,11,'#fff','<span style="color:#fff">'+Math.round(Lall.pct*100)+'%</span>','<span style="color:#fff;opacity:.85">sitzt</span>','rgba(255,255,255,.28)')+'</section>';
+  html+='<div class="pgt">'+kpi('✓',['#E6F4EA','#188038'],n?Math.round(rate*100)+' %':'–','richtig · '+n+' Antworten')+kpi('★',['#FEF3E0','#B06000'],ex.length?fmt(avg):'–','Ø Prüfungsnote · '+ex.length+'×')+'</div>';
   // 14 Tage
-  var days=[],max=10;for(i=13;i>=0;i--){var d=p.days[dkey(i)]||{sec:0};var mn=Math.round((d.sec||0)/60);days.push({k:dkey(i),m:mn});max=Math.max(max,mn)}
-  html+='<section class="card pgc"><h2>Die letzten 14 Tage</h2><div class="pgb">'+days.map(function(d,j){var wd=new Date(d.k+'T12:00:00');return '<div class="pgcol"><span class="pgm">'+(d.m||'')+'</span><i class="'+(d.m?'on':'')+'" style="height:'+Math.max(3,Math.round(64*d.m/max))+'px"></i><span class="pgl">'+(j%2?'':wd.getDate()+'.')+'</span></div>'}).join('')+'</div><p class="sub">Übungsminuten pro Tag</p></section>';
-  // Fächer und Themen
+  var days=[],max=10,tot14=0,act=0;for(i=13;i>=0;i--){var d=p.days[dkey(i)]||{sec:0};var mn=Math.round((d.sec||0)/60);days.push({k:dkey(i),m:mn,today:i===0});max=Math.max(max,mn);tot14+=mn;if(mn)act++}
+  var top=Math.ceil(max/10)*10;
+  html+='<section class="card pgc"><div class="pgch"><h2>Lernzeit</h2><span class="pgsum">'+tot14+' Min · '+act+' von 14 Tagen</span></div><div class="pgplot"><div class="pggrid"><i><u>'+top+'</u></i><i><u>'+Math.round(top/2)+'</u></i><i><u>0</u></i></div><div class="pgb">'+days.map(function(d,j){var wd=new Date(d.k+'T12:00:00');return '<div class="pgcol"><i class="'+(d.m?'on':'')+(d.today?' td':'')+'" style="height:'+Math.max(3,Math.round(100*d.m/top))+'%"></i><span class="pgl">'+(j%2?'':wd.getDate()+'.')+'</span></div>'}).join('')+'</div></div></section>';
+  // Fächer (aufklappbar)
   C.subjects.filter(function(sb){return topicsOf(ch.id,sb.id).length}).forEach(function(sb){
-    var ts=topicsOf(ch.id,sb.id),L=level(ch.id,ts);
-    html+='<section class="card pgs s-'+esc(sb.id)+'"><div class="pgsh"><span class="sbadge s-'+esc(sb.id)+'" style="width:34px;height:34px">'+sicon(sb,20)+'</span><h2>'+esc(sb.name)+'</h2><span class="pgsp">'+Math.round(L.pct*100)+' %</span></div>'+
-    ts.map(function(t){
+    var ts=topicsOf(ch.id,sb.id),L=level(ch.id,ts),open=!!po[sb.id],cnt={g:0,am:0,r:0,n:0},sn=0,sc=0;
+    var rows=ts.map(function(t){
       var lv=level(ch.id,[t]),w=Math.max(lv.seen?4:0,Math.round(lv.pct*100)),last=0;
       cardsIn([t]).forEach(function(x){var r=p.cards[x.k];if(r&&r.t>last)last=r.t});
-      var te=ex.filter(function(e){return e.topic===t.id}).sort(function(a,b){return b.t-a.t}),best=bestNote(ch.id,t.id),st=!lv.seen?['Neu','n']:lv.pct>=.75?['Stark','g']:lv.pct>=.4?['Auf dem Weg','am']:['Üben','r'];
-      return '<button class="pgr" data-act="pgopen" data-id="'+esc(t.id)+'"><div class="pgrt"><b>'+esc(dT(t))+'</b><span class="pgchip '+st[1]+'">'+st[0]+'</span></div><div class="bar thin"><i style="width:'+w+'%"></i></div><div class="pgrb"><span>'+w+' % sitzt'+(last?' · '+ago(last):'')+'</span><span class="pgn '+(best?nc(best):'x')+'">'+(best?'Note '+fmt(best)+(te.length>1?' · '+te.length+'×':''):'Noch keine Prüfung')+'</span></div></button>'}).join('')+'</section>'});
+      var te=ex.filter(function(e){return e.topic===t.id}),best=bestNote(ch.id,t.id),st=!lv.seen?['Neu','n']:lv.pct>=.75?['Stark','g']:lv.pct>=.4?['Auf dem Weg','am']:['Üben','r'];
+      cnt[st[1]]++;if(best){sn+=best;sc++}
+      return '<button class="pgr" data-act="pgopen" data-id="'+esc(t.id)+'"><div class="pgrt"><b>'+esc(dT(t))+'</b><span class="pgchip '+st[1]+'">'+st[0]+'</span></div><div class="bar thin"><i style="width:'+w+'%"></i></div><div class="pgrb"><span>'+w+' % sitzt'+(last?' · '+ago(last):'')+'</span><span class="pgn '+(best?nc(best):'x')+'">'+(best?'Note '+fmt(best)+(te.length>1?' · '+te.length+'×':''):'Noch keine Prüfung')+'</span></div></button>'}).join('');
+    var chips=(cnt.g?'<span class="pgchip g">'+cnt.g+' stark</span>':'')+(cnt.am?'<span class="pgchip am">'+cnt.am+' unterwegs</span>':'')+(cnt.r?'<span class="pgchip r">'+cnt.r+' üben</span>':'')+(cnt.n?'<span class="pgchip n">'+cnt.n+' neu</span>':'');
+    html+='<section class="card pgs s-'+esc(sb.id)+(open?' open':'')+'"><button class="pgsh" data-act="pgtog" data-id="'+esc(sb.id)+'" aria-expanded="'+open+'"><span class="sbadge s-'+esc(sb.id)+'" style="width:40px;height:40px;flex:none">'+sicon(sb,24)+'</span><span class="pgsm"><b>'+esc(sb.name)+'</b><span class="pgsc">'+chips+(sc?'<span class="pgnote">Ø Note '+fmt(sn/sc)+'</span>':'')+'</span></span>'+ring(L.pct,46,6,'var(--sc,#1A73E8)','<span style="font-size:.78rem">'+Math.round(L.pct*100)+'</span>')+'<span class="pgchev">'+(open?'▾':'▸')+'</span></button>'+(open?'<div class="pgrows">'+rows+'</div>':'')+'</section>'});
   // Verlauf
   var ev=[];for(k in p.days){var dd=p.days[k];if(dd.sec||dd.n)ev.push({t:new Date(k+'T12:00:00').getTime(),h:'day',d:dd,k:k})}
   ex.forEach(function(e){ev.push({t:e.t,h:'ex',e:e})});
-  ev.sort(function(a,b){return b.t-a.t});
-  html+='<section class="card pgc"><h2>Was du gemacht hast</h2>'+(ev.length?'<div class="pgtl">'+ev.slice(0,14).map(function(x){
+  ev.sort(function(a,b){return b.t-a.t});var lim=po._more?30:6;
+  html+='<section class="card pgc"><h2>Was du gemacht hast</h2>'+(ev.length?'<div class="pgtl">'+ev.slice(0,lim).map(function(x){
     if(x.h==='ex'){var tt=topicById(x.e.topic);return '<div class="pgev"><span class="pgd">'+dl(x.t)+'</span><span class="pgdot ex"></span><div><b>Prüfung: '+esc(tt?dT(tt):x.e.topic)+'</b><small>Note '+fmt(x.e.note)+' · '+x.e.score+' von '+x.e.max+' Punkten</small></div></div>'}
-    return '<div class="pgev"><span class="pgd">'+dl(x.t)+'</span><span class="pgdot"></span><div><b>'+dur(x.d.sec||0)+' geübt</b><small>'+(x.d.n||0)+' Antworten · '+(x.d.n?Math.round(100*(x.d.ok||0)/x.d.n):0)+' % richtig'+(x.d.xp?' · +'+x.d.xp+' XP':'')+'</small></div></div>'}).join('')+'</div>':'<p class="sub">Noch nichts. Fang mit einem Thema an, dann erscheint es hier.</p>')+'</section>';
+    return '<div class="pgev"><span class="pgd">'+dl(x.t)+'</span><span class="pgdot"></span><div><b>'+dur(x.d.sec||0)+' geübt</b><small>'+(x.d.n||0)+' Antworten · '+(x.d.n?Math.round(100*(x.d.ok||0)/x.d.n):0)+' % richtig'+(x.d.xp?' · +'+x.d.xp+' XP':'')+'</small></div></div>'}).join('')+'</div>'+(ev.length>6?'<button class="pgmore" data-act="pgmore">'+(po._more?'Weniger anzeigen':'Mehr anzeigen')+'</button>':''):'<p class="sub">Noch nichts. Fang mit einem Thema an, dann erscheint es hier.</p>')+'</section>';
   return html+'</div>';
 };
+ACT.pgtog=function(b){nav.pgo=nav.pgo||{};nav.pgo[b.dataset.id]=!nav.pgo[b.dataset.id];var y=window.scrollY;render();window.scrollTo(0,y)};
+ACT.pgmore=function(){nav.pgo=nav.pgo||{};nav.pgo._more=!nav.pgo._more;var y=window.scrollY;render();window.scrollTo(0,y)};
 ACT.prog=function(b){var c=(b&&b.dataset&&b.dataset.id)||nav.child;go({view:'progress',child:c},nav.view==='parent'?{view:'parent'}:{view:'child',child:c,from:{view:'home'}})};
 ACT.pgopen=function(b){var t=topicById(b.dataset.id);nav.topen=nav.topen||{};var o={view:'subject',child:nav.child,subject:t.subject,topen:{},chopen:{}};o.topen[t.id]=true;o.chopen[t.subject+'|'+t.chapter]=true;go(o,{view:'progress',child:nav.child,from:nav.from})};
 })();
