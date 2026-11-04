@@ -1,5 +1,11 @@
 
 /* ---------- Üben ---------- */
+function qHtml(q){
+  if(q.indexOf('\n')<0)return '<p class="fq">'+rt(q)+'</p>';
+  var ls=q.split('\n'),sent=ls[0],rest=ls.slice(1).join(' '),m=/«([^»]+)»/.exec(rest),h='',i=m?sent.toLowerCase().indexOf(m[1].toLowerCase()):-1;
+  h=i>=0?esc(sent.slice(0,i))+'<mark>'+esc(sent.slice(i,i+m[1].length))+'</mark>'+esc(sent.slice(i+m[1].length)):esc(sent);
+  return '<div class="dsent"><span class="dsl">Satz</span><p>'+h+'</p></div><p class="dqq">'+esc(rest).replace(/«([^»]+)»/g,'<b class="dtg">$1</b>')+'</p>';
+}
 function curCard(n){
   var k=n.queue[n.idx],x=cardIdx[k];
   if(!n.cur){
@@ -117,7 +123,7 @@ function vPractice(){
   if(isV(c))return head+vVocab(n,k,c,stageOf(n,k))+'</div>';
   var pkey='p:'+k,pd=padHTML(pkey,c.q),hs=hintList(n,k,c,0),chk=!c.opts&&checkable(c);
   if(c.opts&&!n.opts)n.opts=shuffle(c.opts.map(function(t){return {t:t,ok:t===c.a}}));
-  var h2=head+'<section class="card flash"><p class="fq">'+rt(c.q)+'</p>'+visuals(c.visuals)+'</section>';
+  var h2=head+'<section class="card flash">'+qHtml(c.q)+visuals(c.visuals)+'</section>';
   if(!n.revealed){
     h2+='<div class="tools">'+(hs.length?'<button class="btn sm" data-act="hint"'+(n.hintN>=hs.length?' disabled':'')+'>Tipp'+(n.hintN<hs.length?' ('+(n.hintN+1)+'/'+hs.length+')':'')+'</button>':'')+pd.btn+'</div>'+hintBoxes(n,hs);
     h2+=pd.box;

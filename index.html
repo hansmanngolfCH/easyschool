@@ -1377,6 +1377,56 @@ body.rwopen{overflow:hidden}
 /* v4.40 Herkunft */
 .tcsub .orig.o-k{font-weight:600;color:#9aa0a6}
 .tcsub .orig.o-l{color:#5f6368}
+
+/* v4.42 Deutsch-Theorie */
+.dtx{margin:0 0 12px;font-size:1.02rem;line-height:1.5;color:var(--ink)}
+.dvar{display:inline-block;margin:0 0 8px;padding:3px 10px;border-radius:999px;background:var(--surface2);color:var(--ink2);font:700 .72rem/1.4 inherit;font-family:inherit;letter-spacing:.04em;text-transform:uppercase}
+.dcap{margin:8px 2px 0;font-size:.88rem;color:var(--ink2)}
+.dtb{width:100%;overflow-x:auto;border-radius:14px;border:1px solid var(--line)}
+.dtb table{width:100%;border-collapse:collapse;font-size:.92rem;line-height:1.35}
+.dtb thead th{background:var(--surface2);color:var(--ink2);font-weight:700;font-size:.74rem;letter-spacing:.04em;text-transform:uppercase;text-align:left;padding:9px 10px}
+.dtb thead th.hc{color:#fff;background:var(--c)}
+.dtb tbody tr+tr th,.dtb tbody tr+tr td{border-top:1px solid var(--line)}
+.dtb tbody th{text-align:left;padding:9px 10px;vertical-align:top;font-weight:800;white-space:nowrap}
+.dtb tbody th span{display:inline-block;padding:3px 9px;border-radius:8px;background:var(--surface2);background:color-mix(in srgb,var(--c) 16%,var(--surface));color:var(--c);border-left:4px solid var(--c)}
+.dtb tbody td{padding:9px 10px;vertical-align:top;color:var(--ink)}
+.dtb table:not(.nh) tbody td:last-child{color:var(--ink2)}
+.dtb tbody tr:nth-child(even) td{background:rgba(127,127,127,.06)}
+.dchw{width:100%}
+.dch{display:flex;flex-wrap:wrap;gap:8px}
+.dc{display:flex;flex-direction:column;gap:3px;padding:8px 11px;border-radius:12px;background:var(--surface2);background:color-mix(in srgb,var(--c) 14%,var(--surface));border-bottom:4px solid var(--c)}
+.dc b{font-size:1.05rem;line-height:1.25;color:var(--ink)}
+.dc i{font-style:normal;font-size:.72rem;font-weight:800;letter-spacing:.03em;color:var(--c)}
+.dtl,.dfl{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0;width:100%}
+.dtl li{position:relative;display:flex;gap:12px;padding:0 0 14px 0}
+.dtl li:last-child{padding-bottom:0}
+.dtl li:not(:last-child):before{content:"";position:absolute;left:8px;top:18px;bottom:-2px;width:3px;background:var(--line)}
+.dtl .dot{flex:none;width:19px;height:19px;border-radius:50%;background:var(--c);margin-top:2px;box-shadow:0 0 0 4px var(--surface),0 0 0 5px var(--c)}
+.dtl li.now .dot{width:25px;height:25px;margin-left:-3px;margin-top:0}
+.dtl li div{display:flex;flex-direction:column;gap:1px}
+.dtl b{color:var(--c);font-size:.95rem}.dtl span{font-weight:700;font-size:1.05rem}.dtl em{font-style:normal;font-size:.85rem;color:var(--ink2)}
+.dtl li.now div{background:var(--surface2);background:color-mix(in srgb,var(--c) 14%,var(--surface));border-radius:12px;padding:6px 12px;margin-left:-4px}
+.dfl li{position:relative;display:flex;gap:12px;align-items:flex-start;padding:10px 12px;border-radius:14px;background:var(--surface2);background:color-mix(in srgb,var(--c) 12%,var(--surface));border-left:5px solid var(--c)}
+.dfl li+li{margin-top:16px}
+.dfl li+li:before{content:"▼";position:absolute;top:-15px;left:20px;font-size:.8rem;color:var(--ink2)}
+.dfl .n{flex:none;width:26px;height:26px;border-radius:50%;background:var(--c);color:#fff;font-weight:800;display:grid;place-items:center;font-size:.9rem}
+.dfl div{display:flex;flex-direction:column;gap:2px}.dfl b{font-size:1rem}.dfl span{font-size:.9rem;color:var(--ink2)}
+.dcd{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;width:100%}
+.dk{padding:10px 12px;border-radius:14px;background:var(--surface2);background:color-mix(in srgb,var(--c) 12%,var(--surface));border-top:5px solid var(--c)}
+.dk h4{margin:0 0 4px;font-size:1rem;color:var(--c)}.dk p{margin:0}.dk .q{font-weight:700;font-size:.92rem}.dk .e{font-size:.85rem;color:var(--ink2);margin-top:3px}
+.dtb{border:0;border-radius:10px}
+.dtb table{font-size:.86rem}
+.dtb thead th{padding:8px 6px;font-size:.66rem;letter-spacing:.02em}
+.dtb tbody th{padding:8px 4px 8px 6px}
+.dtb tbody td{padding:8px 6px}
+.dtb tbody th span{padding:3px 7px}
+
+.dsent{position:relative;margin:2px 0 12px;padding:16px 14px 14px;border-radius:16px;background:var(--surface2);background:color-mix(in srgb,#F29900 12%,var(--surface));border-left:6px solid #F29900;text-align:left}
+.dsl{position:absolute;top:-9px;left:12px;padding:1px 9px;border-radius:999px;background:#F29900;color:#3b2a00;font:800 .68rem/1.5 inherit;font-family:inherit;letter-spacing:.06em;text-transform:uppercase}
+.dsent p{margin:0;font:600 1.18rem/1.45 inherit;font-family:inherit;color:var(--ink)}
+.dsent mark{background:#FFE08A;color:#202124;border-radius:6px;padding:1px 6px;box-shadow:0 2px 0 #F29900;font-weight:800}
+.dqq{margin:0;font:600 1.02rem/1.45 inherit;font-family:inherit;color:var(--ink);text-align:left}
+.dtg{background:var(--surface2);border-radius:6px;padding:1px 7px;color:var(--ink)}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1384,7 +1434,7 @@ body.rwopen{overflow:hidden}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v4.41';
+var APP_VERSION='v4.42';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -1793,9 +1843,31 @@ function vFbar(v){
   });
   return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 '+y+'" width="100%" role="img" aria-label="Bruchstreifen">'+s+'</svg></figure>';
 }
+
+/* ---------- Deutsch-Theorie: Tabellen und Grafiken (v4.42) ---------- */
+var DC=['#4285F4','#EA4335','#34A853','#F29900','#9334E6','#00A5BF','#D93F8E','#6B7280'];
+function dcol(i){return DC[(i|0)%DC.length]}
+function bd(s){return rt(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>')}
+function vTbl(v){
+  var h=v.head?'<thead><tr>'+v.head.map(function(x,k){var c=(k>0&&v.hc)?' style="--c:'+dcol(v.hc[k-1])+'" class="hc"':'';return '<th'+c+'>'+bd(x)+'</th>'}).join('')+'</tr></thead>':'';
+  var b='<tbody>'+v.rows.map(function(r,i){var c=dcol(v.c?v.c[i]:i);return '<tr style="--c:'+c+'">'+r.map(function(x,k){return k===0?'<th scope="row"><span>'+bd(x)+'</span></th>':'<td>'+bd(x)+'</td>'}).join('')+'</tr>'}).join('')+'</tbody>';
+  return '<div class="dtb"><table class="'+(v.hc?'nh':'')+'">'+h+b+'</table></div>'+(v.cap?'<p class="dcap">'+bd(v.cap)+'</p>':'');
+}
+function vChips(v){
+  return '<div class="dchw"><div class="dch">'+v.parts.map(function(p){return '<div class="dc" style="--c:'+dcol(p[2])+'"><b>'+bd(p[0])+'</b>'+(p[1]?'<i>'+bd(p[1])+'</i>':'')+'</div>'}).join('')+'</div>'+(v.cap?'<p class="dcap">'+bd(v.cap)+'</p>':'')+'</div>';
+}
+function vTline(v){
+  return '<ol class="dtl">'+v.items.map(function(p,i){return '<li class="'+(i===v.now?'now':'')+'" style="--c:'+dcol(p[3])+'"><span class="dot"></span><div><b>'+bd(p[0])+'</b><span>'+bd(p[1])+'</span>'+(p[2]?'<em>'+bd(p[2])+'</em>':'')+'</div></li>'}).join('')+'</ol>';
+}
+function vFlow(v){
+  return '<ol class="dfl">'+v.steps.map(function(p,i){return '<li style="--c:'+dcol(p[2]===undefined?i:p[2])+'"><span class="n">'+(i+1)+'</span><div><b>'+bd(p[0])+'</b><span>'+bd(p[1])+'</span></div></li>'}).join('')+'</ol>';
+}
+function vCards(v){
+  return '<div class="dcd">'+v.items.map(function(p){return '<div class="dk" style="--c:'+dcol(p[3])+'"><h4>'+bd(p[0])+'</h4><p class="q">'+bd(p[1])+'</p><p class="e">'+bd(p[2])+'</p></div>'}).join('')+'</div>';
+}
 function visuals(list){
   if(!list||!list.length)return '';
-  var map={dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar};
+  var map={dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar,tbl:vTbl,chips:vChips,tline:vTline,flow:vFlow,cards:vCards};
   return '<div class="visrow">'+list.map(function(v){return map[v.type]?map[v.type](v):''}).join('')+'</div>';
 }
 
@@ -2063,7 +2135,7 @@ function vTheory(t){
       +'<div class="row"><button class="btn" data-act="prev">Zurück</button><button class="btn pri big" data-act="practice" data-scope="topic:'+esc(t.id)+'" data-force="1">Lernen</button><button class="btn big" data-act="exam" data-id="'+esc(t.id)+'">Prüfung</button></div></div>';
   }
   var st=t.explain[i],lines=thSplit(st.text),body=lines.map(function(l){var mk=/^(Merke|Wichtig|Tipp)/.test(l);return '<p class="thl'+(mk?' thmk':'')+'"><span class="thd">'+(mk?'💡':'')+'</span><span>'+rt(l)+'</span></p>'}).join('');
-  return '<div class="stack explain thx s-'+t.subject+'">'+head+'<section class="thcard"><div class="thh"><span class="thnum">'+(i+1)+'</span><h1>'+esc(st.h)+'</h1></div>'+visuals(st.visuals)+'<div class="thtxt">'+body+'</div></section>'
+  return '<div class="stack explain thx s-'+t.subject+'">'+head+'<section class="thcard"><div class="thh"><span class="thnum">'+(i+1)+'</span><h1>'+esc(st.h)+'</h1></div>'+(t.subject==='deu'?(st.var?'<span class="dvar">'+esc(st.var)+'</span>':'')+'<p class="dtx">'+bd(st.text)+'</p>'+visuals(st.visuals):visuals(st.visuals)+'<div class="thtxt">'+body+'</div>')+'</section>'
     +'<div class="row">'+(i>0?'<button class="btn" data-act="prev">Zurück</button>':'')+'<button class="btn pri big thok" data-act="thnext">'+STI[i%6]+' '+stg(i)+'</button></div></div>';
 }
 function quizFor(step){
@@ -2140,6 +2212,12 @@ function vParent(){
 
 
 /* ---------- Üben ---------- */
+function qHtml(q){
+  if(q.indexOf('\n')<0)return '<p class="fq">'+rt(q)+'</p>';
+  var ls=q.split('\n'),sent=ls[0],rest=ls.slice(1).join(' '),m=/«([^»]+)»/.exec(rest),h='',i=m?sent.toLowerCase().indexOf(m[1].toLowerCase()):-1;
+  h=i>=0?esc(sent.slice(0,i))+'<mark>'+esc(sent.slice(i,i+m[1].length))+'</mark>'+esc(sent.slice(i+m[1].length)):esc(sent);
+  return '<div class="dsent"><span class="dsl">Satz</span><p>'+h+'</p></div><p class="dqq">'+esc(rest).replace(/«([^»]+)»/g,'<b class="dtg">$1</b>')+'</p>';
+}
 function curCard(n){
   var k=n.queue[n.idx],x=cardIdx[k];
   if(!n.cur){
@@ -2257,7 +2335,7 @@ function vPractice(){
   if(isV(c))return head+vVocab(n,k,c,stageOf(n,k))+'</div>';
   var pkey='p:'+k,pd=padHTML(pkey,c.q),hs=hintList(n,k,c,0),chk=!c.opts&&checkable(c);
   if(c.opts&&!n.opts)n.opts=shuffle(c.opts.map(function(t){return {t:t,ok:t===c.a}}));
-  var h2=head+'<section class="card flash"><p class="fq">'+rt(c.q)+'</p>'+visuals(c.visuals)+'</section>';
+  var h2=head+'<section class="card flash">'+qHtml(c.q)+visuals(c.visuals)+'</section>';
   if(!n.revealed){
     h2+='<div class="tools">'+(hs.length?'<button class="btn sm" data-act="hint"'+(n.hintN>=hs.length?' disabled':'')+'>Tipp'+(n.hintN<hs.length?' ('+(n.hintN+1)+'/'+hs.length+')':'')+'</button>':'')+pd.btn+'</div>'+hintBoxes(n,hs);
     h2+=pd.box;
