@@ -1509,6 +1509,16 @@ body.hascalc #app{padding-bottom:84px}
 .exlab{display:flex;justify-content:space-between;font-size:.7rem;font-weight:700;color:var(--ink2);margin:4px 2px 0}
 .exbon{display:flex;flex-direction:column;gap:4px;margin-top:12px;font-size:.85rem;font-weight:700}
 .exc{flex:1;display:flex;flex-direction:column;gap:4px;align-items:stretch}.exc>span{font-size:.7rem;font-weight:700;color:var(--ink2);text-align:center}.exn{flex:none}
+
+/* v4.56+: XP-Anzeigen in den App-Farben (Blau/Grün), Fortschritt nie violett */
+.gp{background:radial-gradient(70% 90% at 0% 0%,rgba(52,168,83,.40),transparent 60%),radial-gradient(60% 80% at 100% 10%,rgba(66,133,244,.45),transparent 60%),linear-gradient(135deg,#0B3D91,#1A73E8 60%,#1A8FC0)!important;box-shadow:0 10px 30px rgba(26,115,232,.30)!important}
+.gp-big{color:#fff!important;text-shadow:0 2px 0 rgba(0,0,0,.25)!important}
+.gp-next{color:#FDE293!important}
+.gbar i{background:repeating-linear-gradient(45deg,#34A853 0 9px,#2E9549 9px 18px)!important;box-shadow:0 0 12px rgba(52,168,83,.7)!important}
+.xpg i,.ccard .gbar i{background:linear-gradient(90deg,#4285F4,#34A853)!important;box-shadow:0 0 10px rgba(52,168,83,.45)!important}
+.xpg.sm i{box-shadow:0 0 8px rgba(52,168,83,.4)!important}
+.xpbig{background:linear-gradient(90deg,#1A73E8,#34A853)!important;-webkit-background-clip:text!important;background-clip:text!important}
+.xbt i.top{background:linear-gradient(90deg,#EA4335,#F9AB00,#34A853)!important}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1516,7 +1526,7 @@ body.hascalc #app{padding-bottom:84px}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION="v4.58";
+var APP_VERSION="v4.59";
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -2271,7 +2281,7 @@ function initPads(){
 function syncNote(){return ''}
 function label(c){return c.name||(c.grade+'. Klasse')}
 function coach(html,l){return ''}
-var LVC=['#8FDB6B','#5CC96A','#2FB36B','#1BA38A','#1593B8','#1A73E8','#4B54D9','#7A3FD1','#A733BE','#D12E8A','#E0402F','#C42525','#8E1B1B'];
+var LVC=['#8FDB6B','#5CC96A','#2FB36B','#1BA38A','#1593B8','#1A73E8','#F9C300','#F9AB00','#F29900','#E8710A','#E0402F','#C42525','#8E1B1B'];
 function lvColor(L){return LVC[Math.min(L,LVC.length)-1]}
 function shield(L,size){var c=lvColor(L),h=Math.round(size*1.15),fs=L>=100?.34:L>=10?.46:.56;return '<span class="shield" style="--c:'+c+';width:'+size+'px;height:'+h+'px"><svg viewBox="0 0 60 68" width="'+size+'" height="'+h+'" aria-hidden="true"><path d="M30 3L55 14V38C55 52 44 62 30 66C16 62 5 52 5 38V14Z" fill="none" stroke="'+c+'" stroke-width="5" stroke-linejoin="round"/></svg><b style="color:'+c+';font-size:'+Math.round(size*fs)+'px">'+L+'</b></span>'}
 function gbar(pl){return '<div class="gbar" role="img" aria-label="XP"><i style="width:'+Math.max(4,Math.round(pl.pct*100))+'%"></i></div><div class="gx"><b>'+fx(pl.xp)+' XP</b><span>noch '+fx(pl.next-pl.xp)+' bis Level '+(pl.L+1)+'</span></div>'}

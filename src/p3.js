@@ -3,7 +3,7 @@
 function syncNote(){return ''}
 function label(c){return c.name||(c.grade+'. Klasse')}
 function coach(html,l){return ''}
-var LVC=['#8FDB6B','#5CC96A','#2FB36B','#1BA38A','#1593B8','#1A73E8','#4B54D9','#7A3FD1','#A733BE','#D12E8A','#E0402F','#C42525','#8E1B1B'];
+var LVC=['#8FDB6B','#5CC96A','#2FB36B','#1BA38A','#1593B8','#1A73E8','#F9C300','#F9AB00','#F29900','#E8710A','#E0402F','#C42525','#8E1B1B'];
 function lvColor(L){return LVC[Math.min(L,LVC.length)-1]}
 function shield(L,size){var c=lvColor(L),h=Math.round(size*1.15),fs=L>=100?.34:L>=10?.46:.56;return '<span class="shield" style="--c:'+c+';width:'+size+'px;height:'+h+'px"><svg viewBox="0 0 60 68" width="'+size+'" height="'+h+'" aria-hidden="true"><path d="M30 3L55 14V38C55 52 44 62 30 66C16 62 5 52 5 38V14Z" fill="none" stroke="'+c+'" stroke-width="5" stroke-linejoin="round"/></svg><b style="color:'+c+';font-size:'+Math.round(size*fs)+'px">'+L+'</b></span>'}
 function gbar(pl){return '<div class="gbar" role="img" aria-label="XP"><i style="width:'+Math.max(4,Math.round(pl.pct*100))+'%"></i></div><div class="gx"><b>'+fx(pl.xp)+' XP</b><span>noch '+fx(pl.next-pl.xp)+' bis Level '+(pl.L+1)+'</span></div>'}

@@ -64,3 +64,4 @@ Keine «Nochmal anders»-Wiederholungen, keine Schritte nur zum Wiederholen. Gil
 - **Grafikgrösse**: Punktefelder/Balken/Rechenstrich ähnlich gross und gleich fein; Punktegrösse einheitlich; zentriert; Rechenketten brechen nicht um (höchstens ca. 7 Chips).
 - **Pipeline pro Thema**: Recherche → Methoden-Scout → Konzept → Bau → Inhalts-Prüfer (rechnet alles nach, Rechtschreibung, doppelte Aufgaben Prüfung/Karten) → Layout-Prüfer (Screenshots) → Korrekturen.
 - **Farblogik (v4.56)**: In Rechenketten keine Kästen, nur die Zahlen farbig. Nur Zahlen, die zur Grafik gehören, sind farbig (gleiche Farbe wie ihr Teil in der Grafik). Start, Ziel und alles ohne Grafik-Bezug sind neutral (Farbindex 7 = dunkelgrau). Rechenzeichen hellgrau. Inhalts- und Layout-Prüfer müssen diese Logik prüfen.
+- **XP/Fortschritt (v4.59)**: XP-Anzeigen in den App-Farben (Blau/Grün), Fortschritt nie in Violett.
