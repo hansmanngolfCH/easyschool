@@ -1366,3 +1366,7 @@ body.hascalc #app{padding-bottom:84px}
 .calhd{margin-bottom:4px}.calx{width:28px;height:28px}
 .caldisp{min-height:52px;padding:4px 12px;margin-bottom:6px}.calnum{font-size:1.6rem}.calex{font-size:.8rem}
 .calkeys{gap:5px}.calk{height:40px;font-size:1.05rem;border-radius:11px}
+
+/* v4.70: Notiz- und Rechner-Knopf 15 % kleiner, nebeneinander */
+.padb{zoom:.85;white-space:nowrap}
+.tools{flex-wrap:wrap}

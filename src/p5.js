@@ -180,6 +180,7 @@ var ACT={
   },
   next2:function(){advance()},
   rate:function(b){doRate(b.dataset.r)},
+  calc:function(){calcOpen()},
   pad:function(b){var key=b.dataset.key;nav.padOpen=nav.padOpen||{};nav.padOpen[key]=!padOpen(key);render()},
   tool:function(b){penTool=b.dataset.tool;Array.prototype.forEach.call(document.querySelectorAll('.tool[data-tool]'),function(el){el.classList.toggle('on',el.dataset.tool===penTool)})},
   padundo:function(b){var s=PADS[b.dataset.key];if(s){s.pop();Array.prototype.forEach.call(document.querySelectorAll('.padcv'),function(cv){if(cv.dataset.key===b.dataset.key)redraw(cv)})}},
