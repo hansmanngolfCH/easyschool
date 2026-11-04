@@ -1326,3 +1326,15 @@ body.hascalc #app{padding-bottom:84px}
 .sc-pop{animation:scpop 3s ease-in-out infinite}
 @keyframes scpop{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
 @media (prefers-reduced-motion:reduce){.sc-hop,.sc-cookie,.sc-pop{animation:none;opacity:1}}
+/* v4.62: XP-Karte ruhig, hell, Google-Stil wie die Startseite */
+.gp{background:var(--surface,#fff)!important;color:var(--ink,#202124)!important;border:1px solid var(--line,#E3E6EC);box-shadow:0 1px 3px rgba(60,64,67,.12)!important;border-top:5px solid #34A853}
+.gp::after{display:none!important}
+.gp-big{color:#1A73E8!important;text-shadow:none!important}
+.gp-sub{color:var(--ink2,#5f6368)!important}
+.gp .gbar{background:#EEF0F4!important;border:0!important;transform:none!important;border-radius:8px!important;height:14px!important}
+.gp .gbar i{background:#34A853!important;box-shadow:none!important;animation:none!important;border-radius:8px}
+.gp .gx{color:var(--ink2,#5f6368)!important}.gp .gx b{color:var(--ink,#202124)!important}
+.gp .gc{background:#E8F0FE!important;border:0!important;color:#1A56C8!important}
+.gp-next{color:#B06000!important}
+.gp .shield b{text-shadow:none;color:#fff}
+.gp-top .av{background:#F1F3F8!important}
