@@ -4,7 +4,27 @@ function qHtml(q){
   if(q.indexOf('\n')<0)return '<p class="fq">'+rt(q)+'</p>';
   var ls=q.split('\n'),sent=ls[0],rest=ls.slice(1).join(' '),m=/«([^»]+)»/.exec(rest),h='',i=m?sent.toLowerCase().indexOf(m[1].toLowerCase()):-1;
   h=i>=0?esc(sent.slice(0,i))+'<mark>'+esc(sent.slice(i,i+m[1].length))+'</mark>'+esc(sent.slice(i+m[1].length)):esc(sent);
-  return '<div class="dsent"><span class="dsl">Satz</span><p>'+h+'</p></div><p class="dqq">'+esc(rest).replace(/«([^»]+)»/g,'<b class="dtg">$1</b>')+'</p>';
+  return '<div class="dsent"><p>'+h+'</p></div><p class="dqq">'+esc(rest).replace(/«([^»]+)»/g,'<b class="dtg">$1</b>')+'</p>';
+}
+function qParts(q){
+  var t=String(q.q).replace(/\s+/g,' ').trim(),ins=[],m;
+  [[/\s*\(Schreibe nur die Zahl\.\)/,'Schreibe nur die Zahl.'],[/\s*\(so weit wie möglich kürzen\)/,'Kürze so weit wie möglich.'],[/\s*Runde auf eine Stelle nach dem Komma\./,'Runde auf eine Stelle nach dem Komma.'],[/\s*\(in (cm|m|km|g|kg|min)\)\.?/,null],[/\s*Schreibe den ganzen Satz\./,'Schreibe den ganzen Satz.']].forEach(function(r){var x=r[0].exec(t);if(x){t=t.replace(r[0],'');ins.push(r[1]||('Antwort in '+x[1]+', nur die Zahl.'))}});
+  var main=t,ctx='',mm=/^(.*?[?:])\s+(\S.*)$/.exec(t);
+  if(mm&&/^(Welch|Bestimme|Berechne|Ins |Setze|Nenne|Schreibe|Bilde|Wandle|Kürze|Was für)/.test(mm[1])){main=mm[1];ctx=mm[2]}
+  var tg=/\s*\(«([^»]+)»\)\s*$/.exec(ctx);
+  if(tg){ctx=ctx.replace(tg[0],'');main=main.replace(/^(Welcher Fall|Welche Zeitform|Welches Satzglied)\?$/,function(a,b){return b+' ist «'+tg[1]+'»?'})}
+  if(q.type==='mc'){ins.unshift('Kreuze eine Antwort an.')}
+  else if(!ins.some(function(x){return /Zahl|Satz|Bruch/.test(x)})){
+    var a=String((q.answer||[''])[0]),words=a.split(/\s+/).length;
+    if(/^[\d\s.,]+(\s?[a-z]+)?$/i.test(a))ins.push(/\./.test(a+'')||/,/.test(a)?'Schreibe nur die Zahl.':'Schreibe nur die Zahl (ganze Zahl).');
+    else if(/\d\s?\/\s?\d/.test(a))ins.push('Schreibe den Bruch, zum Beispiel 3/5.');
+    else ins.push(words>1?'Schreibe die Antwort in Worten.':'Schreibe die Antwort in einem Wort.')
+  }
+  return {main:main,ctx:ctx,inst:ins.join(' ')};
+}
+function qBlock(q){
+  var p=qParts(q);
+  return '<div class="mqx"><span class="qm">'+rt(p.main)+'</span>'+(p.ctx?'<span class="qc">'+rt(p.ctx)+'</span>':'')+'<span class="qi">'+esc(p.inst)+'</span></div>';
 }
 function curCard(n){
   var k=n.queue[n.idx],x=cardIdx[k];
@@ -173,7 +193,7 @@ function vPaper(n,t,qs){
     var cell;
     if(q.type==='mc')cell='<select class="pin" data-q="'+q.id+'"><option value="">–</option>'+q.options.map(function(o,j){return '<option value="'+j+'"'+(n.answers[q.id]===j?' selected':'')+'>'+esc(o.replace(/<[^>]+>/g,''))+'</option>'}).join('')+'</select>';
     else cell='<input class="pin" data-q="'+q.id+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" value="'+esc(n.answers[q.id]||'')+'">';
-    h+='<tr><td class="pn"><span class="nc c'+(i%4)+'">'+(i+1)+'</span></td><td class="pq">'+paperLeft(q)+'</td><td>'+cell+'</td></tr>';
+    h+='<tr><td class="pn"><span class="nc">'+(i+1)+'</span></td><td class="pq">'+paperLeft(q)+'</td><td>'+cell+'</td></tr>';
   });
   return h+'</tbody></table></div><button class="btn pri big" data-act="finish">Abgeben</button></div>'}
 function vExam(){
@@ -185,7 +205,7 @@ function vExam(){
     var html='<div class="paperpage"><p class="ptitle">Prüfung · '+esc(t.title)+'</p><div class="sheet"><div class="shead"><span>Name: <b>'+esc(n.pname||'')+'</b></span><span>Datum: <b>'+ds+'</b></span></div>'+(t.id.indexOf('bruch')>=0?'<p class="sub" style="margin:0 0 4px">Alle Brüche so weit wie möglich kürzen.</p>':'')+'<ol class="mq">';
     qs.forEach(function(q,i){
       var key='e:'+t.id+':'+q.id,pd=padHTML(key,q.q);
-      html+='<li><div class="mqt"><span class="nc c'+(i%4)+'">'+(i+1)+'</span><div class="mqx">'+rt(q.q.replace(' (so weit wie möglich kürzen)',''))+'</div></div>'+visuals(q.visuals)+(q.type==='mc'?'<div class="mcopts">'+q.options.map(function(o,j){return '<label class="mco"><input type="radio" name="r-'+q.id+'" data-q="'+q.id+'" value="'+j+'"'+(n.answers[q.id]===j?' checked':'')+'><span class="mcl">'+String.fromCharCode(65+j)+'</span><span>'+rt(o)+'</span></label>'}).join('')+'</div>':'<input class="pin" id="in-'+q.id+'" data-q="'+q.id+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" value="'+esc(n.answers[q.id]||'')+'"><div class="tools">'+pd.btn+'</div>'+pd.box)+'</li>';
+      html+='<li><div class="mqt"><span class="nc">'+(i+1)+'</span>'+qBlock(q)+'</div>'+visuals(q.visuals)+(q.type==='mc'?'<div class="mcopts">'+q.options.map(function(o,j){return '<label class="mco"><input type="radio" name="r-'+q.id+'" data-q="'+q.id+'" value="'+j+'"'+(n.answers[q.id]===j?' checked':'')+'><span class="mcl">'+String.fromCharCode(65+j)+'</span><span>'+rt(o)+'</span></label>'}).join('')+'</div>':'<input class="pin" id="in-'+q.id+'" data-q="'+q.id+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" value="'+esc(n.answers[q.id]||'')+'"><div class="tools">'+pd.btn+'</div>'+pd.box)+'</li>';
     });
     html+='</ol></div>';
     return html+'<button class="btn pri big" data-act="finish">Abgeben</button></div>';
@@ -201,11 +221,11 @@ function vExam(){
   };
   if(isLangT(t)){
     html3+='<table class="ptab"><thead><tr><th class="pn">Nr.</th><th>'+langHead(n,t)+'</th><th>Antwort</th></tr></thead><tbody>';
-    r.items.forEach(function(it,i){html3+='<tr><td class="pn"><span class="nc c'+(i%4)+'">'+(i+1)+'</span></td><td class="pq">'+paperLeft(it.q)+'</td><td>'+rowAns(it,i)+'</td></tr>'});
+    r.items.forEach(function(it,i){html3+='<tr><td class="pn"><span class="nc">'+(i+1)+'</span></td><td class="pq">'+paperLeft(it.q)+'</td><td>'+rowAns(it,i)+'</td></tr>'});
     html3+='</tbody></table>';
   }else{
     html3+=(t.subject==='mathe'&&t.id.indexOf('bruch')>=0?'<p class="sub" style="margin:0 0 4px">Alle Brüche so weit wie möglich kürzen.</p>':'')+'<ol class="mq">';
-    r.items.forEach(function(it,i){html3+='<li><div class="mqt"><span class="nc c'+(i%4)+'">'+(i+1)+'</span><div class="mqx">'+rt(it.q.q.replace(' (so weit wie möglich kürzen)',''))+'</div></div>'+visuals(it.q.visuals)+rowAns(it,i)+'</li>'});
+    r.items.forEach(function(it,i){html3+='<li><div class="mqt"><span class="nc">'+(i+1)+'</span>'+qBlock(it.q)+'</div>'+visuals(it.q.visuals)+rowAns(it,i)+'</li>'});
     html3+='</ol>';
   }
   html3+='</div><p class="sub" style="margin:10px 2px">'+esc(msg)+' · +'+r.xp+' XP</p>';

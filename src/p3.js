@@ -132,7 +132,7 @@ function vTheory(t){
       +'<div class="row"><button class="btn" data-act="prev">Zurück</button><button class="btn pri big" data-act="practice" data-scope="topic:'+esc(t.id)+'" data-force="1">Lernen</button><button class="btn big" data-act="exam" data-id="'+esc(t.id)+'">Prüfung</button></div></div>';
   }
   var st=t.explain[i],lines=thSplit(st.text),body=lines.map(function(l){var mk=/^(Merke|Wichtig|Tipp)/.test(l);return '<p class="thl'+(mk?' thmk':'')+'"><span class="thd">'+(mk?'💡':'')+'</span><span>'+rt(l)+'</span></p>'}).join('');
-  return '<div class="stack explain thx s-'+t.subject+'">'+head+'<section class="thcard"><div class="thh"><span class="thnum">'+(i+1)+'</span><h1>'+esc(st.h)+'</h1></div>'+(t.subject==='deu'?(st.var?'<span class="dvar">'+esc(st.var)+'</span>':'')+'<p class="dtx">'+bd(st.text)+'</p>'+visuals(st.visuals):visuals(st.visuals)+'<div class="thtxt">'+body+'</div>')+'</section>'
+  return '<div class="stack explain thx s-'+t.subject+'">'+head+'<section class="thcard"><div class="thh"><span class="thnum">'+(i+1)+'</span><h1>'+esc(st.h)+'</h1></div>'+((t.subject==='deu'||t.subject==='mathe')?(st.var?'<span class="dvar">'+esc(st.var)+'</span>':'')+'<p class="dtx">'+bd(st.text)+'</p>'+visuals(st.visuals):visuals(st.visuals)+'<div class="thtxt">'+body+'</div>')+'</section>'
     +'<div class="row">'+(i>0?'<button class="btn" data-act="prev">Zurück</button>':'')+'<button class="btn pri big thok" data-act="thnext">'+STI[i%6]+' '+stg(i)+'</button></div></div>';
 }
 function quizFor(step){
