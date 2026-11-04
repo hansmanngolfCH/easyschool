@@ -1216,6 +1216,21 @@ body.rwopen{overflow:hidden}
 /* v4.15 Suchbutton dezent grau */
 .tsb{background:#F1F3F4!important;color:#80868B!important}
 .ver .imp{color:#b0b4b9;font-size:.62rem;text-decoration:none}
+/* v4.21 Konto Name + PIN */
+.cloudbtn{all:unset;box-sizing:border-box;cursor:pointer;display:block;margin:18px auto 0;padding:10px 16px;border-radius:14px;background:#F1F3F4;color:#5f6368;font:700 .85rem var(--font-d);text-align:center;touch-action:manipulation}
+.cloudbtn.on{background:#E6F4EA;color:#188038}
+.cdp{padding-bottom:14px}
+.cdh{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 12px 4px 16px}
+.cdh b{font:800 1.05rem var(--font-d);color:#1f2430}
+.cdt{margin:6px 16px 12px;color:#3c4043;font-size:.95rem;line-height:1.45}
+.cdi{display:block;box-sizing:border-box;width:calc(100% - 32px);margin:8px 16px;font:600 1rem var(--font-d);padding:12px 14px;border:2px solid #DADCE0;border-radius:14px;outline:none;background:#F8F9FA;color:#1f2430}
+.cdi:focus{border-color:#1A73E8;background:#fff}
+.kbrow{display:flex;gap:8px;margin:0 16px}
+.kbbtn{all:unset;box-sizing:border-box;cursor:pointer;display:block;margin:8px 16px;padding:12px;border-radius:14px;background:#F1F3F4;color:#1f2430;font:800 1rem var(--font-d);text-align:center;flex:1;touch-action:manipulation}
+.kbrow .kbbtn{margin:0}
+.kbbtn.pri{background:#1A73E8;color:#fff}
+.cdm{margin:6px 16px 0;min-height:1.2em;font-weight:700;color:#188038;font-size:.9rem}
+.cdm.err{color:#D93025}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1223,7 +1238,7 @@ body.rwopen{overflow:hidden}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v4.20';
+var APP_VERSION='v4.21';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -1799,6 +1814,8 @@ function cclass(c){
   return '<button class="ccard simple sm2" data-act="child" data-id="'+esc(c.id)+'"><span class="cc-top"><span class="cnum">'+esc(String(c.grade||''))+'</span><span class="cc-t"><span class="cc-h">'+esc(label(c))+'</span><span class="sub'+(n?'':' noc')+'">'+(n?n+(n===1?' Fach':' Fächer'):'Kein Inhalt')+'</span></span></span></button>';
 }
 var STUFE_IC={p:'<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1-4L17 4l3 3L8 19z"/><path d="M14 7l3 3"/></svg>',o:'<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>'};
+function cloudAcct(){try{return JSON.parse(localStorage.getItem('es.acct')||'null')}catch(e){return null}}
+function cloudBtn(){var a=cloudAcct();return '<button class="cloudbtn'+(a?' on':'')+'" data-act="cloud">'+(a?'☁ Angemeldet: '+esc(a.name):'☁ Auf allen Geräten speichern')+'</button>'}
 function vHome(){
   var kids=C.children.filter(function(c){return topicsOf(c.id).length}).sort(function(a,b){return (a.grade||0)-(b.grade||0)});
   var prim=kids.filter(function(c){return (c.grade||0)<=6}),ober=kids.filter(function(c){return (c.grade||0)>=7});
@@ -1807,7 +1824,7 @@ function vHome(){
   var hb='<div class="banner hbn"><span class="av" style="width:40px;height:40px">'+avPic(myAv(),40)+'</span><div class="bn-m"><div class="bn-row"><span class="bn-lv"><b style="color:'+AVCOL[myCol()][1]+'">'+(esc(myName())||'Schüler')+'</b> · Level '+HL+'</span><span class="bn-xp">'+fx(tot)+' XP</span></div><div class="xpg sm" role="img" aria-label="XP"><i style="width:'+Math.max(5,Math.round(hp*100))+'%"></i><u></u></div></div>'+shield(HL,40)+'</div>';
   var picker='';
   if(nav.avpick){var cur=myAv(),cc=myCol();picker='<div class="avmodal"><div class="avback" data-act="avclose"></div><div class="avsheet" role="dialog" aria-label="Avatar aussuchen"><div class="avhead"><b>Dein Avatar</b><button class="btn sm" data-act="avclose">Fertig</button></div><label class="lab2" for="avname">Dein Name (freiwillig)</label><input class="inp avname" id="avname" maxlength="14" placeholder="Zum Beispiel Luca" value="'+esc(myName())+'" autocomplete="off"><p class="lab2" style="margin-top:12px">Farbe</p><div class="avcols">'+AVCOL.map(function(c,i){return '<button class="avcol'+(i===cc?' on':'')+'" style="background:linear-gradient(135deg,'+c[0]+','+c[1]+')" data-act="avcol" data-id="'+i+'" aria-label="Farbe '+(i+1)+'"></button>'}).join('')+'</div><p class="lab2" style="margin-top:12px">Bild</p><div class="avgrid">'+Array.apply(null,{length:AV_N}).map(function(_,i){return '<button class="avopt'+(i===cur?' on':'')+'" data-act="avpick" data-id="'+i+'" aria-label="Avatar '+(i+1)+'">'+avPic(i,56)+'</button>'}).join('')+'</div></div></div>'}
-  return '<div class="home"><button class="avbtn" data-act="avopen" aria-label="Avatar aussuchen"><span class="avdot">'+avPic(myAv(),34)+'</span><span class="avn">'+(esc(myName())||'Schüler')+'</span></button><div class="brandrow">'+logoSvg(76)+'<h1>EasySchool</h1></div>'+hb+'<p class="ask">Wähle deine Klasse</p>'+cards+''+picker+'</div>';
+  return '<div class="home"><button class="avbtn" data-act="avopen" aria-label="Avatar aussuchen"><span class="avdot">'+avPic(myAv(),34)+'</span><span class="avn">'+(esc(myName())||'Schüler')+'</span></button><div class="brandrow">'+logoSvg(76)+'<h1>EasySchool</h1></div>'+hb+'<p class="ask">Wähle deine Klasse</p>'+cards+''+cloudBtn()+picker+'</div>';
 }
 
 function vChild(){
@@ -3982,6 +3999,53 @@ ACT.tsearch=function(){
     render();var el=document.querySelector('.tctog[data-id="'+id+'"]');if(el){var c=el.closest('.card');c.scrollIntoView({block:'center'});c.classList.add('tsflash');setTimeout(function(){c.classList.remove('tsflash')},1600)}
   });
   setTimeout(function(){try{q.focus()}catch(e){}},50);
+};
+})();
+
+/* ---------- Konto: Name + PIN, Speicher in Firebase (REST) ---------- */
+(function(){
+var FB={p:'easyschool-46e7c',k:'AIzaSyChuoDc0qp3wfo9rqwAIT_-bbbiZ-24Hj4'},acc=cloudAcct(),pend=null,chain=Promise.resolve();
+function U(id,q){return 'https://firestore.googleapis.com/v1/projects/'+FB.p+'/databases/(default)/documents/kids/'+id+'?key='+FB.k+(q||'')}
+function sha(t){var b=new TextEncoder().encode(t);return crypto.subtle.digest('SHA-256',b).then(function(h){return Array.prototype.map.call(new Uint8Array(h),function(x){return ('0'+x.toString(16)).slice(-2)}).join('')})}
+function pull(){return fetch(U(acc.id)).then(function(r){if(r.status===404)return null;if(!r.ok)throw new Error('http '+r.status);return r.json()}).then(function(j){if(!j)return null;try{return JSON.parse(j.fields.d.stringValue)}catch(e){return null}})}
+function run(){
+  if(!acc)return Promise.resolve();
+  chain=chain.then(function(){return pull()}).then(function(rem){
+    rem=rem||{};var out={},diff=!rem||false;
+    C.children.forEach(function(c){var id=c.id;if(rem[id])mergeRemote(id,rem[id]);out[id]=prepared(id);sync.last[id]=stable(out[id]);if(!rem[id]||stable(shape(rem[id]))!==stable(out[id]))diff=true});
+    if(!diff){sync.state='synced';updateSync();return}
+    return fetch(U(acc.id,'&updateMask.fieldPaths=d&updateMask.fieldPaths=t'),{method:'PATCH',headers:{'Content-Type':'application/json'},body:JSON.stringify({fields:{d:{stringValue:JSON.stringify(out)},t:{integerValue:String(Date.now())}}})}).then(function(r){if(!r.ok)throw new Error('http '+r.status);sync.state='synced';updateSync()})
+  }).catch(function(e){sync.state='local';updateSync();throw e});
+  var cur=chain;chain=chain.catch(function(){});return cur;
+}
+function req(){if(!pend)pend=new Promise(function(res){setTimeout(function(){pend=null;res(run().catch(function(){}))},500)});return pend}
+function hook(){sync.db={doc:function(){return {set:function(){return req()},onSnapshot:function(){}}}};sync.noWrite=false}
+function resume(){if(!acc)return;hook();run().catch(function(){});
+  document.addEventListener('visibilitychange',function(){if(!document.hidden&&acc)run().catch(function(){})});
+  setInterval(function(){if(acc&&!document.hidden)run().catch(function(){})},60000)}
+var oi=initDb;initDb=function(){oi();resume()};
+function close(){var o=document.getElementById('cdov');if(o)o.remove()}
+ACT.cloud=function(){
+  close();acc=cloudAcct();var o=document.createElement('div');o.id='cdov';o.className='tsov';
+  function draw(msg,err){
+    o.innerHTML='<div class="tspan cdp" role="dialog" aria-label="Konto"><div class="cdh"><b>☁ Auf allen Geräten speichern</b><button class="tsx" aria-label="Schliessen">✕</button></div>'+
+    (acc?'<p class="cdt">Angemeldet als <b>'+esc(acc.name)+'</b>. Dein Fortschritt wird automatisch gespeichert und auf anderen Geräten geladen.</p><div class="kbrow"><button class="kbbtn pri" data-k="now">Jetzt speichern</button><button class="kbbtn" data-k="out">Abmelden</button></div>':
+    '<p class="cdt">Neu hier? Denk dir einen Namen und eine PIN aus. Auf dem anderen Gerät gibst du dasselbe ein, dann ist alles da.</p><input id="cdn" class="cdi" placeholder="Name (z. B. Familie Hansmann)" autocomplete="off" autocapitalize="off" spellcheck="false"><input id="cdp" class="cdi" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="6" placeholder="PIN (4–6 Zahlen)" autocomplete="off"><button class="kbbtn pri" data-k="in">Anmelden</button>')+
+    '<p class="cdm'+(err?' err':'')+'" id="cdm">'+(msg||'')+'</p></div>'}
+  draw();document.body.appendChild(o);
+  o.addEventListener('click',function(e){
+    if(e.target===o||e.target.closest('.tsx')){close();return}
+    var b=e.target.closest('.kbbtn');if(!b)return;var k=b.getAttribute('data-k'),m=o.querySelector('#cdm');
+    if(k==='out'){try{localStorage.removeItem('es.acct')}catch(x){}acc=null;sync.db=null;sync.state='local';draw('Abgemeldet.');render();return}
+    if(k==='now'){m.textContent='Speichere …';run().then(function(){draw('Gespeichert ✓')},function(){draw('Keine Verbindung. Später nochmal versuchen.',1)});return}
+    var n=o.querySelector('#cdn').value.trim(),p=o.querySelector('#cdp').value.trim();
+    if(n.length<3){m.className='cdm err';m.textContent='Der Name braucht mindestens 3 Zeichen.';return}
+    if(!/^\d{4,6}$/.test(p)){m.className='cdm err';m.textContent='Die PIN besteht aus 4 bis 6 Zahlen.';return}
+    m.className='cdm';m.textContent='Einen Moment …';
+    sha('es1:'+n.toLowerCase().replace(/\s+/g,' ')+':'+p).then(function(h){
+      acc={id:h.slice(0,40),name:n};try{localStorage.setItem('es.acct',JSON.stringify(acc))}catch(x){}
+      hook();return run()}).then(function(){render();draw('Angemeldet ✓ Dein Fortschritt ist gespeichert.')},function(){acc=null;try{localStorage.removeItem('es.acct')}catch(x){}sync.db=null;draw('Keine Verbindung. Bitte später nochmal versuchen.',1)});
+  });
 };
 })();
 
