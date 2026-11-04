@@ -1596,6 +1596,44 @@ body.hascalc #app{padding-bottom:84px}
 .calsh::before{content:"";display:block;width:84px;height:22px;margin:-22px auto 8px;border-radius:99px;background:#14161a;position:sticky;top:-22px;z-index:3}
 .calsh::after{content:"";display:block;width:100px;height:5px;border-radius:99px;background:#14161a;opacity:.85;margin:12px auto 0}
 .calk{height:44px!important}
+
+/* v4.75 Deutsch-Kartentypen */
+.o.sel{background:#e8f0fe;border-color:#1a73e8;color:#174ea6}
+.fixin{font-size:1.25rem;font-weight:600;letter-spacing:.2px;border-color:#1a73e8;background:#fff}
+.mtch{display:flex;flex-direction:column;gap:10px}
+.mrow{background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 12px;display:flex;flex-direction:column;gap:8px}
+.mrow .mt{font-weight:700;font-size:1.1rem}
+.mcs{display:flex;flex-wrap:wrap;gap:6px}
+.mc{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 12px;font-weight:600;font-size:.95rem;cursor:pointer;touch-action:manipulation}
+.mc.on{background:#e8f0fe;border-color:#1a73e8;color:#174ea6}
+.dsx{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:1.15rem;line-height:1.7}
+.dsx mark.c0{background:#d2e3fc}.dsx mark.c1{background:#fad2cf}.dsx mark.c2{background:#ceead6}.dsx mark.c3{background:#feefc3}.dsx mark.c4{background:#e9d2fd}.dsx mark.c5{background:#c4eeea}
+.dsx mark{padding:1px 5px;border-radius:6px;color:inherit}
+
+.cw{font-weight:700;padding:0 4px;border-radius:6px;white-space:nowrap}
+.cw.c0{color:#4285F4;background:#e8f0fe}
+.cw.c1{color:#EA4335;background:#fce8e6}
+.cw.c2{color:#34A853;background:#e6f4ea}
+.cw.c3{color:#F29900;background:#fef7e0}
+.cw.c4{color:#9334E6;background:#f3e8fd}
+.cw.c5{color:#00A5BF;background:#e0f7fa}
+.cw.c6{color:#D93F8E;background:#fce4ec}
+.cw.c7{color:#6B7280;background:#f1f3f4}
+.why{background:#fff;border:1px solid var(--line);border-left:4px solid #1a73e8;border-radius:12px;padding:10px 14px;font-size:1rem;line-height:1.5}
+.trcw{background:#fff;border:1px solid var(--line);border-radius:16px;padding:8px;display:flex;justify-content:center}.trcw canvas{width:min(100%,320px);height:auto;aspect-ratio:1;touch-action:none;border-radius:12px}
+/* v4.75 Tabellen duerfen umbrechen statt abzuschneiden */
+.dtb{overflow-x:visible}
+.dtb table{table-layout:auto;word-break:break-word}
+.dtb tbody th{white-space:normal;max-width:34%}
+.dtb thead th{white-space:normal}
+.dtb tbody th span{display:inline-block}
+@media(max-width:430px){.dtb table{font-size:.8rem}.dtb tbody td,.dtb tbody th{padding:7px 4px}.dtb thead th{padding:7px 4px;font-size:.68rem}}
+.dtb table{word-break:normal;overflow-wrap:normal;hyphens:auto}
+.dtb thead th{letter-spacing:0;font-size:.62rem}
+.dtb tbody th{font-size:.82rem;max-width:none}
+.dtb tbody th span{padding:3px 5px;border-left-width:3px}
+.dtb tbody td{font-size:.8rem}
+figure.vis:has(.dtb),.vis:has(.dtb){padding-left:4px;padding-right:4px}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1603,14 +1641,14 @@ body.hascalc #app{padding-bottom:84px}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION="v4.74";
+var APP_VERSION="v4.75";
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
 var app=document.getElementById('app');
 
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
-function rt(s){return esc(s).replace(/(\d+)\/(\d+)/g,'<span class="frac"><span>$1</span><span>$2</span></span>')}
+function rt(s){return esc(s).replace(/(\d+)\/(\d+)/g,'<span class="frac"><span>$1</span><span>$2</span></span>').replace(/\{([0-7])\|([^{}]*)\}/g,'<span class="cw c$1">$2</span>')}
 function stable(o){return JSON.stringify(o,function(k,v){return v&&typeof v==='object'&&!Array.isArray(v)?Object.keys(v).sort().reduce(function(a,x){a[x]=v[x];return a},{}):v})}
 function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t}return a}
 
@@ -1790,6 +1828,7 @@ function checkAns(inp,answers){
   for(var m=0;m<answers.length;m++){if(loose(answers[m])===loose(inp))return {ok:true}}
   return {ok:false};
 }
+function checkStrict(inp,answers){var n=String(inp||'').replace(/\s+/g,' ').trim();if(!n)return {ok:false,empty:true};for(var i=0;i<answers.length;i++){if(String(answers[i]).replace(/\s+/g,' ').trim()===n)return {ok:true}}return {ok:false}}
 function lev(a,b){var m=a.length,n=b.length,d=[],i,j;for(i=0;i<=m;i++){d[i]=[i]}for(j=0;j<=n;j++)d[0][j]=j;
   for(i=1;i<=m;i++)for(j=1;j<=n;j++)d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));return d[m][n]}
 function nearMiss(inp,answers){var a=loose(inp);return answers.some(function(x){var b=loose(x);return b.length>=5&&lev(a,b)<=1})}
@@ -2203,6 +2242,23 @@ function vScene(v){
     }
     o+='<g class="sc-pop"><rect x="150" y="14" width="300" height="48" rx="24" fill="#fff" stroke="#34A853" stroke-width="3"/><text x="300" y="47" text-anchor="middle" font-size="24" fill="#188038" '+F+'>3 Teller · je 4 Kekse</text></g>';
   }
+  else if(k==='talk'){
+    o+='<rect width="600" height="230" fill="#EAF3FF"/><rect y="190" width="600" height="40" fill="#CFE8C8"/>';
+    [[110,'#FBBC04'],[490,'#34A853']].forEach(function(p,j){o+='<circle cx="'+p[0]+'" cy="150" r="38" fill="'+p[1]+'"/><circle cx="'+(p[0]-13)+'" cy="144" r="5" fill="#202124"/><circle cx="'+(p[0]+13)+'" cy="144" r="5" fill="#202124"/><path d="M'+(p[0]-14)+' 162q14 12 28 0" stroke="#202124" stroke-width="4" fill="none" stroke-linecap="round"/>'});
+    var tx=[v.t1||'Hallo!',v.t2||'Hallo!'];
+    o+='<g class="sc-pop"><rect x="30" y="24" width="250" height="62" rx="22" fill="#fff" stroke="#F29900" stroke-width="3"/><path d="M90 86l12 26 16-26z" fill="#fff" stroke="#F29900" stroke-width="3"/><text x="155" y="64" text-anchor="middle" font-size="22" fill="#7A4A00" '+F+'>'+esc(tx[0])+'</text></g>';
+    o+='<g class="sc-pop" style="animation-delay:1.4s"><rect x="320" y="24" width="250" height="62" rx="22" fill="#fff" stroke="#34A853" stroke-width="3"/><path d="M480 86l12 26 16-26z" fill="#fff" stroke="#34A853" stroke-width="3"/><text x="445" y="64" text-anchor="middle" font-size="22" fill="#188038" '+F+'>'+esc(tx[1])+'</text></g>';
+  }else if(k==='letters'){
+    var w=String(v.word||'Katze').split(''),cl=['#4285F4','#EA4335','#34A853','#F29900','#A142F4','#12A4AF'],tw=70,x0=(600-w.length*tw)/2;
+    o+='<rect width="600" height="230" fill="#FFF6E5"/><rect y="170" width="600" height="60" fill="#E8C99B"/>';
+    w.forEach(function(ch,i){o+='<g class="sc-cookie" style="animation-delay:'+(i*.35)+'s"><rect x="'+(x0+i*tw+4)+'" y="96" width="'+(tw-8)+'" height="'+(tw-8)+'" rx="12" fill="#fff" stroke="'+cl[i%6]+'" stroke-width="4"/><text x="'+(x0+i*tw+tw/2)+'" y="'+(96+(tw-8)/2+11)+'" text-anchor="middle" font-size="34" fill="'+cl[i%6]+'" '+F+'>'+esc(ch)+'</text></g>'});
+    if(v.say)o+='<g class="sc-pop"><rect x="150" y="16" width="300" height="46" rx="23" fill="#fff" stroke="#4285F4" stroke-width="3"/><text x="300" y="47" text-anchor="middle" font-size="22" fill="#1A56C8" '+F+'>'+esc(v.say)+'</text></g>';
+  }else if(k==='words'){
+    var ws=v.words||[['Die','#9AA0A6'],['Katze','#4285F4'],['schläft','#EA4335']],n=ws.length,cw=Math.min(150,560/n),xs=(600-n*cw)/2;
+    o+='<rect width="600" height="230" fill="#F3F6FC"/><rect y="176" width="600" height="54" fill="#E3E9F5"/>';
+    ws.forEach(function(p,i){o+='<g class="sc-cookie" style="animation-delay:'+(i*.5)+'s"><rect x="'+(xs+i*cw+4)+'" y="92" width="'+(cw-8)+'" height="62" rx="14" fill="#fff" stroke="'+p[1]+'" stroke-width="4"/><text x="'+(xs+i*cw+cw/2)+'" y="132" text-anchor="middle" font-size="'+(cw<110?20:26)+'" fill="'+p[1]+'" '+F+'>'+esc(p[0])+'</text></g>'});
+    if(v.say)o+='<g class="sc-pop"><rect x="120" y="16" width="360" height="46" rx="23" fill="#fff" stroke="#4285F4" stroke-width="3"/><text x="300" y="47" text-anchor="middle" font-size="22" fill="#1A56C8" '+F+'>'+esc(v.say)+'</text></g>';
+  }
   return '<figure class="vis scn" style="width:100%"><svg viewBox="0 0 600 230" width="100%" role="img" aria-label="'+esc(v.cap||'Bild zum Thema')+'" style="border-radius:16px">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vArr(v){
@@ -2600,7 +2656,9 @@ function qParts(q){
   if(mm&&/^(Welch|Bestimme|Berechne|Ins |Setze|Nenne|Schreibe|Bilde|Wandle|Kürze|Was für)/.test(mm[1])){main=mm[1];ctx=mm[2]}
   var tg=/\s*\(«([^»]+)»\)\s*$/.exec(ctx);
   if(tg){ctx=ctx.replace(tg[0],'');main=main.replace(/^(Welcher Fall|Welche Zeitform|Welches Satzglied)\?$/,function(a,b){return b+' ist «'+tg[1]+'»?'})}
-  if(q.type==='mc'){ins.unshift('Kreuze eine Antwort an.')}
+  if(q.pre!=null){ins.push('Verbessere direkt im Feld und gib dann ab.')}
+  else if(q.type==='mc'){ins.unshift('Kreuze eine Antwort an.')}
+  if(q.pre!=null){}
   else if(!ins.some(function(x){return /Zahl|Satz|Bruch/.test(x)})){
     var a=String((q.answer||[''])[0]),words=a.split(/\s+/).length;
     if(/^[\d\s.,]+(\s?[a-z]+)?$/i.test(a))ins.push(/\./.test(a+'')||/,/.test(a)?'Schreibe nur die Zahl.':'Schreibe nur die Zahl (ganze Zahl).');
@@ -2727,6 +2785,11 @@ function vVocab(n,k,c,stg){
   return html;
 }
 
+function matchHTML(n,c){
+  var m=c.match,sel=n.mm||(n.mm=m.items.map(function(){return -1}));
+  var h='<div class="mtch">'+m.items.map(function(it,i){return '<div class="mrow"><span class="mt">'+rt(it[0])+'</span><span class="mcs">'+m.cats.map(function(ct,j){return '<button class="mc'+(sel[i]===j?' on':'')+'" data-act="mset" data-i="'+i+'" data-j="'+j+'">'+esc(ct)+'</button>'}).join('')+'</span></div>'}).join('')+'</div>';
+  return h+'<button class="btn pri big" data-act="mmcheck"'+(sel.indexOf(-1)>=0?' disabled':'')+'>Prüfen</button>';
+}
 function vPractice(){
   var n=nav,q=n.queue;
   if(!q.length)return '<div class="stack"><h1>Gerade nichts dran</h1><p class="sub">Hier gibt es noch keine Aufgaben zum Üben.</p><div><button class="btn pri big" data-act="back">Zurück</button></div></div>';
@@ -2744,20 +2807,24 @@ function vPractice(){
   var k=q[n.idx],x=cardIdx[k],c=curCard(n);
   var head='<div class="stack"><div class="row between"><p class="eyebrow">Aufgabe '+(n.idx+1)+' von '+q.length+'</p><span class="chips">'+(n.pw.length?n.pw.map(function(id){var w=POW.filter(function(x){return x.id===id})[0];return '<span class="chp pw">'+w.ic+' '+esc(w.n)+'</span>'}).join(''):'')+(n.combo>=2?'<span class="chp fire">🔥 Combo x'+n.combo+'</span>':'')+'</span></div><div class="bar" role="img" aria-label="Fortschritt"><i style="width:'+Math.round(100*n.idx/q.length)+'%"></i></div>'+(n.msg&&!n.revealed?'<p class="cheer">'+esc(n.msg)+'</p>':'')+(n.pw.indexOf('skip')>=0&&!n.skipUsed&&!n.revealed?'<button class="btn sm" data-act="skip">⏩ Joker: Aufgabe überspringen</button>':'');
   if(isV(c))return head+vVocab(n,k,c,stageOf(n,k))+'</div>';
-  var pkey='p:'+k,pd=padHTML(pkey,c.q),hs=hintList(n,k,c,0),chk=!c.opts&&checkable(c);
-  if(c.opts&&!n.opts)n.opts=shuffle(c.opts.map(function(t){return {t:t,ok:t===c.a}}));
+  var pkey='p:'+k,pd=padHTML(pkey,c.q),hs=hintList(n,k,c,0),chk=!c.opts&&!c.match&&!c.trace&&checkable(c);
+  if(c.opts&&!n.opts)n.opts=shuffle(c.opts.map(function(t){return {t:t,ok:c.multi?c.ans.indexOf(t)>=0:t===c.a}}));
   var h2=head+'<section class="card flash">'+qHtml(c.q)+sayBtn(c.say)+visuals(c.visuals)+'</section>';
   if(!n.revealed){
     h2+='<div class="tools">'+(hs.length?'<button class="btn sm" data-act="hint"'+(n.hintN>=hs.length?' disabled':'')+'>Tipp'+(n.hintN<hs.length?' ('+(n.hintN+1)+'/'+hs.length+')':'')+'</button>':'')+pd.btn+'</div>'+hintBoxes(n,hs);
     h2+=pd.box;
-    if(c.opts)h2+='<div class="opts">'+n.opts.map(function(op,i){return '<button class="o" data-act="mpick" data-i="'+i+'">'+rt(op.t)+'</button>'}).join('')+'</div>';
-    if(chk)h2+='<div class="stack" style="padding:0;gap:8px"><label class="lab2" for="ans">Dein Ergebnis</label><div class="row"><input class="inp" id="ans" value="'+esc(n.typed||'')+'" placeholder="'+ph(cardAns(c)[0])+'" autocomplete="off" autocapitalize="off" spellcheck="false"><button class="btn pri" data-act="check">Prüfen</button></div>'+(n.err?'<p class="fb no">'+esc(n.err)+'</p>':'')+'</div>';
-    h2+=(c.opts?'':'<button class="btn'+(chk?' ghost':' pri big')+'" data-act="reveal">'+(chk?'Ich komme nicht drauf, Lösung zeigen':'Antwort zeigen')+'</button>');
+    if(c.multi)h2+='<p class="sub">Es können mehrere richtig sein.</p><div class="opts">'+n.opts.map(function(op,i){return '<button class="o'+((n.mset||[]).indexOf(i)>=0?' sel':'')+'" data-act="mtog" data-i="'+i+'">'+rt(op.t)+'</button>'}).join('')+'</div><button class="btn pri big" data-act="mcheck"'+((n.mset||[]).length?'':' disabled')+'>Prüfen</button>';
+    else if(c.match)h2+=matchHTML(n,c);
+    else if(c.trace)h2+='<div class="trcw"><canvas id="trc" width="600" height="600" data-t="'+esc(c.trace)+'" aria-label="Zeichenfläche"></canvas></div>'+(n.err?'<p class="fb no">'+esc(n.err)+'</p>':'')+'<div class="row"><button class="btn" data-act="trclear">Neu</button><button class="btn pri" data-act="trcheck">Fertig</button><button class="btn ghost" data-act="reveal">Weiter</button></div>';
+    else if(c.opts)h2+='<div class="opts">'+n.opts.map(function(op,i){return '<button class="o" data-act="mpick" data-i="'+i+'">'+rt(op.t)+'</button>'}).join('')+'</div>';
+    if(chk)h2+='<div class="stack" style="padding:0;gap:8px"><label class="lab2" for="ans">'+(c.pre!=null?'Verbessere direkt im Feld':'Dein Ergebnis')+'</label><div class="row"><input class="inp'+(c.pre!=null?' fixin':'')+'" id="ans" value="'+esc(n.typed||c.pre||'')+'" placeholder="'+ph(cardAns(c)[0])+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"><button class="btn pri" data-act="check">'+(c.pre!=null?'Absenden':'Prüfen')+'</button></div>'+(n.err?'<p class="fb no">'+esc(n.err)+'</p>':'')+'</div>';
+    h2+=(c.opts||c.match||c.trace?'':'<button class="btn'+(chk?' ghost':' pri big')+'" data-act="reveal">'+(chk?'Ich komme nicht drauf, Lösung zeigen':'Antwort zeigen')+'</button>');
   }else{
     var vd=n.verdict;
     if(vd==='ok')h2+='<div class="verdict ok">Richtig: '+rt(c.a)+(n.accentNote?' Achte noch auf die Schreibweise: '+esc(n.accentNote):'')+'</div>';
     else if(vd==='no'){var mine=n.typed||(n.opts&&n.chosen!=null&&n.opts[n.chosen]?n.opts[n.chosen].t:'');h2+='<div class="verdict no">Nicht ganz. Deine Antwort: '+(mine?rt(mine):'–')+'</div><div class="verdict ok" style="margin-top:6px">Richtig ist: '+rt(c.a)+'</div>'}
     else if(vd==='near')h2+='<div class="verdict near">Dein Satz weicht von der Lösung ab. Vergleiche selbst, ob er trotzdem stimmt.</div>';
+    if(c.why)h2+='<div class="why">'+rt(c.why)+'</div>';
     h2+=(vd==='no'||vd==='ok'?'':'<p class="fa" style="align-self:flex-start">'+rt(c.a)+'</p>')+(c.steps?'<div class="steps"><p class="lab2">Rechenweg in Schritten</p>'+vLines({items:c.steps,num:true})+'</div>':'')+(c.solvis?visuals(c.solvis):'');
     h2+='<div class="tools">'+pd.btn+'</div>'+pd.box;
     h2+='<button class="btn pri big" data-act="rate" data-r="'+(vd==='ok'?(n.hintN>0?'hard':'good'):'again')+'">Weiter</button>';
@@ -2808,7 +2875,7 @@ function vExam(){
     var html='<div class="paperpage"><p class="ptitle">Prüfung · '+esc(t.title)+'</p><div class="sheet"><div class="shead"><span>Name: <b>'+esc(n.pname||'')+'</b></span><span>Datum: <b>'+ds+'</b></span></div>'+(t.id.indexOf('bruch')>=0?'<p class="sub" style="margin:0 0 4px">Alle Brüche so weit wie möglich kürzen.</p>':'')+'<ol class="mq">';
     qs.forEach(function(q,i){
       var key='e:'+t.id+':'+q.id,pd=padHTML(key,q.q);
-      html+='<li><div class="mqt"><span class="nc">'+(i+1)+'</span>'+qBlock(q)+'</div>'+visuals(q.visuals)+(q.type==='mc'?'<div class="mcopts">'+q.options.map(function(o,j){return '<label class="mco"><input type="radio" name="r-'+q.id+'" data-q="'+q.id+'" value="'+j+'"'+(n.answers[q.id]===j?' checked':'')+'><span class="mcl">'+String.fromCharCode(65+j)+'</span><span>'+rt(o)+'</span></label>'}).join('')+'</div>':'<input class="pin" id="in-'+q.id+'" data-q="'+q.id+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" value="'+esc(n.answers[q.id]||'')+'"><div class="tools">'+pd.btn+'</div>'+pd.box)+'</li>';
+      html+='<li><div class="mqt"><span class="nc">'+(i+1)+'</span>'+qBlock(q)+'</div>'+visuals(q.visuals)+(q.type==='mc'?'<div class="mcopts">'+q.options.map(function(o,j){return '<label class="mco"><input type="radio" name="r-'+q.id+'" data-q="'+q.id+'" value="'+j+'"'+(n.answers[q.id]===j?' checked':'')+'><span class="mcl">'+String.fromCharCode(65+j)+'</span><span>'+rt(o)+'</span></label>'}).join('')+'</div>':'<input class="pin" id="in-'+q.id+'" data-q="'+q.id+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" value="'+esc(n.answers[q.id]||q.pre||'')+'"><div class="tools">'+pd.btn+'</div>'+pd.box)+'</li>';
     });
     html+='</ol></div>';
     return html+'<button class="btn pri big" data-act="finish">Abgeben</button></div>';
@@ -2839,6 +2906,33 @@ function vExam(){
 var VIEWS={home:vHome,child:vChild,subject:vSubject,learn:vLearn,practice:vPractice,exam:vExam,game:vGame,xg:vXg,parent:vParent};
 
 function top(){if(nav.view==='home')return '<header class="top" style="min-height:8px"></header>';return '<header class="top"><button class="brand" data-act="home" aria-label="Zur Startseite">'+logoSvg(34)+'<span class="wm">EasySchool</span></button><button class="btn back" data-act="back">← Zurück</button></header>'}
+var TR=null;
+function traceDraw(cv){var x=cv.getContext('2d'),t=cv.getAttribute('data-t');x.clearRect(0,0,600,600);x.fillStyle='#fff';x.fillRect(0,0,600,600);
+  x.font='bold 440px Arial,Helvetica,sans-serif';x.textAlign='center';x.textBaseline='alphabetic';
+  x.fillStyle='#EEF2FB';x.fillText(t,300,470);x.setLineDash([14,12]);x.lineWidth=4;x.strokeStyle='#9AA7C4';x.strokeText(t,300,470);x.setLineDash([]);
+  if(TR&&TR.uc)x.drawImage(TR.uc,0,0)}
+function initTrace(){var cv=document.getElementById('trc');if(!cv){TR=null;return}
+  var uc=document.createElement('canvas');uc.width=600;uc.height=600;TR={cv:cv,uc:uc,drawing:false,last:null,moved:0};traceDraw(cv);
+  function pt(e){var r=cv.getBoundingClientRect();return [(e.clientX-r.left)*600/r.width,(e.clientY-r.top)*600/r.height]}
+  function seg(a,b){var u=uc.getContext('2d');u.lineCap='round';u.lineJoin='round';u.lineWidth=26;u.strokeStyle='#1a73e8';u.beginPath();u.moveTo(a[0],a[1]);u.lineTo(b[0],b[1]);u.stroke();TR.moved++;traceDraw(cv)}
+  cv.addEventListener('pointerdown',function(e){e.preventDefault();try{cv.setPointerCapture(e.pointerId)}catch(x){}TR.drawing=true;TR.last=pt(e);seg(TR.last,TR.last)});
+  cv.addEventListener('pointermove',function(e){if(!TR.drawing)return;e.preventDefault();var p=pt(e);seg(TR.last,p);TR.last=p});
+  var up=function(){TR.drawing=false};cv.addEventListener('pointerup',up);cv.addEventListener('pointercancel',up);
+  cv.style.touchAction='none'}
+function traceScore(){
+  if(!TR)return {ok:false,msg:'Fahre zuerst die Linie nach.'};
+  var G=30,C=20,m=document.createElement('canvas');m.width=600;m.height=600;var mx=m.getContext('2d');mx.font='bold 440px Arial,Helvetica,sans-serif';mx.textAlign='center';mx.fillStyle='#000';mx.fillText(TR.cv.getAttribute('data-t'),300,470);
+  var md=mx.getImageData(0,0,600,600).data,ud=TR.uc.getContext('2d').getImageData(0,0,600,600).data,i,j,x,y,mc=[],uc=[],mn=0,un=0;
+  for(j=0;j<G;j++){mc[j]=[];uc[j]=[];for(i=0;i<G;i++){var ma=0,ua=0;for(y=j*C;y<j*C+C;y+=4)for(x=i*C;x<i*C+C;x+=4){var p=(y*600+x)*4+3;if(md[p]>100)ma++;if(ud[p]>100)ua++}
+    mc[j][i]=ma>=6;uc[j][i]=ua>=2;if(mc[j][i])mn++;if(uc[j][i])un++}}
+  if(!un)return {ok:false,msg:'Fahre zuerst die Linie nach.'};
+  var cov=0,inside=0;
+  for(j=0;j<G;j++)for(i=0;i<G;i++){
+    if(mc[j][i]&&uc[j][i])cov++;
+    if(uc[j][i]){var nb=false;for(var dj=-1;dj<=1;dj++)for(var di=-1;di<=1;di++){var a=j+dj,b=i+di;if(a>=0&&b>=0&&a<G&&b<G&&mc[a][b])nb=true}if(nb)inside++}}
+  if(cov/mn<.55)return {ok:false,msg:'Fahre die ganze Form nach.'};
+  if(inside/un<.8)return {ok:false,msg:'Bleib auf der gestrichelten Linie.'};
+  return {ok:true}}
 function render(){
   clearInterval(timer);timer=null;
   SKIN=nav.child?skinOf(nav.child):null;
@@ -2846,6 +2940,7 @@ function render(){
   updateSync();
   calcFab();
   initPads();
+  initTrace();
   if(nav.view==='practice'&&nav.queue&&nav.idx<nav.queue.length&&!nav.revealed){
     var cc=curCard(nav);
     if(isV(cc)){var sg=stageOf(nav,nav.queue[nav.idx]);if(sg===1||sg===3){var ai=document.getElementById('ans');if(ai&&ai.focus)try{ai.focus()}catch(e){}}}
@@ -2864,7 +2959,7 @@ function go(n,from){
   try{var h=n.child||'';if(location.hash.slice(1)!==h)history.replaceState(null,'',location.pathname+location.search+(h?'#'+h:''))}catch(e){}
   render();window.scrollTo(0,0);
 }
-function resetCard(n){n.jk=false;n.hintN=0;n.pen=0;n.typed='';n.verdict=null;n.err='';n.accentNote='';n.revealed=false;n.cur=null;n.opts=null;n.gone=[];n.chosen=null;n.pz=null}
+function resetCard(n){n.jk=false;n.hintN=0;n.pen=0;n.typed='';n.verdict=null;n.err='';n.accentNote='';n.revealed=false;n.cur=null;n.opts=null;n.mset=null;n.mm=null;n.gone=[];n.chosen=null;n.pz=null}
 function clearPads(prefix){Object.keys(PADS).forEach(function(k){if(k.indexOf(prefix)===0)delete PADS[k]})}
 function requeue(n,k,off){n.queue.splice(Math.min(n.idx+off,n.queue.length),0,k)}
 
@@ -2948,6 +3043,12 @@ var ACT={
   dslot:function(b){var i=nav.step,si=+b.dataset.si,pl=nav.dr[i];if(pl[si]){pl[si]=null;nav.dr[i+'ok']=undefined}else if(nav.dsel){pl[si]=nav.dsel;nav.dsel=null}render()},
   dcheck:function(){theoryTask();var T=topicById(nav.topicId).explain[nav.step].try,i=nav.step,pl=nav.dr[i];nav.dr[i+'ok']=pl.every(function(x,k){return x===T.a[k]});render()},
   dreset:function(){var T=topicById(nav.topicId).explain[nav.step].try,i=nav.step;nav.dr[i]=T.drag.slots.map(function(){return null});nav.dr[i+'ok']=undefined;nav.dsel=null;render()},
+  trclear:function(){nav.err='';render()},
+  trcheck:function(){var n=nav,r=traceScore();if(r.ok){n.revealed=true;n.verdict='ok';n.err='';render()}else{n.err=r.msg;render()}},
+  mtog:function(b){var n=nav,i=+b.dataset.i,s=n.mset||(n.mset=[]),p=s.indexOf(i);if(p>=0)s.splice(p,1);else s.push(i);render()},
+  mcheck:function(){var n=nav,s=n.mset||[],ok=n.opts.every(function(o,i){return (s.indexOf(i)>=0)===!!o.ok});n.typed=s.map(function(i){return n.opts[i].t}).join(', ');n.revealed=true;n.verdict=ok?'ok':'no';render()},
+  mset:function(b){var n=nav,c=curCard(n);n.mm=n.mm||c.match.items.map(function(){return -1});n.mm[+b.dataset.i]=+b.dataset.j;render()},
+  mmcheck:function(){var n=nav,c=curCard(n),m=c.match,ok=m.items.every(function(it,i){return n.mm[i]===it[1]});n.typed=m.items.map(function(it,i){return it[0].replace(/<[^>]+>/g,'')+' → '+m.cats[n.mm[i]]}).join('; ');n.revealed=true;n.verdict=ok?'ok':'no';render()},
   mpick:function(b){var n=nav,o=n.opts[+b.dataset.i];n.typed=o.t;n.chosen=+b.dataset.i;n.revealed=true;n.verdict=o.ok?'ok':'no';render()},
   try:function(){theoryTask();
     var st=topicById(nav.topicId).explain[nav.step].try,inp=document.getElementById('tryin'),fb=document.getElementById('tryfb'),r=checkAns(inp.value,st.a);
@@ -3007,7 +3108,7 @@ var ACT={
       else{n.verdict='no';vocabOutcome('again')}
       render();return;
     }
-    var r2=checkAns(val,cardAns(c));
+    var r2=(c.pre!=null||c.cs)?checkStrict(val,cardAns(c)):checkAns(val,cardAns(c));
     n.revealed=true;n.err='';n.verdict=r2.ok?'ok':isSoft(c)?'near':'no';n.accentNote=r2.accent||'';render();
   },
   reveal:function(){
@@ -3051,7 +3152,8 @@ function finishExam(){
   var n=nav,t=topicById(n.topicId),p=prog(n.child),now=Date.now(),score=0;
   var qsx=examQs(n,t);var items=qsx.map(function(q){
     var g=n.answers[q.id],ok=false,note='';
-    if(q.type==='mc')ok=g===q.answer;else{var r=checkAns(g||'',q.answer);ok=r.ok;if(r.accent)note=r.accent}
+    if(g==null&&q.pre!=null)g=q.pre;
+    if(q.type==='mc')ok=g===q.answer;else{var r=(q.pre!=null||q.cs)?checkStrict(g||'',q.answer):checkAns(g||'',q.answer);ok=r.ok;if(r.accent)note=r.accent}
     if(ok)score++;
     else if(q.ref){var k=t.id+'_'+q.ref,prev=p.cards[k]||{b:0,n:0,k:0,d:0,t:0};p.cards[k]={b:0,d:now,n:prev.n,k:prev.k+1,t:now}}
     logAnswer(n.child,ok);

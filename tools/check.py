@@ -34,7 +34,7 @@ def quality(t):
         if x['id'] in ids:e.append('doppelte Karten-ID '+x['id'])
         ids.add(x['id'])
         if not str(x.get('q','')).strip() or not str(x.get('a','')).strip():e.append('Karte ohne Frage/Antwort: '+x['id'])
-        if x.get('opts') and str(x['a']) not in [str(o) for o in x['opts']]:warn.append('%s/%s: richtige Antwort nicht in den Optionen'%(t['id'],x['id']))
+        if x.get('opts') and not x.get('multi') and str(x['a']) not in [str(o) for o in x['opts']]:warn.append('%s/%s: richtige Antwort nicht in den Optionen'%(t['id'],x['id']))
     for s in t['explain']:
         if not (s.get('h') and s.get('text')):e.append('Theorie-Schritt ohne Titel/Text')
     for q in t['exam']['questions']:

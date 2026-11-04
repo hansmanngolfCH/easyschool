@@ -14,7 +14,9 @@ function qParts(q){
   if(mm&&/^(Welch|Bestimme|Berechne|Ins |Setze|Nenne|Schreibe|Bilde|Wandle|Kürze|Was für)/.test(mm[1])){main=mm[1];ctx=mm[2]}
   var tg=/\s*\(«([^»]+)»\)\s*$/.exec(ctx);
   if(tg){ctx=ctx.replace(tg[0],'');main=main.replace(/^(Welcher Fall|Welche Zeitform|Welches Satzglied)\?$/,function(a,b){return b+' ist «'+tg[1]+'»?'})}
-  if(q.type==='mc'){ins.unshift('Kreuze eine Antwort an.')}
+  if(q.pre!=null){ins.push('Verbessere direkt im Feld und gib dann ab.')}
+  else if(q.type==='mc'){ins.unshift('Kreuze eine Antwort an.')}
+  if(q.pre!=null){}
   else if(!ins.some(function(x){return /Zahl|Satz|Bruch/.test(x)})){
     var a=String((q.answer||[''])[0]),words=a.split(/\s+/).length;
     if(/^[\d\s.,]+(\s?[a-z]+)?$/i.test(a))ins.push(/\./.test(a+'')||/,/.test(a)?'Schreibe nur die Zahl.':'Schreibe nur die Zahl (ganze Zahl).');
@@ -141,6 +143,11 @@ function vVocab(n,k,c,stg){
   return html;
 }
 
+function matchHTML(n,c){
+  var m=c.match,sel=n.mm||(n.mm=m.items.map(function(){return -1}));
+  var h='<div class="mtch">'+m.items.map(function(it,i){return '<div class="mrow"><span class="mt">'+rt(it[0])+'</span><span class="mcs">'+m.cats.map(function(ct,j){return '<button class="mc'+(sel[i]===j?' on':'')+'" data-act="mset" data-i="'+i+'" data-j="'+j+'">'+esc(ct)+'</button>'}).join('')+'</span></div>'}).join('')+'</div>';
+  return h+'<button class="btn pri big" data-act="mmcheck"'+(sel.indexOf(-1)>=0?' disabled':'')+'>Prüfen</button>';
+}
 function vPractice(){
   var n=nav,q=n.queue;
   if(!q.length)return '<div class="stack"><h1>Gerade nichts dran</h1><p class="sub">Hier gibt es noch keine Aufgaben zum Üben.</p><div><button class="btn pri big" data-act="back">Zurück</button></div></div>';
@@ -158,20 +165,24 @@ function vPractice(){
   var k=q[n.idx],x=cardIdx[k],c=curCard(n);
   var head='<div class="stack"><div class="row between"><p class="eyebrow">Aufgabe '+(n.idx+1)+' von '+q.length+'</p><span class="chips">'+(n.pw.length?n.pw.map(function(id){var w=POW.filter(function(x){return x.id===id})[0];return '<span class="chp pw">'+w.ic+' '+esc(w.n)+'</span>'}).join(''):'')+(n.combo>=2?'<span class="chp fire">🔥 Combo x'+n.combo+'</span>':'')+'</span></div><div class="bar" role="img" aria-label="Fortschritt"><i style="width:'+Math.round(100*n.idx/q.length)+'%"></i></div>'+(n.msg&&!n.revealed?'<p class="cheer">'+esc(n.msg)+'</p>':'')+(n.pw.indexOf('skip')>=0&&!n.skipUsed&&!n.revealed?'<button class="btn sm" data-act="skip">⏩ Joker: Aufgabe überspringen</button>':'');
   if(isV(c))return head+vVocab(n,k,c,stageOf(n,k))+'</div>';
-  var pkey='p:'+k,pd=padHTML(pkey,c.q),hs=hintList(n,k,c,0),chk=!c.opts&&checkable(c);
-  if(c.opts&&!n.opts)n.opts=shuffle(c.opts.map(function(t){return {t:t,ok:t===c.a}}));
+  var pkey='p:'+k,pd=padHTML(pkey,c.q),hs=hintList(n,k,c,0),chk=!c.opts&&!c.match&&!c.trace&&checkable(c);
+  if(c.opts&&!n.opts)n.opts=shuffle(c.opts.map(function(t){return {t:t,ok:c.multi?c.ans.indexOf(t)>=0:t===c.a}}));
   var h2=head+'<section class="card flash">'+qHtml(c.q)+sayBtn(c.say)+visuals(c.visuals)+'</section>';
   if(!n.revealed){
     h2+='<div class="tools">'+(hs.length?'<button class="btn sm" data-act="hint"'+(n.hintN>=hs.length?' disabled':'')+'>Tipp'+(n.hintN<hs.length?' ('+(n.hintN+1)+'/'+hs.length+')':'')+'</button>':'')+pd.btn+'</div>'+hintBoxes(n,hs);
     h2+=pd.box;
-    if(c.opts)h2+='<div class="opts">'+n.opts.map(function(op,i){return '<button class="o" data-act="mpick" data-i="'+i+'">'+rt(op.t)+'</button>'}).join('')+'</div>';
-    if(chk)h2+='<div class="stack" style="padding:0;gap:8px"><label class="lab2" for="ans">Dein Ergebnis</label><div class="row"><input class="inp" id="ans" value="'+esc(n.typed||'')+'" placeholder="'+ph(cardAns(c)[0])+'" autocomplete="off" autocapitalize="off" spellcheck="false"><button class="btn pri" data-act="check">Prüfen</button></div>'+(n.err?'<p class="fb no">'+esc(n.err)+'</p>':'')+'</div>';
-    h2+=(c.opts?'':'<button class="btn'+(chk?' ghost':' pri big')+'" data-act="reveal">'+(chk?'Ich komme nicht drauf, Lösung zeigen':'Antwort zeigen')+'</button>');
+    if(c.multi)h2+='<p class="sub">Es können mehrere richtig sein.</p><div class="opts">'+n.opts.map(function(op,i){return '<button class="o'+((n.mset||[]).indexOf(i)>=0?' sel':'')+'" data-act="mtog" data-i="'+i+'">'+rt(op.t)+'</button>'}).join('')+'</div><button class="btn pri big" data-act="mcheck"'+((n.mset||[]).length?'':' disabled')+'>Prüfen</button>';
+    else if(c.match)h2+=matchHTML(n,c);
+    else if(c.trace)h2+='<div class="trcw"><canvas id="trc" width="600" height="600" data-t="'+esc(c.trace)+'" aria-label="Zeichenfläche"></canvas></div>'+(n.err?'<p class="fb no">'+esc(n.err)+'</p>':'')+'<div class="row"><button class="btn" data-act="trclear">Neu</button><button class="btn pri" data-act="trcheck">Fertig</button><button class="btn ghost" data-act="reveal">Weiter</button></div>';
+    else if(c.opts)h2+='<div class="opts">'+n.opts.map(function(op,i){return '<button class="o" data-act="mpick" data-i="'+i+'">'+rt(op.t)+'</button>'}).join('')+'</div>';
+    if(chk)h2+='<div class="stack" style="padding:0;gap:8px"><label class="lab2" for="ans">'+(c.pre!=null?'Verbessere direkt im Feld':'Dein Ergebnis')+'</label><div class="row"><input class="inp'+(c.pre!=null?' fixin':'')+'" id="ans" value="'+esc(n.typed||c.pre||'')+'" placeholder="'+ph(cardAns(c)[0])+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"><button class="btn pri" data-act="check">'+(c.pre!=null?'Absenden':'Prüfen')+'</button></div>'+(n.err?'<p class="fb no">'+esc(n.err)+'</p>':'')+'</div>';
+    h2+=(c.opts||c.match||c.trace?'':'<button class="btn'+(chk?' ghost':' pri big')+'" data-act="reveal">'+(chk?'Ich komme nicht drauf, Lösung zeigen':'Antwort zeigen')+'</button>');
   }else{
     var vd=n.verdict;
     if(vd==='ok')h2+='<div class="verdict ok">Richtig: '+rt(c.a)+(n.accentNote?' Achte noch auf die Schreibweise: '+esc(n.accentNote):'')+'</div>';
     else if(vd==='no'){var mine=n.typed||(n.opts&&n.chosen!=null&&n.opts[n.chosen]?n.opts[n.chosen].t:'');h2+='<div class="verdict no">Nicht ganz. Deine Antwort: '+(mine?rt(mine):'–')+'</div><div class="verdict ok" style="margin-top:6px">Richtig ist: '+rt(c.a)+'</div>'}
     else if(vd==='near')h2+='<div class="verdict near">Dein Satz weicht von der Lösung ab. Vergleiche selbst, ob er trotzdem stimmt.</div>';
+    if(c.why)h2+='<div class="why">'+rt(c.why)+'</div>';
     h2+=(vd==='no'||vd==='ok'?'':'<p class="fa" style="align-self:flex-start">'+rt(c.a)+'</p>')+(c.steps?'<div class="steps"><p class="lab2">Rechenweg in Schritten</p>'+vLines({items:c.steps,num:true})+'</div>':'')+(c.solvis?visuals(c.solvis):'');
     h2+='<div class="tools">'+pd.btn+'</div>'+pd.box;
     h2+='<button class="btn pri big" data-act="rate" data-r="'+(vd==='ok'?(n.hintN>0?'hard':'good'):'again')+'">Weiter</button>';
@@ -222,7 +233,7 @@ function vExam(){
     var html='<div class="paperpage"><p class="ptitle">Prüfung · '+esc(t.title)+'</p><div class="sheet"><div class="shead"><span>Name: <b>'+esc(n.pname||'')+'</b></span><span>Datum: <b>'+ds+'</b></span></div>'+(t.id.indexOf('bruch')>=0?'<p class="sub" style="margin:0 0 4px">Alle Brüche so weit wie möglich kürzen.</p>':'')+'<ol class="mq">';
     qs.forEach(function(q,i){
       var key='e:'+t.id+':'+q.id,pd=padHTML(key,q.q);
-      html+='<li><div class="mqt"><span class="nc">'+(i+1)+'</span>'+qBlock(q)+'</div>'+visuals(q.visuals)+(q.type==='mc'?'<div class="mcopts">'+q.options.map(function(o,j){return '<label class="mco"><input type="radio" name="r-'+q.id+'" data-q="'+q.id+'" value="'+j+'"'+(n.answers[q.id]===j?' checked':'')+'><span class="mcl">'+String.fromCharCode(65+j)+'</span><span>'+rt(o)+'</span></label>'}).join('')+'</div>':'<input class="pin" id="in-'+q.id+'" data-q="'+q.id+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" value="'+esc(n.answers[q.id]||'')+'"><div class="tools">'+pd.btn+'</div>'+pd.box)+'</li>';
+      html+='<li><div class="mqt"><span class="nc">'+(i+1)+'</span>'+qBlock(q)+'</div>'+visuals(q.visuals)+(q.type==='mc'?'<div class="mcopts">'+q.options.map(function(o,j){return '<label class="mco"><input type="radio" name="r-'+q.id+'" data-q="'+q.id+'" value="'+j+'"'+(n.answers[q.id]===j?' checked':'')+'><span class="mcl">'+String.fromCharCode(65+j)+'</span><span>'+rt(o)+'</span></label>'}).join('')+'</div>':'<input class="pin" id="in-'+q.id+'" data-q="'+q.id+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" value="'+esc(n.answers[q.id]||q.pre||'')+'"><div class="tools">'+pd.btn+'</div>'+pd.box)+'</li>';
     });
     html+='</ol></div>';
     return html+'<button class="btn pri big" data-act="finish">Abgeben</button></div>';

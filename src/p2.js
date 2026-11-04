@@ -286,6 +286,23 @@ function vScene(v){
     }
     o+='<g class="sc-pop"><rect x="150" y="14" width="300" height="48" rx="24" fill="#fff" stroke="#34A853" stroke-width="3"/><text x="300" y="47" text-anchor="middle" font-size="24" fill="#188038" '+F+'>3 Teller · je 4 Kekse</text></g>';
   }
+  else if(k==='talk'){
+    o+='<rect width="600" height="230" fill="#EAF3FF"/><rect y="190" width="600" height="40" fill="#CFE8C8"/>';
+    [[110,'#FBBC04'],[490,'#34A853']].forEach(function(p,j){o+='<circle cx="'+p[0]+'" cy="150" r="38" fill="'+p[1]+'"/><circle cx="'+(p[0]-13)+'" cy="144" r="5" fill="#202124"/><circle cx="'+(p[0]+13)+'" cy="144" r="5" fill="#202124"/><path d="M'+(p[0]-14)+' 162q14 12 28 0" stroke="#202124" stroke-width="4" fill="none" stroke-linecap="round"/>'});
+    var tx=[v.t1||'Hallo!',v.t2||'Hallo!'];
+    o+='<g class="sc-pop"><rect x="30" y="24" width="250" height="62" rx="22" fill="#fff" stroke="#F29900" stroke-width="3"/><path d="M90 86l12 26 16-26z" fill="#fff" stroke="#F29900" stroke-width="3"/><text x="155" y="64" text-anchor="middle" font-size="22" fill="#7A4A00" '+F+'>'+esc(tx[0])+'</text></g>';
+    o+='<g class="sc-pop" style="animation-delay:1.4s"><rect x="320" y="24" width="250" height="62" rx="22" fill="#fff" stroke="#34A853" stroke-width="3"/><path d="M480 86l12 26 16-26z" fill="#fff" stroke="#34A853" stroke-width="3"/><text x="445" y="64" text-anchor="middle" font-size="22" fill="#188038" '+F+'>'+esc(tx[1])+'</text></g>';
+  }else if(k==='letters'){
+    var w=String(v.word||'Katze').split(''),cl=['#4285F4','#EA4335','#34A853','#F29900','#A142F4','#12A4AF'],tw=70,x0=(600-w.length*tw)/2;
+    o+='<rect width="600" height="230" fill="#FFF6E5"/><rect y="170" width="600" height="60" fill="#E8C99B"/>';
+    w.forEach(function(ch,i){o+='<g class="sc-cookie" style="animation-delay:'+(i*.35)+'s"><rect x="'+(x0+i*tw+4)+'" y="96" width="'+(tw-8)+'" height="'+(tw-8)+'" rx="12" fill="#fff" stroke="'+cl[i%6]+'" stroke-width="4"/><text x="'+(x0+i*tw+tw/2)+'" y="'+(96+(tw-8)/2+11)+'" text-anchor="middle" font-size="34" fill="'+cl[i%6]+'" '+F+'>'+esc(ch)+'</text></g>'});
+    if(v.say)o+='<g class="sc-pop"><rect x="150" y="16" width="300" height="46" rx="23" fill="#fff" stroke="#4285F4" stroke-width="3"/><text x="300" y="47" text-anchor="middle" font-size="22" fill="#1A56C8" '+F+'>'+esc(v.say)+'</text></g>';
+  }else if(k==='words'){
+    var ws=v.words||[['Die','#9AA0A6'],['Katze','#4285F4'],['schläft','#EA4335']],n=ws.length,cw=Math.min(150,560/n),xs=(600-n*cw)/2;
+    o+='<rect width="600" height="230" fill="#F3F6FC"/><rect y="176" width="600" height="54" fill="#E3E9F5"/>';
+    ws.forEach(function(p,i){o+='<g class="sc-cookie" style="animation-delay:'+(i*.5)+'s"><rect x="'+(xs+i*cw+4)+'" y="92" width="'+(cw-8)+'" height="62" rx="14" fill="#fff" stroke="'+p[1]+'" stroke-width="4"/><text x="'+(xs+i*cw+cw/2)+'" y="132" text-anchor="middle" font-size="'+(cw<110?20:26)+'" fill="'+p[1]+'" '+F+'>'+esc(p[0])+'</text></g>'});
+    if(v.say)o+='<g class="sc-pop"><rect x="120" y="16" width="360" height="46" rx="23" fill="#fff" stroke="#4285F4" stroke-width="3"/><text x="300" y="47" text-anchor="middle" font-size="22" fill="#1A56C8" '+F+'>'+esc(v.say)+'</text></g>';
+  }
   return '<figure class="vis scn" style="width:100%"><svg viewBox="0 0 600 230" width="100%" role="img" aria-label="'+esc(v.cap||'Bild zum Thema')+'" style="border-radius:16px">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vArr(v){

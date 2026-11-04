@@ -1,14 +1,14 @@
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION="v4.74";
+var APP_VERSION="v4.75";
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
 var app=document.getElementById('app');
 
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
-function rt(s){return esc(s).replace(/(\d+)\/(\d+)/g,'<span class="frac"><span>$1</span><span>$2</span></span>')}
+function rt(s){return esc(s).replace(/(\d+)\/(\d+)/g,'<span class="frac"><span>$1</span><span>$2</span></span>').replace(/\{([0-7])\|([^{}]*)\}/g,'<span class="cw c$1">$2</span>')}
 function stable(o){return JSON.stringify(o,function(k,v){return v&&typeof v==='object'&&!Array.isArray(v)?Object.keys(v).sort().reduce(function(a,x){a[x]=v[x];return a},{}):v})}
 function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t}return a}
 
@@ -188,6 +188,7 @@ function checkAns(inp,answers){
   for(var m=0;m<answers.length;m++){if(loose(answers[m])===loose(inp))return {ok:true}}
   return {ok:false};
 }
+function checkStrict(inp,answers){var n=String(inp||'').replace(/\s+/g,' ').trim();if(!n)return {ok:false,empty:true};for(var i=0;i<answers.length;i++){if(String(answers[i]).replace(/\s+/g,' ').trim()===n)return {ok:true}}return {ok:false}}
 function lev(a,b){var m=a.length,n=b.length,d=[],i,j;for(i=0;i<=m;i++){d[i]=[i]}for(j=0;j<=n;j++)d[0][j]=j;
   for(i=1;i<=m;i++)for(j=1;j<=n;j++)d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));return d[m][n]}
 function nearMiss(inp,answers){var a=loose(inp);return answers.some(function(x){var b=loose(x);return b.length>=5&&lev(a,b)<=1})}
