@@ -1293,6 +1293,34 @@ body.rwopen{overflow:hidden}
 .pfsheet .pfk{width:62px;height:62px;font-size:1.6rem}
 .pfsheet .pfm{margin:4px 0 0}
 .pfsheet .pfok{color:#188038;font-weight:700;margin:10px 0 0}
+/* v4.27 Fortschritt */
+.progbtn{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:12px;width:100%;margin:14px 0 4px;padding:12px 14px;border-radius:18px;background:#fff;border:1px solid #E8EAED;box-shadow:0 1px 3px rgba(60,64,67,.12);touch-action:manipulation}
+.progbtn:active{background:#F8F9FA}
+.progbtn .pbi{font-size:1.6rem}.progbtn .pbt{flex:1}.progbtn b{display:block;font:800 1.05rem var(--font-d);color:#1f2430}.progbtn small{color:#5f6368;font-weight:600}.progbtn i{font-style:normal;font-size:1.6rem;color:#9aa0a6}
+.pgv h1{margin:0}
+.pgt{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pgt div{background:#fff;border:1px solid #E8EAED;border-radius:16px;padding:12px}
+.pgt b{display:block;font:800 1.5rem/1.1 var(--font-d);color:#1f2430}.pgt small{color:#5f6368;font-weight:600;font-size:.78rem}
+.pgc h2,.pgs h2{margin:0 0 8px;font:800 1.1rem var(--font-d)}
+.pgb{display:flex;align-items:flex-end;gap:4px;height:100px}
+.pgcol{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;min-width:0;height:100%}
+.pgcol i{display:block;width:100%;max-width:18px;border-radius:5px 5px 2px 2px;background:#E8EAED}.pgcol i.on{background:#1A73E8}
+.pgm{font-size:.62rem;color:#5f6368;font-weight:700;height:12px}.pgl{font-size:.6rem;color:#9aa0a6;height:12px;font-weight:600}
+.pgsh{display:flex;align-items:center;gap:10px;margin-bottom:6px}.pgsh h2{margin:0;flex:1}.pgsp{font:800 1rem var(--font-d);color:var(--sd,#1A4FA0)}
+.pgr{all:unset;box-sizing:border-box;cursor:pointer;display:block;width:100%;padding:10px 0;border-top:1px solid #F1F3F4;touch-action:manipulation}
+.pgr:active{background:#F8F9FA}
+.pgrt{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px}
+.pgrt b{font:800 .98rem/1.2 var(--font-d);color:#1f2430;min-width:0}
+.pgchip{flex:none;font:800 .7rem var(--font-d);padding:3px 9px;border-radius:99px}
+.pgchip.g{background:#E6F4EA;color:#188038}.pgchip.am{background:#FEF3E0;color:#B06000}.pgchip.r{background:#FCE8E6;color:#C5221F}.pgchip.n{background:#F1F3F4;color:#5f6368}
+.pgrb{display:flex;justify-content:space-between;gap:8px;margin-top:6px;font-size:.78rem;color:#5f6368;font-weight:600}
+.pgn{font-weight:800}.pgn.g{color:#188038}.pgn.am{color:#B06000}.pgn.r{color:#C5221F}.pgn.x{color:#9aa0a6;font-weight:600}
+.pgtl{display:flex;flex-direction:column}
+.pgev{display:grid;grid-template-columns:74px 14px 1fr;gap:8px;align-items:start;padding:8px 0;border-top:1px solid #F1F3F4}
+.pgev:first-child{border-top:0}
+.pgd{font-size:.78rem;font-weight:700;color:#5f6368}
+.pgdot{width:10px;height:10px;border-radius:50%;background:#1A73E8;margin-top:5px}.pgdot.ex{background:#E8710A}
+.pgev b{display:block;font:800 .95rem/1.25 var(--font-d);color:#1f2430}.pgev small{color:#5f6368;font-weight:600}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1300,7 +1328,7 @@ body.rwopen{overflow:hidden}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v4.26';
+var APP_VERSION='v4.27';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -1899,6 +1927,7 @@ function vChild(){
     var ts=topicsOf(ch.id,sb.id),Lw=level(ch.id,ts),w=Math.max(Lw.seen?4:0,Math.round(Lw.pct*100)),n=ts.length,pot=0;
     ts.forEach(function(t){pot+=t.cards.length*10+t.exam.questions.length*5+60});
     return '<button class="world w-'+esc(sb.id)+'" data-act="subject" data-id="'+esc(sb.id)+'"><span class="wi">'+sicon(sb,52)+'</span><span class="wn">'+esc(sb.name)+'</span><span class="wm">'+(n?n+(n===1?' Thema':' Themen'):'Bald mehr')+'</span><span class="wb"><i style="width:'+w+'%"></i></span><span class="wl">'+(n?w+'% geschafft':'noch leer')+'</span><span class="wgo">Los geht\'s ›</span></button>'}).join('')+'</div></section>';
+  html+='<button class="progbtn" data-act="prog" data-id="'+ch.id+'"><span class="pbi">📈</span><span class="pbt"><b>Mein Fortschritt</b><small>Zeit, Stärken und Prüfungsnoten</small></span><i>›</i></button>';
   var left=s.due+s.fresh;
 
   var weak=all.map(function(t){return {t:t,w:stats(ch.id,[t]).weak}}).filter(function(x){return x.w>0}).sort(function(a,b){return b.w-a.w}).slice(0,2);
@@ -2046,7 +2075,7 @@ function vParent(){
     if(subs.length)html+='<div class="list">'+subs.map(function(sb){var t2=topicsOf(c.id,sb.id),s2=stats(c.id,t2);return '<div class="prow"><span>'+esc(sb.name)+'</span>'+lbar(level(c.id,t2),true)+'<span class="sub">'+s2.sits+'/'+s2.total+' sitzen</span></div>'}).join('')+'</div>';
     var ex=p.exams.slice().sort(function(a,b){return b.t-a.t}).slice(0,3);
     if(ex.length)html+='<p class="sub">Letzte Prüfungen: '+ex.map(function(e){var tt=topicById(e.topic);return esc(tt?tt.title:e.topic)+' (Note '+fmt(e.note)+')'}).join(' · ')+'</p>';
-    html+='</section>';
+    html+='<button class="btn sm" data-act="prog" data-id="'+c.id+'" style="margin-top:10px">Fortschritt im Detail ›</button></section>';
   });
   return html+'<p class="sub">Jedes Kind hat seinen eigenen Fortschritt pro Klasse. Damit er auf allen Geräten gespeichert wird, braucht das Kind Zugriff mit Bearbeitungsrechten auf den Link.</p></div>';
 }
@@ -4173,6 +4202,44 @@ ACT.avopen=function(){
   });
 };
 ACT.avclose=function(){};
+})();
+
+/* ---------- Fortschritt-Ansicht (Kinder und Eltern) ---------- */
+(function(){
+function dT(t){var m=/^Unit\s*(\d+(?:\+\d+)?)\s*·\s*(.*)$/.exec(t.title);if(m&&(t.subject==='franz'||t.subject==='engl')){var vl=t.subject==='franz'?'Vocabulaire':'Vocabulary';return /vocab/i.test(m[2])?m[2]+' · Unit '+m[1]:vl+' · Unit '+m[1]}return t.title}
+function dl(ts){var d=new Date(ts),k0=dkey(0),k1=dkey(1),k=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');if(k===k0)return 'Heute';if(k===k1)return 'Gestern';return d.toLocaleDateString('de-CH',{weekday:'short',day:'numeric',month:'numeric'})}
+function dur(sec){var m=Math.round(sec/60);if(m<60)return m+' Min';return Math.floor(m/60)+' Std '+('0'+(m%60)).slice(-2)+' Min'}
+function ago(t){if(!t)return '';var d=Math.floor((Date.now()-t)/DAY);return d<=0?'heute geübt':d===1?'gestern geübt':'vor '+d+' Tagen geübt'}
+function nc(n){return n>=5?'g':n>=4?'am':'r'}
+VIEWS.progress=function(){
+  var ch=C.children.filter(function(c){return c.id===nav.child})[0],p=prog(ch.id),i,k,
+  html='<div class="stack pgv"><div class="row"><div><p class="eyebrow">Fortschritt</p><h1>'+esc(label(ch))+'</h1></div></div>';
+  var sec=0,n=0,ok=0;for(k in p.days){sec+=p.days[k].sec||0;n+=p.days[k].n||0;ok+=p.days[k].ok||0}
+  var ex=p.exams,avg=ex.length?ex.reduce(function(a,e){return a+e.note},0)/ex.length:0;
+  html+='<div class="pgt"><div><b>'+dur(sec)+'</b><small>gelernt</small></div><div><b>'+n+'</b><small>Antworten · '+(n?Math.round(100*ok/n):0)+' % richtig</small></div><div><b>'+(ex.length?fmt(avg):'–')+'</b><small>Ø Prüfungsnote ('+ex.length+')</small></div><div><b>'+streak(ch.id)+'</b><small>Tage in Serie</small></div></div>';
+  // 14 Tage
+  var days=[],max=10;for(i=13;i>=0;i--){var d=p.days[dkey(i)]||{sec:0};var mn=Math.round((d.sec||0)/60);days.push({k:dkey(i),m:mn});max=Math.max(max,mn)}
+  html+='<section class="card pgc"><h2>Die letzten 14 Tage</h2><div class="pgb">'+days.map(function(d,j){var wd=new Date(d.k+'T12:00:00');return '<div class="pgcol"><span class="pgm">'+(d.m||'')+'</span><i class="'+(d.m?'on':'')+'" style="height:'+Math.max(3,Math.round(64*d.m/max))+'px"></i><span class="pgl">'+(j%2?'':wd.getDate()+'.')+'</span></div>'}).join('')+'</div><p class="sub">Übungsminuten pro Tag</p></section>';
+  // Fächer und Themen
+  C.subjects.filter(function(sb){return topicsOf(ch.id,sb.id).length}).forEach(function(sb){
+    var ts=topicsOf(ch.id,sb.id),L=level(ch.id,ts);
+    html+='<section class="card pgs s-'+esc(sb.id)+'"><div class="pgsh"><span class="sbadge s-'+esc(sb.id)+'" style="width:34px;height:34px">'+sicon(sb,20)+'</span><h2>'+esc(sb.name)+'</h2><span class="pgsp">'+Math.round(L.pct*100)+' %</span></div>'+
+    ts.map(function(t){
+      var lv=level(ch.id,[t]),w=Math.max(lv.seen?4:0,Math.round(lv.pct*100)),last=0;
+      cardsIn([t]).forEach(function(x){var r=p.cards[x.k];if(r&&r.t>last)last=r.t});
+      var te=ex.filter(function(e){return e.topic===t.id}).sort(function(a,b){return b.t-a.t}),best=bestNote(ch.id,t.id),st=!lv.seen?['Neu','n']:lv.pct>=.75?['Stark','g']:lv.pct>=.4?['Auf dem Weg','am']:['Üben','r'];
+      return '<button class="pgr" data-act="pgopen" data-id="'+esc(t.id)+'"><div class="pgrt"><b>'+esc(dT(t))+'</b><span class="pgchip '+st[1]+'">'+st[0]+'</span></div><div class="bar thin"><i style="width:'+w+'%"></i></div><div class="pgrb"><span>'+w+' % sitzt'+(last?' · '+ago(last):'')+'</span><span class="pgn '+(best?nc(best):'x')+'">'+(best?'Note '+fmt(best)+(te.length>1?' · '+te.length+'×':''):'Noch keine Prüfung')+'</span></div></button>'}).join('')+'</section>'});
+  // Verlauf
+  var ev=[];for(k in p.days){var dd=p.days[k];if(dd.sec||dd.n)ev.push({t:new Date(k+'T12:00:00').getTime(),h:'day',d:dd,k:k})}
+  ex.forEach(function(e){ev.push({t:e.t,h:'ex',e:e})});
+  ev.sort(function(a,b){return b.t-a.t});
+  html+='<section class="card pgc"><h2>Was du gemacht hast</h2>'+(ev.length?'<div class="pgtl">'+ev.slice(0,14).map(function(x){
+    if(x.h==='ex'){var tt=topicById(x.e.topic);return '<div class="pgev"><span class="pgd">'+dl(x.t)+'</span><span class="pgdot ex"></span><div><b>Prüfung: '+esc(tt?dT(tt):x.e.topic)+'</b><small>Note '+fmt(x.e.note)+' · '+x.e.score+' von '+x.e.max+' Punkten</small></div></div>'}
+    return '<div class="pgev"><span class="pgd">'+dl(x.t)+'</span><span class="pgdot"></span><div><b>'+dur(x.d.sec||0)+' geübt</b><small>'+(x.d.n||0)+' Antworten · '+(x.d.n?Math.round(100*(x.d.ok||0)/x.d.n):0)+' % richtig'+(x.d.xp?' · +'+x.d.xp+' XP':'')+'</small></div></div>'}).join('')+'</div>':'<p class="sub">Noch nichts. Fang mit einem Thema an, dann erscheint es hier.</p>')+'</section>';
+  return html+'</div>';
+};
+ACT.prog=function(b){var c=(b&&b.dataset&&b.dataset.id)||nav.child;go({view:'progress',child:c},nav.view==='parent'?{view:'parent'}:{view:'child',child:c,from:{view:'home'}})};
+ACT.pgopen=function(b){var t=topicById(b.dataset.id);nav.topen=nav.topen||{};var o={view:'subject',child:nav.child,subject:t.subject,topen:{},chopen:{}};o.topen[t.id]=true;o.chopen[t.subject+'|'+t.chapter]=true;go(o,{view:'progress',child:nav.child,from:nav.from})};
 })();
 
 
