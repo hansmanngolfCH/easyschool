@@ -1243,3 +1243,21 @@ body.rwopen{overflow:hidden}
 .calk:active{transform:translateY(2px);box-shadow:0 1px 0 rgba(0,0,0,.1)}
 .calk.k2{background:#FCE8E6;color:#B3261E}.calk.k3{background:#E8F0FE;color:#1A56C8}.calk.k4{background:#34A853;color:#fff}
 body.hascalc #app{padding-bottom:84px}
+
+/* v4.47 Primar-Visuals */
+.emorows{display:flex;flex-direction:column;gap:10px;align-items:center;padding:12px;border-radius:18px;background:linear-gradient(180deg,#FBFCFE,#EEF3FA);border:2px solid #D5DEEB}
+.emorow{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center}
+.eb{display:inline-flex;gap:2px;padding:4px 8px 2px;border-radius:14px;border:2.5px dashed;background:#fff;box-shadow:0 2px 0 rgba(0,0,0,.08)}
+.eb.nb{border:0;background:none;box-shadow:none}
+.eb.c0{border-color:#34A853}.eb.c1{border-color:#4285F4}.eb.c2{border-color:#FBBC04}.eb.c3{border-color:#EA4335}
+.e1{font-size:2.1rem;line-height:1.15;position:relative;filter:drop-shadow(0 2px 1px rgba(0,0,0,.25))}.e1.xd{opacity:.3}.e1.xd:after{content:"✕";position:absolute;inset:0;display:grid;place-items:center;font-size:1.8rem;color:#EA4335;opacity:1;font-weight:900}
+.coins{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:center;padding:12px;border-radius:18px;background:linear-gradient(180deg,#FBF7EF,#F1E8D6);border:2px solid #E3D6BC}
+.coin{border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:radial-gradient(circle at 32% 28%,#fff,#D5D9DE 55%,#9AA0A6);box-shadow:0 3px 4px rgba(0,0,0,.35),inset 0 0 0 3px #B8BDC3,inset 0 0 0 4.5px #fff8;color:#202124;line-height:1;border:2px solid #6f757c}
+.coin.fr{background:radial-gradient(circle at 32% 28%,#fff,#E4E7EA 55%,#A5ABB1)}
+.coin.br{background:radial-gradient(circle at 32% 28%,#fffbe0,#F2D36B 55%,#C9A227);border-color:#8f7312;box-shadow:0 3px 4px rgba(0,0,0,.35),inset 0 0 0 3px #D9B83B,inset 0 0 0 4.5px #fff8}
+.ci{display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}
+.coin b{font-size:1.15rem;font-weight:900}.coin small{font-size:.5rem;font-weight:800;letter-spacing:.02em}
+.note{position:relative;width:104px;height:56px;border-radius:8px;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;border:3px solid;line-height:1;box-shadow:0 3px 4px rgba(0,0,0,.3),inset 0 0 0 3px #fff7;background-image:repeating-linear-gradient(115deg,#fff3 0 3px,transparent 3px 8px)}
+.note b{font-size:1.5rem;font-weight:900}.note small{font-size:.55rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.note em{position:absolute;left:6px;top:3px;font-size:.62rem;font-weight:900;font-style:normal}.note em.r{left:auto;right:6px;top:auto;bottom:3px}
+.shp svg{display:block;margin:0 auto}
