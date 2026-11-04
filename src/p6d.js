@@ -112,7 +112,7 @@ function run(force){
     var pr=prof();if(!res||!res.p||res.p.n!==pr.n||res.p.a!==pr.a||res.p.c!==pr.c)diff=true;
     if(chg&&(nav.view==='home'))render();
     if(!diff){sync.state='synced';updateSync();return}
-    return put(acc.id,out,pr).then(function(){sync.state='synced';updateSync()})
+    var isNew=!res;return put(acc.id,out,pr).then(function(){sync.state='synced';updateSync();if(isNew)fetch('https://firestore.googleapis.com/v1/projects/'+FB.p+'/databases/(default)/documents:commit?key='+FB.k,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({writes:[{transform:{document:'projects/'+FB.p+'/databases/(default)/documents/meta/stats',fieldTransforms:[{fieldPath:'n',increment:{integerValue:'1'}}]}}]})}).catch(function(){})})
   }).catch(function(e){sync.state='local';updateSync();throw e});
   var cur=chain;chain=chain.catch(function(){});return cur;
 }

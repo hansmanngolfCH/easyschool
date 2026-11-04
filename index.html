@@ -1603,7 +1603,7 @@ body.hascalc #app{padding-bottom:84px}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION="v4.73";
+var APP_VERSION="v4.74";
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -4664,7 +4664,7 @@ function run(force){
     var pr=prof();if(!res||!res.p||res.p.n!==pr.n||res.p.a!==pr.a||res.p.c!==pr.c)diff=true;
     if(chg&&(nav.view==='home'))render();
     if(!diff){sync.state='synced';updateSync();return}
-    return put(acc.id,out,pr).then(function(){sync.state='synced';updateSync()})
+    var isNew=!res;return put(acc.id,out,pr).then(function(){sync.state='synced';updateSync();if(isNew)fetch('https://firestore.googleapis.com/v1/projects/'+FB.p+'/databases/(default)/documents:commit?key='+FB.k,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({writes:[{transform:{document:'projects/'+FB.p+'/databases/(default)/documents/meta/stats',fieldTransforms:[{fieldPath:'n',increment:{integerValue:'1'}}]}}]})}).catch(function(){})})
   }).catch(function(e){sync.state='local';updateSync();throw e});
   var cur=chain;chain=chain.catch(function(){});return cur;
 }
