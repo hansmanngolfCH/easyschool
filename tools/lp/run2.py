@@ -21,10 +21,21 @@ for k,v in th_add.A.items():
         if t and not t.startswith('Diese Wörter'):b['text']=t
 import th_fix
 for k,v in THEORY.items():th_fix.apply(k,v)
+DROP_BEG='''kl2-mathe-hunderterfeld kl2-mathe-zahlenstrahl kl2-mathe-plus100 kl2-mathe-minus100 kl2-mathe-mal-2-5-10 kl2-mathe-meter-cm kl2-mathe-uhr-halb-viertel
+kl3-mathe-zahlen1000 kl3-mathe-plus1000 kl3-mathe-minus1000 kl3-mathe-rechte-winkel
+kl4-mathe-liter-dl kl4-mathe-zentiliter
+kl5-mathe-million kl5-mathe-bruchteile kl5-mathe-schriftlich-mal kl5-mathe-flaeche kl5-mathe-volumen kl5-mathe-tonnen
+kl6-mathe-dezimal-vertiefung kl6-mathe-bruch-dezimal kl6-mathe-bruch-dezimal-prozent'''.split()
+for k in DROP_BEG:
+    assert THEORY[k][1]['h']=='Die Begriffe',k
+    del THEORY[k][1]
 topics=[];bad=0;missing=[]
 for m in mods:
     for f in importlib.import_module(m).T:
-        t=f();d=t.build();hi=t.hi
+        t=f()
+        import extras
+        if t.t['id'] in extras.EX:extras.EX[t.t['id']](t)
+        d=t.build();hi=t.hi
         if d['child']=='kl1':d=k1w.convert(d)
         if d['id'] in THEORY:d['explain']=THEORY[d['id']]
         else:missing.append(d['id'])

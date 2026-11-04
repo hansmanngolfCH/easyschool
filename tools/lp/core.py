@@ -38,12 +38,14 @@ def SHP(kind,col=0,alt=None,axis=None,cap=None):
     if axis:d["axis"]=axis
     if cap:d["cap"]=cap
     return d
-def NL(mn,mx,step,minor=None,pts=None,q=None,cap=None):
+def NL(mn,mx,step,minor=None,pts=None,q=None,cap=None,lab=None):
+    if lab is None and (q is not None or pts):lab=random.choice(['all','all','alt','alt','ends'])
     d={"type":"nline","min":mn,"max":mx,"step":step}
     if minor:d["minor"]=minor
     if pts:d["pts"]=pts
     if q is not None:d["q"]=q
     if cap:d["cap"]=cap
+    if lab and lab!='all':d['lab']=lab
     return d
 def BAR(segs,cap,col=0): return {"type":"bar","segs":segs,"cap":cap,"col":col}
 def LINES(items,num=False): return {"type":"lines","num":num,"items":items}
