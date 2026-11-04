@@ -1353,3 +1353,6 @@ body.hascalc #app{padding-bottom:84px}
 .lines.num .ln::before{width:30px!important;height:30px!important;font-size:1rem!important;font-weight:800;background:#1A73E8!important;color:#fff!important}
 .lines.num .ln code{font-size:1.2rem;color:var(--ink)}
 .lines.num .ln em{font-size:.85rem;color:#1A56C8;font-weight:700}
+/* v4.66: Schritt = Rechnung oben, kurze Handlung darunter, links bündig */
+.lines.num .ln{flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:1px!important;flex-wrap:nowrap!important}
+.lines.num .ln em{margin-left:0!important;text-align:left!important;order:2;font-size:.88rem!important}
