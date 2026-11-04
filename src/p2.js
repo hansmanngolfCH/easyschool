@@ -28,8 +28,8 @@ function vBar(v){
   var tot=0,i,x=10,W=580,g=3,s='';v.segs.forEach(function(q){tot+=q[0]});
   v.segs.forEach(function(q,k){
     var w=Math.max(6,(W-g*(v.segs.length-1))*q[0]/tot),col=q[2]===-1?'#CFD3DA':VC[((v.col||0)+k%2)%4];
-    s+='<rect x="'+x.toFixed(1)+'" y="14" width="'+w.toFixed(1)+'" height="54" rx="8" fill="'+col+'"/>';
-    if(q[1]&&w>46)s+='<text x="'+(x+w/2).toFixed(1)+'" y="47" text-anchor="middle" font-size="'+(w<80?15:19)+'" font-weight="800" fill="#fff" font-family="Arial,sans-serif">'+esc(q[1])+'</text>';
+    s+='<rect x="'+x.toFixed(1)+'" y="17" width="'+w.toFixed(1)+'" height="54" rx="10" fill="rgba(40,60,100,.18)"/><rect x="'+x.toFixed(1)+'" y="14" width="'+w.toFixed(1)+'" height="54" rx="10" fill="'+col+'" stroke="rgba(0,0,0,.12)" stroke-width="1.5"/><rect x="'+(x+3).toFixed(1)+'" y="17" width="'+Math.max(0,w-6).toFixed(1)+'" height="16" rx="7" fill="#fff" opacity=".28"/>';
+    if(q[1]&&w>26)s+='<text x="'+(x+w/2).toFixed(1)+'" y="47" text-anchor="middle" font-size="'+(w<46?12:w<80?15:19)+'" font-weight="800" fill="#fff" font-family="Arial,sans-serif">'+esc(q[1])+'</text>';
     x+=w+g;
   });
   s+='<path d="M10 78q0 10 10 10h550q10 0 10-10" fill="none" stroke="#5f6368" stroke-width="3" stroke-linecap="round"/>';
@@ -251,13 +251,13 @@ function vBlocks(v){
 }
 function vJumps(v){
   var pts=[v.from],i;(v.jumps||[]).forEach(function(j){pts.push(pts[pts.length-1]+j[0])});
-  var mn=Math.min.apply(null,pts),mx=Math.max.apply(null,pts),pad=(mx-mn)*.06||1,lo=mn-pad,hi=mx+pad,x0=24,x1=576,y=84;
+  var mn=Math.min.apply(null,pts),mx=Math.max.apply(null,pts),pad=(mx-mn)*.06||1,lo=mn-pad,hi=mx+pad,x0=24,x1=576,y=100;
   function X(n){return x0+(x1-x0)*(n-lo)/(hi-lo)}
   var o='<defs><marker id="jh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#EA4335"/></marker></defs><line x1="'+(x0-8)+'" y1="'+y+'" x2="'+(x1+8)+'" y2="'+y+'" stroke="#2f3a4a" stroke-width="3" stroke-linecap="round"/>';
   pts.forEach(function(p,k){o+='<line x1="'+X(p)+'" y1="'+(y-8)+'" x2="'+X(p)+'" y2="'+(y+8)+'" stroke="#2f3a4a" stroke-width="3"/><circle cx="'+X(p)+'" cy="'+y+'" r="5.5" fill="'+(k===0?'#34A853':k===pts.length-1?'#4285F4':'#FBBC04')+'" stroke="#fff" stroke-width="2"/><text x="'+X(p)+'" y="'+(y+30)+'" text-anchor="middle" font-size="'+(v.fs||17)+'" font-weight="800" fill="#202124" font-family="Arial,sans-serif">'+(k===pts.length-1&&v.hideEnd?'?':(v.fmt?v.fmt[k]:p))+'</text>'});
   (v.jumps||[]).forEach(function(j,k){var a=X(pts[k]),b=X(pts[k+1]),m=(a+b)/2,r=Math.abs(b-a)/2,h=Math.min(46,10+r*.55),dir=b>=a?1:-1;
-    o+='<path d="M'+a+' '+(y-6)+'Q'+m+' '+(y-6-2*h)+' '+b+' '+(y-6)+'" fill="none" stroke="#EA4335" stroke-width="3.2" stroke-linecap="round" marker-end="url(#jh)"/><rect x="'+(m-Math.max(24,String(j[1]).length*6.2))+'" y="'+(y-h-32)+'" width="'+Math.max(48,String(j[1]).length*12.4)+'" height="22" rx="11" fill="#fff" stroke="#EA4335" stroke-width="2"/><text x="'+m+'" y="'+(y-h-16)+'" text-anchor="middle" font-size="14" font-weight="900" fill="#B3261E" font-family="Arial,sans-serif">'+esc(j[1])+'</text>'});
-  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 130" width="100%" role="img" aria-label="Rechenstrich">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+    o+='<path d="M'+a+' '+(y-6)+'Q'+m+' '+(y-6-2*h)+' '+b+' '+(y-6)+'" fill="none" stroke="#EA4335" stroke-width="3.2" stroke-linecap="round" marker-end="url(#jh)"/><rect x="'+(m-Math.max(30,String(j[1]).length*7.5))+'" y="'+(y-h-40)+'" width="'+Math.max(60,String(j[1]).length*15)+'" height="30" rx="15" fill="#fff" stroke="#EA4335" stroke-width="2"/><text x="'+m+'" y="'+(y-h-19)+'" text-anchor="middle" font-size="20" font-weight="900" fill="#B3261E" font-family="Arial,sans-serif">'+esc(j[1])+'</text>'});
+  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 138" width="100%" role="img" aria-label="Rechenstrich">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vArr(v){
   var P=24,r=v.r,c=v.c,sp=v.split||0,W=c*P+10,H=r*P+10,o='',i,j;

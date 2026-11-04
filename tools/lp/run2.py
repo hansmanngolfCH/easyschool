@@ -8,6 +8,12 @@ for tm in ['th_k1','th_k2','th_k3','th_k4','th_k5','th_k6']:
     try:THEORY.update(importlib.import_module(tm).T_())
     except ModuleNotFoundError as e:
         if tm not in str(e):raise
+import th_txt
+for k,v in th_txt.X.items():
+    if k in THEORY:
+        assert len(v)==len(THEORY[k]),k
+        for b,t in zip(THEORY[k],v):
+            if t:b['text']=t
 topics=[];bad=0;missing=[]
 for m in mods:
     for f in importlib.import_module(m).T:

@@ -54315,7 +54315,7 @@
     },
     {
      "h": "1 Reihe = 1 Zehner",
-     "text": "",
+     "text": "Eine Reihe sind 10.",
      "visuals": [
       {
        "type": "field",
@@ -54343,7 +54343,7 @@
     },
     {
      "h": "Zehner zählen",
-     "text": "",
+     "text": "3 Reihen sind 30.",
      "visuals": [
       {
        "type": "field",
@@ -54375,7 +54375,7 @@
     },
     {
      "h": "Einer dazu",
-     "text": "",
+     "text": "Dazu kommen Einer.",
      "visuals": [
       {
        "type": "field",
@@ -54410,7 +54410,7 @@
     },
     {
      "h": "Die Zahl 47",
-     "text": "",
+     "text": "4 Reihen und 7 Punkte.",
      "visuals": [
       {
        "type": "field",
@@ -54451,7 +54451,7 @@
     },
     {
      "h": "Die Zahl 63",
-     "text": "",
+     "text": "6 Reihen und 3 Punkte.",
      "visuals": [
       {
        "type": "field",
@@ -54492,7 +54492,7 @@
     },
     {
      "h": "Zahlen mit 0",
-     "text": "",
+     "text": "Keine Punkte übrig.",
      "visuals": [
       {
        "type": "field",
@@ -56218,7 +56218,7 @@
     },
     {
      "h": "Zehnerschritte",
-     "text": "",
+     "text": "Springe in 10er-Schritten.",
      "visuals": [
       {
        "type": "jumps",
@@ -56247,7 +56247,7 @@
     },
     {
      "h": "Fünferschritte",
-     "text": "",
+     "text": "Springe in 5er-Schritten.",
      "visuals": [
       {
        "type": "nline",
@@ -56292,7 +56292,7 @@
     },
     {
      "h": "Einerschritte",
-     "text": "",
+     "text": "Zähle Strich für Strich.",
      "visuals": [
       {
        "type": "nline",
@@ -56318,7 +56318,7 @@
     },
     {
      "h": "Wo liegt 70?",
-     "text": "",
+     "text": "7 Striche nach der 0.",
      "visuals": [
       {
        "type": "nline",
@@ -56385,7 +56385,7 @@
     },
     {
      "h": "Zahl suchen",
-     "text": "",
+     "text": "Zähle ab 20 weiter.",
      "visuals": [
       {
        "type": "nline",
@@ -56409,7 +56409,7 @@
     },
     {
      "h": "Beispiel: 65",
-     "text": "",
+     "text": "60 und 5 mehr.",
      "visuals": [
       {
        "type": "nline",
@@ -58084,7 +58084,7 @@
     },
     {
      "h": "Eins weniger",
-     "text": "",
+     "text": "Eins zurück.",
      "visuals": [
       {
        "type": "jumps",
@@ -58116,7 +58116,7 @@
     },
     {
      "h": "Eins mehr",
-     "text": "",
+     "text": "Eins vor.",
      "visuals": [
       {
        "type": "jumps",
@@ -58148,7 +58148,7 @@
     },
     {
      "h": "Beide Nachbarn",
-     "text": "",
+     "text": "Links und rechts.",
      "visuals": [
       {
        "type": "nline",
@@ -58183,7 +58183,7 @@
     },
     {
      "h": "Nachbarzehner",
-     "text": "",
+     "text": "Die vollen Zehner.",
      "visuals": [
       {
        "type": "nline",
@@ -58219,7 +58219,7 @@
     },
     {
      "h": "Beispiel: 63",
-     "text": "",
+     "text": "62 und 64 sind Nachbarn.",
      "visuals": [
       {
        "type": "nline",
@@ -58255,7 +58255,7 @@
     },
     {
      "h": "Beispiel: 70",
-     "text": "",
+     "text": "Auch bei 70.",
      "visuals": [
       {
        "type": "jumps",
@@ -59565,7 +59565,7 @@
     },
     {
      "h": "Im Bild",
-     "text": "",
+     "text": "Zehner und Einer als Bild.",
      "visuals": [
       {
        "type": "blocks",
@@ -59606,7 +59606,7 @@
     },
     {
      "h": "Zehner dazu",
-     "text": "",
+     "text": "Erst die Zehner.",
      "visuals": [
       {
        "type": "jumps",
@@ -59638,7 +59638,7 @@
     },
     {
      "h": "Einer dazu",
-     "text": "",
+     "text": "Dann die Einer.",
      "visuals": [
       {
        "type": "jumps",
@@ -59670,7 +59670,7 @@
     },
     {
      "h": "Alles zusammen",
-     "text": "",
+     "text": "Alles zusammen.",
      "visuals": [
       {
        "type": "jumps",
@@ -59716,7 +59716,7 @@
     },
     {
      "h": "Beispiel: 47 + 26",
-     "text": "",
+     "text": "Noch ein Beispiel.",
      "visuals": [
       {
        "type": "bar",
@@ -59776,7 +59776,7 @@
     },
     {
      "h": "Beispiel: 58 + 31",
-     "text": "",
+     "text": "Und noch eins.",
      "visuals": [
       {
        "type": "bar",
@@ -59836,7 +59836,7 @@
     },
     {
      "h": "Probe",
-     "text": "Rechne zurück.",
+     "text": "Prüfe mit Minus.",
      "visuals": [
       {
        "type": "jumps",
@@ -61104,7 +61104,7 @@
     },
     {
      "h": "Im Bild",
-     "text": "",
+     "text": "Zehner und Einer als Bild.",
      "visuals": [
       {
        "type": "blocks",
@@ -61145,7 +61145,7 @@
     },
     {
      "h": "Zehner weg",
-     "text": "",
+     "text": "Erst die Zehner weg.",
      "visuals": [
       {
        "type": "jumps",
@@ -61177,7 +61177,7 @@
     },
     {
      "h": "Einer weg",
-     "text": "",
+     "text": "Dann die Einer weg.",
      "visuals": [
       {
        "type": "jumps",
@@ -61209,7 +61209,7 @@
     },
     {
      "h": "Alles zusammen",
-     "text": "",
+     "text": "Das Ergebnis.",
      "visuals": [
       {
        "type": "jumps",
@@ -61255,7 +61255,7 @@
     },
     {
      "h": "Beispiel: 79 − 24",
-     "text": "",
+     "text": "Noch ein Beispiel.",
      "visuals": [
       {
        "type": "bar",
@@ -61315,7 +61315,7 @@
     },
     {
      "h": "Beispiel: 86 − 52",
-     "text": "",
+     "text": "Und noch eins.",
      "visuals": [
       {
        "type": "bar",
@@ -61375,7 +61375,7 @@
     },
     {
      "h": "Probe",
-     "text": "Rechne zurück.",
+     "text": "Prüfe mit Plus.",
      "visuals": [
       {
        "type": "jumps",
@@ -62548,7 +62548,7 @@
     },
     {
      "h": "Gruppen zählen",
-     "text": "",
+     "text": "Gleiche Gruppen.",
      "visuals": [
       {
        "type": "emo",
@@ -62592,7 +62592,7 @@
     },
     {
      "h": "2er-Reihe",
-     "text": "",
+     "text": "Springe in Zweiern.",
      "visuals": [
       {
        "type": "jumps",
@@ -62634,7 +62634,7 @@
     },
     {
      "h": "5er-Reihe",
-     "text": "",
+     "text": "Springe in Fünfern.",
      "visuals": [
       {
        "type": "jumps",
@@ -62671,7 +62671,7 @@
     },
     {
      "h": "10er-Reihe",
-     "text": "",
+     "text": "Zehner-Stangen.",
      "visuals": [
       {
        "type": "bar",
@@ -62704,7 +62704,7 @@
     },
     {
      "h": "Tauschen",
-     "text": "Es geht in beide Richtungen.",
+     "text": "Tauschen geht immer.",
      "visuals": [
       {
        "type": "arr",
@@ -62726,7 +62726,7 @@
     },
     {
      "h": "Beispiel: 6 × 5",
-     "text": "",
+     "text": "5 mal 5 und noch 5.",
      "visuals": [
       {
        "type": "arr",
@@ -62765,7 +62765,7 @@
     },
     {
      "h": "Beispiel: 7 × 2",
-     "text": "",
+     "text": "7 Zweier-Sprünge.",
      "visuals": [
       {
        "type": "jumps",
@@ -64277,7 +64277,7 @@
     },
     {
      "h": "Quadrat",
-     "text": "",
+     "text": "Zwei gleiche Hälften.",
      "visuals": [
       {
        "type": "shape",
@@ -64310,7 +64310,7 @@
     },
     {
      "h": "Kreis",
-     "text": "",
+     "text": "Kreise sind sehr symmetrisch.",
      "visuals": [
       {
        "type": "shape",
@@ -64343,7 +64343,7 @@
     },
     {
      "h": "Dreieck",
-     "text": "",
+     "text": "Nur eine Achse.",
      "visuals": [
       {
        "type": "shape",
@@ -64376,7 +64376,7 @@
     },
     {
      "h": "Schiefes Viereck",
-     "text": "",
+     "text": "Hier passt nichts.",
      "visuals": [
       {
        "type": "shape",
@@ -64403,7 +64403,7 @@
     },
     {
      "h": "Buchstaben",
-     "text": "",
+     "text": "Falte im Kopf.",
      "visuals": [
       {
        "type": "emo",
@@ -64450,7 +64450,7 @@
     },
     {
      "h": "Falten",
-     "text": "Passt alles genau?",
+     "text": "Passt es genau?",
      "visuals": [
       {
        "type": "emo",
@@ -65765,7 +65765,7 @@
     },
     {
      "h": "Würfel",
-     "text": "",
+     "text": "Ein Würfel hat 6 Flächen.",
      "visuals": [
       {
        "type": "emo",
@@ -65805,7 +65805,7 @@
     },
     {
      "h": "Quader",
-     "text": "",
+     "text": "Ein Quader sieht aus wie ein Karton.",
      "visuals": [
       {
        "type": "emo",
@@ -65849,7 +65849,7 @@
     },
     {
      "h": "Kugel",
-     "text": "",
+     "text": "Eine Kugel rollt.",
      "visuals": [
       {
        "type": "emo",
@@ -65893,7 +65893,7 @@
     },
     {
      "h": "Zylinder",
-     "text": "",
+     "text": "Ein Zylinder hat zwei runde Flächen.",
      "visuals": [
       {
        "type": "emo",
@@ -65932,7 +65932,7 @@
     },
     {
      "h": "Rollen und Stapeln",
-     "text": "",
+     "text": "Was rollt, was stapelt?",
      "visuals": [
       {
        "type": "emo",
@@ -66950,7 +66950,7 @@
     },
     {
      "h": "Lineal",
-     "text": "",
+     "text": "Starte bei 0.",
      "visuals": [
       {
        "type": "nline",
@@ -66985,7 +66985,7 @@
     },
     {
      "h": "1 Meter",
-     "text": "",
+     "text": "10 mal 10 cm.",
      "visuals": [
       {
        "type": "bar",
@@ -67038,7 +67038,7 @@
     },
     {
      "h": "Meter in cm",
-     "text": "",
+     "text": "1 m ist 100 cm.",
      "visuals": [
       {
        "type": "conv",
@@ -67064,7 +67064,7 @@
     },
     {
      "h": "Halber Meter",
-     "text": "",
+     "text": "Ein halber Meter.",
      "visuals": [
       {
        "type": "bar",
@@ -67100,7 +67100,7 @@
     },
     {
      "h": "Plus rechnen",
-     "text": "",
+     "text": "Zähle cm zusammen.",
      "visuals": [
       {
        "type": "bar",
@@ -67146,7 +67146,7 @@
     },
     {
      "h": "Minus rechnen",
-     "text": "",
+     "text": "Nimm cm weg.",
      "visuals": [
       {
        "type": "bar",
@@ -68471,7 +68471,7 @@
     },
     {
      "h": "Ganze Stunde",
-     "text": "",
+     "text": "Der lange Zeiger oben.",
      "visuals": [
       {
        "type": "clock",
@@ -68497,7 +68497,7 @@
     },
     {
      "h": "Viertel nach",
-     "text": "",
+     "text": "Der lange Zeiger rechts.",
      "visuals": [
       {
        "type": "clock",
@@ -68523,7 +68523,7 @@
     },
     {
      "h": "Halb",
-     "text": "",
+     "text": "Der lange Zeiger unten.",
      "visuals": [
       {
        "type": "clock",
@@ -68549,7 +68549,7 @@
     },
     {
      "h": "Viertel vor",
-     "text": "",
+     "text": "Der lange Zeiger links.",
      "visuals": [
       {
        "type": "clock",
@@ -68575,7 +68575,7 @@
     },
     {
      "h": "Ein Kreis",
-     "text": "",
+     "text": "4 Viertel sind eine Stunde.",
      "visuals": [
       {
        "type": "bar",
@@ -68604,7 +68604,7 @@
     },
     {
      "h": "Beispiel",
-     "text": "",
+     "text": "Lies die Uhren.",
      "visuals": [
       {
        "type": "clock",
@@ -68677,7 +68677,6 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "Viertel nach 9",
       "Viertel nach 7",
       "Viertel nach 8",
       "halb 9"
@@ -68710,10 +68709,10 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "halb 10",
       "9 Uhr",
-      "Viertel vor 10",
-      "halb 9"
+      "halb 9",
+      "halb 10",
+      "Viertel vor 10"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -68743,9 +68742,10 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "6 Uhr",
+      "halb 7",
       "Viertel nach 6",
-      "halb 7"
+      "5 Uhr",
+      "6 Uhr"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -68775,10 +68775,9 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "Viertel vor 3",
       "Viertel vor 2",
-      "Viertel nach 1",
-      "halb 2"
+      "halb 2",
+      "Viertel vor 3"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -68808,9 +68807,9 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "halb 3",
-      "halb 5",
+      "3 Uhr",
       "Viertel vor 4",
+      "halb 3",
       "halb 4"
      ],
      "hints": [
@@ -68841,9 +68840,8 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "11 Uhr",
       "Viertel nach 11",
-      "Viertel vor 12",
+      "11 Uhr",
       "halb 12"
      ],
      "hints": [
@@ -68874,9 +68872,10 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
+      "Viertel vor 11",
       "Viertel nach 9",
-      "halb 11",
-      "Viertel nach 10"
+      "Viertel nach 10",
+      "10 Uhr"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -68906,10 +68905,9 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "halb 4",
+      "Viertel nach 2",
       "Viertel nach 4",
-      "Viertel nach 3",
-      "3 Uhr"
+      "Viertel nach 3"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -68940,8 +68938,9 @@
      "th": "basis",
      "opts": [
       "7 Uhr",
-      "halb 9",
-      "8 Uhr"
+      "8 Uhr",
+      "9 Uhr",
+      "halb 9"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -68971,10 +68970,10 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "Viertel vor 1",
       "12 Uhr",
+      "1 Uhr",
       "Viertel nach 12",
-      "halb 1"
+      "11 Uhr"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -69005,8 +69004,8 @@
      "th": "basis",
      "opts": [
       "4 Uhr",
-      "3 Uhr",
-      "Viertel nach 4"
+      "halb 5",
+      "5 Uhr"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -69036,9 +69035,9 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
+      "Viertel vor 3",
       "Viertel vor 4",
-      "halb 4",
-      "Viertel nach 3"
+      "halb 4"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -69068,10 +69067,10 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
+      "Viertel nach 4",
       "Viertel vor 5",
-      "halb 5",
-      "4 Uhr",
-      "halb 4"
+      "halb 6",
+      "halb 5"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -69103,7 +69102,8 @@
      "opts": [
       "Viertel vor 10",
       "Viertel vor 11",
-      "halb 10"
+      "9 Uhr",
+      "Viertel nach 9"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -69134,7 +69134,8 @@
      "th": "basis",
      "opts": [
       "Viertel vor 5",
-      "Viertel vor 6",
+      "halb 5",
+      "Viertel vor 4",
       "4 Uhr"
      ],
      "hints": [
@@ -69165,10 +69166,9 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "halb 12",
       "11 Uhr",
-      "Viertel vor 12",
-      "Viertel vor 1"
+      "halb 12",
+      "Viertel vor 12"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -69198,9 +69198,10 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "12 Uhr",
-      "Viertel nach 12",
-      "Viertel vor 1"
+      "halb 1",
+      "Viertel vor 1",
+      "Viertel vor 12",
+      "12 Uhr"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -69230,10 +69231,9 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "12 Uhr",
-      "11 Uhr",
       "halb 12",
-      "Viertel vor 12"
+      "11 Uhr",
+      "12 Uhr"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -69263,10 +69263,9 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "halb 2",
+      "Viertel vor 1",
       "halb 1",
-      "Viertel nach 12",
-      "Viertel vor 1"
+      "halb 2"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -69296,10 +69295,9 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "7 Uhr",
-      "Viertel vor 8",
+      "Viertel vor 7",
       "Viertel vor 9",
-      "Viertel vor 7"
+      "Viertel vor 8"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -69329,9 +69327,9 @@
      "lvl": 2,
      "th": "basis",
      "opts": [
+      "9:00",
       "9:15",
       "9:45",
-      "9:00",
       "9:30"
      ],
      "hints": [
@@ -69358,10 +69356,10 @@
      "lvl": 2,
      "th": "basis",
      "opts": [
-      "9:15",
-      "9:30",
       "9:00",
-      "9:45"
+      "9:45",
+      "9:15",
+      "9:30"
      ],
      "hints": [
       "Stunde und Minuten."
@@ -69387,10 +69385,10 @@
      "lvl": 2,
      "th": "basis",
      "opts": [
-      "4:45",
+      "4:00",
       "4:30",
       "4:15",
-      "4:00"
+      "4:45"
      ],
      "hints": [
       "Stunde und Minuten."
@@ -69416,10 +69414,10 @@
      "lvl": 2,
      "th": "basis",
      "opts": [
-      "6:15",
       "6:45",
-      "6:00",
-      "6:30"
+      "6:15",
+      "6:30",
+      "6:00"
      ],
      "hints": [
       "Stunde und Minuten."
@@ -69445,10 +69443,10 @@
      "lvl": 2,
      "th": "basis",
      "opts": [
-      "7:00",
-      "7:15",
       "7:30",
-      "7:45"
+      "7:45",
+      "7:15",
+      "7:00"
      ],
      "hints": [
       "Stunde und Minuten."
@@ -69475,9 +69473,9 @@
      "th": "basis",
      "opts": [
       "2:30",
-      "2:45",
       "2:00",
-      "2:15"
+      "2:15",
+      "2:45"
      ],
      "hints": [
       "Stunde und Minuten."
@@ -69503,8 +69501,8 @@
      "lvl": 2,
      "th": "basis",
      "opts": [
-      "10:45",
       "10:30",
+      "10:45",
       "10:00",
       "10:15"
      ],
@@ -69532,10 +69530,10 @@
      "lvl": 2,
      "th": "basis",
      "opts": [
-      "6:15",
+      "6:30",
       "6:45",
       "6:00",
-      "6:30"
+      "6:15"
      ],
      "hints": [
       "Stunde und Minuten."
@@ -69561,9 +69559,9 @@
      "lvl": 2,
      "th": "basis",
      "opts": [
+      "7:30",
       "7:15",
       "7:00",
-      "7:30",
       "7:45"
      ],
      "hints": [
@@ -69590,10 +69588,10 @@
      "lvl": 2,
      "th": "basis",
      "opts": [
-      "3:45",
       "3:00",
+      "3:15",
       "3:30",
-      "3:15"
+      "3:45"
      ],
      "hints": [
       "Stunde und Minuten."
@@ -69619,8 +69617,8 @@
      "lvl": 3,
      "th": "basis",
      "opts": [
-      "30",
       "0",
+      "30",
       "45",
       "15"
      ],
@@ -69641,10 +69639,10 @@
      "lvl": 3,
      "th": "basis",
      "opts": [
-      "30",
-      "45",
       "15",
-      "0"
+      "0",
+      "45",
+      "30"
      ],
      "hints": [
       "Denke an die Uhr."
@@ -69663,9 +69661,9 @@
      "lvl": 3,
      "th": "basis",
      "opts": [
+      "15",
       "30",
       "45",
-      "15",
       "0"
      ],
      "hints": [
@@ -69685,10 +69683,10 @@
      "lvl": 3,
      "th": "basis",
      "opts": [
-      "45",
-      "15",
+      "30",
       "0",
-      "30"
+      "15",
+      "45"
      ],
      "hints": [
       "Denke an die Uhr."
@@ -69709,8 +69707,8 @@
      "opts": [
       "60",
       "15",
-      "45",
-      "30"
+      "30",
+      "45"
      ],
      "hints": [
       "Denke an die Uhr."
@@ -69729,10 +69727,10 @@
      "lvl": 3,
      "th": "basis",
      "opts": [
-      "15",
       "10",
+      "30",
       "45",
-      "30"
+      "15"
      ],
      "hints": [
       "Denke an die Uhr."
@@ -69751,9 +69749,9 @@
      "lvl": 3,
      "th": "basis",
      "opts": [
-      "100",
       "60",
       "15",
+      "100",
       "30"
      ],
      "hints": [
@@ -69773,10 +69771,10 @@
      "lvl": 3,
      "th": "basis",
      "opts": [
-      "2",
+      "3",
       "4",
       "6",
-      "3"
+      "2"
      ],
      "hints": [
       "Denke an die Uhr."
@@ -69798,12 +69796,11 @@
       "explain": "Viertel nach 12",
       "type": "mc",
       "options": [
-       "Viertel vor 1",
-       "Viertel nach 12",
        "12 Uhr",
-       "Viertel nach 11"
+       "Viertel nach 1",
+       "Viertel nach 12"
       ],
-      "answer": 1,
+      "answer": 2,
       "visuals": [
        {
         "type": "clock",
@@ -69818,10 +69815,10 @@
       "explain": "Viertel vor 11",
       "type": "mc",
       "options": [
-       "10 Uhr",
        "halb 11",
+       "Viertel nach 10",
        "Viertel vor 11",
-       "Viertel vor 12"
+       "10 Uhr"
       ],
       "answer": 2,
       "visuals": [
@@ -69838,11 +69835,11 @@
       "explain": "halb 2",
       "type": "mc",
       "options": [
-       "halb 2",
-       "halb 3",
-       "Viertel vor 2"
+       "1 Uhr",
+       "Viertel nach 1",
+       "halb 2"
       ],
-      "answer": 0,
+      "answer": 2,
       "visuals": [
        {
         "type": "clock",
@@ -69857,12 +69854,11 @@
       "explain": "halb 12",
       "type": "mc",
       "options": [
+       "halb 11",
        "halb 12",
-       "11 Uhr",
-       "Viertel vor 12",
-       "Viertel nach 11"
+       "11 Uhr"
       ],
-      "answer": 0,
+      "answer": 1,
       "visuals": [
        {
         "type": "clock",
@@ -69878,9 +69874,9 @@
       "type": "mc",
       "options": [
        "10 Uhr",
+       "11 Uhr",
        "9 Uhr",
-       "Viertel vor 11",
-       "halb 11"
+       "Viertel nach 10"
       ],
       "answer": 0,
       "visuals": [
@@ -69897,11 +69893,12 @@
       "explain": "halb 6",
       "type": "mc",
       "options": [
-       "5 Uhr",
-       "halb 7",
-       "halb 6"
+       "halb 6",
+       "Viertel nach 5",
+       "Viertel vor 6",
+       "halb 5"
       ],
-      "answer": 2,
+      "answer": 0,
       "visuals": [
        {
         "type": "clock",
@@ -69916,12 +69913,12 @@
       "explain": "2:45",
       "type": "mc",
       "options": [
+       "2:45",
        "2:15",
-       "2:30",
        "2:00",
-       "2:45"
+       "2:30"
       ],
-      "answer": 3,
+      "answer": 0,
       "visuals": [
        {
         "type": "clock",
@@ -69936,12 +69933,12 @@
       "explain": "1:00",
       "type": "mc",
       "options": [
-       "1:45",
-       "1:15",
+       "1:30",
        "1:00",
-       "1:30"
+       "1:45",
+       "1:15"
       ],
-      "answer": 2,
+      "answer": 1,
       "visuals": [
        {
         "type": "clock",
@@ -69956,8 +69953,8 @@
       "explain": "8:30",
       "type": "mc",
       "options": [
-       "8:00",
        "8:45",
+       "8:00",
        "8:30",
        "8:15"
       ],
@@ -69976,9 +69973,9 @@
       "explain": "2:00",
       "type": "mc",
       "options": [
-       "2:15",
        "2:45",
        "2:30",
+       "2:15",
        "2:00"
       ],
       "answer": 3,
@@ -69997,11 +69994,11 @@
       "type": "mc",
       "options": [
        "1:00",
+       "1:30",
        "1:45",
-       "1:15",
-       "1:30"
+       "1:15"
       ],
-      "answer": 2,
+      "answer": 3,
       "visuals": [
        {
         "type": "clock",
@@ -70016,12 +70013,12 @@
       "explain": "6:15",
       "type": "mc",
       "options": [
-       "6:00",
+       "6:15",
        "6:45",
        "6:30",
-       "6:15"
+       "6:00"
       ],
-      "answer": 3,
+      "answer": 0,
       "visuals": [
        {
         "type": "clock",
@@ -70129,7 +70126,7 @@
     },
     {
      "h": "Hunderter",
-     "text": "",
+     "text": "Ein Hunderter ist eine grosse Platte. 3 Platten sind 300.",
      "visuals": [
       {
        "type": "blocks",
@@ -70157,7 +70154,7 @@
     },
     {
      "h": "Zehner",
-     "text": "",
+     "text": "Ein Zehner ist eine Stange. 5 Stangen sind 50.",
      "visuals": [
       {
        "type": "blocks",
@@ -70185,7 +70182,7 @@
     },
     {
      "h": "Einer",
-     "text": "",
+     "text": "Ein Einer ist ein kleiner Würfel. 7 Würfel sind 7.",
      "visuals": [
       {
        "type": "blocks",
@@ -70213,7 +70210,7 @@
     },
     {
      "h": "Zusammen",
-     "text": "",
+     "text": "Hunderter, Zehner und Einer ergeben zusammen die Zahl.",
      "visuals": [
       {
        "type": "bar",
@@ -70263,7 +70260,7 @@
     },
     {
      "h": "Zahl mit 0",
-     "text": "",
+     "text": "Wenn Zehner fehlen, schreibst du eine 0.",
      "visuals": [
       {
        "type": "blocks",
@@ -70301,7 +70298,7 @@
     },
     {
      "h": "Zahlenstrahl",
-     "text": "",
+     "text": "Auf dem Zahlenstrahl liegen die Zahlen nach Grösse geordnet.",
      "visuals": [
       {
        "type": "nline",
@@ -70317,7 +70314,7 @@
     },
     {
      "h": "Hundertersprünge",
-     "text": "",
+     "text": "In Hundertersprüngen kommst du schnell voran.",
      "visuals": [
       {
        "type": "jumps",
@@ -70342,7 +70339,7 @@
     },
     {
      "h": "Vergleichen",
-     "text": "Erst H, dann Z, dann E.",
+     "text": "Beim Vergleichen schaust du zuerst auf die Hunderter.",
      "visuals": [
       {
        "type": "chips",
@@ -70368,7 +70365,7 @@
     },
     {
      "h": "Nachbarn",
-     "text": "",
+     "text": "Der Vorgänger ist eins weniger, der Nachfolger eins mehr.",
      "visuals": [
       {
        "type": "chips",
@@ -71693,7 +71690,7 @@
     },
     {
      "h": "Auf Zehner",
-     "text": "",
+     "text": "Beim Runden suchst du die nächste runde Zahl.",
      "visuals": [
       {
        "type": "nline",
@@ -71728,7 +71725,7 @@
     },
     {
      "h": "Aufrunden",
-     "text": "",
+     "text": "Bei 6 bis 9 gehst du vor, das ist aufrunden.",
      "visuals": [
       {
        "type": "nline",
@@ -71763,7 +71760,7 @@
     },
     {
      "h": "Die 5",
-     "text": "Bei 5 wird aufgerundet.",
+     "text": "Bei einer 5 wird aufgerundet.",
      "visuals": [
       {
        "type": "nline",
@@ -71798,7 +71795,7 @@
     },
     {
      "h": "Ziffer ansehen",
-     "text": "",
+     "text": "Bei 0 bis 4 wird abgerundet, ab 5 aufgerundet.",
      "visuals": [
       {
        "type": "emo",
@@ -71871,7 +71868,7 @@
     },
     {
      "h": "Auf Hunderter",
-     "text": "",
+     "text": "Bei Hundertern schaust du auf die Zehner.",
      "visuals": [
       {
        "type": "nline",
@@ -71906,7 +71903,7 @@
     },
     {
      "h": "Beispiel: 249",
-     "text": "",
+     "text": "Runde Schritt für Schritt.",
      "visuals": [
       {
        "type": "nline",
@@ -73143,7 +73140,7 @@
     },
     {
      "h": "Im Bild",
-     "text": "",
+     "text": "Beide Zahlen als Platten, Stangen und Würfel.",
      "visuals": [
       {
        "type": "blocks",
@@ -73163,7 +73160,7 @@
     },
     {
      "h": "Zerlegen",
-     "text": "Teile die zweite Zahl.",
+     "text": "Die zweite Zahl wird in Hunderter, Zehner und Einer zerlegt.",
      "visuals": [
       {
        "type": "bar",
@@ -73188,7 +73185,7 @@
     },
     {
      "h": "Hunderter dazu",
-     "text": "",
+     "text": "Zuerst addierst du die Hunderter.",
      "visuals": [
       {
        "type": "jumps",
@@ -73220,7 +73217,7 @@
     },
     {
      "h": "Zehner dazu",
-     "text": "",
+     "text": "Dann kommen die Zehner dazu.",
      "visuals": [
       {
        "type": "jumps",
@@ -73252,7 +73249,7 @@
     },
     {
      "h": "Einer dazu",
-     "text": "",
+     "text": "Zuletzt die Einer.",
      "visuals": [
       {
        "type": "jumps",
@@ -73284,7 +73281,7 @@
     },
     {
      "h": "Alles zusammen",
-     "text": "",
+     "text": "Alle Zwischenschritte zusammen ergeben das Ergebnis.",
      "visuals": [
       {
        "type": "jumps",
@@ -73339,7 +73336,7 @@
     },
     {
      "h": "Beispiel: 345 + 223",
-     "text": "",
+     "text": "Gleicher Weg bei einer neuen Aufgabe.",
      "visuals": [
       {
        "type": "bar",
@@ -73408,7 +73405,7 @@
     },
     {
      "h": "Beispiel: 458 + 321",
-     "text": "",
+     "text": "Und noch einmal mit anderen Zahlen.",
      "visuals": [
       {
        "type": "bar",
@@ -73477,7 +73474,7 @@
     },
     {
      "h": "Probe",
-     "text": "Rechne zurück.",
+     "text": "Mit der Probe kontrollierst du das Ergebnis.",
      "visuals": [
       {
        "type": "jumps",
@@ -74731,7 +74728,7 @@
     },
     {
      "h": "Im Bild",
-     "text": "",
+     "text": "Beide Zahlen als Platten, Stangen und Würfel.",
      "visuals": [
       {
        "type": "blocks",
@@ -74751,7 +74748,7 @@
     },
     {
      "h": "Zerlegen",
-     "text": "Teile die zweite Zahl.",
+     "text": "Die zweite Zahl wird in Hunderter, Zehner und Einer zerlegt.",
      "visuals": [
       {
        "type": "bar",
@@ -74776,7 +74773,7 @@
     },
     {
      "h": "Hunderter weg",
-     "text": "",
+     "text": "Zuerst nimmst du die Hunderter weg.",
      "visuals": [
       {
        "type": "jumps",
@@ -74808,7 +74805,7 @@
     },
     {
      "h": "Zehner weg",
-     "text": "",
+     "text": "Dann die Zehner.",
      "visuals": [
       {
        "type": "jumps",
@@ -74840,7 +74837,7 @@
     },
     {
      "h": "Einer weg",
-     "text": "",
+     "text": "Zuletzt die Einer.",
      "visuals": [
       {
        "type": "jumps",
@@ -74872,7 +74869,7 @@
     },
     {
      "h": "Alles zusammen",
-     "text": "",
+     "text": "Der Rest ist das Ergebnis.",
      "visuals": [
       {
        "type": "jumps",
@@ -74927,7 +74924,7 @@
     },
     {
      "h": "Beispiel: 659 − 324",
-     "text": "",
+     "text": "Gleicher Weg bei einer neuen Aufgabe.",
      "visuals": [
       {
        "type": "bar",
@@ -74996,7 +74993,7 @@
     },
     {
      "h": "Beispiel: 875 − 431",
-     "text": "",
+     "text": "Und noch einmal mit anderen Zahlen.",
      "visuals": [
       {
        "type": "bar",
@@ -75065,7 +75062,7 @@
     },
     {
      "h": "Probe",
-     "text": "Rechne zurück.",
+     "text": "Mit Plus kontrollierst du das Ergebnis.",
      "visuals": [
       {
        "type": "jumps",
@@ -76240,7 +76237,7 @@
     },
     {
      "h": "Die 3er-Reihe",
-     "text": "",
+     "text": "Die 3er-Reihe zählst du in Dreierschritten.",
      "visuals": [
       {
        "type": "jumps",
@@ -76277,7 +76274,7 @@
     },
     {
      "h": "Die 4er-Reihe",
-     "text": "",
+     "text": "Vier mal vier ergibt ein Quadrat aus Punkten.",
      "visuals": [
       {
        "type": "arr",
@@ -76318,7 +76315,7 @@
     },
     {
      "h": "Die 6er-Reihe",
-     "text": "",
+     "text": "Bei der 6er-Reihe hilft dir die 5er-Reihe.",
      "visuals": [
       {
        "type": "arr",
@@ -76357,7 +76354,7 @@
     },
     {
      "h": "Tauschen",
-     "text": "",
+     "text": "Mal-Aufgaben kannst du tauschen: das Ergebnis bleibt gleich.",
      "visuals": [
       {
        "type": "arr",
@@ -76389,7 +76386,7 @@
     },
     {
      "h": "Verdoppeln",
-     "text": "",
+     "text": "Doppelt so viele Gruppen heisst doppeltes Ergebnis.",
      "visuals": [
       {
        "type": "bar",
@@ -76435,7 +76432,7 @@
     },
     {
      "h": "Trick: 9er",
-     "text": "",
+     "text": "Bei der 9er-Reihe rechnest du erst mal 10 und nimmst dann eine Gruppe weg.",
      "visuals": [
       {
        "type": "arr",
@@ -76474,7 +76471,7 @@
     },
     {
      "h": "Beispiel: 7 × 8",
-     "text": "",
+     "text": "Zerlege die Aufgabe in leichte Teile.",
      "visuals": [
       {
        "type": "arr",
@@ -77743,7 +77740,7 @@
     },
     {
      "h": "Gruppen bilden",
-     "text": "",
+     "text": "So sehen die Gruppen von 10 aus.",
      "visuals": [
       {
        "type": "emo",
@@ -77792,7 +77789,7 @@
     },
     {
      "h": "Rechenstrich",
-     "text": "",
+     "text": "Du kannst auch Zehner um Zehner wegnehmen.",
      "visuals": [
       {
        "type": "jumps",
@@ -77817,7 +77814,7 @@
     },
     {
      "h": "Umkehren",
-     "text": "",
+     "text": "Teilen ist die Umkehrung von Malnehmen.",
      "visuals": [
       {
        "type": "arr",
@@ -77846,7 +77843,7 @@
     },
     {
      "h": "Die 10er-Reihe",
-     "text": "",
+     "text": "Die 10er-Reihe kennst du schon.",
      "visuals": [
       {
        "type": "nline",
@@ -77869,7 +77866,7 @@
     },
     {
      "h": "Beispiel: 70 : 10",
-     "text": "",
+     "text": "7 Zehner geben 7 Gruppen.",
      "visuals": [
       {
        "type": "bar",
@@ -77935,7 +77932,7 @@
     },
     {
      "h": "Beispiel: 90 : 10",
-     "text": "",
+     "text": "9 Zehner geben 9 Gruppen.",
      "visuals": [
       {
        "type": "jumps",
@@ -78967,7 +78964,7 @@
     },
     {
      "h": "∟ erkennen",
-     "text": "",
+     "text": "Ein Quadrat hat vier rechte Winkel.",
      "visuals": [
       {
        "type": "shape",
@@ -78988,7 +78985,7 @@
     },
     {
      "h": "Rechteck",
-     "text": "",
+     "text": "Auch beim Rechteck sind alle Ecken rechte Winkel.",
      "visuals": [
       {
        "type": "shape",
@@ -79014,7 +79011,7 @@
     },
     {
      "h": "Dreieck",
-     "text": "",
+     "text": "Beim Dreieck gibt es hier keinen rechten Winkel.",
      "visuals": [
       {
        "type": "shape",
@@ -79040,7 +79037,7 @@
     },
     {
      "h": "Prüfen",
-     "text": "Lege die Papierecke an.",
+     "text": "Lege die Ecke eines Blattes an, dann siehst du es sofort.",
      "visuals": [
       {
        "type": "par",
@@ -79065,7 +79062,7 @@
     },
     {
      "h": "Im Alltag",
-     "text": "",
+     "text": "Im Alltag findest du rechte Winkel überall.",
      "visuals": [
       {
        "type": "emo",
@@ -79103,7 +79100,7 @@
     },
     {
      "h": "Schief",
-     "text": "",
+     "text": "Ein schiefer Winkel passt nicht an die Papierecke.",
      "visuals": [
       {
        "type": "par",
@@ -80418,7 +80415,7 @@
     },
     {
      "h": "Tausender",
-     "text": "",
+     "text": "Tausend ist tausendmal die Eins.",
      "visuals": [
       {
        "type": "bar",
@@ -80443,7 +80440,7 @@
     },
     {
      "h": "10 mal mehr",
-     "text": "Jede Stelle ist 10 mal mehr.",
+     "text": "Jede Stelle ist zehnmal so viel wie die rechts daneben.",
      "visuals": [
       {
        "type": "chips",
@@ -80484,7 +80481,7 @@
     },
     {
      "h": "Zahl zerlegen",
-     "text": "",
+     "text": "Die Zahl wird nach Stellenwerten zerlegt.",
      "visuals": [
       {
        "type": "bar",
@@ -80509,7 +80506,7 @@
     },
     {
      "h": "Zahl lesen",
-     "text": "",
+     "text": "Gelesen wird in Dreiergruppen.",
      "visuals": [
       {
        "type": "chips",
@@ -80540,7 +80537,7 @@
     },
     {
      "h": "Zahlenstrahl",
-     "text": "",
+     "text": "Auf dem Zahlenstrahl siehst du die Grösse.",
      "visuals": [
       {
        "type": "nline",
@@ -80555,7 +80552,7 @@
     },
     {
      "h": "Schritte",
-     "text": "",
+     "text": "In grossen Schritten springst du schnell.",
      "visuals": [
       {
        "type": "jumps",
@@ -80580,7 +80577,7 @@
     },
     {
      "h": "Vergleichen",
-     "text": "Länge zuerst, dann Ziffern.",
+     "text": "Zuerst zählst du die Stellen, dann vergleichst du die Ziffern.",
      "visuals": [
       {
        "type": "chips",
@@ -81780,7 +81777,7 @@
     },
     {
      "h": "Untereinander",
-     "text": "Einer unter Einer.",
+     "text": "Schreibe die Zahlen genau untereinander: Einer unter Einer.",
      "visuals": [
       {
        "type": "col",
@@ -81794,7 +81791,7 @@
     },
     {
      "h": "Einer",
-     "text": "",
+     "text": "Du beginnst rechts bei den Einern.",
      "visuals": [
       {
        "type": "col",
@@ -81832,7 +81829,7 @@
     },
     {
      "h": "Zehner",
-     "text": "",
+     "text": "Dann kommen die Zehner und der Übertrag dazu.",
      "visuals": [
       {
        "type": "col",
@@ -81874,7 +81871,7 @@
     },
     {
      "h": "Ohne Übertrag",
-     "text": "",
+     "text": "Ohne Übertrag ist es einfacher.",
      "visuals": [
       {
        "type": "col",
@@ -81911,7 +81908,7 @@
     },
     {
      "h": "Beispiel 2",
-     "text": "",
+     "text": "Hier gibt es einen Übertrag.",
      "visuals": [
       {
        "type": "col",
@@ -81948,7 +81945,7 @@
     },
     {
      "h": "Probe",
-     "text": "",
+     "text": "Mit Minus kontrollierst du das Ergebnis.",
      "visuals": [
       {
        "type": "jumps",
@@ -83298,7 +83295,7 @@
     },
     {
      "h": "Untereinander",
-     "text": "",
+     "text": "Schreibe die Zahlen genau untereinander: Einer unter Einer.",
      "visuals": [
       {
        "type": "col",
@@ -83312,7 +83309,7 @@
     },
     {
      "h": "Einer",
-     "text": "2 − 5 geht nicht. 10 dazu.",
+     "text": "Wenn die obere Ziffer kleiner ist, holst du dir 10 vom Zehner.",
      "visuals": [
       {
        "type": "col",
@@ -83350,7 +83347,7 @@
     },
     {
      "h": "Zehner",
-     "text": "",
+     "text": "Der Zehner gibt einen ab, dann rechnest du weiter.",
      "visuals": [
       {
        "type": "col",
@@ -83387,7 +83384,7 @@
     },
     {
      "h": "Ohne Entbündeln",
-     "text": "",
+     "text": "Ohne Entbündeln ist es einfacher.",
      "visuals": [
       {
        "type": "col",
@@ -83424,7 +83421,7 @@
     },
     {
      "h": "Beispiel 2",
-     "text": "",
+     "text": "Hier musst du entbündeln.",
      "visuals": [
       {
        "type": "col",
@@ -83461,7 +83458,7 @@
     },
     {
      "h": "Probe",
-     "text": "",
+     "text": "Mit Plus kontrollierst du das Ergebnis.",
      "visuals": [
       {
        "type": "jumps",
@@ -84773,7 +84770,7 @@
     },
     {
      "h": "1 Liter",
-     "text": "",
+     "text": "Ein Liter besteht aus 10 Deziliter.",
      "visuals": [
       {
        "type": "bar",
@@ -84826,7 +84823,7 @@
     },
     {
      "h": "Umrechnen",
-     "text": "",
+     "text": "Ein Liter hat 10 Deziliter.",
      "visuals": [
       {
        "type": "conv",
@@ -84852,7 +84849,7 @@
     },
     {
      "h": "Halber Liter",
-     "text": "",
+     "text": "Ein halber Liter sind 5 Deziliter.",
      "visuals": [
       {
        "type": "jug",
@@ -84881,7 +84878,7 @@
     },
     {
      "h": "Viertel",
-     "text": "",
+     "text": "Wie viel sind 3 Deziliter?",
      "visuals": [
       {
        "type": "jug",
@@ -84905,7 +84902,7 @@
     },
     {
      "h": "Mehrere Liter",
-     "text": "",
+     "text": "Mehrere Liter rechnest du mal 10.",
      "visuals": [
       {
        "type": "bar",
@@ -84930,7 +84927,7 @@
     },
     {
      "h": "Zusammen",
-     "text": "",
+     "text": "Liter und Deziliter zusammen rechnest du in Deziliter.",
      "visuals": [
       {
        "type": "bar",
@@ -86195,7 +86192,7 @@
     },
     {
      "h": "1 dl in cl",
-     "text": "",
+     "text": "Ein Deziliter hat 10 Zentiliter.",
      "visuals": [
       {
        "type": "conv",
@@ -86221,7 +86218,7 @@
     },
     {
      "h": "1 l in cl",
-     "text": "",
+     "text": "Ein Liter hat 100 Zentiliter.",
      "visuals": [
       {
        "type": "bar",
@@ -86289,7 +86286,7 @@
     },
     {
      "h": "Ketten",
-     "text": "",
+     "text": "Die drei Masse stehen in einer Kette.",
      "visuals": [
       {
        "type": "chips",
@@ -86315,7 +86312,7 @@
     },
     {
      "h": "Halber Liter",
-     "text": "",
+     "text": "Ein halber Liter sind 50 Zentiliter.",
      "visuals": [
       {
        "type": "bar",
@@ -86347,7 +86344,7 @@
     },
     {
      "h": "Rechnen",
-     "text": "",
+     "text": "Gleiche Mengen kannst du verdoppeln.",
      "visuals": [
       {
        "type": "bar",
@@ -86368,7 +86365,7 @@
     },
     {
      "h": "Beispiel",
-     "text": "",
+     "text": "Zuerst alles in Zentiliter umrechnen.",
      "visuals": [
       {
        "type": "bar",
@@ -87435,7 +87432,7 @@
     },
     {
      "h": "1. Lesen",
-     "text": "",
+     "text": "Lies genau: Was ist gegeben, was ist gesucht?",
      "visuals": [
       {
        "type": "emo",
@@ -87471,7 +87468,7 @@
     },
     {
      "h": "2. Rechnung wählen",
-     "text": "",
+     "text": "Wähle die passende Rechnung.",
      "visuals": [
       {
        "type": "chips",
@@ -87497,7 +87494,7 @@
     },
     {
      "h": "3. Rechnen",
-     "text": "",
+     "text": "Rechne mit den Zahlen aus der Aufgabe.",
      "visuals": [
       {
        "type": "bar",
@@ -87522,7 +87519,7 @@
     },
     {
      "h": "4. Antwort",
-     "text": "",
+     "text": "Schreibe einen Antwortsatz mit Einheit.",
      "visuals": [
       {
        "type": "chips",
@@ -87543,7 +87540,7 @@
     },
     {
      "h": "Umrechnen nötig",
-     "text": "",
+     "text": "Manchmal musst du zuerst umrechnen.",
      "visuals": [
       {
        "type": "conv",
@@ -87569,7 +87566,7 @@
     },
     {
      "h": "Rest",
-     "text": "",
+     "text": "Bei Resten rechnest du minus.",
      "visuals": [
       {
        "type": "jumps",
@@ -88743,7 +88740,7 @@
     },
     {
      "h": "Stufen",
-     "text": "Jede Stufe ist 10 mal mehr.",
+     "text": "Jede Stufe ist zehnmal grösser.",
      "visuals": [
       {
        "type": "chips",
@@ -88774,7 +88771,7 @@
     },
     {
      "h": "Zahlenstrahl",
-     "text": "",
+     "text": "Auf dem Zahlenstrahl liegt die Million ganz rechts.",
      "visuals": [
       {
        "type": "nline",
@@ -88789,7 +88786,7 @@
     },
     {
      "h": "Sprünge",
-     "text": "",
+     "text": "In vier gleichen Sprüngen kommst du zur Million.",
      "visuals": [
       {
        "type": "jumps",
@@ -88818,7 +88815,7 @@
     },
     {
      "h": "Zahl zerlegen",
-     "text": "",
+     "text": "Zerlege grosse Zahlen in ihre Stellenwerte.",
      "visuals": [
       {
        "type": "bar",
@@ -88843,7 +88840,7 @@
     },
     {
      "h": "Lesen",
-     "text": "",
+     "text": "Gelesen wird in Dreiergruppen.",
      "visuals": [
       {
        "type": "chips",
@@ -88869,7 +88866,7 @@
     },
     {
      "h": "Vergleichen",
-     "text": "",
+     "text": "Die Zahl vor der Million ist 999'999.",
      "visuals": [
       {
        "type": "chips",
@@ -89894,7 +89891,7 @@
     },
     {
      "h": "Vielfache",
-     "text": "",
+     "text": "Vielfache wachsen in gleichen Schritten.",
      "visuals": [
       {
        "type": "jumps",
@@ -89927,7 +89924,7 @@
     },
     {
      "h": "Teiler finden",
-     "text": "",
+     "text": "Teiler gehen ohne Rest in die Zahl.",
      "visuals": [
       {
        "type": "arr",
@@ -89957,7 +89954,7 @@
     },
     {
      "h": "Alle Teiler von 12",
-     "text": "",
+     "text": "Die 12 hat sechs Teiler.",
      "visuals": [
       {
        "type": "chips",
@@ -89998,7 +89995,7 @@
     },
     {
      "h": "Teilbar durch 2",
-     "text": "Einer ist 0, 2, 4, 6, 8.",
+     "text": "Gerade Zahlen enden auf 0, 2, 4, 6 oder 8.",
      "visuals": [
       {
        "type": "chips",
@@ -90024,7 +90021,7 @@
     },
     {
      "h": "Teilbar durch 5",
-     "text": "Einer ist 0 oder 5.",
+     "text": "Die 5 teilt Zahlen, die auf 0 oder 5 enden.",
      "visuals": [
       {
        "type": "chips",
@@ -90050,7 +90047,7 @@
     },
     {
      "h": "Teilbar durch 10",
-     "text": "Einer ist 0.",
+     "text": "Die 10 teilt Zahlen, die auf 0 enden.",
      "visuals": [
       {
        "type": "chips",
@@ -91472,7 +91469,7 @@
     },
     {
      "h": "Ganzes teilen",
-     "text": "",
+     "text": "Zuerst teilst du das Ganze in gleiche Teile.",
      "visuals": [
       {
        "type": "pie",
@@ -91499,7 +91496,7 @@
     },
     {
      "h": "Teile zählen",
-     "text": "",
+     "text": "Dann zählst du die gefärbten Teile.",
      "visuals": [
       {
        "type": "pie",
@@ -91526,7 +91523,7 @@
     },
     {
      "h": "Halbe",
-     "text": "",
+     "text": "Die Hälfte ist ein Teil von zwei gleichen Teilen.",
      "visuals": [
       {
        "type": "pie",
@@ -91548,7 +91545,7 @@
     },
     {
      "h": "Viertel",
-     "text": "",
+     "text": "Ein Viertel ist ein Teil von vier gleichen Teilen.",
      "visuals": [
       {
        "type": "pie",
@@ -91571,7 +91568,7 @@
     },
     {
      "h": "Achtel",
-     "text": "",
+     "text": "Drei Achtel sind drei von acht gleichen Teilen.",
      "visuals": [
       {
        "type": "pie",
@@ -91594,7 +91591,7 @@
     },
     {
      "h": "Vergleichen",
-     "text": "Mehr Teile heisst kleinere Stücke.",
+     "text": "Je mehr Teile, desto kleiner jedes Stück.",
      "visuals": [
       {
        "type": "fbar",
@@ -91622,7 +91619,7 @@
     },
     {
      "h": "Das Ganze",
-     "text": "",
+     "text": "Sind alle Teile gefärbt, ist es ein Ganzes.",
      "visuals": [
       {
        "type": "pie",
@@ -93026,7 +93023,7 @@
     },
     {
      "h": "1. Teilen",
-     "text": "",
+     "text": "Teile die Menge in gleich grosse Gruppen.",
      "visuals": [
       {
        "type": "bar",
@@ -93055,7 +93052,7 @@
     },
     {
      "h": "2. Nehmen",
-     "text": "",
+     "text": "Dann nimmst du so viele Gruppen, wie der Zähler sagt.",
      "visuals": [
       {
        "type": "bar",
@@ -93104,7 +93101,7 @@
     },
     {
      "h": "Ein Halb",
-     "text": "",
+     "text": "Die Hälfte teilst du durch 2.",
      "visuals": [
       {
        "type": "bar",
@@ -93125,7 +93122,7 @@
     },
     {
      "h": "Ein Viertel",
-     "text": "",
+     "text": "Ein Viertel teilst du durch 4.",
      "visuals": [
       {
        "type": "bar",
@@ -93154,7 +93151,7 @@
     },
     {
      "h": "Ein Fünftel",
-     "text": "",
+     "text": "Ein Fünftel teilst du durch 5.",
      "visuals": [
       {
        "type": "bar",
@@ -93187,7 +93184,7 @@
     },
     {
      "h": "Beispiel: 3/4 von 24",
-     "text": "",
+     "text": "Zuerst durch den Nenner teilen, dann mal den Zähler.",
      "visuals": [
       {
        "type": "pie",
@@ -94271,7 +94268,7 @@
     },
     {
      "h": "Zerlegen",
-     "text": "",
+     "text": "Zerlege die grössere Zahl in Zehner und Einer.",
      "visuals": [
       {
        "type": "bar",
@@ -94292,7 +94289,7 @@
     },
     {
      "h": "Zehner mal",
-     "text": "",
+     "text": "Zuerst rechnest du die Zehner mal.",
      "visuals": [
       {
        "type": "bar",
@@ -94321,7 +94318,7 @@
     },
     {
      "h": "Einer mal",
-     "text": "",
+     "text": "Dann die Einer mal.",
      "visuals": [
       {
        "type": "bar",
@@ -94350,7 +94347,7 @@
     },
     {
      "h": "Zusammen",
-     "text": "",
+     "text": "Beide Teilprodukte addierst du.",
      "visuals": [
       {
        "type": "bar",
@@ -94396,7 +94393,7 @@
     },
     {
      "h": "Beispiel: 3 × 23",
-     "text": "",
+     "text": "Gleicher Weg bei einer neuen Aufgabe.",
      "visuals": [
       {
        "type": "bar",
@@ -94417,7 +94414,7 @@
     },
     {
      "h": "Beispiel: 5 × 14",
-     "text": "",
+     "text": "Auch hier zerlegst du in Zehner und Einer.",
      "visuals": [
       {
        "type": "chips",
@@ -95777,7 +95774,7 @@
     },
     {
      "h": "Zerlegen",
-     "text": "",
+     "text": "Zerlege die Zahl so, dass beide Teile aufgehen.",
      "visuals": [
       {
        "type": "bar",
@@ -95798,7 +95795,7 @@
     },
     {
      "h": "Zehner teilen",
-     "text": "",
+     "text": "Zuerst teilst du die Zehner.",
      "visuals": [
       {
        "type": "chips",
@@ -95829,7 +95826,7 @@
     },
     {
      "h": "Einer teilen",
-     "text": "",
+     "text": "Dann teilst du die Einer.",
      "visuals": [
       {
        "type": "chips",
@@ -95860,7 +95857,7 @@
     },
     {
      "h": "Zusammen",
-     "text": "",
+     "text": "Beide Ergebnisse zählst du zusammen.",
      "visuals": [
       {
        "type": "chips",
@@ -95891,7 +95888,7 @@
     },
     {
      "h": "Mit Rest",
-     "text": "",
+     "text": "Bleibt etwas übrig, ist das der Rest.",
      "visuals": [
       {
        "type": "emo",
@@ -95944,7 +95941,7 @@
     },
     {
      "h": "Probe",
-     "text": "",
+     "text": "Mit Malnehmen kontrollierst du das Ergebnis.",
      "visuals": [
       {
        "type": "arr",
@@ -97408,7 +97405,7 @@
     },
     {
      "h": "Zehntel",
-     "text": "",
+     "text": "Ein Zehntel ist ein Teil von zehn gleichen Teilen.",
      "visuals": [
       {
        "type": "fbar",
@@ -97445,7 +97442,7 @@
     },
     {
      "h": "Hundertstel",
-     "text": "",
+     "text": "Ein Hundertstel ist ein Teil von hundert gleichen Teilen.",
      "visuals": [
       {
        "type": "field",
@@ -97479,7 +97476,7 @@
     },
     {
      "h": "Ganze und Teile",
-     "text": "",
+     "text": "Links vom Komma stehen die Ganzen, rechts die Teile.",
      "visuals": [
       {
        "type": "fbar",
@@ -97522,7 +97519,7 @@
     },
     {
      "h": "Zahlenstrahl",
-     "text": "",
+     "text": "Auch auf dem Zahlenstrahl liegen Kommazahlen.",
      "visuals": [
       {
        "type": "nline",
@@ -97537,7 +97534,7 @@
     },
     {
      "h": "Vergleichen",
-     "text": "",
+     "text": "Beim Vergleichen schaust du zuerst auf die Zehntel.",
      "visuals": [
       {
        "type": "chips",
@@ -97563,7 +97560,7 @@
     },
     {
      "h": "Geld",
-     "text": "",
+     "text": "Bei Geld hast du schon Dezimalzahlen benutzt.",
      "visuals": [
       {
        "type": "chips",
@@ -98715,7 +98712,7 @@
     },
     {
      "h": "Quadrate zählen",
-     "text": "",
+     "text": "Jedes Kästchen ist ein Quadratzentimeter.",
      "visuals": [
       {
        "type": "area",
@@ -98745,7 +98742,7 @@
     },
     {
      "h": "Reihen",
-     "text": "",
+     "text": "Zähle die Reihen: so viele Kästchen pro Reihe, so oft.",
      "visuals": [
       {
        "type": "arr",
@@ -98784,7 +98781,7 @@
     },
     {
      "h": "Regel",
-     "text": "",
+     "text": "Länge mal Breite ergibt die Fläche.",
      "visuals": [
       {
        "type": "chips",
@@ -98815,7 +98812,7 @@
     },
     {
      "h": "Beispiel 1",
-     "text": "",
+     "text": "Eine Fläche aus 6 mal 3 Kästchen.",
      "visuals": [
       {
        "type": "area",
@@ -98845,7 +98842,7 @@
     },
     {
      "h": "Beispiel 2",
-     "text": "",
+     "text": "Eine Fläche aus 7 mal 2 Kästchen.",
      "visuals": [
       {
        "type": "area",
@@ -98875,7 +98872,7 @@
     },
     {
      "h": "Quadrat",
-     "text": "",
+     "text": "Beim Quadrat sind Länge und Breite gleich.",
      "visuals": [
       {
        "type": "area",
@@ -100287,7 +100284,7 @@
     },
     {
      "h": "Eine Schicht",
-     "text": "",
+     "text": "Zuerst füllst du den Boden mit Würfeln.",
      "visuals": [
       {
        "type": "arr",
@@ -100316,7 +100313,7 @@
     },
     {
      "h": "Schichten",
-     "text": "",
+     "text": "Dann stapelst du Schichten übereinander.",
      "visuals": [
       {
        "type": "bar",
@@ -100337,7 +100334,7 @@
     },
     {
      "h": "Zusammen",
-     "text": "",
+     "text": "Eine Schicht mal die Zahl der Schichten.",
      "visuals": [
       {
        "type": "chips",
@@ -100363,7 +100360,7 @@
     },
     {
      "h": "Regel",
-     "text": "",
+     "text": "Länge mal Breite mal Höhe.",
      "visuals": [
       {
        "type": "chips",
@@ -100399,7 +100396,7 @@
     },
     {
      "h": "Beispiel",
-     "text": "",
+     "text": "Ein Beispiel mit anderen Massen.",
      "visuals": [
       {
        "type": "quader",
@@ -100436,7 +100433,7 @@
     },
     {
      "h": "Würfel",
-     "text": "",
+     "text": "Beim Würfel sind alle drei Masse gleich.",
      "visuals": [
       {
        "type": "quader",
@@ -101704,7 +101701,7 @@
     },
     {
      "h": "1 Tonne",
-     "text": "",
+     "text": "Eine Tonne besteht aus 10 mal 100 Kilogramm.",
      "visuals": [
       {
        "type": "bar",
@@ -101757,7 +101754,7 @@
     },
     {
      "h": "Umrechnen",
-     "text": "",
+     "text": "Von Tonnen zu Kilogramm rechnest du mal 1'000.",
      "visuals": [
       {
        "type": "conv",
@@ -101783,7 +101780,7 @@
     },
     {
      "h": "Halbe Tonne",
-     "text": "",
+     "text": "Eine halbe Tonne sind 500 Kilogramm.",
      "visuals": [
       {
        "type": "bar",
@@ -101819,7 +101816,7 @@
     },
     {
      "h": "Mehrere Tonnen",
-     "text": "",
+     "text": "Mehrere Tonnen zählst du zusammen.",
      "visuals": [
       {
        "type": "bar",
@@ -101844,7 +101841,7 @@
     },
     {
      "h": "Zusammen",
-     "text": "",
+     "text": "Zwei Gewichte können zusammen eine Tonne ergeben.",
      "visuals": [
       {
        "type": "bar",
@@ -101865,7 +101862,7 @@
     },
     {
      "h": "Lastwagen",
-     "text": "",
+     "text": "Ein Lastwagen kann in Etappen laden.",
      "visuals": [
       {
        "type": "jumps",
@@ -102907,7 +102904,7 @@
     },
     {
      "h": "Stellenwerte",
-     "text": "",
+     "text": "Jede Ziffer hat einen Stellenwert.",
      "visuals": [
       {
        "type": "chips",
@@ -102938,7 +102935,7 @@
     },
     {
      "h": "Zehntel",
-     "text": "",
+     "text": "Die erste Stelle nach dem Komma sind Zehntel.",
      "visuals": [
       {
        "type": "fbar",
@@ -102955,7 +102952,7 @@
     },
     {
      "h": "Hundertstel",
-     "text": "",
+     "text": "Die zweite Stelle sind Hundertstel.",
      "visuals": [
       {
        "type": "field",
@@ -102969,7 +102966,7 @@
     },
     {
      "h": "Vergleichen",
-     "text": "Stelle für Stelle.",
+     "text": "Vergleiche Stelle für Stelle von links.",
      "visuals": [
       {
        "type": "chips",
@@ -103006,7 +103003,7 @@
     },
     {
      "h": "Addieren",
-     "text": "Komma unter Komma.",
+     "text": "Beim Addieren stehen Komma unter Komma.",
      "visuals": [
       {
        "type": "bar",
@@ -103027,7 +103024,7 @@
     },
     {
      "h": "Subtrahieren",
-     "text": "",
+     "text": "Beim Subtrahieren auch.",
      "visuals": [
       {
        "type": "jumps",
@@ -103044,7 +103041,7 @@
     },
     {
      "h": "Nullen",
-     "text": "",
+     "text": "Angehängte Nullen ändern den Wert nicht.",
      "visuals": [
       {
        "type": "chips",
@@ -104383,7 +104380,7 @@
     },
     {
      "h": "Erweitern ×2",
-     "text": "",
+     "text": "Beim Erweitern malst du Zähler und Nenner mit derselben Zahl.",
      "visuals": [
       {
        "type": "pie",
@@ -104426,7 +104423,7 @@
     },
     {
      "h": "Erweitern ×3",
-     "text": "",
+     "text": "Auch mit 3 bleibt der Wert gleich.",
      "visuals": [
       {
        "type": "pie",
@@ -104469,7 +104466,7 @@
     },
     {
      "h": "Kürzen ÷2",
-     "text": "",
+     "text": "Beim Kürzen teilst du Zähler und Nenner durch dieselbe Zahl.",
      "visuals": [
       {
        "type": "pie",
@@ -104512,7 +104509,7 @@
     },
     {
      "h": "Kürzen ÷3",
-     "text": "",
+     "text": "Auch hier bleibt der Wert gleich.",
      "visuals": [
       {
        "type": "fbar",
@@ -104555,7 +104552,7 @@
     },
     {
      "h": "Gleichnamig machen",
-     "text": "",
+     "text": "So bekommst du gleiche Nenner.",
      "visuals": [
       {
        "type": "fbar",
@@ -104593,7 +104590,7 @@
     },
     {
      "h": "Vergleichen",
-     "text": "",
+     "text": "Gleiche Nenner machen den Vergleich leicht.",
      "visuals": [
       {
        "type": "fbar",
@@ -106047,7 +106044,7 @@
     },
     {
      "h": "Zehntel",
-     "text": "",
+     "text": "Zehntel sind die erste Stelle nach dem Komma.",
      "visuals": [
       {
        "type": "fbar",
@@ -106079,7 +106076,7 @@
     },
     {
      "h": "Hundertstel",
-     "text": "",
+     "text": "Hundertstel sind die zweite Stelle.",
      "visuals": [
       {
        "type": "field",
@@ -106107,7 +106104,7 @@
     },
     {
      "h": "Halbe",
-     "text": "",
+     "text": "Die Hälfte ist 5 Zehntel.",
      "visuals": [
       {
        "type": "fbar",
@@ -106150,7 +106147,7 @@
     },
     {
      "h": "Viertel",
-     "text": "",
+     "text": "Ein Viertel erweiterst du auf Hundertstel.",
      "visuals": [
       {
        "type": "fbar",
@@ -106193,7 +106190,7 @@
     },
     {
      "h": "Fünftel",
-     "text": "",
+     "text": "Ein Fünftel erweiterst du auf Zehntel.",
      "visuals": [
       {
        "type": "fbar",
@@ -106236,7 +106233,7 @@
     },
     {
      "h": "Drei Viertel",
-     "text": "",
+     "text": "Drei Viertel sind 75 Hundertstel.",
      "visuals": [
       {
        "type": "pie",
@@ -107350,7 +107347,7 @@
     },
     {
      "h": "Radius",
-     "text": "",
+     "text": "Der Radius geht vom Mittelpunkt zum Rand.",
      "visuals": [
       {
        "type": "circle",
@@ -107376,7 +107373,7 @@
     },
     {
      "h": "Durchmesser",
-     "text": "",
+     "text": "Der Durchmesser geht durch den Mittelpunkt von Rand zu Rand.",
      "visuals": [
       {
        "type": "circle",
@@ -107397,7 +107394,7 @@
     },
     {
      "h": "d und r",
-     "text": "",
+     "text": "Der Durchmesser ist doppelt so lang wie der Radius.",
      "visuals": [
       {
        "type": "circle",
@@ -107429,7 +107426,7 @@
     },
     {
      "h": "Rechnen",
-     "text": "",
+     "text": "Radius mal 2 ergibt den Durchmesser.",
      "visuals": [
       {
        "type": "bar",
@@ -107470,7 +107467,7 @@
     },
     {
      "h": "Zeichnen",
-     "text": "",
+     "text": "Stelle den Zirkel ein, stich in M ein und drehe.",
      "visuals": [
       {
        "type": "flow",
@@ -107484,7 +107481,7 @@
     },
     {
      "h": "Beispiel",
-     "text": "",
+     "text": "Rückwärts: Durchmesser durch 2 ergibt den Radius.",
      "visuals": [
       {
        "type": "bar",
@@ -108821,7 +108818,7 @@
     },
     {
      "h": "Parallel",
-     "text": "",
+     "text": "Parallele Linien haben überall denselben Abstand.",
      "visuals": [
       {
        "type": "par",
@@ -108841,7 +108838,7 @@
     },
     {
      "h": "Senkrecht",
-     "text": "",
+     "text": "Senkrechte Linien kreuzen sich im rechten Winkel.",
      "visuals": [
       {
        "type": "par",
@@ -108861,7 +108858,7 @@
     },
     {
      "h": "Schräg",
-     "text": "",
+     "text": "Schräge Linien sind weder parallel noch senkrecht.",
      "visuals": [
       {
        "type": "par",
@@ -108881,7 +108878,7 @@
     },
     {
      "h": "Nicht parallel",
-     "text": "",
+     "text": "Wird der Abstand kleiner, sind sie nicht parallel.",
      "visuals": [
       {
        "type": "par",
@@ -108901,7 +108898,7 @@
     },
     {
      "h": "Parallele zeichnen",
-     "text": "",
+     "text": "Mit dem Geodreieck verschiebst du eine Linie.",
      "visuals": [
       {
        "type": "flow",
@@ -108916,7 +108913,7 @@
     },
     {
      "h": "Im Alltag",
-     "text": "",
+     "text": "Schienen sind parallel, Fensterkreuze senkrecht.",
      "visuals": [
       {
        "type": "emo",
@@ -109951,7 +109948,7 @@
     },
     {
      "h": "Geodreieck",
-     "text": "",
+     "text": "Lege das Geodreieck genau an den Scheitel.",
      "visuals": [
       {
        "type": "flow",
@@ -109965,7 +109962,7 @@
     },
     {
      "h": "Spitz",
-     "text": "",
+     "text": "Ein spitzer Winkel ist kleiner als ein rechter.",
      "visuals": [
       {
        "type": "angle",
@@ -109986,7 +109983,7 @@
     },
     {
      "h": "Rechter Winkel",
-     "text": "",
+     "text": "Ein rechter Winkel hat genau 90 Grad.",
      "visuals": [
       {
        "type": "angle",
@@ -110007,7 +110004,7 @@
     },
     {
      "h": "Stumpf",
-     "text": "",
+     "text": "Ein stumpfer Winkel ist grösser als ein rechter.",
      "visuals": [
       {
        "type": "angle",
@@ -110028,7 +110025,7 @@
     },
     {
      "h": "Gestreckt",
-     "text": "",
+     "text": "Ein gestreckter Winkel ist eine gerade Linie.",
      "visuals": [
       {
        "type": "angle",
@@ -110049,7 +110046,7 @@
     },
     {
      "h": "Zusammen",
-     "text": "",
+     "text": "Winkel können zusammen eine gerade Linie ergeben.",
      "visuals": [
       {
        "type": "bar",
@@ -111299,7 +111296,7 @@
     },
     {
      "h": "Hundertfeld",
-     "text": "",
+     "text": "Das Hundertfeld zeigt alle drei Schreibweisen.",
      "visuals": [
       {
        "type": "field",
@@ -111332,7 +111329,7 @@
     },
     {
      "h": "Prozent",
-     "text": "1 % ist 1 von 100.",
+     "text": "Ein Prozent ist ein Feld von hundert.",
      "visuals": [
       {
        "type": "field",
@@ -111365,7 +111362,7 @@
     },
     {
      "h": "Die Hälfte",
-     "text": "",
+     "text": "Die Hälfte sind fünfzig Prozent.",
      "visuals": [
       {
        "type": "field",
@@ -111393,7 +111390,7 @@
     },
     {
      "h": "Dreiviertel",
-     "text": "",
+     "text": "Drei Viertel sind fünfundsiebzig Prozent.",
      "visuals": [
       {
        "type": "pie",
@@ -111425,7 +111422,7 @@
     },
     {
      "h": "Fünftel",
-     "text": "",
+     "text": "Ein Fünftel sind zwanzig Prozent.",
      "visuals": [
       {
        "type": "fbar",
@@ -111468,7 +111465,7 @@
     },
     {
      "h": "Prozent von",
-     "text": "",
+     "text": "Zehn Prozent von hundert sind zehn.",
      "visuals": [
       {
        "type": "bar",
@@ -112841,7 +112838,7 @@
     },
     {
      "h": "1. Addieren",
-     "text": "",
+     "text": "Zuerst addierst du alle Werte.",
      "visuals": [
       {
        "type": "bar",
@@ -112866,7 +112863,7 @@
     },
     {
      "h": "2. Zählen",
-     "text": "",
+     "text": "Dann zählst du, wie viele Werte es sind.",
      "visuals": [
       {
        "type": "emo",
@@ -112892,7 +112889,7 @@
     },
     {
      "h": "3. Teilen",
-     "text": "",
+     "text": "Die Summe teilst du durch die Anzahl.",
      "visuals": [
       {
        "type": "chips",
@@ -112923,7 +112920,7 @@
     },
     {
      "h": "Ausgleichen",
-     "text": "",
+     "text": "Beim Ausgleichen bekommt jeder gleich viel.",
      "visuals": [
       {
        "type": "bar",
@@ -112948,7 +112945,7 @@
     },
     {
      "h": "Beispiel",
-     "text": "",
+     "text": "Ein Beispiel mit vier Werten.",
      "visuals": [
       {
        "type": "bars",
@@ -113005,7 +113002,7 @@
     },
     {
      "h": "Probe",
-     "text": "",
+     "text": "Mit Malnehmen machst du die Probe.",
      "visuals": [
       {
        "type": "chips",
