@@ -22,8 +22,8 @@ function xgTri(a,b,qa,qb,qc){
    +lab((B[0]+Cc[0])/2+16,(B[1]+Cc[1])/2-14,Math.round(Math.sqrt(a*a+b*b)),qc)+'</svg>';
 }
 function xgNums(ans,extra){
-  var set=[ans],c=[ans+1,ans-1,ans+2,ans-2,ans+3,ans-3].concat(extra||[]),i;c=shuffle(c.filter(function(x){return x>0&&x!==ans}));
-  for(i=0;i<c.length&&set.length<4;i++)if(set.indexOf(c[i])<0)set.push(c[i]);
+  var set=[ans],c=[ans+1,ans-1,ans+2,ans-2,ans+3,ans-3,ans+10,ans-10,ans+4].concat(extra||[]),i;c=shuffle(c.filter(function(x){return x>0&&x!==ans}));
+  for(i=0;i<c.length&&set.length<5;i++)if(set.indexOf(c[i])<0)set.push(c[i]);
   return shuffle(set).map(function(x){return {h:'<b>'+x+'</b>',ok:x===ans}});
 }
 function xgFrac(){
@@ -74,7 +74,7 @@ function xgBuild(t){
     all.forEach(function(x){fam.push(/bruch/.test(x.id)?'f':/pyth/.test(x.id)?'p':'m')});
     fam.push(own2,own2);
     var sh=t.cards.filter(function(c){return c.q&&c.a&&String(c.a).length<=14&&String(c.q).length<=120&&!/\n/.test(c.q)}),mine=own2==='m'&&sh.length>=4;
-    if(mine){var ans2=sh.map(function(c){return String(c.a)});shuffle(sh).slice(0,3).forEach(function(c){var right=String(c.a),oth=shuffle(ans2.filter(function(x,k,aa){return x!==right&&aa.indexOf(x)===k})).slice(0,3);n.rounds.push({kind:'opt',svg:'<div class="xg-q">'+esc(c.q)+'</div>',opts:shuffle([right].concat(oth)).map(function(x){return {h:'<b>'+esc(x)+'</b>',ok:x===right}})})})}
+    if(mine){var ans2=sh.map(function(c){return String(c.a)});shuffle(sh).slice(0,3).forEach(function(c){var right=String(c.a),oth=shuffle(ans2.filter(function(x,k,aa){return x!==right&&aa.indexOf(x)===k})).slice(0,4);n.rounds.push({kind:'opt',svg:'<div class="xg-q">'+esc(c.q)+'</div>',opts:shuffle([right].concat(oth)).map(function(x){return {h:'<b>'+esc(x)+'</b>',ok:x===right}})})})}
     else for(i=0;i<3;i++){var r=own2==='f'?xgFrac():own2==='p'?xgPyth():xgMult();r.kind='opt';n.rounds.push(r)}
   }else{
     n.kind='quiz';var pool=[],ans=[];
@@ -107,8 +107,8 @@ function vXg(){
    ;
   if(r.kind==='salat'){
     var letters=[],chars=r.fw.split(''),slots=chars.map(function(ch,k){var isL=/[a-zàâäçéèêëîïôöùûüÿœæß]/i.test(ch);if(isL)letters.push(ch.toLowerCase());return isL?'<span class="xs" id="xs'+(letters.length-1)+'"></span>':'<span class="xs fx">'+(ch===' '?'&nbsp;':esc(ch))+'</span>'}).join('');
-    if(!r.tiles){var al='abcdefghilmnoprstuv'.split(''),dec=shuffle(al.filter(function(x){return letters.indexOf(x)<0})).slice(0,1);r.letters=letters;r.tiles=shuffle(letters.concat(dec)).map(function(ch,k){return {ch:ch,col:k%4}})}
-    h+='<div class="xg-clue">'+esc(r.clue)+'</div><div class="xg-slots">'+slots+'</div><div class="xg-tiles">'+r.tiles.map(function(x,k){return '<button class="xt c'+x.col+'" id="xt'+k+'" data-act="xgt" data-i="'+k+'">'+x.ch+'</button>'}).join('')+'</div><p class="xg-hint">Tippe die Buchstaben in der richtigen Reihenfolge. Ein Buchstabe ist zu viel.</p>';
+    if(!r.tiles){var al='abcdefghilmnoprstuv'.split(''),dec=shuffle(al.filter(function(x){return letters.indexOf(x)<0})).slice(0,2);r.letters=letters;r.tiles=shuffle(letters.concat(dec)).map(function(ch,k){return {ch:ch,col:k%4}})}
+    h+='<div class="xg-clue">'+esc(r.clue)+'</div><div class="xg-slots">'+slots+'</div><div class="xg-tiles">'+r.tiles.map(function(x,k){return '<button class="xt c'+x.col+'" id="xt'+k+'" data-act="xgt" data-i="'+k+'">'+x.ch+'</button>'}).join('')+'</div><p class="xg-hint">Tippe die Buchstaben in der richtigen Reihenfolge. Zwei Buchstaben sind zu viel.</p>';
   }else{
     h+=r.svg+'<div class="xg-opts n'+r.opts.length+'">'+r.opts.map(function(o,k){return '<button class="xo c'+(k%4)+'" data-act="xgo" data-i="'+k+'">'+o.h+'</button>'}).join('')+'</div>';
   }

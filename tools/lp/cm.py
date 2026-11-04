@@ -1,6 +1,8 @@
 from core import *
 EM=['🍎','🐟','⭐','🎈','🍓','🐞','🍪','🌸','🐥','🚗']
-NAMES=['Mia','Leo','Nora','Ben','Lea','Noah','Anna','Jan']
+NAMES=['Mia','Leo','Nora','Ben','Lea','Noah','Anna','Jan','Fridolin','Pippa','Bruno','Zora','Hugo','Lotta','Balduin','Mika','Frieda','Oskar','Tilda','Konrad','Emil','Greta','Moritz','Nele','Valentin','Wilma','Theo','Henri','Ida','Jonas','Klara','Lenny','Mathilda','Nepomuk','Olga','Paulchen','Rosalie','Sepp','Trudi','Urs','Vreni','Wendelin','Xaver','Yara','Zenzi','Anton','Berta','Cäsar','Dora','Egon','Fiona','Gustav','Heidi','Ignaz','Jolanda','Kasimir','Luzi','Mirko']
+FEM={'Mia','Nora','Lea','Anna','Pippa','Zora','Lotta','Frieda','Tilda','Greta','Nele','Wilma','Ida','Klara','Mathilda','Olga','Rosalie','Trudi','Vreni','Yara','Zenzi','Berta','Dora','Fiona','Heidi','Jolanda','Luzi'}
+def sie(n):return 'sie' if n in FEM else 'er'
 def wr(a,lo,hi,rnd,k=3,deltas=(1,2,3,10,5)):
     c=[]
     for d in deltas:

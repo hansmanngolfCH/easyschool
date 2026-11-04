@@ -5,6 +5,8 @@ def FB(*rows):return {"type":"fbar","rows":[list(r) for r in rows]}
 EX={}
 import pilot_plus100
 EX[pilot_plus100.ID]=pilot_plus100.extend
+import pilot_einmaleins
+EX[pilot_einmaleins.ID]=pilot_einmaleins.extend
 def ex(i):
     def d(f):EX[i]=f;return f
     return d

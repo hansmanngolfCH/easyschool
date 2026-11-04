@@ -24,6 +24,16 @@ function qParts(q){
   return {main:main,ctx:ctx,inst:ins.join(' ')};
 }
 function sayBtn(t){return t?'<button class="say" data-act="say" data-t="'+esc(t)+'" aria-label="Vorlesen">🔊</button>':''}
+function examArt(){
+  var l='',i;for(i=0;i<6;i++)l+='<rect x="74" y="'+(66+i*17)+'" width="'+(i%3===2?70:104)+'" height="5" rx="2.5" fill="#CBD2DE"/><rect x="58" y="'+(63+i*17)+'" width="9" height="9" rx="2" fill="#fff" stroke="#8A94A6" stroke-width="1.5"/>'+(i<4?'<path d="M60 '+(68+i*17)+'l3 3.5 5-7" fill="none" stroke="#34A853" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>':'');
+  var ruler='';for(i=0;i<=12;i++)ruler+='<line x1="'+(206+i*9)+'" y1="168" x2="'+(206+i*9)+'" y2="'+(i%5===0?150:158)+'" stroke="#8A6D00" stroke-width="1.4"/>';
+  return '<svg class="examart" viewBox="0 0 340 200" role="img" aria-label="Prüfungsblatt mit Bleistift und Lineal"><defs><linearGradient id="exs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#EEF2FA"/></linearGradient><filter id="exf" x="-10%" y="-10%" width="130%" height="130%"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity=".25"/></filter></defs>'
+  +'<ellipse cx="170" cy="188" rx="140" ry="8" fill="#000" opacity=".08"/>'
+  +'<g transform="rotate(-3 120 100)" filter="url(#exf)"><rect x="34" y="14" width="170" height="168" rx="8" fill="url(#exs)" stroke="#B7C0D0" stroke-width="2"/><rect x="34" y="14" width="170" height="26" rx="8" fill="#4285F4"/><rect x="34" y="30" width="170" height="10" fill="#4285F4"/><text x="48" y="33" font-size="14" font-weight="900" fill="#fff" font-family="Arial,sans-serif">Prüfung</text><text x="170" y="33" font-size="11" font-weight="800" fill="#DCE8FD" font-family="Arial,sans-serif">Name ____</text>'+l+'<g transform="translate(150 150)"><circle r="21" fill="#FFF3C4" stroke="#F29900" stroke-width="3"/><text y="7" text-anchor="middle" font-size="22" font-weight="900" fill="#B06000" font-family="Arial,sans-serif">6</text></g></g>'
+  +'<g transform="rotate(-16 270 90)"><rect x="236" y="30" width="16" height="120" rx="2" fill="#FBBC04" stroke="#C88C00" stroke-width="2"/><rect x="236" y="30" width="16" height="12" rx="2" fill="#EA8B8B" stroke="#C06060" stroke-width="2"/><rect x="236" y="42" width="16" height="6" fill="#C9CED6"/><path d="M236 150 l8 22 l8 -22z" fill="#F2D3A1" stroke="#C8A36A" stroke-width="1.5"/><path d="M241 164 l3 8 l3 -8z" fill="#3C4043"/></g>'
+  +'<g transform="rotate(-4 260 160)"><rect x="200" y="148" width="124" height="24" rx="4" fill="#FDE18A" stroke="#C88C00" stroke-width="2"/>'+ruler+'</g>'
+  +'<g transform="translate(300 40)"><path d="M0 -18l5.4 11 12 1.7-8.7 8.5 2 12L0 8.2-10.7 15.2l2-12L-17.4 -5.3l12-1.7z" fill="#FBBC04" stroke="#E37400" stroke-width="2"/></g></svg>';
+}
 function qBlock(q){
   var p=qParts(q);
   return '<div class="mqx"><span class="qm">'+rt(p.main)+sayBtn(q.say)+'</span>'+(p.ctx?'<span class="qc">'+rt(p.ctx)+'</span>':'')+'<span class="qi">'+esc(p.inst)+'</span></div>';
@@ -155,9 +165,9 @@ function vPractice(){
   }else{
     var vd=n.verdict;
     if(vd==='ok')h2+='<div class="verdict ok">Richtig!'+(n.accentNote?' Achte noch auf die Schreibweise: '+esc(n.accentNote):'')+'</div>';
-    else if(vd==='no')h2+='<div class="verdict no">Nicht ganz. Deine Antwort: '+esc(n.typed)+'</div>';
+    else if(vd==='no'){var mine=n.typed||(n.opts&&n.chosen!=null&&n.opts[n.chosen]?n.opts[n.chosen].t:'');h2+='<div class="verdict no">Nicht ganz. Deine Antwort: '+(mine?rt(mine):'–')+'</div><div class="verdict ok" style="margin-top:6px">Richtig ist: '+rt(c.a)+'</div>'}
     else if(vd==='near')h2+='<div class="verdict near">Dein Satz weicht von der Lösung ab. Vergleiche selbst, ob er trotzdem stimmt.</div>';
-    h2+='<p class="fa" style="align-self:flex-start">'+rt(c.a)+'</p>'+(c.steps?'<div class="steps"><p class="lab2">Rechenweg in Schritten</p>'+vLines({items:c.steps,num:true})+'</div>':'')+(c.solvis?visuals(c.solvis):'');
+    h2+=(vd==='no'?'':'<p class="fa" style="align-self:flex-start">'+rt(c.a)+'</p>')+(c.steps?'<div class="steps"><p class="lab2">Rechenweg in Schritten</p>'+vLines({items:c.steps,num:true})+'</div>':'')+(c.solvis?visuals(c.solvis):'');
     if(pd.box)h2+=pd.box;else h2+='<div class="tools">'+pd.btn+'</div>';
     h2+='<button class="btn pri big" data-act="rate" data-r="'+(vd==='ok'?(n.hintN>0?'hard':'good'):'again')+'">Weiter</button>';
   }
@@ -200,7 +210,7 @@ function vPaper(n,t,qs){
   return h+'</tbody></table></div><button class="btn pri big" data-act="finish">Abgeben</button></div>'}
 function vExam(){
   var n=nav,t=topicById(n.topicId),mathe=!isLangT(t),qs=examQs(n,t);
-  if(n.phase==='intro')return '<div class="stack"><div><p class="eyebrow">Musterprüfung</p><h1>'+esc(t.title)+'</h1></div>'+coach('Ist nur eine Musterprüfung. Hier darf noch jeder Fehler passieren.',1)+'<section class="card"><p>'+qs.length+' Fragen · Note von 1 bis 6</p><p class="sub" style="margin-top:8px">Antworte so, wie du es in der Schule tun würdest. Ohne Tipps, ohne Nachschauen.'+(mathe?' Für Zwischenschritte kannst du bei jeder Frage «Notizen machen» öffnen.':'')+' Es gibt keinen Zeitdruck. Für jede richtige Antwort gibt es XP, für gute Noten einen Bonus.</p></section>'+(mathe?'':'<div class="modes"><button class="btn seg'+(n.mode!=='kurz'?' on':'')+'" data-act="emode" data-m="alles">Alles</button><button class="btn seg'+(n.mode==='kurz'?' on':'')+'" data-act="emode" data-m="kurz">Kurztext</button></div>')+'<div class="row"><button class="btn pri big" data-act="start">Los geht\'s</button><button class="btn big" data-act="back">Zurück</button></div></div>';
+  if(n.phase==='intro')return '<div class="stack"><div><p class="eyebrow">Musterprüfung</p><h1>'+esc(t.title)+'</h1></div>'+coach('Ist nur eine Musterprüfung. Hier darf noch jeder Fehler passieren.',1)+examArt()+'<section class="card"><p>'+qs.length+' Fragen · Note von 1 bis 6</p><p class="sub" style="margin-top:8px">Antworte so, wie du es in der Schule tun würdest. Ohne Tipps, ohne Nachschauen.'+(mathe?' Für Zwischenschritte kannst du bei jeder Frage «Notizen machen» öffnen.':'')+' Es gibt keinen Zeitdruck. Für jede richtige Antwort gibt es XP, für gute Noten einen Bonus.</p></section>'+(mathe?'':'<div class="modes"><button class="btn seg'+(n.mode!=='kurz'?' on':'')+'" data-act="emode" data-m="alles">Alles</button><button class="btn seg'+(n.mode==='kurz'?' on':'')+'" data-act="emode" data-m="kurz">Kurztext</button></div>')+'<div class="row"><button class="btn pri big" data-act="start">Los geht\'s</button><button class="btn big" data-act="back">Zurück</button></div></div>';
   if(n.phase==='run'&&!mathe)return vPaper(n,t,qs);
   if(n.phase==='run'){
     var dt=new Date(),ds=dt.getDate()+'.'+(dt.getMonth()+1)+'.'+dt.getFullYear();

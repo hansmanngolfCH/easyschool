@@ -1206,7 +1206,7 @@ body.rwopen{overflow:hidden}
 .dk h4{margin:0 0 4px;font-size:1rem;color:var(--c)}.dk p{margin:0}.dk .q{font-weight:700;font-size:.92rem}.dk .e{font-size:.85rem;color:var(--ink2);margin-top:3px}
 .dtb{border:0;border-radius:10px}
 .dtb table{font-size:.86rem}
-.dtb thead th{padding:8px 6px;font-size:.66rem;letter-spacing:.02em}
+.dtb thead th{padding:8px 6px;font-size:.8rem;letter-spacing:.02em}
 .dtb tbody th{padding:8px 4px 8px 6px}
 .dtb tbody td{padding:8px 6px}
 .dtb tbody th span{padding:3px 7px}
@@ -1269,3 +1269,14 @@ body.hascalc #app{padding-bottom:84px}
 .dc{min-height:58px;min-width:44px;justify-content:center;align-items:center;text-align:center}
 .dc i{font-size:.8rem;color:color-mix(in srgb,var(--c) 60%,#000)}
 .dch{row-gap:10px}
+.xg-opts.n5{grid-template-columns:1fr 1fr}.xg-opts.n5 .xo:last-child{grid-column:1/-1}
+
+/* v4.56 Rechenzeichen grau, Grafikgrössen angleichen, Prüfung: Trennlinien */
+.dc.op{background:none;border-bottom:0;min-height:0;min-width:0;padding:6px 1px}
+.dc.op b{color:#8b919c;font-weight:600;font-size:1.05rem}
+.dc.op i{display:none}
+.vis svg{max-height:230px}
+.mq>li{border-top:3px solid #98a2b8;padding-top:14px;margin-top:14px}
+.mq>li:first-child{border-top:0;padding-top:0;margin-top:0}
+.ptab tr+tr td{border-top:3px solid #98a2b8}
+.examart{display:block;margin:4px auto 0;max-width:340px;width:100%}

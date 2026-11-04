@@ -1416,7 +1416,7 @@ body.rwopen{overflow:hidden}
 .dk h4{margin:0 0 4px;font-size:1rem;color:var(--c)}.dk p{margin:0}.dk .q{font-weight:700;font-size:.92rem}.dk .e{font-size:.85rem;color:var(--ink2);margin-top:3px}
 .dtb{border:0;border-radius:10px}
 .dtb table{font-size:.86rem}
-.dtb thead th{padding:8px 6px;font-size:.66rem;letter-spacing:.02em}
+.dtb thead th{padding:8px 6px;font-size:.8rem;letter-spacing:.02em}
 .dtb tbody th{padding:8px 4px 8px 6px}
 .dtb tbody td{padding:8px 6px}
 .dtb tbody th span{padding:3px 7px}
@@ -1479,6 +1479,17 @@ body.hascalc #app{padding-bottom:84px}
 .dc{min-height:58px;min-width:44px;justify-content:center;align-items:center;text-align:center}
 .dc i{font-size:.8rem;color:color-mix(in srgb,var(--c) 60%,#000)}
 .dch{row-gap:10px}
+.xg-opts.n5{grid-template-columns:1fr 1fr}.xg-opts.n5 .xo:last-child{grid-column:1/-1}
+
+/* v4.56 Rechenzeichen grau, Grafikgrössen angleichen, Prüfung: Trennlinien */
+.dc.op{background:none;border-bottom:0;min-height:0;min-width:0;padding:6px 1px}
+.dc.op b{color:#8b919c;font-weight:600;font-size:1.05rem}
+.dc.op i{display:none}
+.vis svg{max-height:230px}
+.mq>li{border-top:3px solid #98a2b8;padding-top:14px;margin-top:14px}
+.mq>li:first-child{border-top:0;padding-top:0;margin-top:0}
+.ptab tr+tr td{border-top:3px solid #98a2b8}
+.examart{display:block;margin:4px auto 0;max-width:340px;width:100%}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1486,7 +1497,7 @@ body.hascalc #app{padding-bottom:84px}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v4.55';
+var APP_VERSION="v4.56";
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -1827,14 +1838,14 @@ var VC=['#34A853','#4285F4','#FBBC04','#EA4335'];
 function vBar(v){
   var tot=0,i,x=10,W=580,g=3,s='';v.segs.forEach(function(q){tot+=q[0]});
   v.segs.forEach(function(q,k){
-    var w=Math.max(6,(W-g*(v.segs.length-1))*q[0]/tot),col=q[2]===-1?'#CFD3DA':VC[((v.col||0)+k%2)%4];
+    var w=Math.max(6,(W-g*(v.segs.length-1))*q[0]/tot),col=q[2]===-1?'#CFD3DA':(typeof q[2]==='number'&&q[2]>=0)?DC[q[2]%8]:VC[((v.col||0)+k%2)%4];
     s+='<rect x="'+x.toFixed(1)+'" y="17" width="'+w.toFixed(1)+'" height="54" rx="10" fill="rgba(40,60,100,.18)"/><rect x="'+x.toFixed(1)+'" y="14" width="'+w.toFixed(1)+'" height="54" rx="10" fill="'+col+'" stroke="rgba(0,0,0,.12)" stroke-width="1.5"/><rect x="'+(x+3).toFixed(1)+'" y="17" width="'+Math.max(0,w-6).toFixed(1)+'" height="16" rx="7" fill="#fff" opacity=".28"/>';
     if(q[1]&&w>26)s+='<text x="'+(x+w/2).toFixed(1)+'" y="49" text-anchor="middle" font-size="'+(w<46?17:w<80?21:27)+'" font-weight="800" fill="#fff" font-family="Arial,sans-serif">'+esc(q[1])+'</text>';
     x+=w+g;
   });
   s+='<path d="M10 78q0 10 10 10h550q10 0 10-10" fill="none" stroke="#5f6368" stroke-width="3" stroke-linecap="round"/>';
   s+='<text x="300" y="116" text-anchor="middle" font-size="22" font-weight="800" fill="#202124" font-family="Arial,sans-serif">'+esc(v.cap||'')+'</text>';
-  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 126" width="100%" role="img" aria-label="'+esc(v.cap||'Balken')+'">'+s+'</svg></figure>';
+  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 '+(v.cap?126:98)+'" width="100%" role="img" aria-label="'+esc(v.cap||'Balken')+'">'+s+'</svg></figure>';
 }
 function vConv(v){
   var s='<rect x="14" y="40" width="170" height="70" rx="18" fill="'+VC[1]+'"/><text x="99" y="87" text-anchor="middle" font-size="34" font-weight="800" fill="#fff" font-family="Arial,sans-serif">'+esc(v.from)+'</text>'
@@ -1906,7 +1917,7 @@ function vTbl(v){
   return '<div class="dtb"><table class="'+(v.hc?'nh':'')+'">'+h+b+'</table></div>'+(v.cap?'<p class="dcap">'+bd(v.cap)+'</p>':'');
 }
 function vChips(v){
-  return '<div class="dchw"><div class="dch">'+v.parts.map(function(p){return '<div class="dc" style="--c:'+dcol(p[2])+'"><b>'+bd(p[0])+'</b>'+(p[1]?'<i>'+bd(p[1])+'</i>':'')+'</div>'}).join('')+'</div>'+(v.cap?'<p class="dcap">'+bd(v.cap)+'</p>':'')+'</div>';
+  return '<div class="dchw"><div class="dch">'+v.parts.map(function(p){return '<div class="dc'+(/^[+−×:=<>➜→≈\-]$/.test(String(p[0]).trim())?' op':'')+'" style="--c:'+dcol(p[2])+'"><b>'+bd(p[0])+'</b>'+(p[1]?'<i>'+bd(p[1])+'</i>':'')+'</div>'}).join('')+'</div>'+(v.cap?'<p class="dcap">'+bd(v.cap)+'</p>':'')+'</div>';
 }
 function vTline(v){
   return '<ol class="dtl">'+v.items.map(function(p,i){return '<li class="'+(i===v.now?'now':'')+'" style="--c:'+dcol(p[3])+'"><span class="dot"></span><div><b>'+bd(p[0])+'</b><span>'+bd(p[1])+'</span>'+(p[2]?'<em>'+bd(p[2])+'</em>':'')+'</div></li>'}).join('')+'</ol>';
@@ -1946,7 +1957,7 @@ function vField(v){
     if(f!==null)o+='<circle cx="'+cx+'" cy="'+cy+'" r="11" fill="url(#fg'+f+')" stroke="'+VC[f]+'" stroke-width="1.5" filter="url(#fsh)"/><ellipse cx="'+(cx-3.5)+'" cy="'+(cy-4)+'" rx="3.6" ry="2.2" fill="#fff" fill-opacity=".55"/>';
     k++}
   for(i=5;i<cols;i+=5)o+='<line x1="'+(gx(i)-P/2-G/2)+'" x2="'+(gx(i)-P/2-G/2)+'" y1="6" y2="'+(H-6)+'" stroke="#5F6B7A" stroke-width="2.5" stroke-dasharray="3 4"/>';
-  return '<figure class="vis"><svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+Math.min(520,W*1.9)+'px" role="img" aria-label="Punktefeld">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis" style="align-items:center"><svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+Math.min(520,W*1.9)+'px" role="img" aria-label="Punktefeld">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vClock(v){
   var o='<defs><radialGradient id="ckb" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#8AB4F8"/><stop offset="1" stop-color="#1A56C4"/></radialGradient><radialGradient id="ckf" cx=".5" cy=".4" r=".7"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#EEF2F8"/></radialGradient><filter id="cks" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="1.5" dy="2.5" stdDeviation="1.8" flood-opacity=".35"/></filter></defs>';
@@ -2054,16 +2065,16 @@ function vBlocks(v){
   x+=(z?8:0);
   for(k=0;k<e;k++){o+='<rect x="'+x+'" y="60" width="12" height="12" rx="3" fill="#FDE9A6" stroke="#B06000" stroke-width="2.2"/>';x+=17}
   var W=Math.max(60,x+4);
-  return '<figure class="vis"><svg viewBox="0 0 '+W+' 80" width="100%" style="max-width:'+Math.min(560,W*2.4)+'px;display:block;margin:0 auto" role="img" aria-label="Stellenwert-Material">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis"><svg viewBox="0 0 '+W+' 80" width="100%" style="max-width:'+Math.min(380,W*1.9)+'px;display:block;margin:0 auto" role="img" aria-label="Stellenwert-Material">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vJumps(v){
   var pts=[v.from],i;(v.jumps||[]).forEach(function(j){pts.push(pts[pts.length-1]+j[0])});
   var mn=Math.min.apply(null,pts),mx=Math.max.apply(null,pts),pad=(mx-mn)*.06||1,lo=mn-pad,hi=mx+pad,x0=24,x1=576,y=142;
   function X(n){return x0+(x1-x0)*(n-lo)/(hi-lo)}
-  var o='<defs><marker id="jh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#EA4335"/></marker></defs><line x1="'+(x0-8)+'" y1="'+y+'" x2="'+(x1+8)+'" y2="'+y+'" stroke="#2f3a4a" stroke-width="3" stroke-linecap="round"/>';
+  var o='<defs>'+[0,1,2,3,4,5,6,7,99].map(function(ci){var cc=ci===99?'#EA4335':DC[ci];return '<marker id="jh'+ci+'" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="'+cc+'"/></marker>'}).join('')+'</defs><line x1="'+(x0-8)+'" y1="'+y+'" x2="'+(x1+8)+'" y2="'+y+'" stroke="#2f3a4a" stroke-width="3" stroke-linecap="round"/>';
   pts.forEach(function(p,k){o+='<line x1="'+X(p)+'" y1="'+(y-8)+'" x2="'+X(p)+'" y2="'+(y+8)+'" stroke="#2f3a4a" stroke-width="3"/><circle cx="'+X(p)+'" cy="'+y+'" r="7" fill="'+(k===0?'#34A853':k===pts.length-1?'#4285F4':'#FBBC04')+'" stroke="#fff" stroke-width="2"/><text x="'+X(p)+'" y="'+(y+36)+'" text-anchor="middle" font-size="'+(v.fs||24)+'" font-weight="800" fill="#202124" font-family="Arial,sans-serif">'+(k===pts.length-1&&v.hideEnd?'?':(v.fmt?v.fmt[k]:p))+'</text>'});
-  (v.jumps||[]).forEach(function(j,k){var a=X(pts[k]),b=X(pts[k+1]),m=(a+b)/2,r=Math.abs(b-a)/2,h=Math.min(46,Math.max(22,10+r*.55))+((k%2&&(v.jumps.some(function(q,qi){return Math.abs(X(pts[qi+1])-X(pts[qi]))<120})))?34:0),dir=b>=a?1:-1;
-    o+='<path d="M'+a+' '+(y-6)+'Q'+m+' '+(y-6-2*h)+' '+b+' '+(y-6)+'" fill="none" stroke="#EA4335" stroke-width="4" stroke-linecap="round" marker-end="url(#jh)"/><rect x="'+(m-Math.max(38,String(j[1]).length*9.5))+'" y="'+(y-h-48)+'" width="'+Math.max(76,String(j[1]).length*19)+'" height="38" rx="19" fill="#fff" stroke="#EA4335" stroke-width="2"/><text x="'+m+'" y="'+(y-h-21)+'" text-anchor="middle" font-size="26" font-weight="900" fill="#B3261E" font-family="Arial,sans-serif">'+esc(j[1])+'</text>'});
+  (v.jumps||[]).forEach(function(j,k){var a=X(pts[k]),b=X(pts[k+1]),m=(a+b)/2,r=Math.abs(b-a)/2,h=Math.min(46,Math.max(22,10+r*.55))+((k%2&&(v.jumps.some(function(q,qi){return Math.abs(X(pts[qi+1])-X(pts[qi]))<120})))?34:0),dir=b>=a?1:-1,jm=(typeof j[2]==='number')?j[2]%8:99,jc=jm===99?'#EA4335':DC[jm];
+    o+='<path d="M'+a+' '+(y-6)+'Q'+m+' '+(y-6-2*h)+' '+b+' '+(y-6)+'" fill="none" stroke="'+jc+'" stroke-width="4" stroke-linecap="round" marker-end="url(#jh'+jm+')"/><rect x="'+(m-Math.max(38,String(j[1]).length*9.5))+'" y="'+(y-h-48)+'" width="'+Math.max(76,String(j[1]).length*19)+'" height="38" rx="19" fill="#fff" stroke="'+jc+'" stroke-width="2"/><text x="'+m+'" y="'+(y-h-21)+'" text-anchor="middle" font-size="26" font-weight="900" fill="'+jc+'" font-family="Arial,sans-serif">'+esc(j[1])+'</text>'});
   return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 204" width="100%" role="img" aria-label="Rechenstrich">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vArr(v){
@@ -2071,7 +2082,7 @@ function vArr(v){
   for(j=0;j<r;j++)for(i=0;i<c;i++){var f=(v.splitRows?j<sp:i<sp)?VC[1]:VC[v.col===undefined?0:v.col];if(!sp)f=VC[v.col===undefined?0:v.col];
     o+='<circle cx="'+(5+i*P+P/2)+'" cy="'+(5+j*P+P/2)+'" r="9" fill="'+f+'" stroke="#fff" stroke-width="1.5"/><ellipse cx="'+(5+i*P+P/2-3)+'" cy="'+(5+j*P+P/2-3.5)+'" rx="3" ry="2" fill="#fff" fill-opacity=".5"/>'}
   if(sp)o+=(v.splitRows?'<line x1="2" x2="'+(W-2)+'" y1="'+(5+sp*P)+'" y2="'+(5+sp*P)+'"':'<line y1="2" y2="'+(H-2)+'" x1="'+(5+sp*P)+'" x2="'+(5+sp*P)+'"')+' stroke="#EA4335" stroke-width="3" stroke-dasharray="6 4"/>';
-  return '<figure class="vis"><svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+Math.min(420,W*2)+'px;display:block;margin:0 auto" role="img" aria-label="Malfeld">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis" style="align-items:center"><svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+Math.min(420,Math.round(W*1.3))+'px;max-height:none;display:block;margin:0 auto" role="img" aria-label="Malfeld">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vCol(v){
   var a=v.a,b=v.b,plus=v.op!=='-',da=String(a).split('').map(Number),db=String(b).split('').map(Number),n=Math.max(da.length,db.length);
@@ -2098,7 +2109,7 @@ function vCol(v){
     if(plus)o+='<g><circle cx="'+x(i)+'" cy="152" r="11" fill="#FDE9A6" stroke="#B06000" stroke-width="2"/><text x="'+x(i)+'" y="157" text-anchor="middle" font-size="14" font-weight="900" fill="#7A4A00" font-family="Arial,sans-serif">1</text></g>';
     else o+='<g><circle cx="'+(x(i+1)-24)+'" cy="52" r="9.5" fill="#FDE9A6" stroke="#B06000" stroke-width="2"/><text x="'+(x(i+1)-24)+'" y="56" text-anchor="middle" font-size="10" font-weight="900" fill="#7A4A00" font-family="Arial,sans-serif">10</text></g>';
   }
-  return '<figure class="vis"><svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+Math.max(220,W*2.2)+'px;display:block;margin:0 auto" role="img" aria-label="Schriftliche Rechnung">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis" style="align-items:center"><svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+Math.max(220,W*2.2)+'px;display:block;margin:0 auto" role="img" aria-label="Schriftliche Rechnung">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function visuals(list){
   if(!list||!list.length)return '';
@@ -2471,6 +2482,16 @@ function qParts(q){
   return {main:main,ctx:ctx,inst:ins.join(' ')};
 }
 function sayBtn(t){return t?'<button class="say" data-act="say" data-t="'+esc(t)+'" aria-label="Vorlesen">🔊</button>':''}
+function examArt(){
+  var l='',i;for(i=0;i<6;i++)l+='<rect x="74" y="'+(66+i*17)+'" width="'+(i%3===2?70:104)+'" height="5" rx="2.5" fill="#CBD2DE"/><rect x="58" y="'+(63+i*17)+'" width="9" height="9" rx="2" fill="#fff" stroke="#8A94A6" stroke-width="1.5"/>'+(i<4?'<path d="M60 '+(68+i*17)+'l3 3.5 5-7" fill="none" stroke="#34A853" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>':'');
+  var ruler='';for(i=0;i<=12;i++)ruler+='<line x1="'+(206+i*9)+'" y1="168" x2="'+(206+i*9)+'" y2="'+(i%5===0?150:158)+'" stroke="#8A6D00" stroke-width="1.4"/>';
+  return '<svg class="examart" viewBox="0 0 340 200" role="img" aria-label="Prüfungsblatt mit Bleistift und Lineal"><defs><linearGradient id="exs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#EEF2FA"/></linearGradient><filter id="exf" x="-10%" y="-10%" width="130%" height="130%"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity=".25"/></filter></defs>'
+  +'<ellipse cx="170" cy="188" rx="140" ry="8" fill="#000" opacity=".08"/>'
+  +'<g transform="rotate(-3 120 100)" filter="url(#exf)"><rect x="34" y="14" width="170" height="168" rx="8" fill="url(#exs)" stroke="#B7C0D0" stroke-width="2"/><rect x="34" y="14" width="170" height="26" rx="8" fill="#4285F4"/><rect x="34" y="30" width="170" height="10" fill="#4285F4"/><text x="48" y="33" font-size="14" font-weight="900" fill="#fff" font-family="Arial,sans-serif">Prüfung</text><text x="170" y="33" font-size="11" font-weight="800" fill="#DCE8FD" font-family="Arial,sans-serif">Name ____</text>'+l+'<g transform="translate(150 150)"><circle r="21" fill="#FFF3C4" stroke="#F29900" stroke-width="3"/><text y="7" text-anchor="middle" font-size="22" font-weight="900" fill="#B06000" font-family="Arial,sans-serif">6</text></g></g>'
+  +'<g transform="rotate(-16 270 90)"><rect x="236" y="30" width="16" height="120" rx="2" fill="#FBBC04" stroke="#C88C00" stroke-width="2"/><rect x="236" y="30" width="16" height="12" rx="2" fill="#EA8B8B" stroke="#C06060" stroke-width="2"/><rect x="236" y="42" width="16" height="6" fill="#C9CED6"/><path d="M236 150 l8 22 l8 -22z" fill="#F2D3A1" stroke="#C8A36A" stroke-width="1.5"/><path d="M241 164 l3 8 l3 -8z" fill="#3C4043"/></g>'
+  +'<g transform="rotate(-4 260 160)"><rect x="200" y="148" width="124" height="24" rx="4" fill="#FDE18A" stroke="#C88C00" stroke-width="2"/>'+ruler+'</g>'
+  +'<g transform="translate(300 40)"><path d="M0 -18l5.4 11 12 1.7-8.7 8.5 2 12L0 8.2-10.7 15.2l2-12L-17.4 -5.3l12-1.7z" fill="#FBBC04" stroke="#E37400" stroke-width="2"/></g></svg>';
+}
 function qBlock(q){
   var p=qParts(q);
   return '<div class="mqx"><span class="qm">'+rt(p.main)+sayBtn(q.say)+'</span>'+(p.ctx?'<span class="qc">'+rt(p.ctx)+'</span>':'')+'<span class="qi">'+esc(p.inst)+'</span></div>';
@@ -2602,9 +2623,9 @@ function vPractice(){
   }else{
     var vd=n.verdict;
     if(vd==='ok')h2+='<div class="verdict ok">Richtig!'+(n.accentNote?' Achte noch auf die Schreibweise: '+esc(n.accentNote):'')+'</div>';
-    else if(vd==='no')h2+='<div class="verdict no">Nicht ganz. Deine Antwort: '+esc(n.typed)+'</div>';
+    else if(vd==='no'){var mine=n.typed||(n.opts&&n.chosen!=null&&n.opts[n.chosen]?n.opts[n.chosen].t:'');h2+='<div class="verdict no">Nicht ganz. Deine Antwort: '+(mine?rt(mine):'–')+'</div><div class="verdict ok" style="margin-top:6px">Richtig ist: '+rt(c.a)+'</div>'}
     else if(vd==='near')h2+='<div class="verdict near">Dein Satz weicht von der Lösung ab. Vergleiche selbst, ob er trotzdem stimmt.</div>';
-    h2+='<p class="fa" style="align-self:flex-start">'+rt(c.a)+'</p>'+(c.steps?'<div class="steps"><p class="lab2">Rechenweg in Schritten</p>'+vLines({items:c.steps,num:true})+'</div>':'')+(c.solvis?visuals(c.solvis):'');
+    h2+=(vd==='no'?'':'<p class="fa" style="align-self:flex-start">'+rt(c.a)+'</p>')+(c.steps?'<div class="steps"><p class="lab2">Rechenweg in Schritten</p>'+vLines({items:c.steps,num:true})+'</div>':'')+(c.solvis?visuals(c.solvis):'');
     if(pd.box)h2+=pd.box;else h2+='<div class="tools">'+pd.btn+'</div>';
     h2+='<button class="btn pri big" data-act="rate" data-r="'+(vd==='ok'?(n.hintN>0?'hard':'good'):'again')+'">Weiter</button>';
   }
@@ -2647,7 +2668,7 @@ function vPaper(n,t,qs){
   return h+'</tbody></table></div><button class="btn pri big" data-act="finish">Abgeben</button></div>'}
 function vExam(){
   var n=nav,t=topicById(n.topicId),mathe=!isLangT(t),qs=examQs(n,t);
-  if(n.phase==='intro')return '<div class="stack"><div><p class="eyebrow">Musterprüfung</p><h1>'+esc(t.title)+'</h1></div>'+coach('Ist nur eine Musterprüfung. Hier darf noch jeder Fehler passieren.',1)+'<section class="card"><p>'+qs.length+' Fragen · Note von 1 bis 6</p><p class="sub" style="margin-top:8px">Antworte so, wie du es in der Schule tun würdest. Ohne Tipps, ohne Nachschauen.'+(mathe?' Für Zwischenschritte kannst du bei jeder Frage «Notizen machen» öffnen.':'')+' Es gibt keinen Zeitdruck. Für jede richtige Antwort gibt es XP, für gute Noten einen Bonus.</p></section>'+(mathe?'':'<div class="modes"><button class="btn seg'+(n.mode!=='kurz'?' on':'')+'" data-act="emode" data-m="alles">Alles</button><button class="btn seg'+(n.mode==='kurz'?' on':'')+'" data-act="emode" data-m="kurz">Kurztext</button></div>')+'<div class="row"><button class="btn pri big" data-act="start">Los geht\'s</button><button class="btn big" data-act="back">Zurück</button></div></div>';
+  if(n.phase==='intro')return '<div class="stack"><div><p class="eyebrow">Musterprüfung</p><h1>'+esc(t.title)+'</h1></div>'+coach('Ist nur eine Musterprüfung. Hier darf noch jeder Fehler passieren.',1)+examArt()+'<section class="card"><p>'+qs.length+' Fragen · Note von 1 bis 6</p><p class="sub" style="margin-top:8px">Antworte so, wie du es in der Schule tun würdest. Ohne Tipps, ohne Nachschauen.'+(mathe?' Für Zwischenschritte kannst du bei jeder Frage «Notizen machen» öffnen.':'')+' Es gibt keinen Zeitdruck. Für jede richtige Antwort gibt es XP, für gute Noten einen Bonus.</p></section>'+(mathe?'':'<div class="modes"><button class="btn seg'+(n.mode!=='kurz'?' on':'')+'" data-act="emode" data-m="alles">Alles</button><button class="btn seg'+(n.mode==='kurz'?' on':'')+'" data-act="emode" data-m="kurz">Kurztext</button></div>')+'<div class="row"><button class="btn pri big" data-act="start">Los geht\'s</button><button class="btn big" data-act="back">Zurück</button></div></div>';
   if(n.phase==='run'&&!mathe)return vPaper(n,t,qs);
   if(n.phase==='run'){
     var dt=new Date(),ds=dt.getDate()+'.'+(dt.getMonth()+1)+'.'+dt.getFullYear();
@@ -3762,8 +3783,8 @@ function xgTri(a,b,qa,qb,qc){
    +lab((B[0]+Cc[0])/2+16,(B[1]+Cc[1])/2-14,Math.round(Math.sqrt(a*a+b*b)),qc)+'</svg>';
 }
 function xgNums(ans,extra){
-  var set=[ans],c=[ans+1,ans-1,ans+2,ans-2,ans+3,ans-3].concat(extra||[]),i;c=shuffle(c.filter(function(x){return x>0&&x!==ans}));
-  for(i=0;i<c.length&&set.length<4;i++)if(set.indexOf(c[i])<0)set.push(c[i]);
+  var set=[ans],c=[ans+1,ans-1,ans+2,ans-2,ans+3,ans-3,ans+10,ans-10,ans+4].concat(extra||[]),i;c=shuffle(c.filter(function(x){return x>0&&x!==ans}));
+  for(i=0;i<c.length&&set.length<5;i++)if(set.indexOf(c[i])<0)set.push(c[i]);
   return shuffle(set).map(function(x){return {h:'<b>'+x+'</b>',ok:x===ans}});
 }
 function xgFrac(){
@@ -3814,7 +3835,7 @@ function xgBuild(t){
     all.forEach(function(x){fam.push(/bruch/.test(x.id)?'f':/pyth/.test(x.id)?'p':'m')});
     fam.push(own2,own2);
     var sh=t.cards.filter(function(c){return c.q&&c.a&&String(c.a).length<=14&&String(c.q).length<=120&&!/\n/.test(c.q)}),mine=own2==='m'&&sh.length>=4;
-    if(mine){var ans2=sh.map(function(c){return String(c.a)});shuffle(sh).slice(0,3).forEach(function(c){var right=String(c.a),oth=shuffle(ans2.filter(function(x,k,aa){return x!==right&&aa.indexOf(x)===k})).slice(0,3);n.rounds.push({kind:'opt',svg:'<div class="xg-q">'+esc(c.q)+'</div>',opts:shuffle([right].concat(oth)).map(function(x){return {h:'<b>'+esc(x)+'</b>',ok:x===right}})})})}
+    if(mine){var ans2=sh.map(function(c){return String(c.a)});shuffle(sh).slice(0,3).forEach(function(c){var right=String(c.a),oth=shuffle(ans2.filter(function(x,k,aa){return x!==right&&aa.indexOf(x)===k})).slice(0,4);n.rounds.push({kind:'opt',svg:'<div class="xg-q">'+esc(c.q)+'</div>',opts:shuffle([right].concat(oth)).map(function(x){return {h:'<b>'+esc(x)+'</b>',ok:x===right}})})})}
     else for(i=0;i<3;i++){var r=own2==='f'?xgFrac():own2==='p'?xgPyth():xgMult();r.kind='opt';n.rounds.push(r)}
   }else{
     n.kind='quiz';var pool=[],ans=[];
@@ -3847,8 +3868,8 @@ function vXg(){
    ;
   if(r.kind==='salat'){
     var letters=[],chars=r.fw.split(''),slots=chars.map(function(ch,k){var isL=/[a-zàâäçéèêëîïôöùûüÿœæß]/i.test(ch);if(isL)letters.push(ch.toLowerCase());return isL?'<span class="xs" id="xs'+(letters.length-1)+'"></span>':'<span class="xs fx">'+(ch===' '?'&nbsp;':esc(ch))+'</span>'}).join('');
-    if(!r.tiles){var al='abcdefghilmnoprstuv'.split(''),dec=shuffle(al.filter(function(x){return letters.indexOf(x)<0})).slice(0,1);r.letters=letters;r.tiles=shuffle(letters.concat(dec)).map(function(ch,k){return {ch:ch,col:k%4}})}
-    h+='<div class="xg-clue">'+esc(r.clue)+'</div><div class="xg-slots">'+slots+'</div><div class="xg-tiles">'+r.tiles.map(function(x,k){return '<button class="xt c'+x.col+'" id="xt'+k+'" data-act="xgt" data-i="'+k+'">'+x.ch+'</button>'}).join('')+'</div><p class="xg-hint">Tippe die Buchstaben in der richtigen Reihenfolge. Ein Buchstabe ist zu viel.</p>';
+    if(!r.tiles){var al='abcdefghilmnoprstuv'.split(''),dec=shuffle(al.filter(function(x){return letters.indexOf(x)<0})).slice(0,2);r.letters=letters;r.tiles=shuffle(letters.concat(dec)).map(function(ch,k){return {ch:ch,col:k%4}})}
+    h+='<div class="xg-clue">'+esc(r.clue)+'</div><div class="xg-slots">'+slots+'</div><div class="xg-tiles">'+r.tiles.map(function(x,k){return '<button class="xt c'+x.col+'" id="xt'+k+'" data-act="xgt" data-i="'+k+'">'+x.ch+'</button>'}).join('')+'</div><p class="xg-hint">Tippe die Buchstaben in der richtigen Reihenfolge. Zwei Buchstaben sind zu viel.</p>';
   }else{
     h+=r.svg+'<div class="xg-opts n'+r.opts.length+'">'+r.opts.map(function(o,k){return '<button class="xo c'+(k%4)+'" data-act="xgo" data-i="'+k+'">'+o.h+'</button>'}).join('')+'</div>';
   }

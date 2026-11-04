@@ -27,14 +27,14 @@ var VC=['#34A853','#4285F4','#FBBC04','#EA4335'];
 function vBar(v){
   var tot=0,i,x=10,W=580,g=3,s='';v.segs.forEach(function(q){tot+=q[0]});
   v.segs.forEach(function(q,k){
-    var w=Math.max(6,(W-g*(v.segs.length-1))*q[0]/tot),col=q[2]===-1?'#CFD3DA':VC[((v.col||0)+k%2)%4];
+    var w=Math.max(6,(W-g*(v.segs.length-1))*q[0]/tot),col=q[2]===-1?'#CFD3DA':(typeof q[2]==='number'&&q[2]>=0)?DC[q[2]%8]:VC[((v.col||0)+k%2)%4];
     s+='<rect x="'+x.toFixed(1)+'" y="17" width="'+w.toFixed(1)+'" height="54" rx="10" fill="rgba(40,60,100,.18)"/><rect x="'+x.toFixed(1)+'" y="14" width="'+w.toFixed(1)+'" height="54" rx="10" fill="'+col+'" stroke="rgba(0,0,0,.12)" stroke-width="1.5"/><rect x="'+(x+3).toFixed(1)+'" y="17" width="'+Math.max(0,w-6).toFixed(1)+'" height="16" rx="7" fill="#fff" opacity=".28"/>';
     if(q[1]&&w>26)s+='<text x="'+(x+w/2).toFixed(1)+'" y="49" text-anchor="middle" font-size="'+(w<46?17:w<80?21:27)+'" font-weight="800" fill="#fff" font-family="Arial,sans-serif">'+esc(q[1])+'</text>';
     x+=w+g;
   });
   s+='<path d="M10 78q0 10 10 10h550q10 0 10-10" fill="none" stroke="#5f6368" stroke-width="3" stroke-linecap="round"/>';
   s+='<text x="300" y="116" text-anchor="middle" font-size="22" font-weight="800" fill="#202124" font-family="Arial,sans-serif">'+esc(v.cap||'')+'</text>';
-  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 126" width="100%" role="img" aria-label="'+esc(v.cap||'Balken')+'">'+s+'</svg></figure>';
+  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 '+(v.cap?126:98)+'" width="100%" role="img" aria-label="'+esc(v.cap||'Balken')+'">'+s+'</svg></figure>';
 }
 function vConv(v){
   var s='<rect x="14" y="40" width="170" height="70" rx="18" fill="'+VC[1]+'"/><text x="99" y="87" text-anchor="middle" font-size="34" font-weight="800" fill="#fff" font-family="Arial,sans-serif">'+esc(v.from)+'</text>'
@@ -106,7 +106,7 @@ function vTbl(v){
   return '<div class="dtb"><table class="'+(v.hc?'nh':'')+'">'+h+b+'</table></div>'+(v.cap?'<p class="dcap">'+bd(v.cap)+'</p>':'');
 }
 function vChips(v){
-  return '<div class="dchw"><div class="dch">'+v.parts.map(function(p){return '<div class="dc" style="--c:'+dcol(p[2])+'"><b>'+bd(p[0])+'</b>'+(p[1]?'<i>'+bd(p[1])+'</i>':'')+'</div>'}).join('')+'</div>'+(v.cap?'<p class="dcap">'+bd(v.cap)+'</p>':'')+'</div>';
+  return '<div class="dchw"><div class="dch">'+v.parts.map(function(p){return '<div class="dc'+(/^[+−×:=<>➜→≈\-]$/.test(String(p[0]).trim())?' op':'')+'" style="--c:'+dcol(p[2])+'"><b>'+bd(p[0])+'</b>'+(p[1]?'<i>'+bd(p[1])+'</i>':'')+'</div>'}).join('')+'</div>'+(v.cap?'<p class="dcap">'+bd(v.cap)+'</p>':'')+'</div>';
 }
 function vTline(v){
   return '<ol class="dtl">'+v.items.map(function(p,i){return '<li class="'+(i===v.now?'now':'')+'" style="--c:'+dcol(p[3])+'"><span class="dot"></span><div><b>'+bd(p[0])+'</b><span>'+bd(p[1])+'</span>'+(p[2]?'<em>'+bd(p[2])+'</em>':'')+'</div></li>'}).join('')+'</ol>';
@@ -146,7 +146,7 @@ function vField(v){
     if(f!==null)o+='<circle cx="'+cx+'" cy="'+cy+'" r="11" fill="url(#fg'+f+')" stroke="'+VC[f]+'" stroke-width="1.5" filter="url(#fsh)"/><ellipse cx="'+(cx-3.5)+'" cy="'+(cy-4)+'" rx="3.6" ry="2.2" fill="#fff" fill-opacity=".55"/>';
     k++}
   for(i=5;i<cols;i+=5)o+='<line x1="'+(gx(i)-P/2-G/2)+'" x2="'+(gx(i)-P/2-G/2)+'" y1="6" y2="'+(H-6)+'" stroke="#5F6B7A" stroke-width="2.5" stroke-dasharray="3 4"/>';
-  return '<figure class="vis"><svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+Math.min(520,W*1.9)+'px" role="img" aria-label="Punktefeld">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis" style="align-items:center"><svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+Math.min(520,W*1.9)+'px" role="img" aria-label="Punktefeld">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vClock(v){
   var o='<defs><radialGradient id="ckb" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#8AB4F8"/><stop offset="1" stop-color="#1A56C4"/></radialGradient><radialGradient id="ckf" cx=".5" cy=".4" r=".7"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#EEF2F8"/></radialGradient><filter id="cks" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="1.5" dy="2.5" stdDeviation="1.8" flood-opacity=".35"/></filter></defs>';
@@ -254,16 +254,16 @@ function vBlocks(v){
   x+=(z?8:0);
   for(k=0;k<e;k++){o+='<rect x="'+x+'" y="60" width="12" height="12" rx="3" fill="#FDE9A6" stroke="#B06000" stroke-width="2.2"/>';x+=17}
   var W=Math.max(60,x+4);
-  return '<figure class="vis"><svg viewBox="0 0 '+W+' 80" width="100%" style="max-width:'+Math.min(560,W*2.4)+'px;display:block;margin:0 auto" role="img" aria-label="Stellenwert-Material">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis"><svg viewBox="0 0 '+W+' 80" width="100%" style="max-width:'+Math.min(380,W*1.9)+'px;display:block;margin:0 auto" role="img" aria-label="Stellenwert-Material">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vJumps(v){
   var pts=[v.from],i;(v.jumps||[]).forEach(function(j){pts.push(pts[pts.length-1]+j[0])});
   var mn=Math.min.apply(null,pts),mx=Math.max.apply(null,pts),pad=(mx-mn)*.06||1,lo=mn-pad,hi=mx+pad,x0=24,x1=576,y=142;
   function X(n){return x0+(x1-x0)*(n-lo)/(hi-lo)}
-  var o='<defs><marker id="jh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#EA4335"/></marker></defs><line x1="'+(x0-8)+'" y1="'+y+'" x2="'+(x1+8)+'" y2="'+y+'" stroke="#2f3a4a" stroke-width="3" stroke-linecap="round"/>';
+  var o='<defs>'+[0,1,2,3,4,5,6,7,99].map(function(ci){var cc=ci===99?'#EA4335':DC[ci];return '<marker id="jh'+ci+'" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="'+cc+'"/></marker>'}).join('')+'</defs><line x1="'+(x0-8)+'" y1="'+y+'" x2="'+(x1+8)+'" y2="'+y+'" stroke="#2f3a4a" stroke-width="3" stroke-linecap="round"/>';
   pts.forEach(function(p,k){o+='<line x1="'+X(p)+'" y1="'+(y-8)+'" x2="'+X(p)+'" y2="'+(y+8)+'" stroke="#2f3a4a" stroke-width="3"/><circle cx="'+X(p)+'" cy="'+y+'" r="7" fill="'+(k===0?'#34A853':k===pts.length-1?'#4285F4':'#FBBC04')+'" stroke="#fff" stroke-width="2"/><text x="'+X(p)+'" y="'+(y+36)+'" text-anchor="middle" font-size="'+(v.fs||24)+'" font-weight="800" fill="#202124" font-family="Arial,sans-serif">'+(k===pts.length-1&&v.hideEnd?'?':(v.fmt?v.fmt[k]:p))+'</text>'});
-  (v.jumps||[]).forEach(function(j,k){var a=X(pts[k]),b=X(pts[k+1]),m=(a+b)/2,r=Math.abs(b-a)/2,h=Math.min(46,Math.max(22,10+r*.55))+((k%2&&(v.jumps.some(function(q,qi){return Math.abs(X(pts[qi+1])-X(pts[qi]))<120})))?34:0),dir=b>=a?1:-1;
-    o+='<path d="M'+a+' '+(y-6)+'Q'+m+' '+(y-6-2*h)+' '+b+' '+(y-6)+'" fill="none" stroke="#EA4335" stroke-width="4" stroke-linecap="round" marker-end="url(#jh)"/><rect x="'+(m-Math.max(38,String(j[1]).length*9.5))+'" y="'+(y-h-48)+'" width="'+Math.max(76,String(j[1]).length*19)+'" height="38" rx="19" fill="#fff" stroke="#EA4335" stroke-width="2"/><text x="'+m+'" y="'+(y-h-21)+'" text-anchor="middle" font-size="26" font-weight="900" fill="#B3261E" font-family="Arial,sans-serif">'+esc(j[1])+'</text>'});
+  (v.jumps||[]).forEach(function(j,k){var a=X(pts[k]),b=X(pts[k+1]),m=(a+b)/2,r=Math.abs(b-a)/2,h=Math.min(46,Math.max(22,10+r*.55))+((k%2&&(v.jumps.some(function(q,qi){return Math.abs(X(pts[qi+1])-X(pts[qi]))<120})))?34:0),dir=b>=a?1:-1,jm=(typeof j[2]==='number')?j[2]%8:99,jc=jm===99?'#EA4335':DC[jm];
+    o+='<path d="M'+a+' '+(y-6)+'Q'+m+' '+(y-6-2*h)+' '+b+' '+(y-6)+'" fill="none" stroke="'+jc+'" stroke-width="4" stroke-linecap="round" marker-end="url(#jh'+jm+')"/><rect x="'+(m-Math.max(38,String(j[1]).length*9.5))+'" y="'+(y-h-48)+'" width="'+Math.max(76,String(j[1]).length*19)+'" height="38" rx="19" fill="#fff" stroke="'+jc+'" stroke-width="2"/><text x="'+m+'" y="'+(y-h-21)+'" text-anchor="middle" font-size="26" font-weight="900" fill="'+jc+'" font-family="Arial,sans-serif">'+esc(j[1])+'</text>'});
   return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 204" width="100%" role="img" aria-label="Rechenstrich">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vArr(v){
@@ -271,7 +271,7 @@ function vArr(v){
   for(j=0;j<r;j++)for(i=0;i<c;i++){var f=(v.splitRows?j<sp:i<sp)?VC[1]:VC[v.col===undefined?0:v.col];if(!sp)f=VC[v.col===undefined?0:v.col];
     o+='<circle cx="'+(5+i*P+P/2)+'" cy="'+(5+j*P+P/2)+'" r="9" fill="'+f+'" stroke="#fff" stroke-width="1.5"/><ellipse cx="'+(5+i*P+P/2-3)+'" cy="'+(5+j*P+P/2-3.5)+'" rx="3" ry="2" fill="#fff" fill-opacity=".5"/>'}
   if(sp)o+=(v.splitRows?'<line x1="2" x2="'+(W-2)+'" y1="'+(5+sp*P)+'" y2="'+(5+sp*P)+'"':'<line y1="2" y2="'+(H-2)+'" x1="'+(5+sp*P)+'" x2="'+(5+sp*P)+'"')+' stroke="#EA4335" stroke-width="3" stroke-dasharray="6 4"/>';
-  return '<figure class="vis"><svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+Math.min(420,W*2)+'px;display:block;margin:0 auto" role="img" aria-label="Malfeld">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis" style="align-items:center"><svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+Math.min(420,Math.round(W*1.3))+'px;max-height:none;display:block;margin:0 auto" role="img" aria-label="Malfeld">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vCol(v){
   var a=v.a,b=v.b,plus=v.op!=='-',da=String(a).split('').map(Number),db=String(b).split('').map(Number),n=Math.max(da.length,db.length);
@@ -298,7 +298,7 @@ function vCol(v){
     if(plus)o+='<g><circle cx="'+x(i)+'" cy="152" r="11" fill="#FDE9A6" stroke="#B06000" stroke-width="2"/><text x="'+x(i)+'" y="157" text-anchor="middle" font-size="14" font-weight="900" fill="#7A4A00" font-family="Arial,sans-serif">1</text></g>';
     else o+='<g><circle cx="'+(x(i+1)-24)+'" cy="52" r="9.5" fill="#FDE9A6" stroke="#B06000" stroke-width="2"/><text x="'+(x(i+1)-24)+'" y="56" text-anchor="middle" font-size="10" font-weight="900" fill="#7A4A00" font-family="Arial,sans-serif">10</text></g>';
   }
-  return '<figure class="vis"><svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+Math.max(220,W*2.2)+'px;display:block;margin:0 auto" role="img" aria-label="Schriftliche Rechnung">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis" style="align-items:center"><svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+Math.max(220,W*2.2)+'px;display:block;margin:0 auto" role="img" aria-label="Schriftliche Rechnung">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function visuals(list){
   if(!list||!list.length)return '';

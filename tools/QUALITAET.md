@@ -49,3 +49,17 @@ Keine «Nochmal anders»-Wiederholungen, keine Schritte nur zum Wiederholen. Gil
 - Lernkarten und Prüfung: nur Fragetypen, die zum Thema passen; mehrere Formen pro Thema (Ablesen, Ergänzen, Umkehren, Fehler finden, Sachaufgabe …).
 - Zahlenstrahl: Beschriftung wechseln (alle Zahlen / jede zweite / nur Anfang und Ende), nicht immer vollständig.
 - Danach ein zweiter Durchgang (nochmals ansehen): Texte lesen, Grafiken im Browser bei 390 px prüfen.
+
+## Regeln v4.56 – Erklärung, Farben, Rückmeldung (verbindlich für jedes neue Thema)
+- **Erste Theorie-Seite = Einführung**: «Worum geht es?» – was ist das Thema, was lernt man (Kacheln mit den Inhalten).
+- **Keine nackte Grafik, keine nackte Aufgabe**: Jede Theorie-Seite hat einen kurzen erklärenden Text (was tun wir in diesem Schritt). Grössere Rechnungen: Rechenweg als nummerierte Schritte («Schritt 1, 2, 3») mit LINES(num).
+- **Rechnung unter der Grafik** (Mathe): unter jeder Grafik steht die Rechnung (Chips oder Schritte).
+- **Farben abgleichen**: gleiche Teile haben in Grafik und Rechnung dieselbe Farbe (z. B. 20 im Rechenstrich und in der Rechnung blau). Kein Hunderterfeld mit Feldern im Rechenweg.
+- **Rechenzeichen grau** (+ − × : =) in allen Chips, nie bunt.
+- **Tipps (hints)** passen zu Klassenstufe und Zahlenraum der Aufgabe (Zahlen und Wortwahl, z. B. «bis zum nächsten Zehner, dann bis 100»).
+- **Rückmeldung bei falscher Antwort**: rot «Deine Antwort: …» und darunter im gleichen Stil grün «Richtig ist: …». Dieses Paar überall verwenden, wo eine falsche und die richtige Antwort gezeigt werden.
+- **Prüfung**: Aufgaben mit dickerer, gut sichtbarer Linie trennen; Prüfungs-Einstieg mit Prüfungsblatt-Grafik; Prüfungsfragen haben andere Zahlen als die Lernkarten.
+- **Extra-XP-Spiele etwas schwerer**: Mathe eine Auswahl mehr, Sprachen ein Buchstabe mehr übrig.
+- **Namen**: ≥ 58 Namen, Pronomen mit sie(name). Namen wiederholen sich selten.
+- **Grafikgrösse**: Punktefelder/Balken/Rechenstrich ähnlich gross und gleich fein; Punktegrösse einheitlich; zentriert; Rechenketten brechen nicht um (höchstens ca. 7 Chips).
+- **Pipeline pro Thema**: Recherche → Methoden-Scout → Konzept → Bau → Inhalts-Prüfer (rechnet alles nach, Rechtschreibung, doppelte Aufgaben Prüfung/Karten) → Layout-Prüfer (Screenshots) → Korrekturen.

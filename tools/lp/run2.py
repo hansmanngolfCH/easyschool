@@ -35,6 +35,8 @@ for k,v in MORE.items():
     THEORY[k][-1:-1]=v
 import pilot_plus100
 THEORY[pilot_plus100.ID]=pilot_plus100.theory()
+import pilot_einmaleins
+THEORY[pilot_einmaleins.ID]=pilot_einmaleins.theory()
 topics=[];bad=0;missing=[]
 for m in mods:
     for f in importlib.import_module(m).T:
