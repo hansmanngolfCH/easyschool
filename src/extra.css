@@ -1338,3 +1338,10 @@ body.hascalc #app{padding-bottom:84px}
 .gp-next{color:#B06000!important}
 .gp .shield b{text-shadow:none;color:#fff}
 .gp-top .av{background:#F1F3F8!important}
+/* v4.62: Schritte kompakt und klar: eine Zeile pro Schritt, Rechnung links, Beschriftung rechts */
+.lines.num{gap:0;background:var(--surface2,#F4F6FA);border-radius:14px;padding:4px 10px}
+.lines.num .ln{background:none!important;border-radius:0!important;box-shadow:none!important;min-height:0!important;padding:7px 0 7px 36px!important;flex-direction:row!important;align-items:center;justify-content:space-between!important;gap:10px;flex-wrap:wrap}
+.lines.num .ln+.ln{border-top:1px solid var(--line,#E3E6EC)}
+.lines.num .ln::before{left:0!important;width:24px!important;height:24px!important;font-size:.8rem!important}
+.lines.num .ln code{font-size:1.1rem;font-weight:800;order:1}
+.lines.num .ln em{order:2;font-style:normal;font-size:.8rem;font-weight:600;color:var(--ink2,#5f6368);text-align:right;margin-left:auto}
