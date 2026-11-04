@@ -417,10 +417,10 @@ function lbar(L,mini,skin){
 function padDefault(key){if(key.indexOf('p:')===0){var x=cardIdx[key.slice(2)];return false}return false}
 function padOpen(key){return nav.padOpen&&nav.padOpen[key]!==undefined?nav.padOpen[key]:padDefault(key)}
 function padHTML(key,qtext){
-  var open=padOpen(key),btn='<button class="btn sm" data-act="pad" data-key="'+esc(key)+'" aria-label="Notizen">'+(open?'<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>':'<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1 11-11a2.1 2.1 0 0 0-3-3L5 16z"/></svg>')+'</button>';
+  var open=padOpen(key),btn='<button class="btn sm" data-act="pad" data-key="'+esc(key)+'" aria-label="Notiz">'+(open?'<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>':'<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1 11-11a2.1 2.1 0 0 0-3-3L5 16z"/></svg>')+'<span style="margin-left:6px">Notiz'+(open?' schliessen':'')+'</span></button>';
   if(!open)return {btn:btn,box:''};
   var tl=[['ink','Stift'],['erase','Radierer']].map(function(t){return '<button class="tool'+(penTool===t[0]?' on':'')+'" data-act="tool" data-tool="'+t[0]+'"><i class="sw '+t[0]+'"></i>'+t[1]+'</button>'}).join('');
-  var box='<div class="pad"><div class="padbar">'+tl+'<button class="tool" data-act="padclear" data-key="'+esc(key)+'">Leeren</button></div><div class="padwrap"><canvas class="padcv" data-key="'+esc(key)+'" data-q="" aria-label="Zeichenfläche für Notizen"></canvas></div></div>';
+  var box='<div class="pad"><div class="padbar">'+tl+'<button class="tool" data-act="padclear" data-key="'+esc(key)+'">Leeren</button></div><div class="padwrap"><canvas class="padcv" data-key="'+esc(key)+'" data-q="" aria-label="Zeichenfläche für die Notiz"></canvas></div></div>';
   return {btn:btn,box:box};
 }
 function colorOf(cv,t){var cs=getComputedStyle(cv),v=cs.getPropertyValue({ink:'--ink',accent:'--accent',bad:'--bad'}[t]||'--ink').trim();return v||'#888'}
