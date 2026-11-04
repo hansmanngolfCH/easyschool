@@ -1355,6 +1355,13 @@ body.rwopen{overflow:hidden}
 .pgrows{padding:0 14px 8px;border-top:1px solid #F1F3F4}
 .pgrows .pgr:first-child{border-top:0}
 .pgmore{all:unset;cursor:pointer;display:block;text-align:center;margin:8px auto 0;padding:8px 14px;color:#1A73E8;font:800 .9rem var(--font-d)}
+/* v4.31 Profil-Sheet mit Rand (iPhone-Optik) */
+.pfov{padding:0 8px max(8px,env(safe-area-inset-bottom))}
+.pfsheet{border-radius:30px!important;max-height:calc(100vh - 24px);box-shadow:0 10px 40px rgba(0,0,0,.28);padding:14px 16px 18px}
+.pfhd{margin:2px 4px 10px;text-align:center;font:800 1.05rem/1.3 var(--font-d);color:#1f2430}
+.pfsheet .pfh{margin-bottom:0}
+.pfseg button{font-size:.88rem}
+.pfcols{gap:4px;flex-wrap:nowrap}.pfc{width:18px;height:18px;flex:none}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1362,7 +1369,7 @@ body.rwopen{overflow:hidden}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v4.30';
+var APP_VERSION='v4.32';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -4171,13 +4178,13 @@ ACT.avopen=function(){
     if(st.v==='av'){
       h='<div class="pfh"><button class="pfdone" data-k="back">‹ Profil</button><b>Bild</b><span style="min-width:70px"></span></div><div class="avgrid pfg">'+Array.apply(null,{length:AV_N}).map(function(_,i){return '<button class="avopt'+(i===cur?' on':'')+'" data-k="av" data-i="'+i+'" aria-label="Avatar '+(i+1)+'">'+avPic(i,48)+'</button>'}).join('')+'</div>';
     }else{
-      h='<div class="pfh"><span style="min-width:70px"></span><b>Profil</b><button class="pfdone" data-k="done">Fertig</button></div>'+
+      h='<div class="pfh"><span style="min-width:70px"></span><span></span><button class="pfdone" data-k="done">Fertig</button></div><p class="pfhd">'+(acc?'Dein Profil':'Wähle einen Namen und eine PIN, damit du deine XP nicht verlierst.')+'</p>'+
       '<div class="pfme"><button class="pfbig" data-k="pic" aria-label="Bild ändern">'+avPic(cur,64)+'<em>✎</em></button><div class="pfmid">'+(acc?'<div class="pfrow ro"><span class="pfrn">'+esc(acc.name)+'</span><span class="pfst">☁ gespeichert</span></div>':'<input id="pfn" class="pfin" maxlength="14" placeholder="Dein Name" value="'+esc(st.n)+'" autocomplete="off" autocapitalize="words" spellcheck="false">')+
       '<div class="pfcols">'+AVCOL.map(function(c,i){return '<button class="pfc'+(i===cc?' on':'')+'" style="background:linear-gradient(135deg,'+c[0]+','+c[1]+')" data-k="col" data-i="'+i+'" aria-label="Farbe '+(i+1)+'"></button>'}).join('')+'</div></div></div>';
       if(acc){
         h+='<p class="pfok">Dein Fortschritt wird automatisch gespeichert.</p><button class="pfb pri" data-k="now">Jetzt speichern</button><button class="pfb ghost" data-k="out">Abmelden</button>';
       }else{
-        h+='<div class="pfseg"><button class="'+(st.mode==='create'?'on':'')+'" data-k="m-create">Neu</button><button class="'+(st.mode==='login'?'on':'')+'" data-k="m-login">Anmelden</button></div>'+
+        h+='<div class="pfseg"><button class="'+(st.mode==='create'?'on':'')+'" data-k="m-create">Schüler erstellen</button><button class="'+(st.mode==='login'?'on':'')+'" data-k="m-login">Schüler anmelden</button></div>'+
         '<p class="pfsub2" id="pft">'+(st.mode==='login'?'PIN eingeben':(st.first?'PIN wiederholen':'Wähle eine PIN'))+'</p><div class="pfdots" id="pfd">'+dots()+'</div><div class="pfkeys">'+keys()+'</div>';
       }
       h+='<p class="pfm'+(st.err?' err':'')+'" id="pfmsg">'+st.msg+'</p>';
