@@ -1566,6 +1566,9 @@ body.hascalc #app{padding-bottom:84px}
 /* v4.66: Schritt = Rechnung oben, kurze Handlung darunter, links bündig */
 .lines.num .ln{flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:1px!important;flex-wrap:nowrap!important}
 .lines.num .ln em{margin-left:0!important;text-align:left!important;order:2;font-size:.88rem!important}
+/* v4.67: Schritte schwarz, kein Blau (Blau ist Grafikfarbe) */
+.lines.num .ln::before{background:#202124!important;color:#fff!important}
+.lines.num .ln em{color:var(--ink)!important;font-weight:600!important}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1573,7 +1576,7 @@ body.hascalc #app{padding-bottom:84px}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION="v4.66";
+var APP_VERSION="v4.67";
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};

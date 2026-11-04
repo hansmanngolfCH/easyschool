@@ -70,3 +70,4 @@ Keine «Nochmal anders»-Wiederholungen, keine Schritte nur zum Wiederholen. Gil
 - **Richtig-Anzeige (v4.64)**: Bei richtiger Antwort nur ein grüner Balken «Richtig: <Lösung>», die Lösung nicht nochmals darunter.
 - **Schritte (v4.65)**: Kein Grau, keine Wörter «Schritt 1» in der Beschriftung; klare blaue Nummern 1-2-3, Beschriftung kurz und blau rechts.
 - **Schritt-Texte (v4.66)**: Unter jeder Schritt-Rechnung steht eine kurze Handlung in ganzen Worten (z. B. «bis zum nächsten Zehner gehen», «den Rest dazunehmen»), links bündig, nicht nur ein Stichwort.
+- **Schritte schwarz (v4.67)**: Nummern und Text der Schritte schwarz, nie blau (Farben sind für die Grafik reserviert).

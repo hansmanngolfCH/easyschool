@@ -1356,3 +1356,6 @@ body.hascalc #app{padding-bottom:84px}
 /* v4.66: Schritt = Rechnung oben, kurze Handlung darunter, links bündig */
 .lines.num .ln{flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:1px!important;flex-wrap:nowrap!important}
 .lines.num .ln em{margin-left:0!important;text-align:left!important;order:2;font-size:.88rem!important}
+/* v4.67: Schritte schwarz, kein Blau (Blau ist Grafikfarbe) */
+.lines.num .ln::before{background:#202124!important;color:#fff!important}
+.lines.num .ln em{color:var(--ink)!important;font-weight:600!important}
