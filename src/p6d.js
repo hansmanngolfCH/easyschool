@@ -247,3 +247,42 @@ ACT.pgmore=function(){nav.pgo=nav.pgo||{};nav.pgo._more=!nav.pgo._more;var y=win
 ACT.prog=function(b){var c=(b&&b.dataset&&b.dataset.id)||nav.child;go({view:'progress',child:c},nav.view==='parent'?{view:'parent'}:{view:'child',child:c,from:{view:'home'}})};
 ACT.pgopen=function(b){var t=topicById(b.dataset.id);nav.topen=nav.topen||{};var o={view:'subject',child:nav.child,subject:t.subject,topen:{},chopen:{}};o.topen[t.id]=true;o.chopen[t.subject+'|'+t.chapter]=true;go(o,{view:'progress',child:nav.child,from:nav.from})};
 })();
+
+/* ---------- Taschenrechner ab Klasse 7 (v4.45) ---------- */
+function gradeOf(c){var m=/(\d+)/.exec(c||'');return m?+m[1]:0}
+function calcFab(){
+  var b=document.getElementById('calcfab'),ok=false;
+  try{ok=nav.child&&gradeOf(nav.child)>=7&&((nav.view==='learn'&&topicById(nav.topicId).subject==='mathe')||(nav.view==='practice'&&(nav.subject==='mathe'||/-mathe-/.test(nav.scope||''))))}catch(e){ok=false}
+  document.body.classList.toggle('hascalc',!!ok);if(!ok){if(b)b.remove();return}
+  if(!b){b=document.createElement('button');b.id='calcfab';b.type='button';b.setAttribute('aria-label','Rechner öffnen');b.innerHTML='🧮<small>Rechner</small>';b.addEventListener('click',calcOpen);document.body.appendChild(b)}
+}
+function calcOpen(){
+  if(document.getElementById('calov'))return;
+  var cur='0',acc=null,op=null,fresh=false,expr='',ov=document.createElement('div');
+  ov.id='calov';ov.className='calov';
+  var keys=[['C','k2'],['⌫','k2'],['√','k3'],['x²','k3'],['7'],['8'],['9'],['÷','k3'],['4'],['5'],['6'],['×','k3'],['1'],['2'],['3'],['−','k3'],['0'],[','],['=','k4'],['+','k3']];
+  ov.innerHTML='<div class="calsh" role="dialog" aria-label="Taschenrechner"><div class="calhd"><b>Rechner</b><button type="button" class="calx" aria-label="Schliessen">✕</button></div><div class="caldisp"><div class="calex" id="calex">&nbsp;</div><div class="calnum" id="calnum">0</div></div><div class="calkeys">'+keys.map(function(k){return '<button type="button" class="calk '+(k[1]||'')+'" data-k="'+k[0]+'">'+k[0]+'</button>'}).join('')+'</div></div>';
+  document.body.appendChild(ov);
+  function num(s){return parseFloat(String(s).replace(',','.'))}
+  function fmt(n){if(!isFinite(n))return 'Fehler';return String(parseFloat(n.toPrecision(12))).replace('.',',')}
+  function show(){document.getElementById('calnum').textContent=cur;document.getElementById('calex').innerHTML=expr||'&nbsp;'}
+  function calc(a,o,b){return o==='+'?a+b:o==='−'?a-b:o==='×'?a*b:b===0?NaN:a/b}
+  function press(k){
+    if(cur==='Fehler'&&k!=='C'){return}
+    if(/^\d$/.test(k)){if(fresh||cur==='0'){cur=k}else if(cur.replace(/[^\d]/g,'').length<12){cur+=k}fresh=false}
+    else if(k===','){if(fresh){cur='0,';fresh=false}else if(cur.indexOf(',')<0)cur+=','}
+    else if(k==='⌫'){cur=cur.length>1&&!fresh?cur.slice(0,-1):'0'}
+    else if(k==='C'){cur='0';acc=null;op=null;fresh=false;expr=''}
+    else if(k==='√'){var v=num(cur);expr='√('+cur+')';cur=v<0?'Fehler':fmt(Math.sqrt(v));fresh=true}
+    else if(k==='x²'){var w=num(cur);expr='('+cur+')²';cur=fmt(w*w);fresh=true}
+    else if(k==='='){if(op!==null){var r=calc(acc,op,num(cur));expr=fmt(acc)+' '+op+' '+cur+' =';cur=isNaN(r)?'Fehler':fmt(r);op=null;acc=null;fresh=true}}
+    else{if(op!==null&&!fresh){var r2=calc(acc,op,num(cur));if(isNaN(r2)){cur='Fehler';op=null;acc=null;show();return}acc=r2}else acc=num(cur);op=k;expr=fmt(acc)+' '+k;fresh=true;if(!isNaN(acc))cur=fmt(acc)}
+    show()
+  }
+  function close(){document.removeEventListener('keydown',kd);ov.remove()}
+  function kd(e){var m={'*':'×','/':'÷','-':'−','+':'+','.':',',',':',','Enter':'=','=':'=','Backspace':'⌫','Delete':'C'};
+    if(e.key==='Escape'){close();return}
+    var k=/^\d$/.test(e.key)?e.key:m[e.key];if(k){e.preventDefault();press(k)}}
+  ov.addEventListener('click',function(e){if(e.target===ov||e.target.closest('.calx')){close();return}var b=e.target.closest('.calk');if(b)press(b.dataset.k)});
+  document.addEventListener('keydown',kd);
+}

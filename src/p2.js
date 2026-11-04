@@ -117,9 +117,17 @@ function vFlow(v){
 function vCards(v){
   return '<div class="dcd">'+v.items.map(function(p){return '<div class="dk" style="--c:'+dcol(p[3])+'"><h4>'+bd(p[0])+'</h4><p class="q">'+bd(p[1])+'</p><p class="e">'+bd(p[2])+'</p></div>'}).join('')+'</div>';
 }
+
+function vArea(v){
+  var W=200,H=150,x0=44,y0=34,cw=W/v.c,chh=H/v.r,o='',i,j;
+  for(i=0;i<v.c;i++)for(j=0;j<v.r;j++){var a=i<v.a,b=j<v.b,f=a&&b?'#9334E6':a?'#8AB4F8':b?'#81C995':'#EEF1F7';o+='<rect x="'+(x0+i*cw).toFixed(1)+'" y="'+(y0+j*chh).toFixed(1)+'" width="'+cw.toFixed(1)+'" height="'+chh.toFixed(1)+'" fill="'+f+'" stroke="#fff" stroke-width="2"/>'}
+  o+='<text x="'+(x0+v.a*cw/2)+'" y="22" text-anchor="middle" font-size="17" font-weight="800" fill="#1A56C8" font-family="Arial,sans-serif">'+esc(v.la)+'</text>';
+  o+='<text x="'+(x0-8)+'" y="'+(y0+v.b*chh/2+6)+'" text-anchor="end" font-size="17" font-weight="800" fill="#188038" font-family="Arial,sans-serif">'+esc(v.lb)+'</text>';
+  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 270 200" width="100%" style="max-width:300px" role="img" aria-label="Flächenmodell fürs Malnehmen">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+}
 function visuals(list){
   if(!list||!list.length)return '';
-  var map={dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar,tbl:vTbl,chips:vChips,tline:vTline,flow:vFlow,cards:vCards};
+  var map={dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar,tbl:vTbl,chips:vChips,tline:vTline,flow:vFlow,cards:vCards,area:vArea};
   return '<div class="visrow">'+list.map(function(v){return map[v.type]?map[v.type](v):''}).join('')+'</div>';
 }
 

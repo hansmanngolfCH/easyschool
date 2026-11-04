@@ -7,6 +7,7 @@ function render(){
   SKIN=nav.child?skinOf(nav.child):null;
   app.innerHTML=top()+banner()+VIEWS[nav.view]()+'<p class="ver">Version '+APP_VERSION+' · <a class="imp" href="impressum.html">Impressum</a></p>'+(nav.view==='home'?'<p class="disc">Lernen leicht gemacht · Inhalte mit KI erstellt</p>':'');
   updateSync();
+  calcFab();
   initPads();
   if(nav.view==='practice'&&nav.queue&&nav.idx<nav.queue.length&&!nav.revealed){
     var cc=curCard(nav);

@@ -1228,3 +1228,18 @@ body.rwopen{overflow:hidden}
 .nc,.nc.c0,.nc.c1,.nc.c2,.nc.c3{background:var(--surface,#fff)!important;color:var(--ink2,#555)!important;border-color:var(--line,#bbb)!important}
 .dtb td:last-child{white-space:nowrap}
 .dtb tbody th span{font-size:.82rem}
+
+#calfab,#calcfab{position:fixed;right:14px;bottom:16px;z-index:50;width:56px;height:56px;border-radius:50%;border:0;background:#34A853;color:#fff;font-size:1.5rem;line-height:1;box-shadow:0 4px 0 #188038,0 6px 14px rgba(0,0,0,.2);display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;padding:0}
+#calcfab small{font-size:.5rem;font-weight:800;letter-spacing:.02em;margin-top:1px}
+.calov{position:fixed;inset:0;z-index:120;background:rgba(0,0,0,.35);display:flex;align-items:flex-end;justify-content:center}
+.calsh{width:100%;max-width:420px;background:var(--surface,#fff);color:var(--ink,#202124);border-radius:22px 22px 0 0;padding:14px 14px calc(14px + env(safe-area-inset-bottom,0px));box-shadow:0 -8px 30px rgba(0,0,0,.25)}
+.calhd{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}.calhd b{font-size:1rem}
+.calx{border:0;background:var(--surface2,#f1f3f4);color:var(--ink,#202124);width:32px;height:32px;border-radius:50%;font-size:1rem;cursor:pointer}
+.caldisp{background:var(--surface2,#f1f3f4);border-radius:14px;padding:8px 14px;text-align:right;margin-bottom:10px;min-height:68px}
+.calex{font-size:.9rem;color:var(--ink2,#5f6368);min-height:1.2em;overflow:hidden;white-space:nowrap}
+.calnum{font-size:2rem;font-weight:700;line-height:1.2;overflow:hidden;white-space:nowrap}
+.calkeys{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.calk{height:52px;border:0;border-radius:14px;background:var(--surface2,#f1f3f4);color:var(--ink,#202124);font-size:1.25rem;font-weight:600;cursor:pointer;box-shadow:0 3px 0 rgba(0,0,0,.1)}
+.calk:active{transform:translateY(2px);box-shadow:0 1px 0 rgba(0,0,0,.1)}
+.calk.k2{background:#FCE8E6;color:#B3261E}.calk.k3{background:#E8F0FE;color:#1A56C8}.calk.k4{background:#34A853;color:#fff}
+body.hascalc #app{padding-bottom:84px}

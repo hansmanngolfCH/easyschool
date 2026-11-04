@@ -1438,6 +1438,21 @@ body.rwopen{overflow:hidden}
 .nc,.nc.c0,.nc.c1,.nc.c2,.nc.c3{background:var(--surface,#fff)!important;color:var(--ink2,#555)!important;border-color:var(--line,#bbb)!important}
 .dtb td:last-child{white-space:nowrap}
 .dtb tbody th span{font-size:.82rem}
+
+#calfab,#calcfab{position:fixed;right:14px;bottom:16px;z-index:50;width:56px;height:56px;border-radius:50%;border:0;background:#34A853;color:#fff;font-size:1.5rem;line-height:1;box-shadow:0 4px 0 #188038,0 6px 14px rgba(0,0,0,.2);display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;padding:0}
+#calcfab small{font-size:.5rem;font-weight:800;letter-spacing:.02em;margin-top:1px}
+.calov{position:fixed;inset:0;z-index:120;background:rgba(0,0,0,.35);display:flex;align-items:flex-end;justify-content:center}
+.calsh{width:100%;max-width:420px;background:var(--surface,#fff);color:var(--ink,#202124);border-radius:22px 22px 0 0;padding:14px 14px calc(14px + env(safe-area-inset-bottom,0px));box-shadow:0 -8px 30px rgba(0,0,0,.25)}
+.calhd{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}.calhd b{font-size:1rem}
+.calx{border:0;background:var(--surface2,#f1f3f4);color:var(--ink,#202124);width:32px;height:32px;border-radius:50%;font-size:1rem;cursor:pointer}
+.caldisp{background:var(--surface2,#f1f3f4);border-radius:14px;padding:8px 14px;text-align:right;margin-bottom:10px;min-height:68px}
+.calex{font-size:.9rem;color:var(--ink2,#5f6368);min-height:1.2em;overflow:hidden;white-space:nowrap}
+.calnum{font-size:2rem;font-weight:700;line-height:1.2;overflow:hidden;white-space:nowrap}
+.calkeys{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.calk{height:52px;border:0;border-radius:14px;background:var(--surface2,#f1f3f4);color:var(--ink,#202124);font-size:1.25rem;font-weight:600;cursor:pointer;box-shadow:0 3px 0 rgba(0,0,0,.1)}
+.calk:active{transform:translateY(2px);box-shadow:0 1px 0 rgba(0,0,0,.1)}
+.calk.k2{background:#FCE8E6;color:#B3261E}.calk.k3{background:#E8F0FE;color:#1A56C8}.calk.k4{background:#34A853;color:#fff}
+body.hascalc #app{padding-bottom:84px}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1445,7 +1460,7 @@ body.rwopen{overflow:hidden}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v4.44';
+var APP_VERSION='v4.45';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -1876,9 +1891,17 @@ function vFlow(v){
 function vCards(v){
   return '<div class="dcd">'+v.items.map(function(p){return '<div class="dk" style="--c:'+dcol(p[3])+'"><h4>'+bd(p[0])+'</h4><p class="q">'+bd(p[1])+'</p><p class="e">'+bd(p[2])+'</p></div>'}).join('')+'</div>';
 }
+
+function vArea(v){
+  var W=200,H=150,x0=44,y0=34,cw=W/v.c,chh=H/v.r,o='',i,j;
+  for(i=0;i<v.c;i++)for(j=0;j<v.r;j++){var a=i<v.a,b=j<v.b,f=a&&b?'#9334E6':a?'#8AB4F8':b?'#81C995':'#EEF1F7';o+='<rect x="'+(x0+i*cw).toFixed(1)+'" y="'+(y0+j*chh).toFixed(1)+'" width="'+cw.toFixed(1)+'" height="'+chh.toFixed(1)+'" fill="'+f+'" stroke="#fff" stroke-width="2"/>'}
+  o+='<text x="'+(x0+v.a*cw/2)+'" y="22" text-anchor="middle" font-size="17" font-weight="800" fill="#1A56C8" font-family="Arial,sans-serif">'+esc(v.la)+'</text>';
+  o+='<text x="'+(x0-8)+'" y="'+(y0+v.b*chh/2+6)+'" text-anchor="end" font-size="17" font-weight="800" fill="#188038" font-family="Arial,sans-serif">'+esc(v.lb)+'</text>';
+  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 270 200" width="100%" style="max-width:300px" role="img" aria-label="Flächenmodell fürs Malnehmen">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+}
 function visuals(list){
   if(!list||!list.length)return '';
-  var map={dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar,tbl:vTbl,chips:vChips,tline:vTline,flow:vFlow,cards:vCards};
+  var map={dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar,tbl:vTbl,chips:vChips,tline:vTline,flow:vFlow,cards:vCards,area:vArea};
   return '<div class="visrow">'+list.map(function(v){return map[v.type]?map[v.type](v):''}).join('')+'</div>';
 }
 
@@ -2464,6 +2487,7 @@ function render(){
   SKIN=nav.child?skinOf(nav.child):null;
   app.innerHTML=top()+banner()+VIEWS[nav.view]()+'<p class="ver">Version '+APP_VERSION+' · <a class="imp" href="impressum.html">Impressum</a></p>'+(nav.view==='home'?'<p class="disc">Lernen leicht gemacht · Inhalte mit KI erstellt</p>':'');
   updateSync();
+  calcFab();
   initPads();
   if(nav.view==='practice'&&nav.queue&&nav.idx<nav.queue.length&&!nav.revealed){
     var cc=curCard(nav);
@@ -4416,6 +4440,45 @@ ACT.pgmore=function(){nav.pgo=nav.pgo||{};nav.pgo._more=!nav.pgo._more;var y=win
 ACT.prog=function(b){var c=(b&&b.dataset&&b.dataset.id)||nav.child;go({view:'progress',child:c},nav.view==='parent'?{view:'parent'}:{view:'child',child:c,from:{view:'home'}})};
 ACT.pgopen=function(b){var t=topicById(b.dataset.id);nav.topen=nav.topen||{};var o={view:'subject',child:nav.child,subject:t.subject,topen:{},chopen:{}};o.topen[t.id]=true;o.chopen[t.subject+'|'+t.chapter]=true;go(o,{view:'progress',child:nav.child,from:nav.from})};
 })();
+
+/* ---------- Taschenrechner ab Klasse 7 (v4.45) ---------- */
+function gradeOf(c){var m=/(\d+)/.exec(c||'');return m?+m[1]:0}
+function calcFab(){
+  var b=document.getElementById('calcfab'),ok=false;
+  try{ok=nav.child&&gradeOf(nav.child)>=7&&((nav.view==='learn'&&topicById(nav.topicId).subject==='mathe')||(nav.view==='practice'&&(nav.subject==='mathe'||/-mathe-/.test(nav.scope||''))))}catch(e){ok=false}
+  document.body.classList.toggle('hascalc',!!ok);if(!ok){if(b)b.remove();return}
+  if(!b){b=document.createElement('button');b.id='calcfab';b.type='button';b.setAttribute('aria-label','Rechner öffnen');b.innerHTML='🧮<small>Rechner</small>';b.addEventListener('click',calcOpen);document.body.appendChild(b)}
+}
+function calcOpen(){
+  if(document.getElementById('calov'))return;
+  var cur='0',acc=null,op=null,fresh=false,expr='',ov=document.createElement('div');
+  ov.id='calov';ov.className='calov';
+  var keys=[['C','k2'],['⌫','k2'],['√','k3'],['x²','k3'],['7'],['8'],['9'],['÷','k3'],['4'],['5'],['6'],['×','k3'],['1'],['2'],['3'],['−','k3'],['0'],[','],['=','k4'],['+','k3']];
+  ov.innerHTML='<div class="calsh" role="dialog" aria-label="Taschenrechner"><div class="calhd"><b>Rechner</b><button type="button" class="calx" aria-label="Schliessen">✕</button></div><div class="caldisp"><div class="calex" id="calex">&nbsp;</div><div class="calnum" id="calnum">0</div></div><div class="calkeys">'+keys.map(function(k){return '<button type="button" class="calk '+(k[1]||'')+'" data-k="'+k[0]+'">'+k[0]+'</button>'}).join('')+'</div></div>';
+  document.body.appendChild(ov);
+  function num(s){return parseFloat(String(s).replace(',','.'))}
+  function fmt(n){if(!isFinite(n))return 'Fehler';return String(parseFloat(n.toPrecision(12))).replace('.',',')}
+  function show(){document.getElementById('calnum').textContent=cur;document.getElementById('calex').innerHTML=expr||'&nbsp;'}
+  function calc(a,o,b){return o==='+'?a+b:o==='−'?a-b:o==='×'?a*b:b===0?NaN:a/b}
+  function press(k){
+    if(cur==='Fehler'&&k!=='C'){return}
+    if(/^\d$/.test(k)){if(fresh||cur==='0'){cur=k}else if(cur.replace(/[^\d]/g,'').length<12){cur+=k}fresh=false}
+    else if(k===','){if(fresh){cur='0,';fresh=false}else if(cur.indexOf(',')<0)cur+=','}
+    else if(k==='⌫'){cur=cur.length>1&&!fresh?cur.slice(0,-1):'0'}
+    else if(k==='C'){cur='0';acc=null;op=null;fresh=false;expr=''}
+    else if(k==='√'){var v=num(cur);expr='√('+cur+')';cur=v<0?'Fehler':fmt(Math.sqrt(v));fresh=true}
+    else if(k==='x²'){var w=num(cur);expr='('+cur+')²';cur=fmt(w*w);fresh=true}
+    else if(k==='='){if(op!==null){var r=calc(acc,op,num(cur));expr=fmt(acc)+' '+op+' '+cur+' =';cur=isNaN(r)?'Fehler':fmt(r);op=null;acc=null;fresh=true}}
+    else{if(op!==null&&!fresh){var r2=calc(acc,op,num(cur));if(isNaN(r2)){cur='Fehler';op=null;acc=null;show();return}acc=r2}else acc=num(cur);op=k;expr=fmt(acc)+' '+k;fresh=true;if(!isNaN(acc))cur=fmt(acc)}
+    show()
+  }
+  function close(){document.removeEventListener('keydown',kd);ov.remove()}
+  function kd(e){var m={'*':'×','/':'÷','-':'−','+':'+','.':',',',':',','Enter':'=','=':'=','Backspace':'⌫','Delete':'C'};
+    if(e.key==='Escape'){close();return}
+    var k=/^\d$/.test(e.key)?e.key:m[e.key];if(k){e.preventDefault();press(k)}}
+  ov.addEventListener('click',function(e){if(e.target===ov||e.target.closest('.calx')){close();return}var b=e.target.closest('.calk');if(b)press(b.dataset.k)});
+  document.addEventListener('keydown',kd);
+}
 
 
 })();
