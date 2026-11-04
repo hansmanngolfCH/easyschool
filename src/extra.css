@@ -1345,3 +1345,11 @@ body.hascalc #app{padding-bottom:84px}
 .lines.num .ln::before{left:0!important;width:24px!important;height:24px!important;font-size:.8rem!important}
 .lines.num .ln code{font-size:1.1rem;font-weight:800;order:1}
 .lines.num .ln em{order:2;font-style:normal;font-size:.8rem;font-weight:600;color:var(--ink2,#5f6368);text-align:right;margin-left:auto}
+
+/* v4.65: Schritte ohne Grau, klare Nummern */
+.lines.num{background:none!important;padding:0!important}
+.lines.num .ln{padding:9px 0 9px 42px!important}
+.lines.num .ln+.ln{border-top:2px solid #E3E6EC!important}
+.lines.num .ln::before{width:30px!important;height:30px!important;font-size:1rem!important;font-weight:800;background:#1A73E8!important;color:#fff!important}
+.lines.num .ln code{font-size:1.2rem;color:var(--ink)}
+.lines.num .ln em{font-size:.85rem;color:#1A56C8;font-weight:700}
