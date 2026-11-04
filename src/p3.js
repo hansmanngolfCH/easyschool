@@ -107,9 +107,9 @@ function vSubject(){
   chapters.forEach(function(chp){
     var group=ts.filter(function(t){return t.chapter===chp});
     if(group.length<2){group.forEach(function(t){html+=topicCard(ch,t)});return}
-    var key=nav.subject+'|'+chp,open=key in nav.chopen?nav.chopen[key]:!many,L=level(ch.id,group),w=Math.max(L.seen?4:0,Math.round(L.pct*100));
-    html+='<div class="chgrp'+(open?' open':'')+'"><button class="chh" data-act="chtoggle" data-key="'+esc(key)+'" aria-expanded="'+(open?'true':'false')+'"><span class="chn">'+esc(chp)+'</span><span class="chm">'+group.length+' Themen · '+w+'%</span><span class="chc">'+(open?'▾':'▸')+'</span></button>';
-    if(open)html+='<div class="chbody">'+group.map(function(t){return topicCard(ch,t)}).join('')+'</div>';
+    var L=level(ch.id,group),w=Math.max(L.seen?4:0,Math.round(L.pct*100));
+    html+='<div class="chgrp open"><div class="chh" style="cursor:default"><span class="chn">'+esc(chp)+'</span><span class="chm">'+group.length+' Themen · '+w+'%</span></div>';
+    html+='<div class="chbody">'+group.map(function(t){return topicCard(ch,t)}).join('')+'</div>';
     html+='</div>';
   });
   html+='</section>';
