@@ -62,13 +62,14 @@ class Topic:
             if w not in o:o.append(w)
         return o[:n]
     def card(self,lvl,q,a,wrong=None,ans=None,hints=None,steps=None,vis=None,th='basis'):
-        if q in self.seen:return False
-        self.seen.add(q)
+        key=q+json.dumps(vis or [],sort_keys=True)
+        if key in self.seen:return False
+        self.seen.add(key)
         d={"id":"c%d"%(len(self.cards)+1),"q":q,"a":str(a),"lvl":lvl,"th":th}
         if wrong is not None:
             o=self.opts(str(a),[str(w) for w in wrong])
-            if len(o)<3:
-                self.seen.discard(q);return False
+            if len(o)<2:
+                self.seen.discard(key);return False
             self.rnd.shuffle(o);d["opts"]=o
         else:d["ans"]=ans or [str(a)]
         d["hints"]=hints or []
@@ -76,11 +77,11 @@ class Topic:
         if vis:d["visuals"]=vis
         self.cards.append(d);return True
     def exam(self,q,a,wrong=None,vis=None,expl="",ans=None):
-        if any(x['q']==q for x in self.qs):return False
+        if any(x['q']==q and x.get('visuals')==vis for x in self.qs):return False
         d={"id":"q%d"%(len(self.qs)+1),"q":q,"explain":expl}
         if wrong is not None:
             o=self.opts(str(a),[str(w) for w in wrong])
-            if len(o)<3:return False
+            if len(o)<2:return False
             self.rnd.shuffle(o);d["type"]="mc";d["options"]=o;d["answer"]=o.index(str(a))
         else:
             d["type"]="input";d["answer"]=ans or [str(a)]
