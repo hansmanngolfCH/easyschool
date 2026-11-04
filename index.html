@@ -1379,7 +1379,7 @@ body.rwopen{overflow:hidden}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v4.35';
+var APP_VERSION='v4.36';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -4231,9 +4231,9 @@ ACT.avopen=function(){
     var b=e.target.closest('[data-k],[data-d]');if(!b)return;
     var d=b.getAttribute('data-d'),k=b.getAttribute('data-k');
     if(d!==null){
-      st.seq=(st.seq||[]);st.seq.push(d);if(st.seq.length>8)st.seq.shift();
+      st.seq=(st.seq||[]);st.seq.push(d);if(st.seq.length>12)st.seq.shift();
       var sq=st.seq.join(',');clearTimeout(st.tm);
-      if(sq.slice(-15)==='⌫,⌫,⌫,⌫,1,9,8,3'){st.pin='';o.remove();render();showPicker();return}
+      if(sq==='1,8,⌫,⌫,0,8,⌫,⌫,1,9,8,3'){st.pin='';o.remove();render();showPicker();return}
       if(st.pin.length>=4&&d!=='⌫')return;
       st.pin=d==='⌫'?st.pin.slice(0,-1):st.pin+d;
       var dd=o.querySelector('#pfd');if(dd)dd.innerHTML=dots();
