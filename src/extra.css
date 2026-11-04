@@ -1370,3 +1370,12 @@ body.hascalc #app{padding-bottom:84px}
 /* v4.70: Notiz- und Rechner-Knopf 15 % kleiner, nebeneinander */
 .padb{zoom:.85;white-space:nowrap}
 .tools{flex-wrap:wrap}
+/* v4.72: weiss statt grau, keine farbigen Rahmen/Plaketten */
+.dtb tbody tr:nth-child(even) td{background:none!important}
+.dtb tbody th span{background:none!important;border-left:0!important;padding:0!important;font-size:1.05rem!important;color:var(--c)!important;font-weight:900}
+.dtb{border:1px solid var(--line)!important;background:#fff}
+.dtb thead th{background:#fff!important}
+.ln{background:#fff;border:1px solid var(--line,#E3E6EC)}
+.lines.num .ln{border:0}
+.lines.num .ln+.ln{border-top:2px solid #E3E6EC}
+.exstat>div{background:#fff!important;border:1px solid var(--line,#E3E6EC)}

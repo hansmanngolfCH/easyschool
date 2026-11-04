@@ -35598,8 +35598,7 @@
        "step": 1,
        "pts": [
         7
-       ],
-       "lab": "alt"
+       ]
       }
      ]
     },
@@ -35625,7 +35624,7 @@
        "pts": [
         9
        ],
-       "lab": "alt"
+       "lab": "ends"
       }
      ]
     },
@@ -35735,8 +35734,7 @@
        "step": 1,
        "pts": [
         10
-       ],
-       "lab": "alt"
+       ]
       }
      ]
     },
@@ -37462,7 +37460,8 @@
        "step": 1,
        "pts": [
         15
-       ]
+       ],
+       "lab": "alt"
       }
      ]
     },
@@ -37479,7 +37478,7 @@
         12,
         18
        ],
-       "lab": "ends"
+       "lab": "alt"
       }
      ]
     },
@@ -39379,7 +39378,8 @@
        "pts": [
         3,
         7
-       ]
+       ],
+       "lab": "alt"
       }
      ]
     },
@@ -57775,7 +57775,8 @@
        "minor": 5,
        "pts": [
         40
-       ]
+       ],
+       "lab": "ends"
       }
      ]
     },
@@ -57962,7 +57963,8 @@
        "min": 20,
        "max": 30,
        "step": 1,
-       "q": 27
+       "q": 27,
+       "lab": "alt"
       },
       {
        "type": "jumps",
@@ -58160,7 +58162,8 @@
        "max": 100,
        "step": 10,
        "minor": 5,
-       "q": 5
+       "q": 5,
+       "lab": "alt"
       }
      ]
     },
@@ -58192,7 +58195,8 @@
        "max": 100,
        "step": 10,
        "minor": 5,
-       "q": 15
+       "q": 15,
+       "lab": "ends"
       }
      ]
     },
@@ -58256,7 +58260,8 @@
        "max": 100,
        "step": 10,
        "minor": 5,
-       "q": 35
+       "q": 35,
+       "lab": "ends"
       }
      ]
     },
@@ -58288,7 +58293,8 @@
        "max": 100,
        "step": 10,
        "minor": 5,
-       "q": 45
+       "q": 45,
+       "lab": "ends"
       }
      ]
     },
@@ -58385,8 +58391,7 @@
        "max": 100,
        "step": 10,
        "minor": 5,
-       "q": 75,
-       "lab": "alt"
+       "q": 75
       }
      ]
     },
@@ -58452,7 +58457,7 @@
        "step": 10,
        "minor": 5,
        "q": 95,
-       "lab": "alt"
+       "lab": "ends"
       }
      ]
     },
@@ -58484,7 +58489,8 @@
        "max": 100,
        "step": 10,
        "minor": 5,
-       "q": 10
+       "q": 10,
+       "lab": "alt"
       }
      ]
     },
@@ -58516,8 +58522,7 @@
        "max": 100,
        "step": 10,
        "minor": 5,
-       "q": 30,
-       "lab": "ends"
+       "q": 30
       }
      ]
     },
@@ -58582,7 +58587,8 @@
        "max": 100,
        "step": 10,
        "minor": 5,
-       "q": 70
+       "q": 70,
+       "lab": "alt"
       }
      ]
     },
@@ -58614,7 +58620,8 @@
        "max": 100,
        "step": 10,
        "minor": 5,
-       "q": 90
+       "q": 90,
+       "lab": "alt"
       }
      ]
     },
@@ -58679,7 +58686,7 @@
        "step": 10,
        "minor": 5,
        "q": 40,
-       "lab": "ends"
+       "lab": "alt"
       }
      ]
     },
@@ -58807,8 +58814,7 @@
        "min": 20,
        "max": 30,
        "step": 1,
-       "q": 27,
-       "lab": "alt"
+       "q": 27
       }
      ]
     },
@@ -58870,7 +58876,8 @@
        "min": 30,
        "max": 40,
        "step": 1,
-       "q": 37
+       "q": 37,
+       "lab": "ends"
       }
      ]
     },
@@ -58963,7 +58970,8 @@
        "min": 50,
        "max": 60,
        "step": 1,
-       "q": 53
+       "q": 53,
+       "lab": "alt"
       }
      ]
     },
@@ -59121,7 +59129,7 @@
        "max": 80,
        "step": 1,
        "q": 77,
-       "lab": "ends"
+       "lab": "alt"
       }
      ]
     },
@@ -59152,8 +59160,7 @@
        "min": 80,
        "max": 90,
        "step": 1,
-       "q": 83,
-       "lab": "ends"
+       "q": 83
       }
      ]
     },
@@ -59332,7 +59339,7 @@
        "pts": [
         20
        ],
-       "lab": "alt"
+       "lab": "ends"
       }
      ]
     },
@@ -59366,7 +59373,7 @@
        "pts": [
         30
        ],
-       "lab": "ends"
+       "lab": "alt"
       }
      ]
     },
@@ -59433,8 +59440,7 @@
        "step": 10,
        "pts": [
         40
-       ],
-       "lab": "alt"
+       ]
       }
      ]
     },
@@ -59501,7 +59507,7 @@
        "pts": [
         50
        ],
-       "lab": "alt"
+       "lab": "ends"
       }
      ]
     },
@@ -59535,7 +59541,7 @@
        "pts": [
         50
        ],
-       "lab": "alt"
+       "lab": "ends"
       }
      ]
     },
@@ -59568,7 +59574,8 @@
        "step": 10,
        "pts": [
         60
-       ]
+       ],
+       "lab": "alt"
       }
      ]
     },
@@ -59601,7 +59608,8 @@
        "step": 10,
        "pts": [
         60
-       ]
+       ],
+       "lab": "ends"
       }
      ]
     },
@@ -59668,7 +59676,8 @@
        "step": 10,
        "pts": [
         70
-       ]
+       ],
+       "lab": "alt"
       }
      ]
     },
@@ -59734,8 +59743,7 @@
        "step": 10,
        "pts": [
         80
-       ],
-       "lab": "alt"
+       ]
       }
      ]
     },
@@ -60104,7 +60112,8 @@
         "max": 100,
         "step": 10,
         "minor": 5,
-        "q": 45
+        "q": 45,
+        "lab": "ends"
        }
       ]
      },
@@ -60127,7 +60136,8 @@
         "max": 100,
         "step": 10,
         "minor": 5,
-        "q": 75
+        "q": 75,
+        "lab": "ends"
        }
       ]
      },
@@ -60150,7 +60160,8 @@
         "max": 100,
         "step": 10,
         "minor": 5,
-        "q": 30
+        "q": 30,
+        "lab": "alt"
        }
       ]
      },
@@ -60222,7 +60233,7 @@
         "step": 10,
         "minor": 5,
         "q": 25,
-        "lab": "ends"
+        "lab": "alt"
        }
       ]
      },
@@ -60245,7 +60256,8 @@
         "max": 100,
         "step": 10,
         "minor": 5,
-        "q": 55
+        "q": 55,
+        "lab": "alt"
        }
       ]
      },
@@ -60268,8 +60280,7 @@
         "max": 100,
         "step": 10,
         "minor": 5,
-        "q": 90,
-        "lab": "alt"
+        "q": 90
        }
       ]
      },
@@ -60292,7 +60303,8 @@
         "max": 100,
         "step": 10,
         "minor": 5,
-        "q": 40
+        "q": 40,
+        "lab": "ends"
        }
       ]
      },
@@ -60315,8 +60327,7 @@
         "max": 100,
         "step": 10,
         "minor": 5,
-        "q": 35,
-        "lab": "alt"
+        "q": 35
        }
       ]
      },
@@ -60358,8 +60369,7 @@
         "min": 30,
         "max": 40,
         "step": 1,
-        "q": 34,
-        "lab": "ends"
+        "q": 34
        }
       ]
      },
@@ -60378,7 +60388,7 @@
         "max": 70,
         "step": 1,
         "q": 68,
-        "lab": "alt"
+        "lab": "ends"
        }
       ]
      },
@@ -60397,7 +60407,7 @@
         "max": 20,
         "step": 1,
         "q": 15,
-        "lab": "alt"
+        "lab": "ends"
        }
       ]
      },
@@ -60433,7 +60443,8 @@
         "min": 80,
         "max": 90,
         "step": 1,
-        "q": 83
+        "q": 83,
+        "lab": "alt"
        }
       ]
      },
@@ -60538,7 +60549,7 @@
         "pts": [
          20
         ],
-        "lab": "alt"
+        "lab": "ends"
        }
       ]
      },
@@ -60563,7 +60574,7 @@
         "pts": [
          30
         ],
-        "lab": "ends"
+        "lab": "alt"
        }
       ]
      },
@@ -60612,8 +60623,7 @@
         "step": 10,
         "pts": [
          40
-        ],
-        "lab": "alt"
+        ]
        }
       ]
      },
@@ -60662,7 +60672,7 @@
         "pts": [
          50
         ],
-        "lab": "alt"
+        "lab": "ends"
        }
       ]
      },
@@ -60687,7 +60697,7 @@
         "pts": [
          50
         ],
-        "lab": "alt"
+        "lab": "ends"
        }
       ]
      },
@@ -60711,7 +60721,8 @@
         "step": 10,
         "pts": [
          60
-        ]
+        ],
+        "lab": "alt"
        }
       ]
      },
@@ -60735,7 +60746,8 @@
         "step": 10,
         "pts": [
          60
-        ]
+        ],
+        "lab": "ends"
        }
       ]
      },
@@ -60784,7 +60796,8 @@
         "step": 10,
         "pts": [
          70
-        ]
+        ],
+        "lab": "alt"
        }
       ]
      },
@@ -60832,8 +60845,7 @@
         "step": 10,
         "pts": [
          80
-        ],
-        "lab": "alt"
+        ]
        }
       ]
      },
@@ -61070,8 +61082,7 @@
        "step": 1,
        "pts": [
         39
-       ],
-       "lab": "alt"
+       ]
       }
      ]
     },
@@ -61181,7 +61192,8 @@
        "step": 1,
        "pts": [
         49
-       ]
+       ],
+       "lab": "alt"
       },
       {
        "type": "chips",
@@ -63329,23 +63341,6 @@
        "h": 0,
        "z": 2,
        "e": 5
-      },
-      {
-       "type": "bar",
-       "segs": [
-        [
-         20,
-         "20",
-         0
-        ],
-        [
-         5,
-         "5",
-         3
-        ]
-       ],
-       "cap": "",
-       "col": 1
       },
       {
        "type": "chips",
@@ -73642,8 +73637,7 @@
        "pts": [
         12
        ],
-       "cap": "12 cm",
-       "lab": "ends"
+       "cap": "12 cm"
       }
      ]
     },
@@ -74167,8 +74161,7 @@
        "pts": [
         3
        ],
-       "cap": "Lineal",
-       "lab": "alt"
+       "cap": "Lineal"
       }
      ]
     },
@@ -74237,8 +74230,7 @@
        "pts": [
         7
        ],
-       "cap": "Lineal",
-       "lab": "alt"
+       "cap": "Lineal"
       }
      ]
     },
@@ -74341,8 +74333,7 @@
        "pts": [
         14
        ],
-       "cap": "Lineal",
-       "lab": "alt"
+       "cap": "Lineal"
       }
      ]
     },
@@ -74377,7 +74368,7 @@
         16
        ],
        "cap": "Lineal",
-       "lab": "ends"
+       "lab": "alt"
       }
      ]
     },
@@ -74411,7 +74402,8 @@
        "pts": [
         18
        ],
-       "cap": "Lineal"
+       "cap": "Lineal",
+       "lab": "alt"
       }
      ]
     },
@@ -74962,8 +74954,7 @@
         "pts": [
          4
         ],
-        "cap": "Lineal",
-        "lab": "ends"
+        "cap": "Lineal"
        }
       ]
      },
@@ -74989,7 +74980,7 @@
          8
         ],
         "cap": "Lineal",
-        "lab": "ends"
+        "lab": "alt"
        }
       ]
      },
@@ -75014,7 +75005,8 @@
         "pts": [
          11
         ],
-        "cap": "Lineal"
+        "cap": "Lineal",
+        "lab": "ends"
        }
       ]
      },
@@ -75039,7 +75031,8 @@
         "pts": [
          15
         ],
-        "cap": "Lineal"
+        "cap": "Lineal",
+        "lab": "alt"
        }
       ]
      },
@@ -77093,7 +77086,8 @@
        "minor": 50,
        "pts": [
         600
-       ]
+       ],
+       "lab": "ends"
       }
      ]
     },
@@ -79512,7 +79506,7 @@
        "pts": [
         34
        ],
-       "lab": "ends"
+       "lab": "alt"
       }
      ]
     },
@@ -79563,7 +79557,8 @@
        "step": 1,
        "pts": [
         34
-       ]
+       ],
+       "lab": "alt"
       },
       {
        "type": "chips",
@@ -79634,8 +79629,7 @@
        "step": 1,
        "pts": [
         35
-       ],
-       "lab": "ends"
+       ]
       },
       {
        "type": "chips",
@@ -79743,7 +79737,8 @@
        "step": 10,
        "pts": [
         360
-       ]
+       ],
+       "lab": "ends"
       },
       {
        "type": "chips",
@@ -85419,21 +85414,12 @@
      "text": "Die 4er-Reihe ist das Doppelte der 2er-Reihe. Rechne 4 × 7 so: Zuerst 2 × 7, dann verdoppeln.",
      "visuals": [
       {
-       "type": "bar",
-       "segs": [
-        [
-         14,
-         "2 × 7",
-         0
-        ],
-        [
-         14,
-         "2 × 7",
-         0
-        ]
-       ],
-       "cap": "",
-       "col": 0
+       "type": "arr",
+       "r": 4,
+       "c": 7,
+       "split": 2,
+       "col": 1,
+       "splitRows": true
       },
       {
        "type": "lines",
@@ -85490,21 +85476,13 @@
      "text": "Die 5er-Reihe ist die Hälfte der 10er-Reihe. Rechne 5 × 8 so: Zuerst 10 × 8, dann halbieren.",
      "visuals": [
       {
-       "type": "bar",
-       "segs": [
-        [
-         40,
-         "5 × 8",
-         0
-        ],
-        [
-         40,
-         "5 × 8",
-         0
-        ]
-       ],
-       "cap": "",
-       "col": 0
+       "type": "arr",
+       "r": 10,
+       "c": 8,
+       "split": 5,
+       "col": 0,
+       "dim": true,
+       "splitRows": true
       },
       {
        "type": "lines",
@@ -85702,7 +85680,7 @@
     },
     {
      "h": "Zerlegen",
-     "text": "Eine schwere Aufgabe zerlegst du in zwei leichte. Bei 7 × 8 nimmst du 5 Reihen und 2 Reihen. Das nennt man Malkreuz. Links steht, wie viele Reihen es sind.",
+     "text": "Eine schwere Aufgabe zerlegst du in zwei leichte. Bei 7 × 8 nimmst du 5 Reihen und 2 Reihen. Die blauen Reihen und die gelben Reihen rechnest du einzeln. Dann zählst du beide Ergebnisse zusammen.",
      "visuals": [
       {
        "type": "arr",
@@ -85711,23 +85689,6 @@
        "split": 5,
        "col": 2,
        "splitRows": true
-      },
-      {
-       "type": "tbl",
-       "rows": [
-        [
-         "5",
-         "5 × 8 = 40"
-        ],
-        [
-         "2",
-         "2 × 8 = 16"
-        ]
-       ],
-       "c": [
-        0,
-        3
-       ]
       },
       {
        "type": "lines",
@@ -85744,6 +85705,36 @@
         [
          "40 + 16 = 56",
          "beide Teile zusammenzählen"
+        ]
+       ]
+      },
+      {
+       "type": "chips",
+       "parts": [
+        [
+         "40",
+         "5 × 8",
+         0
+        ],
+        [
+         "+",
+         "",
+         2
+        ],
+        [
+         "16",
+         "2 × 8",
+         3
+        ],
+        [
+         "=",
+         "",
+         2
+        ],
+        [
+         "56",
+         "7 × 8",
+         7
         ]
        ]
       }
@@ -87182,7 +87173,7 @@
     },
     {
      "id": "c51",
-     "q": "Malkreuz: Welche Zahl gehört auf das Fragezeichen?",
+     "q": "7 × 8: Die 5 blauen Reihen sind 40. Wie viel sind die 2 gelben Reihen?",
      "a": "16",
      "lvl": 3,
      "th": "tausch",
@@ -87203,27 +87194,18 @@
      ],
      "visuals": [
       {
-       "type": "tbl",
-       "rows": [
-        [
-         "5",
-         "5 × 8 = 40"
-        ],
-        [
-         "2",
-         "2 × 8 = ?"
-        ]
-       ],
-       "c": [
-        0,
-        3
-       ]
+       "type": "arr",
+       "r": 7,
+       "c": 8,
+       "split": 5,
+       "col": 2,
+       "splitRows": true
       }
      ]
     },
     {
      "id": "c52",
-     "q": "Malkreuz: Welche Zahl gehört auf das Fragezeichen?",
+     "q": "7 × 6: Die 5 blauen Reihen sind 30. Wie viel sind die 2 gelben Reihen?",
      "a": "12",
      "lvl": 3,
      "th": "tausch",
@@ -87244,27 +87226,18 @@
      ],
      "visuals": [
       {
-       "type": "tbl",
-       "rows": [
-        [
-         "5",
-         "5 × 6 = 30"
-        ],
-        [
-         "2",
-         "2 × 6 = ?"
-        ]
-       ],
-       "c": [
-        0,
-        3
-       ]
+       "type": "arr",
+       "r": 7,
+       "c": 6,
+       "split": 5,
+       "col": 2,
+       "splitRows": true
       }
      ]
     },
     {
      "id": "c53",
-     "q": "Malkreuz: Welche Zahl gehört auf das Fragezeichen?",
+     "q": "7 × 9: Die 5 blauen Reihen sind 45. Wie viel sind die 2 gelben Reihen?",
      "a": "18",
      "lvl": 3,
      "th": "tausch",
@@ -87285,27 +87258,18 @@
      ],
      "visuals": [
       {
-       "type": "tbl",
-       "rows": [
-        [
-         "5",
-         "5 × 9 = 45"
-        ],
-        [
-         "2",
-         "2 × 9 = ?"
-        ]
-       ],
-       "c": [
-        0,
-        3
-       ]
+       "type": "arr",
+       "r": 7,
+       "c": 9,
+       "split": 5,
+       "col": 2,
+       "splitRows": true
       }
      ]
     },
     {
      "id": "c54",
-     "q": "Malkreuz: Welche Zahl gehört auf das Fragezeichen?",
+     "q": "7 × 7: Die 5 blauen Reihen sind 35. Wie viel sind die 2 gelben Reihen?",
      "a": "14",
      "lvl": 3,
      "th": "tausch",
@@ -87326,21 +87290,12 @@
      ],
      "visuals": [
       {
-       "type": "tbl",
-       "rows": [
-        [
-         "5",
-         "5 × 7 = 35"
-        ],
-        [
-         "2",
-         "2 × 7 = ?"
-        ]
-       ],
-       "c": [
-        0,
-        3
-       ]
+       "type": "arr",
+       "r": 7,
+       "c": 7,
+       "split": 5,
+       "col": 2,
+       "splitRows": true
       }
      ]
     },
@@ -88523,7 +88478,7 @@
      },
      {
       "id": "q7",
-      "q": "Malkreuz: 8 × 7 = 5 × 7 + 3 × 7. Welche Zahl gehört auf das Fragezeichen?",
+      "q": "8 × 7: Die 5 blauen Reihen sind 35. Wie viel sind die 3 gelben Reihen?",
       "explain": "3 × 7 = 21",
       "type": "mc",
       "options": [
@@ -88535,21 +88490,12 @@
       "answer": 3,
       "visuals": [
        {
-        "type": "tbl",
-        "rows": [
-         [
-          "5",
-          "5 × 7 = 35"
-         ],
-         [
-          "3",
-          "3 × 7 = ?"
-         ]
-        ],
-        "c": [
-         0,
-         3
-        ]
+        "type": "arr",
+        "r": 8,
+        "c": 7,
+        "split": 5,
+        "col": 2,
+        "splitRows": true
        }
       ]
      },
@@ -91606,7 +91552,7 @@
        "pts": [
         300000
        ],
-       "lab": "alt"
+       "lab": "ends"
       }
      ]
     },

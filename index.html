@@ -1580,6 +1580,15 @@ body.hascalc #app{padding-bottom:84px}
 /* v4.70: Notiz- und Rechner-Knopf 15 % kleiner, nebeneinander */
 .padb{zoom:.85;white-space:nowrap}
 .tools{flex-wrap:wrap}
+/* v4.72: weiss statt grau, keine farbigen Rahmen/Plaketten */
+.dtb tbody tr:nth-child(even) td{background:none!important}
+.dtb tbody th span{background:none!important;border-left:0!important;padding:0!important;font-size:1.05rem!important;color:var(--c)!important;font-weight:900}
+.dtb{border:1px solid var(--line)!important;background:#fff}
+.dtb thead th{background:#fff!important}
+.ln{background:#fff;border:1px solid var(--line,#E3E6EC)}
+.lines.num .ln{border:0}
+.lines.num .ln+.ln{border-top:2px solid #E3E6EC}
+.exstat>div{background:#fff!important;border:1px solid var(--line,#E3E6EC)}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1587,7 +1596,7 @@ body.hascalc #app{padding-bottom:84px}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION="v4.71";
+var APP_VERSION="v4.72";
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -2155,7 +2164,7 @@ function vBlocks(v){
   x+=(z?8:0);
   for(k=0;k<e;k++){o+='<rect x="'+x+'" y="60" width="12" height="12" rx="3" fill="#FDE9A6" stroke="#B06000" stroke-width="2.2"/>';x+=17}
   var W=Math.max(60,x+4);
-  return '<figure class="vis"><svg viewBox="0 0 '+W+' 80" width="100%" style="max-width:'+Math.min(380,W*1.9)+'px;display:block;margin:0 auto" role="img" aria-label="Stellenwert-Material">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis" style="align-items:center"><svg viewBox="0 0 '+W+' 80" width="100%" style="max-width:'+Math.min(380,W*1.9)+'px;display:block;margin:0 auto" role="img" aria-label="Stellenwert-Material">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vJumps(v){
   var pts=[v.from],i;(v.jumps||[]).forEach(function(j){pts.push(pts[pts.length-1]+j[0])});
@@ -2191,10 +2200,10 @@ function vScene(v){
 }
 function vArr(v){
   var P=24,r=v.r,c=v.c,sp=v.split||0,W=c*P+10,H=r*P+10,o='',i,j;
-  for(j=0;j<r;j++)for(i=0;i<c;i++){var f=(v.splitRows?j<sp:i<sp)?VC[1]:VC[v.col===undefined?0:v.col];if(!sp)f=VC[v.col===undefined?0:v.col];
+  for(j=0;j<r;j++)for(i=0;i<c;i++){var inA=(v.splitRows?j<sp:i<sp),f=inA?VC[1]:(v.dim?'#D9DDE5':VC[v.col===undefined?0:v.col]);if(!sp)f=VC[v.col===undefined?0:v.col];
     o+='<circle cx="'+(5+i*P+P/2)+'" cy="'+(5+j*P+P/2)+'" r="9" fill="'+f+'" stroke="#fff" stroke-width="1.5"/><ellipse cx="'+(5+i*P+P/2-3)+'" cy="'+(5+j*P+P/2-3.5)+'" rx="3" ry="2" fill="#fff" fill-opacity=".5"/>'}
-  if(sp)o+=(v.splitRows?'<line x1="2" x2="'+(W-2)+'" y1="'+(5+sp*P)+'" y2="'+(5+sp*P)+'"':'<line y1="2" y2="'+(H-2)+'" x1="'+(5+sp*P)+'" x2="'+(5+sp*P)+'"')+' stroke="#EA4335" stroke-width="3" stroke-dasharray="6 4"/>';
-  return '<figure class="vis" style="align-items:center"><svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+Math.min(420,Math.round(W*1.3))+'px;max-height:none;display:block;margin:0 auto" role="img" aria-label="Malfeld">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  if(sp)o+=(v.splitRows?'<line x1="2" x2="'+(W-2)+'" y1="'+(5+sp*P)+'" y2="'+(5+sp*P)+'"':'<line y1="2" y2="'+(H-2)+'" x1="'+(5+sp*P)+'" x2="'+(5+sp*P)+'"')+' stroke="#5f6368" stroke-width="3" stroke-dasharray="6 4"/>';
+  return '<figure class="vis" style="align-items:center"><svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+Math.min(420,Math.round(W*Math.min(1.3,260/H)))+'px;max-height:none;display:block;margin:0 auto" role="img" aria-label="Malfeld">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vCol(v){
   var a=v.a,b=v.b,plus=v.op!=='-',da=String(a).split('').map(Number),db=String(b).split('').map(Number),n=Math.max(da.length,db.length);
@@ -4786,11 +4795,11 @@ ACT.pgopen=function(b){var t=topicById(b.dataset.id);nav.topen=nav.topen||{};var
 
 /* ---------- Taschenrechner ab Klasse 7 (v4.45) ---------- */
 function gradeOf(c){var m=/(\d+)/.exec(c||'');return m?+m[1]:0}
-function calcAvail(){var ok=false;try{ok=!!(nav.child&&gradeOf(nav.child)>=7&&(((nav.view==='learn'||nav.view==='exam')&&topicById(nav.topicId).subject==='mathe')||(nav.view==='practice'&&(nav.subject==='mathe'||/-mathe-/.test(nav.scope||'')))))}catch(e){}return ok}
+function calcAvail(){var ok=false;try{ok=!!(nav.child&&gradeOf(nav.child)>=7&&((nav.view==='exam'&&topicById(nav.topicId).subject==='mathe')||(nav.view==='practice'&&(nav.subject==='mathe'||/-mathe-/.test(nav.scope||'')))))}catch(e){}return ok}
 function calcFab(){
   var b=document.getElementById('calcfab'),ok=false;
-  try{ok=nav.child&&gradeOf(nav.child)>=7&&(((nav.view==='learn'||nav.view==='exam')&&topicById(nav.topicId).subject==='mathe')||(nav.view==='practice'&&(nav.subject==='mathe'||/-mathe-/.test(nav.scope||''))))}catch(e){ok=false}
-  document.body.classList.toggle('hascalc',!!ok);if(!ok||nav.view!=='learn'){if(b)b.remove();return}
+  try{ok=nav.child&&gradeOf(nav.child)>=7&&((nav.view==='exam'&&topicById(nav.topicId).subject==='mathe')||(nav.view==='practice'&&(nav.subject==='mathe'||/-mathe-/.test(nav.scope||''))))}catch(e){ok=false}
+  document.body.classList.toggle('hascalc',!!ok);if(true){if(b)b.remove();return}
   if(!b){b=document.createElement('button');b.id='calcfab';b.type='button';b.setAttribute('aria-label','Rechner öffnen');b.innerHTML='🧮<small>Rechner</small>';b.addEventListener('click',calcOpen);document.body.appendChild(b)}
 }
 function calcOpen(){

@@ -9,8 +9,9 @@ def BLK(h=0,z=0,e=0,cap=None):
     d={"type":"blocks","h":h,"z":z,"e":e}
     if cap:d["cap"]=cap
     return d
-def ARR(r,c,split=0,cap=None,rows=False,col=0):
+def ARR(r,c,split=0,cap=None,rows=False,col=0,dim=False):
     d={"type":"arr","r":r,"c":c,"split":split,"col":col}
+    if dim:d["dim"]=True
     if rows:d["splitRows"]=True
     if cap:d["cap"]=cap
     return d

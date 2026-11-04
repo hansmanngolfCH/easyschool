@@ -254,7 +254,7 @@ function vBlocks(v){
   x+=(z?8:0);
   for(k=0;k<e;k++){o+='<rect x="'+x+'" y="60" width="12" height="12" rx="3" fill="#FDE9A6" stroke="#B06000" stroke-width="2.2"/>';x+=17}
   var W=Math.max(60,x+4);
-  return '<figure class="vis"><svg viewBox="0 0 '+W+' 80" width="100%" style="max-width:'+Math.min(380,W*1.9)+'px;display:block;margin:0 auto" role="img" aria-label="Stellenwert-Material">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis" style="align-items:center"><svg viewBox="0 0 '+W+' 80" width="100%" style="max-width:'+Math.min(380,W*1.9)+'px;display:block;margin:0 auto" role="img" aria-label="Stellenwert-Material">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vJumps(v){
   var pts=[v.from],i;(v.jumps||[]).forEach(function(j){pts.push(pts[pts.length-1]+j[0])});
@@ -290,10 +290,10 @@ function vScene(v){
 }
 function vArr(v){
   var P=24,r=v.r,c=v.c,sp=v.split||0,W=c*P+10,H=r*P+10,o='',i,j;
-  for(j=0;j<r;j++)for(i=0;i<c;i++){var f=(v.splitRows?j<sp:i<sp)?VC[1]:VC[v.col===undefined?0:v.col];if(!sp)f=VC[v.col===undefined?0:v.col];
+  for(j=0;j<r;j++)for(i=0;i<c;i++){var inA=(v.splitRows?j<sp:i<sp),f=inA?VC[1]:(v.dim?'#D9DDE5':VC[v.col===undefined?0:v.col]);if(!sp)f=VC[v.col===undefined?0:v.col];
     o+='<circle cx="'+(5+i*P+P/2)+'" cy="'+(5+j*P+P/2)+'" r="9" fill="'+f+'" stroke="#fff" stroke-width="1.5"/><ellipse cx="'+(5+i*P+P/2-3)+'" cy="'+(5+j*P+P/2-3.5)+'" rx="3" ry="2" fill="#fff" fill-opacity=".5"/>'}
-  if(sp)o+=(v.splitRows?'<line x1="2" x2="'+(W-2)+'" y1="'+(5+sp*P)+'" y2="'+(5+sp*P)+'"':'<line y1="2" y2="'+(H-2)+'" x1="'+(5+sp*P)+'" x2="'+(5+sp*P)+'"')+' stroke="#EA4335" stroke-width="3" stroke-dasharray="6 4"/>';
-  return '<figure class="vis" style="align-items:center"><svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+Math.min(420,Math.round(W*1.3))+'px;max-height:none;display:block;margin:0 auto" role="img" aria-label="Malfeld">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  if(sp)o+=(v.splitRows?'<line x1="2" x2="'+(W-2)+'" y1="'+(5+sp*P)+'" y2="'+(5+sp*P)+'"':'<line y1="2" y2="'+(H-2)+'" x1="'+(5+sp*P)+'" x2="'+(5+sp*P)+'"')+' stroke="#5f6368" stroke-width="3" stroke-dasharray="6 4"/>';
+  return '<figure class="vis" style="align-items:center"><svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+Math.min(420,Math.round(W*Math.min(1.3,260/H)))+'px;max-height:none;display:block;margin:0 auto" role="img" aria-label="Malfeld">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vCol(v){
   var a=v.a,b=v.b,plus=v.op!=='-',da=String(a).split('').map(Number),db=String(b).split('').map(Number),n=Math.max(da.length,db.length);
