@@ -35598,7 +35598,8 @@
        "step": 1,
        "pts": [
         7
-       ]
+       ],
+       "lab": "alt"
       }
      ]
     },
@@ -35624,7 +35625,7 @@
        "pts": [
         9
        ],
-       "lab": "alt"
+       "lab": "ends"
       }
      ]
     },
@@ -35735,8 +35736,7 @@
        "step": 1,
        "pts": [
         10
-       ],
-       "lab": "ends"
+       ]
       }
      ]
     },
@@ -37462,7 +37462,8 @@
        "step": 1,
        "pts": [
         15
-       ]
+       ],
+       "lab": "ends"
       }
      ]
     },
@@ -39378,8 +39379,7 @@
        "pts": [
         3,
         7
-       ],
-       "lab": "alt"
+       ]
       }
      ]
     },
@@ -54583,6 +54583,66 @@
      ]
     },
     {
+     "h": "Das ganze Feld",
+     "text": "Das ganze Feld ist 100.",
+     "visuals": [
+      {
+       "type": "field",
+       "cols": 10,
+       "rows": 10,
+       "filled": 100,
+       "col": 0
+      },
+      {
+       "type": "bar",
+       "segs": [
+        [
+         10,
+         "10"
+        ],
+        [
+         10,
+         "10"
+        ],
+        [
+         10,
+         "10"
+        ],
+        [
+         10,
+         "10"
+        ],
+        [
+         10,
+         "10"
+        ],
+        [
+         10,
+         "10"
+        ],
+        [
+         10,
+         "10"
+        ],
+        [
+         10,
+         "10"
+        ],
+        [
+         10,
+         "10"
+        ],
+        [
+         10,
+         "10"
+        ]
+       ],
+       "cap": "10 Zehner = 100",
+       "col": 1
+      }
+     ]
+    },
+    {
      "h": "Regeln und Wichtigstes",
      "text": "Merke dir diese drei Karten.",
      "visuals": [
@@ -57760,8 +57820,7 @@
        "step": 5,
        "pts": [
         25
-       ],
-       "lab": "alt"
+       ]
       },
       {
        "type": "chips",
@@ -57807,7 +57866,7 @@
        "pts": [
         34
        ],
-       "lab": "alt"
+       "lab": "ends"
       },
       {
        "type": "jumps",
@@ -57834,7 +57893,8 @@
        "minor": 5,
        "pts": [
         70
-       ]
+       ],
+       "lab": "alt"
       },
       {
        "type": "chips",
@@ -57870,7 +57930,8 @@
        "pts": [
         20,
         70
-       ]
+       ],
+       "lab": "ends"
       },
       {
        "type": "chips",
@@ -57903,7 +57964,8 @@
        "min": 20,
        "max": 30,
        "step": 1,
-       "q": 27
+       "q": 27,
+       "lab": "ends"
       },
       {
        "type": "jumps",
@@ -57943,6 +58005,90 @@
         ]
        ],
        "cap": "60 + 5 = 65"
+      }
+     ]
+    },
+    {
+     "h": "Nur Anfang und Ende",
+     "text": "Manchmal stehen nur wenige Zahlen. Zähle die Striche.",
+     "visuals": [
+      {
+       "type": "nline",
+       "min": 0,
+       "max": 100,
+       "step": 10,
+       "minor": 5,
+       "pts": [
+        60
+       ],
+       "lab": "ends"
+      },
+      {
+       "type": "jumps",
+       "from": 0,
+       "jumps": [
+        [
+         10,
+         "+10"
+        ],
+        [
+         10,
+         "+10"
+        ],
+        [
+         10,
+         "+10"
+        ],
+        [
+         10,
+         "+10"
+        ],
+        [
+         10,
+         "+10"
+        ],
+        [
+         10,
+         "+10"
+        ]
+       ],
+       "cap": "6 Zehner = 60"
+      }
+     ]
+    },
+    {
+     "h": "Die Mitte",
+     "text": "Die Mitte liegt genau zwischen zwei Zahlen.",
+     "visuals": [
+      {
+       "type": "nline",
+       "min": 0,
+       "max": 100,
+       "step": 10,
+       "pts": [
+        50
+       ],
+       "lab": "alt"
+      },
+      {
+       "type": "chips",
+       "parts": [
+        [
+         "0",
+         "",
+         0
+        ],
+        [
+         "50",
+         "Mitte",
+         1
+        ],
+        [
+         "100",
+         "",
+         0
+        ]
+       ]
       }
      ]
     },
@@ -58017,8 +58163,7 @@
        "max": 100,
        "step": 10,
        "minor": 5,
-       "q": 5,
-       "lab": "alt"
+       "q": 5
       }
      ]
     },
@@ -58050,8 +58195,7 @@
        "max": 100,
        "step": 10,
        "minor": 5,
-       "q": 15,
-       "lab": "alt"
+       "q": 15
       }
      ]
     },
@@ -58083,8 +58227,7 @@
        "max": 100,
        "step": 10,
        "minor": 5,
-       "q": 25,
-       "lab": "alt"
+       "q": 25
       }
      ]
     },
@@ -58116,8 +58259,7 @@
        "max": 100,
        "step": 10,
        "minor": 5,
-       "q": 35,
-       "lab": "ends"
+       "q": 35
       }
      ]
     },
@@ -58150,7 +58292,7 @@
        "step": 10,
        "minor": 5,
        "q": 45,
-       "lab": "alt"
+       "lab": "ends"
       }
      ]
     },
@@ -58183,7 +58325,7 @@
        "step": 10,
        "minor": 5,
        "q": 55,
-       "lab": "ends"
+       "lab": "alt"
       }
      ]
     },
@@ -58215,7 +58357,8 @@
        "max": 100,
        "step": 10,
        "minor": 5,
-       "q": 65
+       "q": 65,
+       "lab": "alt"
       }
      ]
     },
@@ -58247,7 +58390,8 @@
        "max": 100,
        "step": 10,
        "minor": 5,
-       "q": 75
+       "q": 75,
+       "lab": "alt"
       }
      ]
     },
@@ -58280,7 +58424,7 @@
        "step": 10,
        "minor": 5,
        "q": 85,
-       "lab": "ends"
+       "lab": "alt"
       }
      ]
     },
@@ -58312,8 +58456,7 @@
        "max": 100,
        "step": 10,
        "minor": 5,
-       "q": 95,
-       "lab": "ends"
+       "q": 95
       }
      ]
     },
@@ -58345,8 +58488,7 @@
        "max": 100,
        "step": 10,
        "minor": 5,
-       "q": 10,
-       "lab": "ends"
+       "q": 10
       }
      ]
     },
@@ -58379,7 +58521,7 @@
        "step": 10,
        "minor": 5,
        "q": 30,
-       "lab": "alt"
+       "lab": "ends"
       }
      ]
     },
@@ -58477,8 +58619,7 @@
        "max": 100,
        "step": 10,
        "minor": 5,
-       "q": 90,
-       "lab": "ends"
+       "q": 90
       }
      ]
     },
@@ -58510,7 +58651,8 @@
        "max": 100,
        "step": 10,
        "minor": 5,
-       "q": 20
+       "q": 20,
+       "lab": "alt"
       }
      ]
     },
@@ -58574,7 +58716,8 @@
        "max": 100,
        "step": 10,
        "minor": 5,
-       "q": 60
+       "q": 60,
+       "lab": "alt"
       }
      ]
     },
@@ -58638,8 +58781,7 @@
        "min": 20,
        "max": 30,
        "step": 1,
-       "q": 23,
-       "lab": "alt"
+       "q": 23
       }
      ]
     },
@@ -58702,7 +58844,8 @@
        "min": 30,
        "max": 40,
        "step": 1,
-       "q": 33
+       "q": 33,
+       "lab": "alt"
       }
      ]
     },
@@ -58766,7 +58909,7 @@
        "max": 50,
        "step": 1,
        "q": 43,
-       "lab": "alt"
+       "lab": "ends"
       }
      ]
     },
@@ -58797,8 +58940,7 @@
        "min": 40,
        "max": 50,
        "step": 1,
-       "q": 47,
-       "lab": "alt"
+       "q": 47
       }
      ]
     },
@@ -58829,7 +58971,8 @@
        "min": 50,
        "max": 60,
        "step": 1,
-       "q": 53
+       "q": 53,
+       "lab": "ends"
       }
      ]
     },
@@ -58923,7 +59066,7 @@
        "max": 70,
        "step": 1,
        "q": 67,
-       "lab": "alt"
+       "lab": "ends"
       }
      ]
     },
@@ -58954,8 +59097,7 @@
        "min": 70,
        "max": 80,
        "step": 1,
-       "q": 73,
-       "lab": "ends"
+       "q": 73
       }
      ]
     },
@@ -59018,8 +59160,7 @@
        "min": 80,
        "max": 90,
        "step": 1,
-       "q": 83,
-       "lab": "ends"
+       "q": 83
       }
      ]
     },
@@ -59050,7 +59191,8 @@
        "min": 80,
        "max": 90,
        "step": 1,
-       "q": 87
+       "q": 87,
+       "lab": "ends"
       }
      ]
     },
@@ -59163,8 +59305,7 @@
        "step": 10,
        "pts": [
         20
-       ],
-       "lab": "ends"
+       ]
       }
      ]
     },
@@ -59197,8 +59338,7 @@
        "step": 10,
        "pts": [
         20
-       ],
-       "lab": "alt"
+       ]
       }
      ]
     },
@@ -59231,8 +59371,7 @@
        "step": 10,
        "pts": [
         30
-       ],
-       "lab": "alt"
+       ]
       }
      ]
     },
@@ -59299,8 +59438,7 @@
        "step": 10,
        "pts": [
         40
-       ],
-       "lab": "alt"
+       ]
       }
      ]
     },
@@ -59367,8 +59505,7 @@
        "step": 10,
        "pts": [
         50
-       ],
-       "lab": "alt"
+       ]
       }
      ]
     },
@@ -59402,7 +59539,7 @@
        "pts": [
         50
        ],
-       "lab": "ends"
+       "lab": "alt"
       }
      ]
     },
@@ -59435,8 +59572,7 @@
        "step": 10,
        "pts": [
         60
-       ],
-       "lab": "ends"
+       ]
       }
      ]
     },
@@ -59470,7 +59606,7 @@
        "pts": [
         60
        ],
-       "lab": "alt"
+       "lab": "ends"
       }
      ]
     },
@@ -59503,8 +59639,7 @@
        "step": 10,
        "pts": [
         70
-       ],
-       "lab": "alt"
+       ]
       }
      ]
     },
@@ -59537,8 +59672,7 @@
        "step": 10,
        "pts": [
         70
-       ],
-       "lab": "alt"
+       ]
       }
      ]
     },
@@ -59605,8 +59739,7 @@
        "step": 10,
        "pts": [
         80
-       ],
-       "lab": "alt"
+       ]
       }
      ]
     },
@@ -59952,7 +60085,7 @@
         "step": 10,
         "minor": 5,
         "q": 15,
-        "lab": "ends"
+        "lab": "alt"
        }
       ]
      },
@@ -59975,7 +60108,8 @@
         "max": 100,
         "step": 10,
         "minor": 5,
-        "q": 45
+        "q": 45,
+        "lab": "ends"
        }
       ]
      },
@@ -60022,7 +60156,8 @@
         "max": 100,
         "step": 10,
         "minor": 5,
-        "q": 30
+        "q": 30,
+        "lab": "alt"
        }
       ]
      },
@@ -60046,7 +60181,7 @@
         "step": 10,
         "minor": 5,
         "q": 60,
-        "lab": "alt"
+        "lab": "ends"
        }
       ]
      },
@@ -60069,8 +60204,7 @@
         "max": 100,
         "step": 10,
         "minor": 5,
-        "q": 85,
-        "lab": "alt"
+        "q": 85
        }
       ]
      },
@@ -60093,7 +60227,8 @@
         "max": 100,
         "step": 10,
         "minor": 5,
-        "q": 25
+        "q": 25,
+        "lab": "ends"
        }
       ]
      },
@@ -60139,8 +60274,7 @@
         "max": 100,
         "step": 10,
         "minor": 5,
-        "q": 90,
-        "lab": "alt"
+        "q": 90
        }
       ]
      },
@@ -60163,7 +60297,8 @@
         "max": 100,
         "step": 10,
         "minor": 5,
-        "q": 40
+        "q": 40,
+        "lab": "alt"
        }
       ]
      },
@@ -60186,7 +60321,8 @@
         "max": 100,
         "step": 10,
         "minor": 5,
-        "q": 35
+        "q": 35,
+        "lab": "ends"
        }
       ]
      },
@@ -60209,7 +60345,8 @@
         "max": 100,
         "step": 10,
         "minor": 5,
-        "q": 65
+        "q": 65,
+        "lab": "alt"
        }
       ]
      },
@@ -60227,7 +60364,8 @@
         "min": 30,
         "max": 40,
         "step": 1,
-        "q": 34
+        "q": 34,
+        "lab": "alt"
        }
       ]
      },
@@ -60264,7 +60402,7 @@
         "max": 20,
         "step": 1,
         "q": 15,
-        "lab": "ends"
+        "lab": "alt"
        }
       ]
      },
@@ -60301,8 +60439,7 @@
         "min": 80,
         "max": 90,
         "step": 1,
-        "q": 83,
-        "lab": "alt"
+        "q": 83
        }
       ]
      },
@@ -60381,8 +60518,7 @@
         "step": 10,
         "pts": [
          20
-        ],
-        "lab": "ends"
+        ]
        }
       ]
      },
@@ -60406,8 +60542,7 @@
         "step": 10,
         "pts": [
          20
-        ],
-        "lab": "alt"
+        ]
        }
       ]
      },
@@ -60431,8 +60566,7 @@
         "step": 10,
         "pts": [
          30
-        ],
-        "lab": "alt"
+        ]
        }
       ]
      },
@@ -60481,8 +60615,7 @@
         "step": 10,
         "pts": [
          40
-        ],
-        "lab": "alt"
+        ]
        }
       ]
      },
@@ -60531,8 +60664,7 @@
         "step": 10,
         "pts": [
          50
-        ],
-        "lab": "alt"
+        ]
        }
       ]
      },
@@ -60557,7 +60689,7 @@
         "pts": [
          50
         ],
-        "lab": "ends"
+        "lab": "alt"
        }
       ]
      },
@@ -60581,8 +60713,7 @@
         "step": 10,
         "pts": [
          60
-        ],
-        "lab": "ends"
+        ]
        }
       ]
      },
@@ -60607,7 +60738,7 @@
         "pts": [
          60
         ],
-        "lab": "alt"
+        "lab": "ends"
        }
       ]
      },
@@ -60631,8 +60762,7 @@
         "step": 10,
         "pts": [
          70
-        ],
-        "lab": "alt"
+        ]
        }
       ]
      },
@@ -60656,8 +60786,7 @@
         "step": 10,
         "pts": [
          70
-        ],
-        "lab": "alt"
+        ]
        }
       ]
      },
@@ -60706,8 +60835,7 @@
         "step": 10,
         "pts": [
          80
-        ],
-        "lab": "alt"
+        ]
        }
       ]
      },
@@ -61054,8 +61182,7 @@
        "step": 1,
        "pts": [
         49
-       ],
-       "lab": "alt"
+       ]
       },
       {
        "type": "chips",
@@ -63521,6 +63648,52 @@
      ]
     },
     {
+     "h": "Über den Zehner",
+     "text": "Gehe zuerst zum vollen Zehner.",
+     "visuals": [
+      {
+       "type": "jumps",
+       "from": 67,
+       "jumps": [
+        [
+         3,
+         "+3"
+        ],
+        [
+         3,
+         "+3"
+        ]
+       ],
+       "cap": "67 + 6 = 73"
+      },
+      {
+       "type": "chips",
+       "parts": [
+        [
+         "67 + 3",
+         "",
+         0
+        ],
+        [
+         "70",
+         "voller Zehner",
+         1
+        ],
+        [
+         "+ 3",
+         "",
+         2
+        ],
+        [
+         "73",
+         "",
+         3
+        ]
+       ]
+      }
+     ]
+    },
+    {
      "h": "Regeln und Wichtigstes",
      "text": "Merke dir diese drei Karten.",
      "visuals": [
@@ -65049,6 +65222,52 @@
      ]
     },
     {
+     "h": "Über den Zehner",
+     "text": "Gehe zuerst zum vollen Zehner zurück.",
+     "visuals": [
+      {
+       "type": "jumps",
+       "from": 73,
+       "jumps": [
+        [
+         -3,
+         "−3"
+        ],
+        [
+         -3,
+         "−3"
+        ]
+       ],
+       "cap": "73 − 6 = 67"
+      },
+      {
+       "type": "chips",
+       "parts": [
+        [
+         "73 − 3",
+         "",
+         0
+        ],
+        [
+         "70",
+         "voller Zehner",
+         1
+        ],
+        [
+         "− 3",
+         "",
+         2
+        ],
+        [
+         "67",
+         "",
+         3
+        ]
+       ]
+      }
+     ]
+    },
+    {
      "h": "Regeln und Wichtigstes",
      "text": "Merke dir diese drei Karten.",
      "visuals": [
@@ -66418,6 +66637,46 @@
          1
         ]
        ]
+      }
+     ]
+    },
+    {
+     "h": "Muster erkennen",
+     "text": "Die Reihen haben Muster.",
+     "visuals": [
+      {
+       "type": "chips",
+       "parts": [
+        [
+         "2er",
+         "gerade",
+         0
+        ],
+        [
+         "5er",
+         "endet auf 0 oder 5",
+         1
+        ],
+        [
+         "10er",
+         "endet auf 0",
+         2
+        ]
+       ]
+      },
+      {
+       "type": "nline",
+       "min": 0,
+       "max": 50,
+       "step": 5,
+       "pts": [
+        10,
+        20,
+        30,
+        40,
+        50
+       ],
+       "lab": "ends"
       }
      ]
     },
@@ -70510,8 +70769,7 @@
        "pts": [
         12
        ],
-       "cap": "12 cm",
-       "lab": "alt"
+       "cap": "12 cm"
       }
      ]
     },
@@ -70746,6 +71004,50 @@
         ]
        ],
        "cap": "80 − 30 = 50"
+      }
+     ]
+    },
+    {
+     "h": "Schätzen",
+     "text": "Wie lang ist das?",
+     "visuals": [
+      {
+       "type": "emo",
+       "rows": [
+        [
+         "✏️",
+         1
+        ],
+        [
+         "📏",
+         1
+        ],
+        [
+         "🚪",
+         1
+        ]
+       ],
+       "grp": 0
+      },
+      {
+       "type": "chips",
+       "parts": [
+        [
+         "Bleistift",
+         "ca. 15 cm",
+         0
+        ],
+        [
+         "Lineal",
+         "30 cm",
+         1
+        ],
+        [
+         "Tür",
+         "2 m",
+         2
+        ]
+       ]
       }
      ]
     },
@@ -70990,8 +71292,7 @@
        "pts": [
         3
        ],
-       "cap": "Lineal",
-       "lab": "alt"
+       "cap": "Lineal"
       }
      ]
     },
@@ -71025,7 +71326,8 @@
        "pts": [
         5
        ],
-       "cap": "Lineal"
+       "cap": "Lineal",
+       "lab": "alt"
       }
      ]
     },
@@ -71059,7 +71361,8 @@
        "pts": [
         7
        ],
-       "cap": "Lineal"
+       "cap": "Lineal",
+       "lab": "alt"
       }
      ]
     },
@@ -71093,7 +71396,8 @@
        "pts": [
         9
        ],
-       "cap": "Lineal"
+       "cap": "Lineal",
+       "lab": "ends"
       }
      ]
     },
@@ -71127,8 +71431,7 @@
        "pts": [
         12
        ],
-       "cap": "Lineal",
-       "lab": "alt"
+       "cap": "Lineal"
       }
      ]
     },
@@ -71162,8 +71465,7 @@
        "pts": [
         14
        ],
-       "cap": "Lineal",
-       "lab": "ends"
+       "cap": "Lineal"
       }
      ]
     },
@@ -71197,8 +71499,7 @@
        "pts": [
         16
        ],
-       "cap": "Lineal",
-       "lab": "alt"
+       "cap": "Lineal"
       }
      ]
     },
@@ -71810,7 +72111,7 @@
          8
         ],
         "cap": "Lineal",
-        "lab": "ends"
+        "lab": "alt"
        }
       ]
      },
@@ -71861,8 +72162,7 @@
         "pts": [
          15
         ],
-        "cap": "Lineal",
-        "lab": "ends"
+        "cap": "Lineal"
        }
       ]
      },
@@ -72193,6 +72493,37 @@
      ]
     },
     {
+     "h": "Digital",
+     "text": "Eine Digitaluhr zeigt zuerst die Stunden, dann die Minuten.",
+     "visuals": [
+      {
+       "type": "clock",
+       "h": 7,
+       "m": 30
+      },
+      {
+       "type": "chips",
+       "parts": [
+        [
+         "7",
+         "Stunden",
+         0
+        ],
+        [
+         ":",
+         " ",
+         2
+        ],
+        [
+         "30",
+         "Minuten",
+         1
+        ]
+       ]
+      }
+     ]
+    },
+    {
      "h": "Regeln und Wichtigstes",
      "text": "Merke dir diese drei Karten.",
      "visuals": [
@@ -72246,9 +72577,9 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "Viertel vor 9",
+      "halb 9",
       "Viertel nach 8",
-      "Viertel nach 7"
+      "Viertel vor 9"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -72278,10 +72609,10 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "Viertel vor 10",
-      "halb 9",
+      "halb 11",
+      "Viertel nach 9",
       "halb 10",
-      "Viertel nach 9"
+      "halb 9"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -72312,9 +72643,8 @@
      "th": "basis",
      "opts": [
       "Viertel nach 6",
-      "7 Uhr",
-      "Viertel vor 7",
-      "6 Uhr"
+      "6 Uhr",
+      "halb 7"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -72344,10 +72674,10 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "Viertel vor 3",
       "Viertel vor 2",
-      "halb 2",
-      "Viertel nach 1"
+      "Viertel nach 1",
+      "1 Uhr",
+      "Viertel vor 3"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -72377,9 +72707,8 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "halb 5",
+      "halb 3",
       "3 Uhr",
-      "Viertel vor 4",
       "halb 4"
      ],
      "hints": [
@@ -72411,8 +72740,8 @@
      "th": "basis",
      "opts": [
       "Viertel nach 11",
-      "Viertel nach 12",
-      "Viertel nach 10"
+      "11 Uhr",
+      "halb 12"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -72444,7 +72773,8 @@
      "opts": [
       "Viertel nach 9",
       "halb 11",
-      "Viertel nach 10"
+      "Viertel nach 10",
+      "Viertel vor 11"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -72474,9 +72804,10 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "Viertel nach 4",
+      "halb 4",
       "Viertel nach 3",
-      "halb 4"
+      "Viertel vor 4",
+      "3 Uhr"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -72506,9 +72837,10 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "halb 9",
+      "7 Uhr",
       "8 Uhr",
-      "Viertel vor 9"
+      "Viertel vor 9",
+      "halb 9"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -72540,7 +72872,8 @@
      "opts": [
       "12 Uhr",
       "1 Uhr",
-      "Viertel vor 1"
+      "halb 1",
+      "Viertel nach 12"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -72570,10 +72903,9 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "3 Uhr",
-      "5 Uhr",
       "4 Uhr",
-      "Viertel nach 4"
+      "Viertel vor 5",
+      "3 Uhr"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -72603,9 +72935,9 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
+      "Viertel nach 3",
       "Viertel vor 4",
-      "Viertel vor 3",
-      "halb 4"
+      "3 Uhr"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -72635,10 +72967,10 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "halb 6",
-      "halb 5",
-      "Viertel nach 4",
-      "Viertel vor 5"
+      "4 Uhr",
+      "halb 4",
+      "Viertel vor 5",
+      "halb 5"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -72669,8 +73001,8 @@
      "th": "basis",
      "opts": [
       "Viertel vor 10",
-      "Viertel vor 9",
-      "halb 10"
+      "Viertel vor 11",
+      "Viertel vor 9"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -72701,8 +73033,8 @@
      "th": "basis",
      "opts": [
       "Viertel vor 5",
-      "4 Uhr",
-      "Viertel nach 4"
+      "halb 5",
+      "Viertel vor 4"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -72734,7 +73066,7 @@
      "opts": [
       "halb 12",
       "Viertel vor 12",
-      "Viertel nach 11"
+      "Viertel vor 11"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -72764,9 +73096,9 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "Viertel vor 2",
-      "12 Uhr",
       "halb 1",
+      "Viertel vor 12",
+      "Viertel nach 12",
       "Viertel vor 1"
      ],
      "hints": [
@@ -72797,9 +73129,9 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "Viertel nach 11",
+      "12 Uhr",
       "11 Uhr",
-      "10 Uhr"
+      "Viertel nach 11"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -72829,9 +73161,9 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "12 Uhr",
+      "halb 12",
       "halb 1",
-      "Viertel vor 1"
+      "Viertel nach 12"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -72861,10 +73193,9 @@
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "Viertel vor 8",
-      "Viertel vor 7",
+      "Viertel vor 9",
       "Viertel nach 7",
-      "Viertel vor 9"
+      "Viertel vor 8"
      ],
      "hints": [
       "Wo steht der lange Zeiger?"
@@ -73363,8 +73694,8 @@
       "explain": "Viertel nach 12",
       "type": "mc",
       "options": [
-       "halb 1",
        "Viertel vor 1",
+       "halb 1",
        "Viertel nach 11",
        "Viertel nach 12"
       ],
@@ -73383,12 +73714,11 @@
       "explain": "Viertel vor 11",
       "type": "mc",
       "options": [
-       "halb 11",
-       "Viertel vor 12",
        "10 Uhr",
+       "Viertel vor 10",
        "Viertel vor 11"
       ],
-      "answer": 3,
+      "answer": 2,
       "visuals": [
        {
         "type": "clock",
@@ -73403,8 +73733,8 @@
       "explain": "halb 2",
       "type": "mc",
       "options": [
-       "1 Uhr",
        "Viertel nach 1",
+       "Viertel vor 2",
        "halb 2"
       ],
       "answer": 2,
@@ -73423,11 +73753,10 @@
       "type": "mc",
       "options": [
        "Viertel nach 11",
-       "halb 1",
        "halb 12",
-       "11 Uhr"
+       "halb 1"
       ],
-      "answer": 2,
+      "answer": 1,
       "visuals": [
        {
         "type": "clock",
@@ -73442,11 +73771,11 @@
       "explain": "10 Uhr",
       "type": "mc",
       "options": [
-       "9 Uhr",
        "10 Uhr",
-       "Viertel nach 10"
+       "halb 11",
+       "11 Uhr"
       ],
-      "answer": 1,
+      "answer": 0,
       "visuals": [
        {
         "type": "clock",
@@ -73462,8 +73791,9 @@
       "type": "mc",
       "options": [
        "halb 6",
-       "Viertel nach 5",
-       "halb 5"
+       "Viertel vor 6",
+       "halb 7",
+       "Viertel nach 5"
       ],
       "answer": 0,
       "visuals": [
@@ -73481,8 +73811,8 @@
       "type": "mc",
       "options": [
        "2:45",
-       "2:00",
        "2:15",
+       "2:00",
        "2:30"
       ],
       "answer": 0,
@@ -73884,8 +74214,7 @@
        "minor": 50,
        "pts": [
         600
-       ],
-       "lab": "ends"
+       ]
       }
      ]
     },
@@ -76303,7 +76632,8 @@
        "step": 1,
        "pts": [
         34
-       ]
+       ],
+       "lab": "alt"
       }
      ]
     },
@@ -76354,8 +76684,7 @@
        "step": 1,
        "pts": [
         34
-       ],
-       "lab": "ends"
+       ]
       },
       {
        "type": "chips",
@@ -76426,7 +76755,8 @@
        "step": 1,
        "pts": [
         35
-       ]
+       ],
+       "lab": "alt"
       },
       {
        "type": "chips",
@@ -76570,7 +76900,8 @@
        "step": 10,
        "pts": [
         249
-       ]
+       ],
+       "lab": "alt"
       },
       {
        "type": "chips",
@@ -76600,6 +76931,52 @@
          "H",
          1
         ]
+       ]
+      }
+     ]
+    },
+    {
+     "h": "Überschlagen",
+     "text": "Mit gerundeten Zahlen rechnest du schnell ungefähr.",
+     "visuals": [
+      {
+       "type": "chips",
+       "parts": [
+        [
+         "38 + 41",
+         "",
+         0
+        ],
+        [
+         "≈",
+         "",
+         2
+        ],
+        [
+         "40 + 40",
+         "",
+         1
+        ],
+        [
+         "=",
+         "",
+         2
+        ],
+        [
+         "80",
+         "",
+         3
+        ]
+       ]
+      },
+      {
+       "type": "nline",
+       "min": 30,
+       "max": 50,
+       "step": 10,
+       "pts": [
+        38,
+        41
        ]
       }
      ]
@@ -79228,6 +79605,56 @@
      ]
     },
     {
+     "h": "Mit Übergang",
+     "text": "Wird ein Zehner voll, gehst du zuerst dorthin.",
+     "visuals": [
+      {
+       "type": "jumps",
+       "from": 358,
+       "jumps": [
+        [
+         200,
+         "+200"
+        ],
+        [
+         40,
+         "+40"
+        ],
+        [
+         7,
+         "+7"
+        ]
+       ],
+       "cap": "358 + 247 = 605"
+      },
+      {
+       "type": "chips",
+       "parts": [
+        [
+         "358",
+         "",
+         0
+        ],
+        [
+         "558",
+         "+ 200",
+         1
+        ],
+        [
+         "598",
+         "+ 40",
+         2
+        ],
+        [
+         "605",
+         "+ 7",
+         3
+        ]
+       ]
+      }
+     ]
+    },
+    {
      "h": "Regeln und Wichtigstes",
      "text": "Merke dir diese drei Karten.",
      "visuals": [
@@ -80804,6 +81231,56 @@
          "786",
          "stimmt!",
          2
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "h": "Mit Übergang",
+     "text": "Du nimmst Schritt für Schritt weg, auch über einen vollen Hunderter.",
+     "visuals": [
+      {
+       "type": "jumps",
+       "from": 605,
+       "jumps": [
+        [
+         -200,
+         "−200"
+        ],
+        [
+         -40,
+         "−40"
+        ],
+        [
+         -7,
+         "−7"
+        ]
+       ],
+       "cap": "605 − 247 = 358"
+      },
+      {
+       "type": "chips",
+       "parts": [
+        [
+         "605",
+         "",
+         0
+        ],
+        [
+         "405",
+         "− 200",
+         1
+        ],
+        [
+         "365",
+         "− 40",
+         2
+        ],
+        [
+         "358",
+         "− 7",
+         3
         ]
        ]
       }
@@ -83573,7 +84050,7 @@
         80,
         90
        ],
-       "lab": "ends"
+       "lab": "alt"
       }
      ]
     },
@@ -87634,6 +88111,34 @@
         ]
        ],
        "cap": "82 − 35 = 47"
+      }
+     ]
+    },
+    {
+     "h": "Fehler vermeiden",
+     "text": "Schreibe die Zahlen gerade untereinander, sonst stimmen die Stellen nicht.",
+     "visuals": [
+      {
+       "type": "col",
+       "op": "+",
+       "a": 47,
+       "b": 35,
+       "carry": false
+      },
+      {
+       "type": "chips",
+       "parts": [
+        [
+         "Einer unter Einer",
+         "",
+         1
+        ],
+        [
+         "Zehner unter Zehner",
+         "",
+         1
+        ]
+       ]
       }
      ]
     },
@@ -94999,6 +95504,47 @@
      ]
     },
     {
+     "h": "Eine Million im Alltag",
+     "text": "Eine Million ist sehr viel.",
+     "visuals": [
+      {
+       "type": "chips",
+       "parts": [
+        [
+         "1'000",
+         "mal",
+         0
+        ],
+        [
+         "1'000",
+         "=",
+         1
+        ],
+        [
+         "1'000'000",
+         "",
+         3
+        ]
+       ]
+      },
+      {
+       "type": "bar",
+       "segs": [
+        [
+         500000,
+         "500 000"
+        ],
+        [
+         500000,
+         "500 000"
+        ]
+       ],
+       "cap": "2 × 500'000 = 1'000'000",
+       "col": 2
+      }
+     ]
+    },
+    {
      "h": "Regeln und Wichtigstes",
      "text": "Merke dir diese drei Karten.",
      "visuals": [
@@ -96171,6 +96717,48 @@
          3
         ]
        ]
+      }
+     ]
+    },
+    {
+     "h": "Gemeinsame Teiler",
+     "text": "Manche Zahlen haben dieselben Teiler.",
+     "visuals": [
+      {
+       "type": "chips",
+       "parts": [
+        [
+         "12",
+         "1 2 3 4 6 12",
+         0
+        ],
+        [
+         "18",
+         "1 2 3 6 9 18",
+         1
+        ],
+        [
+         "gemeinsam",
+         "1 2 3 6",
+         3
+        ]
+       ]
+      },
+      {
+       "type": "arr",
+       "r": 2,
+       "c": 6,
+       "split": 0,
+       "col": 0,
+       "cap": "12"
+      },
+      {
+       "type": "arr",
+       "r": 3,
+       "c": 6,
+       "split": 0,
+       "col": 1,
+       "cap": "18"
       }
      ]
     },
@@ -97750,6 +98338,54 @@
         ],
         [
          "1",
+         "",
+         1
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "h": "Brüche in einer Menge",
+     "text": "Auch eine Menge kannst du teilen.",
+     "visuals": [
+      {
+       "type": "emo",
+       "rows": [
+        [
+         "🍕",
+         1
+        ],
+        [
+         "🍕",
+         1
+        ],
+        [
+         "🍕",
+         1
+        ],
+        [
+         "🍕",
+         1
+        ]
+       ],
+       "grp": 0
+      },
+      {
+       "type": "chips",
+       "parts": [
+        [
+         "1/4",
+         "von 4 Stück",
+         0
+        ],
+        [
+         "=",
+         "",
+         2
+        ],
+        [
+         "1 Stück",
          "",
          1
         ]
@@ -101941,6 +102577,42 @@
      ]
     },
     {
+     "h": "Wenn die Einer über 10 gehen",
+     "text": "Das Teilprodukt der Einer kann gross werden.",
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         80,
+         "4 × 20 = 80"
+        ],
+        [
+         12,
+         "4 × 3 = 12"
+        ]
+       ],
+       "cap": "80 + 12 = 92",
+       "col": 0
+      },
+      {
+       "type": "chips",
+       "parts": [
+        [
+         "4 × 23",
+         "",
+         0
+        ],
+        [
+         "92",
+         "",
+         3
+        ]
+       ]
+      }
+     ]
+    },
+    {
      "h": "Regeln und Wichtigstes",
      "text": "Merke dir diese drei Karten.",
      "visuals": [
@@ -105731,9 +106403,10 @@
        "type": "nline",
        "min": 0,
        "max": 2,
-       "step": 1,
+       "step": 0.5,
+       "minor": 0.1,
        "pts": [
-        1
+        1.5
        ],
        "lab": "alt"
       }
@@ -107085,6 +107758,36 @@
         [
          "16",
          "cm²",
+         1
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "h": "Fläche oder Umfang?",
+     "text": "Die Fläche ist innen, der Umfang geht ringsum.",
+     "visuals": [
+      {
+       "type": "area",
+       "c": 5,
+       "r": 3,
+       "a": 5,
+       "b": 3,
+       "la": "5 cm",
+       "lb": "3 cm"
+      },
+      {
+       "type": "chips",
+       "parts": [
+        [
+         "Fläche",
+         "5 × 3 = 15 cm²",
+         0
+        ],
+        [
+         "Umfang",
+         "5 + 3 + 5 + 3 = 16 cm",
          1
         ]
        ]
@@ -109407,6 +110110,42 @@
          "=",
          "",
          2
+        ],
+        [
+         "27",
+         "cm³",
+         1
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "h": "cm² oder cm³?",
+     "text": "Flächen messen wir in cm², Körper in cm³.",
+     "visuals": [
+      {
+       "type": "area",
+       "c": 3,
+       "r": 3,
+       "a": 3,
+       "b": 3,
+       "la": "3 cm",
+       "lb": "3 cm"
+      },
+      {
+       "type": "quader",
+       "l": "3 cm",
+       "b": "3 cm",
+       "h": "3 cm"
+      },
+      {
+       "type": "chips",
+       "parts": [
+        [
+         "9",
+         "cm²",
+         0
         ],
         [
          "27",
@@ -114357,6 +115096,32 @@
      ]
     },
     {
+     "h": "Wann bist du fertig?",
+     "text": "Du kürzt, bis Zähler und Nenner keinen gemeinsamen Teiler mehr haben.",
+     "visuals": [
+      {
+       "type": "chips",
+       "parts": [
+        [
+         "6/12",
+         "",
+         0
+        ],
+        [
+         "3/6",
+         "",
+         0
+        ],
+        [
+         "1/2",
+         "nicht weiter",
+         1
+        ]
+       ]
+      }
+     ]
+    },
+    {
      "h": "Regeln und Wichtigstes",
      "text": "Merke dir diese drei Karten.",
      "visuals": [
@@ -116765,6 +117530,38 @@
          "0,75",
          "",
          1
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "h": "Nicht jeder Bruch geht auf",
+     "text": "Bei 1/3 hört die Dezimalzahl nie auf.",
+     "visuals": [
+      {
+       "type": "pie",
+       "parts": 3,
+       "filled": 1,
+       "cap": "1/3"
+      },
+      {
+       "type": "chips",
+       "parts": [
+        [
+         "1/3",
+         "",
+         0
+        ],
+        [
+         "=",
+         "",
+         2
+        ],
+        [
+         "0,333…",
+         "endet nie",
+         3
         ]
        ]
       }
@@ -120573,6 +121370,37 @@
      ]
     },
     {
+     "h": "Winkel schätzen",
+     "text": "Vergleiche mit 90° und 45°.",
+     "visuals": [
+      {
+       "type": "angle",
+       "deg": 45,
+       "lbl": "ca. 45°"
+      },
+      {
+       "type": "angle",
+       "deg": 135,
+       "lbl": "ca. 135°"
+      },
+      {
+       "type": "chips",
+       "parts": [
+        [
+         "Halber ∟",
+         "45°",
+         0
+        ],
+        [
+         "∟ + halber ∟",
+         "135°",
+         1
+        ]
+       ]
+      }
+     ]
+    },
+    {
      "h": "Regeln und Wichtigstes",
      "text": "Merke dir diese drei Karten.",
      "visuals": [
@@ -122039,6 +122867,47 @@
        ],
        "cap": "10 % von 100 = 10",
        "col": 3
+      }
+     ]
+    },
+    {
+     "h": "Prozent im Alltag",
+     "text": "Rabatt: 10 % von 200 Fr. sind 20 Fr.",
+     "visuals": [
+      {
+       "type": "bar",
+       "segs": [
+        [
+         20,
+         "10 %"
+        ],
+        [
+         180,
+         "Rest"
+        ]
+       ],
+       "cap": "200 Fr. − 20 Fr. = 180 Fr.",
+       "col": 2
+      },
+      {
+       "type": "chips",
+       "parts": [
+        [
+         "10 %",
+         "von 200",
+         0
+        ],
+        [
+         "=",
+         "",
+         2
+        ],
+        [
+         "20 Fr.",
+         "",
+         1
+        ]
+       ]
       }
      ]
     },

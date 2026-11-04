@@ -26,9 +26,13 @@ kl3-mathe-zahlen1000 kl3-mathe-plus1000 kl3-mathe-minus1000 kl3-mathe-rechte-win
 kl4-mathe-liter-dl kl4-mathe-zentiliter
 kl5-mathe-million kl5-mathe-bruchteile kl5-mathe-schriftlich-mal kl5-mathe-flaeche kl5-mathe-volumen kl5-mathe-tonnen
 kl6-mathe-dezimal-vertiefung kl6-mathe-bruch-dezimal kl6-mathe-bruch-dezimal-prozent'''.split()
+import th_more
+MORE=th_more.T_()
 for k in DROP_BEG:
     assert THEORY[k][1]['h']=='Die Begriffe',k
     del THEORY[k][1]
+for k,v in MORE.items():
+    THEORY[k][-1:-1]=v
 topics=[];bad=0;missing=[]
 for m in mods:
     for f in importlib.import_module(m).T:

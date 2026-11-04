@@ -69,7 +69,7 @@ def T_():
         S("Zehntel","",FB((10,3,'0,3',0)),CHN(('3/10','',0),('=','',2),('0,3','',1))),
         S("Hundertstel","",FLD(10,10,7,cap='7 Hundertstel'),CHN(('7/100','',0),('=','',2),('0,07','',1))),
         S("Ganze und Teile","",FB((10,10,'1',0),(10,5,'1,5',1)),CHN((1,'Ganzes',0),('0,5','Teil',2),('1,5','',1))),
-        S("Zahlenstrahl","",NL(0,2,1,pts=[1])),
+        S("Zahlenstrahl","",NL(0,2,0.5,minor=0.1,pts=[1.5],lab="alt")),
         S("Vergleichen","",CHN(('0,4','',0),('<','',2),('0,7','',1))),
         S("Geld","",CHN(('1 Fr.','',0),('= 100 Rp.','',1),('0,50 Fr.','50 Rp.',2))),
         MERKE([['Zehntel','1. Stelle','0,3',0],['Hundertstel','2. Stelle','0,07',1],['Komma','trennt Ganze','2,5',2]])]

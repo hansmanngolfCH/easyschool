@@ -119,11 +119,11 @@ function vCards(v){
 }
 
 function vArea(v){
-  var W=200,H=150,x0=44,y0=34,cw=W/v.c,chh=H/v.r,o='',i,j;
+  var W=200,H=150,x0=66,y0=34,cw=W/v.c,chh=H/v.r,o='',i,j;
   for(i=0;i<v.c;i++)for(j=0;j<v.r;j++){var a=i<v.a,b=j<v.b,f=a&&b?'#9334E6':a?'#8AB4F8':b?'#81C995':'#EEF1F7';o+='<rect x="'+(x0+i*cw).toFixed(1)+'" y="'+(y0+j*chh).toFixed(1)+'" width="'+cw.toFixed(1)+'" height="'+chh.toFixed(1)+'" fill="'+f+'" stroke="#fff" stroke-width="2"/>'}
   o+='<text x="'+(x0+v.a*cw/2)+'" y="22" text-anchor="middle" font-size="17" font-weight="800" fill="#1A56C8" font-family="Arial,sans-serif">'+esc(v.la)+'</text>';
   o+='<text x="'+(x0-8)+'" y="'+(y0+v.b*chh/2+6)+'" text-anchor="end" font-size="17" font-weight="800" fill="#188038" font-family="Arial,sans-serif">'+esc(v.lb)+'</text>';
-  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 270 200" width="100%" style="max-width:300px" role="img" aria-label="Flächenmodell fürs Malnehmen">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 292 200" width="100%" style="max-width:300px" role="img" aria-label="Flächenmodell fürs Malnehmen">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
 
 /* ---------- Primar-Visuals (v4.47) ---------- */
@@ -187,12 +187,12 @@ function vShape(v){
   if(v.axis==='h')o+='<line x1="4" y1="60" x2="116" y2="60" stroke="#EA4335" stroke-width="3" stroke-dasharray="7 5"/>';
   return '<figure class="vis shp"><svg viewBox="0 0 120 120" width="100%" style="max-width:112px;overflow:visible" role="img" aria-label="'+esc(v.alt||k)+'">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
-function vNline(v){
+function vNline(v){var dec=(v.step%1!==0)||(v.min%1!==0),fmt=function(n){n=Math.round(n*1000)/1000;return String(n).replace('.',',')},cnt=function(a,b,st){var r=[],k;for(k=0;a+k*st<=b+1e-9;k++)r.push(Math.round((a+k*st)*1000)/1000);return r};
   var x0=26,x1=574,y=48,span=v.max-v.min;function X(n){return x0+(x1-x0)*(n-v.min)/span}
   var o='<defs><linearGradient id="nlg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#DDE5F0"/></linearGradient><filter id="nsh" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="2" stdDeviation="1.6" flood-opacity=".35"/></filter></defs>',n;
   o+='<rect x="'+(x0-16)+'" y="'+(y-14)+'" width="'+(x1-x0+32)+'" height="28" rx="9" fill="url(#nlg)" stroke="#5F6B7A" stroke-width="2.5"/>';
-  if(v.minor)for(n=v.min;n<=v.max;n+=v.minor)o+='<line x1="'+X(n)+'" x2="'+X(n)+'" y1="'+(y-14)+'" y2="'+(y-5)+'" class="nl"/>';
-  for(n=v.min;n<=v.max;n+=v.step)o+='<line x1="'+X(n)+'" x2="'+X(n)+'" y1="'+(y-14)+'" y2="'+(y+4)+'" stroke="#2f3a4a" stroke-width="3" stroke-linecap="round"/>'+((!v.lab||v.lab==='all'||(v.lab==='alt'&&Math.round((n-v.min)/v.step)%2===0)||(v.lab==='ends'&&(n===v.min||n+v.step>v.max)))?'<text x="'+X(n)+'" y="'+(y+34)+'" text-anchor="middle" class="nt">'+n+'</text>':'');
+  if(v.minor)cnt(v.min,v.max,v.minor).forEach(function(n){o+='<line x1="'+X(n)+'" x2="'+X(n)+'" y1="'+(y-14)+'" y2="'+(y-5)+'" class="nl"/>'});
+  cnt(v.min,v.max,v.step).forEach(function(n){o+='<line x1="'+X(n)+'" x2="'+X(n)+'" y1="'+(y-14)+'" y2="'+(y+4)+'" stroke="#2f3a4a" stroke-width="3" stroke-linecap="round"/>'+((!v.lab||v.lab==='all'||(v.lab==='alt'&&Math.round((n-v.min)/v.step)%2===0)||(v.lab==='ends'&&(n===v.min||n+v.step>v.max)))?'<text x="'+X(n)+'" y="'+(y+34)+'" text-anchor="middle" class="nt">'+fmt(n)+'</text>':'')});
   (v.pts||[]).forEach(function(p,i){o+='<path d="M'+X(p)+' '+(y+13)+'l-9 -17a10 10 0 1 1 18 0z" fill="'+VC[i%4]+'" stroke="#fff" stroke-width="2.5" filter="url(#nsh)"/><circle cx="'+X(p)+'" cy="'+(y-6)+'" r="3.2" fill="#fff"/>'});
   if(v.q!==undefined&&v.q!==null)o+='<g filter="url(#nsh)"><circle cx="'+X(v.q)+'" cy="'+y+'" r="15" fill="#FFD93D" stroke="#fff" stroke-width="3"/></g><text x="'+X(v.q)+'" y="'+(y+7)+'" text-anchor="middle" font-size="21" font-weight="900" fill="#4a2a00" font-family="Arial,sans-serif">?</text>';
   return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 100" width="100%" role="img" aria-label="Zahlenstrahl">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
@@ -201,7 +201,7 @@ function vAngle(v){
   var cx=120,cy=122,R=100,o='<defs><radialGradient id="pg" cx=".5" cy="1" r="1"><stop offset="0" stop-color="#E8F0FE"/><stop offset="1" stop-color="#C6DAFC"/></radialGradient></defs>',i,a;
   o+='<path d="M'+(cx-R)+' '+cy+'A'+R+' '+R+' 0 0 1 '+(cx+R)+' '+cy+'Z" fill="url(#pg)" stroke="#1A56C4" stroke-width="3"/><path d="M'+(cx-60)+' '+cy+'A60 60 0 0 1 '+(cx+60)+' '+cy+'Z" fill="#fff" fill-opacity=".55" stroke="#8AB4F8" stroke-width="1.5"/>';
   for(i=0;i<=180;i+=5){a=i*Math.PI/180;var big=i%10===0,r1=big?R-12:R-7;o+='<line x1="'+(cx+r1*Math.cos(a)).toFixed(1)+'" y1="'+(cy-r1*Math.sin(a)).toFixed(1)+'" x2="'+(cx+R*Math.cos(a)).toFixed(1)+'" y2="'+(cy-R*Math.sin(a)).toFixed(1)+'" stroke="#1A56C4" stroke-width="'+(i%30===0?2:1)+'"/>';
-    if(i%30===0)o+='<text x="'+(cx+(R-22)*Math.cos(a)).toFixed(1)+'" y="'+(cy-(R-22)*Math.sin(a)+4).toFixed(1)+'" text-anchor="middle" font-size="10" font-weight="800" fill="#1A56C4" font-family="Arial,sans-serif">'+i+'</text>';
+    if(i%30===0)o+='<text x="'+(cx+(i%180===0?R-8:R-22)*Math.cos(a)).toFixed(1)+'" y="'+(i%180===0?cy+15:cy-(R-22)*Math.sin(a)+4).toFixed(1)+'" text-anchor="middle" font-size="10" font-weight="800" fill="#1A56C4" font-family="Arial,sans-serif">'+i+'</text>';
     if(i%30===0)o+='<text x="'+(cx+(R-36)*Math.cos(a)).toFixed(1)+'" y="'+(cy-(R-36)*Math.sin(a)+3).toFixed(1)+'" text-anchor="middle" font-size="8" fill="#5F6B7A" font-family="Arial,sans-serif">'+(180-i)+'</text>'}
   var d=v.deg,ra=d*Math.PI/180;
   o+='<path d="M'+cx+' '+cy+'L'+(cx+44)+' '+cy+'A44 44 0 0 0 '+(cx+44*Math.cos(ra)).toFixed(1)+' '+(cy-44*Math.sin(ra)).toFixed(1)+'Z" fill="#FBBC04" fill-opacity=".55" stroke="#E37400" stroke-width="2"/>';

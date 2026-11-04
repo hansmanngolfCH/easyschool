@@ -42,3 +42,10 @@ Keine «Nochmal anders»-Wiederholungen, keine Schritte nur zum Wiederholen. Gil
 ### Oberstufe (ab Klasse 7)
 - Grafiken **detaillierter** (Beschriftung, Masse, Hilfslinien, Zwischenschritte).
 - **Geometrie weniger farbig, sehr genau und detailliert**: dünne dunkle Linien, genaue Skalen, Winkel mit Bogen und Gradzahl, Massangaben. Keine bunten Füllungen. Die Geometrie-Grafiken haben dafür die Option `tech: true`.
+
+## Regeln v4.54 – Fach-Durchsicht (Doppelprüfung)
+- Bei **jedem neuen Thema** zuerst die Theorie fachlich prüfen: Fehlt eine Seite, die zum Thema gehört (z. B. Zehnerübergang beim Rechnen, Fläche ≠ Umfang, Schätzen, Alltag)? Ist jede Seite für dieses Thema wirklich relevant?
+- Der Aufbau ist **nicht überall gleich**: Seiten, Reihenfolge und Darstellung (Balken, Rechenstrich, Material, Feld, Pfeile, Uhr, Körper …) richten sich nach dem Thema. Die Tabelle «Begriffe» nur, wenn das Thema Fachwörter hat.
+- Lernkarten und Prüfung: nur Fragetypen, die zum Thema passen; mehrere Formen pro Thema (Ablesen, Ergänzen, Umkehren, Fehler finden, Sachaufgabe …).
+- Zahlenstrahl: Beschriftung wechseln (alle Zahlen / jede zweite / nur Anfang und Ende), nicht immer vollständig.
+- Danach ein zweiter Durchgang (nochmals ansehen): Texte lesen, Grafiken im Browser bei 390 px prüfen.
