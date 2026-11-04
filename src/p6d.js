@@ -252,7 +252,7 @@ ACT.pgopen=function(b){var t=topicById(b.dataset.id);nav.topen=nav.topen||{};var
 function gradeOf(c){var m=/(\d+)/.exec(c||'');return m?+m[1]:0}
 function calcFab(){
   var b=document.getElementById('calcfab'),ok=false;
-  try{ok=nav.child&&gradeOf(nav.child)>=7&&((nav.view==='learn'&&topicById(nav.topicId).subject==='mathe')||(nav.view==='practice'&&(nav.subject==='mathe'||/-mathe-/.test(nav.scope||''))))}catch(e){ok=false}
+  try{ok=nav.child&&gradeOf(nav.child)>=7&&(((nav.view==='learn'||nav.view==='exam')&&topicById(nav.topicId).subject==='mathe')||(nav.view==='practice'&&(nav.subject==='mathe'||/-mathe-/.test(nav.scope||''))))}catch(e){ok=false}
   document.body.classList.toggle('hascalc',!!ok);if(!ok){if(b)b.remove();return}
   if(!b){b=document.createElement('button');b.id='calcfab';b.type='button';b.setAttribute('aria-label','Rechner öffnen');b.innerHTML='🧮<small>Rechner</small>';b.addEventListener('click',calcOpen);document.body.appendChild(b)}
 }

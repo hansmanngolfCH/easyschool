@@ -1359,3 +1359,10 @@ body.hascalc #app{padding-bottom:84px}
 /* v4.67: Schritte schwarz, kein Blau (Blau ist Grafikfarbe) */
 .lines.num .ln::before{background:#202124!important;color:#fff!important}
 .lines.num .ln em{color:var(--ink)!important;font-weight:600!important}
+/* v4.68: Rechner kompakt */
+#calfab,#calcfab{width:46px;height:46px;right:12px;bottom:12px;font-size:1.25rem;box-shadow:0 3px 0 #188038,0 4px 10px rgba(0,0,0,.2)}
+#calcfab small{display:none}
+.calsh{max-width:320px;padding:10px 10px calc(10px + env(safe-area-inset-bottom,0px));border-radius:18px 18px 0 0}
+.calhd{margin-bottom:4px}.calx{width:28px;height:28px}
+.caldisp{min-height:52px;padding:4px 12px;margin-bottom:6px}.calnum{font-size:1.6rem}.calex{font-size:.8rem}
+.calkeys{gap:5px}.calk{height:40px;font-size:1.05rem;border-radius:11px}
