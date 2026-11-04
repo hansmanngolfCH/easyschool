@@ -135,7 +135,9 @@ def k1_doppelt():
     ex=lambda *a,**k:t.exam(*a,**k)
     for n in [2,4,3,5]:ex('Verdopple die Zahl %d.'%n,2*n,near(2*n,1,10,t.rnd),expl='%d + %d = %d'%(n,n,2*n))
     for n in [1,3,5,4]:ex('%d + %d = ?'%(n,n),None,ans=[str(2*n)],expl='Doppelte')
-    for n in [4,8,10,6]:ex('Halbiere die Zahl %d.'%n,n//2,near(n//2,1,5,t.rnd),expl='Hälfte von %d ist %d'%(n,n//2))
+    for n in [4,8,10,6,2,12 if False else 4]:ex('Halbiere die Zahl %d.'%n,n//2,near(n//2,1,5,t.rnd),expl='Hälfte von %d ist %d'%(n,n//2))
+    for n in [2,3,4,5]:ex('Das Doppelte von ? ist %d.'%(2*n),n,near(n,1,5,t.rnd),expl='%d + %d = %d'%(n,n,2*n))
+    for n,a in [(8,3),(10,6),(6,2),(9,4)]:ex('%d + ? = %d. Welche Zahl fehlt?'%(a,n),n-a,near(n-a,0,10,t.rnd),expl='%d'%(n-a))
     for n in [6,10]:ex('Das Doppelte von ? ist %d.'%n,None,ans=[str(n//2)],expl='%d + %d = %d'%(n//2,n//2,n))
     for n in [2,8]:ex('Die Hälfte von %d ist ?'%n,None,ans=[str(n//2)],expl='Hälfte')
     theory_steps(t,'Verdoppeln: zweimal gleich viele. Halbieren: zwei gleiche Teile.',[EMO([['🍎',3],['🍎',3]],'3 und 3'),],

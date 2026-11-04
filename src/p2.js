@@ -240,9 +240,62 @@ function vPar(v){
   else if(k==='tilt')o+='<line x1="20" y1="100" x2="180" y2="40" '+st+'/><line x1="20" y1="50" x2="180" y2="90" '+st+'/>';
   return '<figure class="vis"><svg viewBox="0 0 200 120" width="100%" style="max-width:220px;display:block;margin:0 auto" role="img" aria-label="Geraden">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
+function vBlocks(v){
+  var h=v.h||0,z=v.z||0,e=v.e||0,o='',x=6,i,j,k;
+  for(k=0;k<h;k++){o+='<rect x="'+x+'" y="8" width="64" height="64" rx="6" fill="#CFE0FC" stroke="#1A56C4" stroke-width="2.5"/>';for(i=1;i<10;i++)o+='<line x1="'+(x+i*6.4)+'" y1="10" x2="'+(x+i*6.4)+'" y2="70" stroke="#1A56C4" stroke-opacity=".35" stroke-width="1"/><line x1="'+(x+2)+'" y1="'+(8+i*6.4)+'" x2="'+(x+62)+'" y2="'+(8+i*6.4)+'" stroke="#1A56C4" stroke-opacity=".35" stroke-width="1"/>';x+=72}
+  for(k=0;k<z;k++){o+='<rect x="'+x+'" y="8" width="12" height="64" rx="4" fill="#CDEBD3" stroke="#137333" stroke-width="2.5"/>';for(j=1;j<10;j++)o+='<line x1="'+(x+1)+'" y1="'+(8+j*6.4)+'" x2="'+(x+11)+'" y2="'+(8+j*6.4)+'" stroke="#137333" stroke-opacity=".45" stroke-width="1"/>';x+=18}
+  x+=(z?8:0);
+  for(k=0;k<e;k++){o+='<rect x="'+x+'" y="60" width="12" height="12" rx="3" fill="#FDE9A6" stroke="#B06000" stroke-width="2.2"/>';x+=17}
+  var W=Math.max(60,x+4);
+  return '<figure class="vis"><svg viewBox="0 0 '+W+' 80" width="100%" style="max-width:'+Math.min(560,W*2.4)+'px;display:block;margin:0 auto" role="img" aria-label="Stellenwert-Material">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+}
+function vJumps(v){
+  var pts=[v.from],i;(v.jumps||[]).forEach(function(j){pts.push(pts[pts.length-1]+j[0])});
+  var mn=Math.min.apply(null,pts),mx=Math.max.apply(null,pts),pad=(mx-mn)*.06||1,lo=mn-pad,hi=mx+pad,x0=24,x1=576,y=84;
+  function X(n){return x0+(x1-x0)*(n-lo)/(hi-lo)}
+  var o='<defs><marker id="jh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#EA4335"/></marker></defs><line x1="'+(x0-8)+'" y1="'+y+'" x2="'+(x1+8)+'" y2="'+y+'" stroke="#2f3a4a" stroke-width="3" stroke-linecap="round"/>';
+  pts.forEach(function(p,k){o+='<line x1="'+X(p)+'" y1="'+(y-8)+'" x2="'+X(p)+'" y2="'+(y+8)+'" stroke="#2f3a4a" stroke-width="3"/><circle cx="'+X(p)+'" cy="'+y+'" r="5.5" fill="'+(k===0?'#34A853':k===pts.length-1?'#4285F4':'#FBBC04')+'" stroke="#fff" stroke-width="2"/><text x="'+X(p)+'" y="'+(y+30)+'" text-anchor="middle" font-size="'+(v.fs||17)+'" font-weight="800" fill="#202124" font-family="Arial,sans-serif">'+(k===pts.length-1&&v.hideEnd?'?':(v.fmt?v.fmt[k]:p))+'</text>'});
+  (v.jumps||[]).forEach(function(j,k){var a=X(pts[k]),b=X(pts[k+1]),m=(a+b)/2,r=Math.abs(b-a)/2,h=Math.min(46,10+r*.55),dir=b>=a?1:-1;
+    o+='<path d="M'+a+' '+(y-6)+'Q'+m+' '+(y-6-2*h)+' '+b+' '+(y-6)+'" fill="none" stroke="#EA4335" stroke-width="3.2" stroke-linecap="round" marker-end="url(#jh)"/><rect x="'+(m-Math.max(24,String(j[1]).length*6.2))+'" y="'+(y-h-32)+'" width="'+Math.max(48,String(j[1]).length*12.4)+'" height="22" rx="11" fill="#fff" stroke="#EA4335" stroke-width="2"/><text x="'+m+'" y="'+(y-h-16)+'" text-anchor="middle" font-size="14" font-weight="900" fill="#B3261E" font-family="Arial,sans-serif">'+esc(j[1])+'</text>'});
+  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 130" width="100%" role="img" aria-label="Rechenstrich">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+}
+function vArr(v){
+  var P=24,r=v.r,c=v.c,sp=v.split||0,W=c*P+10,H=r*P+10,o='',i,j;
+  for(j=0;j<r;j++)for(i=0;i<c;i++){var f=(v.splitRows?j<sp:i<sp)?VC[1]:VC[v.col===undefined?0:v.col];if(!sp)f=VC[v.col===undefined?0:v.col];
+    o+='<circle cx="'+(5+i*P+P/2)+'" cy="'+(5+j*P+P/2)+'" r="9" fill="'+f+'" stroke="#fff" stroke-width="1.5"/><ellipse cx="'+(5+i*P+P/2-3)+'" cy="'+(5+j*P+P/2-3.5)+'" rx="3" ry="2" fill="#fff" fill-opacity=".5"/>'}
+  if(sp)o+=(v.splitRows?'<line x1="2" x2="'+(W-2)+'" y1="'+(5+sp*P)+'" y2="'+(5+sp*P)+'"':'<line y1="2" y2="'+(H-2)+'" x1="'+(5+sp*P)+'" x2="'+(5+sp*P)+'"')+' stroke="#EA4335" stroke-width="3" stroke-dasharray="6 4"/>';
+  return '<figure class="vis"><svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+Math.min(420,W*2)+'px;display:block;margin:0 auto" role="img" aria-label="Malfeld">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+}
+function vCol(v){
+  var a=v.a,b=v.b,plus=v.op!=='-',da=String(a).split('').map(Number),db=String(b).split('').map(Number),n=Math.max(da.length,db.length);
+  while(da.length<n)da.unshift(null);while(db.length<n)db.unshift(null);
+  var res=plus?a+b:a-b,dr=String(res).split('').map(Number);while(dr.length<n)dr.unshift(null);
+  var ca=[],i,c=0,carry=new Array(n).fill(0),dd=da.map(function(x){return x||0}),de=db.map(function(x){return x||0});
+  if(plus){for(i=n-1;i>=0;i--){var s=dd[i]+de[i]+c;c=s>=10?1:0;if(i>0&&c)carry[i-1]=1}}
+  else{var top=dd.slice();for(i=n-1;i>=0;i--){if(top[i]<de[i]){top[i]+=10;if(i>0){top[i-1]-=1;carry[i-1]=1}}}}
+  var cw=44,W=n*cw+70,H=170,o='',x=function(k){return 58+k*cw+cw/2};
+  o+='<text x="18" y="86" font-size="30" font-weight="900" fill="#EA4335" font-family="Arial,sans-serif">'+(plus?'+':'−')+'</text>';
+  o+='<line x1="10" x2="'+(W-8)+'" y1="98" y2="98" stroke="#2f3a4a" stroke-width="4" stroke-linecap="round"/>';
+  var hl=v.hl;
+  for(i=0;i<n;i++){
+    var tl=['T','H','Z','E'].slice(-n)[i]||'';
+    o+='<text x="'+x(i)+'" y="22" text-anchor="middle" font-size="13" font-weight="800" fill="#5F6B7A" font-family="Arial,sans-serif">'+tl+'</text>';
+    var colr=i===n-1?'#B06000':'#1A56C4';
+    if(da[i]!==null)o+='<text x="'+x(i)+'" y="'+(plus?58:64)+'" text-anchor="middle" font-size="34" font-weight="900" fill="'+colr+'" font-family="Arial,sans-serif">'+da[i]+'</text>';
+    if(db[i]!==null)o+='<text x="'+x(i)+'" y="'+(plus?88:92)+'" text-anchor="middle" font-size="34" font-weight="900" fill="'+colr+'" font-family="Arial,sans-serif">'+db[i]+'</text>';
+    if(dr[i]!==null&&v.show!==false)o+='<text x="'+x(i)+'" y="136" text-anchor="middle" font-size="34" font-weight="900" fill="#137333" font-family="Arial,sans-serif">'+(v.hideRes?'?':dr[i])+'</text>';
+    if(carry[i]&&v.carry!==false)o+='<circle cx="'+(x(i)+0)+'" cy="'+(plus?112:34)+'" r="0"/>';
+  }
+  for(i=0;i<n;i++)if(carry[i]&&v.carry!==false){
+    // Übertrag steht links der Spalte i+1 -> über Spalte i
+    if(plus)o+='<g><circle cx="'+x(i)+'" cy="152" r="11" fill="#FDE9A6" stroke="#B06000" stroke-width="2"/><text x="'+x(i)+'" y="157" text-anchor="middle" font-size="14" font-weight="900" fill="#7A4A00" font-family="Arial,sans-serif">1</text></g>';
+    else o+='<g><circle cx="'+(x(i+1)-24)+'" cy="52" r="9.5" fill="#FDE9A6" stroke="#B06000" stroke-width="2"/><text x="'+(x(i+1)-24)+'" y="56" text-anchor="middle" font-size="10" font-weight="900" fill="#7A4A00" font-family="Arial,sans-serif">10</text></g>';
+  }
+  return '<figure class="vis"><svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+Math.max(220,W*2.2)+'px;display:block;margin:0 auto" role="img" aria-label="Schriftliche Rechnung">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+}
 function visuals(list){
   if(!list||!list.length)return '';
-  var map={dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar,tbl:vTbl,chips:vChips,tline:vTline,flow:vFlow,cards:vCards,area:vArea,emo:vEmo,field:vField,clock:vClock,coins:vCoins,shape:vShape,nline:vNline,angle:vAngle,circle:vCircle,jug:vJug,quader:vQuader,par:vPar};
+  var map={dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar,tbl:vTbl,chips:vChips,tline:vTline,flow:vFlow,cards:vCards,area:vArea,emo:vEmo,field:vField,clock:vClock,coins:vCoins,shape:vShape,nline:vNline,angle:vAngle,circle:vCircle,jug:vJug,quader:vQuader,par:vPar,blocks:vBlocks,jumps:vJumps,arr:vArr,col:vCol};
   return '<div class="visrow">'+list.map(function(v){return map[v.type]?map[v.type](v):''}).join('')+'</div>';
 }
 

@@ -85,6 +85,8 @@ def formen():
         t.card(2,q,a,w,hints=['Denke an Ecken und Seiten.'],steps=[[a,'Antwort']])
     for k,nm,e in kinds:
         t.exam('Wie heisst die Form?',nm,[x for x in allnames if x!=nm],vis=[SHP(k,(kinds.index((k,nm,e))+2)%4)],expl=nm)
+    for k,nm,e in kinds[:3]:
+        t.exam('Wie heisst die Form?',nm,[x for x in allnames if x!=nm],vis=[SHP(k,(kinds.index((k,nm,e))+1)%4)],expl=nm)
     for k,nm,e in kinds:
         t.exam('Wie viele Ecken hat diese Form?',None,ans=[str(e)],vis=[SHP(k,0)],expl='%d Ecken'%e)
     for q,a,w in [('Welche Form hat keine Ecken?','Kreis',['Dreieck','Quadrat','Rechteck']),('Welche Form hat genau 3 Ecken?','Dreieck',['Kreis','Quadrat','Rechteck']),('Ein Teller ist rund. Welche Form?','Kreis',['Dreieck','Quadrat','Rechteck']),('Ein Fenster hat 4 Ecken und lange Seiten. Welche Form?','Rechteck',['Dreieck','Kreis','Quadrat']),('Welche Form hat 4 gleich lange Seiten?','Quadrat',['Dreieck','Kreis','Rechteck']),('Ein Dach sieht oft aus wie 3 Ecken. Welche Form?','Dreieck',['Kreis','Quadrat','Rechteck'])]:

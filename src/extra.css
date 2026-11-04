@@ -1261,3 +1261,6 @@ body.hascalc #app{padding-bottom:84px}
 .note b{font-size:1.5rem;font-weight:900}.note small{font-size:.55rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
 .note em{position:absolute;left:6px;top:3px;font-size:.62rem;font-weight:900;font-style:normal}.note em.r{left:auto;right:6px;top:auto;bottom:3px}
 .shp svg{display:block;margin:0 auto}
+
+.say{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:50%;border:2px solid #8AB4F8;background:#E8F0FE;font-size:1.4rem;cursor:pointer;margin:6px 0 0 8px;vertical-align:middle}
+.say:active{transform:scale(.94)}

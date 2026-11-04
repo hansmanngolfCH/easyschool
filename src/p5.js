@@ -201,6 +201,7 @@ var ACT={
     }else{n.miss++;n.bad=b.dataset.id;n.sel=null;logAnswer(n.child,false)}
     render();
   },
+  say:function(b){try{var u=new SpeechSynthesisUtterance(b.dataset.t);u.lang='de-CH';u.rate=.85;window.speechSynthesis.cancel();window.speechSynthesis.speak(u)}catch(e){}},
   exam:function(b){go({view:'exam',child:nav.child,subject:nav.subject,topicId:b.dataset.id,phase:'intro',answers:{},padOpen:{}})},
   emode:function(b){nav.mode=b.dataset.m;nav.qlist=null;render()},
   edir:function(b){nav.edir=b.dataset.d;nav.qlist=null;render()},

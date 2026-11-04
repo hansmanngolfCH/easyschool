@@ -25,3 +25,20 @@ Keine «Nochmal anders»-Wiederholungen, keine Schritte nur zum Wiederholen. Gil
 - In Prüfungsaufgaben nur mit Vorsicht: Grafik nur, wenn die Aufgabe ohne sie nicht lösbar ist (zum Beispiel Dreieck, Diagramm). Nie als Hinweis auf die Lösung. Prüfungen bleiben klassisch.
 - Vor jedem neuen Thema prüfen: Klasse, Niveau und Themenart, dann den Grafikanteil festlegen.
 - Bestand (Stand v4.46): Deutsch und Mathe Klasse 8 sind nach dieser Regel gestrafft (Tabellen, Rechenwege; Grafik nur bei Dreieck, Quadrate, Zeitstrahl, Beispielsätzen). Klasse 3 (Länge, Gewicht) bleibt bewusst grafisch.
+
+## Regeln v4.49 (vom Besitzer, 04.11.2026)
+
+### Mathe-Theorie: Grafik statt Tabelle
+- Vorbild sind kl3-mathe-meter-km und kl3-mathe-gramm-kg: 12 bis 15 kleine Blöcke, jeder mit **Balken, Rechenstrich, Punktefeld, Würfel/Stangen/Platten, Pfeil-Umrechnung (conv), Chips und Flow** und nur ganz kurzem Text.
+- **Nur eine Tabelle**: die Begriffe. Alle anderen Blöcke zeigen Rechenwege und Schritte als Grafik mit Zwischenschritten und Zwischensummen (nicht als Tabelle).
+- Reihenfolge bleibt: Worum geht es, Begriffe (Tabelle), Bild, Aufbau/Rechenweg in Einzelschritten, Beispiele (Balken + Chips), Probe, Regeln und Wichtigstes zum Schluss.
+- Verfügbare Grafiken: bar (Balken), jumps (Rechenstrich mit Sprüngen), blocks (Hunderterplatte/Zehnerstange/Einerwürfel), arr (Malfeld), col (schriftliche Rechnung), field, emo, pie, fbar, conv, flow, chips, nline, jug, quader, angle, circle, par, clock, coins.
+
+### Lesen nach Klassenstufe
+- **Klasse 1: kann nicht lesen.** Theorie und Aufgaben nur mit Zahlen, Zeichen (+ − = < >) und Grafiken. Keine Sätze. Fragen als Symbol (❓), Antworten als Zahlen oder Symbole. Jede Aufgabe hat ein 🔊 zum Vorlesen (Feld `say`), das Kind braucht den Text nicht zu lesen.
+- **Klasse 2: sehr wenig Text** (höchstens ein kurzer Satz pro Block, Aufgaben mit wenigen Wörtern).
+- **Ab Klasse 3: normaler Text**, aber kurz.
+
+### Oberstufe (ab Klasse 7)
+- Grafiken **detaillierter** (Beschriftung, Masse, Hilfslinien, Zwischenschritte).
+- **Geometrie weniger farbig, sehr genau und detailliert**: dünne dunkle Linien, genaue Skalen, Winkel mit Bogen und Gradzahl, Massangaben. Keine bunten Füllungen. Die Geometrie-Grafiken haben dafür die Option `tech: true`.

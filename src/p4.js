@@ -7,6 +7,7 @@ function qHtml(q){
   return '<div class="dsent"><p>'+h+'</p></div><p class="dqq">'+esc(rest).replace(/«([^»]+)»/g,'<b class="dtg">$1</b>')+'</p>';
 }
 function qParts(q){
+  if(q.say)return {main:String(q.q),ctx:'',inst:''};
   var t=String(q.q).replace(/\s+/g,' ').trim(),ins=[],m;
   [[/\s*\(Schreibe nur die Zahl\.\)/,'Schreibe nur die Zahl.'],[/\s*\(so weit wie möglich kürzen\)/,'Kürze so weit wie möglich.'],[/\s*Runde auf eine Stelle nach dem Komma\./,'Runde auf eine Stelle nach dem Komma.'],[/\s*\(in (cm|m|km|g|kg|min)\)\.?/,null],[/\s*Schreibe den ganzen Satz\./,'Schreibe den ganzen Satz.']].forEach(function(r){var x=r[0].exec(t);if(x){t=t.replace(r[0],'');ins.push(r[1]||('Antwort in '+x[1]+', nur die Zahl.'))}});
   var main=t,ctx='',mm=/^(.*?[?:])\s+(\S.*)$/.exec(t);
@@ -22,9 +23,10 @@ function qParts(q){
   }
   return {main:main,ctx:ctx,inst:ins.join(' ')};
 }
+function sayBtn(t){return t?'<button class="say" data-act="say" data-t="'+esc(t)+'" aria-label="Vorlesen">🔊</button>':''}
 function qBlock(q){
   var p=qParts(q);
-  return '<div class="mqx"><span class="qm">'+rt(p.main)+'</span>'+(p.ctx?'<span class="qc">'+rt(p.ctx)+'</span>':'')+'<span class="qi">'+esc(p.inst)+'</span></div>';
+  return '<div class="mqx"><span class="qm">'+rt(p.main)+sayBtn(q.say)+'</span>'+(p.ctx?'<span class="qc">'+rt(p.ctx)+'</span>':'')+'<span class="qi">'+esc(p.inst)+'</span></div>';
 }
 function curCard(n){
   var k=n.queue[n.idx],x=cardIdx[k];
@@ -143,7 +145,7 @@ function vPractice(){
   if(isV(c))return head+vVocab(n,k,c,stageOf(n,k))+'</div>';
   var pkey='p:'+k,pd=padHTML(pkey,c.q),hs=hintList(n,k,c,0),chk=!c.opts&&checkable(c);
   if(c.opts&&!n.opts)n.opts=shuffle(c.opts.map(function(t){return {t:t,ok:t===c.a}}));
-  var h2=head+'<section class="card flash">'+qHtml(c.q)+visuals(c.visuals)+'</section>';
+  var h2=head+'<section class="card flash">'+qHtml(c.q)+sayBtn(c.say)+visuals(c.visuals)+'</section>';
   if(!n.revealed){
     h2+='<div class="tools">'+(hs.length?'<button class="btn sm" data-act="hint"'+(n.hintN>=hs.length?' disabled':'')+'>Tipp'+(n.hintN<hs.length?' ('+(n.hintN+1)+'/'+hs.length+')':'')+'</button>':'')+pd.btn+'</div>'+hintBoxes(n,hs);
     h2+=pd.box;
