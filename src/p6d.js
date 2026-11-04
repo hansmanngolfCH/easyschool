@@ -238,7 +238,7 @@ VIEWS.progress=function(){
   ex.forEach(function(e){ev.push({t:e.t,h:'ex',e:e})});
   ev.sort(function(a,b){return b.t-a.t});var lim=po._more?30:6;
   html+='<section class="card pgc"><h2>Was du gemacht hast</h2>'+(ev.length?'<div class="pgtl">'+ev.slice(0,lim).map(function(x){
-    if(x.h==='ex'){var tt=topicById(x.e.topic);return '<div class="pgev"><span class="pgd">'+dl(x.t)+'</span><span class="pgdot ex"></span><div><b>Prüfung: '+esc(tt?dT(tt):x.e.topic)+'</b><small>Note '+fmt(x.e.note)+' · '+x.e.score+' von '+x.e.max+' Punkten</small></div></div>'}
+    if(x.h==='ex'){var tt=topicById(x.e.topic);return '<div class="pgev"><span class="pgd">'+dl(x.t)+'</span><span class="pgdot ex"></span><div><b>Prüfung: '+esc(tt?dT(tt):(x.e.topic==='kl8-deu-grammatik1'?'Grammatik (früher)':x.e.topic))+'</b><small>Note '+fmt(x.e.note)+' · '+x.e.score+' von '+x.e.max+' Punkten</small></div></div>'}
     return '<div class="pgev"><span class="pgd">'+dl(x.t)+'</span><span class="pgdot"></span><div><b>'+dur(x.d.sec||0)+' geübt</b><small>'+(x.d.n||0)+' Antworten · '+(x.d.n?Math.round(100*(x.d.ok||0)/x.d.n):0)+' % richtig'+(x.d.xp?' · +'+x.d.xp+' XP':'')+'</small></div></div>'}).join('')+'</div>'+(ev.length>6?'<button class="pgmore" data-act="pgmore">'+(po._more?'Weniger anzeigen':'Mehr anzeigen')+'</button>':''):'<p class="sub">Noch nichts. Fang mit einem Thema an, dann erscheint es hier.</p>')+'</section>';
   return html+'</div>';
 };

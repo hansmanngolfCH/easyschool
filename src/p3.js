@@ -201,7 +201,7 @@ function vParent(){
     var subs=C.subjects.filter(function(sb){return topicsOf(c.id,sb.id).length});
     if(subs.length)html+='<div class="list">'+subs.map(function(sb){var t2=topicsOf(c.id,sb.id),s2=stats(c.id,t2);return '<div class="prow"><span>'+esc(sb.name)+'</span>'+lbar(level(c.id,t2),true)+'<span class="sub">'+s2.sits+'/'+s2.total+' sitzen</span></div>'}).join('')+'</div>';
     var ex=p.exams.slice().sort(function(a,b){return b.t-a.t}).slice(0,3);
-    if(ex.length)html+='<p class="sub">Letzte Prüfungen: '+ex.map(function(e){var tt=topicById(e.topic);return esc(tt?tt.title:e.topic)+' (Note '+fmt(e.note)+')'}).join(' · ')+'</p>';
+    if(ex.length)html+='<p class="sub">Letzte Prüfungen: '+ex.map(function(e){var tt=topicById(e.topic);return esc(tt?tt.title:(e.topic==='kl8-deu-grammatik1'?'Grammatik (früher)':e.topic))+' (Note '+fmt(e.note)+')'}).join(' · ')+'</p>';
     html+='<button class="btn sm" data-act="prog" data-id="'+c.id+'" style="margin-top:10px">Fortschritt im Detail ›</button></section>';
   });
   return html+'<p class="sub">Jedes Kind hat seinen eigenen Fortschritt pro Klasse. Damit er auf allen Geräten gespeichert wird, braucht das Kind Zugriff mit Bearbeitungsrechten auf den Link.</p></div>';

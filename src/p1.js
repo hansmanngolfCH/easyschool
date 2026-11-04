@@ -1,7 +1,7 @@
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v4.38';
+var APP_VERSION='v4.39';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -13,7 +13,8 @@ function stable(o){return JSON.stringify(o,function(k,v){return v&&typeof v==='o
 function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t}return a}
 
 /* ---------- Fortschritt ---------- */
-function prog(id){var p=P[id]||(P[id]={});p.cards=p.cards||{};p.exams=p.exams||[];p.seen=p.seen||{};p.days=p.days||{};p.ach=p.ach||{};p.skin=p.skin||'classic';p.skinT=p.skinT||0;p.pw=p.pw||{};p.aura=p.aura||'none';p.auraT=p.auraT||0;p.arm=p.arm||[];p.vis=p.vis||{};return p}
+function migDeu(p){try{if(!C||!C.topics)return;var pre='kl8-deu-grammatik1_',k,idx=null;for(k in p.cards){if(k.indexOf(pre)!==0)continue;if(!idx){idx={};C.topics.forEach(function(t){if(t.id.indexOf('kl8-deu-')===0&&t.id!=='kl8-deu-grammatik1')t.cards.forEach(function(c){idx[c.id]=t.id})})}var cid=k.slice(pre.length),to=idx[cid];if(to&&!p.cards[to+'_'+cid])p.cards[to+'_'+cid]=p.cards[k]}}catch(e){}}
+function prog(id){var p=P[id]||(P[id]={});p.cards=p.cards||{};p.exams=p.exams||[];p.seen=p.seen||{};p.days=p.days||{};p.ach=p.ach||{};p.skin=p.skin||'classic';p.skinT=p.skinT||0;p.pw=p.pw||{};p.aura=p.aura||'none';p.auraT=p.auraT||0;p.arm=p.arm||[];p.vis=p.vis||{};if(id==='kl8'&&!p._m1&&C&&C.topics){p._m1=1;migDeu(p)}return p}
 function loadLocal(){try{var r=localStorage.getItem(LS);if(r)P=JSON.parse(r)||{}}catch(e){}}
 function saveLocal(){try{localStorage.setItem(LS,JSON.stringify(P))}catch(e){}}
 function sortEx(a){return a.slice().sort(function(x,y){return x.t-y.t||(x.topic<y.topic?-1:1)})}
@@ -44,6 +45,7 @@ function mergeRemote(id,r){
   if((r.skinT||0)>(p.skinT||0)){p.skin=r.skin||'classic';p.skinT=r.skinT;ch=true}
   var rp=r.pw||{};for(k in rp){if(!p.pw[k]||rp[k]>p.pw[k]){p.pw[k]=rp[k];ch=true}}
   if((r.auraT||0)>(p.auraT||0)){p.aura=r.aura||'none';p.auraT=r.auraT;ch=true}
+  if(id==='kl8'){var _b=Object.keys(p.cards).length;migDeu(p);if(Object.keys(p.cards).length!==_b)ch=true}
   sync.last[id]=stable(shape(r));
   if(ch){saveLocal();if(nav.view==='home'||nav.view==='child'||nav.view==='subject'||nav.view==='parent')render()}
   if(stable(prepared(id))!==sync.last[id])scheduleWrite(id);
