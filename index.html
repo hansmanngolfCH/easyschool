@@ -1300,7 +1300,7 @@ body.rwopen{overflow:hidden}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v4.25';
+var APP_VERSION='v4.26';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -2633,7 +2633,7 @@ function rwOpen(why,g,force){
    +'<div class="xp2"><div class="xp2t"><i id="rwf"></i></div>'+xpPos(g).map(function(p,i){return '<b class="xp2c" data-t="'+g.g[i]+'" style="--p:'+p+'">'+['50','150','300'][i]+'</b>'}).join('')+'</div>'
    +'<div class="rwcvw"><canvas id="rwc" class="rwcv"></canvas><div id="rwst" class="rwstart"><p class="rwwhy">'+why+'</p>'+demoHTML(g)+''+gzHTML(g)+'<p class="rwhow">'+g.how+'</p><button class="btn pri big" id="rwgo">Los!</button></div></div><div id="rwctl"></div><div id="rwmsg" class="rwmsg"></div></div>';
   document.body.appendChild(o);document.body.classList.add('rwopen');
-  o.querySelector('.rwx').onclick=closeReward;
+  o.querySelector('.rwx').onclick=function(){var t=RW&&RW.test;closeReward();if(t)showPicker()};
   var W=Math.floor(Math.min(window.innerWidth-48,440)),H=Math.floor(Math.min(W*1.1,window.innerHeight-270));if(H<200)H=200;
   var cv=document.getElementById('rwc'),dpr=Math.min(2,window.devicePixelRatio||1);
   cv.width=W*dpr;cv.height=H*dpr;cv.style.width=W+'px';cv.style.height=H+'px';var cx=cv.getContext('2d');cx.scale(dpr,dpr);
