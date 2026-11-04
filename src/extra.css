@@ -1288,3 +1288,14 @@ body.hascalc #app{padding-bottom:84px}
 .dc.neu b{color:var(--ink)}
 .dc.op b{font-size:1.3rem;font-weight:700;color:#9aa1ad}
 .dch{gap:2px 6px;align-items:flex-end}
+
+.examinfo h2{margin:0 0 10px;font-size:1.25rem}
+.exstat{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
+.exstat>div{background:var(--surface2);border-radius:14px;padding:10px 6px;text-align:center;display:flex;flex-direction:column;gap:2px}
+.exstat b{font-size:1.6rem;font-weight:900;color:#1a56c8;line-height:1.1}
+.exstat span{font-size:.74rem;font-weight:700;color:var(--ink2)}
+.exbar{display:flex;gap:3px;margin-top:6px}
+.exn{flex:1;border-radius:8px;height:44px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.25rem;box-shadow:inset 0 -3px 0 rgba(0,0,0,.15)}
+.exlab{display:flex;justify-content:space-between;font-size:.7rem;font-weight:700;color:var(--ink2);margin:4px 2px 0}
+.exbon{display:flex;flex-direction:column;gap:4px;margin-top:12px;font-size:.85rem;font-weight:700}
+.exc{flex:1;display:flex;flex-direction:column;gap:4px;align-items:stretch}.exc>span{font-size:.7rem;font-weight:700;color:var(--ink2);text-align:center}.exn{flex:none}
