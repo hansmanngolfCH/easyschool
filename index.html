@@ -1257,6 +1257,29 @@ body.rwopen{overflow:hidden}
 .pfkeys{display:grid;grid-template-columns:repeat(3,76px);justify-content:center;gap:14px 22px;margin:14px 0 6px}
 .pfk{all:unset;cursor:pointer;width:76px;height:76px;border-radius:50%;background:#F1F3F4;color:#1f2430;font:600 1.9rem var(--font-d);display:flex;align-items:center;justify-content:center;touch-action:manipulation;user-select:none}
 .pfk:active{background:#DADCE0}
+/* v4.23 kompaktes Profil */
+.pfsheet{padding-top:10px}
+.pfme{display:flex;align-items:center;gap:12px;margin:2px 0 10px}
+.pfbig{width:64px;height:64px}
+.pfmid{flex:1;min-width:0}
+.pfrow{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:1fr auto;grid-template-areas:"n a" "s a";align-items:center;width:100%;padding:8px 12px;border-radius:14px;background:#F1F3F4;touch-action:manipulation}
+.pfrow:active{background:#E3E5E8}
+.pfrn{grid-area:n;font:800 1.1rem var(--font-d);color:#1f2430;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pfst{grid-area:s;font:600 .72rem var(--font-d);color:#5f6368}
+.pfrow i{grid-area:a;font-style:normal;font-size:1.6rem;color:#9aa0a6;line-height:1}
+.pfcols{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.pfc{all:unset;cursor:pointer;width:20px;height:20px;border-radius:50%;box-sizing:border-box;touch-action:manipulation}
+.pfc.on{box-shadow:0 0 0 2px #fff,0 0 0 4px #1A73E8}
+.pfg{grid-template-columns:repeat(6,1fr);gap:6px}
+.pfg .avopt{padding:2px}
+.pfseg{display:flex;background:#F1F3F4;border-radius:12px;padding:3px;margin:4px 0 12px}
+.pfseg button{all:unset;cursor:pointer;flex:1;text-align:center;padding:9px;border-radius:10px;font:800 .95rem var(--font-d);color:#5f6368}
+.pfseg button.on{background:#fff;color:#1f2430;box-shadow:0 1px 3px rgba(0,0,0,.18)}
+.pfcard{background:#F8F9FA;border:1px solid #E8EAED;border-radius:16px;padding:4px 12px}
+.pfi{display:block;box-sizing:border-box;width:100%;border:0;border-bottom:1px solid #E8EAED;background:transparent;font:600 1.05rem var(--font-d);padding:13px 2px;outline:none;color:#1f2430}
+.pfcard .pfi:last-child{border-bottom:0}
+.pfi:focus{border-bottom-color:#1A73E8}
+.pfcard .pfok{margin:10px 0;line-height:1.5}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1264,7 +1287,7 @@ body.rwopen{overflow:hidden}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION='v4.22';
+var APP_VERSION='v4.23';
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -4064,66 +4087,67 @@ function touchProf(){setPT(Date.now());req()}
 ACT.avopen=function(){
   var o=document.getElementById('pfov');if(o)o.remove();
   acc=cloudAcct();o=document.createElement('div');o.id='pfov';o.className='pfov';
-  var st={v:'main',pin:'',first:'',mode:'',msg:'',err:0,nm:myName(),ln:''};
-  function keys(){var k='';[1,2,3,4,5,6,7,8,9,'',0,'⌫'].forEach(function(x){k+=x===''?'<i></i>':'<button class="pfk" data-d="'+x+'" aria-label="'+x+'">'+x+'</button>'});return k}
-  function dots(){var s='';for(var i=0;i<4;i++)s+='<b class="'+(i<st.pin.length?'on':'')+'"></b>';return s}
+  var st={v:'main',mode:'create',msg:'',err:0,n:myName(),p:'',p2:''};
+  function field(id,ph,val,ex){return '<input id="'+id+'" class="pfi" placeholder="'+ph+'" value="'+esc(val||'')+'" autocomplete="off" '+(ex||'')+'>'}
   function draw(){
     var h='',cc=myCol(),cur=myAv();
     if(st.v==='main'){
-      h='<div class="pfh"><b>Mein Profil</b><button class="pfdone" data-k="done">Fertig</button></div>'+
-      '<div class="pfme"><span class="pfbig">'+avPic(cur,76)+'</span><div class="pfnm">'+(acc?'<b>'+esc(acc.name)+'</b><small>Name ist gespeichert</small>':'<input id="pfn" class="inp" maxlength="14" placeholder="Dein Name" value="'+esc(st.nm)+'" autocomplete="off" autocapitalize="words" spellcheck="false">')+'</div></div>'+
-      '<p class="lab2">Farbe</p><div class="avcols">'+AVCOL.map(function(c,i){return '<button class="avcol'+(i===cc?' on':'')+'" style="background:linear-gradient(135deg,'+c[0]+','+c[1]+')" data-k="col" data-i="'+i+'" aria-label="Farbe '+(i+1)+'"></button>'}).join('')+'</div>'+
-      '<p class="lab2">Bild</p><div class="avgrid">'+Array.apply(null,{length:AV_N}).map(function(_,i){return '<button class="avopt'+(i===cur?' on':'')+'" data-k="av" data-i="'+i+'" aria-label="Avatar '+(i+1)+'">'+avPic(i,56)+'</button>'}).join('')+'</div>'+
-      '<div class="pfacc">'+(acc?'<p class="pfok">☁ Dein Fortschritt wird automatisch gespeichert.</p><button class="pfb" data-k="now">Jetzt speichern</button><button class="pfb ghost" data-k="out">Abmelden</button>':
-      '<p class="pfhint">Ohne Konto bleibt dein Fortschritt nur auf diesem Gerät.</p><button class="pfb pri" data-k="create">Mit PIN speichern</button><button class="pfb ghost" data-k="login">Ich habe schon ein Konto</button>')+'<p class="pfm'+(st.err?' err':'')+'">'+st.msg+'</p></div>';
+      h='<div class="pfh"><span></span><b>Profil</b><button class="pfdone" data-k="done">Fertig</button></div>'+
+      '<div class="pfme"><span class="pfbig">'+avPic(cur,64)+'</span><div class="pfmid"><button class="pfrow" data-k="acct"><span class="pfrn">'+(acc?esc(acc.name):(myName()?esc(myName()):'Name &amp; PIN'))+'</span><span class="pfst">'+(acc?'☁ gespeichert':(myName()?'nur auf diesem Gerät':'Konto anlegen oder anmelden'))+'</span><i>›</i></button>'+
+      '<div class="pfcols">'+AVCOL.map(function(c,i){return '<button class="pfc'+(i===cc?' on':'')+'" style="background:linear-gradient(135deg,'+c[0]+','+c[1]+')" data-k="col" data-i="'+i+'" aria-label="Farbe '+(i+1)+'"></button>'}).join('')+'</div></div></div>'+
+      '<div class="avgrid pfg">'+Array.apply(null,{length:AV_N}).map(function(_,i){return '<button class="avopt'+(i===cur?' on':'')+'" data-k="av" data-i="'+i+'" aria-label="Avatar '+(i+1)+'">'+avPic(i,46)+'</button>'}).join('')+'</div>';
     }else{
-      var ttl=st.mode==='login'?'Anmelden':(st.first?'PIN bestätigen':'Wähle eine PIN');
-      h='<div class="pfh"><button class="pfdone" data-k="back">‹ Zurück</button><b>'+ttl+'</b><span style="width:70px"></span></div>'+
-      (st.mode==='login'?'<input id="pfln" class="inp pfln" maxlength="14" placeholder="Dein Name" value="'+esc(st.ln)+'" autocomplete="off" autocapitalize="words" spellcheck="false">':'<p class="pfsub">'+esc(myName())+'</p>')+
-      '<div class="pfdots" id="pfd">'+dots()+'</div><p class="pfm'+(st.err?' err':'')+'" id="pfmsg">'+st.msg+'</p><div class="pfkeys">'+keys()+'</div>';
+      h='<div class="pfh"><button class="pfdone" data-k="back">‹ Profil</button><b>Konto</b><span style="min-width:70px"></span></div>';
+      if(acc){
+        h+='<div class="pfcard"><p class="pfok"><b>'+esc(acc.name)+'</b><br>☁ Dein Fortschritt wird automatisch gespeichert.</p></div><button class="pfb pri" data-k="now">Jetzt speichern</button><button class="pfb ghost" data-k="out">Abmelden</button>';
+      }else{
+        h+='<div class="pfseg"><button class="'+(st.mode==='create'?'on':'')+'" data-k="m-create">Neu</button><button class="'+(st.mode==='login'?'on':'')+'" data-k="m-login">Anmelden</button></div>'+
+        '<div class="pfcard">'+field('pfn','Name',st.n,'maxlength="14" autocapitalize="words" spellcheck="false"')+field('pfp','PIN (4 Zahlen)',st.p,'type="password" inputmode="numeric" pattern="[0-9]*" maxlength="4"')+(st.mode==='create'?field('pfp2','PIN wiederholen',st.p2,'type="password" inputmode="numeric" pattern="[0-9]*" maxlength="4"'):'')+'</div>'+
+        '<button class="pfb pri" data-k="go">'+(st.mode==='create'?'Konto anlegen':'Anmelden')+'</button>'+(st.mode==='create'?'<button class="pfb ghost" data-k="nameonly">Nur Name, ohne PIN</button>':'')+
+        '<p class="pfhint">Ohne Konto bleibt dein Fortschritt nur auf diesem Gerät.</p>';
+      }
+      h+='<p class="pfm'+(st.err?' err':'')+'" id="pfmsg">'+st.msg+'</p>';
     }
     o.innerHTML='<div class="pfback" data-k="bg"></div><div class="pfsheet" role="dialog" aria-label="Profil">'+h+'</div>';
   }
-  function pinDone(){
-    var pin=st.pin,m=st.mode;
-    if(m==='create'){
-      if(!st.first){st.first=pin;st.pin='';st.msg='';st.err=0;draw();return}
-      if(st.first!==pin){st.first='';st.pin='';st.msg='Die beiden PINs sind verschieden. Nochmal.';st.err=1;draw();return}
-      var n=myName().trim();st.msg='Einen Moment …';st.err=0;draw();
-      keyOf(n,pin).then(function(id){return get(id).then(function(res){
-        if(res){st.first='';st.pin='';st.msg='Diesen Namen gibt es mit dieser PIN schon. Nimm eine andere PIN.';st.err=1;draw();return}
-        acc={id:id,name:n};try{localStorage.setItem('es.acct',JSON.stringify(acc))}catch(x){}
-        setPT(Date.now());hook();return run().then(function(){st.v='main';st.msg='Gespeichert ✓';st.err=0;draw()})})
-      }).catch(function(){acc=null;st.first='';st.pin='';st.msg='Keine Verbindung. Versuch es später nochmal.';st.err=1;draw()});
+  function rd(){var a=o.querySelector('#pfn'),b=o.querySelector('#pfp'),c=o.querySelector('#pfp2');if(a)st.n=a.value;if(b)st.p=b.value.replace(/\D/g,'');if(c)st.p2=c.value.replace(/\D/g,'')}
+  function say(m,e){st.msg=m;st.err=e?1:0;var x=o.querySelector('#pfmsg');if(x){x.textContent=m;x.className='pfm'+(e?' err':'')}}
+  function go(){
+    rd();var n=st.n.trim();
+    if(n.length<2)return say('Bitte einen Namen eingeben (mindestens 2 Zeichen).',1);
+    if(!/^\d{4}$/.test(st.p))return say('Die PIN besteht aus 4 Zahlen.',1);
+    if(st.mode==='create'){
+      if(st.p!==st.p2)return say('Die beiden PINs sind verschieden.',1);
+      say('Einen Moment …');
+      keyOf(n,st.p).then(function(id){return get(id).then(function(res){
+        if(res)return say('Diesen Namen gibt es mit dieser PIN schon. Nimm eine andere PIN.',1);
+        setMyName(n);acc={id:id,name:n};try{localStorage.setItem('es.acct',JSON.stringify(acc))}catch(x){}
+        setPT(Date.now());hook();return run().then(function(){st.v='main';st.p=st.p2='';draw()})})
+      }).catch(function(){acc=null;say('Keine Verbindung. Versuch es später nochmal.',1)});
     }else{
-      var n2=(o.querySelector('#pfln')||{}).value||st.ln;n2=n2.trim();st.ln=n2;
-      if(n2.length<2){st.pin='';st.msg='Bitte zuerst deinen Namen eingeben.';st.err=1;draw();return}
-      st.msg='Einen Moment …';st.err=0;draw();
-      keyOf(n2,pin).then(function(id){return get(id).then(function(res){
-        if(!res){st.pin='';st.msg='Name oder PIN stimmt nicht.';st.err=1;draw();return}
-        acc={id:id,name:n2};try{localStorage.setItem('es.acct',JSON.stringify(acc))}catch(x){}
-        if(res.p)applyProf(res.p,true);hook();st.nm=myName();return run(true).then(function(){st.v='main';st.msg='Angemeldet ✓';st.err=0;draw()})})
-      }).catch(function(){st.pin='';st.msg='Keine Verbindung. Versuch es später nochmal.';st.err=1;draw()});
+      say('Einen Moment …');
+      keyOf(n,st.p).then(function(id){return get(id).then(function(res){
+        if(!res)return say('Name oder PIN stimmt nicht.',1);
+        acc={id:id,name:n};try{localStorage.setItem('es.acct',JSON.stringify(acc))}catch(x){}
+        if(res.p)applyProf(res.p,true);else setMyName(n);acc.name=myName()||n;try{localStorage.setItem('es.acct',JSON.stringify(acc))}catch(x){}hook();return run(true).then(function(){st.v='main';st.p=st.p2='';draw()})})
+      }).catch(function(){say('Keine Verbindung. Versuch es später nochmal.',1)});
     }
   }
   draw();document.body.appendChild(o);
-  o.addEventListener('input',function(e){if(e.target.id==='pfn'){st.nm=e.target.value;setMyName(st.nm);touchProf()}else if(e.target.id==='pfln')st.ln=e.target.value});
+  o.addEventListener('keydown',function(e){if(e.key==='Enter'&&st.v==='acct'&&!acc){e.preventDefault();go()}});
+  o.addEventListener('input',function(e){if(e.target.id==='pfp'||e.target.id==='pfp2'){e.target.value=e.target.value.replace(/\D/g,'')}});
   o.addEventListener('click',function(e){
-    var b=e.target.closest('[data-k],[data-d]');if(!b)return;
-    var d=b.getAttribute('data-d'),k=b.getAttribute('data-k');
-    if(d!==null){
-      if(st.pin.length>=4&&d!=='⌫')return;
-      st.pin=d==='⌫'?st.pin.slice(0,-1):st.pin+d;st.msg='';st.err=0;
-      var dd=o.querySelector('#pfd');if(dd)dd.innerHTML=dots();var mm=o.querySelector('#pfmsg');if(mm){mm.textContent='';mm.className='pfm'}
-      if(st.pin.length===4)setTimeout(pinDone,120);return}
-    if(k==='bg'||k==='done'){var n=(o.querySelector('#pfn')||{}).value;if(n!=null)st.nm=n;if(!acc&&String(st.nm).trim().toLowerCase()==='spielplatz'){setMyName('');o.remove();render();showPicker();return}close();return}
+    var b=e.target.closest('[data-k]');if(!b)return;var k=b.getAttribute('data-k');
+    if(k==='bg'||k==='done'){if(!acc&&String(myName()).trim().toLowerCase()==='spielplatz'){setMyName('');o.remove();render();showPicker();return}close();return}
     if(k==='col'){setMyCol(+b.getAttribute('data-i'));touchProf();draw();return}
     if(k==='av'){setMyAv(+b.getAttribute('data-i'));touchProf();draw();return}
-    if(k==='create'){var nn=myName().trim();if(nn.length<2){st.msg='Gib zuerst oben deinen Namen ein (mindestens 2 Zeichen).';st.err=1;draw();var f=o.querySelector('#pfn');if(f)f.focus();return}st.v='pin';st.mode='create';st.pin='';st.first='';st.msg='';st.err=0;draw();return}
-    if(k==='login'){st.v='pin';st.mode='login';st.pin='';st.msg='';st.err=0;draw();return}
-    if(k==='back'){st.v='main';st.msg='';st.err=0;draw();return}
-    if(k==='now'){st.msg='Speichere …';st.err=0;draw();run().then(function(){st.msg='Gespeichert ✓';draw()},function(){st.msg='Keine Verbindung.';st.err=1;draw()});return}
-    if(k==='out'){try{localStorage.removeItem('es.acct')}catch(x){}acc=null;sync.db=null;sync.state='local';st.msg='Abgemeldet. Dein Fortschritt bleibt auf diesem Gerät.';st.err=0;draw();return}
+    if(k==='acct'){st.v='acct';st.msg='';st.err=0;st.n=myName();draw();return}
+    if(k==='back'){rd();st.v='main';st.msg='';st.err=0;draw();return}
+    if(k==='m-create'||k==='m-login'){rd();st.mode=k.slice(2);st.msg='';st.err=0;draw();return}
+    if(k==='go'){go();return}
+    if(k==='nameonly'){rd();var n=st.n.trim();if(n.length<2)return say('Bitte einen Namen eingeben (mindestens 2 Zeichen).',1);setMyName(n);touchProf();st.v='main';draw();return}
+    if(k==='now'){say('Speichere …');run().then(function(){say('Gespeichert ✓')},function(){say('Keine Verbindung.',1)});return}
+    if(k==='out'){try{localStorage.removeItem('es.acct')}catch(x){}acc=null;sync.db=null;sync.state='local';say('Abgemeldet. Dein Fortschritt bleibt auf diesem Gerät.');draw();return}
   });
 };
 ACT.avclose=function(){};
