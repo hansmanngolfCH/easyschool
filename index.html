@@ -1519,6 +1519,13 @@ body.hascalc #app{padding-bottom:84px}
 .xpg.sm i{box-shadow:0 0 8px rgba(52,168,83,.4)!important}
 .xpbig{background:linear-gradient(90deg,#1A73E8,#34A853)!important;-webkit-background-clip:text!important;background-clip:text!important}
 .xbt i.top{background:linear-gradient(90deg,#EA4335,#F9AB00,#34A853)!important}
+
+.examart{max-width:190px!important;margin:0 auto!important}
+.examinfo{padding:12px 14px!important}
+.examinfo h2{font-size:1.05rem;margin:0 0 8px}
+.exstat{gap:6px;margin-bottom:8px}.exstat>div{padding:6px 4px;border-radius:10px}.exstat b{font-size:1.15rem}.exstat span{font-size:.66rem}
+.exn{height:28px;font-size:1rem;border-radius:6px}.exc>span{font-size:.62rem}.exbar{gap:2px;margin-top:2px}
+.exbon{flex-direction:row!important;flex-wrap:wrap;gap:4px 10px!important;margin-top:8px!important;font-size:.74rem!important}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1526,7 +1533,7 @@ body.hascalc #app{padding-bottom:84px}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION="v4.59";
+var APP_VERSION="v4.60";
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -2514,7 +2521,7 @@ function sayBtn(t){return t?'<button class="say" data-act="say" data-t="'+esc(t)
 function examInfo(N){
   var cols=['#EA4335','#F29900','#FBBC04','#8BC34A','#34A853','#188038'],i,seg='',lab='',ok=function(g){return Math.ceil((g-1)/5*N-1e-9)};
   for(i=0;i<6;i++){seg+='<div class="exc"><div class="exn" style="background:'+cols[i]+'"><b>'+(i+1)+'</b></div><span>'+(i===0?'ab 0':i===5?'alle':'ab '+i*20+' %')+'</span></div>'}
-  return '<section class="card examinfo"><h2>Jetzt zählt es ernst!</h2><div class="exstat"><div><b>'+N+'</b><span>Fragen</span></div><div><b>1–6</b><span>Note</span></div><div><b>'+ok(4)+'</b><span>richtig für Note 4</span></div></div><p class="sub">Je mehr richtig, desto besser die Note:</p><div class="exbar">'+seg+'</div><div class="exbon"><span>⭐ Note 5 oder besser: +30 XP</span><span>🏆 Note 5.75 oder besser: +20 XP</span></div></section>';
+  return '<section class="card examinfo"><h2>Jetzt zählt es ernst!</h2><div class="exstat"><div><b>'+N+'</b><span>Fragen</span></div><div><b>1–6</b><span>Note</span></div><div><b>'+ok(4)+'</b><span>richtig für Note 4</span></div></div><div class="exbar">'+seg+'</div><div class="exbon">⭐ Note 5+: +30 XP · 🏆 Note 5.75+: +20 XP</div></section>';
 }
 function examArt(){
   var l='',i;for(i=0;i<6;i++)l+='<rect x="74" y="'+(66+i*17)+'" width="'+(i%3===2?70:104)+'" height="5" rx="2.5" fill="#CBD2DE"/><rect x="58" y="'+(63+i*17)+'" width="9" height="9" rx="2" fill="#fff" stroke="#8A94A6" stroke-width="1.5"/>'+(i<4?'<path d="M60 '+(68+i*17)+'l3 3.5 5-7" fill="none" stroke="#34A853" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>':'');
@@ -2702,7 +2709,7 @@ function vPaper(n,t,qs){
   return h+'</tbody></table></div><button class="btn pri big" data-act="finish">Abgeben</button></div>'}
 function vExam(){
   var n=nav,t=topicById(n.topicId),mathe=!isLangT(t),qs=examQs(n,t);
-  if(n.phase==='intro')return '<div class="stack"><div><p class="eyebrow">Musterprüfung</p><h1>'+esc(t.title)+'</h1></div>'+coach('Jetzt zählt es ernst! Zeig, was du gelernt hast. Es ist aber nur eine Musterprüfung: Fehler sind erlaubt.',1)+examArt()+examInfo(qs.length)+'<section class="card"><p>'+qs.length+' Fragen · Note von 1 bis 6</p><p class="sub" style="margin-top:8px">Antworte so, wie du es in der Schule tun würdest. Ohne Tipps, ohne Nachschauen.'+(mathe?' Für Zwischenschritte kannst du bei jeder Frage «Notizen machen» öffnen.':'')+' Es gibt keinen Zeitdruck. Für jede richtige Antwort gibt es XP, für gute Noten einen Bonus.</p></section>'+(mathe?'':'<div class="modes"><button class="btn seg'+(n.mode!=='kurz'?' on':'')+'" data-act="emode" data-m="alles">Alles</button><button class="btn seg'+(n.mode==='kurz'?' on':'')+'" data-act="emode" data-m="kurz">Kurztext</button></div>')+'<div class="row"><button class="btn pri big" data-act="start">Los geht\'s</button><button class="btn big" data-act="back">Zurück</button></div></div>';
+  if(n.phase==='intro')return '<div class="stack"><div><p class="eyebrow">Musterprüfung</p><h1>'+esc(t.title)+'</h1></div>'+coach('Jetzt zählt es ernst! Zeig, was du gelernt hast. Es ist aber nur eine Musterprüfung: Fehler sind erlaubt.',1)+examArt()+examInfo(qs.length)+(mathe?'':'<div class="modes"><button class="btn seg'+(n.mode!=='kurz'?' on':'')+'" data-act="emode" data-m="alles">Alles</button><button class="btn seg'+(n.mode==='kurz'?' on':'')+'" data-act="emode" data-m="kurz">Kurztext</button></div>')+'<div class="row"><button class="btn pri big" data-act="start">Los geht\'s</button><button class="btn big" data-act="back">Zurück</button></div></div>';
   if(n.phase==='run'&&!mathe)return vPaper(n,t,qs);
   if(n.phase==='run'){
     var dt=new Date(),ds=dt.getDate()+'.'+(dt.getMonth()+1)+'.'+dt.getFullYear();

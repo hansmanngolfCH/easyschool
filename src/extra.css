@@ -1309,3 +1309,10 @@ body.hascalc #app{padding-bottom:84px}
 .xpg.sm i{box-shadow:0 0 8px rgba(52,168,83,.4)!important}
 .xpbig{background:linear-gradient(90deg,#1A73E8,#34A853)!important;-webkit-background-clip:text!important;background-clip:text!important}
 .xbt i.top{background:linear-gradient(90deg,#EA4335,#F9AB00,#34A853)!important}
+
+.examart{max-width:190px!important;margin:0 auto!important}
+.examinfo{padding:12px 14px!important}
+.examinfo h2{font-size:1.05rem;margin:0 0 8px}
+.exstat{gap:6px;margin-bottom:8px}.exstat>div{padding:6px 4px;border-radius:10px}.exstat b{font-size:1.15rem}.exstat span{font-size:.66rem}
+.exn{height:28px;font-size:1rem;border-radius:6px}.exc>span{font-size:.62rem}.exbar{gap:2px;margin-top:2px}
+.exbon{flex-direction:row!important;flex-wrap:wrap;gap:4px 10px!important;margin-top:8px!important;font-size:.74rem!important}
