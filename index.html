@@ -1646,6 +1646,11 @@ del.dfx{text-decoration:line-through;text-decoration-thickness:2px;color:#c5221f
 ins.dfy{text-decoration:none;color:#0d652d;background:rgba(52,168,83,.22);border-radius:4px;padding:0 2px;font-weight:800}
 .dgap{display:inline-block;min-width:.7em;border-bottom:2px dashed #c5221f;color:transparent;line-height:1}
 .dfres{display:block;line-height:1.35}
+/* v4.78 Schulfarben Deutsch: Nomen rot, Verb blau, Adjektiv gelb, Artikel gruen */
+[data-de="1"] .cw.c0{color:#EA4335;background:#fce8e6}
+[data-de="1"] .cw.c1{color:#1A73E8;background:#e8f0fe}
+[data-de="1"] .cw.c2{color:#B37A00;background:#fff3c4}
+[data-de="1"] .cw.c3{color:#188038;background:#e6f4ea}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1653,7 +1658,7 @@ ins.dfy{text-decoration:none;color:#0d652d;background:rgba(52,168,83,.22);border
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION="v4.77";
+var APP_VERSION="v4.78";
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -2067,7 +2072,9 @@ function vFbar(v){
 
 /* ---------- Deutsch-Theorie: Tabellen und Grafiken (v4.42) ---------- */
 var DC=['#4285F4','#EA4335','#34A853','#F29900','#9334E6','#00A5BF','#D93F8E','#6B7280'];
-function dcol(i){return DC[(i|0)%DC.length]}
+var DE=false,DM=[1,0,3,2,4,5,6,7];
+function isDeu(){try{var q=nav.queue&&nav.queue[nav.idx]||'';return nav.subject==='deu'||/-deu-/.test((nav.topicId||'')+' '+(nav.scope||'')+' '+q)}catch(e){return false}}
+function dcol(i){i=(i|0)%DC.length;return DC[DE?DM[i]:i]}
 function bd(s){return rt(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>')}
 function vTbl(v){
   var h=v.head?'<thead><tr>'+v.head.map(function(x,k){var c=(k>0&&v.hc)?' style="--c:'+dcol(v.hc[k-1])+'" class="hc"':'';return '<th'+c+'>'+bd(x)+'</th>'}).join('')+'</tr></thead>':'';
@@ -2966,6 +2973,7 @@ function traceScore(){
 function render(){
   clearInterval(timer);timer=null;
   SKIN=nav.child?skinOf(nav.child):null;
+  DE=isDeu();app.setAttribute('data-de',DE?'1':'');
   app.innerHTML=top()+banner()+VIEWS[nav.view]()+'<p class="ver">Version '+APP_VERSION+' · <a class="imp" href="impressum.html">Impressum</a></p>'+(nav.view==='home'?'<p class="disc">Lernen leicht gemacht · Inhalte mit KI erstellt</p>':'');
   updateSync();
   calcFab();

@@ -1436,3 +1436,8 @@ del.dfx{text-decoration:line-through;text-decoration-thickness:2px;color:#c5221f
 ins.dfy{text-decoration:none;color:#0d652d;background:rgba(52,168,83,.22);border-radius:4px;padding:0 2px;font-weight:800}
 .dgap{display:inline-block;min-width:.7em;border-bottom:2px dashed #c5221f;color:transparent;line-height:1}
 .dfres{display:block;line-height:1.35}
+/* v4.78 Schulfarben Deutsch: Nomen rot, Verb blau, Adjektiv gelb, Artikel gruen */
+[data-de="1"] .cw.c0{color:#EA4335;background:#fce8e6}
+[data-de="1"] .cw.c1{color:#1A73E8;background:#e8f0fe}
+[data-de="1"] .cw.c2{color:#B37A00;background:#fff3c4}
+[data-de="1"] .cw.c3{color:#188038;background:#e6f4ea}

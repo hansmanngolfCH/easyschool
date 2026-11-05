@@ -32,6 +32,7 @@ function traceScore(){
 function render(){
   clearInterval(timer);timer=null;
   SKIN=nav.child?skinOf(nav.child):null;
+  DE=isDeu();app.setAttribute('data-de',DE?'1':'');
   app.innerHTML=top()+banner()+VIEWS[nav.view]()+'<p class="ver">Version '+APP_VERSION+' · <a class="imp" href="impressum.html">Impressum</a></p>'+(nav.view==='home'?'<p class="disc">Lernen leicht gemacht · Inhalte mit KI erstellt</p>':'');
   updateSync();
   calcFab();
