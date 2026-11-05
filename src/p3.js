@@ -91,9 +91,9 @@ function topicCard(ch,t){
   return '<article class="card topic tc s-'+esc(t.subject)+(open?' open':'')+'"><button class="tchead tctog" data-act="ttog" data-id="'+id+'" aria-expanded="'+open+'">'+badge+'<div class="tcmain"><h3 class="tt">'+esc(title)+'</h3><p class="sub tcsub">'+(usub?'<span class="vtag">'+usub+'</span> · ':vocTag(t,1))+(t.src?'<span class="src">'+esc(t.src)+'</span>':'<span class="src orig o-'+(t.origin==='lehr'?'l':'k')+'">'+(t.origin==='lehr'?'Lehrmittel':'KI-Inhalt')+'</span>')+'</p></div><span class="tcpct">'+w+'%</span><span class="tcchev" aria-hidden="true">'+(open?'▲':'▼')+'</span></button>'
   +'<div class="bar thin" role="img" aria-label="'+w+' Prozent"><i style="width:'+w+'%"></i></div>'
   +(open?'<div class="tc4"><button class="tb4 m-v" data-act="learn" data-id="'+id+'">'+((t.subject==='franz'||t.subject==='engl')?'Wörterliste':'Theorie')+'</button>'
-  +'<button class="tb4 m-u" data-act="practice" data-scope="topic:'+id+'" data-force="1">AI-Lernen</button>'
+  +'<button class="tb4 m-u" data-act="practice" data-scope="topic:'+id+'" data-force="1">AI-Karten</button>'
   +'<button class="tb4 m-p" data-act="exam" data-id="'+id+'">Prüfung</button>'
-  +'<button class="tb4 m-x" data-act="xgame" data-id="'+id+'">⚡ Extra XP</button></div>':'')+'</article>';
+  +'<button class="tb4 m-x" data-act="xgame" data-id="'+id+'">⚡ Easy lernen</button></div>':'')+'</article>';
 }
 function vocTag(t){var l=t.subject==='franz'?'Vocabulaire':t.subject==='engl'?'Vocabulary':'';if(!l||/vocab/i.test(t.title))return '';return '<span class="vtag">'+l+'</span> · '}
 function vSubject(){

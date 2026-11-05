@@ -1492,3 +1492,20 @@ ins.dfy{text-decoration:none;color:#0d652d;background:rgba(52,168,83,.22);border
 @media (max-width:480px){.btn.big{min-height:49px}}
 .rwx{position:relative;width:48px;height:48px;font-size:2rem;line-height:1;font-weight:700;flex:none;display:flex;align-items:center;justify-content:center;touch-action:manipulation}
 .rwx::after{content:"";position:absolute;inset:-10px}
+
+/* v4.98 Easy lernen: gleicher Stil, weisser Hintergrund */
+.xg,.xg-math,.xg-quiz{background:#fff;color:#2b2f5e;border:2px solid #e3e7f3;box-shadow:0 6px 18px rgba(43,47,94,.08)}
+.xg-dots i{background:#dfe3f0}.xg-dots i.d{background:#34A853}.xg-dots i.c{background:#FBBC04;box-shadow:0 0 0 3px rgba(251,188,4,.35)}
+.xg-x{background:#eef0f7;color:#2b2f5e}
+.xg-tm{background:#e6e9f4}.xg-tm i{background:linear-gradient(90deg,#FBBC04,#EA4335)}
+.xg-clue,.xg-big{text-shadow:none}
+.xs{background:#f3f5fb;border:2px dashed #aab3d3;color:#2b2f5e}
+.xs.ok{background:#E6F4EA;border:2px solid #34A853;color:#137333}
+.xs.rev{background:#FEF3C7;border:2px solid #FBBC04;color:#6b4a00}
+.xg-big i{background:#2b2f5e}
+.xg-q{background:#f4f6ff;border:2px solid #e3e7f3}
+.xg-hint{color:#5b6190;opacity:1}
+.xg-msg.ok{color:#137333}.xg-msg.bad{color:#B3261E}
+.xg-pie svg,.xg-eq svg{filter:none}
+.xg-end h1{color:#2b2f5e}
+.xg-h span.on{color:#EA4335}

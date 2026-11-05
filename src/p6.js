@@ -65,8 +65,8 @@ function xgBuild(t){
     var ok=function(c){var f=c.fw||'';return isV(c)&&wc(f)<=2&&!/[\/…(),.?!]/.test(f)&&f.replace(/[^a-zàâäçéèêëîïôöùûüÿœæß]/gi,'').length>=4&&f.replace(/[^a-zàâäçéèêëîïôöùûüÿœæß]/gi,'').length<=13};
     var own=shuffle(t.cards.filter(ok)),other=[];
     all.forEach(function(x){if(x.id!==t.id)x.cards.forEach(function(c){if(ok(c))other.push(c)})});
-    var pick=own.slice(0,3);
-    pick.slice(0,3).forEach(function(c){n.rounds.push({kind:'salat',c:c,fw:c.fw,clue:c.de[0],pos:0,wr:0,used:{}})});
+    var pick=own.concat(shuffle(other)).slice(0,10);
+    pick.forEach(function(c){n.rounds.push({kind:'salat',c:c,fw:c.fw,clue:c.de[0],pos:0,wr:0,used:{}})});
     n.rounds=shuffle(n.rounds);
   }else if(sub==='mathe'){
     n.kind='math';
@@ -74,15 +74,15 @@ function xgBuild(t){
     all.forEach(function(x){fam.push(/bruch/.test(x.id)?'f':/pyth/.test(x.id)?'p':'m')});
     fam.push(own2,own2);
     var sh=t.cards.filter(function(c){return c.q&&c.a&&String(c.a).length<=14&&String(c.q).length<=120&&!/\n/.test(c.q)}),mine=own2==='m'&&sh.length>=4;
-    if(mine){var ans2=sh.map(function(c){return String(c.a)});shuffle(sh).slice(0,3).forEach(function(c){var right=String(c.a),oth=shuffle(ans2.filter(function(x,k,aa){return x!==right&&aa.indexOf(x)===k})).slice(0,4);n.rounds.push({kind:'opt',svg:'<div class="xg-q">'+esc(c.q)+'</div>',opts:shuffle([right].concat(oth)).map(function(x){return {h:'<b>'+esc(x)+'</b>',ok:x===right}})})})}
-    else for(i=0;i<3;i++){var r=own2==='f'?xgFrac():own2==='p'?xgPyth():xgMult();r.kind='opt';n.rounds.push(r)}
+    if(mine){var ans2=sh.map(function(c){return String(c.a)});shuffle(sh).slice(0,10).forEach(function(c){var right=String(c.a),oth=shuffle(ans2.filter(function(x,k,aa){return x!==right&&aa.indexOf(x)===k})).slice(0,4);n.rounds.push({kind:'opt',svg:'<div class="xg-q">'+esc(c.q)+'</div>',opts:shuffle([right].concat(oth)).map(function(x){return {h:'<b>'+esc(x)+'</b>',ok:x===right}})})})}
+    else for(i=0;i<10;i++){var r=own2==='f'?xgFrac():own2==='p'?xgPyth():xgMult();r.kind='opt';n.rounds.push(r)}
   }else{
     n.kind='quiz';var pool=[],ans=[];
     [t].forEach(function(x){x.exam.questions.forEach(function(q){if(q.type==='mc'&&q.options&&q.options.length>=3)pool.push({q:q.q,o:q.options,a:q.answer});else if(q.type==='input'&&q.answer&&q.answer[0]&&String(q.answer[0]).length<=24)ans.push(q)})});
-    var made=shuffle(pool).slice(0,3).map(function(p){return {kind:'opt',svg:'<div class="xg-q">'+esc(p.q)+'</div>',opts:p.o.map(function(x,k){return {h:'<b>'+esc(x)+'</b>',ok:k===p.a}})}});
-    if(made.length<3){
+    var made=shuffle(pool).slice(0,10).map(function(p){return {kind:'opt',svg:'<div class="xg-q">'+esc(p.q)+'</div>',opts:p.o.map(function(x,k){return {h:'<b>'+esc(x)+'</b>',ok:k===p.a}})}});
+    if(made.length<10){
       var lib=ans.map(function(q){return String(q.answer[0])});
-      shuffle(ans).slice(0,3-made.length).forEach(function(q){var right=String(q.answer[0]),others=shuffle(lib.filter(function(x,k,a){return x!==right&&a.indexOf(x)===k})).slice(0,3);if(others.length<2)return;made.push({kind:'opt',svg:'<div class="xg-q">'+esc(q.q)+'</div>',opts:shuffle([right].concat(others)).map(function(x){return {h:'<b>'+esc(x)+'</b>',ok:x===right}})})});
+      shuffle(ans).slice(0,10-made.length).forEach(function(q){var right=String(q.answer[0]),others=shuffle(lib.filter(function(x,k,a){return x!==right&&a.indexOf(x)===k})).slice(0,3);if(others.length<2)return;made.push({kind:'opt',svg:'<div class="xg-q">'+esc(q.q)+'</div>',opts:shuffle([right].concat(others)).map(function(x){return {h:'<b>'+esc(x)+'</b>',ok:x===right}})})});
     }
     n.rounds=shuffle(made);
   }
@@ -92,17 +92,17 @@ function xgSecs(r){return r.kind==='salat'?70:r.svg.indexOf('xg-q')>=0?35:30}
 ACT.xgame=function(b){
   var t=topicById(b.dataset.id),g=xgBuild(t);
   if(!g.rounds.length){toast('Hier gibt es noch keine Aufgaben für das Spiel.');return}
-  go({view:'xg',child:nav.child,topicId:t.id,kind:g.kind,rounds:g.rounds,i:0,lives:3,ok:0,miss:0,phase:'play',xp:0,tok:0,armed:-1},{view:'subject',child:nav.child,subject:t.subject,from:{view:'child',child:nav.child,from:{view:'home'}}});
+  go({view:'xg',child:nav.child,topicId:t.id,kind:g.kind,rounds:g.rounds,i:0,lives:5,ok:0,miss:0,phase:'play',xp:0,tok:0,armed:-1},{view:'subject',child:nav.child,subject:t.subject,from:{view:'child',child:nav.child,from:{view:'home'}}});
 };
 ACT.xgquit=function(){clearTimeout(XGT);ACT.back()};
-function xgHearts(n){var s='',i;for(i=0;i<3;i++)s+='<span class="'+(i<n.lives?'on':'')+'">❤</span>';return s}
+function xgHearts(n){var s='',i;for(i=0;i<5;i++)s+='<span class="'+(i<n.lives?'on':'')+'">❤</span>';return s}
 function vXg(){
   var n=nav,t=topicById(n.topicId),NAME={salat:'Buchstaben-Salat',math:'Mathe-Knobler',quiz:'Blitz-Quiz'}[n.kind];
   if(n.phase==='end'){
     var tot=n.rounds.length;
-    return '<div class="stack"><div class="xg xg-end xg-'+n.kind+' s-'+t.subject+'"><div class="xg-trophy">'+(n.ok===tot&&!n.miss?'🏆':n.ok>=4?'🥇':n.ok>=2?'🥈':'🎯')+'</div><h1>+'+n.xp+' XP</h1><p>'+n.ok+' von '+tot+' Aufgaben geschafft'+(n.ok===tot&&!n.miss?' · Perfekt, ohne Fehler!':'')+'</p></div><div class="row"><button class="btn pri big" data-act="xgquit">Fertig</button></div></div>';
+    return '<div class="stack"><div class="xg xg-end xg-'+n.kind+' s-'+t.subject+'"><div class="xg-trophy">'+(n.ok===tot&&!n.miss?'🏆':n.ok>=7?'🥇':n.ok>=4?'🥈':'🎯')+'</div><h1>+'+n.xp+' XP</h1><p>'+n.ok+' von '+tot+' Aufgaben geschafft'+(n.ok===tot&&!n.miss?' · Perfekt, ohne Fehler!':'')+'</p></div><div class="row"><button class="btn pri big" data-act="xgquit">Fertig</button></div></div>';
   }
-  var r=n.rounds[n.i],secs=xgSecs(r),h='<div class="stack"><div><p class="eyebrow">Extra-XP · '+esc(t.title)+'</p><h1>'+NAME+'</h1></div><div class="xg xg-'+n.kind+' s-'+t.subject+'" id="xg">'
+  var r=n.rounds[n.i],secs=xgSecs(r),h='<div class="stack"><div><p class="eyebrow">Easy lernen · '+esc(t.title)+'</p><h1>'+NAME+'</h1></div><div class="xg xg-'+n.kind+' s-'+t.subject+'" id="xg">'
    +'<div class="xg-top"><span class="xg-h" id="xgh">'+xgHearts(n)+'</span><span class="xg-dots">'+n.rounds.map(function(x,k){return '<i class="'+(k<n.i?'d':k===n.i?'c':'')+'"></i>'}).join('')+'</span><button class="xg-x" data-act="xgquit" aria-label="Beenden">×</button></div>'
    ;
   if(r.kind==='salat'){
@@ -123,11 +123,11 @@ function xgEnd(){
   if(n.ok===n.rounds.length&&!n.miss){var b=addXp(n.child,20);n.xp+=b}
   if(n.ok>=2)ach(n.child,'pairs');
   checkPassive(n.child);save(n.child);render();
-  if(n.ok>=2)setTimeout(function(){if(nav===n)showReward('Extra-Spiel geschafft!')},1500);
+  if(n.ok>=2)setTimeout(function(){if(nav===n)showReward('Easy lernen geschafft!')},1500);
 }
 function xgDone(good,msg){
   var n=nav,m=document.getElementById('xgm');n.phase='fb';clearTimeout(XGT);n.tok++;
-  if(good){n.ok++;n.xp+=addXp(n.child,12)}else{n.lives--;n.miss++}
+  if(good){n.ok++;n.xp+=addXp(n.child,5)}else{n.lives--;n.miss++}
   logAnswer(n.child,good);
   var hh=document.getElementById('xgh');if(hh)hh.innerHTML=xgHearts(n);
   if(m){m.className='xg-msg '+(good?'ok':'bad');m.textContent=msg}
@@ -144,7 +144,7 @@ ACT.xgo=function(b){
   var k=+b.dataset.i,good=r.opts[k].ok;
   document.querySelectorAll('.xo').forEach(function(x,j){x.disabled=true;if(r.opts[j].ok)x.classList.add('right')});
   if(!good)b.classList.add('wrong');
-  xgDone(good,good?'Richtig! +12 XP':'Leider falsch');
+  xgDone(good,good?'Richtig! +5 XP':'Leider falsch');
 };
 ACT.xgt=function(b){
   var n=nav,r=n.rounds[n.i];if(n.phase!=='play'||b.disabled)return;
@@ -152,7 +152,7 @@ ACT.xgt=function(b){
   if(ch===r.letters[r.pos]){
     var s=document.getElementById('xs'+r.pos);if(s){s.textContent=ch;s.classList.add('ok')}
     b.disabled=true;b.classList.add('used');r.pos++;
-    if(r.pos>=r.letters.length)xgDone(true,r.wr?'Geschafft! +12 XP':'Perfekt! +12 XP');
+    if(r.pos>=r.letters.length)xgDone(true,r.wr?'Geschafft! +5 XP':'Perfekt! +5 XP');
   }else{
     r.wr++;n.miss+=0;b.classList.remove('shk');void b.offsetWidth;b.classList.add('shk');
     var hh=document.getElementById('xgm');if(hh){hh.className='xg-msg bad';hh.textContent='Falscher Buchstabe ('+r.wr+'/4)'}
