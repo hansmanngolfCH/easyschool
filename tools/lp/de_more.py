@@ -18,10 +18,21 @@ NOUNS=[('Hund','Hunde','m','Hundes','tier'),('Katze','Katzen','f','Katze','tier'
 ('Zug','Züge','m','Zuges','ding'),('Velo','Velos','n','Velos','ding'),('Turm','Türme','m','Turmes','ding'),('Korb','Körbe','m','Korbes','ding'),('Wiese','Wiesen','f','Wiese','ding'),
 ('Jacke','Jacken','f','Jacke','ding'),('Mütze','Mützen','f','Mütze','ding'),('Heft','Hefte','n','Heftes','ding'),('Stift','Stifte','m','Stiftes','ding'),('Uhr','Uhren','f','Uhr','ding'),
 ('Spiel','Spiele','n','Spiels','ding')]
+
+NOUNS+=[('Hase','Hasen','m','Hasen','tier'),('Bär','Bären','m','Bären','tier'),('Löwe','Löwen','m','Löwen','tier'),('Affe','Affen','m','Affen','tier'),('Wolf','Wölfe','m','Wolfes','tier'),('Fuchs','Füchse','m','Fuchses','tier'),
+('Henne','Hennen','f','Henne','tier'),('Ziege','Ziegen','f','Ziege','tier'),('Biene','Bienen','f','Biene','tier'),('Schnecke','Schnecken','f','Schnecke','tier'),('Huhn','Hühner','n','Huhns','tier'),('Kaninchen','Kaninchen','n','Kaninchens','tier'),('Schwein','Schweine','n','Schweins','tier'),
+('Onkel','Onkel','m','Onkels','person'),('Tante','Tanten','f','Tante','person'),('Opa','Opas','m','Opas','person'),('Oma','Omas','f','Oma','person'),('Nachbar','Nachbarn','m','Nachbarn','person'),('Polizist','Polizisten','m','Polizisten','person'),('Sängerin','Sängerinnen','f','Sängerin','person'),
+('Maler','Maler','m','Malers','person'),('Verkäuferin','Verkäuferinnen','f','Verkäuferin','person'),('Junge','Jungen','m','Jungen','person'),('Kollege','Kollegen','m','Kollegen','person'),('Trainer','Trainer','m','Trainers','person'),('Pilot','Piloten','m','Piloten','person'),
+('Brille','Brillen','f','Brille','ding'),('Kerze','Kerzen','f','Kerze','ding'),('Flasche','Flaschen','f','Flasche','ding'),('Bank','Bänke','f','Bank','ding'),('Wand','Wände','f','Wand','ding'),('Treppe','Treppen','f','Treppe','ding'),('Decke','Decken','f','Decke','ding'),('Karte','Karten','f','Karte','ding'),
+('Kissen','Kissen','n','Kissens','ding'),('Messer','Messer','n','Messers','ding'),('Regal','Regale','n','Regals','ding'),('Bett','Betten','n','Bettes','ding'),('Sofa','Sofas','n','Sofas','ding'),('Dach','Dächer','n','Daches','ding'),('Glas','Gläser','n','Glases','ding'),('Licht','Lichter','n','Lichtes','ding'),
+('Löffel','Löffel','m','Löffels','ding'),('Teller','Teller','m','Tellers','ding'),('Schrank','Schränke','m','Schranks','ding'),('Rucksack','Rucksäcke','m','Rucksacks','ding'),('Ball','Bälle','m','Balls','ding'),('Koffer','Koffer','m','Koffers','ding'),('Schlüssel','Schlüssel','m','Schlüssels','ding'),
+('Wald','Wälder','m','Waldes','ding'),('Berg','Berge','m','Berges','ding'),('See','Seen','m','Sees','ding'),('Bach','Bäche','m','Baches','ding'),('Hut','Hüte','m','Hutes','ding'),('Schal','Schals','m','Schals','ding'),('Mantel','Mäntel','m','Mantels','ding'),('Schuh','Schuhe','m','Schuhs','ding'),
+('Hose','Hosen','f','Hose','ding'),('Socke','Socken','f','Socke','ding'),('Torte','Torten','f','Torte','ding'),('Birne','Birnen','f','Birne','ding'),('Banane','Bananen','f','Banane','ding'),('Karotte','Karotten','f','Karotte','ding')]
+NOUNS=list({n[0]:n for n in NOUNS}.values())
 NB={n[0]:n for n in NOUNS}
 def pool(g):return [n for n in NOUNS if n[4]==g]
-ADJ=['klein','gross','schnell','laut','leise','warm','lustig','nass','hell','kalt','weich','neu','alt','freundlich','müde','fleissig','mutig','schön','bunt','schwer']
-NAMES=[('Anna','f'),('Tom','m'),('Lea','f'),('Ben','m'),('Mia','f'),('Noah','m'),('Nora','f'),('Leo','m'),('Lina','f'),('Jan','m'),('Eva','f'),('Max','m')]
+ADJ=['süss','sauber','dunkel','stark','leicht','jung','rund','lieb','froh','spitz','glatt','krank','klug','ruhig','frech','scharf','klein','gross','schnell','laut','leise','warm','lustig','nass','hell','kalt','weich','neu','alt','freundlich','müde','fleissig','mutig','schön','bunt','schwer']
+NAMES=[('Emma','f'),('Luca','m'),('Sara','f'),('Finn','m'),('Zoe','f'),('Elias','m'),('Ella','f'),('Paul','m'),('Lara','f'),('Tim','m'),('Julia','f'),('David','m'),('Anna','f'),('Tom','m'),('Lea','f'),('Ben','m'),('Mia','f'),('Noah','m'),('Nora','f'),('Leo','m'),('Lina','f'),('Jan','m'),('Eva','f'),('Max','m')]
 def A(g,case='nom',defn=True):
     if defn:return {'nom':{'m':'der','f':'die','n':'das'},'akk':{'m':'den','f':'die','n':'das'},'dat':{'m':'dem','f':'der','n':'dem'},'gen':{'m':'des','f':'der','n':'des'}}[case][g]
     return {'nom':{'m':'ein','f':'eine','n':'ein'},'akk':{'m':'einen','f':'eine','n':'ein'},'dat':{'m':'einem','f':'einer','n':'einem'},'gen':{'m':'eines','f':'einer','n':'eines'}}[case][g]
@@ -63,6 +74,10 @@ VERBS=[('spielen','spielt','spielte','gespielt','hat',0),('lachen','lacht','lach
 ('schlafen','schläft','schlief','geschlafen','hat',1),('kommen','kommt','kam','gekommen','ist',1),('gehen','geht','ging','gegangen','ist',1),('fahren','fährt','fuhr','gefahren','ist',1),
 ('schwimmen','schwimmt','schwamm','geschwommen','ist',1),('fliegen','fliegt','flog','geflogen','ist',1),('springen','springt','sprang','gesprungen','ist',1),('bleiben','bleibt','blieb','geblieben','ist',1),
 ('fallen','fällt','fiel','gefallen','ist',1),('rufen','ruft','rief','gerufen','hat',1)]
+VERBS+=[('machen','macht','machte','gemacht','hat',0),('lernen','lernt','lernte','gelernt','hat',0),('kaufen','kauft','kaufte','gekauft','hat',0),('malen','malt','malte','gemalt','hat',0),('suchen','sucht','suchte','gesucht','hat',0),
+('fragen','fragt','fragte','gefragt','hat',0),('kochen','kocht','kochte','gekocht','hat',0),('baden','badet','badete','gebadet','hat',0),('tanzen','tanzt','tanzte','getanzt','hat',0),('reisen','reist','reiste','gereist','ist',0),
+('wandern','wandert','wanderte','gewandert','ist',0),('rennen','rennt','rannte','gerannt','ist',1),('steigen','steigt','stieg','gestiegen','ist',1),('sitzen','sitzt','sass','gesessen','hat',1),('liegen','liegt','lag','gelegen','hat',1)]
+VERBS=list({v[0]:v for v in VERBS}.values())
 STRONG=[('sehen','sieht','sah','gesehen','hat',1),('essen','isst','ass','gegessen','hat',1),('trinken','trinkt','trank','getrunken','hat',1),('schreiben','schreibt','schrieb','geschrieben','hat',1),
 ('lesen','liest','las','gelesen','hat',1),('finden','findet','fand','gefunden','hat',1),('geben','gibt','gab','gegeben','hat',1),('nehmen','nimmt','nahm','genommen','hat',1),
 ('sprechen','spricht','sprach','gesprochen','hat',1),('helfen','hilft','half','geholfen','hat',1),('werfen','wirft','warf','geworfen','hat',1),('ziehen','zieht','zog','gezogen','hat',1),
@@ -75,6 +90,13 @@ LISTS=[('Ich kaufe {}.',FOOD),('Zum Frühstück gibt es {}.',FOOD),('Im Zoo sehe
 ('Meine Schwester ist {}.',['freundlich','klug','mutig','lustig','hilfsbereit','geduldig']),('Am Wochenende wollen wir {}.',['schwimmen','wandern','lesen','spielen','baden','tanzen']),
 ('In der Pause spielen wir {}.',['Fussball','Fangen','Verstecken','Seilspringen','Tischtennis']),('Auf dem Hof leben {}.',['Hühner','Kühe','Schafe','Pferde','Enten','Katzen']),
 ('In meinem Zimmer stehen {}.',['ein Bett','ein Tisch','ein Stuhl','ein Regal','eine Lampe'])]
+LISTS+=[('Auf dem Markt gibt es {}.',['Gemüse','Obst','Fisch','Blumen','Eier','Honig','Käse','Brot','Kräuter']),('In der Schule brauche ich {}.',['ein Heft','einen Bleistift','ein Lineal','einen Radiergummi','eine Schere','einen Kleber','ein Etui']),
+('Im Wald sehen wir {}.',['Rehe','Hasen','Füchse','Eichhörnchen','Vögel','Pilze','Käfer','Ameisen']),('Zum Geburtstag wünsche ich mir {}.',['ein Buch','ein Velo','einen Ball','ein Spiel','eine Uhr','Farbstifte']),
+('Im Sommer machen wir {}.',['Ausflüge','Picknicks','Spiele','Radtouren','Wanderungen','Feste']),('Im Winter tragen wir {}.',['Mützen','Schals','Handschuhe','Jacken','Stiefel','Pullover']),
+('Meine Oma backt {}.',['Kuchen','Brot','Zopf','Kekse','Torten','Brötchen']),('Am See kann man {}.',['schwimmen','baden','fischen','segeln','spielen','picknicken']),
+('Im Zirkus gibt es {}.',['Clowns','Pferde','Artisten','Zauberer','Löwen','Seiltänzer']),('Auf dem Spielplatz gibt es {}.',['eine Rutsche','eine Schaukel','einen Sandkasten','eine Wippe','ein Klettergerüst']),
+('Der Bus ist {}.',['gelb','gross','laut','voll','schnell','neu','sauber']),('Im Schrank liegen {}.',['Hosen','Pullover','Socken','Hemden','Schals','Mützen']),('In der Küche stehen {}.',['Töpfe','Pfannen','Teller','Tassen','Gläser','Schüsseln']),
+('Zum Frühstück trinke ich {}.',['Milch','Tee','Kakao','Wasser','Saft']),('Auf der Wiese blühen {}.',['Margeriten','Löwenzahn','Klee','Glockenblumen','Mohn']),('Im Zimmer hängen {}.',['Bilder','Poster','Lampen','Uhren','Sterne'])]
 # Hauptsatz + Konjunktion + Hauptsatz
 HS=[('Wir wollten spielen','aber','es regnete'),('Anna ist müde','denn','sie hat schlecht geschlafen'),('Tom mag Fussball','aber','er spielt lieber Tennis'),('Ich komme heute nicht','denn','ich bin krank'),
 ('Der Hund bellt laut','aber','die Katze schläft weiter'),('Mia lernt viel','denn','morgen ist ein Test'),('Wir gehen nicht schwimmen','sondern','wir bleiben zu Hause'),('Ben hat Hunger','doch','im Kühlschrank ist nichts'),
@@ -123,11 +145,28 @@ KONJ2=[('Wenn ich reich ___, kaufte ich ein Schloss.','wäre',['bin','war','sei'
 ('Wenn sie früher aufstünde, ___ sie den Zug.','erreichte',['erreicht','erreichen','erreiche']),('Wenn du mir helfen ___, wäre ich froh.','würdest',['wirst','wurdest','werdest'])]
 SATZ_Q=['Wo wohnt {n}?','Wann kommt {n}?','Hast du {a} {x}?','Wer hat {a} {x}?','Wie heisst {a} {x}?','Kommst du heute mit?','Spielst du gern Fussball?','Was machst du am Wochenende?','Warum bist du so müde?','Wohin geht ihr?','Magst du Schokolade?','Wer kommt mit?']
 SATZ_E=['Achtung, ein Auto kommt!','Pass auf!','Komm schnell her!','Halt!','Lauf, so schnell du kannst!','Sei leise!','Hör mir bitte zu!','Mach sofort das Licht aus!','Hilfe, es brennt!','Wie schön das ist!','Stopp, nicht weiterlaufen!','Warte auf mich!','Vorsicht, das Eis ist glatt!','Schau, ein Regenbogen!']
-LANGV={'Doppelter Konsonant':[('kommen','komen'),('Mutter','Muter'),('Sonne','Sone'),('Treppe','Trepe'),('Tasse','Tase'),('Koffer','Kofer'),('Puppe','Pupe'),('Wetter','Weter'),('Schiff','Schif'),('Mittag','Mitag'),('Sommer','Somer'),('Ball','Bal'),('Tonne','Tone'),('Fall','Fal')],
-'ie':[('Biene','Bine'),('Tier','Tir'),('Wiese','Wise'),('Fliege','Flige'),('Liebe','Libe'),('Spiel','Spil'),('Ziege','Zige'),('Brief','Brif'),('Ziel','Zil'),('Riese','Rise'),('Krieg','Krig'),('Wiege','Wige')],
-'Dehnungs-h':[('Bahn','Ban'),('Zahl','Zal'),('Uhr','Ur'),('Sohn','Son'),('Wahl','Wal'),('Kuh','Ku'),('Huhn','Hun'),('Stuhl','Stul'),('Wohnung','Wonung'),('Fahrrad','Farrad'),('Lehrer','Lerer'),('Mühle','Müle')],
-'Doppelter Vokal':[('Boot','Bot'),('Meer','Mer'),('Haar','Har'),('Moos','Mos'),('Saal','Sal'),('Tee','Te'),('See','Se'),('Paar','Par'),('Schnee','Schne'),('Beere','Bere'),('Waage','Wage'),('Zoo','Zo')]}
-ABC_POOLS=[['Baum','Ball','Bild','Blume','Brot','Bruder','Buch'],['Schule','Schaf','Schwester','Schüler','Spiel','Stift','Stuhl','Suppe'],['Tasche','Tasse','Tisch','Tür','Turm'],['Katze','Kind','Kuchen','Kuh','Korb'],
+
+_DK="Sonne Tasse Mutter Treppe Koffer Puppe Wetter Schiff Mittag Sommer Ball Tonne Fall kommen Tanne Wasser Bett Mitte Futter Kette Rolle Pfanne Messer Butter Hammer Himmel Teller Löffel Zettel Wolle Brille Kanne Hütte Affe Schüssel Kasse Mappe Rennen Wille Qualle Teppich Zimmer Mann Kamm Schlüssel Bürste Tomate".split()
+_IE="Biene Tier Wiese Fliege Liebe Spiel Ziege Brief Ziel Riese Krieg Wiege Dieb Lied Spiegel Ziegel Fieber Frieden Bier Wiesel Zwiebel Stiefel Tiger Schiene Sieger Fliegen Biegen Zügel Wiederholen Liegen Lieber Tiere Lieder Sieben Dienstag Spielplatz Familie Ziegen Papier".split()
+_DH="Bahn Zahl Uhr Sohn Wahl Kuh Huhn Stuhl Wohnung Fahrrad Lehrer Mühle Zahn Hahn Reh Fehler Schuh Mohn Nahrung Ohr Jahr Bohne Fahne Lohn Zehe Sahne Mehl Strahl Ruhe Höhle Gefühl Zahlen Fahren Wohnen Lehren Mehr Sehr Fahrer Zähne Söhne Kühe Jahre Ohren Uhren".split()
+_DV="Boot Meer Haar Moos Saal Tee See Paar Schnee Beere Waage Zoo Aal Klee Kaffee Idee Fee Beet Seele Armee Allee Staat Speer Heer Leere Boote Meere Haare Seen Paare Beete Seelen Waagen Zoos Ideen Säle Staaten".split()
+def _mk(words,fn):
+    out=[]
+    for w in words:
+        wr=fn(w)
+        if wr and wr!=w:out.append((w,wr))
+    return out
+import re as _re
+def _dk(w):
+    m=_re.search(r'([bdfgklmnprstz])\1',w,_re.I)
+    return w[:m.start()]+w[m.start()]+w[m.end():] if m else None
+def _ie(w):return w.replace('ie','i',1) if 'ie' in w and w not in('Familie',) else None
+def _dh(w):
+    m=_re.search(r'[aeiouäöü]h',w);return w[:m.start()+1]+w[m.end():] if m else None
+def _dv(w):
+    m=_re.search(r'([aeoö])\1',w);return w[:m.start()]+w[m.start()]+w[m.end():] if m else None
+LANGV={'Doppelter Konsonant':_mk(_DK,_dk),'ie':_mk(_IE,_ie),'Dehnungs-h':_mk(_DH,_dh),'Doppelter Vokal':_mk(_DV,_dv)}
+ABC_POOLS=[['Rose','Reh','Regen','Rucksack','Rutsche','Rock'],['Garten','Gabel','Gans','Glas','Gurke','Geige'],['Nuss','Nase','Nadel','Nest','Nudel'],['Pilz','Puppe','Pinsel','Pferd','Pfanne'],['Wald','Wolke','Wurst','Wiese','Wolf','Wand'],['Lampe','Leiter','Löffel','Löwe','Licht'],['Dach','Dose','Dorf','Drache','Delfin'],['Apfel','Affe','Ameise','Auto','Ast'],['Zahn','Zebra','Zelt','Ziege','Zimmer'],['Vogel','Vase','Veilchen','Velo','Vater'],['Eis','Ente','Esel','Eimer','Elefant'],['Baum','Ball','Bild','Blume','Brot','Bruder','Buch'],['Schule','Schaf','Schwester','Schüler','Spiel','Stift','Stuhl','Suppe'],['Tasche','Tasse','Tisch','Tür','Turm'],['Katze','Kind','Kuchen','Kuh','Korb'],
 ['Hund','Haus','Heft','Hase','Huhn'],['Maus','Mann','Mutter','Mütze','Mädchen'],['Fisch','Fenster','Frau','Frosch','Freundin']]
 def _k(w):return w.lower().replace('ä','a').replace('ö','o').replace('ü','u')
 # ---------------------------------------------------------------- Satzbausteine
@@ -310,7 +349,7 @@ def f_alphabet(t,r):
         else:
             if len(so)>=3 and MC(t,2,'Welches Wort steht im Alphabet zwischen «%s» und «%s»?'%(so[0],so[2]),so[1],[w for w in words if _k(w)<_k(so[0]) or _k(w)>_k(so[2])][:3],'Es kommt nach dem ersten und vor dem zweiten.'):n+=1
 def f_langvokal(t,r):
-    items=[(w,wr,c) for c,l in LANGV.items() for w,wr in l];r.shuffle(items);cats=list(LANGV)
+    items=[(w,wr,c) for c,l in LANGV.items() for w,wr in r.sample(l,min(len(l),24))];r.shuffle(items);cats=list(LANGV)
     for i,(w,wr,c) in enumerate(items):
         t.fix(2,'Verbessere direkt im Feld.',wr,w,'Regel: '+c+'.')
         MC(t,1,'Wie schreibt man es richtig?',w,[wr],'Denke an die Regel: Wie ist der Vokal? lang oder kurz?')
@@ -546,6 +585,7 @@ def extend_json(tp):
 # ===================================================== v4.83: 50 % Korrekturkarten ab Klasse 4
 WEAK=[('spielen','spiel'),('lachen','lach'),('arbeiten','arbeit'),('warten','wart'),('tanzen','tanz'),('wohnen','wohn'),('malen','mal'),('kaufen','kauf'),('hören','hör'),('lernen','lern'),
 ('putzen','putz'),('baden','bad'),('machen','mach'),('suchen','such'),('zeigen','zeig'),('rechnen','rechn'),('fragen','frag'),('kochen','koch'),('zählen','zähl'),('tragen_','')]
+WEAK+=[('packen','pack'),('lieben','lieb'),('leben','leb'),('füllen','füll'),('glauben','glaub'),('danken','dank'),('turnen','turn'),('winken','wink'),('regnen','regn'),('stellen','stell'),('legen','leg'),('holen','hol'),('fehlen','fehl'),('schenken','schenk'),('rufen','ruf')]
 WEAK=[w for w in WEAK if w[1]]
 def conj(stem,p):
     sib=stem[-1] in 'szx'
