@@ -49654,7 +49654,7 @@
    "explain": [
     {
      "h": "1",
-     "text": "",
+     "text": "Hier sind 3 Äpfel.",
      "visuals": [
       {
        "type": "emo",
@@ -49680,7 +49680,7 @@
     },
     {
      "h": "2",
-     "text": "",
+     "text": "Hier sind 5 Äpfel.",
      "visuals": [
       {
        "type": "emo",
@@ -49706,7 +49706,7 @@
     },
     {
      "h": "3",
-     "text": "",
+     "text": "Hier steht die 7.",
      "visuals": [
       {
        "type": "nline",
@@ -49722,7 +49722,7 @@
     },
     {
      "h": "4",
-     "text": "",
+     "text": "Hier steht die 9.",
      "visuals": [
       {
        "type": "nline",
@@ -49737,7 +49737,7 @@
     },
     {
      "h": "5",
-     "text": "",
+     "text": "Die 4 liegt dazwischen.",
      "visuals": [
       {
        "type": "nline",
@@ -49772,7 +49772,7 @@
     },
     {
      "h": "6",
-     "text": "",
+     "text": "Das sind 6 Punkte.",
      "visuals": [
       {
        "type": "field",
@@ -49795,7 +49795,7 @@
     },
     {
      "h": "7",
-     "text": "",
+     "text": "3 plus 4: 7.",
      "visuals": [
       {
        "type": "field",
@@ -49825,7 +49825,7 @@
     },
     {
      "h": "8",
-     "text": "",
+     "text": "Das ist die 10.",
      "visuals": [
       {
        "type": "nline",
@@ -49841,7 +49841,7 @@
     },
     {
      "h": "⭐",
-     "text": "",
+     "text": "Merke dir diese Zahlen.",
      "visuals": [
       {
        "type": "cards",
@@ -51405,7 +51405,7 @@
    "explain": [
     {
      "h": "1",
-     "text": "",
+     "text": "Zehn Punkte sind voll.",
      "visuals": [
       {
        "type": "field",
@@ -51428,7 +51428,7 @@
     },
     {
      "h": "2",
-     "text": "",
+     "text": "Zehn und drei: 13.",
      "visuals": [
       {
        "type": "field",
@@ -51458,7 +51458,7 @@
     },
     {
      "h": "3",
-     "text": "",
+     "text": "Zehn und sechs: 16.",
      "visuals": [
       {
        "type": "field",
@@ -51488,7 +51488,7 @@
     },
     {
      "h": "4",
-     "text": "",
+     "text": "1 Zehner, 4 Einer.",
      "visuals": [
       {
        "type": "blocks",
@@ -51520,7 +51520,7 @@
     },
     {
      "h": "5",
-     "text": "",
+     "text": "1 Zehner, 9 Einer.",
      "visuals": [
       {
        "type": "blocks",
@@ -51552,7 +51552,7 @@
     },
     {
      "h": "6",
-     "text": "",
+     "text": "Hier steht die 15.",
      "visuals": [
       {
        "type": "nline",
@@ -51568,7 +51568,7 @@
     },
     {
      "h": "7",
-     "text": "",
+     "text": "12 liegt vor 18.",
      "visuals": [
       {
        "type": "nline",
@@ -51585,7 +51585,7 @@
     },
     {
      "h": "8",
-     "text": "",
+     "text": "Zehn und sieben: 17.",
      "visuals": [
       {
        "type": "bar",
@@ -51606,7 +51606,7 @@
     },
     {
      "h": "⭐",
-     "text": "",
+     "text": "Merke dir diese Zahlen.",
      "visuals": [
       {
        "type": "cards",
@@ -53293,7 +53293,7 @@
    "explain": [
     {
      "h": "1",
-     "text": "",
+     "text": "Mehr: 6 gegen 3.",
      "visuals": [
       {
        "type": "emo",
@@ -53333,7 +53333,7 @@
     },
     {
      "h": "2",
-     "text": "",
+     "text": "Weniger: 2 gegen 7.",
      "visuals": [
       {
        "type": "emo",
@@ -53373,7 +53373,7 @@
     },
     {
      "h": "3",
-     "text": "",
+     "text": "Beide gleich: je 4.",
      "visuals": [
       {
        "type": "emo",
@@ -53413,7 +53413,7 @@
     },
     {
      "h": "4",
-     "text": "",
+     "text": "Der lange Balken gewinnt.",
      "visuals": [
       {
        "type": "bar",
@@ -53441,7 +53441,7 @@
     },
     {
      "h": "5",
-     "text": "",
+     "text": "Welcher Balken ist länger?",
      "visuals": [
       {
        "type": "bar",
@@ -53469,7 +53469,7 @@
     },
     {
      "h": "6",
-     "text": "",
+     "text": "Rechts ist grösser.",
      "visuals": [
       {
        "type": "nline",
@@ -53486,7 +53486,7 @@
     },
     {
      "h": "7",
-     "text": "",
+     "text": "Merke dir diese Zeichen.",
      "visuals": [
       {
        "type": "cards",
@@ -53515,7 +53515,7 @@
     },
     {
      "h": "⭐",
-     "text": "",
+     "text": "Welches Zeichen passt?",
      "visuals": [
       {
        "type": "chips",
@@ -55993,7 +55993,7 @@
    "explain": [
     {
      "h": "1",
-     "text": "",
+     "text": "Doppelt: 3 plus 3.",
      "visuals": [
       {
        "type": "emo",
@@ -56028,7 +56028,7 @@
     },
     {
      "h": "2",
-     "text": "",
+     "text": "Doppelt: 4 plus 4.",
      "visuals": [
       {
        "type": "emo",
@@ -56063,7 +56063,7 @@
     },
     {
      "h": "3",
-     "text": "",
+     "text": "Doppelt 5 ist 10.",
      "visuals": [
       {
        "type": "field",
@@ -56093,7 +56093,7 @@
     },
     {
      "h": "4",
-     "text": "",
+     "text": "Doppelt heisst zweimal gleich.",
      "visuals": [
       {
        "type": "bar",
@@ -56144,7 +56144,7 @@
     },
     {
      "h": "5",
-     "text": "",
+     "text": "Die Hälfte von 8.",
      "visuals": [
       {
        "type": "emo",
@@ -56184,7 +56184,7 @@
     },
     {
      "h": "6",
-     "text": "",
+     "text": "Die Hälfte von 10.",
      "visuals": [
       {
        "type": "bar",
@@ -56225,7 +56225,7 @@
     },
     {
      "h": "7",
-     "text": "",
+     "text": "Halbe von 6: 3.",
      "visuals": [
       {
        "type": "chips",
@@ -56271,7 +56271,7 @@
     },
     {
      "h": "⭐",
-     "text": "",
+     "text": "Merke dir diese Aufgaben.",
      "visuals": [
       {
        "type": "cards",
@@ -57562,7 +57562,7 @@
    "explain": [
     {
      "h": "1",
-     "text": "",
+     "text": "Zusammen sind es 5.",
      "visuals": [
       {
        "type": "emo",
@@ -57612,7 +57612,7 @@
     },
     {
      "h": "2",
-     "text": "",
+     "text": "Zusammen sind es 7.",
      "visuals": [
       {
        "type": "emo",
@@ -57662,7 +57662,7 @@
     },
     {
      "h": "3",
-     "text": "",
+     "text": "Zähle alle Punkte.",
      "visuals": [
       {
        "type": "field",
@@ -57677,7 +57677,7 @@
     },
     {
      "h": "4",
-     "text": "",
+     "text": "Springe 3 nach rechts.",
      "visuals": [
       {
        "type": "jumps",
@@ -57693,7 +57693,7 @@
     },
     {
      "h": "5",
-     "text": "",
+     "text": "Grün und blau zusammen.",
      "visuals": [
       {
        "type": "field",
@@ -57708,7 +57708,7 @@
     },
     {
      "h": "6",
-     "text": "",
+     "text": "Tauschen ändert nichts.",
      "visuals": [
       {
        "type": "bar",
@@ -57744,7 +57744,7 @@
     },
     {
      "h": "7",
-     "text": "",
+     "text": "Merke dir diese Aufgaben.",
      "visuals": [
       {
        "type": "cards",
@@ -57767,7 +57767,7 @@
     },
     {
      "h": "8",
-     "text": "",
+     "text": "Sieben und drei: 10.",
      "visuals": [
       {
        "type": "field",
@@ -57797,7 +57797,7 @@
     },
     {
      "h": "⭐",
-     "text": "",
+     "text": "Merke dir diese Zeichen.",
      "visuals": [
       {
        "type": "cards",
@@ -59072,7 +59072,7 @@
    "explain": [
     {
      "h": "1",
-     "text": "",
+     "text": "Zwei Äpfel gehen weg.",
      "visuals": [
       {
        "type": "emo",
@@ -59119,7 +59119,7 @@
     },
     {
      "h": "2",
-     "text": "",
+     "text": "Drei Fische schwimmen weg.",
      "visuals": [
       {
        "type": "emo",
@@ -59166,7 +59166,7 @@
     },
     {
      "h": "3",
-     "text": "",
+     "text": "Nimm 3 Punkte weg.",
      "visuals": [
       {
        "type": "field",
@@ -59181,7 +59181,7 @@
     },
     {
      "h": "4",
-     "text": "",
+     "text": "Minus ist Plus rückwärts.",
      "visuals": [
       {
        "type": "bar",
@@ -59213,7 +59213,7 @@
     },
     {
      "h": "5",
-     "text": "",
+     "text": "Alles weg: null übrig.",
      "visuals": [
       {
        "type": "bar",
@@ -59260,7 +59260,7 @@
     },
     {
      "h": "6",
-     "text": "",
+     "text": "Plus, Minus: Gegenteile.",
      "visuals": [
       {
        "type": "chips",
@@ -59326,7 +59326,7 @@
     },
     {
      "h": "7",
-     "text": "",
+     "text": "Nimm 4 Punkte weg.",
      "visuals": [
       {
        "type": "field",
@@ -59341,7 +59341,7 @@
     },
     {
      "h": "8",
-     "text": "",
+     "text": "Springe zwei Mal links.",
      "visuals": [
       {
        "type": "jumps",
@@ -59361,7 +59361,7 @@
     },
     {
      "h": "⭐",
-     "text": "",
+     "text": "Merke dir diese Zeichen.",
      "visuals": [
       {
        "type": "cards",
@@ -60564,7 +60564,7 @@
    "explain": [
     {
      "h": "1",
-     "text": "",
+     "text": "Fülle zuerst die Zehn.",
      "visuals": [
       {
        "type": "field",
@@ -60589,7 +60589,7 @@
     },
     {
      "h": "2",
-     "text": "",
+     "text": "Erst zur Zehn springen.",
      "visuals": [
       {
        "type": "jumps",
@@ -60609,7 +60609,7 @@
     },
     {
      "h": "3",
-     "text": "",
+     "text": "Erst 2, dann 3.",
      "visuals": [
       {
        "type": "bar",
@@ -60659,7 +60659,7 @@
     },
     {
      "h": "4",
-     "text": "",
+     "text": "Erst 1, dann 5.",
      "visuals": [
       {
        "type": "jumps",
@@ -60704,7 +60704,7 @@
     },
     {
      "h": "5",
-     "text": "",
+     "text": "Erst 3, dann 3.",
      "visuals": [
       {
        "type": "jumps",
@@ -60749,7 +60749,7 @@
     },
     {
      "h": "6",
-     "text": "",
+     "text": "Doppelt 7 ergibt 14.",
      "visuals": [
       {
        "type": "field",
@@ -60779,7 +60779,7 @@
     },
     {
      "h": "7",
-     "text": "",
+     "text": "Doppelt 8 ergibt 16.",
      "visuals": [
       {
        "type": "field",
@@ -60809,7 +60809,7 @@
     },
     {
      "h": "8",
-     "text": "",
+     "text": "Doppelt 7, plus 1.",
      "visuals": [
       {
        "type": "field",
@@ -60849,7 +60849,7 @@
     },
     {
      "h": "⭐",
-     "text": "",
+     "text": "Merke dir diese Zahlen.",
      "visuals": [
       {
        "type": "cards",
@@ -62184,7 +62184,7 @@
    "explain": [
     {
      "h": "1",
-     "text": "",
+     "text": "Nimm 8 Punkte weg.",
      "visuals": [
       {
        "type": "field",
@@ -62209,7 +62209,7 @@
     },
     {
      "h": "2",
-     "text": "",
+     "text": "Erst zur Zehn zurück.",
      "visuals": [
       {
        "type": "jumps",
@@ -62229,7 +62229,7 @@
     },
     {
      "h": "3",
-     "text": "",
+     "text": "Erst bis 10 zurück.",
      "visuals": [
       {
        "type": "chips",
@@ -62260,7 +62260,7 @@
     },
     {
      "h": "4",
-     "text": "",
+     "text": "Erst 5, dann 4.",
      "visuals": [
       {
        "type": "jumps",
@@ -62305,7 +62305,7 @@
     },
     {
      "h": "5",
-     "text": "",
+     "text": "Erst 4, dann 2.",
      "visuals": [
       {
        "type": "jumps",
@@ -62350,7 +62350,7 @@
     },
     {
      "h": "6",
-     "text": "",
+     "text": "Plus prüft das Minus.",
      "visuals": [
       {
        "type": "bar",
@@ -62431,7 +62431,7 @@
     },
     {
      "h": "7",
-     "text": "",
+     "text": "Halbe von 12: 6.",
      "visuals": [
       {
        "type": "field",
@@ -62461,7 +62461,7 @@
     },
     {
      "h": "⭐",
-     "text": "",
+     "text": "Merke dir diese Zeichen.",
      "visuals": [
       {
        "type": "cards",
@@ -63755,7 +63755,7 @@
    "explain": [
     {
      "h": "1",
-     "text": "",
+     "text": "Der Kreis ist rund.",
      "visuals": [
       {
        "type": "shape",
@@ -63781,7 +63781,7 @@
     },
     {
      "h": "2",
-     "text": "",
+     "text": "Dreieck: drei Ecken.",
      "visuals": [
       {
        "type": "shape",
@@ -63807,7 +63807,7 @@
     },
     {
      "h": "3",
-     "text": "",
+     "text": "Quadrat: vier gleiche Seiten.",
      "visuals": [
       {
        "type": "shape",
@@ -63833,7 +63833,7 @@
     },
     {
      "h": "4",
-     "text": "",
+     "text": "Rechteck: zwei lange Seiten.",
      "visuals": [
       {
        "type": "shape",
@@ -63859,7 +63859,7 @@
     },
     {
      "h": "5",
-     "text": "",
+     "text": "Viereck: vier Ecken.",
      "visuals": [
       {
        "type": "shape",
@@ -63885,7 +63885,7 @@
     },
     {
      "h": "6",
-     "text": "",
+     "text": "Wo siehst du Formen?",
      "visuals": [
       {
        "type": "emo",
@@ -63913,7 +63913,7 @@
     },
     {
      "h": "7",
-     "text": "",
+     "text": "Kreis oder Dreieck?",
      "visuals": [
       {
        "type": "shape",
@@ -63929,7 +63929,7 @@
     },
     {
      "h": "⭐",
-     "text": "",
+     "text": "Merke dir diese Formen.",
      "visuals": [
       {
        "type": "cards",
@@ -65208,7 +65208,7 @@
    "explain": [
     {
      "h": "1",
-     "text": "",
+     "text": "Diese Münzen kennst du.",
      "visuals": [
       {
        "type": "coins",
@@ -65234,7 +65234,7 @@
     },
     {
      "h": "2",
-     "text": "",
+     "text": "Das sind Rappen-Münzen.",
      "visuals": [
       {
        "type": "coins",
@@ -65255,7 +65255,7 @@
     },
     {
      "h": "3",
-     "text": "",
+     "text": "Kleine Münzen: Rappen.",
      "visuals": [
       {
        "type": "coins",
@@ -65281,7 +65281,7 @@
     },
     {
      "h": "4",
-     "text": "",
+     "text": "Drei Mal 1 Franken.",
      "visuals": [
       {
        "type": "coins",
@@ -65312,7 +65312,7 @@
     },
     {
      "h": "5",
-     "text": "",
+     "text": "5 plus 2 Franken.",
      "visuals": [
       {
        "type": "coins",
@@ -65348,7 +65348,7 @@
     },
     {
      "h": "6",
-     "text": "",
+     "text": "Erst 5, dann 2.",
      "visuals": [
       {
        "type": "jumps",
@@ -65368,7 +65368,7 @@
     },
     {
      "h": "7",
-     "text": "",
+     "text": "10 plus 5 Rappen.",
      "visuals": [
       {
        "type": "coins",
@@ -65404,7 +65404,7 @@
     },
     {
      "h": "8",
-     "text": "",
+     "text": "10 Franken minus 7.",
      "visuals": [
       {
        "type": "chips",
@@ -65455,7 +65455,7 @@
     },
     {
      "h": "⭐",
-     "text": "",
+     "text": "Merke dir diese Münzen.",
      "visuals": [
       {
        "type": "cards",
@@ -66934,7 +66934,7 @@
    "explain": [
     {
      "h": "1",
-     "text": "",
+     "text": "Es ist drei Uhr.",
      "visuals": [
       {
        "type": "clock",
@@ -66955,7 +66955,7 @@
     },
     {
      "h": "2",
-     "text": "",
+     "text": "Es ist sechs Uhr.",
      "visuals": [
       {
        "type": "clock",
@@ -66976,7 +66976,7 @@
     },
     {
      "h": "3",
-     "text": "",
+     "text": "Es ist neun Uhr.",
      "visuals": [
       {
        "type": "clock",
@@ -66997,7 +66997,7 @@
     },
     {
      "h": "4",
-     "text": "",
+     "text": "Es ist zwölf Uhr.",
      "visuals": [
       {
        "type": "clock",
@@ -67018,7 +67018,7 @@
     },
     {
      "h": "5",
-     "text": "",
+     "text": "Eine Stunde später.",
      "visuals": [
       {
        "type": "clock",
@@ -67054,7 +67054,7 @@
     },
     {
      "h": "6",
-     "text": "",
+     "text": "Jede Stunde plus eins.",
      "visuals": [
       {
        "type": "jumps",
@@ -67078,7 +67078,7 @@
     },
     {
      "h": "7",
-     "text": "",
+     "text": "Welche Uhr zeigt sieben?",
      "visuals": [
       {
        "type": "clock",
@@ -67099,7 +67099,7 @@
     },
     {
      "h": "⭐",
-     "text": "",
+     "text": "Der kurze Zeiger: Stunde.",
      "visuals": [
       {
        "type": "cards",
@@ -200281,7 +200281,7 @@
    "explain": [
     {
      "h": "Worum geht es?",
-     "text": "Du lernst Buchstaben und Zahlen schreiben. Zuerst fährst du sie mit dem Finger nach.",
+     "text": "Wir lernen schreiben.",
      "visuals": [
       {
        "type": "scene",
@@ -200293,7 +200293,7 @@
     },
     {
      "h": "So sitzt du richtig",
-     "text": "Gut sitzen hilft beim Schreiben.",
+     "text": "Gut sitzen hilft.",
      "visuals": [
       {
        "type": "cards",
@@ -200322,7 +200322,7 @@
     },
     {
      "h": "So fährst du nach",
-     "text": "Das machst du bei jedem Buchstaben.",
+     "text": "Fahre die Linien nach.",
      "visuals": [
       {
        "type": "lines",
@@ -200350,7 +200350,7 @@
     },
     {
      "h": "Gross und klein",
-     "text": "Jeder Buchstabe hat eine grosse und eine kleine Form.",
+     "text": "Gross und klein schreiben.",
      "visuals": [
       {
        "type": "tbl",
@@ -200385,7 +200385,7 @@
     },
     {
      "h": "Die Zahlen",
-     "text": "Auch Zahlen fährst du von oben nach unten nach.",
+     "text": "Zahlen fährst du nach.",
      "visuals": [
       {
        "type": "tbl",
@@ -200410,7 +200410,7 @@
     },
     {
      "h": "Die Richtung",
-     "text": "Beim Schreiben gibt es feste Richtungen.",
+     "text": "Feste Richtungen beim Schreiben.",
      "visuals": [
       {
        "type": "cards",
@@ -200439,7 +200439,7 @@
     },
     {
      "h": "Merke",
-     "text": "Langsam und genau ist besser als schnell.",
+     "text": "Langsam und genau schreiben.",
      "visuals": [
       {
        "type": "cards",
