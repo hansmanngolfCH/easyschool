@@ -156111,7 +156111,7 @@
      {
       "id": "q1",
       "q": "Löse: x + 4 = 12. x = ?",
-      "explain": "8",
+      "explain": "x + 4 = 12. Gegenrechnung: x = 12 − 4 = 8.",
       "type": "mc",
       "options": [
        "9",
@@ -156133,7 +156133,7 @@
      {
       "id": "q3",
       "q": "Löse: x : 3 = 10. x = ?",
-      "explain": "30",
+      "explain": "x : 3 = 10. Gegenrechnung: x = 10 · 3 = 30.",
       "type": "mc",
       "options": [
        "10",
@@ -156190,7 +156190,7 @@
      {
       "id": "q8",
       "q": "Löse: x + 7 = 7. x = ?",
-      "explain": "0",
+      "explain": "x + 7 = 7. Gegenrechnung: x = 7 − 7 = 0.",
       "type": "input",
       "answer": [
        "0"
@@ -156220,7 +156220,7 @@
      {
       "id": "q11",
       "q": "Löse: x + 7 = 12. x = ?",
-      "explain": "5",
+      "explain": "x + 7 = 12. Gegenrechnung: x = 12 − 7 = 5.",
       "type": "mc",
       "options": [
        "2",
@@ -156242,7 +156242,7 @@
      {
       "id": "q13",
       "q": "Löse: x : 4 = 5. x = ?",
-      "explain": "20",
+      "explain": "x : 4 = 5. Gegenrechnung: x = 5 · 4 = 20.",
       "type": "mc",
       "options": [
        "9",

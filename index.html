@@ -1744,6 +1744,7 @@ ins.dfy{text-decoration:none;color:#0d652d;background:rgba(52,168,83,.22);border
 /* v5.13 Easy lernen: der Knopf glänzt, kein Symbol */
 .tb4.m-x{box-shadow:0 4px 0 rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.35)}
 .tb4.m-x::after{width:45%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.38),transparent);animation:xshine 4.5s ease-in-out infinite}
+.xg-msg{line-height:1.3;padding:0 4px}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1751,7 +1752,7 @@ ins.dfy{text-decoration:none;color:#0d652d;background:rgba(52,168,83,.22);border
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION="v5.13";
+var APP_VERSION="v5.14";
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -4560,11 +4561,12 @@ function xgDis(right,pool,k){
     shuffle(good).concat(shuffle(cand.filter(function(x){return good.indexOf(x)<0}))).forEach(add)}
   return out.slice(0,k)
 }
+function xgWhy(c){var s=(c.steps||[]).map(function(x){return x[0]}).join(' · ');return s.length>2&&s.length<140?s:(c.why&&String(c.why).length<140?String(c.why):'')}
 function xgSeenGet(k){try{return JSON.parse(localStorage.getItem(k)||'{}')||{}}catch(e){return {}}}
 function xgSeenSet(k,o){try{var ks=Object.keys(o);if(ks.length>400){var n2={};ks.slice(-300).forEach(function(x){n2[x]=1});o=n2}localStorage.setItem(k,JSON.stringify(o))}catch(e){}}
-function xgOptRound(q,right,others,key,vis){
+function xgOptRound(q,right,others,key,vis,why){
   var all=[right].concat(others),long=all.some(function(x){return String(x).length>26});
-  var mx=Math.max.apply(null,all.map(function(x){return String(x).length})),vk=vis?JSON.stringify(vis):'';return {cols1:mx>26,key:key||q+'|'+right+vk,ans:right+vk,kind:'opt',svg:(vis?'<div class="xg-vis">'+visuals(vis)+'</div>':'')+'<div class="xg-q">'+esc(q).replace(/\n/g,'<br>')+'</div>',opts:shuffle(all.map(function(x){return {h:'<b'+(mx>45?' class="xl xl2"':long?' class="xl"':'')+'>'+esc(x)+'</b>',ok:x===right}}))}
+  var mx=Math.max.apply(null,all.map(function(x){return String(x).length})),vk=vis?JSON.stringify(vis):'';return {why:why||'',cols1:mx>26,key:key||q+'|'+right+vk,ans:right+vk,kind:'opt',svg:(vis?'<div class="xg-vis">'+visuals(vis)+'</div>':'')+'<div class="xg-q">'+esc(q).replace(/\n/g,'<br>')+'</div>',opts:shuffle(all.map(function(x){return {h:'<b'+(mx>45?' class="xl xl2"':long?' class="xl"':'')+'>'+esc(x)+'</b>',ok:x===right}}))}
 }
 function xgCommaVar(sent){
   var out=[],nc=sent.replace(/,/g,'');if(nc!==sent)out.push(nc);
@@ -4580,22 +4582,22 @@ function xgCardPool(t,all){
     var right=String(c.a);
     if(Array.isArray(c.opts)&&c.opts.length>=3&&c.opts.map(String).indexOf(right)>=0){
       var oth=c.opts.map(String).filter(function(x,i,aa){return x!==right&&aa.indexOf(x)===i&&x.length<=60});
-      if(right.length<=60&&oth.length>=2)items.push(xgOptRound(c.q,right,shuffle(oth).slice(0,3),null,c.visuals));
+      if(right.length<=60&&oth.length>=2)items.push(xgOptRound(c.q,right,shuffle(oth).slice(0,3),null,c.visuals,xgWhy(c)));
     }else if(c.pre&&Array.isArray(c.ans)&&c.ans[0]&&String(c.ans[0]).length<=60&&String(c.pre).length<=60){
       var r2=String(c.ans[0]),ot=[String(c.pre)].concat(xgCommaVar(r2)).filter(function(x,i,aa){return x!==r2&&aa.indexOf(x)===i});
       if(ot.length>=2&&/,/.test(r2+c.pre))items.push(xgOptRound('Welcher Satz ist richtig?',r2,ot.slice(0,3)));
     }else if(right.length<=30&&!/\n/.test(right)){
-      var d=xgDis(right,shortA,3);if(d.length>=2)items.push(xgOptRound(c.q,right,d,null,c.visuals));
+      var d=xgDis(right,shortA,3);if(d.length>=2)items.push(xgOptRound(c.q,right,d,null,c.visuals,xgWhy(c)));
     }
   });
   var lib=[];
   t.exam.questions.forEach(function(q){
     if(q.type==='mc'&&Array.isArray(q.options)&&q.options.length>=3&&typeof q.answer==='number'&&q.q.length<=140&&!BAD.test(q.q)&&q.options.every(function(o){return String(o).length<=60})){
-      var rt=String(q.options[q.answer]);items.push(xgOptRound(q.q,rt,q.options.map(String).filter(function(x,i){return i!==q.answer}).slice(0,3),null,q.visuals))
+      var rt=String(q.options[q.answer]);items.push(xgOptRound(q.q,rt,q.options.map(String).filter(function(x,i){return i!==q.answer}).slice(0,3),null,q.visuals,String(q.explain||'')))
     }else if(q.type==='input'&&q.answer&&q.answer[0]&&String(q.answer[0]).length<=24&&!BAD.test(q.q))lib.push(q)
   });
   var libA=lib.map(function(q){return String(q.answer[0])}).concat(shortA);
-  lib.forEach(function(q){var rt=String(q.answer[0]),d=xgDis(rt,libA,3);if(d.length>=2)items.push(xgOptRound(q.q,rt,d,null,q.visuals))});
+  lib.forEach(function(q){var rt=String(q.answer[0]),d=xgDis(rt,libA,3);if(d.length>=2)items.push(xgOptRound(q.q,rt,d,null,q.visuals,String(q.explain||'')))});
   return items
 }
 function xgVocabPool(t,all){
@@ -4691,7 +4693,7 @@ function xgDone(good,msg){
   logAnswer(n.child,good);
   var hh=document.getElementById('xgh');if(hh)hh.innerHTML=xgHearts(n);
   if(m){m.className='xg-msg '+(good?'ok':'bad');m.textContent=msg}
-  setTimeout(function(){if(nav===n)xgNext()},good?1000:1900);
+  setTimeout(function(){if(nav===n)xgNext()},(good?1000:1900)+(msg.length>16?msg.length*45:0));
 }
 function xgFail(timeout){
   var n=nav,r=n.rounds[n.i];if(n.phase!=='play')return;
@@ -4704,7 +4706,7 @@ ACT.xgo=function(b){
   var k=+b.dataset.i,good=r.opts[k].ok;
   document.querySelectorAll('.xo').forEach(function(x,j){x.disabled=true;if(r.opts[j].ok)x.classList.add('right')});
   if(!good)b.classList.add('wrong');
-  xgDone(good,good?'Richtig!':'Leider falsch');
+  xgDone(good,(good?'Richtig!':'Leider falsch.')+(r.why&&r.why.length>2&&r.why!==r.ans?' '+r.why:''));
 };
 ACT.xgt=function(b){
   var n=nav,r=n.rounds[n.i];if(n.phase!=='play'||b.disabled)return;
