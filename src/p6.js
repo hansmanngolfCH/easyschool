@@ -100,7 +100,7 @@ function vXg(){
   var n=nav,t=topicById(n.topicId),NAME={salat:'Buchstaben-Salat',math:'Mathe-Knobler',quiz:'Blitz-Quiz'}[n.kind];
   if(n.phase==='end'){
     var tot=n.rounds.length;
-    return '<div class="stack"><div class="xg xg-end xg-'+n.kind+' s-'+t.subject+'"><div class="xg-trophy">'+(n.ok===tot&&!n.miss?'🏆':n.ok>=7?'🥇':n.ok>=4?'🥈':'🎯')+'</div><h1>+'+n.xp+' XP</h1><p>'+n.ok+' von '+tot+' Aufgaben geschafft'+(n.ok===tot&&!n.miss?' · Perfekt, ohne Fehler!':'')+'</p></div><div class="row"><button class="btn pri big" data-act="xgquit">Fertig</button></div></div>';
+    return '<div class="stack"><div class="xg xg-end xg-'+n.kind+' s-'+t.subject+'"><div class="xg-trophy">'+(n.ok===tot&&!n.miss?'🏆':n.ok>=7?'🥇':n.ok>=4?'🥈':'🎯')+'</div><h1>'+n.ok+' / '+tot+'</h1><p>'+n.ok+' von '+tot+' Aufgaben geschafft'+(n.ok===tot&&!n.miss?' · Perfekt, ohne Fehler!':'')+'</p></div><div class="row"><button class="btn pri big" data-act="xgquit">Fertig</button></div></div>';
   }
   var r=n.rounds[n.i],secs=xgSecs(r),h='<div class="stack"><div><p class="eyebrow">Easy lernen · '+esc(t.title)+'</p><h1>'+NAME+'</h1></div><div class="xg xg-'+n.kind+' s-'+t.subject+'" id="xg">'
    +'<div class="xg-top"><span class="xg-h" id="xgh">'+xgHearts(n)+'</span><span class="xg-dots">'+n.rounds.map(function(x,k){return '<i class="'+(k<n.i?'d':k===n.i?'c':'')+'"></i>'}).join('')+'</span><button class="xg-x" data-act="xgquit" aria-label="Beenden">×</button></div>'
@@ -116,18 +116,16 @@ function vXg(){
   
   return h;
 }
-function xgSched(secs){clearTimeout(XGT);var n=nav,tok=++n.tok;XGT=setTimeout(function(){if(nav===n&&n.tok===tok&&n.phase==='play')xgFail(true)},secs*1000)}
+function xgSched(secs){clearTimeout(XGT);var n=nav,tok=++n.tok;XGT=setTimeout(function wait(){if(nav!==n||n.tok!==tok||n.phase!=='play')return;if(document.getElementById('rwd')){XGT=setTimeout(wait,3000);return}xgFail(true)},secs*1000)}
 function xgNext(){var n=nav;if(n.view!=='xg')return;if(n.lives<=0||n.i+1>=n.rounds.length){xgEnd();return}n.i++;n.phase='play';render()}
 function xgEnd(){
   var n=nav;n.phase='end';clearTimeout(XGT);
-  if(n.ok===n.rounds.length&&!n.miss){var b=addXp(n.child,20);n.xp+=b}
-  if(n.ok>=2)ach(n.child,'pairs');
+    if(n.ok>=2)ach(n.child,'pairs');
   checkPassive(n.child);save(n.child);render();
-  if(n.ok>=2)setTimeout(function(){if(nav===n)showReward('Easy lernen geschafft!')},1500);
 }
 function xgDone(good,msg){
   var n=nav,m=document.getElementById('xgm');n.phase='fb';clearTimeout(XGT);n.tok++;
-  if(good){n.ok++;n.xp+=addXp(n.child,5)}else{n.lives--;n.miss++}
+  if(good){n.ok++}else{n.lives--;n.miss++}
   logAnswer(n.child,good);
   var hh=document.getElementById('xgh');if(hh)hh.innerHTML=xgHearts(n);
   if(m){m.className='xg-msg '+(good?'ok':'bad');m.textContent=msg}
@@ -144,7 +142,7 @@ ACT.xgo=function(b){
   var k=+b.dataset.i,good=r.opts[k].ok;
   document.querySelectorAll('.xo').forEach(function(x,j){x.disabled=true;if(r.opts[j].ok)x.classList.add('right')});
   if(!good)b.classList.add('wrong');
-  xgDone(good,good?'Richtig! +5 XP':'Leider falsch');
+  xgDone(good,good?'Richtig!':'Leider falsch');
 };
 ACT.xgt=function(b){
   var n=nav,r=n.rounds[n.i];if(n.phase!=='play'||b.disabled)return;
@@ -152,7 +150,7 @@ ACT.xgt=function(b){
   if(ch===r.letters[r.pos]){
     var s=document.getElementById('xs'+r.pos);if(s){s.textContent=ch;s.classList.add('ok')}
     b.disabled=true;b.classList.add('used');r.pos++;
-    if(r.pos>=r.letters.length)xgDone(true,r.wr?'Geschafft! +5 XP':'Perfekt! +5 XP');
+    if(r.pos>=r.letters.length)xgDone(true,r.wr?'Geschafft!':'Perfekt!');
   }else{
     r.wr++;n.miss+=0;b.classList.remove('shk');void b.offsetWidth;b.classList.add('shk');
     var hh=document.getElementById('xgm');if(hh){hh.className='xg-msg bad';hh.textContent='Falscher Buchstabe ('+r.wr+'/4)'}

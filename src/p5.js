@@ -316,7 +316,7 @@ fetch('content.json',{cache:'no-cache'}).then(function(r){if(!r.ok)throw new Err
 var STREAK=0,QN=0,TT=0,LT=0,RW=null;
 function rwReset(){STREAK=0;QN=0;TT=0;LT=0}
 function rewardAfter(ok){
-  if(!nav||nav.view!=='practice')return;
+  if(!nav||(nav.view!=='practice'&&nav.view!=='xg'))return;
   QN++;if(ok)STREAK++;else STREAK=0;
   if(STREAK>=3){rwReset();showReward('3 richtige Antworten in Folge!')}
   else if(QN>=5){rwReset();showReward('5 Fragen geschafft!')}
