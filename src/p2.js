@@ -97,10 +97,10 @@ function vFbar(v){
 }
 
 /* ---------- Deutsch-Theorie: Tabellen und Grafiken (v4.42) ---------- */
-var DC=['#4285F4','#EA4335','#34A853','#F29900','#9334E6','#00A5BF','#D93F8E','#6B7280'];
-var DE=false,DM=[1,0,3,2,4,5,6,7];
+var DC=['#4285F4','#EA4335','#34A853','#F29900','#9334E6','#00A5BF','#D93F8E','#6B7280','#8D5A2B'];
+var DE=false,DM=[8,0,3,2,4,5,6,7];
 function isDeu(){try{var q=nav.queue&&nav.queue[nav.idx]||'';return nav.subject==='deu'||/-deu-/.test((nav.topicId||'')+' '+(nav.scope||'')+' '+q)}catch(e){return false}}
-function dcol(i){i=(i|0)%DC.length;return DC[DE?DM[i]:i]}
+function dcol(i){i=(i|0)%8;return DC[DE?DM[i]:i]}
 function bd(s){return rt(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>')}
 function vTbl(v){
   var h=v.head?'<thead><tr>'+v.head.map(function(x,k){var c=(k>0&&v.hc)?' style="--c:'+dcol(v.hc[k-1])+'" class="hc"':'';return '<th'+c+'>'+bd(x)+'</th>'}).join('')+'</tr></thead>':'';
