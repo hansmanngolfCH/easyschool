@@ -508,13 +508,48 @@ function vPar(v){
   return '<figure class="vis"><svg viewBox="0 0 200 120" width="100%" style="max-width:220px;display:block;margin:0 auto" role="img" aria-label="Geraden">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vBlocks(v){
-  var h=v.h||0,z=v.z||0,e=v.e||0,o='',x=6,i,j,k;
-  for(k=0;k<h;k++){o+='<rect x="'+x+'" y="8" width="64" height="64" rx="6" fill="#E9DCFA" stroke="#7B3FC4" stroke-width="2.5"/>';for(i=1;i<10;i++)o+='<line x1="'+(x+i*6.4)+'" y1="10" x2="'+(x+i*6.4)+'" y2="70" stroke="#7B3FC4" stroke-opacity=".35" stroke-width="1"/><line x1="'+(x+2)+'" y1="'+(8+i*6.4)+'" x2="'+(x+62)+'" y2="'+(8+i*6.4)+'" stroke="#7B3FC4" stroke-opacity=".35" stroke-width="1"/>';x+=72}
-  for(k=0;k<z;k++){o+='<rect x="'+x+'" y="8" width="12" height="64" rx="4" fill="#CFE0FC" stroke="#1A56C4" stroke-width="2.5"/>';for(j=1;j<10;j++)o+='<line x1="'+(x+1)+'" y1="'+(8+j*6.4)+'" x2="'+(x+11)+'" y2="'+(8+j*6.4)+'" stroke="#1A56C4" stroke-opacity=".45" stroke-width="1"/>';x+=18}
-  x+=(z?8:0);
-  for(k=0;k<e;k++){o+='<rect x="'+x+'" y="60" width="12" height="12" rx="3" fill="#FDE9A6" stroke="#B06000" stroke-width="2.2"/>';x+=17}
-  var W=Math.max(60,x+4);
-  return '<figure class="vis" style="align-items:center;width:100%"><svg viewBox="0 0 '+W+' 80" width="100%" style="max-width:'+Math.min(380,W*1.9)+'px;display:block;margin:0 auto" role="img" aria-label="Stellenwert-Material">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  var h=v.h||0,z=v.z||0,e=v.e||0,id='pb'+(++_guid),o='',cols=[],x=0,H=190;
+  var fs=h<=3?64:h<=6?46:34;
+  if(h>0)cols.push({k:'H',n:h,lab:'Hunderter',c:'#7B3FC4',bg:'#F5EEFD',w:Math.max(86,h*(fs+10)+14)});
+  if(h>0||z>0)cols.push({k:'Z',n:z,lab:'Zehner',c:'#1A56C4',bg:'#EAF1FE',w:Math.max(86,z*21+16)});
+  cols.push({k:'E',n:e,lab:'Einer',c:'#B06000',bg:'#FFF6DD',w:Math.max(86,Math.min(e,5)*21+16)});
+  o+='<defs>'+
+   '<linearGradient id="'+id+'h" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F1E6FC"/><stop offset="1" stop-color="#C9A8F0"/></linearGradient>'+
+   '<linearGradient id="'+id+'z" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#DCE9FE"/><stop offset=".5" stop-color="#9FC0F8"/><stop offset="1" stop-color="#6FA0EE"/></linearGradient>'+
+   '<linearGradient id="'+id+'e" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFF1BF"/><stop offset="1" stop-color="#F7C948"/></linearGradient></defs>';
+  function cube(px,py,w,g,st,dk,dp){ // Würfel/Quader mit Front, Oberseite, Seite
+    var t=dp||4;
+    return '<polygon points="'+px+','+py+' '+(px+t)+','+(py-t)+' '+(px+w+t)+','+(py-t)+' '+(px+w)+','+py+'" fill="#fff" fill-opacity=".55" stroke="'+st+'" stroke-width="1.4" stroke-linejoin="round"/>'+
+      '<polygon points="'+(px+w)+','+py+' '+(px+w+t)+','+(py-t)+' '+(px+w+t)+','+(py-t+w)+' '+(px+w)+','+(py+w)+'" fill="'+dk+'" stroke="'+st+'" stroke-width="1.4" stroke-linejoin="round"/>'+
+      '<rect x="'+px+'" y="'+py+'" width="'+w+'" height="'+w+'" rx="2.5" fill="url(#'+g+')" stroke="'+st+'" stroke-width="1.8"/>'}
+  cols.forEach(function(c,ci){
+    var cx=x,top=8,bodyT=44,bodyB=H-34,mid=cx+c.w/2,i,j;
+    o+='<rect x="'+cx+'" y="'+top+'" width="'+c.w+'" height="'+(H-top-6)+'" rx="16" fill="'+c.bg+'" stroke="'+c.c+'" stroke-opacity=".35" stroke-width="1.5"/>';
+    o+='<rect x="'+(mid-47)+'" y="'+(top+8)+'" width="94" height="24" rx="12" fill="'+c.c+'"/>'+_t(mid,top+25,12.5,c.k+' · '+c.lab.replace('Hunderter','Hunderter'),'#fff','middle',800).replace('font-size="12.5"','font-size="11"');
+    if(c.k==='H'){
+      var n=c.n,gx=cx+(c.w-(n*(fs+10)-10))/2;
+      for(i=0;i<n;i++){var px=gx+i*(fs+10),py=bodyB-fs;
+        o+=cube(px,py,fs,id+'h','#6B2FB8','#B58DE3',5);
+        for(j=1;j<10;j++)o+='<line x1="'+(px+j*fs/10)+'" y1="'+(py+1)+'" x2="'+(px+j*fs/10)+'" y2="'+(py+fs-1)+'" stroke="#6B2FB8" stroke-opacity=".28" stroke-width=".8"/><line x1="'+(px+1)+'" y1="'+(py+j*fs/10)+'" x2="'+(px+fs-1)+'" y2="'+(py+j*fs/10)+'" stroke="#6B2FB8" stroke-opacity=".28" stroke-width=".8"/>'}
+    }else if(c.k==='Z'){
+      var n2=c.n,gx2=cx+(c.w-(n2*21-7))/2;
+      for(i=0;i<n2;i++){var px2=gx2+i*21,py2=bodyB-100;
+        o+='<polygon points="'+px2+','+py2+' 4,0" fill="none"/>'+
+          '<polygon points="'+px2+','+py2+' '+(px2+4)+','+(py2-4)+' '+(px2+18)+','+(py2-4)+' '+(px2+14)+','+py2+'" fill="#fff" fill-opacity=".6" stroke="#1A3FA0" stroke-width="1.4" stroke-linejoin="round"/>'+
+          '<polygon points="'+(px2+14)+','+py2+' '+(px2+18)+','+(py2-4)+' '+(px2+18)+','+(py2+96)+' '+(px2+14)+','+(py2+100)+'" fill="#4F83DD" stroke="#1A3FA0" stroke-width="1.4" stroke-linejoin="round"/>'+
+          '<rect x="'+px2+'" y="'+py2+'" width="14" height="100" rx="2.5" fill="url(#'+id+'z)" stroke="#1A3FA0" stroke-width="1.8"/>';
+        for(j=1;j<10;j++)o+='<line x1="'+px2+'" y1="'+(py2+j*10)+'" x2="'+(px2+14)+'" y2="'+(py2+j*10)+'" stroke="#1A3FA0" stroke-opacity=".5" stroke-width="1"/><line x1="'+(px2+14)+'" y1="'+(py2+j*10)+'" x2="'+(px2+18)+'" y2="'+(py2+j*10-4)+'" stroke="#1A3FA0" stroke-opacity=".5" stroke-width="1"/>'}
+    }else{
+      var n3=c.n,per=Math.min(n3,5),gx3=cx+(c.w-(per*21-7))/2;
+      for(i=0;i<n3;i++){var r=Math.floor(i/5),cc=i%5;o+=cube(gx3+cc*21,bodyB-14-r*21,14,id+'e','#9A5200','#E0A526',4)}
+    }
+    var val=c.n*(c.k==='H'?100:c.k==='Z'?10:1);
+    o+='<line x1="'+(cx+14)+'" y1="'+(H-30)+'" x2="'+(cx+c.w-14)+'" y2="'+(H-30)+'" stroke="'+c.c+'" stroke-opacity=".3" stroke-width="1.2"/>';
+    o+=_t(mid,H-12,15,c.n+' '+(c.k==='H'?'H':c.k==='Z'?'Z':'E'),c.c,'middle',800);
+    x+=c.w+10;
+  });
+  var W=x-10;
+  return '<figure class="vis" style="align-items:center;width:100%"><svg viewBox="-4 0 '+(W+8)+' '+H+'" width="100%" style="max-width:'+Math.min(400,(W+8)*1.5)+'px;display:block;margin:0 auto" role="img" aria-label="Stellenwert-Material: '+h+' Hunderter, '+z+' Zehner, '+e+' Einer">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vJumps(v){
   var pts=[v.from],i;(v.jumps||[]).forEach(function(j){pts.push(pts[pts.length-1]+j[0])});
