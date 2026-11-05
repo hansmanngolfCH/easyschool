@@ -1651,6 +1651,26 @@ ins.dfy{text-decoration:none;color:#0d652d;background:rgba(52,168,83,.22);border
 [data-de="1"] .cw.c1{color:#1A73E8;background:#e8f0fe}
 [data-de="1"] .cw.c2{color:#B37A00;background:#fff3c4}
 [data-de="1"] .cw.c3{color:#188038;background:#e6f4ea}
+/* v4.78b Deutsch-Tabellen als Karten (iPhone) */
+.dtb table{hyphens:manual;-webkit-hyphens:manual}
+[data-de="1"] .dtb{border:0;overflow:visible}
+[data-de="1"] .dtb table,[data-de="1"] .dtb tbody,[data-de="1"] .dtb tr,[data-de="1"] .dtb th,[data-de="1"] .dtb td{display:block;width:auto}
+[data-de="1"] .dtb thead{display:none}
+[data-de="1"] .dtb tbody tr{border:1px solid var(--line);border-radius:14px;padding:10px 12px;margin:0 0 10px;background:var(--surface);overflow:hidden}
+[data-de="1"] .dtb tbody tr+tr th,[data-de="1"] .dtb tbody tr+tr td{border-top:0}
+[data-de="1"] .dtb tbody tr:nth-child(even) td{background:transparent}
+[data-de="1"] .dtb tbody th{padding:0 0 6px;max-width:none;white-space:normal;font-size:1rem}
+[data-de="1"] .dtb tbody th span{display:inline-block;font-size:1rem;padding:4px 10px}
+[data-de="1"] .dtb tbody td{padding:3px 0;font-size:.95rem;line-height:1.4;color:var(--ink);word-break:normal;overflow-wrap:break-word}
+[data-de="1"] .dtb tbody td:last-child{color:var(--ink)}
+[data-de="1"] .dtb tbody td[data-l]:not([data-l=""])::before{content:attr(data-l)": ";font-weight:800;color:var(--ink2);font-size:.78rem;text-transform:uppercase;letter-spacing:.03em}
+[data-de="1"] .dtb tbody td:empty{display:none}
+[data-de="1"] .vis:has(.dtb),[data-de="1"] figure:has(.dtb){border:0;background:transparent;box-shadow:none;padding:0}
+[data-de="1"] .dtb tbody tr{overflow:visible;min-width:0}
+[data-de="1"] .dtb tbody td,[data-de="1"] .dtb tbody th{min-width:0;max-width:100%}
+.visrow:has(.dtb){border:0!important;background:transparent!important;box-shadow:none!important;padding:0!important}
+[data-de="1"] .dtb{border:0!important;width:100%}
+[data-de="1"] .dtb table{width:100%}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1658,7 +1678,7 @@ ins.dfy{text-decoration:none;color:#0d652d;background:rgba(52,168,83,.22);border
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION="v4.78";
+var APP_VERSION="v4.79";
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -2078,7 +2098,7 @@ function dcol(i){i=(i|0)%DC.length;return DC[DE?DM[i]:i]}
 function bd(s){return rt(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>')}
 function vTbl(v){
   var h=v.head?'<thead><tr>'+v.head.map(function(x,k){var c=(k>0&&v.hc)?' style="--c:'+dcol(v.hc[k-1])+'" class="hc"':'';return '<th'+c+'>'+bd(x)+'</th>'}).join('')+'</tr></thead>':'';
-  var b='<tbody>'+v.rows.map(function(r,i){var c=dcol(v.c?v.c[i]:i);return '<tr style="--c:'+c+'">'+r.map(function(x,k){return k===0?'<th scope="row"><span>'+bd(x)+'</span></th>':'<td>'+bd(x)+'</td>'}).join('')+'</tr>'}).join('')+'</tbody>';
+  var b='<tbody>'+v.rows.map(function(r,i){var mk=/^\{(\d)\|/.exec(String(r[0])),c=dcol(v.c?v.c[i]:(mk?+mk[1]:(DE?7:i)));return '<tr style="--c:'+c+'">'+r.map(function(x,k){return k===0?'<th scope="row"><span>'+bd(x)+'</span></th>':'<td data-l="'+esc(v.head&&v.head[k]||'')+'">'+bd(x)+'</td>'}).join('')+'</tr>'}).join('')+'</tbody>';
   return '<div class="dtb"><table class="'+(v.hc?'nh':'')+'">'+h+b+'</table></div>'+(v.cap?'<p class="dcap">'+bd(v.cap)+'</p>':'');
 }
 function vChips(v){

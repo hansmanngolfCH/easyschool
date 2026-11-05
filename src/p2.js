@@ -104,7 +104,7 @@ function dcol(i){i=(i|0)%DC.length;return DC[DE?DM[i]:i]}
 function bd(s){return rt(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>')}
 function vTbl(v){
   var h=v.head?'<thead><tr>'+v.head.map(function(x,k){var c=(k>0&&v.hc)?' style="--c:'+dcol(v.hc[k-1])+'" class="hc"':'';return '<th'+c+'>'+bd(x)+'</th>'}).join('')+'</tr></thead>':'';
-  var b='<tbody>'+v.rows.map(function(r,i){var c=dcol(v.c?v.c[i]:i);return '<tr style="--c:'+c+'">'+r.map(function(x,k){return k===0?'<th scope="row"><span>'+bd(x)+'</span></th>':'<td>'+bd(x)+'</td>'}).join('')+'</tr>'}).join('')+'</tbody>';
+  var b='<tbody>'+v.rows.map(function(r,i){var mk=/^\{(\d)\|/.exec(String(r[0])),c=dcol(v.c?v.c[i]:(mk?+mk[1]:(DE?7:i)));return '<tr style="--c:'+c+'">'+r.map(function(x,k){return k===0?'<th scope="row"><span>'+bd(x)+'</span></th>':'<td data-l="'+esc(v.head&&v.head[k]||'')+'">'+bd(x)+'</td>'}).join('')+'</tr>'}).join('')+'</tbody>';
   return '<div class="dtb"><table class="'+(v.hc?'nh':'')+'">'+h+b+'</table></div>'+(v.cap?'<p class="dcap">'+bd(v.cap)+'</p>':'');
 }
 function vChips(v){

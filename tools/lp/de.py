@@ -108,7 +108,7 @@ def THEORY(t,intro,intro_vis,rule_text,rule_head,rule_rows,sent_text,sents,steps
         S("Beispielsätze",sent_text,*[SENT(x[0],x[1]) for x in sents]),
         S("So gehst du vor",steps_text,LINES([[a,''] for a in steps],True)),
         S("Merke",merke_text,KD(merke))]
-    if fehler:t.explain.insert(4,S("Typische Fehler","Diese Fehler passieren oft. So machst du es richtig.",TBL(["Falsch","Richtig","Warum"],fehler)))
+    if fehler:t.explain.insert(4,S("Typische Fehler","Diese Fehler passieren oft. So machst du es richtig.",TBL(["Falsch","Richtig","Warum"],fehler,[7]*len(fehler))))
 def more(t,h,text,*vis):t.explain.insert(len(t.explain)-1,S(h,text,*vis))
 def pick(rnd,seq,n):
     s=list(seq);rnd.shuffle(s);return s[:n]
