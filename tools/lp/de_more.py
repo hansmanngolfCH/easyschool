@@ -686,7 +686,7 @@ FIXSET={'wortarten':['cap','adj','agree','pron'],'pronomen':['pron','agree','cas
 'passiv':['pas'],'konjunktiv':['konj'],'hauptneben':['nsord','cns','crel'],'nebensatzarten':['nsconj','cns'],'kommaerw':['cns','crel','nsord']}
 def boost(t,r):
     f=fam(t)
-    if cls_of(t)<4 or f not in FIXSET:return 0
+    if (cls_of(t)<4 and f!='alphabet') or f not in FIXSET:return 0
     gens=[GEN[g] for g in FIXSET[f]];added=0
     def nfix():return sum(1 for c in t.cards if 'pre' in c)
     def need():return max(0,len(t.cards)-2*nfix())
@@ -1052,3 +1052,23 @@ def replace_fehler(c):
             if e['h'] in('Typische Fehler','Ein Beispiel Schritt für Schritt'):
                 t['explain'][i]={"h":"Ein Beispiel gezeichnet","text":txt,"visuals":[{"type":"anno","groups":groups,"cap":cap}]};n+=1
     print('Fehler ersetzt',n)
+
+LETA='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+def f_alphabet(t,r):
+    pass  # Karten kommen aus de4.alphabet + boost
+def g_abc_miss(r,k):
+    L=r.choice([5,6,7,8]) if k>=4 else r.choice([4,5,6]);a=r.randrange(0,27-L);run=list(LETA[a:a+L]);drop=r.sample(range(1,L-1),1 if L<7 else 2)
+    pre=', '.join(x for i,x in enumerate(run) if i not in drop)
+    return (2,'Es fehlen Buchstaben. Verbessere im Feld.',pre,', '.join(run),'Sage das ABC leise auf.')
+def g_abc_swap(r,k):
+    L=r.choice([5,6,7]);a=r.randrange(0,27-L);run=list(LETA[a:a+L]);i=r.randrange(0,L-1);p=run[:];p[i],p[i+1]=p[i+1],p[i]
+    return (2,'Zwei Buchstaben sind vertauscht. Verbessere im Feld.',', '.join(p),', '.join(run),'Sage das ABC leise auf.')
+def g_abc_back(r,k):
+    L=r.choice([4,5,6]);a=r.randrange(0,27-L);run=list(LETA[a:a+L])
+    return (3,'Schreibe die Buchstaben rückwärts. Verbessere im Feld.',', '.join(run),', '.join(run[::-1]),'Beginne beim letzten Buchstaben.')
+def g_abc_next(r,k):
+    i=r.randrange(1,24);run=[LETA[i-1],LETA[i],LETA[i+1]]
+    bad=[LETA[i-1],LETA[i],LETA[i+2]]
+    return (2,'Das ABC ist falsch. Verbessere im Feld.',', '.join(bad),', '.join(run),'Sage das ABC leise auf.')
+GEN['abc_miss']=g_abc_miss;GEN['abc_swap']=g_abc_swap;GEN['abc_back']=g_abc_back;GEN['abc_next']=g_abc_next
+FIXSET['alphabet']=['abc_miss','abc_swap','abc_back','abc_next','alpha']

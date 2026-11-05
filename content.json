@@ -194020,38 +194020,46 @@
    "explain": [
     {
      "h": "Worum geht es?",
-     "text": "Du suchst im Wörterbuch das Wort «Katze». Du weisst, dass K nach J und vor L kommt. Dann findest du es schnell.",
+     "text": "Du sagst das ABC auf: A, B, C, D … Jeder Buchstabe hat seinen festen Platz. K ist der 11. Buchstabe. Davor steht J, danach steht L.",
      "visuals": [
       {
        "type": "scene",
        "kind": "letters",
        "word": "ABC",
-       "say": "Das ABC hilft beim Suchen"
+       "say": "Das ABC hat eine feste Reihe"
       }
      ]
     },
     {
      "h": "Das musst du wissen",
-     "text": "Im Wörterbuch stehen die Wörter nach dem ABC.",
+     "text": "Das ABC ist eine Reihe mit 26 Buchstaben.",
      "visuals": [
       {
        "type": "tbl",
        "rows": [
         [
-         "{0|1. Buchstabe}",
-         "Ball kommt vor Dach: B vor D"
+         "{0|Reihe}",
+         "A B C D E … X Y Z"
         ],
         [
-         "{1|2. Buchstabe}",
-         "Hand kommt vor Hund: a vor u"
+         "{1|Platz}",
+         "A ist der 1., M der 13., Z der 26."
         ],
         [
-         "{2|3. Buchstabe}",
-         "Hase kommt vor Haus: s vor u"
+         "{2|Davor}",
+         "Vor K steht J."
+        ],
+        [
+         "{3|Danach}",
+         "Nach K steht L."
+        ],
+        [
+         "{4|Vokale}",
+         "A, E, I, O, U"
         ]
        ],
        "head": [
-        "Schritt",
+        "Was",
         "Beispiel"
        ]
       }
@@ -194059,7 +194067,238 @@
     },
     {
      "h": "Beispielsätze",
-     "text": "Hier siehst du, welcher Buchstabe entscheidet.",
+     "text": "Hier siehst du die Reihe mit Platznummern. Die Vokale sind blau.",
+     "visuals": [
+      {
+       "type": "chips",
+       "parts": [
+        [
+         "A",
+         "1",
+         1
+        ],
+        [
+         "B",
+         "2",
+         7
+        ],
+        [
+         "C",
+         "3",
+         7
+        ],
+        [
+         "D",
+         "4",
+         7
+        ],
+        [
+         "E",
+         "5",
+         1
+        ],
+        [
+         "F",
+         "6",
+         7
+        ],
+        [
+         "G",
+         "7",
+         7
+        ],
+        [
+         "H",
+         "8",
+         7
+        ],
+        [
+         "I",
+         "9",
+         1
+        ],
+        [
+         "J",
+         "10",
+         7
+        ],
+        [
+         "K",
+         "11",
+         7
+        ],
+        [
+         "L",
+         "12",
+         7
+        ],
+        [
+         "M",
+         "13",
+         7
+        ]
+       ],
+       "cap": "A bis M: Platz 1 bis 13."
+      },
+      {
+       "type": "chips",
+       "parts": [
+        [
+         "N",
+         "14",
+         7
+        ],
+        [
+         "O",
+         "15",
+         1
+        ],
+        [
+         "P",
+         "16",
+         7
+        ],
+        [
+         "Q",
+         "17",
+         7
+        ],
+        [
+         "R",
+         "18",
+         7
+        ],
+        [
+         "S",
+         "19",
+         7
+        ],
+        [
+         "T",
+         "20",
+         7
+        ],
+        [
+         "U",
+         "21",
+         1
+        ],
+        [
+         "V",
+         "22",
+         7
+        ],
+        [
+         "W",
+         "23",
+         7
+        ],
+        [
+         "X",
+         "24",
+         7
+        ],
+        [
+         "Y",
+         "25",
+         7
+        ],
+        [
+         "Z",
+         "26",
+         7
+        ]
+       ],
+       "cap": "N bis Z: Platz 14 bis 26."
+      },
+      {
+       "type": "chips",
+       "parts": [
+        [
+         "J",
+         "davor",
+         7
+        ],
+        [
+         "K",
+         "dieser",
+         0
+        ],
+        [
+         "L",
+         "danach",
+         7
+        ]
+       ],
+       "cap": "Vor K steht J, nach K steht L."
+      }
+     ]
+    },
+    {
+     "h": "So gehst du vor",
+     "text": "So findest du einen Buchstaben im ABC.",
+     "visuals": [
+      {
+       "type": "lines",
+       "num": true,
+       "items": [
+        [
+         "Sage das ABC leise auf, bis du beim Buchstaben bist.",
+         "",
+         "Gesucht: K → A B C D E F G H I J K"
+        ],
+        [
+         "Welcher Buchstabe kommt kurz davor? Das ist der Buchstabe davor.",
+         "",
+         "Vor K steht J."
+        ],
+        [
+         "Welcher Buchstabe kommt gleich danach? Das ist der Buchstabe danach.",
+         "",
+         "Nach K steht L."
+        ],
+        [
+         "Zähle mit, wenn du den Platz wissen willst.",
+         "",
+         "K ist der 11. Buchstabe."
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "h": "Ein Beispiel gezeichnet",
+     "text": "Der Buchstabe K, gezeichnet. Die Pfeile zeigen davor, danach und den Platz.",
+     "visuals": [
+      {
+       "type": "anno",
+       "groups": [
+        [
+         "J",
+         "davor",
+         5,
+         "Platz 10"
+        ],
+        [
+         "K",
+         "dieser Buchstabe",
+         0,
+         "Platz 11"
+        ],
+        [
+         "L",
+         "danach",
+         6,
+         "Platz 12"
+        ]
+       ],
+       "cap": "… I, J, K, L, M …"
+      }
+     ]
+    },
+    {
+     "h": "Wörter nach dem ABC ordnen",
+     "text": "Auch Wörter stehen in der Reihe des ABC. Zuerst zählt der erste Buchstabe. Ist er gleich, zählt der zweite.",
      "visuals": [
       {
        "type": "chips",
@@ -194101,96 +194340,7 @@
          1
         ]
        ],
-       "cap": "Alle drei beginnen mit H. Dann zählt der zweite Buchstabe."
-      },
-      {
-       "type": "chips",
-       "parts": [
-        [
-         "Hand",
-         "n",
-         0
-        ],
-        [
-         "Hase",
-         "s",
-         1
-        ],
-        [
-         "Haus",
-         "u",
-         2
-        ]
-       ],
-       "cap": "Hand, Hase, Haus: Auch der zweite Buchstabe ist gleich. Der dritte entscheidet: n, s, u."
-      }
-     ]
-    },
-    {
-     "h": "So gehst du vor",
-     "text": "So ordnest du Wörter nach dem ABC.",
-     "visuals": [
-      {
-       "type": "lines",
-       "num": true,
-       "items": [
-        [
-         "Schau auf den ersten Buchstaben jedes Wortes.",
-         "",
-         "Hund, Apfel, Maus → H, A, M"
-        ],
-        [
-         "Ordne die Wörter nach diesem Buchstaben.",
-         "",
-         "A (Apfel), H (Hund), M (Maus)"
-        ],
-        [
-         "Ist der erste Buchstabe gleich, vergleiche den zweiten.",
-         "",
-         "Hand, Hund: H ist gleich, dann a vor u → Hand, Hund"
-        ],
-        [
-         "Lies die Reihe noch einmal zur Kontrolle.",
-         "",
-         "Apfel, Hand, Hund, Maus ✔"
-        ]
-       ]
-      }
-     ]
-    },
-    {
-     "h": "Ein Beispiel gezeichnet",
-     "text": "Die Wörter, gezeichnet. Die Pfeile zeigen die Reihenfolge.",
-     "visuals": [
-      {
-       "type": "anno",
-       "groups": [
-        [
-         "Apfel",
-         "1. Platz",
-         5,
-         "A kommt zuerst"
-        ],
-        [
-         "Hase",
-         "2. Platz",
-         6,
-         "H, dann a"
-        ],
-        [
-         "Hund",
-         "3. Platz",
-         4,
-         "H, dann u"
-        ],
-        [
-         "Maus",
-         "4. Platz",
-         2,
-         "M kommt zuletzt"
-        ]
-       ],
-       "cap": "Apfel, Hase, Hund, Maus"
+       "cap": "Alle beginnen mit H. Dann zählt der zweite Buchstabe: a, a, u."
       }
      ]
     },
@@ -194202,22 +194352,28 @@
        "type": "cards",
        "items": [
         [
-         "Reihenfolge",
-         "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z",
-         "A vorne, Z hinten",
+         "Reihe",
+         "26 Buchstaben, A vorne, Z hinten.",
+         "A B C … Z",
          0
         ],
         [
-         "Nachschlagen",
-         "Öffne das Wörterbuch in der Nähe des Buchstabens.",
-         "K ist in der Mitte",
+         "Vokale",
+         "A, E, I, O, U. Alle anderen sind Konsonanten.",
+         "Auge, Ofen",
          1
         ],
         [
-         "Umlaute",
-         "ä sortiert man bei a, ö bei o, ü bei u.",
-         "Bär bei B-a",
+         "Mitte",
+         "M ist der 13. Buchstabe, die Mitte vom ABC.",
+         "A–M und N–Z",
          2
+        ],
+        [
+         "Wörter ordnen",
+         "Zuerst zählt der erste Buchstabe, dann der zweite.",
+         "Hand vor Hund",
+         3
         ]
        ]
       }
@@ -194227,106 +194383,10 @@
    "theory": {
     "basis": {
      "h": "Alphabet",
-     "text": "Das ABC hat 26 Buchstaben. Wörter ordnet man nach dem ersten Buchstaben. Ist er gleich, zählt der zweite."
+     "text": "Das ABC hat 26 Buchstaben in fester Reihe: A ist der 1., Z der 26. Zu jedem Buchstaben gibt es einen davor und einen danach."
     }
    },
    "cards": [
-    {
-     "q": "Welcher Buchstabe kommt nach «F»?",
-     "a": "G",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "G",
-      "E",
-      "I",
-      "K"
-     ],
-     "hints": [
-      "Sage das ABC leise auf."
-     ],
-     "id": "c1"
-    },
-    {
-     "q": "Welcher Buchstabe kommt nach «Q»?",
-     "a": "R",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "T",
-      "R",
-      "P",
-      "V"
-     ],
-     "hints": [
-      "Sage das ABC leise auf."
-     ],
-     "id": "c2"
-    },
-    {
-     "q": "Welcher Buchstabe kommt nach «P»?",
-     "a": "Q",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "Q",
-      "O",
-      "U",
-      "S"
-     ],
-     "hints": [
-      "Sage das ABC leise auf."
-     ],
-     "id": "c3"
-    },
-    {
-     "q": "Welcher Buchstabe kommt nach «H»?",
-     "a": "I",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "K",
-      "M",
-      "I",
-      "G"
-     ],
-     "hints": [
-      "Sage das ABC leise auf."
-     ],
-     "id": "c4"
-    },
-    {
-     "q": "Welcher Buchstabe kommt nach «S»?",
-     "a": "T",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "R",
-      "T",
-      "V",
-      "X"
-     ],
-     "hints": [
-      "Sage das ABC leise auf."
-     ],
-     "id": "c5"
-    },
-    {
-     "q": "Welcher Buchstabe kommt nach «O»?",
-     "a": "P",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "N",
-      "P",
-      "T",
-      "R"
-     ],
-     "hints": [
-      "Sage das ABC leise auf."
-     ],
-     "id": "c6"
-    },
     {
      "q": "Welcher Buchstabe kommt nach «E»?",
      "a": "F",
@@ -194334,9 +194394,105 @@
      "th": "basis",
      "opts": [
       "F",
-      "J",
       "D",
+      "J",
       "H"
+     ],
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c1"
+    },
+    {
+     "q": "Welcher Buchstabe kommt nach «R»?",
+     "a": "S",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "W",
+      "U",
+      "Q",
+      "S"
+     ],
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c2"
+    },
+    {
+     "q": "Welcher Buchstabe kommt nach «J»?",
+     "a": "K",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "O",
+      "I",
+      "M",
+      "K"
+     ],
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c3"
+    },
+    {
+     "q": "Welcher Buchstabe kommt nach «U»?",
+     "a": "V",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "X",
+      "Z",
+      "V",
+      "T"
+     ],
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c4"
+    },
+    {
+     "q": "Welcher Buchstabe kommt nach «M»?",
+     "a": "N",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "R",
+      "N",
+      "L",
+      "P"
+     ],
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c5"
+    },
+    {
+     "q": "Welcher Buchstabe kommt nach «H»?",
+     "a": "I",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "G",
+      "I",
+      "K",
+      "M"
+     ],
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c6"
+    },
+    {
+     "q": "Welcher Buchstabe kommt nach «X»?",
+     "a": "Y",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "C",
+      "Y",
+      "W",
+      "A"
      ],
      "hints": [
       "Sage das ABC leise auf."
@@ -194344,15 +194500,15 @@
      "id": "c7"
     },
     {
-     "q": "Welcher Buchstabe kommt nach «T»?",
-     "a": "U",
+     "q": "Welcher Buchstabe kommt vor «I»?",
+     "a": "H",
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "W",
-      "Y",
-      "S",
-      "U"
+      "M",
+      "H",
+      "J",
+      "F"
      ],
      "hints": [
       "Sage das ABC leise auf."
@@ -194360,15 +194516,15 @@
      "id": "c8"
     },
     {
-     "q": "Welcher Buchstabe kommt vor «N»?",
-     "a": "M",
+     "q": "Welcher Buchstabe kommt vor «Y»?",
+     "a": "X",
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "O",
-      "K",
-      "M",
-      "R"
+      "Z",
+      "C",
+      "X",
+      "V"
      ],
      "hints": [
       "Sage das ABC leise auf."
@@ -194376,15 +194532,15 @@
      "id": "c9"
     },
     {
-     "q": "Welcher Buchstabe kommt vor «C»?",
-     "a": "B",
+     "q": "Welcher Buchstabe kommt vor «B»?",
+     "a": "A",
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "Z",
-      "B",
-      "G",
-      "D"
+      "Y",
+      "C",
+      "F",
+      "A"
      ],
      "hints": [
       "Sage das ABC leise auf."
@@ -194392,15 +194548,15 @@
      "id": "c10"
     },
     {
-     "q": "Welcher Buchstabe kommt vor «O»?",
-     "a": "N",
+     "q": "Welcher Buchstabe kommt vor «G»?",
+     "a": "F",
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "L",
-      "S",
-      "N",
-      "P"
+      "F",
+      "K",
+      "D",
+      "H"
      ],
      "hints": [
       "Sage das ABC leise auf."
@@ -194408,15 +194564,15 @@
      "id": "c11"
     },
     {
-     "q": "Welcher Buchstabe kommt vor «Q»?",
-     "a": "P",
+     "q": "Welcher Buchstabe kommt vor «F»?",
+     "a": "E",
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "R",
-      "P",
-      "U",
-      "N"
+      "E",
+      "J",
+      "G",
+      "C"
      ],
      "hints": [
       "Sage das ABC leise auf."
@@ -194424,15 +194580,15 @@
      "id": "c12"
     },
     {
-     "q": "Welcher Buchstabe kommt vor «W»?",
-     "a": "V",
+     "q": "Welcher Buchstabe kommt vor «Z»?",
+     "a": "Y",
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "X",
-      "V",
+      "Y",
+      "D",
       "A",
-      "T"
+      "W"
      ],
      "hints": [
       "Sage das ABC leise auf."
@@ -194440,15 +194596,15 @@
      "id": "c13"
     },
     {
-     "q": "Welcher Buchstabe fehlt? L, ___, N",
-     "a": "M",
-     "lvl": 2,
+     "q": "Welcher Buchstabe kommt vor «X»?",
+     "a": "W",
+     "lvl": 1,
      "th": "basis",
      "opts": [
-      "M",
-      "N",
-      "L",
-      "O"
+      "W",
+      "B",
+      "U",
+      "Y"
      ],
      "hints": [
       "Sage das ABC leise auf."
@@ -194456,15 +194612,15 @@
      "id": "c14"
     },
     {
-     "q": "Welcher Buchstabe fehlt? N, ___, P",
-     "a": "O",
-     "lvl": 2,
+     "q": "Welcher Buchstabe kommt vor «H»?",
+     "a": "G",
+     "lvl": 1,
      "th": "basis",
      "opts": [
-      "N",
-      "O",
-      "Q",
-      "P"
+      "I",
+      "E",
+      "G",
+      "L"
      ],
      "hints": [
       "Sage das ABC leise auf."
@@ -194472,15 +194628,15 @@
      "id": "c15"
     },
     {
-     "q": "Welcher Buchstabe fehlt? Q, ___, S",
-     "a": "R",
+     "q": "Welcher Buchstabe fehlt? V, ___, X",
+     "a": "W",
      "lvl": 2,
      "th": "basis",
      "opts": [
-      "S",
-      "R",
-      "Q",
-      "T"
+      "W",
+      "X",
+      "Y",
+      "V"
      ],
      "hints": [
       "Sage das ABC leise auf."
@@ -194488,15 +194644,15 @@
      "id": "c16"
     },
     {
-     "q": "Welcher Buchstabe fehlt? M, ___, O",
-     "a": "N",
+     "q": "Welcher Buchstabe fehlt? R, ___, T",
+     "a": "S",
      "lvl": 2,
      "th": "basis",
      "opts": [
-      "O",
-      "N",
-      "M",
-      "P"
+      "S",
+      "U",
+      "R",
+      "T"
      ],
      "hints": [
       "Sage das ABC leise auf."
@@ -194504,15 +194660,15 @@
      "id": "c17"
     },
     {
-     "q": "Welcher Buchstabe fehlt? C, ___, E",
-     "a": "D",
+     "q": "Welcher Buchstabe fehlt? P, ___, R",
+     "a": "Q",
      "lvl": 2,
      "th": "basis",
      "opts": [
-      "E",
-      "C",
-      "D",
-      "F"
+      "R",
+      "P",
+      "S",
+      "Q"
      ],
      "hints": [
       "Sage das ABC leise auf."
@@ -194520,244 +194676,515 @@
      "id": "c18"
     },
     {
-     "q": "Welches Wort kommt im ABC zuerst? Gans, Sonne, Vogel",
-     "a": "Gans",
+     "q": "Welcher Buchstabe fehlt? I, ___, K",
+     "a": "J",
      "lvl": 2,
      "th": "basis",
      "opts": [
-      "Vogel",
-      "Gans",
+      "J",
+      "K",
+      "I",
+      "L"
+     ],
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c19"
+    },
+    {
+     "q": "Welcher Buchstabe fehlt? U, ___, W",
+     "a": "V",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "W",
+      "U",
+      "V",
+      "X"
+     ],
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c20"
+    },
+    {
+     "q": "Welcher Buchstabe fehlt? T, ___, V",
+     "a": "U",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "U",
+      "W",
+      "T",
+      "V"
+     ],
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c21"
+    },
+    {
+     "q": "Der wievielte Buchstabe im ABC ist «N»?",
+     "a": "der 14.",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "der 13.",
+      "der 14.",
+      "der 15.",
+      "der 17."
+     ],
+     "hints": [
+      "Zähle das ABC von A an."
+     ],
+     "id": "c22"
+    },
+    {
+     "q": "Der wievielte Buchstabe im ABC ist «X»?",
+     "a": "der 24.",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "der 24.",
+      "der 23.",
+      "der 25.",
+      "der 27."
+     ],
+     "hints": [
+      "Zähle das ABC von A an."
+     ],
+     "id": "c23"
+    },
+    {
+     "q": "Der wievielte Buchstabe im ABC ist «S»?",
+     "a": "der 19.",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "der 19.",
+      "der 22.",
+      "der 18.",
+      "der 20."
+     ],
+     "hints": [
+      "Zähle das ABC von A an."
+     ],
+     "id": "c24"
+    },
+    {
+     "q": "Der wievielte Buchstabe im ABC ist «D»?",
+     "a": "der 4.",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "der 7.",
+      "der 5.",
+      "der 4.",
+      "der 3."
+     ],
+     "hints": [
+      "Zähle das ABC von A an."
+     ],
+     "id": "c25"
+    },
+    {
+     "q": "Der wievielte Buchstabe im ABC ist «E»?",
+     "a": "der 5.",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "der 6.",
+      "der 4.",
+      "der 8.",
+      "der 5."
+     ],
+     "hints": [
+      "Zähle das ABC von A an."
+     ],
+     "id": "c26"
+    },
+    {
+     "q": "Der wievielte Buchstabe im ABC ist «R»?",
+     "a": "der 18.",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "der 21.",
+      "der 17.",
+      "der 18.",
+      "der 19."
+     ],
+     "hints": [
+      "Zähle das ABC von A an."
+     ],
+     "id": "c27"
+    },
+    {
+     "q": "Der wievielte Buchstabe im ABC ist «U»?",
+     "a": "der 21.",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "der 22.",
+      "der 24.",
+      "der 21.",
+      "der 20."
+     ],
+     "hints": [
+      "Zähle das ABC von A an."
+     ],
+     "id": "c28"
+    },
+    {
+     "q": "Der wievielte Buchstabe im ABC ist «K»?",
+     "a": "der 11.",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "der 11.",
+      "der 14.",
+      "der 10.",
+      "der 12."
+     ],
+     "hints": [
+      "Zähle das ABC von A an."
+     ],
+     "id": "c29"
+    },
+    {
+     "q": "Welcher Buchstabe ist der 13. im ABC?",
+     "a": "M",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "L",
+      "O",
+      "N",
+      "M"
+     ],
+     "hints": [
+      "Zähle das ABC von A an."
+     ],
+     "id": "c30"
+    },
+    {
+     "q": "Welcher Buchstabe ist der 24. im ABC?",
+     "a": "X",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "W",
+      "Y",
+      "Z",
+      "X"
+     ],
+     "hints": [
+      "Zähle das ABC von A an."
+     ],
+     "id": "c31"
+    },
+    {
+     "q": "Welcher Buchstabe ist der 9. im ABC?",
+     "a": "I",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "I",
+      "K",
+      "H",
+      "J"
+     ],
+     "hints": [
+      "Zähle das ABC von A an."
+     ],
+     "id": "c32"
+    },
+    {
+     "q": "Welcher Buchstabe ist der 8. im ABC?",
+     "a": "H",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "H",
+      "J",
+      "G",
+      "I"
+     ],
+     "hints": [
+      "Zähle das ABC von A an."
+     ],
+     "id": "c33"
+    },
+    {
+     "q": "Welcher Buchstabe ist der 16. im ABC?",
+     "a": "P",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "O",
+      "Q",
+      "R",
+      "P"
+     ],
+     "hints": [
+      "Zähle das ABC von A an."
+     ],
+     "id": "c34"
+    },
+    {
+     "q": "Welcher Buchstabe ist der 11. im ABC?",
+     "a": "K",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "L",
+      "K",
+      "J",
+      "M"
+     ],
+     "hints": [
+      "Zähle das ABC von A an."
+     ],
+     "id": "c35"
+    },
+    {
+     "q": "Wie viele Buchstaben hat das ABC?",
+     "a": "26",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "28",
+      "30",
+      "26",
+      "24"
+     ],
+     "hints": [
+      "Zähle A bis Z."
+     ],
+     "id": "c36"
+    },
+    {
+     "q": "Welcher Buchstabe steht am Anfang vom ABC?",
+     "a": "A",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "B",
+      "A",
+      "Z",
+      "M"
+     ],
+     "hints": [],
+     "id": "c37"
+    },
+    {
+     "q": "Welcher Buchstabe steht am Ende vom ABC?",
+     "a": "Z",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "A",
+      "Z",
+      "Y",
+      "X"
+     ],
+     "hints": [],
+     "id": "c38"
+    },
+    {
+     "q": "Tippe alle Vokale an.",
+     "a": "A, E, I, O",
+     "ans": [
+      "A",
+      "E",
+      "I",
+      "O"
+     ],
+     "multi": true,
+     "opts": [
+      "M",
+      "T",
+      "O",
+      "E",
+      "A",
+      "I",
+      "K",
+      "B"
+     ],
+     "lvl": 2,
+     "th": "basis",
+     "hints": [
+      "Vokale: A, E, I, O, U."
+     ],
+     "id": "c39"
+    },
+    {
+     "q": "Tippe alle Konsonanten an.",
+     "a": "B, K, M",
+     "ans": [
+      "B",
+      "K",
+      "M"
+     ],
+     "multi": true,
+     "opts": [
+      "B",
+      "E",
+      "M",
+      "O",
+      "K",
+      "A"
+     ],
+     "lvl": 2,
+     "th": "basis",
+     "hints": [
+      "Alle ausser A, E, I, O, U."
+     ],
+     "id": "c40"
+    },
+    {
+     "q": "Wie viele Buchstaben liegen zwischen B und F?",
+     "a": "3",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "4",
+      "5",
+      "2",
+      "3"
+     ],
+     "hints": [
+      "Zähle die Buchstaben dazwischen."
+     ],
+     "id": "c41"
+    },
+    {
+     "q": "Wie viele Buchstaben liegen zwischen G und K?",
+     "a": "3",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "3",
+      "5",
+      "2",
+      "4"
+     ],
+     "hints": [
+      "Zähle die Buchstaben dazwischen."
+     ],
+     "id": "c42"
+    },
+    {
+     "q": "Wie viele Buchstaben liegen zwischen L und O?",
+     "a": "2",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "3",
+      "4",
+      "1",
+      "2"
+     ],
+     "hints": [
+      "Zähle die Buchstaben dazwischen."
+     ],
+     "id": "c43"
+    },
+    {
+     "q": "Welches Wort kommt im ABC zuerst? Kuh, Esel, Sonne",
+     "a": "Esel",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "Esel",
+      "Kuh",
       "Sonne"
      ],
      "hints": [
       "Vergleiche die Anfangsbuchstaben."
      ],
-     "why": "Richtig geordnet: Gans, Sonne, Vogel.",
-     "id": "c19"
+     "why": "Richtig geordnet: Esel, Kuh, Sonne.",
+     "id": "c44"
     },
     {
-     "q": "Welches Wort kommt im ABC zuerst? Nase, Tisch, Lamm",
-     "a": "Lamm",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Nase",
-      "Tisch",
-      "Lamm"
-     ],
-     "hints": [
-      "Vergleiche die Anfangsbuchstaben."
-     ],
-     "why": "Richtig geordnet: Lamm, Nase, Tisch.",
-     "id": "c20"
-    },
-    {
-     "q": "Welches Wort kommt im ABC zuerst? Maus, Kuh, Ball",
+     "q": "Welches Wort kommt im ABC zuerst? Uhr, Ball, Maus",
      "a": "Ball",
      "lvl": 2,
      "th": "basis",
      "opts": [
       "Maus",
-      "Kuh",
+      "Uhr",
       "Ball"
      ],
      "hints": [
       "Vergleiche die Anfangsbuchstaben."
      ],
-     "why": "Richtig geordnet: Ball, Kuh, Maus.",
-     "id": "c21"
+     "why": "Richtig geordnet: Ball, Maus, Uhr.",
+     "id": "c45"
     },
     {
-     "q": "Welches Wort kommt im ABC zuerst? Esel, Wolke, Maus",
-     "a": "Esel",
+     "q": "Welches Wort kommt im ABC zuerst? Vogel, Baum, Hase",
+     "a": "Baum",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "Vogel",
+      "Baum",
+      "Hase"
+     ],
+     "hints": [
+      "Vergleiche die Anfangsbuchstaben."
+     ],
+     "why": "Richtig geordnet: Baum, Hase, Vogel.",
+     "id": "c46"
+    },
+    {
+     "q": "Welches Wort kommt im ABC zuerst? Wolke, Kuh, Maus",
+     "a": "Kuh",
      "lvl": 2,
      "th": "basis",
      "opts": [
       "Wolke",
-      "Esel",
+      "Kuh",
       "Maus"
      ],
      "hints": [
       "Vergleiche die Anfangsbuchstaben."
      ],
-     "why": "Richtig geordnet: Esel, Maus, Wolke.",
-     "id": "c22"
+     "why": "Richtig geordnet: Kuh, Maus, Wolke.",
+     "id": "c47"
     },
     {
-     "q": "Welches Wort kommt im ABC zuerst? Ohr, Pferd, Fisch",
-     "a": "Fisch",
+     "q": "Welches Wort kommt im ABC zuerst? Zebra, Katze, Ohr",
+     "a": "Katze",
      "lvl": 2,
      "th": "basis",
      "opts": [
-      "Fisch",
       "Ohr",
-      "Pferd"
+      "Katze",
+      "Zebra"
      ],
      "hints": [
       "Vergleiche die Anfangsbuchstaben."
      ],
-     "why": "Richtig geordnet: Fisch, Ohr, Pferd.",
-     "id": "c23"
+     "why": "Richtig geordnet: Katze, Ohr, Zebra.",
+     "id": "c48"
     },
     {
-     "q": "Welches Wort kommt im ABC zuerst? Pferd, Nase, Maus",
+     "q": "Welches Wort kommt im ABC zuerst? Maus, Rose, Nase",
      "a": "Maus",
      "lvl": 2,
      "th": "basis",
      "opts": [
-      "Pferd",
+      "Rose",
       "Nase",
       "Maus"
      ],
      "hints": [
       "Vergleiche die Anfangsbuchstaben."
      ],
-     "why": "Richtig geordnet: Maus, Nase, Pferd.",
-     "id": "c24"
-    },
-    {
-     "q": "Welches Wort kommt im ABC zuerst? Sonne, Pferd, Katze",
-     "a": "Katze",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Pferd",
-      "Sonne",
-      "Katze"
-     ],
-     "hints": [
-      "Vergleiche die Anfangsbuchstaben."
-     ],
-     "why": "Richtig geordnet: Katze, Pferd, Sonne.",
-     "id": "c25"
-    },
-    {
-     "q": "Welches Wort kommt im ABC zuerst? Vogel, Esel, Fisch",
-     "a": "Esel",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Esel",
-      "Fisch",
-      "Vogel"
-     ],
-     "hints": [
-      "Vergleiche die Anfangsbuchstaben."
-     ],
-     "why": "Richtig geordnet: Esel, Fisch, Vogel.",
-     "id": "c26"
-    },
-    {
-     "q": "Welches Wort kommt im ABC zuerst? Uhr, Maus, Rose",
-     "a": "Maus",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Uhr",
-      "Rose",
-      "Maus"
-     ],
-     "hints": [
-      "Vergleiche die Anfangsbuchstaben."
-     ],
-     "why": "Richtig geordnet: Maus, Rose, Uhr.",
-     "id": "c27"
-    },
-    {
-     "q": "Welches Wort kommt im ABC zuerst? Kuh, Wolke, Baum",
-     "a": "Baum",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Baum",
-      "Wolke",
-      "Kuh"
-     ],
-     "hints": [
-      "Vergleiche die Anfangsbuchstaben."
-     ],
-     "why": "Richtig geordnet: Baum, Kuh, Wolke.",
-     "id": "c28"
-    },
-    {
-     "q": "Welche Reihenfolge ist richtig?",
-     "a": "Gans, Sonne, Vogel",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Gans, Vogel, Sonne",
-      "Sonne, Vogel, Gans",
-      "Gans, Sonne, Vogel",
-      "Vogel, Sonne, Gans"
-     ],
-     "hints": [
-      "Ordne nach dem ersten Buchstaben."
-     ],
-     "id": "c29"
-    },
-    {
-     "q": "Welche Reihenfolge ist richtig?",
-     "a": "Lamm, Nase, Tisch",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Nase, Lamm, Tisch",
-      "Lamm, Tisch, Nase",
-      "Lamm, Nase, Tisch",
-      "Tisch, Lamm, Nase"
-     ],
-     "hints": [
-      "Ordne nach dem ersten Buchstaben."
-     ],
-     "id": "c30"
-    },
-    {
-     "q": "Welche Reihenfolge ist richtig?",
-     "a": "Ball, Kuh, Maus",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Maus, Kuh, Ball",
-      "Kuh, Ball, Maus",
-      "Maus, Ball, Kuh",
-      "Ball, Kuh, Maus"
-     ],
-     "hints": [
-      "Ordne nach dem ersten Buchstaben."
-     ],
-     "id": "c31"
-    },
-    {
-     "q": "Welche Reihenfolge ist richtig?",
-     "a": "Esel, Maus, Wolke",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Esel, Wolke, Maus",
-      "Esel, Maus, Wolke",
-      "Maus, Esel, Wolke",
-      "Wolke, Esel, Maus"
-     ],
-     "hints": [
-      "Ordne nach dem ersten Buchstaben."
-     ],
-     "id": "c32"
-    },
-    {
-     "q": "Welche Reihenfolge ist richtig?",
-     "a": "Fisch, Ohr, Pferd",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Ohr, Fisch, Pferd",
-      "Ohr, Pferd, Fisch",
-      "Fisch, Ohr, Pferd",
-      "Pferd, Ohr, Fisch"
-     ],
-     "hints": [
-      "Ordne nach dem ersten Buchstaben."
-     ],
-     "id": "c33"
+     "why": "Richtig geordnet: Maus, Nase, Rose.",
+     "id": "c49"
     },
     {
      "q": "Schreibe den Buchstaben nach «C».",
@@ -194772,7 +195199,7 @@
      ],
      "cs": true,
      "why": "Der nächste Buchstabe im ABC.",
-     "id": "c34"
+     "id": "c50"
     },
     {
      "q": "Schreibe den Buchstaben nach «G».",
@@ -194787,7 +195214,7 @@
      ],
      "cs": true,
      "why": "Der nächste Buchstabe im ABC.",
-     "id": "c35"
+     "id": "c51"
     },
     {
      "q": "Schreibe den Buchstaben nach «L».",
@@ -194802,383 +195229,127 @@
      ],
      "cs": true,
      "why": "Der nächste Buchstabe im ABC.",
-     "id": "c36"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-     "a": "Bach, Bruder, Hügel, Schal, Turm",
-     "ans": [
-      "Bach, Bruder, Hügel, Schal, Turm"
-     ],
-     "pre": "Schal, Bruder, Bach, Turm, Hügel",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c37"
-    },
-    {
-     "q": "Welches Wort steht im Alphabet zwischen «Affe» und «Insel»?",
-     "a": "Buch",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Vogel",
-      "Katze",
-      "Buch",
-      "Pferd"
-     ],
-     "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
-     ],
-     "id": "c38"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-     "a": "Arzt, Koch, König, Maler, Schwester, Stern",
-     "ans": [
-      "Arzt, Koch, König, Maler, Schwester, Stern"
-     ],
-     "pre": "König, Arzt, Maler, Koch, Schwester, Stern",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c39"
-    },
-    {
-     "q": "Welches Wort steht im Alphabet zwischen «Arzt» und «Hexe»?",
-     "a": "Fuchs",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Hund",
-      "Fuchs",
-      "Vogel",
-      "Katze"
-     ],
-     "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
-     ],
-     "id": "c40"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-     "a": "Mutter, Pausenbrot, Schwimmbad, Tisch, Trampolin",
-     "ans": [
-      "Mutter, Pausenbrot, Schwimmbad, Tisch, Trampolin"
-     ],
-     "pre": "Mutter, Schwimmbad, Pausenbrot, Trampolin, Tisch",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c41"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-     "a": "Buch, Hose, Mantel, Schulleiterin",
-     "ans": [
-      "Buch, Hose, Mantel, Schulleiterin"
-     ],
-     "pre": "Schulleiterin, Hose, Mantel, Buch",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c42"
-    },
-    {
-     "q": "Welches Wort steht im Alphabet zwischen «Insel» und «Onkel»?",
-     "a": "Nachbar",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Vogel",
-      "Pferd",
-      "Hund",
-      "Nachbar"
-     ],
-     "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
-     ],
-     "id": "c43"
-    },
-    {
-     "q": "Welches Wort steht im Alphabet zwischen «Banane» und «Gespenst»?",
-     "a": "Berg",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Hund",
-      "Berg",
-      "Vogel",
-      "Katze"
-     ],
-     "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
-     ],
-     "id": "c44"
-    },
-    {
-     "q": "Welches Wort steht im Alphabet zwischen «Fest» und «Krokodil»?",
-     "a": "Fisch",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Vogel",
-      "Fisch",
-      "Pferd",
-      "Maus"
-     ],
-     "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
-     ],
-     "id": "c45"
-    },
-    {
-     "q": "Welches Wort steht im Alphabet zwischen «Katze» und «Maus»?",
-     "a": "Mann",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Pferd",
-      "Vogel",
-      "Mann",
-      "Hund"
-     ],
-     "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
-     ],
-     "id": "c46"
-    },
-    {
-     "q": "Welches Wort kommt im Alphabet zuletzt: Gespenst, Zelt, Bild, Kuh, Wald?",
-     "a": "Zelt",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "Kuh",
-      "Bild",
-      "Gespenst",
-      "Zelt"
-     ],
-     "hints": [
-      "Der letzte Buchstabe im Alphabet ist ganz hinten."
-     ],
-     "id": "c47"
-    },
-    {
-     "q": "Welches Wort kommt im Alphabet zuletzt: Tasse, Velo, Keks, Insel, Trampolin?",
-     "a": "Velo",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "Insel",
-      "Keks",
-      "Tasse",
-      "Velo"
-     ],
-     "hints": [
-      "Der letzte Buchstabe im Alphabet ist ganz hinten."
-     ],
-     "id": "c48"
-    },
-    {
-     "q": "Welches Wort steht im Alphabet zwischen «Fahrrad» und «Ritter»?",
-     "a": "Pirat",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Pirat",
-      "Schaf",
-      "Ente",
-      "Vogel"
-     ],
-     "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
-     ],
-     "id": "c49"
-    },
-    {
-     "q": "Welches Wort kommt im Alphabet zuletzt: Schwester, Rätsel, Trainer, Pausenhof?",
-     "a": "Trainer",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "Rätsel",
-      "Schwester",
-      "Pausenhof",
-      "Trainer"
-     ],
-     "hints": [
-      "Der letzte Buchstabe im Alphabet ist ganz hinten."
-     ],
-     "id": "c50"
-    },
-    {
-     "q": "Welches Wort kommt im Alphabet zuletzt: Pool, Rucksack, Lampe, Schrank, Fisch, Frau?",
-     "a": "Schrank",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "Frau",
-      "Schrank",
-      "Lampe",
-      "Fisch"
-     ],
-     "hints": [
-      "Der letzte Buchstabe im Alphabet ist ganz hinten."
-     ],
-     "id": "c51"
-    },
-    {
-     "q": "Welches Wort kommt im Alphabet zuerst: Kissen, Igel, Keks, Mond, Ente?",
-     "a": "Ente",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "Igel",
-      "Keks",
-      "Ente",
-      "Kissen"
-     ],
-     "hints": [
-      "Schau auf den ersten Buchstaben."
-     ],
      "id": "c52"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-     "a": "Gärtner, Kind, Pinguin, Sängerin, Schrank, Suppe",
+     "q": "Ein Buchstabe fehlt. Verbessere im Feld.",
+     "a": "A, B, C, D, E",
      "ans": [
-      "Gärtner, Kind, Pinguin, Sängerin, Schrank, Suppe"
+      "A, B, C, D, E"
      ],
-     "pre": "Sängerin, Kind, Schrank, Suppe, Gärtner, Pinguin",
+     "pre": "A, B, D, E",
      "lvl": 2,
      "th": "basis",
      "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
+      "Sage das ABC leise auf."
      ],
      "id": "c53"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuerst: Wald, König, Hut, Pilz, Berg?",
-     "a": "Berg",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "König",
-      "Pilz",
-      "Berg",
-      "Hut"
+     "q": "Ein Buchstabe fehlt. Verbessere im Feld.",
+     "a": "I, J, K, L, M",
+     "ans": [
+      "I, J, K, L, M"
      ],
+     "pre": "I, J, L, M",
+     "lvl": 2,
+     "th": "basis",
      "hints": [
-      "Schau auf den ersten Buchstaben."
+      "Sage das ABC leise auf."
      ],
      "id": "c54"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-     "a": "Karte, Spielplatz, Uhr, Wurst",
+     "q": "Das ABC ist falsch. Verbessere im Feld.",
+     "a": "K, L, M",
      "ans": [
-      "Karte, Spielplatz, Uhr, Wurst"
+      "K, L, M"
      ],
-     "pre": "Spielplatz, Uhr, Karte, Wurst",
+     "pre": "K, L, N",
      "lvl": 2,
      "th": "basis",
      "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
+      "Sage das ABC leise auf."
      ],
      "id": "c55"
     },
     {
-     "q": "Welches Wort steht im Alphabet zwischen «Bäcker» und «Maler»?",
-     "a": "Fahrrad",
+     "q": "Das ABC ist falsch. Verbessere im Feld.",
+     "a": "C, D, E",
+     "ans": [
+      "C, D, E"
+     ],
+     "pre": "C, D, F",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Maus",
-      "Pferd",
-      "Vogel",
-      "Fahrrad"
-     ],
      "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
+      "Sage das ABC leise auf."
      ],
      "id": "c56"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuerst: Hügel, Tasche, Bäcker, Hase, Bett?",
-     "a": "Bäcker",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "Bäcker",
-      "Hase",
-      "Hügel",
-      "Bett"
+     "q": "Das ABC ist falsch. Verbessere im Feld.",
+     "a": "G, H, I",
+     "ans": [
+      "G, H, I"
      ],
+     "pre": "G, H, J",
+     "lvl": 2,
+     "th": "basis",
      "hints": [
-      "Schau auf den ersten Buchstaben."
+      "Sage das ABC leise auf."
      ],
      "id": "c57"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuletzt: Schatz, Vater, Eis, Eichhörnchen, Schrank?",
-     "a": "Vater",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "Eis",
-      "Schatz",
-      "Eichhörnchen",
-      "Vater"
+     "q": "Schreibe die Buchstaben rückwärts. Verbessere im Feld.",
+     "a": "V, U, T, S, R, Q",
+     "ans": [
+      "V, U, T, S, R, Q"
      ],
+     "pre": "Q, R, S, T, U, V",
+     "lvl": 3,
+     "th": "basis",
      "hints": [
-      "Der letzte Buchstabe im Alphabet ist ganz hinten."
+      "Beginne beim letzten Buchstaben."
      ],
      "id": "c58"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-     "a": "Hase, Keks, Klasse, Tasche",
+     "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+     "a": "H, I, J, K, L, M, N",
      "ans": [
-      "Hase, Keks, Klasse, Tasche"
+      "H, I, J, K, L, M, N"
      ],
-     "pre": "Klasse, Tasche, Hase, Keks",
+     "pre": "I, H, J, K, L, M, N",
      "lvl": 2,
      "th": "basis",
      "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
+      "Sage das ABC leise auf."
      ],
      "id": "c59"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-     "a": "Banane, Glas, Pirat, Spinne, Wald",
+     "q": "Es fehlen Buchstaben. Verbessere im Feld.",
+     "a": "M, N, O, P, Q",
      "ans": [
-      "Banane, Glas, Pirat, Spinne, Wald"
+      "M, N, O, P, Q"
      ],
-     "pre": "Banane, Wald, Pirat, Glas, Spinne",
+     "pre": "M, N, O, Q",
      "lvl": 2,
      "th": "basis",
      "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
+      "Sage das ABC leise auf."
      ],
      "id": "c60"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-     "a": "Glas, Karotte, Polizist, Schlüssel, Stift, Superheld",
+     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
+     "a": "Koch, Maler, Schwester, Stern",
      "ans": [
-      "Glas, Karotte, Polizist, Schlüssel, Stift, Superheld"
+      "Koch, Maler, Schwester, Stern"
      ],
-     "pre": "Schlüssel, Stift, Superheld, Glas, Karotte, Polizist",
+     "pre": "Maler, Koch, Schwester, Stern",
      "lvl": 2,
      "th": "basis",
      "hints": [
@@ -195187,376 +195358,334 @@
      "id": "c61"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuletzt: Decke, Schulleiterin, Flasche, Heft, Socke?",
-     "a": "Socke",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "Flasche",
-      "Socke",
-      "Heft",
-      "Decke"
+     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
+     "a": "Arzt, Krokodil, Mädchen, Papagei, Schnecke, Spiel",
+     "ans": [
+      "Arzt, Krokodil, Mädchen, Papagei, Schnecke, Spiel"
      ],
+     "pre": "Mädchen, Schnecke, Papagei, Spiel, Krokodil, Arzt",
+     "lvl": 2,
+     "th": "basis",
      "hints": [
-      "Der letzte Buchstabe im Alphabet ist ganz hinten."
+      "Vergleiche Buchstabe für Buchstabe."
      ],
      "id": "c62"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuerst: Hose, Spinne, Ball, Mann, Decke?",
-     "a": "Ball",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "Mann",
-      "Hose",
-      "Ball",
-      "Decke"
+     "q": "Schreibe die Buchstaben rückwärts. Verbessere im Feld.",
+     "a": "Q, P, O, N, M, L",
+     "ans": [
+      "Q, P, O, N, M, L"
      ],
+     "pre": "L, M, N, O, P, Q",
+     "lvl": 3,
+     "th": "basis",
      "hints": [
-      "Schau auf den ersten Buchstaben."
+      "Beginne beim letzten Buchstaben."
      ],
      "id": "c63"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuerst: Hose, Garten, Frosch, Bach, See, Turm?",
-     "a": "Bach",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "Bach",
-      "Frosch",
-      "Hose",
-      "Garten"
+     "q": "Es fehlen Buchstaben. Verbessere im Feld.",
+     "a": "D, E, F, G, H, I",
+     "ans": [
+      "D, E, F, G, H, I"
      ],
+     "pre": "D, F, G, H, I",
+     "lvl": 2,
+     "th": "basis",
      "hints": [
-      "Schau auf den ersten Buchstaben."
+      "Sage das ABC leise auf."
      ],
      "id": "c64"
     },
     {
-     "q": "Welches Wort steht im Alphabet zwischen «Auto» und «Koffer»?",
-     "a": "Gitarre",
+     "q": "Es fehlen Buchstaben. Verbessere im Feld.",
+     "a": "O, P, Q, R, S, T",
+     "ans": [
+      "O, P, Q, R, S, T"
+     ],
+     "pre": "O, P, Q, R, T",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Pferd",
-      "Vogel",
-      "Gitarre",
-      "Maus"
-     ],
      "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
+      "Sage das ABC leise auf."
      ],
      "id": "c65"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-     "a": "Insel, Pfütze, Roller, Stern, Teich",
+     "q": "Es fehlen Buchstaben. Verbessere im Feld.",
+     "a": "I, J, K, L, M, N",
      "ans": [
-      "Insel, Pfütze, Roller, Stern, Teich"
+      "I, J, K, L, M, N"
      ],
-     "pre": "Roller, Pfütze, Insel, Teich, Stern",
+     "pre": "I, J, K, M, N",
      "lvl": 2,
      "th": "basis",
      "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
+      "Sage das ABC leise auf."
      ],
      "id": "c66"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuerst: Drache, Fest, Tasse, Schatz, Clown?",
-     "a": "Clown",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "Drache",
-      "Fest",
-      "Clown",
-      "Schatz"
+     "q": "Schreibe die Buchstaben rückwärts. Verbessere im Feld.",
+     "a": "P, O, N, M, L, K",
+     "ans": [
+      "P, O, N, M, L, K"
      ],
+     "pre": "K, L, M, N, O, P",
+     "lvl": 3,
+     "th": "basis",
      "hints": [
-      "Schau auf den ersten Buchstaben."
+      "Beginne beim letzten Buchstaben."
      ],
      "id": "c67"
     },
     {
-     "q": "Welches Wort steht im Alphabet zwischen «Clown» und «Mädchen»?",
-     "a": "Geschichte",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Geschichte",
-      "Pferd",
-      "Vogel",
-      "Maus"
-     ],
-     "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
-     ],
-     "id": "c68"
-    },
-    {
-     "q": "Welches Wort kommt im Alphabet zuerst: Hut, Schwein, Spielplatz, Trommel, Spiel?",
-     "a": "Hut",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "Spielplatz",
-      "Spiel",
-      "Hut",
-      "Schwein"
-     ],
-     "hints": [
-      "Schau auf den ersten Buchstaben."
-     ],
-     "id": "c69"
-    },
-    {
-     "q": "Welches Wort kommt im Alphabet zuerst: Superheld, Bank, Tasse, Frau?",
-     "a": "Bank",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "Bank",
-      "Superheld",
-      "Frau",
-      "Tasse"
-     ],
-     "hints": [
-      "Schau auf den ersten Buchstaben."
-     ],
-     "id": "c70"
-    },
-    {
-     "q": "Welches Wort kommt im Alphabet zuletzt: Schloss, Känguru, Onkel, Verkäuferin, Schokolade?",
-     "a": "Verkäuferin",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "Verkäuferin",
-      "Schloss",
-      "Känguru",
-      "Onkel"
-     ],
-     "hints": [
-      "Der letzte Buchstabe im Alphabet ist ganz hinten."
-     ],
-     "id": "c71"
-    },
-    {
-     "q": "Welches Wort kommt im Alphabet zuerst: Torte, Keks, Birne, Papagei, Glas?",
-     "a": "Birne",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "Birne",
-      "Papagei",
-      "Keks",
-      "Glas"
-     ],
-     "hints": [
-      "Schau auf den ersten Buchstaben."
-     ],
-     "id": "c72"
-    },
-    {
-     "q": "Welches Wort steht im Alphabet zwischen «Clown» und «Sofa»?",
-     "a": "Gitarre",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Vogel",
-      "Arzt",
-      "Bäcker",
-      "Gitarre"
-     ],
-     "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
-     ],
-     "id": "c73"
-    },
-    {
-     "q": "Welches Wort kommt im Alphabet zuerst: Birne, Opa, Känguru, Mann, Rutsche?",
-     "a": "Birne",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "Birne",
-      "Opa",
-      "Mann",
-      "Känguru"
-     ],
-     "hints": [
-      "Schau auf den ersten Buchstaben."
-     ],
-     "id": "c74"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-     "a": "Bett, Henne, Stuhl, Velo, Wand",
+     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
+     "a": "Gabel, Garten, Geige, Glas, Gurke",
      "ans": [
-      "Bett, Henne, Stuhl, Velo, Wand"
+      "Gabel, Garten, Geige, Glas, Gurke"
      ],
-     "pre": "Bett, Stuhl, Wand, Velo, Henne",
+     "pre": "Gurke, Glas, Gabel, Geige, Garten",
      "lvl": 2,
      "th": "basis",
      "hints": [
       "Vergleiche Buchstabe für Buchstabe."
      ],
+     "id": "c68"
+    },
+    {
+     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
+     "a": "Gabel, Gans, Garten, Geige",
+     "ans": [
+      "Gabel, Gans, Garten, Geige"
+     ],
+     "pre": "Garten, Geige, Gans, Gabel",
+     "lvl": 2,
+     "th": "basis",
+     "hints": [
+      "Vergleiche Buchstabe für Buchstabe."
+     ],
+     "id": "c69"
+    },
+    {
+     "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+     "a": "E, F, G, H, I, J, K",
+     "ans": [
+      "E, F, G, H, I, J, K"
+     ],
+     "pre": "F, E, G, H, I, J, K",
+     "lvl": 2,
+     "th": "basis",
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c70"
+    },
+    {
+     "q": "Das ABC ist falsch. Verbessere im Feld.",
+     "a": "N, O, P",
+     "ans": [
+      "N, O, P"
+     ],
+     "pre": "N, O, Q",
+     "lvl": 2,
+     "th": "basis",
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c71"
+    },
+    {
+     "q": "Schreibe die Buchstaben rückwärts. Verbessere im Feld.",
+     "a": "J, I, H, G",
+     "ans": [
+      "J, I, H, G"
+     ],
+     "pre": "G, H, I, J",
+     "lvl": 3,
+     "th": "basis",
+     "hints": [
+      "Beginne beim letzten Buchstaben."
+     ],
+     "id": "c72"
+    },
+    {
+     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
+     "a": "Zahn, Zebra, Zelt, Zimmer",
+     "ans": [
+      "Zahn, Zebra, Zelt, Zimmer"
+     ],
+     "pre": "Zimmer, Zahn, Zelt, Zebra",
+     "lvl": 2,
+     "th": "basis",
+     "hints": [
+      "Vergleiche Buchstabe für Buchstabe."
+     ],
+     "id": "c73"
+    },
+    {
+     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
+     "a": "Pfanne, Pferd, Pinsel, Puppe",
+     "ans": [
+      "Pfanne, Pferd, Pinsel, Puppe"
+     ],
+     "pre": "Pinsel, Pfanne, Puppe, Pferd",
+     "lvl": 2,
+     "th": "basis",
+     "hints": [
+      "Vergleiche Buchstabe für Buchstabe."
+     ],
+     "id": "c74"
+    },
+    {
+     "q": "Das ABC ist falsch. Verbessere im Feld.",
+     "a": "F, G, H",
+     "ans": [
+      "F, G, H"
+     ],
+     "pre": "F, G, I",
+     "lvl": 2,
+     "th": "basis",
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
      "id": "c75"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuerst: Katze, Ente, Schnecke, Superheld?",
-     "a": "Ente",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "Schnecke",
-      "Katze",
-      "Superheld",
-      "Ente"
+     "q": "Das ABC ist falsch. Verbessere im Feld.",
+     "a": "A, B, C",
+     "ans": [
+      "A, B, C"
      ],
+     "pre": "A, B, D",
+     "lvl": 2,
+     "th": "basis",
      "hints": [
-      "Schau auf den ersten Buchstaben."
+      "Sage das ABC leise auf."
      ],
      "id": "c76"
     },
     {
-     "q": "Welches Wort steht im Alphabet zwischen «Bär» und «Karte»?",
-     "a": "Baum",
+     "q": "Es fehlen Buchstaben. Verbessere im Feld.",
+     "a": "V, W, X, Y",
+     "ans": [
+      "V, W, X, Y"
+     ],
+     "pre": "V, X, Y",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Baum",
-      "Pferd",
-      "Katze",
-      "Vogel"
-     ],
      "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
+      "Sage das ABC leise auf."
      ],
      "id": "c77"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuletzt: Baum, Gärtner, Kuh, Kuchen, Tür?",
-     "a": "Tür",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "Tür",
-      "Kuchen",
-      "Gärtner",
-      "Baum"
+     "q": "Schreibe die Buchstaben rückwärts. Verbessere im Feld.",
+     "a": "E, D, C, B",
+     "ans": [
+      "E, D, C, B"
      ],
+     "pre": "B, C, D, E",
+     "lvl": 3,
+     "th": "basis",
      "hints": [
-      "Der letzte Buchstabe im Alphabet ist ganz hinten."
+      "Beginne beim letzten Buchstaben."
      ],
      "id": "c78"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuerst: Trampolin, Gespenst, Huhn, Superheld, Schwimmbad, Katze?",
-     "a": "Gespenst",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "Katze",
-      "Gespenst",
-      "Schwimmbad",
-      "Huhn"
+     "q": "Das ABC ist falsch. Verbessere im Feld.",
+     "a": "J, K, L",
+     "ans": [
+      "J, K, L"
      ],
+     "pre": "J, K, M",
+     "lvl": 2,
+     "th": "basis",
      "hints": [
-      "Schau auf den ersten Buchstaben."
+      "Sage das ABC leise auf."
      ],
      "id": "c79"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuerst: Maler, Mond, Ritter, Gitarre, Nachbar, Schwein?",
-     "a": "Gitarre",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "Nachbar",
-      "Mond",
-      "Maler",
-      "Gitarre"
+     "q": "Es fehlen Buchstaben. Verbessere im Feld.",
+     "a": "F, G, H, I, J",
+     "ans": [
+      "F, G, H, I, J"
      ],
+     "pre": "F, H, I, J",
+     "lvl": 2,
+     "th": "basis",
      "hints": [
-      "Schau auf den ersten Buchstaben."
+      "Sage das ABC leise auf."
      ],
      "id": "c80"
     },
     {
-     "q": "Welches Wort steht im Alphabet zwischen «Bett» und «Hamster»?",
-     "a": "Fisch",
+     "q": "Es fehlen Buchstaben. Verbessere im Feld.",
+     "a": "N, O, P, Q, R",
+     "ans": [
+      "N, O, P, Q, R"
+     ],
+     "pre": "N, O, P, R",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Hund",
-      "Katze",
-      "Vogel",
-      "Fisch"
-     ],
      "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
+      "Sage das ABC leise auf."
      ],
      "id": "c81"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuletzt: Hamster, Pferd, Kuchen, Garten, Dach?",
-     "a": "Pferd",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "Pferd",
-      "Hamster",
-      "Garten",
-      "Dach"
+     "q": "Das ABC ist falsch. Verbessere im Feld.",
+     "a": "P, Q, R",
+     "ans": [
+      "P, Q, R"
      ],
+     "pre": "P, Q, S",
+     "lvl": 2,
+     "th": "basis",
      "hints": [
-      "Der letzte Buchstabe im Alphabet ist ganz hinten."
+      "Sage das ABC leise auf."
      ],
      "id": "c82"
     },
     {
-     "q": "Welches Wort steht im Alphabet zwischen «Birne» und «Hamster»?",
-     "a": "Frau",
+     "q": "Das ABC ist falsch. Verbessere im Feld.",
+     "a": "S, T, U",
+     "ans": [
+      "S, T, U"
+     ],
+     "pre": "S, T, V",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Hund",
-      "Katze",
-      "Frau",
-      "Vogel"
-     ],
      "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
+      "Sage das ABC leise auf."
      ],
      "id": "c83"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuerst: Schülerin, Rucksack, Rakete, Gitarre, Eis, Karotte?",
-     "a": "Eis",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "Rakete",
-      "Gitarre",
-      "Eis",
-      "Karotte"
+     "q": "Es fehlen Buchstaben. Verbessere im Feld.",
+     "a": "L, M, N, O",
+     "ans": [
+      "L, M, N, O"
      ],
+     "pre": "L, M, O",
+     "lvl": 2,
+     "th": "basis",
      "hints": [
-      "Schau auf den ersten Buchstaben."
+      "Sage das ABC leise auf."
      ],
      "id": "c84"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-     "a": "Bild, Gitarre, Lehrerin, Schaf, Schiff",
+     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
+     "a": "Mann, Maus, Mutter, Mütze",
      "ans": [
-      "Bild, Gitarre, Lehrerin, Schaf, Schiff"
+      "Mann, Maus, Mutter, Mütze"
      ],
-     "pre": "Gitarre, Schiff, Lehrerin, Bild, Schaf",
+     "pre": "Mütze, Mann, Maus, Mutter",
      "lvl": 2,
      "th": "basis",
      "hints": [
@@ -195565,82 +195694,270 @@
      "id": "c85"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-     "a": "Polizist, Regal, Schrank, Spinne, Stift, Zelt",
+     "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+     "a": "N, O, P, Q, R, S",
      "ans": [
-      "Polizist, Regal, Schrank, Spinne, Stift, Zelt"
+      "N, O, P, Q, R, S"
      ],
-     "pre": "Polizist, Regal, Schrank, Zelt, Stift, Spinne",
+     "pre": "N, O, P, R, Q, S",
+     "lvl": 2,
+     "th": "basis",
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c86"
+    },
+    {
+     "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+     "a": "V, W, X, Y, Z",
+     "ans": [
+      "V, W, X, Y, Z"
+     ],
+     "pre": "V, W, X, Z, Y",
+     "lvl": 2,
+     "th": "basis",
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c87"
+    },
+    {
+     "q": "Es fehlen Buchstaben. Verbessere im Feld.",
+     "a": "E, F, G, H, I",
+     "ans": [
+      "E, F, G, H, I"
+     ],
+     "pre": "E, G, H, I",
+     "lvl": 2,
+     "th": "basis",
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c88"
+    },
+    {
+     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
+     "a": "Dach, Delfin, Dorf, Dose, Drache",
+     "ans": [
+      "Dach, Delfin, Dorf, Dose, Drache"
+     ],
+     "pre": "Drache, Delfin, Dorf, Dose, Dach",
      "lvl": 2,
      "th": "basis",
      "hints": [
       "Vergleiche Buchstabe für Buchstabe."
      ],
-     "id": "c86"
-    },
-    {
-     "q": "Welches Wort steht im Alphabet zwischen «Affe» und «Pilz»?",
-     "a": "Nuss",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Vogel",
-      "Schüler",
-      "Nuss",
-      "Schaf"
-     ],
-     "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
-     ],
-     "id": "c87"
-    },
-    {
-     "q": "Welches Wort steht im Alphabet zwischen «Biene» und «Henne»?",
-     "a": "Burg",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Katze",
-      "Vogel",
-      "Burg",
-      "Hund"
-     ],
-     "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
-     ],
-     "id": "c88"
-    },
-    {
-     "q": "Welches Wort kommt im Alphabet zuletzt: Eule, Wald, Junge, Pfütze?",
-     "a": "Wald",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "Eule",
-      "Pfütze",
-      "Junge",
-      "Wald"
-     ],
-     "hints": [
-      "Der letzte Buchstabe im Alphabet ist ganz hinten."
-     ],
      "id": "c89"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuletzt: Rakete, Lied, Henne, Eule, Hund?",
-     "a": "Rakete",
-     "lvl": 1,
-     "th": "basis",
-     "opts": [
-      "Eule",
-      "Hund",
-      "Rakete",
-      "Henne"
+     "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+     "a": "U, V, W, X, Y, Z",
+     "ans": [
+      "U, V, W, X, Y, Z"
      ],
+     "pre": "U, V, X, W, Y, Z",
+     "lvl": 2,
+     "th": "basis",
      "hints": [
-      "Der letzte Buchstabe im Alphabet ist ganz hinten."
+      "Sage das ABC leise auf."
      ],
      "id": "c90"
+    },
+    {
+     "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+     "a": "E, F, G, H, I, J",
+     "ans": [
+      "E, F, G, H, I, J"
+     ],
+     "pre": "E, F, G, H, J, I",
+     "lvl": 2,
+     "th": "basis",
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c91"
+    },
+    {
+     "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+     "a": "M, N, O, P, Q, R, S",
+     "ans": [
+      "M, N, O, P, Q, R, S"
+     ],
+     "pre": "M, N, O, Q, P, R, S",
+     "lvl": 2,
+     "th": "basis",
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c92"
+    },
+    {
+     "q": "Schreibe die Buchstaben rückwärts. Verbessere im Feld.",
+     "a": "Y, X, W, V, U",
+     "ans": [
+      "Y, X, W, V, U"
+     ],
+     "pre": "U, V, W, X, Y",
+     "lvl": 3,
+     "th": "basis",
+     "hints": [
+      "Beginne beim letzten Buchstaben."
+     ],
+     "id": "c93"
+    },
+    {
+     "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+     "a": "T, U, V, W, X, Y",
+     "ans": [
+      "T, U, V, W, X, Y"
+     ],
+     "pre": "T, U, W, V, X, Y",
+     "lvl": 2,
+     "th": "basis",
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c94"
+    },
+    {
+     "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+     "a": "G, H, I, J, K, L",
+     "ans": [
+      "G, H, I, J, K, L"
+     ],
+     "pre": "G, H, J, I, K, L",
+     "lvl": 2,
+     "th": "basis",
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c95"
+    },
+    {
+     "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+     "a": "Q, R, S, T, U, V",
+     "ans": [
+      "Q, R, S, T, U, V"
+     ],
+     "pre": "Q, S, R, T, U, V",
+     "lvl": 2,
+     "th": "basis",
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c96"
+    },
+    {
+     "q": "Es fehlen Buchstaben. Verbessere im Feld.",
+     "a": "B, C, D, E, F",
+     "ans": [
+      "B, C, D, E, F"
+     ],
+     "pre": "B, D, E, F",
+     "lvl": 2,
+     "th": "basis",
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c97"
+    },
+    {
+     "q": "Das ABC ist falsch. Verbessere im Feld.",
+     "a": "O, P, Q",
+     "ans": [
+      "O, P, Q"
+     ],
+     "pre": "O, P, R",
+     "lvl": 2,
+     "th": "basis",
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c98"
+    },
+    {
+     "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+     "a": "O, P, Q, R, S",
+     "ans": [
+      "O, P, Q, R, S"
+     ],
+     "pre": "P, O, Q, R, S",
+     "lvl": 2,
+     "th": "basis",
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c99"
+    },
+    {
+     "q": "Das ABC ist falsch. Verbessere im Feld.",
+     "a": "V, W, X",
+     "ans": [
+      "V, W, X"
+     ],
+     "pre": "V, W, Y",
+     "lvl": 2,
+     "th": "basis",
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c100"
+    },
+    {
+     "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+     "a": "L, M, N, O, P, Q, R",
+     "ans": [
+      "L, M, N, O, P, Q, R"
+     ],
+     "pre": "L, M, N, O, P, R, Q",
+     "lvl": 2,
+     "th": "basis",
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c101"
+    },
+    {
+     "q": "Es fehlen Buchstaben. Verbessere im Feld.",
+     "a": "M, N, O, P, Q, R",
+     "ans": [
+      "M, N, O, P, Q, R"
+     ],
+     "pre": "M, N, O, P, R",
+     "lvl": 2,
+     "th": "basis",
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c102"
+    },
+    {
+     "q": "Schreibe die Buchstaben rückwärts. Verbessere im Feld.",
+     "a": "V, U, T, S, R",
+     "ans": [
+      "V, U, T, S, R"
+     ],
+     "pre": "R, S, T, U, V",
+     "lvl": 3,
+     "th": "basis",
+     "hints": [
+      "Beginne beim letzten Buchstaben."
+     ],
+     "id": "c103"
+    },
+    {
+     "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+     "a": "F, G, H, I, J, K",
+     "ans": [
+      "F, G, H, I, J, K"
+     ],
+     "pre": "F, G, H, I, K, J",
+     "lvl": 2,
+     "th": "basis",
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c104"
     }
    ],
    "exam": {
@@ -195648,90 +195965,6 @@
     "questions": [
      {
       "id": "q1",
-      "q": "Welches Wort kommt im ABC zuerst? Fisch, Pferd, Maus",
-      "explain": "Richtig geordnet: Fisch, Maus, Pferd.",
-      "type": "mc",
-      "options": [
-       "Pferd",
-       "Fisch",
-       "Maus"
-      ],
-      "answer": 1
-     },
-     {
-      "id": "q2",
-      "q": "Welches Wort kommt im ABC zuerst? Kuh, Mond, Fisch",
-      "explain": "Richtig geordnet: Fisch, Kuh, Mond.",
-      "type": "mc",
-      "options": [
-       "Kuh",
-       "Fisch",
-       "Mond"
-      ],
-      "answer": 1
-     },
-     {
-      "id": "q3",
-      "q": "Welches Wort kommt im ABC zuerst? Tisch, Uhr, Mond",
-      "explain": "Richtig geordnet: Mond, Tisch, Uhr.",
-      "type": "mc",
-      "options": [
-       "Tisch",
-       "Uhr",
-       "Mond"
-      ],
-      "answer": 2
-     },
-     {
-      "id": "q4",
-      "q": "Welches Wort kommt im ABC zuerst? Lamm, Mond, Esel",
-      "explain": "Richtig geordnet: Esel, Lamm, Mond.",
-      "type": "mc",
-      "options": [
-       "Lamm",
-       "Esel",
-       "Mond"
-      ],
-      "answer": 1
-     },
-     {
-      "id": "q5",
-      "q": "Welches Wort kommt im ABC zuletzt? Pferd, Nase, Maus",
-      "explain": "",
-      "type": "mc",
-      "options": [
-       "Maus",
-       "Pferd",
-       "Nase"
-      ],
-      "answer": 1
-     },
-     {
-      "id": "q6",
-      "q": "Welches Wort kommt im ABC zuletzt? Sonne, Pferd, Katze",
-      "explain": "",
-      "type": "mc",
-      "options": [
-       "Sonne",
-       "Pferd",
-       "Katze"
-      ],
-      "answer": 0
-     },
-     {
-      "id": "q7",
-      "q": "Welches Wort kommt im ABC zuletzt? Vogel, Esel, Fisch",
-      "explain": "",
-      "type": "mc",
-      "options": [
-       "Fisch",
-       "Esel",
-       "Vogel"
-      ],
-      "answer": 2
-     },
-     {
-      "id": "q8",
       "q": "Schreibe den Buchstaben nach «P».",
       "explain": "Der nächste Buchstabe im ABC.",
       "type": "input",
@@ -195741,7 +195974,7 @@
       "cs": true
      },
      {
-      "id": "q9",
+      "id": "q2",
       "q": "Schreibe den Buchstaben nach «T».",
       "explain": "Der nächste Buchstabe im ABC.",
       "type": "input",
@@ -195751,7 +195984,7 @@
       "cs": true
      },
      {
-      "id": "q10",
+      "id": "q3",
       "q": "Schreibe den Buchstaben nach «W».",
       "explain": "Der nächste Buchstabe im ABC.",
       "type": "input",
@@ -195761,142 +195994,356 @@
       "cs": true
      },
      {
-      "id": "q11",
-      "q": "Welcher Buchstabe kommt nach «D»?",
+      "id": "q4",
+      "q": "Welcher Buchstabe kommt nach «P»?",
       "explain": "",
       "type": "mc",
       "options": [
-       "E",
-       "G",
-       "C",
-       "H"
+       "T",
+       "S",
+       "O",
+       "Q"
       ],
-      "answer": 0
+      "answer": 3
      },
      {
-      "id": "q12",
-      "q": "Welcher Buchstabe kommt nach «G»?",
+      "id": "q5",
+      "q": "Welcher Buchstabe kommt nach «I»?",
       "explain": "",
       "type": "mc",
       "options": [
        "H",
+       "M",
        "J",
-       "K",
-       "F"
+       "L"
+      ],
+      "answer": 2
+     },
+     {
+      "id": "q6",
+      "q": "Welcher Buchstabe kommt nach «K»?",
+      "explain": "",
+      "type": "mc",
+      "options": [
+       "L",
+       "J",
+       "O",
+       "N"
       ],
       "answer": 0
      },
      {
-      "id": "q13",
-      "q": "Welcher Buchstabe kommt nach «N»?",
+      "id": "q7",
+      "q": "Welcher Buchstabe kommt nach «F»?",
       "explain": "",
       "type": "mc",
       "options": [
-       "R",
-       "Q",
+       "J",
+       "I",
+       "E",
+       "G"
+      ],
+      "answer": 3
+     },
+     {
+      "id": "q8",
+      "q": "Welcher Buchstabe kommt nach «O»?",
+      "explain": "",
+      "type": "mc",
+      "options": [
+       "S",
+       "N",
+       "P",
+       "R"
+      ],
+      "answer": 2
+     },
+     {
+      "id": "q9",
+      "q": "Welcher Buchstabe kommt vor «N»?",
+      "explain": "",
+      "type": "mc",
+      "options": [
        "M",
-       "O"
+       "K",
+       "O",
+       "Q"
+      ],
+      "answer": 0
+     },
+     {
+      "id": "q10",
+      "q": "Welcher Buchstabe kommt vor «V»?",
+      "explain": "",
+      "type": "mc",
+      "options": [
+       "U",
+       "S",
+       "W",
+       "Y"
+      ],
+      "answer": 0
+     },
+     {
+      "id": "q11",
+      "q": "Welcher Buchstabe kommt vor «K»?",
+      "explain": "",
+      "type": "mc",
+      "options": [
+       "L",
+       "J",
+       "H",
+       "N"
+      ],
+      "answer": 1
+     },
+     {
+      "id": "q12",
+      "q": "Der wievielte Buchstabe im ABC ist «M»?",
+      "explain": "",
+      "type": "mc",
+      "options": [
+       "der 14.",
+       "der 13.",
+       "der 16.",
+       "der 12."
+      ],
+      "answer": 1
+     },
+     {
+      "id": "q13",
+      "q": "Der wievielte Buchstabe im ABC ist «F»?",
+      "explain": "",
+      "type": "mc",
+      "options": [
+       "der 5.",
+       "der 9.",
+       "der 7.",
+       "der 6."
       ],
       "answer": 3
      },
      {
       "id": "q14",
-      "q": "Bei welchem Buchstaben suchst du «Katze» im Wörterbuch?",
+      "q": "Der wievielte Buchstabe im ABC ist «I»?",
       "explain": "",
       "type": "mc",
       "options": [
-       "K",
-       "D",
-       "A",
-       "B"
-      ],
-      "answer": 0
-     },
-     {
-      "id": "q15",
-      "q": "Bei welchem Buchstaben suchst du «Mond» im Wörterbuch?",
-      "explain": "",
-      "type": "mc",
-      "options": [
-       "M",
-       "B",
-       "A",
-       "D"
-      ],
-      "answer": 0
-     },
-     {
-      "id": "q16",
-      "q": "Bei welchem Buchstaben suchst du «Pferd» im Wörterbuch?",
-      "explain": "",
-      "type": "mc",
-      "options": [
-       "D",
-       "P",
-       "A",
-       "B"
+       "der 10.",
+       "der 9.",
+       "der 12.",
+       "der 8."
       ],
       "answer": 1
      },
      {
-      "id": "q17",
-      "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
+      "id": "q15",
+      "q": "Bei welchem Buchstaben suchst du «Katze» im Wörterbuch?",
       "explain": "",
-      "type": "input",
-      "answer": [
-       "Mädchen, Pizza, Schloss, Schnecke"
+      "type": "mc",
+      "options": [
+       "D",
+       "B",
+       "K",
+       "A"
       ],
-      "pre": "Schloss, Pizza, Mädchen, Schnecke"
+      "answer": 2
+     },
+     {
+      "id": "q16",
+      "q": "Bei welchem Buchstaben suchst du «Mond» im Wörterbuch?",
+      "explain": "",
+      "type": "mc",
+      "options": [
+       "D",
+       "A",
+       "B",
+       "M"
+      ],
+      "answer": 3
+     },
+     {
+      "id": "q17",
+      "q": "Bei welchem Buchstaben suchst du «Pferd» im Wörterbuch?",
+      "explain": "",
+      "type": "mc",
+      "options": [
+       "A",
+       "B",
+       "D",
+       "P"
+      ],
+      "answer": 3
      },
      {
       "id": "q18",
-      "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-      "explain": "",
+      "q": "Es fehlen Buchstaben. Verbessere im Feld.",
+      "explain": "Sage das ABC leise auf.",
       "type": "input",
       "answer": [
-       "Ballon, Fisch, Pizza, Schildkröte"
+       "D, E, F, G"
       ],
-      "pre": "Pizza, Fisch, Ballon, Schildkröte"
+      "pre": "D, E, G"
      },
      {
       "id": "q19",
-      "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-      "explain": "",
+      "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+      "explain": "Sage das ABC leise auf.",
       "type": "input",
       "answer": [
-       "Arzt, Insel, Messer, Pause"
+       "P, Q, R, S, T"
       ],
-      "pre": "Arzt, Messer, Insel, Pause"
+      "pre": "P, R, Q, S, T"
      },
      {
       "id": "q20",
-      "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-      "explain": "",
+      "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
+      "explain": "Vergleiche Buchstabe für Buchstabe.",
       "type": "input",
       "answer": [
-       "Arzt, Geschichte, Klasse, Märchen, Mütze, Tante"
+       "Keks, Kuchen, Tasse, Torte, Trommel, Vogel"
       ],
-      "pre": "Arzt, Märchen, Mütze, Klasse, Geschichte, Tante"
+      "pre": "Tasse, Vogel, Trommel, Kuchen, Torte, Keks"
      },
      {
       "id": "q21",
-      "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-      "explain": "",
+      "q": "Das ABC ist falsch. Verbessere im Feld.",
+      "explain": "Sage das ABC leise auf.",
       "type": "input",
       "answer": [
-       "Birne, Hase, Hose, Schulhof, Zebra, Ziege"
+       "Q, R, S"
       ],
-      "pre": "Hose, Ziege, Birne, Zebra, Schulhof, Hase"
+      "pre": "Q, R, T"
      },
      {
       "id": "q22",
-      "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-      "explain": "",
+      "q": "Das ABC ist falsch. Verbessere im Feld.",
+      "explain": "Sage das ABC leise auf.",
       "type": "input",
       "answer": [
-       "Biene, Fenster, Pause, Rakete, Schüler, Schülerin"
+       "T, U, V"
       ],
-      "pre": "Pause, Fenster, Schüler, Schülerin, Rakete, Biene"
+      "pre": "T, U, W"
+     },
+     {
+      "id": "q23",
+      "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+      "explain": "Sage das ABC leise auf.",
+      "type": "input",
+      "answer": [
+       "P, Q, R, S, T, U, V"
+      ],
+      "pre": "P, Q, R, T, S, U, V"
+     },
+     {
+      "id": "q24",
+      "q": "Schreibe die Buchstaben rückwärts. Verbessere im Feld.",
+      "explain": "Beginne beim letzten Buchstaben.",
+      "type": "input",
+      "answer": [
+       "J, I, H, G, F"
+      ],
+      "pre": "F, G, H, I, J"
+     },
+     {
+      "id": "q25",
+      "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
+      "explain": "Vergleiche Buchstabe für Buchstabe.",
+      "type": "input",
+      "answer": [
+       "Bett, Fenster, Stuhl, Wand"
+      ],
+      "pre": "Fenster, Bett, Stuhl, Wand"
+     },
+     {
+      "id": "q26",
+      "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+      "explain": "Sage das ABC leise auf.",
+      "type": "input",
+      "answer": [
+       "J, K, L, M, N, O"
+      ],
+      "pre": "K, J, L, M, N, O"
+     },
+     {
+      "id": "q27",
+      "q": "Es fehlen Buchstaben. Verbessere im Feld.",
+      "explain": "Sage das ABC leise auf.",
+      "type": "input",
+      "answer": [
+       "I, J, K, L"
+      ],
+      "pre": "I, J, L"
+     },
+     {
+      "id": "q28",
+      "q": "Schreibe die Buchstaben rückwärts. Verbessere im Feld.",
+      "explain": "Beginne beim letzten Buchstaben.",
+      "type": "input",
+      "answer": [
+       "H, G, F, E"
+      ],
+      "pre": "E, F, G, H"
+     },
+     {
+      "id": "q29",
+      "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+      "explain": "Sage das ABC leise auf.",
+      "type": "input",
+      "answer": [
+       "T, U, V, W, X"
+      ],
+      "pre": "T, U, V, X, W"
+     },
+     {
+      "id": "q30",
+      "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
+      "explain": "Vergleiche Buchstabe für Buchstabe.",
+      "type": "input",
+      "answer": [
+       "Katze, Maler, Mond, Schwimmbad, Socke, Ziege"
+      ],
+      "pre": "Katze, Ziege, Schwimmbad, Socke, Maler, Mond"
+     },
+     {
+      "id": "q31",
+      "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
+      "explain": "Vergleiche Buchstabe für Buchstabe.",
+      "type": "input",
+      "answer": [
+       "Zahn, Zebra, Zelt, Ziege, Zimmer"
+      ],
+      "pre": "Zimmer, Zebra, Ziege, Zahn, Zelt"
+     },
+     {
+      "id": "q32",
+      "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+      "explain": "Sage das ABC leise auf.",
+      "type": "input",
+      "answer": [
+       "A, B, C, D, E, F, G"
+      ],
+      "pre": "A, C, B, D, E, F, G"
+     },
+     {
+      "id": "q33",
+      "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
+      "explain": "Vergleiche Buchstabe für Buchstabe.",
+      "type": "input",
+      "answer": [
+       "Clown, Eis, Gitarre, Karotte, Rakete"
+      ],
+      "pre": "Rakete, Gitarre, Eis, Karotte, Clown"
+     },
+     {
+      "id": "q34",
+      "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+      "explain": "Sage das ABC leise auf.",
+      "type": "input",
+      "answer": [
+       "B, C, D, E, F, G, H"
+      ],
+      "pre": "B, D, C, E, F, G, H"
      }
     ]
    }
@@ -195912,38 +196359,46 @@
    "explain": [
     {
      "h": "Worum geht es?",
-     "text": "Du suchst im Wörterbuch das Wort «Katze». Du weisst, dass K nach J und vor L kommt. Dann findest du es schnell.",
+     "text": "Du sagst das ABC auf: A, B, C, D … Jeder Buchstabe hat seinen festen Platz. K ist der 11. Buchstabe. Davor steht J, danach steht L.",
      "visuals": [
       {
        "type": "scene",
        "kind": "letters",
        "word": "ABC",
-       "say": "Das ABC hilft beim Suchen"
+       "say": "Das ABC hat eine feste Reihe"
       }
      ]
     },
     {
      "h": "Das musst du wissen",
-     "text": "Im Wörterbuch stehen die Wörter nach dem ABC.",
+     "text": "Das ABC ist eine Reihe mit 26 Buchstaben.",
      "visuals": [
       {
        "type": "tbl",
        "rows": [
         [
-         "{0|1. Buchstabe}",
-         "Ball kommt vor Dach: B vor D"
+         "{0|Reihe}",
+         "A B C D E … X Y Z"
         ],
         [
-         "{1|2. Buchstabe}",
-         "Hand kommt vor Hund: a vor u"
+         "{1|Platz}",
+         "A ist der 1., M der 13., Z der 26."
         ],
         [
-         "{2|3. Buchstabe}",
-         "Hase kommt vor Haus: s vor u"
+         "{2|Davor}",
+         "Vor K steht J."
+        ],
+        [
+         "{3|Danach}",
+         "Nach K steht L."
+        ],
+        [
+         "{4|Vokale}",
+         "A, E, I, O, U"
         ]
        ],
        "head": [
-        "Schritt",
+        "Was",
         "Beispiel"
        ]
       }
@@ -195951,7 +196406,238 @@
     },
     {
      "h": "Beispielsätze",
-     "text": "Hier siehst du, welcher Buchstabe entscheidet.",
+     "text": "Hier siehst du die Reihe mit Platznummern. Die Vokale sind blau.",
+     "visuals": [
+      {
+       "type": "chips",
+       "parts": [
+        [
+         "A",
+         "1",
+         1
+        ],
+        [
+         "B",
+         "2",
+         7
+        ],
+        [
+         "C",
+         "3",
+         7
+        ],
+        [
+         "D",
+         "4",
+         7
+        ],
+        [
+         "E",
+         "5",
+         1
+        ],
+        [
+         "F",
+         "6",
+         7
+        ],
+        [
+         "G",
+         "7",
+         7
+        ],
+        [
+         "H",
+         "8",
+         7
+        ],
+        [
+         "I",
+         "9",
+         1
+        ],
+        [
+         "J",
+         "10",
+         7
+        ],
+        [
+         "K",
+         "11",
+         7
+        ],
+        [
+         "L",
+         "12",
+         7
+        ],
+        [
+         "M",
+         "13",
+         7
+        ]
+       ],
+       "cap": "A bis M: Platz 1 bis 13."
+      },
+      {
+       "type": "chips",
+       "parts": [
+        [
+         "N",
+         "14",
+         7
+        ],
+        [
+         "O",
+         "15",
+         1
+        ],
+        [
+         "P",
+         "16",
+         7
+        ],
+        [
+         "Q",
+         "17",
+         7
+        ],
+        [
+         "R",
+         "18",
+         7
+        ],
+        [
+         "S",
+         "19",
+         7
+        ],
+        [
+         "T",
+         "20",
+         7
+        ],
+        [
+         "U",
+         "21",
+         1
+        ],
+        [
+         "V",
+         "22",
+         7
+        ],
+        [
+         "W",
+         "23",
+         7
+        ],
+        [
+         "X",
+         "24",
+         7
+        ],
+        [
+         "Y",
+         "25",
+         7
+        ],
+        [
+         "Z",
+         "26",
+         7
+        ]
+       ],
+       "cap": "N bis Z: Platz 14 bis 26."
+      },
+      {
+       "type": "chips",
+       "parts": [
+        [
+         "J",
+         "davor",
+         7
+        ],
+        [
+         "K",
+         "dieser",
+         0
+        ],
+        [
+         "L",
+         "danach",
+         7
+        ]
+       ],
+       "cap": "Vor K steht J, nach K steht L."
+      }
+     ]
+    },
+    {
+     "h": "So gehst du vor",
+     "text": "So findest du einen Buchstaben im ABC.",
+     "visuals": [
+      {
+       "type": "lines",
+       "num": true,
+       "items": [
+        [
+         "Sage das ABC leise auf, bis du beim Buchstaben bist.",
+         "",
+         "Gesucht: K → A B C D E F G H I J K"
+        ],
+        [
+         "Welcher Buchstabe kommt kurz davor? Das ist der Buchstabe davor.",
+         "",
+         "Vor K steht J."
+        ],
+        [
+         "Welcher Buchstabe kommt gleich danach? Das ist der Buchstabe danach.",
+         "",
+         "Nach K steht L."
+        ],
+        [
+         "Zähle mit, wenn du den Platz wissen willst.",
+         "",
+         "K ist der 11. Buchstabe."
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "h": "Ein Beispiel gezeichnet",
+     "text": "Der Buchstabe K, gezeichnet. Die Pfeile zeigen davor, danach und den Platz.",
+     "visuals": [
+      {
+       "type": "anno",
+       "groups": [
+        [
+         "J",
+         "davor",
+         5,
+         "Platz 10"
+        ],
+        [
+         "K",
+         "dieser Buchstabe",
+         0,
+         "Platz 11"
+        ],
+        [
+         "L",
+         "danach",
+         6,
+         "Platz 12"
+        ]
+       ],
+       "cap": "… I, J, K, L, M …"
+      }
+     ]
+    },
+    {
+     "h": "Wörter nach dem ABC ordnen",
+     "text": "Auch Wörter stehen in der Reihe des ABC. Zuerst zählt der erste Buchstabe. Ist er gleich, zählt der zweite.",
      "visuals": [
       {
        "type": "chips",
@@ -195993,102 +196679,13 @@
          1
         ]
        ],
-       "cap": "Alle drei beginnen mit H. Dann zählt der zweite Buchstabe."
-      },
-      {
-       "type": "chips",
-       "parts": [
-        [
-         "Hand",
-         "n",
-         0
-        ],
-        [
-         "Hase",
-         "s",
-         1
-        ],
-        [
-         "Haus",
-         "u",
-         2
-        ]
-       ],
-       "cap": "Hand, Hase, Haus: Auch der zweite Buchstabe ist gleich. Der dritte entscheidet: n, s, u."
-      }
-     ]
-    },
-    {
-     "h": "So gehst du vor",
-     "text": "So ordnest du Wörter nach dem ABC.",
-     "visuals": [
-      {
-       "type": "lines",
-       "num": true,
-       "items": [
-        [
-         "Schau auf den ersten Buchstaben jedes Wortes.",
-         "",
-         "Hund, Apfel, Maus → H, A, M"
-        ],
-        [
-         "Ordne die Wörter nach diesem Buchstaben.",
-         "",
-         "A (Apfel), H (Hund), M (Maus)"
-        ],
-        [
-         "Ist der erste Buchstabe gleich, vergleiche den zweiten.",
-         "",
-         "Hand, Hund: H ist gleich, dann a vor u → Hand, Hund"
-        ],
-        [
-         "Lies die Reihe noch einmal zur Kontrolle.",
-         "",
-         "Apfel, Hand, Hund, Maus ✔"
-        ]
-       ]
-      }
-     ]
-    },
-    {
-     "h": "Ein Beispiel gezeichnet",
-     "text": "Die Wörter, gezeichnet. Die Pfeile zeigen die Reihenfolge.",
-     "visuals": [
-      {
-       "type": "anno",
-       "groups": [
-        [
-         "Apfel",
-         "1. Platz",
-         5,
-         "A kommt zuerst"
-        ],
-        [
-         "Hase",
-         "2. Platz",
-         6,
-         "H, dann a"
-        ],
-        [
-         "Hund",
-         "3. Platz",
-         4,
-         "H, dann u"
-        ],
-        [
-         "Maus",
-         "4. Platz",
-         2,
-         "M kommt zuletzt"
-        ]
-       ],
-       "cap": "Apfel, Hase, Hund, Maus"
+       "cap": "Alle beginnen mit H. Dann zählt der zweite Buchstabe: a, a, u."
       }
      ]
     },
     {
      "h": "Umlaute und Wörterbuch",
-     "text": "Im Wörterbuch stehen ä, ö, ü bei a, o, u. Wörter mit gleichem Anfang ordnest du nach dem nächsten Buchstaben.",
+     "text": "Im Wörterbuch stehen ä, ö, ü bei a, o, u. Das ß schreibst du in der Schweiz als ss.",
      "visuals": [
       {
        "type": "tbl",
@@ -196125,22 +196722,28 @@
        "type": "cards",
        "items": [
         [
-         "Reihenfolge",
-         "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z",
-         "A vorne, Z hinten",
+         "Reihe",
+         "26 Buchstaben, A vorne, Z hinten.",
+         "A B C … Z",
          0
         ],
         [
-         "Nachschlagen",
-         "Öffne das Wörterbuch in der Nähe des Buchstabens.",
-         "K ist in der Mitte",
+         "Vokale",
+         "A, E, I, O, U. Alle anderen sind Konsonanten.",
+         "Auge, Ofen",
          1
         ],
         [
-         "Umlaute",
-         "ä sortiert man bei a, ö bei o, ü bei u.",
-         "Bär bei B-a",
+         "Mitte",
+         "M ist der 13. Buchstabe, die Mitte vom ABC.",
+         "A–M und N–Z",
          2
+        ],
+        [
+         "Wörter ordnen",
+         "Zuerst zählt der erste Buchstabe, dann der zweite.",
+         "Hand vor Hund",
+         3
         ]
        ]
       }
@@ -196150,20 +196753,20 @@
    "theory": {
     "basis": {
      "h": "Alphabet",
-     "text": "Das ABC hat 26 Buchstaben. Wörter ordnet man nach dem ersten Buchstaben. Ist er gleich, zählt der zweite."
+     "text": "Das ABC hat 26 Buchstaben in fester Reihe: A ist der 1., Z der 26. Zu jedem Buchstaben gibt es einen davor und einen danach."
     }
    },
    "cards": [
     {
-     "q": "Welcher Buchstabe kommt nach «D»?",
-     "a": "E",
+     "q": "Welcher Buchstabe kommt nach «C»?",
+     "a": "D",
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "G",
-      "I",
-      "E",
-      "C"
+      "D",
+      "B",
+      "F",
+      "H"
      ],
      "hints": [
       "Sage das ABC leise auf."
@@ -196171,15 +196774,15 @@
      "id": "c1"
     },
     {
-     "q": "Welcher Buchstabe kommt nach «M»?",
-     "a": "N",
+     "q": "Welcher Buchstabe kommt nach «G»?",
+     "a": "H",
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "N",
-      "L",
-      "P",
-      "R"
+      "H",
+      "F",
+      "J",
+      "L"
      ],
      "hints": [
       "Sage das ABC leise auf."
@@ -196187,15 +196790,15 @@
      "id": "c2"
     },
     {
-     "q": "Welcher Buchstabe kommt nach «N»?",
-     "a": "O",
+     "q": "Welcher Buchstabe kommt nach «J»?",
+     "a": "K",
      "lvl": 1,
      "th": "basis",
      "opts": [
       "O",
-      "Q",
+      "I",
       "M",
-      "S"
+      "K"
      ],
      "hints": [
       "Sage das ABC leise auf."
@@ -196203,15 +196806,15 @@
      "id": "c3"
     },
     {
-     "q": "Welcher Buchstabe kommt nach «S»?",
-     "a": "T",
+     "q": "Welcher Buchstabe kommt nach «Y»?",
+     "a": "Z",
      "lvl": 1,
      "th": "basis",
      "opts": [
       "X",
-      "R",
-      "V",
-      "T"
+      "B",
+      "D",
+      "Z"
      ],
      "hints": [
       "Sage das ABC leise auf."
@@ -196219,15 +196822,15 @@
      "id": "c4"
     },
     {
-     "q": "Welcher Buchstabe kommt nach «C»?",
-     "a": "D",
+     "q": "Welcher Buchstabe kommt nach «V»?",
+     "a": "W",
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "H",
-      "D",
-      "F",
-      "B"
+      "U",
+      "Y",
+      "W",
+      "A"
      ],
      "hints": [
       "Sage das ABC leise auf."
@@ -196235,15 +196838,15 @@
      "id": "c5"
     },
     {
-     "q": "Welcher Buchstabe kommt nach «T»?",
-     "a": "U",
+     "q": "Welcher Buchstabe kommt nach «U»?",
+     "a": "V",
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "S",
-      "W",
-      "U",
-      "Y"
+      "T",
+      "X",
+      "V",
+      "Z"
      ],
      "hints": [
       "Sage das ABC leise auf."
@@ -196251,15 +196854,15 @@
      "id": "c6"
     },
     {
-     "q": "Welcher Buchstabe kommt nach «H»?",
-     "a": "I",
+     "q": "Welcher Buchstabe kommt nach «L»?",
+     "a": "M",
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "K",
+      "O",
       "M",
-      "I",
-      "G"
+      "Q",
+      "K"
      ],
      "hints": [
       "Sage das ABC leise auf."
@@ -196267,14 +196870,14 @@
      "id": "c7"
     },
     {
-     "q": "Welcher Buchstabe kommt vor «H»?",
-     "a": "G",
+     "q": "Welcher Buchstabe kommt vor «K»?",
+     "a": "J",
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "E",
-      "G",
-      "I",
+      "O",
+      "J",
+      "H",
       "L"
      ],
      "hints": [
@@ -196283,15 +196886,15 @@
      "id": "c8"
     },
     {
-     "q": "Welcher Buchstabe kommt vor «F»?",
-     "a": "E",
+     "q": "Welcher Buchstabe kommt vor «L»?",
+     "a": "K",
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "E",
-      "J",
-      "G",
-      "C"
+      "P",
+      "I",
+      "K",
+      "M"
      ],
      "hints": [
       "Sage das ABC leise auf."
@@ -196299,15 +196902,15 @@
      "id": "c9"
     },
     {
-     "q": "Welcher Buchstabe kommt vor «N»?",
-     "a": "M",
+     "q": "Welcher Buchstabe kommt vor «B»?",
+     "a": "A",
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "R",
-      "K",
-      "M",
-      "O"
+      "F",
+      "A",
+      "Y",
+      "C"
      ],
      "hints": [
       "Sage das ABC leise auf."
@@ -196315,15 +196918,15 @@
      "id": "c10"
     },
     {
-     "q": "Welcher Buchstabe kommt vor «T»?",
-     "a": "S",
+     "q": "Welcher Buchstabe kommt vor «E»?",
+     "a": "D",
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "X",
-      "S",
-      "Q",
-      "U"
+      "F",
+      "D",
+      "B",
+      "I"
      ],
      "hints": [
       "Sage das ABC leise auf."
@@ -196331,15 +196934,15 @@
      "id": "c11"
     },
     {
-     "q": "Welcher Buchstabe kommt vor «L»?",
-     "a": "K",
+     "q": "Welcher Buchstabe kommt vor «O»?",
+     "a": "N",
      "lvl": 1,
      "th": "basis",
      "opts": [
-      "K",
-      "I",
+      "S",
+      "N",
       "P",
-      "M"
+      "L"
      ],
      "hints": [
       "Sage das ABC leise auf."
@@ -196347,15 +196950,15 @@
      "id": "c12"
     },
     {
-     "q": "Welcher Buchstabe fehlt? Q, ___, S",
-     "a": "R",
-     "lvl": 2,
+     "q": "Welcher Buchstabe kommt vor «Z»?",
+     "a": "Y",
+     "lvl": 1,
      "th": "basis",
      "opts": [
-      "S",
-      "T",
-      "Q",
-      "R"
+      "A",
+      "Y",
+      "D",
+      "W"
      ],
      "hints": [
       "Sage das ABC leise auf."
@@ -196363,15 +196966,15 @@
      "id": "c13"
     },
     {
-     "q": "Welcher Buchstabe fehlt? J, ___, L",
-     "a": "K",
-     "lvl": 2,
+     "q": "Welcher Buchstabe kommt vor «Y»?",
+     "a": "X",
+     "lvl": 1,
      "th": "basis",
      "opts": [
-      "M",
-      "J",
-      "L",
-      "K"
+      "V",
+      "Z",
+      "X",
+      "C"
      ],
      "hints": [
       "Sage das ABC leise auf."
@@ -196379,15 +196982,15 @@
      "id": "c14"
     },
     {
-     "q": "Welcher Buchstabe fehlt? K, ___, M",
+     "q": "Welcher Buchstabe kommt vor «M»?",
      "a": "L",
-     "lvl": 2,
+     "lvl": 1,
      "th": "basis",
      "opts": [
-      "N",
       "L",
-      "K",
-      "M"
+      "J",
+      "N",
+      "Q"
      ],
      "hints": [
       "Sage das ABC leise auf."
@@ -196395,15 +196998,15 @@
      "id": "c15"
     },
     {
-     "q": "Welcher Buchstabe fehlt? D, ___, F",
-     "a": "E",
-     "lvl": 2,
+     "q": "Welcher Buchstabe kommt vor «H»?",
+     "a": "G",
+     "lvl": 1,
      "th": "basis",
      "opts": [
+      "L",
       "E",
-      "F",
-      "D",
-      "G"
+      "G",
+      "I"
      ],
      "hints": [
       "Sage das ABC leise auf."
@@ -196411,21 +197014,580 @@
      "id": "c16"
     },
     {
+     "q": "Welcher Buchstabe fehlt? P, ___, R",
+     "a": "Q",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "S",
+      "P",
+      "Q",
+      "R"
+     ],
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c17"
+    },
+    {
+     "q": "Welcher Buchstabe fehlt? Q, ___, S",
+     "a": "R",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "R",
+      "S",
+      "T",
+      "Q"
+     ],
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c18"
+    },
+    {
+     "q": "Welcher Buchstabe fehlt? U, ___, W",
+     "a": "V",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "U",
+      "V",
+      "W",
+      "X"
+     ],
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c19"
+    },
+    {
+     "q": "Welcher Buchstabe fehlt? D, ___, F",
+     "a": "E",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "D",
+      "G",
+      "E",
+      "F"
+     ],
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c20"
+    },
+    {
+     "q": "Welcher Buchstabe fehlt? T, ___, V",
+     "a": "U",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "U",
+      "W",
+      "T",
+      "V"
+     ],
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c21"
+    },
+    {
+     "q": "Welcher Buchstabe fehlt? J, ___, L",
+     "a": "K",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "J",
+      "K",
+      "M",
+      "L"
+     ],
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
+     "id": "c22"
+    },
+    {
+     "q": "Der wievielte Buchstabe im ABC ist «B»?",
+     "a": "der 2.",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "der 2.",
+      "der 3.",
+      "der 5.",
+      "der 1."
+     ],
+     "hints": [
+      "Zähle das ABC von A an."
+     ],
+     "id": "c23"
+    },
+    {
+     "q": "Der wievielte Buchstabe im ABC ist «L»?",
+     "a": "der 12.",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "der 12.",
+      "der 13.",
+      "der 15.",
+      "der 11."
+     ],
+     "hints": [
+      "Zähle das ABC von A an."
+     ],
+     "id": "c24"
+    },
+    {
+     "q": "Der wievielte Buchstabe im ABC ist «W»?",
+     "a": "der 23.",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "der 26.",
+      "der 23.",
+      "der 22.",
+      "der 24."
+     ],
+     "hints": [
+      "Zähle das ABC von A an."
+     ],
+     "id": "c25"
+    },
+    {
+     "q": "Der wievielte Buchstabe im ABC ist «V»?",
+     "a": "der 22.",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "der 25.",
+      "der 22.",
+      "der 21.",
+      "der 23."
+     ],
+     "hints": [
+      "Zähle das ABC von A an."
+     ],
+     "id": "c26"
+    },
+    {
+     "q": "Der wievielte Buchstabe im ABC ist «G»?",
+     "a": "der 7.",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "der 7.",
+      "der 10.",
+      "der 8.",
+      "der 6."
+     ],
+     "hints": [
+      "Zähle das ABC von A an."
+     ],
+     "id": "c27"
+    },
+    {
+     "q": "Der wievielte Buchstabe im ABC ist «P»?",
+     "a": "der 16.",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "der 17.",
+      "der 19.",
+      "der 15.",
+      "der 16."
+     ],
+     "hints": [
+      "Zähle das ABC von A an."
+     ],
+     "id": "c28"
+    },
+    {
+     "q": "Der wievielte Buchstabe im ABC ist «K»?",
+     "a": "der 11.",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "der 14.",
+      "der 12.",
+      "der 10.",
+      "der 11."
+     ],
+     "hints": [
+      "Zähle das ABC von A an."
+     ],
+     "id": "c29"
+    },
+    {
+     "q": "Der wievielte Buchstabe im ABC ist «U»?",
+     "a": "der 21.",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "der 20.",
+      "der 21.",
+      "der 24.",
+      "der 22."
+     ],
+     "hints": [
+      "Zähle das ABC von A an."
+     ],
+     "id": "c30"
+    },
+    {
+     "q": "Welcher Buchstabe ist der 23. im ABC?",
+     "a": "W",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "Y",
+      "W",
+      "X",
+      "V"
+     ],
+     "hints": [
+      "Zähle das ABC von A an."
+     ],
+     "id": "c31"
+    },
+    {
+     "q": "Welcher Buchstabe ist der 16. im ABC?",
+     "a": "P",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "P",
+      "Q",
+      "R",
+      "O"
+     ],
+     "hints": [
+      "Zähle das ABC von A an."
+     ],
+     "id": "c32"
+    },
+    {
+     "q": "Welcher Buchstabe ist der 6. im ABC?",
+     "a": "F",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "G",
+      "F",
+      "H",
+      "E"
+     ],
+     "hints": [
+      "Zähle das ABC von A an."
+     ],
+     "id": "c33"
+    },
+    {
+     "q": "Welcher Buchstabe ist der 24. im ABC?",
+     "a": "X",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "X",
+      "Z",
+      "W",
+      "Y"
+     ],
+     "hints": [
+      "Zähle das ABC von A an."
+     ],
+     "id": "c34"
+    },
+    {
+     "q": "Welcher Buchstabe ist der 9. im ABC?",
+     "a": "I",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "K",
+      "J",
+      "H",
+      "I"
+     ],
+     "hints": [
+      "Zähle das ABC von A an."
+     ],
+     "id": "c35"
+    },
+    {
+     "q": "Welcher Buchstabe ist der 12. im ABC?",
+     "a": "L",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "L",
+      "K",
+      "M",
+      "N"
+     ],
+     "hints": [
+      "Zähle das ABC von A an."
+     ],
+     "id": "c36"
+    },
+    {
+     "q": "Wie viele Buchstaben hat das ABC?",
+     "a": "26",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "24",
+      "30",
+      "26",
+      "28"
+     ],
+     "hints": [
+      "Zähle A bis Z."
+     ],
+     "id": "c37"
+    },
+    {
+     "q": "Welcher Buchstabe steht am Anfang vom ABC?",
+     "a": "A",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "Z",
+      "A",
+      "M",
+      "B"
+     ],
+     "hints": [],
+     "id": "c38"
+    },
+    {
+     "q": "Welcher Buchstabe steht am Ende vom ABC?",
+     "a": "Z",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "A",
+      "Y",
+      "X",
+      "Z"
+     ],
+     "hints": [],
+     "id": "c39"
+    },
+    {
+     "q": "Tippe alle Vokale an.",
+     "a": "A, E, I, O",
+     "ans": [
+      "A",
+      "E",
+      "I",
+      "O"
+     ],
+     "multi": true,
+     "opts": [
+      "E",
+      "O",
+      "T",
+      "A",
+      "I",
+      "M",
+      "K",
+      "B"
+     ],
+     "lvl": 2,
+     "th": "basis",
+     "hints": [
+      "Vokale: A, E, I, O, U."
+     ],
+     "id": "c40"
+    },
+    {
+     "q": "Tippe alle Konsonanten an.",
+     "a": "B, K, M",
+     "ans": [
+      "B",
+      "K",
+      "M"
+     ],
+     "multi": true,
+     "opts": [
+      "O",
+      "B",
+      "M",
+      "K",
+      "E",
+      "A"
+     ],
+     "lvl": 2,
+     "th": "basis",
+     "hints": [
+      "Alle ausser A, E, I, O, U."
+     ],
+     "id": "c41"
+    },
+    {
+     "q": "Wie viele Buchstaben liegen zwischen B und F?",
+     "a": "3",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "4",
+      "5",
+      "3",
+      "2"
+     ],
+     "hints": [
+      "Zähle die Buchstaben dazwischen."
+     ],
+     "id": "c42"
+    },
+    {
+     "q": "Wie viele Buchstaben liegen zwischen G und K?",
+     "a": "3",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "hints": [
+      "Zähle die Buchstaben dazwischen."
+     ],
+     "id": "c43"
+    },
+    {
+     "q": "Wie viele Buchstaben liegen zwischen L und O?",
+     "a": "2",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "3",
+      "2",
+      "4",
+      "1"
+     ],
+     "hints": [
+      "Zähle die Buchstaben dazwischen."
+     ],
+     "id": "c44"
+    },
+    {
+     "q": "Welches Wort kommt im ABC zuerst? Kuh, Fisch, Vogel",
+     "a": "Fisch",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "Fisch",
+      "Kuh",
+      "Vogel"
+     ],
+     "hints": [
+      "Vergleiche die Anfangsbuchstaben."
+     ],
+     "why": "Richtig geordnet: Fisch, Kuh, Vogel.",
+     "id": "c45"
+    },
+    {
+     "q": "Welches Wort kommt im ABC zuerst? Uhr, Tisch, Baum",
+     "a": "Baum",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "Baum",
+      "Tisch",
+      "Uhr"
+     ],
+     "hints": [
+      "Vergleiche die Anfangsbuchstaben."
+     ],
+     "why": "Richtig geordnet: Baum, Tisch, Uhr.",
+     "id": "c46"
+    },
+    {
+     "q": "Welches Wort kommt im ABC zuerst? Uhr, Mond, Dach",
+     "a": "Dach",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "Dach",
+      "Uhr",
+      "Mond"
+     ],
+     "hints": [
+      "Vergleiche die Anfangsbuchstaben."
+     ],
+     "why": "Richtig geordnet: Dach, Mond, Uhr.",
+     "id": "c47"
+    },
+    {
+     "q": "Welches Wort kommt im ABC zuerst? Uhr, Apfel, Maus",
+     "a": "Apfel",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "Maus",
+      "Uhr",
+      "Apfel"
+     ],
+     "hints": [
+      "Vergleiche die Anfangsbuchstaben."
+     ],
+     "why": "Richtig geordnet: Apfel, Maus, Uhr.",
+     "id": "c48"
+    },
+    {
+     "q": "Welches Wort kommt im ABC zuerst? Baum, Wolke, Ball",
+     "a": "Ball",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "Ball",
+      "Baum",
+      "Wolke"
+     ],
+     "hints": [
+      "Vergleiche die Anfangsbuchstaben."
+     ],
+     "why": "Richtig geordnet: Ball, Baum, Wolke.",
+     "id": "c49"
+    },
+    {
+     "q": "Welches Wort kommt im ABC zuerst? Dach, Igel, Gans",
+     "a": "Dach",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "Gans",
+      "Dach",
+      "Igel"
+     ],
+     "hints": [
+      "Vergleiche die Anfangsbuchstaben."
+     ],
+     "why": "Richtig geordnet: Dach, Gans, Igel.",
+     "id": "c50"
+    },
+    {
      "q": "Welches Wort kommt im ABC zuerst? Hund, Hand, Haus, Hase",
      "a": "Hand",
      "lvl": 2,
      "th": "basis",
      "opts": [
-      "Hase",
-      "Hund",
       "Hand",
-      "Haus"
+      "Hase",
+      "Haus",
+      "Hund"
      ],
      "hints": [
-      "Vergleiche die Anfangsbuchstaben."
+      "Vergleiche den zweiten Buchstaben."
      ],
      "why": "Richtig geordnet: Hand, Hase, Haus, Hund.",
-     "id": "c17"
+     "id": "c51"
     },
     {
      "q": "Welches Wort kommt im ABC zuerst? Schule, Schaf, Schiff, Schuh",
@@ -196433,16 +197595,16 @@
      "lvl": 2,
      "th": "basis",
      "opts": [
-      "Schaf",
       "Schiff",
-      "Schuh",
-      "Schule"
+      "Schule",
+      "Schaf",
+      "Schuh"
      ],
      "hints": [
-      "Vergleiche die Anfangsbuchstaben."
+      "Vergleiche den zweiten Buchstaben."
      ],
      "why": "Richtig geordnet: Schaf, Schiff, Schuh, Schule.",
-     "id": "c18"
+     "id": "c52"
     },
     {
      "q": "Welches Wort kommt im ABC zuerst? Ball, Baum, Bank, Bild",
@@ -196450,33 +197612,16 @@
      "lvl": 2,
      "th": "basis",
      "opts": [
+      "Bank",
       "Baum",
       "Ball",
-      "Bank",
       "Bild"
      ],
      "hints": [
-      "Vergleiche die Anfangsbuchstaben."
+      "Vergleiche den zweiten Buchstaben."
      ],
      "why": "Richtig geordnet: Ball, Bank, Baum, Bild.",
-     "id": "c19"
-    },
-    {
-     "q": "Welches Wort kommt im ABC zuerst? Tasche, Tafel, Tag, Tante",
-     "a": "Tafel",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Tasche",
-      "Tante",
-      "Tafel",
-      "Tag"
-     ],
-     "hints": [
-      "Vergleiche die Anfangsbuchstaben."
-     ],
-     "why": "Richtig geordnet: Tafel, Tag, Tante, Tasche.",
-     "id": "c20"
+     "id": "c53"
     },
     {
      "q": "Welches Wort kommt im ABC zuerst? Mund, Mutter, Mantel, Maus",
@@ -196484,181 +197629,16 @@
      "lvl": 2,
      "th": "basis",
      "opts": [
+      "Mund",
       "Mantel",
       "Maus",
-      "Mund",
       "Mutter"
      ],
      "hints": [
-      "Vergleiche die Anfangsbuchstaben."
+      "Vergleiche den zweiten Buchstaben."
      ],
      "why": "Richtig geordnet: Mantel, Maus, Mund, Mutter.",
-     "id": "c21"
-    },
-    {
-     "q": "Welches Wort kommt im ABC zuerst? Kind, Katze, Kuh, Kerze",
-     "a": "Katze",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Kind",
-      "Katze",
-      "Kerze",
-      "Kuh"
-     ],
-     "hints": [
-      "Vergleiche die Anfangsbuchstaben."
-     ],
-     "why": "Richtig geordnet: Katze, Kerze, Kind, Kuh.",
-     "id": "c22"
-    },
-    {
-     "q": "Welches Wort kommt im ABC zuerst? Blume, Bruder, Brot, Blatt",
-     "a": "Blatt",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Bruder",
-      "Brot",
-      "Blume",
-      "Blatt"
-     ],
-     "hints": [
-      "Vergleiche die Anfangsbuchstaben."
-     ],
-     "why": "Richtig geordnet: Blatt, Blume, Brot, Bruder.",
-     "id": "c23"
-    },
-    {
-     "q": "Welches Wort kommt im ABC zuerst? Fisch, Feder, Fuss, Fenster",
-     "a": "Feder",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Feder",
-      "Fuss",
-      "Fisch",
-      "Fenster"
-     ],
-     "hints": [
-      "Vergleiche die Anfangsbuchstaben."
-     ],
-     "why": "Richtig geordnet: Feder, Fenster, Fisch, Fuss.",
-     "id": "c24"
-    },
-    {
-     "q": "Welches Wort kommt im ABC zuerst? Sonne, Sand, Sofa, Suppe",
-     "a": "Sand",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Sand",
-      "Sonne",
-      "Suppe",
-      "Sofa"
-     ],
-     "hints": [
-      "Vergleiche die Anfangsbuchstaben."
-     ],
-     "why": "Richtig geordnet: Sand, Sofa, Sonne, Suppe.",
-     "id": "c25"
-    },
-    {
-     "q": "Welches Wort kommt im ABC zuerst? Stern, Stuhl, Stein, Strasse",
-     "a": "Stein",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Stein",
-      "Stern",
-      "Strasse",
-      "Stuhl"
-     ],
-     "hints": [
-      "Vergleiche die Anfangsbuchstaben."
-     ],
-     "why": "Richtig geordnet: Stein, Stern, Strasse, Stuhl.",
-     "id": "c26"
-    },
-    {
-     "q": "Welche Reihenfolge ist richtig?",
-     "a": "Hand, Hase, Haus, Hund",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Haus, Hund, Hase, Hand",
-      "Hand, Hase, Haus, Hund",
-      "Haus, Hand, Hund, Hase",
-      "Hase, Hand, Haus, Hund"
-     ],
-     "hints": [
-      "Ordne nach dem ersten Buchstaben."
-     ],
-     "id": "c27"
-    },
-    {
-     "q": "Welche Reihenfolge ist richtig?",
-     "a": "Schaf, Schiff, Schuh, Schule",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Schaf, Schiff, Schuh, Schule",
-      "Schiff, Schule, Schuh, Schaf",
-      "Schaf, Schuh, Schiff, Schule",
-      "Schule, Schaf, Schiff, Schuh"
-     ],
-     "hints": [
-      "Ordne nach dem ersten Buchstaben."
-     ],
-     "id": "c28"
-    },
-    {
-     "q": "Welche Reihenfolge ist richtig?",
-     "a": "Ball, Bank, Baum, Bild",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Ball, Baum, Bank, Bild",
-      "Ball, Bank, Baum, Bild",
-      "Baum, Bild, Ball, Bank",
-      "Bild, Bank, Baum, Ball"
-     ],
-     "hints": [
-      "Ordne nach dem ersten Buchstaben."
-     ],
-     "id": "c29"
-    },
-    {
-     "q": "Welche Reihenfolge ist richtig?",
-     "a": "Tafel, Tag, Tante, Tasche",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Tafel, Tasche, Tag, Tante",
-      "Tasche, Tafel, Tante, Tag",
-      "Tafel, Tante, Tag, Tasche",
-      "Tafel, Tag, Tante, Tasche"
-     ],
-     "hints": [
-      "Ordne nach dem ersten Buchstaben."
-     ],
-     "id": "c30"
-    },
-    {
-     "q": "Welche Reihenfolge ist richtig?",
-     "a": "Mantel, Maus, Mund, Mutter",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Mantel, Maus, Mund, Mutter",
-      "Mantel, Mutter, Maus, Mund",
-      "Mutter, Maus, Mund, Mantel",
-      "Mutter, Mund, Mantel, Maus"
-     ],
-     "hints": [
-      "Ordne nach dem ersten Buchstaben."
-     ],
-     "id": "c31"
+     "id": "c54"
     },
     {
      "q": "Schreibe den Buchstaben nach «C».",
@@ -196673,7 +197653,7 @@
      ],
      "cs": true,
      "why": "Der nächste Buchstabe im ABC.",
-     "id": "c32"
+     "id": "c55"
     },
     {
      "q": "Schreibe den Buchstaben nach «G».",
@@ -196688,7 +197668,7 @@
      ],
      "cs": true,
      "why": "Der nächste Buchstabe im ABC.",
-     "id": "c33"
+     "id": "c56"
     },
     {
      "q": "Schreibe den Buchstaben nach «L».",
@@ -196703,873 +197683,463 @@
      ],
      "cs": true,
      "why": "Der nächste Buchstabe im ABC.",
-     "id": "c34"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-     "a": "Delfin, König, Löwe, Torte, Wolke",
-     "ans": [
-      "Delfin, König, Löwe, Torte, Wolke"
-     ],
-     "pre": "Torte, Delfin, König, Wolke, Löwe",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c35"
-    },
-    {
-     "q": "Welches Wort kommt im Alphabet zuletzt: Mütze, Maus, Mädchen, Mutter?",
-     "a": "Mütze",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Mütze",
-      "Maus",
-      "Mädchen",
-      "Mutter"
-     ],
-     "hints": [
-      "Der letzte Buchstabe im Alphabet ist ganz hinten."
-     ],
-     "id": "c36"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-     "a": "Esel, Pferd, Pizza, Regenbogen, Stuhl",
-     "ans": [
-      "Esel, Pferd, Pizza, Regenbogen, Stuhl"
-     ],
-     "pre": "Stuhl, Pferd, Esel, Regenbogen, Pizza",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c37"
-    },
-    {
-     "q": "Welches Wort kommt im Alphabet zuletzt: Giraffe, See, Turm, Schildkröte, Löwe?",
-     "a": "Turm",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Turm",
-      "Schildkröte",
-      "Löwe",
-      "Giraffe"
-     ],
-     "hints": [
-      "Der letzte Buchstabe im Alphabet ist ganz hinten."
-     ],
-     "id": "c38"
-    },
-    {
-     "q": "Welches Wort kommt im Alphabet zuerst: Freundin, Fenster, Fisch, Frau, Frosch?",
-     "a": "Fenster",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Fisch",
-      "Frau",
-      "Freundin",
-      "Fenster"
-     ],
-     "hints": [
-      "Schau auf den ersten Buchstaben und dann auf den zweiten."
-     ],
-     "id": "c39"
-    },
-    {
-     "q": "Welches Wort kommt im Alphabet zuerst: Dach, Dose, Delfin, Drache, Dorf?",
-     "a": "Dach",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Dach",
-      "Dose",
-      "Delfin",
-      "Dorf"
-     ],
-     "hints": [
-      "Schau auf den ersten Buchstaben und dann auf den zweiten."
-     ],
-     "id": "c40"
-    },
-    {
-     "q": "Welches Wort steht im Alphabet zwischen «Biene» und «Korb»?",
-     "a": "Bonbon",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Vogel",
-      "Pferd",
-      "Bonbon",
-      "Maus"
-     ],
-     "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
-     ],
-     "id": "c41"
-    },
-    {
-     "q": "Welches Wort kommt im Alphabet zuerst: Mutter, Mütze, Mann, Mädchen, Maus?",
-     "a": "Mädchen",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Mädchen",
-      "Mann",
-      "Mutter",
-      "Maus"
-     ],
-     "hints": [
-      "Schau auf den ersten Buchstaben und dann auf den zweiten."
-     ],
-     "id": "c42"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-     "a": "Drache, Frau, Schal, Schuh, See",
-     "ans": [
-      "Drache, Frau, Schal, Schuh, See"
-     ],
-     "pre": "Schuh, Drache, Schal, Frau, See",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c43"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-     "a": "Bach, Esel, Eule, Lampe, Oma",
-     "ans": [
-      "Bach, Esel, Eule, Lampe, Oma"
-     ],
-     "pre": "Bach, Eule, Esel, Lampe, Oma",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c44"
-    },
-    {
-     "q": "Welches Wort kommt im Alphabet zuerst: Bruder, Buch, Ball, Blume?",
-     "a": "Ball",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Blume",
-      "Ball",
-      "Buch",
-      "Bruder"
-     ],
-     "hints": [
-      "Schau auf den ersten Buchstaben und dann auf den zweiten."
-     ],
-     "id": "c45"
-    },
-    {
-     "q": "Welches Wort kommt im Alphabet zuerst: Ameise, Auto, Affe, Apfel, Ast?",
-     "a": "Affe",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Ast",
-      "Ameise",
-      "Apfel",
-      "Affe"
-     ],
-     "hints": [
-      "Schau auf den ersten Buchstaben und dann auf den zweiten."
-     ],
-     "id": "c46"
-    },
-    {
-     "q": "Welches Wort steht im Alphabet zwischen «Arzt» und «Fahrer»?",
-     "a": "Blume",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Blume",
-      "Katze",
-      "Hund",
-      "Vogel"
-     ],
-     "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
-     ],
-     "id": "c47"
-    },
-    {
-     "q": "Welches Wort kommt im Alphabet zuerst: Mutter, Mädchen, Mütze, Mann, Maus?",
-     "a": "Mädchen",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Mädchen",
-      "Mann",
-      "Mutter",
-      "Maus"
-     ],
-     "hints": [
-      "Schau auf den ersten Buchstaben und dann auf den zweiten."
-     ],
-     "id": "c48"
-    },
-    {
-     "q": "Welches Wort steht im Alphabet zwischen «Bus» und «Pizza»?",
-     "a": "Lehrer",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Bäcker",
-      "Vogel",
-      "Schaf",
-      "Lehrer"
-     ],
-     "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
-     ],
-     "id": "c49"
-    },
-    {
-     "q": "Welches Wort kommt im Alphabet zuletzt: Nase, Nudel, Nuss, Nadel, Nest?",
-     "a": "Nuss",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Nest",
-      "Nase",
-      "Nuss",
-      "Nadel"
-     ],
-     "hints": [
-      "Der letzte Buchstabe im Alphabet ist ganz hinten."
-     ],
-     "id": "c50"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-     "a": "Baum, Korb, Mutter, Pausenhof, Schwimmbad",
-     "ans": [
-      "Baum, Korb, Mutter, Pausenhof, Schwimmbad"
-     ],
-     "pre": "Baum, Mutter, Schwimmbad, Pausenhof, Korb",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c51"
-    },
-    {
-     "q": "Welches Wort kommt im Alphabet zuerst: Regen, Rutsche, Rock, Reh, Rose?",
-     "a": "Regen",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Rock",
-      "Regen",
-      "Rose",
-      "Reh"
-     ],
-     "hints": [
-      "Schau auf den ersten Buchstaben und dann auf den zweiten."
-     ],
-     "id": "c52"
-    },
-    {
-     "q": "Welches Wort steht im Alphabet zwischen «Flasche» und «Lied»?",
-     "a": "Kuh",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Pferd",
-      "Kuh",
-      "Vogel",
-      "Fisch"
-     ],
-     "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
-     ],
-     "id": "c53"
-    },
-    {
-     "q": "Welches Wort kommt im Alphabet zuerst: Wand, Wiese, Wolf, Wald, Wolke?",
-     "a": "Wald",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Wiese",
-      "Wand",
-      "Wald",
-      "Wolf"
-     ],
-     "hints": [
-      "Schau auf den ersten Buchstaben und dann auf den zweiten."
-     ],
-     "id": "c54"
-    },
-    {
-     "q": "Welches Wort kommt im Alphabet zuerst: Pinsel, Puppe, Pfanne, Pferd, Pilz?",
-     "a": "Pfanne",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Pferd",
-      "Pinsel",
-      "Pilz",
-      "Pfanne"
-     ],
-     "hints": [
-      "Schau auf den ersten Buchstaben und dann auf den zweiten."
-     ],
-     "id": "c55"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-     "a": "Esel, Henne, Pfütze, Roboter",
-     "ans": [
-      "Esel, Henne, Pfütze, Roboter"
-     ],
-     "pre": "Esel, Roboter, Henne, Pfütze",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c56"
-    },
-    {
-     "q": "Welches Wort steht im Alphabet zwischen «Fisch» und «Oma»?",
-     "a": "Lied",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Pferd",
-      "Vogel",
-      "Schaf",
-      "Lied"
-     ],
-     "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
-     ],
      "id": "c57"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-     "a": "Brot, Giraffe, Hausmeister, Koffer, Rutsche, Schülerin",
+     "q": "Ein Buchstabe fehlt. Verbessere im Feld.",
+     "a": "A, B, C, D, E",
      "ans": [
-      "Brot, Giraffe, Hausmeister, Koffer, Rutsche, Schülerin"
+      "A, B, C, D, E"
      ],
-     "pre": "Brot, Giraffe, Rutsche, Hausmeister, Koffer, Schülerin",
+     "pre": "A, B, D, E",
      "lvl": 2,
      "th": "basis",
      "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
+      "Sage das ABC leise auf."
      ],
      "id": "c58"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuerst: Tasche, Tisch, Tasse, Turm?",
-     "a": "Tasche",
+     "q": "Ein Buchstabe fehlt. Verbessere im Feld.",
+     "a": "I, J, K, L, M",
+     "ans": [
+      "I, J, K, L, M"
+     ],
+     "pre": "I, J, L, M",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Turm",
-      "Tisch",
-      "Tasse",
-      "Tasche"
-     ],
      "hints": [
-      "Schau auf den ersten Buchstaben und dann auf den zweiten."
+      "Sage das ABC leise auf."
      ],
      "id": "c59"
     },
     {
-     "q": "Welches Wort steht im Alphabet zwischen «Karte» und «Märchen»?",
-     "a": "Krokodil",
+     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
+     "a": "Delfin, König, Löffel, Löwe, Wolke",
+     "ans": [
+      "Delfin, König, Löffel, Löwe, Wolke"
+     ],
+     "pre": "Delfin, König, Wolke, Löwe, Löffel",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Vogel",
-      "Pferd",
-      "Hund",
-      "Krokodil"
-     ],
      "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
+      "Vergleiche Buchstabe für Buchstabe."
      ],
      "id": "c60"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuerst: Mann, Mutter, Maus, Mütze, Mädchen?",
-     "a": "Mädchen",
+     "q": "Es fehlen Buchstaben. Verbessere im Feld.",
+     "a": "U, V, W, X, Y",
+     "ans": [
+      "U, V, W, X, Y"
+     ],
+     "pre": "U, V, X, Y",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Mutter",
-      "Maus",
-      "Mädchen",
-      "Mann"
-     ],
      "hints": [
-      "Schau auf den ersten Buchstaben und dann auf den zweiten."
+      "Sage das ABC leise auf."
      ],
      "id": "c61"
     },
     {
-     "q": "Welches Wort steht im Alphabet zwischen «Bär» und «Bruder»?",
-     "a": "Berg",
+     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
+     "a": "Gabel, Gans, Garten, Gurke",
+     "ans": [
+      "Gabel, Gans, Garten, Gurke"
+     ],
+     "pre": "Gabel, Garten, Gans, Gurke",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Berg",
-      "Vogel",
-      "Hund",
-      "Katze"
-     ],
      "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
+      "Vergleiche Buchstabe für Buchstabe."
      ],
      "id": "c62"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuletzt: Trampolin, Esel, Henne, Karotte?",
-     "a": "Trampolin",
+     "q": "Es fehlen Buchstaben. Verbessere im Feld.",
+     "a": "Q, R, S, T, U, V, W",
+     "ans": [
+      "Q, R, S, T, U, V, W"
+     ],
+     "pre": "Q, R, T, V, W",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Esel",
-      "Karotte",
-      "Henne",
-      "Trampolin"
-     ],
      "hints": [
-      "Der letzte Buchstabe im Alphabet ist ganz hinten."
+      "Sage das ABC leise auf."
      ],
      "id": "c63"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuerst: Wald, Wiese, Wolke, Wolf, Wand?",
-     "a": "Wald",
+     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
+     "a": "Dach, Delfin, Dorf, Dose, Drache",
+     "ans": [
+      "Dach, Delfin, Dorf, Dose, Drache"
+     ],
+     "pre": "Dose, Drache, Dorf, Delfin, Dach",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Wald",
-      "Wand",
-      "Wolf",
-      "Wiese"
-     ],
      "hints": [
-      "Schau auf den ersten Buchstaben und dann auf den zweiten."
+      "Vergleiche Buchstabe für Buchstabe."
      ],
      "id": "c64"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuletzt: Rucksack, Rose, Rutsche, Reh, Rock?",
-     "a": "Rutsche",
+     "q": "Es fehlen Buchstaben. Verbessere im Feld.",
+     "a": "N, O, P, Q, R, S",
+     "ans": [
+      "N, O, P, Q, R, S"
+     ],
+     "pre": "N, P, Q, R, S",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Rock",
-      "Rose",
-      "Rutsche",
-      "Reh"
-     ],
      "hints": [
-      "Der letzte Buchstabe im Alphabet ist ganz hinten."
+      "Sage das ABC leise auf."
      ],
      "id": "c65"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-     "a": "Käfer, Karotte, Korb, Sängerin",
+     "q": "Es fehlen Buchstaben. Verbessere im Feld.",
+     "a": "E, F, G, H, I, J",
      "ans": [
-      "Käfer, Karotte, Korb, Sängerin"
+      "E, F, G, H, I, J"
      ],
-     "pre": "Karotte, Käfer, Sängerin, Korb",
+     "pre": "E, F, H, I, J",
      "lvl": 2,
      "th": "basis",
      "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
+      "Sage das ABC leise auf."
      ],
      "id": "c66"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-     "a": "Garten, Meerschweinchen, Mütze, Tasche, Wasser",
+     "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+     "a": "J, K, L, M, N, O",
      "ans": [
-      "Garten, Meerschweinchen, Mütze, Tasche, Wasser"
+      "J, K, L, M, N, O"
      ],
-     "pre": "Meerschweinchen, Wasser, Garten, Tasche, Mütze",
+     "pre": "J, K, L, M, O, N",
      "lvl": 2,
      "th": "basis",
      "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
+      "Sage das ABC leise auf."
      ],
      "id": "c67"
     },
     {
-     "q": "Welches Wort steht im Alphabet zwischen «Fahrer» und «Mütze»?",
-     "a": "Lehrer",
+     "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+     "a": "M, N, O, P, Q, R",
+     "ans": [
+      "M, N, O, P, Q, R"
+     ],
+     "pre": "M, N, P, O, Q, R",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Schaf",
-      "Lehrer",
-      "Vogel",
-      "Pferd"
-     ],
      "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
+      "Sage das ABC leise auf."
      ],
      "id": "c68"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuerst: Drache, Dach, Dorf, Delfin, Dose?",
-     "a": "Dach",
+     "q": "Das ABC ist falsch. Verbessere im Feld.",
+     "a": "R, S, T",
+     "ans": [
+      "R, S, T"
+     ],
+     "pre": "R, S, U",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Dorf",
-      "Dach",
-      "Delfin",
-      "Dose"
-     ],
      "hints": [
-      "Schau auf den ersten Buchstaben und dann auf den zweiten."
+      "Sage das ABC leise auf."
      ],
      "id": "c69"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuletzt: Affe, Ameise, Apfel, Ast, Auto?",
-     "a": "Auto",
+     "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+     "a": "S, T, U, V, W, X, Y",
+     "ans": [
+      "S, T, U, V, W, X, Y"
+     ],
+     "pre": "S, U, T, V, W, X, Y",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Auto",
-      "Ameise",
-      "Apfel",
-      "Affe"
-     ],
      "hints": [
-      "Der letzte Buchstabe im Alphabet ist ganz hinten."
+      "Sage das ABC leise auf."
      ],
      "id": "c70"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuerst: Kuchen, Kind, Katze, Kuh, Korb?",
-     "a": "Katze",
+     "q": "Das ABC ist falsch. Verbessere im Feld.",
+     "a": "Q, R, S",
+     "ans": [
+      "Q, R, S"
+     ],
+     "pre": "Q, R, T",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Kuchen",
-      "Katze",
-      "Kind",
-      "Korb"
-     ],
      "hints": [
-      "Schau auf den ersten Buchstaben und dann auf den zweiten."
+      "Sage das ABC leise auf."
      ],
      "id": "c71"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuletzt: Dach, Dorf, Dose, Delfin, Drache?",
-     "a": "Drache",
+     "q": "Das ABC ist falsch. Verbessere im Feld.",
+     "a": "B, C, D",
+     "ans": [
+      "B, C, D"
+     ],
+     "pre": "B, C, E",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Delfin",
-      "Dorf",
-      "Dach",
-      "Drache"
-     ],
      "hints": [
-      "Der letzte Buchstabe im Alphabet ist ganz hinten."
+      "Sage das ABC leise auf."
      ],
      "id": "c72"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuerst: Mütze, Maus, Mutter, Mann, Mädchen?",
-     "a": "Mädchen",
+     "q": "Das ABC ist falsch. Verbessere im Feld.",
+     "a": "M, N, O",
+     "ans": [
+      "M, N, O"
+     ],
+     "pre": "M, N, P",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Maus",
-      "Mutter",
-      "Mann",
-      "Mädchen"
-     ],
      "hints": [
-      "Schau auf den ersten Buchstaben und dann auf den zweiten."
+      "Sage das ABC leise auf."
      ],
      "id": "c73"
     },
     {
-     "q": "Welches Wort steht im Alphabet zwischen «Esel» und «Spiel»?",
-     "a": "Schüler",
+     "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+     "a": "R, S, T, U, V, W",
+     "ans": [
+      "R, S, T, U, V, W"
+     ],
+     "pre": "R, S, T, U, W, V",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Ente",
-      "Schüler",
-      "Vogel",
-      "Bäcker"
-     ],
      "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
+      "Sage das ABC leise auf."
      ],
      "id": "c74"
     },
     {
-     "q": "Welches Wort steht im Alphabet zwischen «Buch» und «Schuh»?",
-     "a": "Rakete",
+     "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+     "a": "B, C, D, E, F, G",
+     "ans": [
+      "B, C, D, E, F, G"
+     ],
+     "pre": "B, C, D, E, G, F",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Rakete",
-      "Arzt",
-      "Vogel",
-      "Bäcker"
-     ],
      "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
+      "Sage das ABC leise auf."
      ],
      "id": "c75"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-     "a": "Freundin, Meerschweinchen, Sängerin, Schiff, Wand",
+     "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+     "a": "H, I, J, K, L, M",
      "ans": [
-      "Freundin, Meerschweinchen, Sängerin, Schiff, Wand"
+      "H, I, J, K, L, M"
      ],
-     "pre": "Meerschweinchen, Schiff, Sängerin, Wand, Freundin",
+     "pre": "H, I, J, K, M, L",
      "lvl": 2,
      "th": "basis",
      "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
+      "Sage das ABC leise auf."
      ],
      "id": "c76"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuletzt: Maus, Vater, Schneemann, Bank?",
-     "a": "Vater",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Vater",
-      "Maus",
-      "Schneemann",
-      "Bank"
+     "q": "Schreibe die Buchstaben rückwärts. Verbessere im Feld.",
+     "a": "X, W, V, U",
+     "ans": [
+      "X, W, V, U"
      ],
+     "pre": "U, V, W, X",
+     "lvl": 3,
+     "th": "basis",
      "hints": [
-      "Der letzte Buchstabe im Alphabet ist ganz hinten."
+      "Beginne beim letzten Buchstaben."
      ],
      "id": "c77"
     },
     {
-     "q": "Welches Wort steht im Alphabet zwischen «Bruder» und «Hose»?",
-     "a": "Garten",
+     "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+     "a": "D, E, F, G, H, I",
+     "ans": [
+      "D, E, F, G, H, I"
+     ],
+     "pre": "D, F, E, G, H, I",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Garten",
-      "Vogel",
-      "Hund",
-      "Katze"
-     ],
      "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
+      "Sage das ABC leise auf."
      ],
      "id": "c78"
     },
     {
-     "q": "Welches Wort steht im Alphabet zwischen «Haus» und «Pilz»?",
-     "a": "Hexe",
+     "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+     "a": "U, V, W, X, Y, Z",
+     "ans": [
+      "U, V, W, X, Y, Z"
+     ],
+     "pre": "U, V, W, X, Z, Y",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Fisch",
-      "Vogel",
-      "Hexe",
-      "Schaf"
-     ],
      "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
+      "Sage das ABC leise auf."
      ],
      "id": "c79"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuletzt: Klasse, Zauberer, Uhr, Verkäuferin?",
-     "a": "Zauberer",
+     "q": "Das ABC ist falsch. Verbessere im Feld.",
+     "a": "I, J, K",
+     "ans": [
+      "I, J, K"
+     ],
+     "pre": "I, J, L",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Uhr",
-      "Klasse",
-      "Zauberer",
-      "Verkäuferin"
-     ],
      "hints": [
-      "Der letzte Buchstabe im Alphabet ist ganz hinten."
+      "Sage das ABC leise auf."
      ],
      "id": "c80"
     },
     {
-     "q": "Welches Wort steht im Alphabet zwischen «Koch» und «Schal»?",
-     "a": "Mädchen",
+     "q": "Es fehlen Buchstaben. Verbessere im Feld.",
+     "a": "K, L, M, N, O, P",
+     "ans": [
+      "K, L, M, N, O, P"
+     ],
+     "pre": "K, M, N, O, P",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Vogel",
-      "Hund",
-      "Mädchen",
-      "Katze"
-     ],
      "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
+      "Sage das ABC leise auf."
      ],
      "id": "c81"
     },
     {
-     "q": "Welches Wort steht im Alphabet zwischen «Affe» und «Krokodil»?",
-     "a": "Frau",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Frau",
-      "Maus",
-      "Pferd",
-      "Vogel"
+     "q": "Schreibe die Buchstaben rückwärts. Verbessere im Feld.",
+     "a": "T, S, R, Q, P, O",
+     "ans": [
+      "T, S, R, Q, P, O"
      ],
+     "pre": "O, P, Q, R, S, T",
+     "lvl": 3,
+     "th": "basis",
      "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
+      "Beginne beim letzten Buchstaben."
      ],
      "id": "c82"
     },
     {
-     "q": "Welches Wort steht im Alphabet zwischen «Stuhl» und «Wurst»?",
-     "a": "Suppe",
-     "lvl": 2,
-     "th": "basis",
-     "opts": [
-      "Suppe",
-      "Pferd",
-      "Katze",
-      "Hund"
-     ],
-     "hints": [
-      "Es kommt nach dem ersten und vor dem zweiten."
-     ],
-     "id": "c83"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-     "a": "Apfel, Blume, Hose, Kollege, Tasche",
+     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
+     "a": "Zahn, Zebra, Zelt, Ziege, Zimmer",
      "ans": [
-      "Apfel, Blume, Hose, Kollege, Tasche"
+      "Zahn, Zebra, Zelt, Ziege, Zimmer"
      ],
-     "pre": "Apfel, Hose, Blume, Kollege, Tasche",
+     "pre": "Zimmer, Zebra, Ziege, Zahn, Zelt",
      "lvl": 2,
      "th": "basis",
      "hints": [
       "Vergleiche Buchstabe für Buchstabe."
      ],
+     "id": "c83"
+    },
+    {
+     "q": "Es fehlen Buchstaben. Verbessere im Feld.",
+     "a": "G, H, I, J, K, L",
+     "ans": [
+      "G, H, I, J, K, L"
+     ],
+     "pre": "G, H, J, K, L",
+     "lvl": 2,
+     "th": "basis",
+     "hints": [
+      "Sage das ABC leise auf."
+     ],
      "id": "c84"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuerst: Vase, Vogel, Veilchen, Vater, Velo?",
-     "a": "Vase",
+     "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+     "a": "T, U, V, W, X",
+     "ans": [
+      "T, U, V, W, X"
+     ],
+     "pre": "U, T, V, W, X",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Vase",
-      "Vater",
-      "Velo",
-      "Veilchen"
-     ],
      "hints": [
-      "Schau auf den ersten Buchstaben und dann auf den zweiten."
+      "Sage das ABC leise auf."
      ],
      "id": "c85"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuletzt: Mann, Mutter, Maus, Mädchen?",
-     "a": "Mutter",
+     "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+     "a": "C, D, E, F, G",
+     "ans": [
+      "C, D, E, F, G"
+     ],
+     "pre": "C, E, D, F, G",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Mann",
-      "Maus",
-      "Mutter",
-      "Mädchen"
-     ],
      "hints": [
-      "Der letzte Buchstabe im Alphabet ist ganz hinten."
+      "Sage das ABC leise auf."
      ],
      "id": "c86"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuerst: Wiese, Wolf, Wurst, Wald?",
-     "a": "Wald",
+     "q": "Es fehlen Buchstaben. Verbessere im Feld.",
+     "a": "A, B, C, D, E, F, G, H",
+     "ans": [
+      "A, B, C, D, E, F, G, H"
+     ],
+     "pre": "A, B, E, F, G, H",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Wiese",
-      "Wald",
-      "Wurst",
-      "Wolf"
-     ],
      "hints": [
-      "Schau auf den ersten Buchstaben und dann auf den zweiten."
+      "Sage das ABC leise auf."
      ],
      "id": "c87"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuerst: Dorf, Delfin, Dose, Drache?",
-     "a": "Delfin",
+     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
+     "a": "Eimer, Eis, Elefant, Ente, Esel",
+     "ans": [
+      "Eimer, Eis, Elefant, Ente, Esel"
+     ],
+     "pre": "Ente, Eimer, Elefant, Eis, Esel",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Dose",
-      "Dorf",
-      "Drache",
-      "Delfin"
-     ],
      "hints": [
-      "Schau auf den ersten Buchstaben und dann auf den zweiten."
+      "Vergleiche Buchstabe für Buchstabe."
      ],
      "id": "c88"
     },
     {
-     "q": "Welches Wort kommt im Alphabet zuerst: Bruder, Ball, Buch, Brot, Baum, Blume?",
-     "a": "Ball",
+     "q": "Das ABC ist falsch. Verbessere im Feld.",
+     "a": "J, K, L",
+     "ans": [
+      "J, K, L"
+     ],
+     "pre": "J, K, M",
      "lvl": 2,
      "th": "basis",
-     "opts": [
-      "Ball",
-      "Blume",
-      "Brot",
-      "Baum"
-     ],
      "hints": [
-      "Schau auf den ersten Buchstaben und dann auf den zweiten."
+      "Sage das ABC leise auf."
      ],
      "id": "c89"
     },
     {
      "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Gabel, Gans, Garten, Geige, Gurke",
+     "a": "Ballon, Bett, Bild, Wald",
      "ans": [
-      "Gabel, Gans, Garten, Geige, Gurke"
+      "Ballon, Bett, Bild, Wald"
      ],
-     "pre": "Gurke, Gabel, Garten, Gans, Geige",
+     "pre": "Bild, Ballon, Bett, Wald",
      "lvl": 2,
      "th": "basis",
      "hints": [
@@ -197578,82 +198148,82 @@
      "id": "c90"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Klassenzimmer, Schatz, Trommel, Wolf",
+     "q": "Schreibe die Buchstaben rückwärts. Verbessere im Feld.",
+     "a": "I, H, G, F, E",
      "ans": [
-      "Klassenzimmer, Schatz, Trommel, Wolf"
+      "I, H, G, F, E"
      ],
-     "pre": "Schatz, Trommel, Klassenzimmer, Wolf",
-     "lvl": 2,
+     "pre": "E, F, G, H, I",
+     "lvl": 3,
      "th": "basis",
      "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
+      "Beginne beim letzten Buchstaben."
      ],
      "id": "c91"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Fenster, Fisch, Freundin, Frosch",
+     "q": "Das ABC ist falsch. Verbessere im Feld.",
+     "a": "U, V, W",
      "ans": [
-      "Fenster, Fisch, Freundin, Frosch"
+      "U, V, W"
      ],
-     "pre": "Fisch, Fenster, Freundin, Frosch",
+     "pre": "U, V, X",
      "lvl": 2,
      "th": "basis",
      "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
+      "Sage das ABC leise auf."
      ],
      "id": "c92"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Zahn, Zebra, Zelt, Ziege",
+     "q": "Das ABC ist falsch. Verbessere im Feld.",
+     "a": "W, X, Y",
      "ans": [
-      "Zahn, Zebra, Zelt, Ziege"
+      "W, X, Y"
      ],
-     "pre": "Ziege, Zelt, Zahn, Zebra",
+     "pre": "W, X, Z",
      "lvl": 2,
      "th": "basis",
      "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
+      "Sage das ABC leise auf."
      ],
      "id": "c93"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Nase, Nest, Nudel, Nuss",
+     "q": "Es fehlen Buchstaben. Verbessere im Feld.",
+     "a": "R, S, T, U, V, W, X",
      "ans": [
-      "Nase, Nest, Nudel, Nuss"
+      "R, S, T, U, V, W, X"
      ],
-     "pre": "Nuss, Nest, Nudel, Nase",
+     "pre": "R, S, T, V, X",
      "lvl": 2,
      "th": "basis",
      "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
+      "Sage das ABC leise auf."
      ],
      "id": "c94"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Kissen, Pausenhof, Pirat, Rakete, Schatz",
+     "q": "Es fehlen Buchstaben. Verbessere im Feld.",
+     "a": "G, H, I, J, K, L, M, N",
      "ans": [
-      "Kissen, Pausenhof, Pirat, Rakete, Schatz"
+      "G, H, I, J, K, L, M, N"
      ],
-     "pre": "Kissen, Schatz, Pausenhof, Pirat, Rakete",
+     "pre": "G, H, I, K, M, N",
      "lvl": 2,
      "th": "basis",
      "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
+      "Sage das ABC leise auf."
      ],
      "id": "c95"
     },
     {
      "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Lampe, Leiter, Licht, Löffel, Löwe",
+     "a": "Hase, Haus, Huhn, Hund",
      "ans": [
-      "Lampe, Leiter, Licht, Löffel, Löwe"
+      "Hase, Haus, Huhn, Hund"
      ],
-     "pre": "Löwe, Lampe, Licht, Löffel, Leiter",
+     "pre": "Huhn, Hase, Haus, Hund",
      "lvl": 2,
      "th": "basis",
      "hints": [
@@ -197663,11 +198233,11 @@
     },
     {
      "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Lied, Papagei, Rätsel, Schlüssel, Wolf",
+     "a": "Pfanne, Pilz, Pinsel, Puppe",
      "ans": [
-      "Lied, Papagei, Rätsel, Schlüssel, Wolf"
+      "Pfanne, Pilz, Pinsel, Puppe"
      ],
-     "pre": "Rätsel, Schlüssel, Lied, Wolf, Papagei",
+     "pre": "Pinsel, Pfanne, Pilz, Puppe",
      "lvl": 2,
      "th": "basis",
      "hints": [
@@ -197676,26 +198246,26 @@
      "id": "c97"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Fenster, Fisch, Frau, Freundin, Frosch",
+     "q": "Schreibe die Buchstaben rückwärts. Verbessere im Feld.",
+     "a": "O, N, M, L, K, J",
      "ans": [
-      "Fenster, Fisch, Frau, Freundin, Frosch"
+      "O, N, M, L, K, J"
      ],
-     "pre": "Frosch, Freundin, Frau, Fisch, Fenster",
-     "lvl": 2,
+     "pre": "J, K, L, M, N, O",
+     "lvl": 3,
      "th": "basis",
      "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
+      "Beginne beim letzten Buchstaben."
      ],
      "id": "c98"
     },
     {
      "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Pfanne, Pferd, Pilz, Pinsel, Puppe",
+     "a": "Fenster, Fisch, Frau, Freundin, Frosch",
      "ans": [
-      "Pfanne, Pferd, Pilz, Pinsel, Puppe"
+      "Fenster, Fisch, Frau, Freundin, Frosch"
      ],
-     "pre": "Pilz, Pfanne, Pferd, Pinsel, Puppe",
+     "pre": "Fenster, Frau, Fisch, Frosch, Freundin",
      "lvl": 2,
      "th": "basis",
      "hints": [
@@ -197704,96 +198274,96 @@
      "id": "c99"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Schaf, Schule, Schwester, Spiel, Suppe",
+     "q": "Es fehlen Buchstaben. Verbessere im Feld.",
+     "a": "N, O, P, Q, R, S, T, U",
      "ans": [
-      "Schaf, Schule, Schwester, Spiel, Suppe"
+      "N, O, P, Q, R, S, T, U"
      ],
-     "pre": "Schaf, Schule, Spiel, Suppe, Schwester",
+     "pre": "N, P, Q, S, T, U",
      "lvl": 2,
      "th": "basis",
      "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
+      "Sage das ABC leise auf."
      ],
      "id": "c100"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Hase, Haus, Huhn, Hund",
+     "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+     "a": "P, Q, R, S, T, U, V",
      "ans": [
-      "Hase, Haus, Huhn, Hund"
+      "P, Q, R, S, T, U, V"
      ],
-     "pre": "Huhn, Haus, Hase, Hund",
+     "pre": "P, Q, R, S, U, T, V",
      "lvl": 2,
      "th": "basis",
      "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
+      "Sage das ABC leise auf."
      ],
      "id": "c101"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Zahn, Zebra, Zelt, Ziege, Zimmer",
+     "q": "Schreibe die Buchstaben rückwärts. Verbessere im Feld.",
+     "a": "Q, P, O, N",
      "ans": [
-      "Zahn, Zebra, Zelt, Ziege, Zimmer"
+      "Q, P, O, N"
      ],
-     "pre": "Zebra, Zelt, Zahn, Zimmer, Ziege",
-     "lvl": 2,
+     "pre": "N, O, P, Q",
+     "lvl": 3,
      "th": "basis",
      "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
+      "Beginne beim letzten Buchstaben."
      ],
      "id": "c102"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Affe, Apfel, Ast, Auto",
+     "q": "Schreibe die Buchstaben rückwärts. Verbessere im Feld.",
+     "a": "F, E, D, C, B, A",
      "ans": [
-      "Affe, Apfel, Ast, Auto"
+      "F, E, D, C, B, A"
      ],
-     "pre": "Auto, Affe, Ast, Apfel",
-     "lvl": 2,
+     "pre": "A, B, C, D, E, F",
+     "lvl": 3,
      "th": "basis",
      "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
+      "Beginne beim letzten Buchstaben."
      ],
      "id": "c103"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Fahrer, Pinguin, Schwester, Witz, Wolf",
+     "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+     "a": "A, B, C, D, E, F",
      "ans": [
-      "Fahrer, Pinguin, Schwester, Witz, Wolf"
+      "A, B, C, D, E, F"
      ],
-     "pre": "Witz, Fahrer, Pinguin, Schwester, Wolf",
+     "pre": "B, A, C, D, E, F",
      "lvl": 2,
      "th": "basis",
      "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
+      "Sage das ABC leise auf."
      ],
      "id": "c104"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Ballon, Flasche, Keks, Pilz, Wurst, Zelt",
+     "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+     "a": "C, D, E, F, G, H, I",
      "ans": [
-      "Ballon, Flasche, Keks, Pilz, Wurst, Zelt"
+      "C, D, E, F, G, H, I"
      ],
-     "pre": "Pilz, Ballon, Wurst, Zelt, Flasche, Keks",
+     "pre": "C, D, E, G, F, H, I",
      "lvl": 2,
      "th": "basis",
      "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
+      "Sage das ABC leise auf."
      ],
      "id": "c105"
     },
     {
      "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Fisch, Pinguin, Schildkröte, Stuhl, Wand, Zelt",
+     "a": "Schlüssel, Superheld, Wurst, Zauberer",
      "ans": [
-      "Fisch, Pinguin, Schildkröte, Stuhl, Wand, Zelt"
+      "Schlüssel, Superheld, Wurst, Zauberer"
      ],
-     "pre": "Wand, Pinguin, Zelt, Stuhl, Schildkröte, Fisch",
+     "pre": "Superheld, Schlüssel, Zauberer, Wurst",
      "lvl": 2,
      "th": "basis",
      "hints": [
@@ -197802,40 +198372,40 @@
      "id": "c106"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Ball, Bild, Bruder, Buch",
+     "q": "Das ABC ist falsch. Verbessere im Feld.",
+     "a": "D, E, F",
      "ans": [
-      "Ball, Bild, Bruder, Buch"
+      "D, E, F"
      ],
-     "pre": "Buch, Bild, Bruder, Ball",
+     "pre": "D, E, G",
      "lvl": 2,
      "th": "basis",
      "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
+      "Sage das ABC leise auf."
      ],
      "id": "c107"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Huhn, Kerze, Lehrerin, Mantel",
+     "q": "Es fehlen Buchstaben. Verbessere im Feld.",
+     "a": "L, M, N, O, P, Q",
      "ans": [
-      "Huhn, Kerze, Lehrerin, Mantel"
+      "L, M, N, O, P, Q"
      ],
-     "pre": "Mantel, Lehrerin, Huhn, Kerze",
+     "pre": "L, M, N, O, Q",
      "lvl": 2,
      "th": "basis",
      "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
+      "Sage das ABC leise auf."
      ],
      "id": "c108"
     },
     {
      "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Eis, Fenster, Känguru, Märchen, Schuh, Stift",
+     "a": "Mann, Maus, Mutter, Mütze",
      "ans": [
-      "Eis, Fenster, Känguru, Märchen, Schuh, Stift"
+      "Mann, Maus, Mutter, Mütze"
      ],
-     "pre": "Stift, Märchen, Känguru, Schuh, Eis, Fenster",
+     "pre": "Mann, Mütze, Mutter, Maus",
      "lvl": 2,
      "th": "basis",
      "hints": [
@@ -197845,11 +198415,11 @@
     },
     {
      "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Schaf, Spiel, Stift, Stuhl, Suppe",
+     "a": "Arzt, Klasse, Koffer, Schulhof, Stuhl, Treppe",
      "ans": [
-      "Schaf, Spiel, Stift, Stuhl, Suppe"
+      "Arzt, Klasse, Koffer, Schulhof, Stuhl, Treppe"
      ],
-     "pre": "Suppe, Stuhl, Spiel, Stift, Schaf",
+     "pre": "Treppe, Stuhl, Schulhof, Klasse, Koffer, Arzt",
      "lvl": 2,
      "th": "basis",
      "hints": [
@@ -197858,648 +198428,60 @@
      "id": "c110"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Insel, Karotte, Kollege, Maus, Opa, Wolf",
+     "q": "Das ABC ist falsch. Verbessere im Feld.",
+     "a": "T, U, V",
      "ans": [
-      "Insel, Karotte, Kollege, Maus, Opa, Wolf"
+      "T, U, V"
      ],
-     "pre": "Insel, Maus, Wolf, Kollege, Karotte, Opa",
+     "pre": "T, U, W",
      "lvl": 2,
      "th": "basis",
      "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
+      "Sage das ABC leise auf."
      ],
      "id": "c111"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Bus, Känguru, Vater, Wasser",
+     "q": "Das ABC ist falsch. Verbessere im Feld.",
+     "a": "K, L, M",
      "ans": [
-      "Bus, Känguru, Vater, Wasser"
+      "K, L, M"
      ],
-     "pre": "Känguru, Wasser, Vater, Bus",
+     "pre": "K, L, N",
      "lvl": 2,
      "th": "basis",
      "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
+      "Sage das ABC leise auf."
      ],
      "id": "c112"
     },
     {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Heft, Känguru, Schulhof, Spinne",
+     "q": "Schreibe die Buchstaben rückwärts. Verbessere im Feld.",
+     "a": "I, H, G, F",
      "ans": [
-      "Heft, Känguru, Schulhof, Spinne"
+      "I, H, G, F"
      ],
-     "pre": "Schulhof, Spinne, Heft, Känguru",
-     "lvl": 2,
+     "pre": "F, G, H, I",
+     "lvl": 3,
      "th": "basis",
      "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
+      "Beginne beim letzten Buchstaben."
      ],
      "id": "c113"
     },
     {
      "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Drache, Gärtner, Hut, Lehrer, Pilz, Vater",
+     "a": "Regen, Reh, Rose, Rucksack, Rutsche",
      "ans": [
-      "Drache, Gärtner, Hut, Lehrer, Pilz, Vater"
+      "Regen, Reh, Rose, Rucksack, Rutsche"
      ],
-     "pre": "Vater, Hut, Gärtner, Lehrer, Drache, Pilz",
+     "pre": "Rucksack, Rutsche, Rose, Regen, Reh",
      "lvl": 2,
      "th": "basis",
      "hints": [
       "Vergleiche Buchstabe für Buchstabe."
      ],
      "id": "c114"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Ball, Baum, Bild, Blume, Bruder",
-     "ans": [
-      "Ball, Baum, Bild, Blume, Bruder"
-     ],
-     "pre": "Bruder, Ball, Baum, Blume, Bild",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c115"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Hase, Katze, Tisch, Torte, Vater, Wurst",
-     "ans": [
-      "Hase, Katze, Tisch, Torte, Vater, Wurst"
-     ],
-     "pre": "Hase, Katze, Vater, Tisch, Torte, Wurst",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c116"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Berg, Brot, Ente, Schwester, Witz",
-     "ans": [
-      "Berg, Brot, Ente, Schwester, Witz"
-     ],
-     "pre": "Brot, Schwester, Berg, Ente, Witz",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c117"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Bonbon, Jacke, Pool, Stuhl, Teich",
-     "ans": [
-      "Bonbon, Jacke, Pool, Stuhl, Teich"
-     ],
-     "pre": "Bonbon, Jacke, Teich, Stuhl, Pool",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c118"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Keks, Kind, Mädchen, Wald",
-     "ans": [
-      "Keks, Kind, Mädchen, Wald"
-     ],
-     "pre": "Keks, Kind, Wald, Mädchen",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c119"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Eis, Elefant, Ente, Esel",
-     "ans": [
-      "Eis, Elefant, Ente, Esel"
-     ],
-     "pre": "Esel, Eis, Ente, Elefant",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c120"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Gärtner, Lied, Rätsel, Schildkröte, Tante",
-     "ans": [
-      "Gärtner, Lied, Rätsel, Schildkröte, Tante"
-     ],
-     "pre": "Rätsel, Lied, Schildkröte, Gärtner, Tante",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c121"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Frosch, Junge, Schule, Stift",
-     "ans": [
-      "Frosch, Junge, Schule, Stift"
-     ],
-     "pre": "Frosch, Schule, Junge, Stift",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c122"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Drache, Ritter, Schulhof, Sofa",
-     "ans": [
-      "Drache, Ritter, Schulhof, Sofa"
-     ],
-     "pre": "Drache, Ritter, Sofa, Schulhof",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c123"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Kuh, Löwe, Polizist, Schatz, Treppe, Vogel",
-     "ans": [
-      "Kuh, Löwe, Polizist, Schatz, Treppe, Vogel"
-     ],
-     "pre": "Kuh, Polizist, Löwe, Treppe, Vogel, Schatz",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c124"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Katze, Korb, Kuchen, Kuh",
-     "ans": [
-      "Katze, Korb, Kuchen, Kuh"
-     ],
-     "pre": "Korb, Kuh, Kuchen, Katze",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c125"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Affe, Ameise, Ast, Auto",
-     "ans": [
-      "Affe, Ameise, Ast, Auto"
-     ],
-     "pre": "Auto, Affe, Ameise, Ast",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c126"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Rock, Rose, Rucksack, Rutsche",
-     "ans": [
-      "Rock, Rose, Rucksack, Rutsche"
-     ],
-     "pre": "Rock, Rutsche, Rucksack, Rose",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c127"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Blume, Koffer, Wurst, Zug",
-     "ans": [
-      "Blume, Koffer, Wurst, Zug"
-     ],
-     "pre": "Blume, Wurst, Koffer, Zug",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c128"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Lehrer, Onkel, Teich, Turm",
-     "ans": [
-      "Lehrer, Onkel, Teich, Turm"
-     ],
-     "pre": "Onkel, Teich, Lehrer, Turm",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c129"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Korb, Pause, Stuhl, Wolke",
-     "ans": [
-      "Korb, Pause, Stuhl, Wolke"
-     ],
-     "pre": "Korb, Wolke, Stuhl, Pause",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c130"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Haus, Heft, Huhn, Hund",
-     "ans": [
-      "Haus, Heft, Huhn, Hund"
-     ],
-     "pre": "Hund, Heft, Haus, Huhn",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c131"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Drache, Käfer, Karotte, Kind, Roboter, Verkäuferin",
-     "ans": [
-      "Drache, Käfer, Karotte, Kind, Roboter, Verkäuferin"
-     ],
-     "pre": "Kind, Karotte, Roboter, Käfer, Verkäuferin, Drache",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c132"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Hase, Haus, Heft, Hund",
-     "ans": [
-      "Hase, Haus, Heft, Hund"
-     ],
-     "pre": "Hase, Heft, Haus, Hund",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c133"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Ballon, Bonbon, Fuchs, Pfütze, Schuh, Torte",
-     "ans": [
-      "Ballon, Bonbon, Fuchs, Pfütze, Schuh, Torte"
-     ],
-     "pre": "Bonbon, Schuh, Pfütze, Fuchs, Torte, Ballon",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c134"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Katze, Mantel, Schwein, Treppe, Wolf, Wolke",
-     "ans": [
-      "Katze, Mantel, Schwein, Treppe, Wolf, Wolke"
-     ],
-     "pre": "Mantel, Wolke, Katze, Treppe, Wolf, Schwein",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c135"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Eichhörnchen, Kissen, Lehrerin, Meerschweinchen, Wand, Zug",
-     "ans": [
-      "Eichhörnchen, Kissen, Lehrerin, Meerschweinchen, Wand, Zug"
-     ],
-     "pre": "Zug, Kissen, Eichhörnchen, Lehrerin, Meerschweinchen, Wand",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c136"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Hut, Oma, Regenbogen, Schülerin",
-     "ans": [
-      "Hut, Oma, Regenbogen, Schülerin"
-     ],
-     "pre": "Schülerin, Regenbogen, Hut, Oma",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c137"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Decke, Huhn, Karotte, Kollege, Ritter, Tasse",
-     "ans": [
-      "Decke, Huhn, Karotte, Kollege, Ritter, Tasse"
-     ],
-     "pre": "Decke, Huhn, Kollege, Ritter, Karotte, Tasse",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c138"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Fest, Mutter, Sofa, Stern",
-     "ans": [
-      "Fest, Mutter, Sofa, Stern"
-     ],
-     "pre": "Sofa, Stern, Fest, Mutter",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c139"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Banane, Regal, Wasser, Wolf",
-     "ans": [
-      "Banane, Regal, Wasser, Wolf"
-     ],
-     "pre": "Regal, Wasser, Banane, Wolf",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c140"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Schüler, Schwester, Spiel, Stift, Stuhl",
-     "ans": [
-      "Schüler, Schwester, Spiel, Stift, Stuhl"
-     ],
-     "pre": "Spiel, Stift, Schüler, Stuhl, Schwester",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c141"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Bär, Käfer, Kind, Lampe, Maus",
-     "ans": [
-      "Bär, Käfer, Kind, Lampe, Maus"
-     ],
-     "pre": "Käfer, Kind, Bär, Maus, Lampe",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c142"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Wald, Wiese, Wolf, Wolke, Wurst",
-     "ans": [
-      "Wald, Wiese, Wolf, Wolke, Wurst"
-     ],
-     "pre": "Wolke, Wiese, Wolf, Wurst, Wald",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c143"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Affe, Bach, Märchen, Mutter, Schwester, Wolke",
-     "ans": [
-      "Affe, Bach, Märchen, Mutter, Schwester, Wolke"
-     ],
-     "pre": "Wolke, Schwester, Affe, Märchen, Bach, Mutter",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c144"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Reh, Rock, Rose, Rucksack, Rutsche",
-     "ans": [
-      "Reh, Rock, Rose, Rucksack, Rutsche"
-     ],
-     "pre": "Rutsche, Reh, Rock, Rose, Rucksack",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c145"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Brot, Klasse, Tasse, Teller, Vater, Velo",
-     "ans": [
-      "Brot, Klasse, Tasse, Teller, Vater, Velo"
-     ],
-     "pre": "Velo, Klasse, Teller, Brot, Vater, Tasse",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c146"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Ball, Baum, Brot, Bruder, Buch",
-     "ans": [
-      "Ball, Baum, Brot, Bruder, Buch"
-     ],
-     "pre": "Buch, Ball, Baum, Bruder, Brot",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c147"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Eimer, Eis, Elefant, Ente",
-     "ans": [
-      "Eimer, Eis, Elefant, Ente"
-     ],
-     "pre": "Ente, Eis, Eimer, Elefant",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c148"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Wiese, Wolf, Wolke, Wurst",
-     "ans": [
-      "Wiese, Wolf, Wolke, Wurst"
-     ],
-     "pre": "Wolke, Wurst, Wiese, Wolf",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c149"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Ball, Baum, Bild, Bruder, Buch",
-     "ans": [
-      "Ball, Baum, Bild, Bruder, Buch"
-     ],
-     "pre": "Buch, Ball, Bruder, Baum, Bild",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c150"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Pferd, Pilz, Pinsel, Puppe",
-     "ans": [
-      "Pferd, Pilz, Pinsel, Puppe"
-     ],
-     "pre": "Pferd, Pinsel, Pilz, Puppe",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c151"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Bett, Fahrrad, Igel, Kollege, Mädchen",
-     "ans": [
-      "Bett, Fahrrad, Igel, Kollege, Mädchen"
-     ],
-     "pre": "Fahrrad, Mädchen, Bett, Kollege, Igel",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c152"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Ballon, Dach, Hausaufgabe, Oma, Pfütze",
-     "ans": [
-      "Ballon, Dach, Hausaufgabe, Oma, Pfütze"
-     ],
-     "pre": "Oma, Ballon, Pfütze, Hausaufgabe, Dach",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c153"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Auto, Ballon, Flasche, Pausenhof, Pool, Trainer",
-     "ans": [
-      "Auto, Ballon, Flasche, Pausenhof, Pool, Trainer"
-     ],
-     "pre": "Pausenhof, Ballon, Pool, Auto, Trainer, Flasche",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c154"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Katze, Kind, Korb, Kuchen, Kuh",
-     "ans": [
-      "Katze, Kind, Korb, Kuchen, Kuh"
-     ],
-     "pre": "Kuchen, Katze, Kuh, Kind, Korb",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c155"
-    },
-    {
-     "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-     "a": "Brille, Fenster, Koch, Maus, Schülerin, Torte",
-     "ans": [
-      "Brille, Fenster, Koch, Maus, Schülerin, Torte"
-     ],
-     "pre": "Fenster, Brille, Schülerin, Torte, Koch, Maus",
-     "lvl": 2,
-     "th": "basis",
-     "hints": [
-      "Vergleiche Buchstabe für Buchstabe."
-     ],
-     "id": "c156"
     }
    ],
    "exam": {
@@ -198507,97 +198489,6 @@
     "questions": [
      {
       "id": "q1",
-      "q": "Welches Wort kommt im ABC zuerst? Wald, Wasser, Wind, Wiese",
-      "explain": "Richtig geordnet: Wald, Wasser, Wiese, Wind.",
-      "type": "mc",
-      "options": [
-       "Wiese",
-       "Wald",
-       "Wind",
-       "Wasser"
-      ],
-      "answer": 1
-     },
-     {
-      "id": "q2",
-      "q": "Welches Wort kommt im ABC zuerst? Lampe, Lied, Licht, Löwe",
-      "explain": "Richtig geordnet: Lampe, Licht, Lied, Löwe.",
-      "type": "mc",
-      "options": [
-       "Löwe",
-       "Lampe",
-       "Licht",
-       "Lied"
-      ],
-      "answer": 1
-     },
-     {
-      "id": "q3",
-      "q": "Welches Wort kommt im ABC zuerst? Pferd, Pilz, Puppe, Pfeil",
-      "explain": "Richtig geordnet: Pfeil, Pferd, Pilz, Puppe.",
-      "type": "mc",
-      "options": [
-       "Pfeil",
-       "Puppe",
-       "Pferd",
-       "Pilz"
-      ],
-      "answer": 0
-     },
-     {
-      "id": "q4",
-      "q": "Welches Wort kommt im ABC zuerst? Rad, Rose, Regen, Ring",
-      "explain": "Richtig geordnet: Rad, Regen, Ring, Rose.",
-      "type": "mc",
-      "options": [
-       "Rose",
-       "Ring",
-       "Regen",
-       "Rad"
-      ],
-      "answer": 3
-     },
-     {
-      "id": "q5",
-      "q": "Welches Wort kommt im ABC zuletzt? Kind, Katze, Kuh, Kerze",
-      "explain": "",
-      "type": "mc",
-      "options": [
-       "Kerze",
-       "Katze",
-       "Kind",
-       "Kuh"
-      ],
-      "answer": 3
-     },
-     {
-      "id": "q6",
-      "q": "Welches Wort kommt im ABC zuletzt? Blume, Bruder, Brot, Blatt",
-      "explain": "",
-      "type": "mc",
-      "options": [
-       "Brot",
-       "Blatt",
-       "Blume",
-       "Bruder"
-      ],
-      "answer": 3
-     },
-     {
-      "id": "q7",
-      "q": "Welches Wort kommt im ABC zuletzt? Fisch, Feder, Fuss, Fenster",
-      "explain": "",
-      "type": "mc",
-      "options": [
-       "Fisch",
-       "Fenster",
-       "Feder",
-       "Fuss"
-      ],
-      "answer": 3
-     },
-     {
-      "id": "q8",
       "q": "Schreibe den Buchstaben nach «P».",
       "explain": "Der nächste Buchstabe im ABC.",
       "type": "input",
@@ -198607,7 +198498,7 @@
       "cs": true
      },
      {
-      "id": "q9",
+      "id": "q2",
       "q": "Schreibe den Buchstaben nach «T».",
       "explain": "Der nächste Buchstabe im ABC.",
       "type": "input",
@@ -198617,7 +198508,7 @@
       "cs": true
      },
      {
-      "id": "q10",
+      "id": "q3",
       "q": "Schreibe den Buchstaben nach «W».",
       "explain": "Der nächste Buchstabe im ABC.",
       "type": "input",
@@ -198627,43 +198518,134 @@
       "cs": true
      },
      {
-      "id": "q11",
-      "q": "Welcher Buchstabe kommt nach «L»?",
+      "id": "q4",
+      "q": "Welcher Buchstabe kommt nach «M»?",
       "explain": "",
       "type": "mc",
       "options": [
-       "K",
-       "O",
+       "L",
+       "Q",
        "P",
-       "M"
+       "N"
+      ],
+      "answer": 3
+     },
+     {
+      "id": "q5",
+      "q": "Welcher Buchstabe kommt nach «P»?",
+      "explain": "",
+      "type": "mc",
+      "options": [
+       "Q",
+       "S",
+       "O",
+       "T"
+      ],
+      "answer": 0
+     },
+     {
+      "id": "q6",
+      "q": "Welcher Buchstabe kommt nach «F»?",
+      "explain": "",
+      "type": "mc",
+      "options": [
+       "G",
+       "J",
+       "I",
+       "E"
+      ],
+      "answer": 0
+     },
+     {
+      "id": "q7",
+      "q": "Welcher Buchstabe kommt nach «E»?",
+      "explain": "",
+      "type": "mc",
+      "options": [
+       "D",
+       "H",
+       "I",
+       "F"
+      ],
+      "answer": 3
+     },
+     {
+      "id": "q8",
+      "q": "Welcher Buchstabe kommt nach «D»?",
+      "explain": "",
+      "type": "mc",
+      "options": [
+       "E",
+       "H",
+       "C",
+       "G"
+      ],
+      "answer": 0
+     },
+     {
+      "id": "q9",
+      "q": "Welcher Buchstabe kommt vor «R»?",
+      "explain": "",
+      "type": "mc",
+      "options": [
+       "Q",
+       "S",
+       "O",
+       "U"
+      ],
+      "answer": 0
+     },
+     {
+      "id": "q10",
+      "q": "Welcher Buchstabe kommt vor «C»?",
+      "explain": "",
+      "type": "mc",
+      "options": [
+       "D",
+       "B",
+       "Z",
+       "F"
+      ],
+      "answer": 1
+     },
+     {
+      "id": "q11",
+      "q": "Welcher Buchstabe kommt vor «G»?",
+      "explain": "",
+      "type": "mc",
+      "options": [
+       "D",
+       "H",
+       "J",
+       "F"
       ],
       "answer": 3
      },
      {
       "id": "q12",
-      "q": "Welcher Buchstabe kommt nach «E»?",
+      "q": "Der wievielte Buchstabe im ABC ist «O»?",
       "explain": "",
       "type": "mc",
       "options": [
-       "F",
-       "D",
-       "H",
-       "I"
+       "der 14.",
+       "der 16.",
+       "der 15.",
+       "der 18."
       ],
-      "answer": 0
+      "answer": 2
      },
      {
       "id": "q13",
-      "q": "Welcher Buchstabe kommt nach «K»?",
+      "q": "Der wievielte Buchstabe im ABC ist «J»?",
       "explain": "",
       "type": "mc",
       "options": [
-       "N",
-       "J",
-       "O",
-       "L"
+       "der 13.",
+       "der 9.",
+       "der 10.",
+       "der 11."
       ],
-      "answer": 3
+      "answer": 2
      },
      {
       "id": "q14",
@@ -198671,12 +198653,12 @@
       "explain": "",
       "type": "mc",
       "options": [
-       "D",
        "B",
+       "W",
        "A",
-       "W"
+       "D"
       ],
-      "answer": 3
+      "answer": 1
      },
      {
       "id": "q15",
@@ -198684,12 +198666,12 @@
       "explain": "",
       "type": "mc",
       "options": [
-       "A",
        "B",
-       "D",
-       "P"
+       "A",
+       "P",
+       "D"
       ],
-      "answer": 3
+      "answer": 2
      },
      {
       "id": "q16",
@@ -198706,93 +198688,93 @@
      },
      {
       "id": "q17",
-      "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-      "explain": "",
+      "q": "Schreibe die Buchstaben rückwärts. Verbessere im Feld.",
+      "explain": "Beginne beim letzten Buchstaben.",
       "type": "input",
       "answer": [
-       "Jacke, Kerze, Pinguin, Rakete, Schulleiterin"
+       "N, M, L, K, J, I"
       ],
-      "pre": "Jacke, Pinguin, Rakete, Kerze, Schulleiterin"
+      "pre": "I, J, K, L, M, N"
      },
      {
       "id": "q18",
-      "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-      "explain": "",
+      "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
+      "explain": "Vergleiche Buchstabe für Buchstabe.",
       "type": "input",
       "answer": [
-       "Fenster, Roller, Wald, Wurst"
+       "Affe, Ameise, Apfel, Ast, Auto"
       ],
-      "pre": "Roller, Wurst, Fenster, Wald"
+      "pre": "Apfel, Auto, Ast, Ameise, Affe"
      },
      {
       "id": "q19",
-      "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-      "explain": "",
+      "q": "Schreibe die Buchstaben rückwärts. Verbessere im Feld.",
+      "explain": "Beginne beim letzten Buchstaben.",
       "type": "input",
       "answer": [
-       "Fahrrad, Pausenbrot, Pirat, Turm, Wand, Zebra"
+       "T, S, R, Q"
       ],
-      "pre": "Pausenbrot, Fahrrad, Turm, Wand, Pirat, Zebra"
+      "pre": "Q, R, S, T"
      },
      {
       "id": "q20",
-      "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-      "explain": "",
+      "q": "Das ABC ist falsch. Verbessere im Feld.",
+      "explain": "Sage das ABC leise auf.",
       "type": "input",
       "answer": [
-       "Eis, Fuchs, Pirat, Pool, Wurst, Zauberer"
+       "C, D, E"
       ],
-      "pre": "Zauberer, Wurst, Pirat, Pool, Fuchs, Eis"
+      "pre": "C, D, F"
      },
      {
       "id": "q21",
-      "q": "Ordne die Wörter nach dem Alphabet. Schreibe sie mit Komma.",
-      "explain": "",
+      "q": "Es fehlen Buchstaben. Verbessere im Feld.",
+      "explain": "Sage das ABC leise auf.",
       "type": "input",
       "answer": [
-       "Fahrer, Gitarre, Hamster, Haus, Karte, Pinguin"
+       "L, M, N, O, P"
       ],
-      "pre": "Pinguin, Karte, Hamster, Fahrer, Haus, Gitarre"
+      "pre": "L, N, O, P"
      },
      {
       "id": "q22",
-      "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-      "explain": "Vergleiche Buchstabe für Buchstabe.",
+      "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+      "explain": "Sage das ABC leise auf.",
       "type": "input",
       "answer": [
-       "Henne, Maus, Pause, Schwimmbad, Wand"
+       "N, O, P, Q, R"
       ],
-      "pre": "Maus, Wand, Henne, Pause, Schwimmbad"
+      "pre": "O, N, P, Q, R"
      },
      {
       "id": "q23",
-      "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-      "explain": "Vergleiche Buchstabe für Buchstabe.",
+      "q": "Das ABC ist falsch. Verbessere im Feld.",
+      "explain": "Sage das ABC leise auf.",
       "type": "input",
       "answer": [
-       "Birne, Eis, Kollege, Oma, Wolf"
+       "H, I, J"
       ],
-      "pre": "Kollege, Oma, Eis, Wolf, Birne"
+      "pre": "H, I, K"
      },
      {
       "id": "q24",
-      "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-      "explain": "Vergleiche Buchstabe für Buchstabe.",
+      "q": "Das ABC ist falsch. Verbessere im Feld.",
+      "explain": "Sage das ABC leise auf.",
       "type": "input",
       "answer": [
-       "Biene, Koffer, Polizist, Suppe, Trainer, Witz"
+       "E, F, G"
       ],
-      "pre": "Witz, Suppe, Biene, Polizist, Koffer, Trainer"
+      "pre": "E, F, H"
      },
      {
       "id": "q25",
-      "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-      "explain": "Vergleiche Buchstabe für Buchstabe.",
+      "q": "Zwei Buchstaben sind vertauscht. Verbessere im Feld.",
+      "explain": "Sage das ABC leise auf.",
       "type": "input",
       "answer": [
-       "Regen, Reh, Rose, Rucksack"
+       "E, F, G, H, I, J, K"
       ],
-      "pre": "Reh, Rucksack, Regen, Rose"
+      "pre": "E, F, G, I, H, J, K"
      },
      {
       "id": "q26",
@@ -198800,19 +198782,19 @@
       "explain": "Vergleiche Buchstabe für Buchstabe.",
       "type": "input",
       "answer": [
-       "Hausaufgabe, Igel, Klasse, Korb, Superheld"
+       "Hase, Haus, Heft, Huhn"
       ],
-      "pre": "Klasse, Superheld, Igel, Korb, Hausaufgabe"
+      "pre": "Heft, Haus, Hase, Huhn"
      },
      {
       "id": "q27",
-      "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-      "explain": "Vergleiche Buchstabe für Buchstabe.",
+      "q": "Es fehlen Buchstaben. Verbessere im Feld.",
+      "explain": "Sage das ABC leise auf.",
       "type": "input",
       "answer": [
-       "Dach, Dorf, Dose, Drache"
+       "O, P, Q, R, S"
       ],
-      "pre": "Dach, Dose, Drache, Dorf"
+      "pre": "O, P, Q, S"
      },
      {
       "id": "q28",
@@ -198820,49 +198802,49 @@
       "explain": "Vergleiche Buchstabe für Buchstabe.",
       "type": "input",
       "answer": [
-       "Glas, Kissen, Mutter, Nuss, Uhr, Wolke"
+       "Frau, Mann, Suppe, Wald, Wurst"
       ],
-      "pre": "Nuss, Uhr, Glas, Kissen, Mutter, Wolke"
+      "pre": "Frau, Wald, Mann, Suppe, Wurst"
      },
      {
       "id": "q29",
-      "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-      "explain": "Vergleiche Buchstabe für Buchstabe.",
+      "q": "Es fehlen Buchstaben. Verbessere im Feld.",
+      "explain": "Sage das ABC leise auf.",
       "type": "input",
       "answer": [
-       "Affe, Ameise, Apfel, Ast, Auto"
+       "P, Q, R, S, T, U, V, W"
       ],
-      "pre": "Auto, Affe, Ameise, Ast, Apfel"
+      "pre": "P, Q, R, T, V, W"
      },
      {
       "id": "q30",
-      "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-      "explain": "Vergleiche Buchstabe für Buchstabe.",
+      "q": "Es fehlen Buchstaben. Verbessere im Feld.",
+      "explain": "Sage das ABC leise auf.",
       "type": "input",
       "answer": [
-       "Hausaufgabe, Kerze, Koch, Ritter"
+       "I, J, K, L, M, N"
       ],
-      "pre": "Koch, Ritter, Hausaufgabe, Kerze"
+      "pre": "I, J, L, M, N"
      },
      {
       "id": "q31",
-      "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-      "explain": "Vergleiche Buchstabe für Buchstabe.",
+      "q": "Schreibe die Buchstaben rückwärts. Verbessere im Feld.",
+      "explain": "Beginne beim letzten Buchstaben.",
       "type": "input",
       "answer": [
-       "Lampe, Löwe, Sängerin, Uhr"
+       "G, F, E, D"
       ],
-      "pre": "Sängerin, Uhr, Lampe, Löwe"
+      "pre": "D, E, F, G"
      },
      {
       "id": "q32",
-      "q": "Ordne die Wörter nach dem Alphabet. Verbessere im Feld.",
-      "explain": "Vergleiche Buchstabe für Buchstabe.",
+      "q": "Schreibe die Buchstaben rückwärts. Verbessere im Feld.",
+      "explain": "Beginne beim letzten Buchstaben.",
       "type": "input",
       "answer": [
-       "Gabel, Gans, Garten, Glas, Gurke"
+       "Y, X, W, V"
       ],
-      "pre": "Gabel, Glas, Gurke, Garten, Gans"
+      "pre": "V, W, X, Y"
      }
     ]
    }

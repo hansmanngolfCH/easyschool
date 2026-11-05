@@ -1,5 +1,9 @@
 """Ein Beispiel pro Schritt in 'So gehst du vor' (v4.86)."""
 EX={
+'Sage das ABC leise auf, bis du beim Buchstaben bist.':'Gesucht: K → A B C D E F G H I J K',
+'Welcher Buchstabe kommt kurz davor? Das ist der Buchstabe davor.':'Vor K steht J.',
+'Welcher Buchstabe kommt gleich danach? Das ist der Buchstabe danach.':'Nach K steht L.',
+'Zähle mit, wenn du den Platz wissen willst.':'K ist der 11. Buchstabe.',
 'Lies das Wort.':'«Hund»',
 'Probiere «der, die oder das» davor: Passt es, ist es ein Nomen.':'der Hund ✔ → Nomen. «der rennt» ✘ → kein Nomen.',
 'Frage: Kann man es tun? Dann ist es ein Verb.':'«rennen»: Man kann rennen ✔ → Verb.',
@@ -154,7 +158,7 @@ ANNO={
 'wortarten3':('Der Satz, gezeichnet. Die Pfeile zeigen die Wortarten.',[['Er','Pronomen',4,'steht für ein Nomen'],['rennt','Verb',1,'Was wird getan?'],['schnell','Adjektiv',2,'Wie rennt er?'],['zur','Artikel',3,'zur = zu der'],['Schule','Nomen',0,'die Schule']],'Er rennt schnell zur Schule.'),
 'wortarten5':('Der Satz, gezeichnet. Die Pfeile zeigen die Wortarten.',[['Der','Artikel',3,''],['Hund','Nomen',0,'Mehrzahl: Hunde'],['rennt','Verb',1,'rannte'],['sehr','Partikel',7,'bleibt immer gleich'],['schnell','Adjektiv',2,'schneller'],['in','Präposition',5,'nennt den Ort'],['den','Artikel',3,''],['Garten','Nomen',0,'']],'Der Hund rennt sehr schnell in den Garten.'),
 'subjekt':('Der Satz, gezeichnet. Die Pfeile zeigen die Satzglieder.',[['Heute','Zeit',7,'Wann?'],['klaut','Prädikat',1,'das Verb'],['der freche Hund','Subjekt',0,'Wer klaut?'],['die Wurst','Objekt',5,'Wen oder was?']],'Heute klaut der freche Hund die Wurst.'),
-'alphabet':('Die Wörter, gezeichnet. Die Pfeile zeigen die Reihenfolge.',[['Apfel','1. Platz',5,'A kommt zuerst'],['Hase','2. Platz',6,'H, dann a'],['Hund','3. Platz',4,'H, dann u'],['Maus','4. Platz',2,'M kommt zuletzt']],'Apfel, Hase, Hund, Maus'),
+'alphabet':('Der Buchstabe K, gezeichnet. Die Pfeile zeigen davor, danach und den Platz.',[['J','davor',5,'Platz 10'],['K','dieser Buchstabe',0,'Platz 11'],['L','danach',6,'Platz 12']],'… I, J, K, L, M …'),
 'nebensatzarten':('Der Satz, gezeichnet. Die Pfeile zeigen die Satzteile.',[['Wir bleiben drinnen,','Hauptsatz',5,'kann allein stehen'],['weil','Einleitewort',6,'Warum?'],['es regnet','Nebensatz',1,'Verb am Ende']],'Der Nebensatz nennt einen Grund: Kausalsatz.'),
 'pronomen':('Der Text, gezeichnet. Die Pfeile zeigen, was was ist.',[['Anna','Nomen',0,''],['spielt','Verb',1,''],['Sie','Stellvertreter',4,'steht für Anna'],['lacht','Verb',1,''],['Ihr','Begleiter',4,'gehört zu «Hund»'],['Hund','Nomen',0,''],['bellt','Verb',1,'']],'Anna spielt. Sie lacht. Ihr Hund bellt.'),
 'plusquam':('Der Satz, gezeichnet. Die Pfeile zeigen die Zeitformen.',[['Nachdem Anna','','',''],['gegessen hatte,','Plusquamperfekt',5,'passierte zuerst'],['ging sie spielen','Präteritum',6,'passierte danach']],'Nachdem Anna gegessen hatte, ging sie spielen.')}

@@ -108,3 +108,48 @@ def stammformen(ch,hard):
         t.ein("Schreibe die er-Form von «nehmen». Er ___ .","nimmt",'')
     return t
 T+= [lambda:stammformen('kl3',False),lambda:stammformen('kl4',True)]
+
+# ---- v4.89: Alphabet neu: Fokus auf die Buchstabenreihe, Woerter ordnen an zweiter Stelle
+VOK='AEIOU'
+def alphabet(ch,hard):
+    t=DT('%s-deu-alphabet'%ch,ch,'Wortkunde','Das Alphabet',seed=51+int(ch[2:]))
+    t.th('basis','Alphabet','Das ABC hat 26 Buchstaben in fester Reihe: A ist der 1., Z der 26. Zu jedem Buchstaben gibt es einen davor und einen danach.')
+    def row(a,b):return [(LET[i],str(i+1),1 if LET[i] in VOK else 7) for i in range(a,b)]
+    THEORY(t,"Du sagst das ABC auf: A, B, C, D … Jeder Buchstabe hat seinen festen Platz. K ist der 11. Buchstabe. Davor steht J, danach steht L.",SC('letters',word='ABC',say='Das ABC hat eine feste Reihe'),
+      "Das ABC ist eine Reihe mit 26 Buchstaben.",["Was","Beispiel"],[["{0|Reihe}","A B C D E … X Y Z"],["{1|Platz}","A ist der 1., M der 13., Z der 26."],["{2|Davor}","Vor K steht J."],["{3|Danach}","Nach K steht L."],["{4|Vokale}","A, E, I, O, U"]],
+      "Hier siehst du die Reihe mit Platznummern. Die Vokale sind blau.",
+      [(row(0,13),"A bis M: Platz 1 bis 13."),(row(13,26),"N bis Z: Platz 14 bis 26."),([("J","davor",7),("K","dieser",0),("L","danach",7)],"Vor K steht J, nach K steht L.")],
+      "So findest du einen Buchstaben im ABC.",["Sage das ABC leise auf, bis du beim Buchstaben bist.","Welcher Buchstabe kommt kurz davor? Das ist der Buchstabe davor.","Welcher Buchstabe kommt gleich danach? Das ist der Buchstabe danach.","Zähle mit, wenn du den Platz wissen willst."],
+      "Das ist wichtig.",[["Reihe","26 Buchstaben, A vorne, Z hinten.","A B C … Z",0],["Vokale","A, E, I, O, U. Alle anderen sind Konsonanten.","Auge, Ofen",1],["Mitte","M ist der 13. Buchstabe, die Mitte vom ABC.","A–M und N–Z",2],["Wörter ordnen","Zuerst zählt der erste Buchstabe, dann der zweite.","Hand vor Hund",3]],
+      fehler=[["x","y","z"]])
+    more(t,'Wörter nach dem ABC ordnen','Auch Wörter stehen in der Reihe des ABC. Zuerst zählt der erste Buchstabe. Ist er gleich, zählt der zweite.',
+      SENT([("Ball","B",0),("Dach","D",1),("Esel","E",2)],"B, D, E: Der erste Buchstabe entscheidet."),SENT([("Hand","a",0),("Hase","a",0),("Hund","u",1)],"Alle beginnen mit H. Dann zählt der zweite Buchstabe: a, a, u."))
+    if hard:more(t,'Umlaute und Wörterbuch','Im Wörterbuch stehen ä, ö, ü bei a, o, u. Das ß schreibst du in der Schweiz als ss.',TBL(['Wort','Sortiert wie','Beispiel-Reihe'],[['Bär','Bar','Bad, Bär, Bein'],['Löwe','Lowe','Lampe, Löwe, Lupe'],['Mütze','Mutze','Mund, Mütze, Mutter']]))
+    r=t.r
+    for i in r.sample(range(0,25),9):t.mc(1,"Welcher Buchstabe kommt nach «%s»?"%LET[i],LET[i+1],[LET[i-1] if i else 'Z',LET[(i+3)%26],LET[(i+5)%26]],"Sage das ABC leise auf.")
+    for i in r.sample(range(1,26),9):t.mc(1,"Welcher Buchstabe kommt vor «%s»?"%LET[i],LET[i-1],[LET[(i+1)%26],LET[(i+4)%26],LET[(i-3)%26]],"Sage das ABC leise auf.")
+    for i in r.sample(range(1,22),6):t.mc(2,"Welcher Buchstabe fehlt? %s, ___, %s"%(LET[i],LET[i+2]),LET[i+1],[LET[i],LET[i+2],LET[i+3]],"Sage das ABC leise auf.")
+    for i in r.sample(range(0,26),8):t.mc(2,"Der wievielte Buchstabe im ABC ist «%s»?"%LET[i],'der %d.'%(i+1),['der %d.'%(i+2),'der %d.'%i,'der %d.'%(i+4)],"Zähle das ABC von A an.")
+    for i in r.sample(range(2,24),6):t.mc(2,"Welcher Buchstabe ist der %d. im ABC?"%(i+1),LET[i],[LET[i-1],LET[i+1],LET[i+2]],"Zähle das ABC von A an.")
+    t.mc(1,"Wie viele Buchstaben hat das ABC?",'26',['24','28','30'],"Zähle A bis Z.")
+    t.mc(1,"Welcher Buchstabe steht am Anfang vom ABC?",'A',['B','Z','M'],"")
+    t.mc(1,"Welcher Buchstabe steht am Ende vom ABC?",'Z',['A','Y','X'],"")
+    t.multi(2,"Tippe alle Vokale an.",['A','E','I','O'],['B','K','M','T'],"Vokale: A, E, I, O, U.")
+    t.multi(2,"Tippe alle Konsonanten an.",['B','K','M'],['A','E','O','U'][:3],"Alle ausser A, E, I, O, U.")
+    for a,b in [(1,5),(6,10),(11,14)]:t.mc(2,"Wie viele Buchstaben liegen zwischen %s und %s?"%(LET[a],LET[b]),str(b-a-1),[str(b-a),str(b-a+1),str(b-a-2)],"Zähle die Buchstaben dazwischen.")
+    ws=['Apfel','Ball','Dach','Esel','Fisch','Gans','Hase','Igel','Kuh','Lamm','Maus','Nase','Ohr','Pferd','Rose','Sonne','Tisch','Uhr','Vogel','Wolke','Zebra','Baum','Mond','Katze']
+    for k in range(6):
+        st=r.sample(ws,3);s=sorted(st);t.mc(2,"Welches Wort kommt im ABC zuerst? %s"%', '.join(st),s[0],s[1:],"Vergleiche die Anfangsbuchstaben.",'Richtig geordnet: %s.'%', '.join(s))
+    if hard:
+        for st in [['Hund','Hand','Haus','Hase'],['Schule','Schaf','Schiff','Schuh'],['Ball','Baum','Bank','Bild'],['Mund','Mutter','Mantel','Maus']]:
+            s=sorted(st);t.mc(2,"Welches Wort kommt im ABC zuerst? %s"%', '.join(st),s[0],s[1:],"Vergleiche den zweiten Buchstaben.",'Richtig geordnet: %s.'%', '.join(s))
+    forms(t,[("Schreibe den Buchstaben nach «%s»."%LET[i],LET[i+1],'Der nächste Buchstabe im ABC.') for i in (2,6,11,15,19,22)],ne=3,hint='Schreibe den grossen Buchstaben.')
+    for i in r.sample(range(2,22),5):t.emc('Welcher Buchstabe kommt nach «%s»?'%LET[i],LET[i+1],[LET[i-1],LET[i+3],LET[i+4]],'')
+    for i in r.sample(range(2,23),3):t.emc('Welcher Buchstabe kommt vor «%s»?'%LET[i],LET[i-1],[LET[i+1],LET[i+3],LET[i-3]],'')
+    for i in r.sample(range(0,26),3):t.emc("Der wievielte Buchstabe im ABC ist «%s»?"%LET[i],'der %d.'%(i+1),['der %d.'%(i+2),'der %d.'%i,'der %d.'%(i+4)],'')
+    t.emc("Wie viele Buchstaben hat das ABC?",'26',['24','28','30'],'')
+    for w in ['Katze','Mond','Pferd'] if not hard else ['Wasser','Pilz','Schaf']:
+        t.emc("Bei welchem Buchstaben suchst du «%s» im Wörterbuch?"%w,w[0],[x for x in 'ABDHLTSM' if x!=w[0]][:3],'')
+    for a,b in [(0,5),(8,13)]:
+        run=', '.join(LET[a:b]);miss=', '.join(LET[a:a+2]+LET[a+3:b]);t.fix(2,'Ein Buchstabe fehlt. Verbessere im Feld.',miss,run,'Sage das ABC leise auf.')
+    return t
