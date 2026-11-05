@@ -1439,7 +1439,8 @@ ins.dfy{text-decoration:none;color:#0d652d;background:rgba(52,168,83,.22);border
 /* v4.78 Schulfarben Deutsch: Nomen rot, Verb blau, Adjektiv gelb, Artikel gruen */
 [data-de="1"] .cw.c0{color:#8D5A2B;background:#f1e6da}
 [data-de="1"] .cw.c1{color:#1A73E8;background:#e8f0fe}
-[data-de="1"] .cw.c2{color:#B37A00;background:#fff3c4}
+[data-de="1"] .cw.c2{color:#A07800;background:#fff3c4}
+[data-de="1"] .cw.c4{color:#D2600A;background:#fde9d9}
 [data-de="1"] .cw.c3{color:#188038;background:#e6f4ea}
 /* v4.78b Deutsch-Tabellen als Karten (iPhone) */
 .dtb table{hyphens:manual;-webkit-hyphens:manual}
