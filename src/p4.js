@@ -15,8 +15,9 @@ function diffPair(mine,right){
 function fixGrow(el){if(!el)return;el.style.height='auto';el.style.height=(el.scrollHeight+2)+'px'}
 
 /* ---------- Üben ---------- */
+function mqFix(s){return String(s).replace(/((?:^|[\s=(])[-−]?[\d?❓xyz][\w,²³%°\/?]*)\.\s+(?!Schritt|Klasse|Platz|Rang|Stelle|Teil)(?=[A-ZÄÖÜ])/g,'$1<br>')}
 function qHtml(q){
-  if(q.indexOf('\n')<0)return '<p class="fq">'+rt(q)+'</p>';
+  if(q.indexOf('\n')<0)return '<p class="fq">'+mqFix(rt(q))+'</p>';
   var ls=q.split('\n'),sent=ls[0],rest=ls.slice(1).join(' '),m=/«([^»]+)»/.exec(rest),h='',i=m?sent.toLowerCase().indexOf(m[1].toLowerCase()):-1;
   h=i>=0?esc(sent.slice(0,i))+'<mark>'+esc(sent.slice(i,i+m[1].length))+'</mark>'+esc(sent.slice(i+m[1].length)):esc(sent);
   return '<div class="dsent"><p>'+h+'</p></div><p class="dqq">'+esc(rest).replace(/«([^»]+)»/g,'<b class="dtg">$1</b>')+'</p>';
@@ -58,7 +59,7 @@ function examArt(){
 }
 function qBlock(q){
   var p=qParts(q);
-  return '<div class="mqx"><span class="qm">'+rt(p.main)+sayBtn(q.say)+'</span>'+(p.ctx?'<span class="qc">'+rt(p.ctx)+'</span>':'')+'<span class="qi">'+esc(p.inst)+'</span></div>';
+  return '<div class="mqx"><span class="qm">'+mqFix(rt(p.main))+sayBtn(q.say)+'</span>'+(p.ctx?'<span class="qc">'+mqFix(rt(p.ctx))+'</span>':'')+'<span class="qi">'+esc(p.inst)+'</span></div>';
 }
 function curCard(n){
   var k=n.queue[n.idx],x=cardIdx[k];

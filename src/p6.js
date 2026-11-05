@@ -77,7 +77,7 @@ function xgSeenGet(k){try{return JSON.parse(localStorage.getItem(k)||'{}')||{}}c
 function xgSeenSet(k,o){try{var ks=Object.keys(o);if(ks.length>400){var n2={};ks.slice(-300).forEach(function(x){n2[x]=1});o=n2}localStorage.setItem(k,JSON.stringify(o))}catch(e){}}
 function xgOptRound(q,right,others,key,vis,why){
   var all=[right].concat(others),long=all.some(function(x){return String(x).length>26});
-  var mx=Math.max.apply(null,all.map(function(x){return String(x).length})),vk=vis?JSON.stringify(vis):'';return {why:why||'',cols1:mx>26,key:key||q+'|'+right+vk,ans:right+vk,kind:'opt',svg:(vis?'<div class="xg-vis">'+visuals(vis)+'</div>':'')+'<div class="xg-q">'+esc(q).replace(/\n/g,'<br>')+'</div>',opts:shuffle(all.map(function(x){return {h:'<b'+(mx>45?' class="xl xl2"':long?' class="xl"':'')+'>'+esc(x)+'</b>',ok:x===right}}))}
+  var mx=Math.max.apply(null,all.map(function(x){return String(x).length})),vk=vis?JSON.stringify(vis):'';return {why:why||'',cols1:mx>26,key:key||q+'|'+right+vk,ans:right+vk,kind:'opt',svg:(vis?'<div class="xg-vis">'+visuals(vis)+'</div>':'')+'<div class="xg-q">'+mqFix(esc(q).replace(/\n/g,'<br>'))+'</div>',opts:shuffle(all.map(function(x){return {h:'<b'+(mx>45?' class="xl xl2"':long?' class="xl"':'')+'>'+esc(x)+'</b>',ok:x===right}}))}
 }
 function xgCommaVar(sent){
   var out=[],nc=sent.replace(/,/g,'');if(nc!==sent)out.push(nc);
@@ -157,7 +157,7 @@ function xgBuild(t){
       if(pl.length<30){all.filter(function(x){return x.id!==t.id&&x.chapter&&x.chapter===t.chapter&&sib.indexOf(x)<0}).forEach(function(x){pl=pl.concat(xgCardPool(x,all))})}
       var sg={};pl=pl.filter(function(x){if(sg[x.key])return false;sg[x.key]=1;return true})}
     if(sub==='mathe'&&/plus|minus/.test(t.id)){var big=/20/.test(t.id)?20:10,pm=/plus/.test(t.id),k2=0,sx={};pl.forEach(function(x){sx[x.key]=1});
-      while(pl.length<40&&k2++<400){var a2=1+Math.floor(Math.random()*(big-1)),b2=1+Math.floor(Math.random()*(big-1));if(pm&&a2+b2>big)continue;if(!pm&&b2>a2)continue;var q2=a2+(pm?' + ':' − ')+b2+' = ?',r2=pm?a2+b2:a2-b2;if(sx[q2+r2])continue;sx[q2+r2]=1;var o2=[r2+1,r2-1,r2+2,r2-2,r2+10,r2-10].filter(function(v){return v>=0&&v!==r2});pl.push(xgOptRound(q2,String(r2),shuffle(o2).slice(0,3).map(String),q2+r2))}}
+      while(pl.length<40&&k2++<400){var a2=1+Math.floor(Math.random()*(big-1)),b2=1+Math.floor(Math.random()*(big-1));if(pm&&a2+b2>big)continue;if(!pm&&b2>a2)continue;var q2=a2+(pm?' + ':' − ')+b2+' =',r2=pm?a2+b2:a2-b2;if(sx[q2+r2])continue;sx[q2+r2]=1;var o2=[r2+1,r2-1,r2+2,r2-2,r2+10,r2-10].filter(function(v){return v>=0&&v!==r2});pl.push(xgOptRound(q2,String(r2),shuffle(o2).slice(0,3).map(String),q2+r2))}}
     n.rounds=xgPick(t,pl,N,0);
     if(sub==='mathe'&&n.rounds.length<N){var tr=0,seenM={};n.rounds.forEach(function(r){seenM[r.svg]=1});while(n.rounds.length<N&&tr++<60){var rr=xgMult();if(seenM[rr.svg])continue;seenM[rr.svg]=1;rr.kind='opt';n.rounds.push(rr)}}
   }
@@ -171,6 +171,7 @@ ACT.xgame=function(b){
 };
 ACT.xgquit=function(){clearTimeout(XGT);ACT.back()};
 function xgHearts(n){return ''}
+function xgCalcBtn(n){var ok=false;try{ok=gradeOf(n.child)>=7&&topicById(n.topicId).subject==='mathe'}catch(e){}return ok?'<button class="xg-x xg-calc" data-act="calc" aria-label="Taschenrechner">🧮</button>':''}
 function vXg(){
   var n=nav,t=topicById(n.topicId),NAME={salat:'Buchstaben-Salat',vocab:'Vokabel-Mix',math:'Mathe-Knobler',quiz:'Quiz'}[n.kind];
   if(n.phase==='end'){
@@ -178,7 +179,7 @@ function vXg(){
     return '<div class="stack"><div class="xg xg-end xg-'+n.kind+' s-'+t.subject+'"><div class="xg-trophy">'+(n.ok===tot&&!n.miss?'🏆':n.ok>=7?'🥇':n.ok>=4?'🥈':'🎯')+'</div><h1>'+n.ok+' / '+tot+'</h1><p>'+n.ok+' von '+tot+' Aufgaben geschafft'+(n.ok===tot&&!n.miss?' · Perfekt, ohne Fehler!':'')+'</p></div><div class="row"><button class="btn pri big" data-act="xgquit">Fertig</button></div></div>';
   }
   var r=n.rounds[n.i],secs=xgSecs(r),h='<div class="stack"><div><p class="eyebrow">Easy lernen · '+esc(t.title)+'</p><h1>'+NAME+'</h1></div><div class="xg xg-'+n.kind+' s-'+t.subject+'" id="xg">'
-   +'<div class="xg-top"><span class="xg-h" id="xgh">'+xgHearts(n)+'</span><span class="xg-dots">'+n.rounds.map(function(x,k){return '<i class="'+(k<n.i?'d':k===n.i?'c':'')+'"></i>'}).join('')+'</span><button class="xg-x" data-act="xgquit" aria-label="Beenden">×</button></div>'
+   +'<div class="xg-top"><span class="xg-h" id="xgh">'+xgCalcBtn(n)+'</span><span class="xg-dots">'+n.rounds.map(function(x,k){return '<i class="'+(k<n.i?'d':k===n.i?'c':'')+'"></i>'}).join('')+'</span><button class="xg-x" data-act="xgquit" aria-label="Beenden">×</button></div>'
    ;
   if(r.kind==='salat'){
     var letters=[],chars=r.fw.split(''),slots=chars.map(function(ch,k){var isL=/[a-zàâäçéèêëîïôöùûüÿœæß]/i.test(ch);if(isL)letters.push(ch.toLowerCase());return isL?'<span class="xs" id="xs'+(letters.length-1)+'"></span>':'<span class="xs fx">'+(ch===' '?'&nbsp;':esc(ch))+'</span>'}).join('');
@@ -191,7 +192,7 @@ function vXg(){
   
   return h;
 }
-function xgSched(secs){clearTimeout(XGT);var n=nav,tok=++n.tok;XGT=setTimeout(function wait(){if(nav!==n||n.tok!==tok||n.phase!=='play')return;if(document.getElementById('rwd')){XGT=setTimeout(wait,3000);return}xgFail(true)},secs*1000)}
+function xgSched(secs){clearTimeout(XGT);var n=nav,tok=++n.tok;XGT=setTimeout(function wait(){if(nav!==n||n.tok!==tok||n.phase!=='play')return;if(document.getElementById('rwd')||document.getElementById('calov')){XGT=setTimeout(wait,3000);return}xgFail(true)},secs*1000)}
 function xgNext(){var n=nav;if(n.view!=='xg')return;if(n.i+1>=n.rounds.length){xgEnd();return}n.i++;n.phase='play';render()}
 function xgEnd(){
   var n=nav;n.phase='end';clearTimeout(XGT);
