@@ -195,7 +195,7 @@ function vXg(){
 function xgSched(secs){clearTimeout(XGT);var n=nav,tok=++n.tok;XGT=setTimeout(function wait(){if(nav!==n||n.tok!==tok||n.phase!=='play')return;if(document.getElementById('rwd')||document.getElementById('calov')){XGT=setTimeout(wait,3000);return}xgFail(true)},secs*1000)}
 function xgNext(){var n=nav;if(n.view!=='xg')return;if(n.i+1>=n.rounds.length){xgEnd();return}n.i++;n.phase='play';render()}
 function xgEnd(){
-  var n=nav;n.phase='end';clearTimeout(XGT);
+  var n=nav;n.phase='end';clearTimeout(XGT);rewardEnd('Easy lernen geschafft!');
     if(n.ok>=2)ach(n.child,'pairs');
   checkPassive(n.child);save(n.child);render();
 }

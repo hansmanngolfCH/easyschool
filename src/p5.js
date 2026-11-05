@@ -89,7 +89,7 @@ function advance(){
 function finishRound(n){
   if(n.done)return;n.done=true;
   var keys=Object.keys(n.res);if(!keys.length)return;
-  var t=15;n.bonus.push('Runde geschafft +15');
+  rewardEnd('Alle Karten geschafft!');var t=15;n.bonus.push('Runde geschafft +15');
   if(n.perfect&&keys.length>=3){t+=25;n.bonus.push('Perfekte Runde +25');ach(n.child,'perfect');toast('Perfekte Runde! +25 XP','gold')}
   n.xp+=addXp(n.child,t);ach(n.child,'first');checkPassive(n.child);save(n.child);
 }
@@ -313,13 +313,14 @@ fetch('content.json',{cache:'no-cache'}).then(function(r){if(!r.ok)throw new Err
  window.addEventListener('pointercancel',function(){if(drag&&drag.ghost)drag.ghost.remove();drag=null});
 })();
 /* ---------- Belohnung: Extra-XP-Runde ---------- */
-var STREAK=0,QN=0,TT=0,LT=0,RW=null;
-function rwReset(){STREAK=0;QN=0;TT=0;LT=0}
+var STREAK=0,QN=0,TT=0,LT=0,RW=null,RWN=4+Math.floor(Math.random()*6);
+function rwReset(){STREAK=0;QN=0;TT=0;LT=0;RWN=4+Math.floor(Math.random()*6)}
+function rewardEnd(why){setTimeout(function(){if(!document.getElementById('rwd')&&!RW)showReward(why)},900)}
 function rewardAfter(ok){
   if(!nav||(nav.view!=='practice'&&nav.view!=='xg'))return;
   QN++;if(ok)STREAK++;else STREAK=0;
-  if(STREAK>=3){rwReset();showReward('3 richtige Antworten in Folge!')}
-  else if(QN>=5){rwReset();showReward('5 Fragen geschafft!')}
+  if(STREAK>=5){rwReset();showReward('5 richtige Antworten in Folge!')}
+  else if(QN>=RWN){var q=QN;rwReset();showReward(q+' Fragen geschafft!')}
 }
 function theoryTask(){if(!nav||nav.view!=='learn')return;TT++;if(TT>=3){rwReset();setTimeout(function(){showReward('3 Aufgaben gelöst!')},600)}}
 (function(){var last=Date.now();setInterval(function(){var n=Date.now(),d=n-last;last=n;if(d>5000)d=5000;if(document.hidden||RW||document.getElementById('rwd'))return;if(nav&&(nav.view==='learn'||nav.view==='practice')){LT+=d;if(LT>=180000){rwReset();showReward('3 Minuten gelernt!')}}},1000)})();
