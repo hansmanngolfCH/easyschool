@@ -1691,8 +1691,8 @@ ins.dfy{text-decoration:none;color:#0d652d;background:rgba(52,168,83,.22);border
 .anno .as{font:500 .85rem/1.3 inherit;font-family:inherit;color:var(--ink2,#5f6368);margin-top:2px}
 
 /* v4.90 Titelbild */
-.brandrow .homehero{display:block;width:min(300px,78vw);height:auto;max-width:none;margin:0 auto}
-@media (min-width:700px){.brandrow .homehero{width:360px}}
+.brandrow .homehero{display:block;width:min(210px,55vw);height:auto;max-width:none;margin:0 auto}
+@media (min-width:700px){.brandrow .homehero{width:252px}}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1700,7 +1700,7 @@ ins.dfy{text-decoration:none;color:#0d652d;background:rgba(52,168,83,.22);border
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION="v4.92";
+var APP_VERSION="v4.93";
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -3003,7 +3003,7 @@ function vExam(){
 
 var VIEWS={home:vHome,child:vChild,subject:vSubject,learn:vLearn,practice:vPractice,exam:vExam,game:vGame,xg:vXg,parent:vParent};
 
-function top(){if(nav.view==='home')return '<header class="top" style="min-height:8px"></header>';return '<header class="top"><button class="brand" data-act="home" aria-label="Zur Startseite">'+logoSvg(34)+'<span class="wm">EasySchool</span></button><button class="btn back" data-act="back">← Zurück</button></header>'}
+function top(){if(nav.view==='home')return '<header class="top" style="min-height:8px"></header>';return '<header class="top"><button class="brand" data-act="home" aria-label="Zur Startseite"><img class="logo" src="img/hero.webp" alt="" width="53" height="34" style="height:34px;width:auto"><span class="wm">EasySchool</span></button><button class="btn back" data-act="back">← Zurück</button></header>'}
 var TR=null;
 function traceDraw(cv){var x=cv.getContext('2d'),t=cv.getAttribute('data-t');x.clearRect(0,0,600,600);x.fillStyle='#fff';x.fillRect(0,0,600,600);
   x.font='bold 440px Arial,Helvetica,sans-serif';x.textAlign='center';x.textBaseline='alphabetic';

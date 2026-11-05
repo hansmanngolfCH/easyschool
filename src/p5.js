@@ -1,7 +1,7 @@
 
 var VIEWS={home:vHome,child:vChild,subject:vSubject,learn:vLearn,practice:vPractice,exam:vExam,game:vGame,xg:vXg,parent:vParent};
 
-function top(){if(nav.view==='home')return '<header class="top" style="min-height:8px"></header>';return '<header class="top"><button class="brand" data-act="home" aria-label="Zur Startseite">'+logoSvg(34)+'<span class="wm">EasySchool</span></button><button class="btn back" data-act="back">← Zurück</button></header>'}
+function top(){if(nav.view==='home')return '<header class="top" style="min-height:8px"></header>';return '<header class="top"><button class="brand" data-act="home" aria-label="Zur Startseite"><img class="logo" src="img/hero.webp" alt="" width="53" height="34" style="height:34px;width:auto"><span class="wm">EasySchool</span></button><button class="btn back" data-act="back">← Zurück</button></header>'}
 var TR=null;
 function traceDraw(cv){var x=cv.getContext('2d'),t=cv.getAttribute('data-t');x.clearRect(0,0,600,600);x.fillStyle='#fff';x.fillRect(0,0,600,600);
   x.font='bold 440px Arial,Helvetica,sans-serif';x.textAlign='center';x.textBaseline='alphabetic';
