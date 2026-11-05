@@ -223,7 +223,7 @@ def f_wortarten(t,r):
                 nn=r.choice(NOUNS);ad=r.choice(ADJ);vv=r.choice(['ist','war','bleibt'])
                 tok=[(A(nn[2],'nom'),'Artikel'),(nn[0],'Nomen'),(vv,'Verb'),(ad,'Adjektiv')];tok[0]=(tok[0][0].capitalize(),'Artikel')
             else:
-                tok=s_intr(r,1.0)[:-1];tok=[x for x in tok]
+                tok=s_intr(r,1.0)
         elif c=='Pronomen':tok=s_pron(r)
         elif c=='Präposition':tok=s_loc(r)
         elif c=='Konjunktion':
@@ -337,8 +337,8 @@ def f_alphabet(t,r):
     while n<60 and tries<800:
         tries+=1;x=r.random()
         if k>=4 and x<.5:
-            pl=r.choice(ABC_POOLS);ws=r.sample(pl,min(4,len(pl)))
-        else:ws=r.sample(words,4)
+            pl=r.choice(ABC_POOLS);ws=r.sample(pl,min(r.choice([4,5,5,6]),len(pl)))
+        else:ws=r.sample(words,r.choice([4,5,5,6]))
         so=sorted(ws,key=_k)
         if x<.3:
             if MC(t,1 if k<4 else 2,'Welches Wort kommt im Alphabet zuerst?\n'+', '.join(ws) if False else 'Welches Wort kommt im Alphabet zuerst: '+', '.join(ws)+'?',so[0],so[1:],'Schau auf den ersten Buchstaben%s.'%(' und dann auf den zweiten' if k>=4 else '')):n+=1
@@ -385,7 +385,7 @@ def f_satzz(t,r):
             if r.random()<.5 and t.fix(1,'Setze das richtige Satzzeichen ans Ende.',s[:-1]+'.',s,'Ein Ausruf oder Befehl endet mit einem Ausrufezeichen.'):n+=1
             elif MC(t,1,s[:-1]+'\nWelches Satzzeichen steht am Ende?','!',['.','?'],'Bei einem Ausruf oder Befehl setzt du ein Ausrufezeichen.'):n+=1
 def listsent(r,k):
-    fr,p=r.choice(LISTS);cnt=3 if k<4 else r.choice([3,4]);it=r.sample(p,min(cnt,len(p)));cj='und' if (k<4 or r.random()<.7) else 'oder'
+    fr,p=r.choice(LISTS);cnt=3 if k<4 else r.choice([4,5]);it=r.sample(p,min(cnt,len(p)));cj='und' if (k<4 or r.random()<.7) else 'oder'
     body=', '.join(it[:-1])+' '+cj+' '+it[-1]
     ok=fr.format(body);nocomma=fr.format(' '.join(it[:-1])+' '+cj+' '+it[-1]);cbefore=fr.format(', '.join(it[:-1])+', '+cj+' '+it[-1]);head=fr.split('{}')[0].rstrip()
     return ok,nocomma,cbefore,fr,it,cj
@@ -423,7 +423,7 @@ def f_kommaerw(t,r):
         MC(t,2,ok+'\nStimmen die Kommas?','richtig',['falsch'],'Ein eingeschobener Nebensatz hat zwei Kommas.')
 def f_hauptneben(t,r):
     n=0
-    for a,cj,b,art in r.sample(NS,len(NS)):
+    for a,cj,b,art in r.sample(NS,28):
         MC(t,1,b+'.\nIst das ein Hauptsatz oder ein Nebensatz?' if False else '%s %s.\nIst das ein Hauptsatz oder ein Nebensatz?'%(cj,b),'Nebensatz',['Hauptsatz'],'Beim Nebensatz steht das Verb am Ende.')
         MC(t,1,a+'.\nIst das ein Hauptsatz oder ein Nebensatz?','Hauptsatz',['Nebensatz'],'Der Hauptsatz kann allein stehen.')
         words=(cj+' '+b).split();wr=[w for w in words[1:] if w!=cj]
@@ -435,7 +435,7 @@ def f_hauptneben(t,r):
         MC(t,2,'%s, %s, %s.\nWelcher Teil ist der Nebensatz?'%(h,rel,rest),rel,[h,rest],'Der Relativsatz beginnt mit «der», «die» oder «das» und das Verb steht am Ende.')
 def f_nebenarten(t,r):
     arts=['Kausalsatz','Konditionalsatz','Temporalsatz','Konzessivsatz','Finalsatz','Dass-Satz']
-    for a,cj,b,art in r.sample(NS,len(NS)):
+    for a,cj,b,art in r.sample(NS,34):
         MC(t,2,'%s, %s %s.\nWelche Art von Nebensatz ist das?'%(a,cj,b),art,[x for x in arts if x!=art],'Das Einleitewort verrät die Art: weil, wenn, als, obwohl, damit, dass …')
         if art!='Dass-Satz':MC(t,1,'%s %s.\nWas drückt der Nebensatz aus?'%(cj,b),{'Kausalsatz':'einen Grund','Konditionalsatz':'eine Bedingung','Temporalsatz':'eine Zeit','Konzessivsatz':'einen Gegengrund','Finalsatz':'einen Zweck'}[art],[x for x in['einen Grund','eine Bedingung','eine Zeit','einen Gegengrund','einen Zweck'] if x!={'Kausalsatz':'einen Grund','Konditionalsatz':'eine Bedingung','Temporalsatz':'eine Zeit','Konzessivsatz':'einen Gegengrund','Finalsatz':'einen Zweck'}[art]],'Frage: Warum? Wann? Unter welcher Bedingung? Trotz was? Wozu?')
     for h,rel,rest in REL:
@@ -659,7 +659,7 @@ def g_punct(r,k):
         q=r.choice(SATZ_Q);nm=r.choice(NAMES)[0];nn=r.choice(NOUNS);s=q.format(n=nm,a=A(nn[2],'akk',False),x=nn[0]) if '{a}' in q else q.format(n=nm);return (1,'Setze das richtige Satzzeichen ans Ende. Verbessere im Feld.',s[:-1],s,'Eine Frage endet mit einem Fragezeichen.')
     s=r.choice(SATZ_E);return (1,'Setze das richtige Satzzeichen ans Ende. Verbessere im Feld.',s[:-1]+'.',s,'Ein Ausruf oder Befehl endet mit einem Ausrufezeichen.')
 def g_alpha(r,k):
-    ws=r.sample([x[0] for x in NOUNS if x[0][0] not in 'ÄÖÜ'],4) if r.random()<.5 else r.sample(r.choice(ABC_POOLS),4)
+    ws=r.sample([x[0] for x in NOUNS if x[0][0] not in 'ÄÖÜ'],r.choice([4,5,6])) if r.random()<.5 else r.sample(r.choice(ABC_POOLS),r.choice([4,5]))
     so=sorted(ws,key=_k)
     return (2,'Ordne die Wörter nach dem Alphabet. Verbessere im Feld.',', '.join(ws),', '.join(so),'Vergleiche Buchstabe für Buchstabe.') if ws!=so else None
 def g_langv(r,k):
@@ -786,3 +786,241 @@ AKTALL=list(AKTPAS);AKTPAS[:]=AKTPAS[:18]
 KONJALL=list(KONJ);KONJ[:]=KONJ[:12]
 FIXSET['passiv']=['pas','pas2'];FIXSET['konjunktiv']=['konj','konj2']
 FIXSET['nebensatzarten']=['nsconj','cns','nsord','crel'];FIXSET['hauptneben']=['nsord','cns','crel']
+
+# ===================================================== v4.85: sympathische, sinnvolle Saetze (Frames)
+import de_sent as DS
+NOUNS+=DS.NEWN
+NOUNS[:]=list({n[0]:n for n in NOUNS}.values());NB.clear();NB.update({n[0]:n for n in NOUNS})
+def _weak(n):return n[2]=='m' and n[3] in(n[0]+'n',n[0]+'en')
+def _noun(n,case):
+    if case=='gen' and n[2]!='f':return n[3]
+    if case in('akk','dat') and _weak(n):return n[3]
+    return n[0]
+def NP(n,case='nom',adj=None,defn=True,cap=False):
+    sg,pl,g,gen,_=n
+    parts=[A(g,case,defn)]
+    if adj:parts.append(AD(adj,(adjend(g,case) if defn else {'m':'er','f':'e','n':'es'}[g] if case=='nom' else adjend(g,case))))
+    parts.append(_noun(n,case));s=' '.join(parts)
+    return s[0].upper()+s[1:] if cap else s
+def NPtok(n,case='nom',adj=None,cap=False):
+    t=[(A(n[2],case),'Artikel')]
+    if adj:t.append((AD(adj,adjend(n[2],case)),'Adjektiv'))
+    t.append((_noun(n,case),'Nomen'))
+    if cap:t[0]=(t[0][0].capitalize(),t[0][1])
+    return t
+def frame_parts(r,mode='x',adjp=.55):
+    while True:
+        sk,v,ok,ex=r.choice(DS.F)
+        if mode=='i' and ok:continue
+        if mode=='t' and not ok:continue
+        sn=NB[sk];on=NB[ok] if ok else None
+        if on and on[0]==sn[0]:continue
+        sa=r.choice(DS.SADJ.get(sn[4],DS.OADJ)) if r.random()<adjp else None
+        oa=None
+        if on and r.random()<adjp*.7:oa=r.choice(DS.FOODADJ if on[0] in DS.FOOD else DS.OADJ)
+        return {'subj':NPtok(sn,'nom',sa,cap=True),'verb':(v,'Verb'),'obj':NPtok(on,'akk',oa) if on else [],'extra':DS._extra(ex)}
+def _tok(p):return p['subj']+[p['verb']]+p['obj']+p['extra']
+def s_intr(r,adjp=.55):return _tok(frame_parts(r,'i',adjp))
+def s_trans(r,adjp=.5):return _tok(frame_parts(r,'t',adjp))
+def s_loc(r,adjp=.5):return _tok(frame_parts(r,'x',adjp))
+def text(tok):return (' '.join(w for w,_ in tok)+'.').replace(' ,',',')
+def sent_gen(r,kinds=('i','t','l'),long=0):
+    if long and r.random()<long:
+        a=_tok(frame_parts(r,'x'));b=_tok(frame_parts(r,'x'));cj=r.choice(['und','aber','denn','und'])
+        b=[(b[0][0].lower(),b[0][1])]+b[1:]
+        return a+([(',','Zeichen')] if cj!='und' else [])+[(cj,'Konjunktion')]+b
+    return _tok(frame_parts(r,'x'))
+# --- Subjekt / Praedikat / Objekt
+def f_subjekt(t,r):
+    n=0;tries=0;sat=fam(t)=='satzglieder'
+    while n<60 and tries<600:
+        tries+=1;p=frame_parts(r,'x',.4);tok=_tok(p);s=text(tok)
+        subj=' '.join(w for w,_ in p['subj']);verb=p['verb'][0];rest=' '.join(w for w,_ in p['obj']+p['extra'])
+        if r.random()<.5:
+            if MC(t,1 if not sat else 2,s+'\nWelcher Teil ist das Subjekt?',subj,[verb,rest],'Frage: Wer oder was tut etwas?'):n+=1
+        else:
+            if MC(t,1 if not sat else 2,s+'\nWelcher Teil ist das Prädikat?',verb,[subj,rest],'Das Prädikat ist das Verb.'):n+=1
+        if sat and r.random()<.5:
+            q=frame_parts(r,'t',.4)
+            obj=' '.join(w for w,_ in q['obj']);MC(t,2,text(_tok(q))+'\nWelcher Teil ist das Akkusativobjekt (wen oder was)?',obj,[' '.join(w for w,_ in q['subj']),q['verb'][0],' '.join(w for w,_ in q['extra'])],'Frage: Wen oder was?')
+            dn=r.choice(pool('person')+pool('tier'));vb=r.choice(['hilft','dankt','gehört','winkt','gratuliert'])
+            d=NP(dn,'dat');s3='%s %s %s.'%(r.choice(NAMES)[0],vb,d)
+            MC(t,2,s3+'\nWelcher Teil ist das Dativobjekt (wem)?',d,[s3.split()[0],vb],'Frage: Wem?')
+def f_subjekt_fix(t,r):
+    PL=[('Die Kinder','spielen','spielt'),('Die Hunde','laufen','läuft'),('Die Katzen','schlafen','schläft'),('Wir','singen','singt'),('Die Schüler','lachen','lacht'),('Meine Freunde','kommen','kommt'),('Die Vögel','fliegen','fliegt'),('Ihr','wartet','warten'),('Ich','spiele','spielt'),('Du','singst','singt'),('Er','läuft','laufen'),('Sie (viele)','tanzen','tanzt')]
+    for sj,ok,bad in r.sample(PL,len(PL)):
+        sj=sj.replace(' (viele)','');adv=r.choice(['heute','im Garten','gern','laut','am Morgen'])
+        t.fix(2,'Das Prädikat passt nicht zum Subjekt. Verbessere im Feld.','%s %s %s.'%(sj,bad,adv),'%s %s %s.'%(sj,ok,adv),'Das Prädikat richtet sich nach dem Subjekt.')
+PL2={'isst':'essen','liest':'lesen','sieht':'sehen','fängt':'fangen','trägt':'tragen','wäscht':'waschen','läuft':'laufen','schläft':'schlafen','fährt':'fahren','hält':'halten','gibt':'geben','schiesst':'schiessen','vergräbt':'vergraben','hüpft':'hüpfen','brüllt':'brüllen'}
+def _pl3(v):
+    if v in PL2:return PL2[v]
+    if v.endswith('et'):return v[:-2]+'en'
+    if v.endswith('sst') or v.endswith('ßt'):return None
+    return v[:-1]+'en'
+def g_subjpl(r,k):
+    for _ in range(30):
+        sk,v,ok,ex=r.choice(DS.F);sn=NB[sk]
+        if sn[0]==sn[1] and sn[2]!='f':continue
+        pv=_pl3(v)
+        if not pv or sn[0]==sn[1]:continue
+        on=NB[ok] if ok else None
+        sing=' '.join(w for w,_ in NPtok(sn,'nom',None,cap=True));rest=(' '+NP(on,'akk') if on else '')+' '+' '.join(w for w,_ in DS._extra(ex))
+        return (3,'Setze das Subjekt in die Mehrzahl. Verbessere im Feld.','%s %s%s.'%(sing,v,rest),'Die %s %s%s.'%(sn[1],pv,rest),'Auch das Verb ändert sich.')
+def g_adj(r,k):
+    p=frame_parts(r,'x',0)
+    sn=None
+    for _ in range(30):
+        sk,v,ok,ex=r.choice(DS.F);sn=NB[sk]
+        if sn[4]!='ding':break
+    ad=r.choice(DS.SADJ.get(sn[4],DS.OADJ));good=NPtok(sn,'nom',ad,cap=True);bad=[good[0],(ad,'Adjektiv'),good[2]]
+    rest=(' '+NP(NB[ok],'akk') if ok else '')+' '+' '.join(w for w,_ in DS._extra(ex))
+    if sn[0]==(NB[ok][0] if ok else ''):return None
+    return (2,'Die Endung des Adjektivs fehlt. Verbessere im Feld.',' '.join(w for w,_ in bad)+' %s%s.'%(v,rest),' '.join(w for w,_ in good)+' %s%s.'%(v,rest),'Das Adjektiv passt sich an: der kleine, die kleine, das kleine.')
+GEN['subjpl']=g_subjpl;GEN['adj']=g_adj
+def g_cap(r,k):
+    tok=sent_gen(r,long=.6 if k>=4 else .25);a=text(tok);b=lowernouns(tok)
+    return (2,'Schreibe richtig: Gross oder klein? Verbessere im Feld.',b,a,'Satzanfang und Nomen schreibt man gross.') if a!=b else None
+GEN['cap']=g_cap
+def g_punct(r,k):
+    x=r.random()
+    if x<.4:tok=sent_gen(r,long=.4 if k>=4 else 0);a=text(tok);return (1,'Setze das richtige Satzzeichen ans Ende. Verbessere im Feld.',a[:-1],a,'Eine Aussage endet mit einem Punkt.')
+    if x<.75:
+        q=r.choice(SATZ_Q);nm=r.choice(NAMES)[0];nn=r.choice(NOUNS);s=q.format(n=nm,a=A(nn[2],'akk',False),x=nn[0]) if '{a}' in q else q.format(n=nm);return (1,'Setze das richtige Satzzeichen ans Ende. Verbessere im Feld.',s[:-1],s,'Eine Frage endet mit einem Fragezeichen.')
+    s=r.choice(SATZ_E);return (1,'Setze das richtige Satzzeichen ans Ende. Verbessere im Feld.',s[:-1]+'.',s,'Ein Ausruf oder Befehl endet mit einem Ausrufezeichen.')
+GEN['punct']=g_punct
+# --- Verben mit sinnvollen Ergaenzungen
+VC={'essen':['ein Eis','eine Pizza','einen Apfel'],'lesen':['ein Märchen','einen Comic','ein Buch'],'schreiben':['einen Brief','eine Geschichte','eine Karte'],'trinken':['ein Glas Milch','einen Kakao'],'finden':['einen Schatz','einen Käfer','einen Stein'],
+'geben':['dem Hund einen Knochen','der Katze Milch'],'nehmen':['den Rucksack','einen Apfel'],'werfen':['den Ball','einen Schneeball'],'ziehen':['den Schlitten','einen Wagen'],'bringen':['einen Kuchen','die Hefte'],'denken':['an die Ferien','an eine Pizza'],
+'treffen':['einen Freund','die Nachbarin'],'waschen':['das Auto','die Mütze'],'tragen':['den Rucksack','die Tasche'],'fangen':['den Ball','einen Fisch'],'beginnen':['mit der Hausaufgabe','mit dem Spiel'],'gewinnen':['das Spiel','den Preis'],
+'schneiden':['das Brot','die Wurst'],'brechen':['den Stock','das Eis'],'sprechen':['mit der Lehrerin','mit dem Freund'],'helfen':['der Oma','dem Nachbarn'],'sehen':['einen Regenbogen','ein Gespenst'],'singen':['ein Lied','im Chor'],'rufen':['den Hund','laut um Hilfe'],
+'kommen':['zur Schule','nach Hause'],'gehen':['zur Schule','in den Park'],'fahren':['mit dem Velo','zum See'],'schwimmen':['im See','im Schwimmbad'],'fliegen':['über den Wald','zum Mond'],'springen':['über die Pfütze','ins Wasser'],'bleiben':['zu Hause','im Bett'],
+'fallen':['in die Pfütze','vom Stuhl'],'laufen':['zum Bus','durch den Park'],'schlafen':['im Zelt','lange'],'spielen':['mit dem Ball','im Garten'],'lachen':['über den Witz','laut'],'arbeiten':['im Garten','fleissig'],'warten':['auf den Bus','vor der Schule'],
+'tanzen':['im Wohnzimmer','auf der Bühne'],'wohnen':['in der Stadt','auf dem Land'],'malen':['ein Bild','einen Drachen'],'lernen':['das Alphabet','für den Test'],'kaufen':['ein Eis','ein Heft'],'suchen':['den Schlüssel','den Hund'],
+'fragen':['die Lehrerin','nach dem Weg'],'kochen':['eine Suppe','Nudeln'],'baden':['im See','im Pool'],'reisen':['nach Italien','ans Meer'],'wandern':['durch den Wald','auf den Berg'],'rennen':['zum Bus','über den Hof'],'steigen':['auf den Baum','auf den Berg'],
+'sitzen':['auf der Bank','am Tisch'],'liegen':['im Gras','im Bett'],'machen':['die Hausaufgaben','einen Spaziergang']}
+VBS=[v for v in dict.fromkeys(VERBS+STRONG) if v[0] in VC]
+def tsent(nm,v,te,c):
+    inf,pr,pt,pp,aux,_=v
+    return {'Präsens':'%s %s heute %s.'%(nm,pr,c),'Präteritum':'%s %s gestern %s.'%(nm,pt,c),'Perfekt':'%s %s gestern %s %s.'%(nm,aux,c,pp),
+            'Plusquamperfekt':'%s %s vorher %s %s.'%(nm,'war' if aux=='ist' else 'hatte',c,pp),'Futur I':'%s wird morgen %s %s.'%(nm,c,inf)}[te]
+def f_zeit(t,r):
+    k=cls_of(t);f=fam(t);n=0;tries=0
+    tenses=['Präsens','Präteritum','Perfekt']+(['Plusquamperfekt','Futur I'] if (k>=5 or f=='plusquam') else [])
+    while n<60 and tries<800:
+        tries+=1;v=r.choice(VBS);nm=r.choice(NAMES)[0];te=r.choice(tenses);c=r.choice(VC[v[0]]);x=r.random();inf,pr,pt,pp,aux,st=v
+        if x<.5:
+            if t.mc(1 if te in tenses[:3] else 2,tsent(nm,v,te,c)+'\nIn welcher Zeitform steht der Satz?',te,[z for z in tenses if z!=te],'Achte auf das Verb und auf Wörter wie «heute», «gestern», «vorher», «morgen».',None):n+=1
+        elif x<.8:
+            te2=r.choice(tenses[:3]);core={'Präsens':pr,'Präteritum':pt,'Perfekt':aux+' '+pp}[te2]
+            full=tsent(nm,v,te2,c)
+            q=full.replace(core.split()[0] if te2!='Perfekt' else aux+' ',' ___ ' if False else '___ ',1) if False else None
+            wr=[pr,pt,('ist ' if aux=='ist' else 'hat ')+pp,('hat ' if aux=='ist' else 'ist ')+pp]
+            if te2=='Perfekt':
+                qq='%s ___ gestern %s %s. (Perfekt)\nWelche Hilfsform passt?'%(nm,c,pp)
+                if t.mc(2,qq,aux,['hat' if aux=='ist' else 'ist','wird','war'],'Bewegung oder Zustandsänderung: ist. Sonst: hat.',None):n+=1
+            else:
+                zeit='heute' if te2=='Präsens' else 'gestern'
+                qq='%s ___ %s %s. (%s)\nWelche Form passt? Verb: «%s»'%(nm,zeit,c,te2,inf)
+                if t.mc(2,qq,core,[w for w in [pr,pt,aux+' '+pp,'wird '+inf] if w!=core],'Bilde die Form des Verbs.',None):n+=1
+        else:
+            te2=r.choice(['Präteritum','Perfekt']);good=tsent(nm,v,te2,c)
+            bad=tsent(nm,v,'Präsens',c).replace('heute','gestern')
+            if bad!=good and t.fix(2,'Schreibe den Satz in der Zeitform %s. Verbessere im Feld.'%te2,bad,good,'Bilde die Form %s.'%te2):n+=1
+def g_tense(r,k):
+    v=r.choice(VBS);nm=r.choice(NAMES)[0];c=r.choice(VC[v[0]]);inf,pr,pt,pp,aux,st=v;x=r.random();wa='hat' if aux=='ist' else 'ist'
+    if x<.3:return (2,'Setze die richtige Hilfsform ein (hat oder ist). Verbessere im Feld.',tsent(nm,v,'Perfekt',c).replace(' '+aux+' ',' '+wa+' ',1),tsent(nm,v,'Perfekt',c),'Bewegung und Zustandsänderung: ist. Sonst: hat.')
+    if x<.5:return (2,'Schreibe im Präteritum. Verbessere im Feld.',tsent(nm,v,'Präsens',c).replace('heute','gestern'),tsent(nm,v,'Präteritum',c),'Präteritum: erzählte Vergangenheit.')
+    if x<.7:
+        good=tsent(nm,v,'Plusquamperfekt',c);bad=good.replace(' war ',' hatte ',1) if ' war ' in good else good.replace(' hatte ',' war ',1)
+        return (3,'Schreibe im Plusquamperfekt. Verbessere im Feld.',bad,good,'Plusquamperfekt: hatte/war + Partizip II.')
+    if x<.85:return (2,'Schreibe im Perfekt. Verbessere im Feld.',tsent(nm,v,'Präteritum',c),tsent(nm,v,'Perfekt',c),'Perfekt: hat/ist + Partizip II.')
+    return (2,'Schreibe im Futur. Verbessere im Feld.',tsent(nm,v,'Präsens',c).replace('heute','morgen'),tsent(nm,v,'Futur I',c),'Futur: wird + Grundform.')
+GEN['tense']=g_tense
+def f_stamm(t,r):
+    n=0
+    for v in r.sample([x for x in VBS if x[5]],len([x for x in VBS if x[5]])):
+        inf,pr,pt,pp,aux,_=v;nm=r.choice(NAMES)[0];c=r.choice(VC[inf])
+        w1=['ge'+inf[:-2]+'t','ge'+inf,'ge'+(pr[:-1] if pr.endswith('t') else pr)+'t']
+        if MC(t,2,'Wie heisst das Partizip II von «%s»?'%inf,pp,w1,'Starke Verben verändern oft den Vokal im Stamm.'):n+=1
+        MC(t,2,'Wie heisst das Präteritum von «%s» (er/sie/es)?'%inf,pt,[inf[:-2]+'te',pr,inf[:-2]+'t'],'Das Präteritum ist oft unregelmässig.')
+        t.inp(2,'Schreibe das Partizip II von «%s».'%inf,pp,'Der Stamm ändert sich.')
+        wrong='ge'+(pr[:-1] if pr.endswith('t') else pr)+'t';good=tsent(nm,v,'Perfekt',c)
+        bad=good.replace(' '+pp+'.',' '+wrong+'.')
+        if bad!=good:t.fix(2,'Verbessere direkt im Feld.',bad,good,'Das ist ein starkes Verb.')
+        MC(t,2,tsent(nm,v,'Präteritum',c)+'\nWie heisst die Grundform des Verbs?',inf,[pr,pp,pt],'Die Grundform endet auf -en.')
+
+# --- sympathische Haupt-/Nebensaetze
+NSC=[('Die Klasse lacht','weil','der Lehrer einen Witz erzählt','Kausalsatz'),('Der Hund bellt','weil','der Briefträger kommt','Kausalsatz'),('Anna freut sich','weil','heute Pizza auf dem Plan steht','Kausalsatz'),
+('Tom zieht eine Jacke an','weil','es draussen kalt ist','Kausalsatz'),('Der Frosch quakt laut','weil','er Hunger hat','Kausalsatz'),('Mia lernt fleissig','weil','morgen ein Test ist','Kausalsatz'),
+('Der Igel rollt sich ein','weil','ein Fuchs vorbeikommt','Kausalsatz'),('Wir bleiben drinnen','weil','es in Strömen regnet','Kausalsatz'),('Leo kichert','weil','sein Freund eine Grimasse schneidet','Kausalsatz'),
+('Die Katze schnurrt','weil','sie gekrault wird','Kausalsatz'),('Ben ist müde','weil','er nachts ein Gespenst gehört hat','Kausalsatz'),('Lara klatscht','weil','ihr Team gewonnen hat','Kausalsatz'),
+('Wir gehen schwimmen','wenn','die Sonne scheint','Konditionalsatz'),('Du darfst ein Eis essen','wenn','du dein Zimmer aufgeräumt hast','Konditionalsatz'),('Der Schneemann schmilzt','wenn','die Sonne scheint','Konditionalsatz'),
+('Ich helfe dir','wenn','du mir ein Bonbon gibst','Konditionalsatz'),('Der Hund kommt sofort','wenn','du pfeifst','Konditionalsatz'),('Wir bauen einen Schneemann','wenn','es schneit','Konditionalsatz'),
+('Die Blumen wachsen','wenn','du sie giesst','Konditionalsatz'),('Ich rufe dich an','wenn','ich zu Hause bin','Konditionalsatz'),('Die Katze miaut','wenn','sie Hunger hat','Konditionalsatz'),
+('Wir waschen die Hände','bevor','wir essen','Temporalsatz'),('Anna liest ein Buch','während','der Hund schläft','Temporalsatz'),('Wir spielen draussen','bis','es dunkel wird','Temporalsatz'),
+('Ich rufe dich an','sobald','ich zu Hause bin','Temporalsatz'),('Die Kinder rennen hinaus','sobald','die Pausenglocke läutet','Temporalsatz'),('Tom putzt die Zähne','nachdem','er gegessen hat','Temporalsatz'),
+('Der Clown lacht','während','die Kinder klatschen','Temporalsatz'),('Wir singen ein Lied','bevor','die Schule aus ist','Temporalsatz'),('Die Maus schlüpft ins Loch','bevor','die Katze sie sieht','Temporalsatz'),
+('Mia macht die Hausaufgaben','nachdem','sie ein Pausenbrot gegessen hat','Temporalsatz'),('Wir gehen spazieren','obwohl','es regnet','Konzessivsatz'),('Tom spielt draussen','obwohl','es kalt ist','Konzessivsatz'),
+('Anna lacht','obwohl','sie hingefallen ist','Konzessivsatz'),('Der Hund schläft weiter','obwohl','die Kinder laut singen','Konzessivsatz'),('Leo isst ein Eis','obwohl','er schon Bauchweh hat','Konzessivsatz'),
+('Die Schüler bleiben ruhig','obwohl','der Clown frech grinst','Konzessivsatz'),('Mia lernt weiter','obwohl','ihr Lieblingslied läuft','Konzessivsatz'),('Der Pinguin schwitzt nicht','obwohl','die Sonne scheint','Konzessivsatz'),
+('Ich lerne fleissig','damit','ich gute Noten bekomme','Finalsatz'),('Wir stehen früh auf','damit','wir den Bus erreichen','Finalsatz'),('Sie spart Geld','damit','sie ein Fahrrad kaufen kann','Finalsatz'),
+('Der Lehrer erklärt es nochmal','damit','alle es verstehen','Finalsatz'),('Ich schreibe es auf','damit','ich es nicht vergesse','Finalsatz'),('Papa packt ein Pausenbrot ein','damit','ich nicht hungrig bleibe','Finalsatz'),
+('Anna malt ein Bild','damit','ihre Oma sich freut','Finalsatz'),('Der Hausmeister streut Salz','damit','niemand ausrutscht','Finalsatz'),('Ich weiss','dass','du ein guter Freund bist','Dass-Satz'),
+('Er sagt','dass','die Pizza fantastisch schmeckt','Dass-Satz'),('Wir hoffen','dass','morgen die Sonne scheint','Dass-Satz'),('Sie glaubt','dass','der Hund ihre Hausaufgaben gefressen hat','Dass-Satz'),
+('Ich finde','dass','Schule Spass macht','Dass-Satz'),('Die Lehrerin freut sich','dass','alle mitmachen','Dass-Satz'),('Tom meint','dass','der Sonntag der beste Tag ist','Dass-Satz'),('Mia verspricht','dass','sie nicht mehr kichert','Dass-Satz')]
+NS0=list(NSC);NS[:]=NSC;NSALL=list(NSC)
+HS+=[('Der Hund will die Wurst','aber','der Tisch ist zu hoch'),('Anna liebt Sonntage','denn','da gibt es Pfannkuchen'),('Die Katze schläft','aber','der Hund jagt den Ball'),('Ich esse gern Pizza','aber','Spinat mag ich nicht'),
+('Heute ist Sonntag','denn','die Schule hat zu'),('Leo ist klein','doch','er springt hoch wie ein Känguru'),('Wir gehen nicht nach Hause','sondern','wir spielen noch Fussball'),('Lena lacht laut','denn','der Clown stolpert über seine Schuhe'),
+('Der Bus kommt spät','aber','die Klasse singt fröhlich weiter'),('Der Papagei spricht','doch','niemand versteht ihn'),('Die Hausaufgaben sind fertig','denn','Mia hat schnell gearbeitet'),('Mein Opa kocht heute','aber','die Suppe ist versalzen'),
+('Anna bastelt einen Roboter','denn','sie will ihn zum Geburtstag schenken'),('Der Pinguin watschelt','doch','er will lieber fliegen')]
+REL[:]=[('Der Hund','der im Garten buddelt','ist ganz schmutzig'),('Die Katze','die auf dem Sofa schläft','heisst Mimi'),('Das Mädchen','das so laut lacht','ist meine Freundin'),('Der Clown','der über seine Schuhe stolpert','bringt alle zum Lachen'),
+('Die Lehrerin','die uns ein Märchen vorliest','ist sehr nett'),('Der Papagei','der unsere Namen kennt','sitzt auf dem Schrank'),('Das Eis','das ich esse','schmeckt nach Erdbeere'),('Die Pizza','die Papa gebacken hat','duftet herrlich'),
+('Der Junge','der neben mir sitzt','erzählt immer Witze'),('Das Känguru','das im Zoo wohnt','hüpft den ganzen Tag'),('Die Schildkröte','die langsam läuft','gewinnt trotzdem das Rennen'),('Der Pirat','der den Schatz sucht','hat nur ein Holzbein')]
+RELALL=list(REL)
+
+# --- Korrekturen v4.85b
+def _pl3(v):
+    if v in PL2:return PL2[v]
+    if v.endswith('iert'):return v[:-1]+'en'
+    if v.endswith('elt') or v.endswith('ert'):return v[:-1]+'n'
+    if v.endswith('et'):return v[:-2]+'en'
+    if v.endswith('sst'):return None
+    return v[:-1]+'en'
+WEAKC=[w for w in WEAK if w[0] in VC]
+def g_agree(r,k):
+    inf,stem=r.choice(WEAKC);sj,p=r.choice(SUBJ);bad=r.choice([x for x in('ich','du','er','wir','ihr','sie') if conj(stem,x)!=conj(stem,p)]);c=r.choice(VC[inf])
+    return (2,'Das Verb passt nicht zum Subjekt. Verbessere im Feld.','%s %s %s.'%(sj,conj(stem,bad),c),'%s %s %s.'%(sj,conj(stem,p),c),'Das Verb richtet sich nach dem Subjekt.')
+GEN['agree']=g_agree
+LOCN=['Tisch','Stuhl','Haus','Baum','Bank','Wiese','Schule','Garten','Dach','Rutsche','Schaukel','Bett','Sofa','Schrank','Regal','Hügel','Teich','Spielplatz','Schulhof','Burg','Insel','Wolke','Trampolin','Pfütze','Treppe','Wand','Zelt','Bus','Wald','Berg']
+GOODS=['Tasche','Jacke','Mütze','Heft','Stift','Ball','Velo','Hose','Socke','Kissen','Brille','Pizza','Eis','Kuchen','Bonbon','Roller','Rucksack','Buch','Apfel','Ballon','Schal','Löffel']
+def g_case(r,k):
+    cs=r.choice(['akk','dat']);ad=r.choice(ADJ) if r.random()<.3 else None
+    if cs=='akk':
+        if r.random()<.5:nn=r.choice(pool('person')+pool('tier'));f=r.choice(['Ich sehe %s.','Wir besuchen %s.','Sie ruft %s.','Er füttert %s.' if nn[4]=='tier' else 'Er grüsst %s.'])
+        else:nn=NB[r.choice(GOODS)];f=r.choice(['Er kauft %s für uns.','Sie schenkt mir %s.','Ich suche %s.','Wir brauchen %s.'])
+    else:
+        if r.random()<.5:nn=r.choice(pool('person')+pool('tier'));f=r.choice(['Ich helfe %s.','Sie dankt %s.','Wir winken %s.','Er gratuliert %s.' if nn[4]=='person' else 'Er hilft %s.'])
+        else:nn=NB[r.choice(LOCN)];f=r.choice(['Wir sitzen auf %s.','Der Ball liegt unter %s.','Die Katze schläft neben %s.','Ich warte vor %s.','Der Hund versteckt sich hinter %s.'])
+    good=f%NP(nn,cs,ad)
+    wr={'akk':{'m':'dem','f':'der','n':'dem'},'dat':{'m':'den','f':'die','n':'das'}}[cs][nn[2]];right=A(nn[2],cs)
+    bad=good.replace(right+' ',wr+' ',1)
+    return (3,'Der Artikel ist falsch. Verbessere im Feld.',bad,good,'Frage: %s'%('Wen oder was?' if cs=='akk' else 'Wem?')) if bad!=good else None
+GEN['case']=g_case
+VBS=[v for v in VBS if v[0] not in('liegen','sitzen')]
+def _front(a,cj,b):
+    w=a.split()
+    if len(w)<3 or w[0] in('Die','Der','Das','Papa','Mama') or 'sich' in w:return None
+    inv=[w[1],w[0].lower() if w[0] not in NAMESET else w[0]]+w[2:]
+    return '%s %s, %s'%(cj.capitalize(),b,' '.join(inv))+'.'
+NAMESET={n for n,_ in NAMES}|{'Tom','Anna','Mia','Leo','Ben','Lara'}
+def g_cnsv(r,k):
+    a,cj,b,_=r.choice(NSALL);good=_front(a,cj,b)
+    if not good:return None
+    return (3,'Setze das Komma. Verbessere im Feld.',good.replace(', ',' ',1) if False else good.replace(b+',',b,1),good,'Steht der Nebensatz vorne, folgt nach ihm ein Komma.')
+def g_nsord2(r,k):
+    a,cj,b,_=r.choice(NSALL);good=_front(a,cj,b);w=b.split()
+    if not good or len(w)<2:return None
+    bad='%s %s %s, %s.'%(cj.capitalize(),w[-1],' '.join(w[:-1]),good.split(', ',1)[1][:-1])
+    return (3,'Im Nebensatz steht das Verb am Ende. Verbessere im Feld.',bad,good,'Im Nebensatz steht das Verb ganz hinten.')
+GEN['cnsv']=g_cnsv;GEN['nsord2']=g_nsord2
+for _f in('hauptneben','nebensatzarten','kommaerw'):FIXSET[_f]=list(dict.fromkeys(FIXSET[_f]+['cnsv','nsord2']))
