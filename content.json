@@ -83066,13 +83066,13 @@
    "explain": [
     {
      "h": "Worum geht es?",
-     "text": "Die rote Linie in der Mitte heisst Spiegelachse.",
+     "text": "Die rote Linie in der Mitte heisst Spiegelachse. Links und rechts davon sieht alles genau gleich aus.",
      "visuals": [
       {
-       "type": "shape",
-       "kind": "quadrat",
-       "col": 0,
-       "axis": "v"
+       "type": "symm",
+       "kind": "butterfly",
+       "alt": "Schmetterling mit Spiegelachse",
+       "cap": "Die rote Linie ist die Spiegelachse: links und rechts sind gleich."
       }
      ]
     },
@@ -83109,25 +83109,35 @@
     },
     {
      "h": "Quadrat",
-     "text": "Das Quadrat lässt sich auf zwei Arten spiegeln.",
+     "text": "Das Quadrat hat 4 Spiegelachsen: 2 durch die Seitenmitten und 2 durch die Ecken.",
      "visuals": [
       {
        "type": "shape",
        "kind": "quadrat",
        "col": 1,
-       "axis": "v"
+       "axes": [
+        "v",
+        "h"
+       ],
+       "big": 1,
+       "cap": "Durch die Seitenmitten: 2"
       },
       {
        "type": "shape",
        "kind": "quadrat",
        "col": 1,
-       "axis": "h"
+       "axes": [
+        "d1",
+        "d2"
+       ],
+       "big": 1,
+       "cap": "Durch die Ecken: 2"
       },
       {
        "type": "chips",
        "parts": [
         [
-         "2 Achsen",
+         "4 Achsen",
          "",
          0
         ],
@@ -83142,25 +83152,26 @@
     },
     {
      "h": "Kreis",
-     "text": "Beim Kreis passt jede Linie durch die Mitte.",
+     "text": "Beim Kreis ist jede Linie durch die Mitte eine Spiegelachse: es gibt unendlich viele.",
      "visuals": [
       {
        "type": "shape",
        "kind": "kreis",
        "col": 0,
-       "axis": "v"
-      },
-      {
-       "type": "shape",
-       "kind": "kreis",
-       "col": 0,
-       "axis": "h"
+       "axes": [
+        "v",
+        "h",
+        "d1",
+        "d2"
+       ],
+       "big": 1,
+       "cap": "Jede Linie durch die Mitte ist eine Achse"
       },
       {
        "type": "chips",
        "parts": [
         [
-         "viele Achsen",
+         "unendlich viele Achsen",
          "",
          0
         ],
@@ -83175,57 +83186,74 @@
     },
     {
      "h": "Dreieck",
-     "text": "Das Dreieck hat nur eine Achse, wenn zwei Seiten gleich lang sind.",
+     "text": "Ein Dreieck mit zwei gleich langen Seiten hat eine Achse. Sind alle Seiten verschieden, hat es keine.",
      "visuals": [
       {
        "type": "shape",
        "kind": "dreieck",
        "col": 2,
-       "axis": "v"
+       "axes": [
+        "v"
+       ],
+       "big": 1,
+       "cap": "gleichschenklig: 1 Achse"
       },
       {
        "type": "shape",
-       "kind": "dreieck",
-       "col": 2,
-       "axis": "h"
+       "kind": "dreieck_u",
+       "col": 3,
+       "big": 1,
+       "cap": "ungleich: keine Achse"
       },
       {
        "type": "chips",
        "parts": [
         [
          "1 Achse",
-         "",
-         0
+         "gleichschenklig",
+         1
         ],
         [
-         "✔️ ❌",
-         "",
-         1
+         "keine",
+         "ungleich",
+         3
         ]
        ]
       }
      ]
     },
     {
-     "h": "Schiefes Viereck",
-     "text": "Ein schiefes Viereck hat keine Achse.",
+     "h": "Rechteck und schiefes Viereck",
+     "text": "Das Rechteck hat 2 Achsen (nicht die Diagonalen!). Ein schiefes Viereck hat keine.",
      "visuals": [
+      {
+       "type": "shape",
+       "kind": "rechteck",
+       "col": 0,
+       "axes": [
+        "v",
+        "h"
+       ],
+       "big": 1,
+       "cap": "Rechteck: 2 Achsen"
+      },
       {
        "type": "shape",
        "kind": "viereck",
        "col": 3,
-       "axis": "v"
+       "big": 1,
+       "cap": "schief: keine Achse"
       },
       {
        "type": "chips",
        "parts": [
         [
-         "keine Achse",
+         "Rechteck: 2",
          "",
          0
         ],
         [
-         "❌",
+         "schief: 0",
          "",
          3
         ]
@@ -83238,7 +83266,8 @@
      "text": "Diese Buchstaben sind symmetrisch, die anderen nicht.",
      "visuals": [
       {
-       "type": "emo",
+       "type": "symm",
+       "kind": "letters",
        "rows": [
         [
          "A",
@@ -83253,15 +83282,19 @@
          1
         ],
         [
-         "O",
-         1
+         "F",
+         0
         ],
         [
-         "T",
-         1
+         "G",
+         0
+        ],
+        [
+         "R",
+         0
         ]
        ],
-       "grp": 0
+       "alt": "Buchstaben mit und ohne Spiegelachse"
       },
       {
        "type": "chips",
@@ -83285,22 +83318,9 @@
      "text": "Falte das Bild an der Achse. Passen beide Seiten genau? Dann ist es symmetrisch.",
      "visuals": [
       {
-       "type": "emo",
-       "rows": [
-        [
-         "🦋",
-         1
-        ],
-        [
-         "❤️",
-         1
-        ],
-        [
-         "⭐",
-         1
-        ]
-       ],
-       "grp": 0
+       "type": "symm",
+       "kind": "fold",
+       "alt": "Herz wird an der Achse gefaltet"
       },
       {
        "type": "chips",
@@ -83321,6 +83341,17 @@
          2
         ]
        ]
+      }
+     ]
+    },
+    {
+     "h": "Spiegeln auf Karopapier",
+     "text": "Zähle von jedem Eckpunkt die Kästchen bis zur Achse. Auf der anderen Seite gehst du gleich weit.",
+     "visuals": [
+      {
+       "type": "symm",
+       "kind": "grid",
+       "alt": "Figur auf Karopapier an der Achse gespiegelt"
       }
      ]
     },
@@ -84536,26 +84567,26 @@
      "text": "Körper haben Flächen, Kanten und Ecken.",
      "visuals": [
       {
-       "type": "emo",
-       "rows": [
-        [
-         "🎲",
-         1
-        ],
-        [
-         "⚽",
-         1
-        ],
-        [
-         "📦",
-         1
-        ],
-        [
-         "🥫",
-         1
-        ]
+       "type": "solid",
+       "items": [
+        {
+         "k": "cube",
+         "cap": "Würfel"
+        },
+        {
+         "k": "box",
+         "cap": "Quader"
+        },
+        {
+         "k": "sphere",
+         "cap": "Kugel"
+        },
+        {
+         "k": "cyl",
+         "cap": "Zylinder"
+        }
        ],
-       "grp": 0
+       "alt": "Würfel, Quader, Kugel und Zylinder"
       }
      ]
     },
@@ -84600,18 +84631,25 @@
      "text": "Würfel: 6 Flächen, 12 Kanten und 8 Ecken.",
      "visuals": [
       {
-       "type": "emo",
-       "rows": [
-        [
-         "🎲",
-         1
-        ],
-        [
-         "🧊",
-         1
-        ]
+       "type": "solid",
+       "items": [
+        {
+         "k": "cube",
+         "mode": "faces",
+         "cap": "6 Flächen"
+        },
+        {
+         "k": "cube",
+         "mode": "edges",
+         "cap": "12 Kanten"
+        },
+        {
+         "k": "cube",
+         "mode": "corners",
+         "cap": "8 Ecken"
+        }
        ],
-       "grp": 0
+       "alt": "Würfel mit Flächen, Kanten, Ecken"
       },
       {
        "type": "chips",
@@ -84640,22 +84678,25 @@
      "text": "Der Quader hat auch 6 Flächen, 12 Kanten und 8 Ecken.",
      "visuals": [
       {
-       "type": "emo",
-       "rows": [
-        [
-         "📦",
-         1
-        ],
-        [
-         "📚",
-         1
-        ],
-        [
-         "🧃",
-         1
-        ]
+       "type": "solid",
+       "items": [
+        {
+         "k": "box",
+         "mode": "faces",
+         "cap": "6 Flächen"
+        },
+        {
+         "k": "box",
+         "mode": "edges",
+         "cap": "12 Kanten"
+        },
+        {
+         "k": "box",
+         "mode": "corners",
+         "cap": "8 Ecken"
+        }
        ],
-       "grp": 0
+       "alt": "Quader mit Flächen, Kanten, Ecken"
       },
       {
        "type": "chips",
@@ -84684,22 +84725,14 @@
      "text": "Die Kugel hat keine Ecken und keine Kanten.",
      "visuals": [
       {
-       "type": "emo",
-       "rows": [
-        [
-         "⚽",
-         1
-        ],
-        [
-         "🏀",
-         1
-        ],
-        [
-         "🌍",
-         1
-        ]
+       "type": "solid",
+       "items": [
+        {
+         "k": "sphere",
+         "cap": "Kugel"
+        }
        ],
-       "grp": 0
+       "alt": "Kugel"
       },
       {
        "type": "chips",
@@ -84728,22 +84761,15 @@
      "text": "Der Zylinder hat zwei runde Flächen oben und unten.",
      "visuals": [
       {
-       "type": "emo",
-       "rows": [
-        [
-         "🥫",
-         1
-        ],
-        [
-         "🛢️",
-         1
-        ],
-        [
-         "🪣",
-         1
-        ]
+       "type": "solid",
+       "items": [
+        {
+         "k": "cyl",
+         "mode": "faces",
+         "cap": "2 runde Flächen + Mantel"
+        }
        ],
-       "grp": 0
+       "alt": "Zylinder"
       },
       {
        "type": "chips",
@@ -84767,18 +84793,18 @@
      "text": "Runde Körper rollen. Körper mit ebenen Flächen kann man stapeln.",
      "visuals": [
       {
-       "type": "emo",
-       "rows": [
-        [
-         "⚽",
-         1
-        ],
-        [
-         "🎲",
-         1
-        ]
+       "type": "solid",
+       "items": [
+        {
+         "k": "ball",
+         "cap": "rollt"
+        },
+        {
+         "k": "tower",
+         "cap": "lässt sich stapeln"
+        }
        ],
-       "grp": 0
+       "alt": "Ball rollt, Würfel stapeln"
       },
       {
        "type": "chips",
@@ -124504,7 +124530,8 @@
        "a": 5,
        "b": 3,
        "la": "5 cm",
-       "lb": "3 cm"
+       "lb": "3 cm",
+       "cap": ""
       }
      ]
     },
@@ -124519,7 +124546,8 @@
        "a": 4,
        "b": 2,
        "la": "4 cm",
-       "lb": "2 cm"
+       "lb": "2 cm",
+       "cap": ""
       },
       {
        "type": "chips",
@@ -124624,7 +124652,8 @@
        "a": 6,
        "b": 3,
        "la": "6 cm",
-       "lb": "3 cm"
+       "lb": "3 cm",
+       "cap": ""
       },
       {
        "type": "chips",
@@ -124659,7 +124688,8 @@
        "a": 7,
        "b": 2,
        "la": "7 cm",
-       "lb": "2 cm"
+       "lb": "2 cm",
+       "cap": ""
       },
       {
        "type": "chips",
@@ -124694,7 +124724,8 @@
        "a": 4,
        "b": 4,
        "la": "4 cm",
-       "lb": "4 cm"
+       "lb": "4 cm",
+       "cap": ""
       },
       {
        "type": "chips",
@@ -124729,7 +124760,8 @@
        "a": 5,
        "b": 3,
        "la": "5 cm",
-       "lb": "3 cm"
+       "lb": "3 cm",
+       "umf": 1
       },
       {
        "type": "chips",
@@ -126893,12 +126925,12 @@
      "text": "Die unterste Schicht hat 4 × 3 = 12 Würfel.",
      "visuals": [
       {
-       "type": "arr",
-       "r": 3,
-       "c": 4,
-       "split": 0,
-       "col": 0,
-       "cap": "3 × 4 = 12 Würfel"
+       "type": "quader",
+       "l": "4 cm",
+       "b": "3 cm",
+       "h": "1 cm",
+       "layer": 1,
+       "cap": "Unterste Schicht: 4 × 3 = 12 Würfel"
       },
       {
        "type": "chips",
@@ -126927,19 +126959,12 @@
      "text": "Der Quader hat 2 Schichten übereinander.",
      "visuals": [
       {
-       "type": "bar",
-       "segs": [
-        [
-         12,
-         "12"
-        ],
-        [
-         12,
-         "12"
-        ]
-       ],
-       "cap": "2 Schichten",
-       "col": 0
+       "type": "quader",
+       "l": "4 cm",
+       "b": "3 cm",
+       "h": "2 cm",
+       "layer": 1,
+       "cap": "2 Schichten übereinander"
       }
      ]
     },
