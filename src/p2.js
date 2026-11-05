@@ -523,9 +523,9 @@ function vPar(v){
 function vBlocks(v){
   var h=v.h||0,z=v.z||0,e=v.e||0,id='pb'+(++_guid),o='',cols=[],x=0,H=190;
   var fs=h<=3?64:h<=6?46:34;
-  if(h>0)cols.push({k:'H',n:h,lab:'Hunderter',c:'#7B3FC4',bg:'#F5EEFD',w:Math.max(86,h*(fs+10)+14)});
-  if(h>0||z>0)cols.push({k:'Z',n:z,lab:'Zehner',c:'#1A56C4',bg:'#EAF1FE',w:Math.max(86,z*21+16)});
-  cols.push({k:'E',n:e,lab:'Einer',c:'#B06000',bg:'#FFF6DD',w:Math.max(86,Math.min(e,5)*21+16)});
+  if(h>0)cols.push({k:'H',n:h,lab:'Hunderter',c:'#7B3FC4',bg:'#F5EEFD',w:Math.max(104,h*(fs+10)+14)});
+  if(h>0||z>0)cols.push({k:'Z',n:z,lab:'Zehner',c:'#1A56C4',bg:'#EAF1FE',w:Math.max(104,z*21+16)});
+  cols.push({k:'E',n:e,lab:'Einer',c:'#B06000',bg:'#FFF6DD',w:Math.max(104,Math.min(e,5)*21+16)});
   o+='<defs>'+
    '<linearGradient id="'+id+'h" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F1E6FC"/><stop offset="1" stop-color="#C9A8F0"/></linearGradient>'+
    '<linearGradient id="'+id+'z" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#DCE9FE"/><stop offset=".5" stop-color="#9FC0F8"/><stop offset="1" stop-color="#6FA0EE"/></linearGradient>'+

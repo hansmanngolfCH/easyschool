@@ -41637,25 +41637,6 @@
        "cap": "Der Pfeil nach rechts: mal 1000"
       },
       {
-       "type": "bar",
-       "segs": [
-        [
-         1000,
-         "1 km"
-        ],
-        [
-         1000,
-         "1 km"
-        ],
-        [
-         1000,
-         "1 km"
-        ]
-       ],
-       "cap": "3 km = 1000 m + 1000 m + 1000 m = 3000 m",
-       "col": 0
-      },
-      {
        "type": "flow",
        "steps": [
         [
@@ -45645,29 +45626,6 @@
        "up": "· 1000",
        "down": ": 1000",
        "cap": "Von kg nach g: mal 1000"
-      },
-      {
-       "type": "bar",
-       "segs": [
-        [
-         1000,
-         "1 kg"
-        ],
-        [
-         1000,
-         "1 kg"
-        ],
-        [
-         1000,
-         "1 kg"
-        ],
-        [
-         1000,
-         "1 kg"
-        ]
-       ],
-       "cap": "4 kg = 4 · 1000 g = 4000 g",
-       "col": 0
       },
       {
        "type": "flow",
@@ -49751,16 +49709,6 @@
      "text": "",
      "visuals": [
       {
-       "type": "emo",
-       "rows": [
-        [
-         "⭐",
-         7
-        ]
-       ],
-       "grp": 5
-      },
-      {
        "type": "nline",
        "min": 0,
        "max": 10,
@@ -49776,16 +49724,6 @@
      "h": "4",
      "text": "",
      "visuals": [
-      {
-       "type": "emo",
-       "rows": [
-        [
-         "🐟",
-         9
-        ]
-       ],
-       "grp": 5
-      },
       {
        "type": "nline",
        "min": 0,
@@ -49889,13 +49827,6 @@
      "h": "8",
      "text": "",
      "visuals": [
-      {
-       "type": "field",
-       "cols": 5,
-       "rows": 2,
-       "filled": 10,
-       "col": 0
-      },
       {
        "type": "nline",
        "min": 0,
@@ -57741,16 +57672,6 @@
        "col": 0,
        "filled2": 3,
        "col2": 1
-      },
-      {
-       "type": "jumps",
-       "from": 4,
-       "jumps": [
-        [
-         3,
-         "+3"
-        ]
-       ]
       }
      ]
     },
@@ -57758,21 +57679,6 @@
      "h": "4",
      "text": "",
      "visuals": [
-      {
-       "type": "bar",
-       "segs": [
-        [
-         5,
-         "5"
-        ],
-        [
-         3,
-         "3"
-        ]
-       ],
-       "cap": "5 + 3 = 8",
-       "col": 0
-      },
       {
        "type": "jumps",
        "from": 5,
@@ -57789,21 +57695,6 @@
      "h": "5",
      "text": "",
      "visuals": [
-      {
-       "type": "bar",
-       "segs": [
-        [
-         6,
-         "6"
-        ],
-        [
-         4,
-         "4"
-        ]
-       ],
-       "cap": "6 + 4 = 10",
-       "col": 0
-      },
       {
        "type": "field",
        "cols": 5,
@@ -59285,16 +59176,6 @@
        "col": 0,
        "filled2": 3,
        "col2": 3
-      },
-      {
-       "type": "jumps",
-       "from": 8,
-       "jumps": [
-        [
-         -3,
-         "−3"
-        ]
-       ]
       }
      ]
     },
@@ -59455,16 +59336,6 @@
        "col": 0,
        "filled2": 4,
        "col2": 3
-      },
-      {
-       "type": "jumps",
-       "from": 10,
-       "jumps": [
-        [
-         -4,
-         "−4"
-        ]
-       ]
       }
      ]
     },
@@ -59472,17 +59343,6 @@
      "h": "8",
      "text": "",
      "visuals": [
-      {
-       "type": "bar",
-       "segs": [
-        [
-         9,
-         "9"
-        ]
-       ],
-       "cap": "",
-       "col": 0
-      },
       {
        "type": "jumps",
        "from": 9,
@@ -60732,15 +60592,6 @@
      "text": "",
      "visuals": [
       {
-       "type": "field",
-       "cols": 10,
-       "rows": 2,
-       "filled": 10,
-       "col": 0,
-       "filled2": 3,
-       "col2": 1
-      },
-      {
        "type": "jumps",
        "from": 8,
        "jumps": [
@@ -60811,15 +60662,6 @@
      "text": "",
      "visuals": [
       {
-       "type": "field",
-       "cols": 10,
-       "rows": 2,
-       "filled": 9,
-       "col": 0,
-       "filled2": 6,
-       "col2": 1
-      },
-      {
        "type": "jumps",
        "from": 9,
        "jumps": [
@@ -60864,15 +60706,6 @@
      "h": "5",
      "text": "",
      "visuals": [
-      {
-       "type": "field",
-       "cols": 10,
-       "rows": 2,
-       "filled": 7,
-       "col": 0,
-       "filled2": 6,
-       "col2": 1
-      },
       {
        "type": "jumps",
        "from": 7,
@@ -62379,17 +62212,6 @@
      "text": "",
      "visuals": [
       {
-       "type": "bar",
-       "segs": [
-        [
-         15,
-         "15"
-        ]
-       ],
-       "cap": "",
-       "col": 0
-      },
-      {
        "type": "jumps",
        "from": 15,
        "jumps": [
@@ -62441,15 +62263,6 @@
      "text": "",
      "visuals": [
       {
-       "type": "field",
-       "cols": 10,
-       "rows": 2,
-       "filled": 6,
-       "col": 0,
-       "filled2": 9,
-       "col2": 3
-      },
-      {
        "type": "jumps",
        "from": 15,
        "jumps": [
@@ -62494,15 +62307,6 @@
      "h": "5",
      "text": "",
      "visuals": [
-      {
-       "type": "field",
-       "cols": 10,
-       "rows": 2,
-       "filled": 8,
-       "col": 0,
-       "filled2": 6,
-       "col2": 3
-      },
       {
        "type": "jumps",
        "from": 14,
@@ -64112,24 +63916,6 @@
      "text": "",
      "visuals": [
       {
-       "type": "emo",
-       "rows": [
-        [
-         "⏰",
-         1
-        ],
-        [
-         "📐",
-         1
-        ],
-        [
-         "🏠",
-         1
-        ]
-       ],
-       "grp": 0
-      },
-      {
        "type": "shape",
        "kind": "kreis",
        "col": 0
@@ -65564,26 +65350,6 @@
      "h": "6",
      "text": "",
      "visuals": [
-      {
-       "type": "coins",
-       "items": [
-        [
-         10,
-         "Fr",
-         1
-        ],
-        [
-         5,
-         "Fr",
-         1
-        ],
-        [
-         2,
-         "Fr",
-         1
-        ]
-       ]
-      },
       {
        "type": "jumps",
        "from": 10,
@@ -68494,25 +68260,6 @@
        "rows": 10,
        "filled": 30,
        "col": 0
-      },
-      {
-       "type": "bar",
-       "segs": [
-        [
-         10,
-         "10"
-        ],
-        [
-         10,
-         "10"
-        ],
-        [
-         10,
-         "10"
-        ]
-       ],
-       "cap": "3 Zehner = 30",
-       "col": 0
       }
      ]
     },
@@ -68566,15 +68313,6 @@
      "text": "Zähle zuerst die Reihen (Zehner), dann die Punkte (Einer). 40 + 7 = 47.",
      "visuals": [
       {
-       "type": "field",
-       "cols": 10,
-       "rows": 10,
-       "filled": 40,
-       "col": 0,
-       "filled2": 7,
-       "col2": 1
-      },
-      {
        "type": "blocks",
        "h": 0,
        "z": 4,
@@ -68617,15 +68355,6 @@
      "text": "60 + 3 = 63. Reihen zuerst, Punkte danach.",
      "visuals": [
       {
-       "type": "field",
-       "cols": 10,
-       "rows": 10,
-       "filled": 60,
-       "col": 0,
-       "filled2": 3,
-       "col2": 1
-      },
-      {
        "type": "blocks",
        "h": 0,
        "z": 6,
@@ -68667,13 +68396,6 @@
      "h": "Zahlen mit 0",
      "text": "5 Reihen und 0 Punkte: das ist 50.",
      "visuals": [
-      {
-       "type": "field",
-       "cols": 10,
-       "rows": 10,
-       "filled": 50,
-       "col": 0
-      },
       {
        "type": "blocks",
        "h": 0,
@@ -68762,53 +68484,6 @@
        "rows": 10,
        "filled": 100,
        "col": 0
-      },
-      {
-       "type": "bar",
-       "segs": [
-        [
-         10,
-         "10"
-        ],
-        [
-         10,
-         "10"
-        ],
-        [
-         10,
-         "10"
-        ],
-        [
-         10,
-         "10"
-        ],
-        [
-         10,
-         "10"
-        ],
-        [
-         10,
-         "10"
-        ],
-        [
-         10,
-         "10"
-        ],
-        [
-         10,
-         "10"
-        ],
-        [
-         10,
-         "10"
-        ],
-        [
-         10,
-         "10"
-        ]
-       ],
-       "cap": "10 Zehner = 100",
-       "col": 1
       }
      ]
     },
@@ -72029,16 +71704,6 @@
      "text": "Von 30 aus gehst du 4 Striche weiter und landest bei 34.",
      "visuals": [
       {
-       "type": "nline",
-       "min": 30,
-       "max": 40,
-       "step": 1,
-       "pts": [
-        34
-       ],
-       "lab": "alt"
-      },
-      {
        "type": "jumps",
        "from": 30,
        "jumps": [
@@ -72136,17 +71801,6 @@
        "step": 1,
        "q": 27,
        "lab": "alt"
-      },
-      {
-       "type": "jumps",
-       "from": 20,
-       "jumps": [
-        [
-         7,
-         "+7"
-        ]
-       ],
-       "hideEnd": true
       }
      ]
     },
@@ -72154,17 +71808,6 @@
      "h": "Beispiel: 65",
      "text": "Erst zum Zehner 60, dann 5 Striche weiter.",
      "visuals": [
-      {
-       "type": "nline",
-       "min": 0,
-       "max": 100,
-       "step": 10,
-       "minor": 5,
-       "pts": [
-        65
-       ],
-       "lab": "alt"
-      },
       {
        "type": "jumps",
        "from": 60,
@@ -72192,37 +71835,6 @@
         60
        ],
        "lab": "ends"
-      },
-      {
-       "type": "jumps",
-       "from": 0,
-       "jumps": [
-        [
-         10,
-         "+10"
-        ],
-        [
-         10,
-         "+10"
-        ],
-        [
-         10,
-         "+10"
-        ],
-        [
-         10,
-         "+10"
-        ],
-        [
-         10,
-         "+10"
-        ],
-        [
-         10,
-         "+10"
-        ]
-       ],
-       "cap": "6 Zehner = 60"
       }
      ]
     },
@@ -82084,21 +81696,6 @@
      "text": "Gleicher Weg: 79 − 20 = 59, dann − 4 = 55.",
      "visuals": [
       {
-       "type": "bar",
-       "segs": [
-        [
-         55,
-         "55"
-        ],
-        [
-         24,
-         "− 24"
-        ]
-       ],
-       "cap": "79 − 24 = 55",
-       "col": 1
-      },
-      {
        "type": "jumps",
        "from": 79,
        "jumps": [
@@ -82148,21 +81745,6 @@
      "h": "Beispiel: 86 − 52",
      "text": "Gleicher Weg: 86 − 50 = 36, dann − 2 = 34.",
      "visuals": [
-      {
-       "type": "bar",
-       "segs": [
-        [
-         34,
-         "34"
-        ],
-        [
-         52,
-         "− 52"
-        ]
-       ],
-       "cap": "86 − 52 = 34",
-       "col": 1
-      },
       {
        "type": "jumps",
        "from": 86,
@@ -83466,15 +83048,6 @@
         ]
        ],
        "cap": "2, 4, 6, 8, 10"
-      },
-      {
-       "type": "arr",
-       "r": 2,
-       "c": 5,
-       "split": 0,
-       "col": 0,
-       "splitRows": true,
-       "cap": "5 × 2 = 10"
       }
      ]
     },
@@ -83504,14 +83077,6 @@
         ]
        ],
        "cap": "5, 10, 15, 20"
-      },
-      {
-       "type": "arr",
-       "r": 4,
-       "c": 5,
-       "split": 0,
-       "col": 0,
-       "cap": "4 × 5 = 20"
       }
      ]
     },
@@ -88040,17 +87605,6 @@
      "h": "Minus rechnen",
      "text": "Auch Wegnehmen geht: 80 cm − 30 cm = 50 cm.",
      "visuals": [
-      {
-       "type": "bar",
-       "segs": [
-        [
-         50,
-         "50 cm"
-        ]
-       ],
-       "cap": "",
-       "col": 0
-      },
       {
        "type": "jumps",
        "from": 80,
@@ -96478,21 +96032,6 @@
      "text": "Gleicher Weg: 345 + 200 + 20 + 3 = 568.",
      "visuals": [
       {
-       "type": "bar",
-       "segs": [
-        [
-         345,
-         "345"
-        ],
-        [
-         223,
-         "223"
-        ]
-       ],
-       "cap": "345 + 223 = 568",
-       "col": 0
-      },
-      {
        "type": "jumps",
        "from": 345,
        "jumps": [
@@ -96551,21 +96090,6 @@
      "h": "Beispiel: 458 + 321",
      "text": "Gleicher Weg: 458 + 300 + 20 + 1 = 779.",
      "visuals": [
-      {
-       "type": "bar",
-       "segs": [
-        [
-         458,
-         "458"
-        ],
-        [
-         321,
-         "321"
-        ]
-       ],
-       "cap": "458 + 321 = 779",
-       "col": 0
-      },
       {
        "type": "jumps",
        "from": 458,
@@ -98110,21 +97634,6 @@
      "text": "Gleicher Weg: 659 − 300 − 20 − 4 = 335.",
      "visuals": [
       {
-       "type": "bar",
-       "segs": [
-        [
-         335,
-         "335"
-        ],
-        [
-         324,
-         "− 324"
-        ]
-       ],
-       "cap": "659 − 324 = 335",
-       "col": 1
-      },
-      {
        "type": "jumps",
        "from": 659,
        "jumps": [
@@ -98183,21 +97692,6 @@
      "h": "Beispiel: 875 − 431",
      "text": "Gleicher Weg: 875 − 400 − 30 − 1 = 444.",
      "visuals": [
-      {
-       "type": "bar",
-       "segs": [
-        [
-         444,
-         "444"
-        ],
-        [
-         431,
-         "− 431"
-        ]
-       ],
-       "cap": "875 − 431 = 444",
-       "col": 1
-      },
       {
        "type": "jumps",
        "from": 875,
@@ -99466,27 +98960,6 @@
        "c": 4,
        "split": 0,
        "col": 0
-      },
-      {
-       "type": "jumps",
-       "from": 0,
-       "jumps": [
-        [
-         4,
-         "+4",
-         2
-        ],
-        [
-         4,
-         "+4",
-         2
-        ],
-        [
-         4,
-         "+4",
-         2
-        ]
-       ]
       },
       {
        "type": "chips",
@@ -112919,11 +112392,6 @@
      "text": "1 l sind 10 dl, dazu kommen 4 dl: 14 dl.",
      "visuals": [
       {
-       "type": "conv",
-       "from": "l",
-       "to": "dl"
-      },
-      {
        "type": "bar",
        "segs": [
         [
@@ -117457,16 +116925,6 @@
        "parts": 2,
        "filled": 1,
        "cap": "1/2"
-      },
-      {
-       "type": "fbar",
-       "rows": [
-        [
-         2,
-         1,
-         "1/2"
-        ]
-       ]
       }
      ]
     },
@@ -117479,17 +116937,6 @@
        "parts": 4,
        "filled": 1,
        "cap": "1/4"
-      },
-      {
-       "type": "fbar",
-       "rows": [
-        [
-         4,
-         1,
-         "1/4",
-         1
-        ]
-       ]
       }
      ]
     },
@@ -117502,17 +116949,6 @@
        "parts": 8,
        "filled": 3,
        "cap": "3/8"
-      },
-      {
-       "type": "fbar",
-       "rows": [
-        [
-         8,
-         3,
-         "3/8",
-         2
-        ]
-       ]
       }
      ]
     },
@@ -147370,50 +146806,6 @@
        "fs": 26
       },
       {
-       "type": "jumps",
-       "from": -5,
-       "jumps": [
-        [
-         8,
-         "+8"
-        ]
-       ],
-       "fs": 26
-      },
-      {
-       "type": "jumps",
-       "from": 4,
-       "jumps": [
-        [
-         2,
-         "+2"
-        ]
-       ],
-       "fs": 26
-      },
-      {
-       "type": "jumps",
-       "from": -5,
-       "jumps": [
-        [
-         8,
-         "+8"
-        ]
-       ],
-       "fs": 26
-      },
-      {
-       "type": "jumps",
-       "from": 4,
-       "jumps": [
-        [
-         2,
-         "+2"
-        ]
-       ],
-       "fs": 26
-      },
-      {
        "type": "chips",
        "parts": [
         [
@@ -156918,6 +156310,36 @@
        "alt": "Dreieck mit gesuchtem Winkel"
       },
       {
+       "type": "chips",
+       "parts": [
+        [
+         "180°",
+         "Summe",
+         7
+        ],
+        [
+         "−",
+         "",
+         2
+        ],
+        [
+         "110°",
+         "50° + 60°",
+         0
+        ],
+        [
+         "=",
+         "",
+         2
+        ],
+        [
+         "70°",
+         "γ",
+         1
+        ]
+       ]
+      },
+      {
        "type": "geo",
        "vw": [
         -0.2,
@@ -156993,36 +156415,6 @@
        ],
        "W": 230,
        "alt": "Nebenwinkel"
-      },
-      {
-       "type": "chips",
-       "parts": [
-        [
-         "180°",
-         "Summe",
-         7
-        ],
-        [
-         "−",
-         "",
-         2
-        ],
-        [
-         "110°",
-         "50° + 60°",
-         0
-        ],
-        [
-         "=",
-         "",
-         2
-        ],
-        [
-         "70°",
-         "γ",
-         1
-        ]
-       ]
       },
       {
        "type": "chips",
@@ -160090,6 +159482,46 @@
        "alt": "Flächenmodell (x+5)²"
       },
       {
+       "type": "chips",
+       "parts": [
+        [
+         "(x + 5)²",
+         "Aufgabe",
+         7
+        ],
+        [
+         "=",
+         "",
+         2
+        ],
+        [
+         "x²",
+         "a²",
+         0
+        ],
+        [
+         "+",
+         "",
+         2
+        ],
+        [
+         "10x",
+         "2ab",
+         1
+        ],
+        [
+         "+",
+         "",
+         2
+        ],
+        [
+         "25",
+         "b²",
+         2
+        ]
+       ]
+      },
+      {
        "type": "geo",
        "vw": [
         -1,
@@ -160196,46 +159628,6 @@
        "W": 230,
        "cap": "(x + 4)(x − 4) = x² − 16: vom Quadrat x² fällt das Eckstück 4 · 4 weg",
        "alt": "x² minus 16"
-      },
-      {
-       "type": "chips",
-       "parts": [
-        [
-         "(x + 5)²",
-         "Aufgabe",
-         7
-        ],
-        [
-         "=",
-         "",
-         2
-        ],
-        [
-         "x²",
-         "a²",
-         0
-        ],
-        [
-         "+",
-         "",
-         2
-        ],
-        [
-         "10x",
-         "2ab",
-         1
-        ],
-        [
-         "+",
-         "",
-         2
-        ],
-        [
-         "25",
-         "b²",
-         2
-        ]
-       ]
       },
       {
        "type": "chips",
@@ -162068,12 +161460,6 @@
        "W": 320,
        "cap": "Der Umfang passt dreimal den Durchmesser plus ein kleines Stück",
        "alt": "Umfang aufgerollt"
-      },
-      {
-       "type": "circle",
-       "show": "both",
-       "lr": "r",
-       "ld": "d"
       },
       {
        "type": "chips",
