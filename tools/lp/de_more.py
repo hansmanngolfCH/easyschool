@@ -1024,3 +1024,19 @@ def g_nsord2(r,k):
     return (3,'Im Nebensatz steht das Verb am Ende. Verbessere im Feld.',bad,good,'Im Nebensatz steht das Verb ganz hinten.')
 GEN['cnsv']=g_cnsv;GEN['nsord2']=g_nsord2
 for _f in('hauptneben','nebensatzarten','kommaerw'):FIXSET[_f]=list(dict.fromkeys(FIXSET[_f]+['cnsv','nsord2']))
+
+def add_examples(c):
+    import de_ex;miss=set();n=0
+    for t in c['topics']:
+        if t['subject']!='deu':continue
+        for e in t['explain']:
+            if e['h']!='So gehst du vor':continue
+            for v in e['visuals']:
+                if v['type']!='lines':continue
+                for it in v['items']:
+                    ex=de_ex.EX.get(it[0])
+                    if ex:
+                        while len(it)<3:it.append('')
+                        it[2]=ex;n+=1
+                    else:miss.add(it[0])
+    print('Beispiele',n,'ohne:',sorted(miss))

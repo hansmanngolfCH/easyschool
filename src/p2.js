@@ -20,7 +20,7 @@ function vFlip(v){
   return '<div class="flipgrid">'+v.items.map(function(p){
     return '<div class="flipc" data-act="flip" role="button" tabindex="0">'+(v.nospk?'':'<button class="spk" data-act="speak" data-t="'+esc(p[0])+'" data-lang="'+lg+'" aria-label="Anhören">&#128266;</button>')+(p[2]?'<span class="em" aria-hidden="true">'+p[2]+'</span>':'')+'<b>'+esc(p[0])+'</b>'+(p[3]?'<span class="pr">['+esc(p[3])+']</span>':'')+'<span class="hintline">'+(v.nospk?'Tippen zum Drehen':'Tippen zum Aufdecken')+'</span><span class="back">'+esc(p[1])+'</span></div>'}).join('')+'</div>';
 }
-function vLines(v){return '<div class="lines'+(v.num?' num':'')+'">'+v.items.map(function(p){return '<div class="ln">'+(function(l){return l?'<em>'+rt(l)+'</em>':''})(p[1]&&v.num?String(p[1]).replace(/^Schritt \d+:?\s*/,''):p[1])+'<code>'+rt(p[0])+'</code></div>'}).join('')+'</div>'}
+function vLines(v){return '<div class="lines'+(v.num?' num':'')+'">'+v.items.map(function(p){return '<div class="ln">'+(function(l){return l?'<em>'+rt(l)+'</em>':''})(p[1]&&v.num?String(p[1]).replace(/^Schritt \d+:?\s*/,''):p[1])+'<code>'+rt(p[0])+'</code>'+(p[2]?'<span class="lex"><b>Beispiel</b> '+rt(p[2])+'</span>':'')+'</div>'}).join('')+'</div>'}
 function vImg(v){return '<figure class="vis"><img class="pic" src="'+esc(v.src)+'" alt="'+esc(v.alt||'')+'"></figure>'}
 /* ---------- Grössen-Visualisierungen (Länge, Gewicht, Diagramme) ---------- */
 var VC=['#34A853','#4285F4','#FBBC04','#EA4335'];

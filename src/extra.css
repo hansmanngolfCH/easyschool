@@ -1467,3 +1467,7 @@ ins.dfy{text-decoration:none;color:#0d652d;background:rgba(52,168,83,.22);border
 .dsent p{font-weight:800;font-size:1.2rem;line-height:1.45;color:#111;margin:0}
 .dsent mark{background:none;color:#111;box-shadow:none;padding:0;border-bottom:4px solid #F9C500;border-radius:0}
 .dsl{display:none}
+
+/* v4.86 Beispiel pro Schritt */
+.lines.num .ln .lex{width:100%;box-sizing:border-box;order:3;flex:1 1 100%;display:block;margin-top:6px;padding:7px 10px;border-radius:10px;background:var(--surface,#fff);border:1px solid var(--line,#E3E6EC);font:500 .98rem/1.4 inherit;font-family:inherit;color:var(--ink,#1f2430);text-align:left}
+.lines.num .ln .lex b{display:inline-block;margin-right:6px;font-size:.72rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--accent,#1a73e8)}
