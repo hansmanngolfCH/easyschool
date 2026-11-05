@@ -97,3 +97,54 @@ EX={
 'Steht der Nebensatz mitten im Satz, setze auch danach ein Komma.':'Der Hund, der bellt, ist laut.',
 'Lies den Satz laut: An Pausen stehen oft Kommas.':'Tom sagt (Pause) dass er müde ist.',
 }
+
+WORK={
+'nva':('Satz: «Der kleine Hund rennt.» Welche Wortart hat jedes Wort?',[
+ ['Nimm ein Wort aus dem Satz: «Hund».','Wir prüfen zuerst «Hund».'],
+ ['Probiere «der, die oder das» davor.','der Hund ✔ → Nomen.'],
+ ['Nimm das nächste Wort: «rennt». Kann man es tun?','Ja, man kann rennen → Verb.'],
+ ['Prüfe «kleine»: Sagt es, wie etwas ist?','Der Hund ist klein → Adjektiv.'],
+ ['Schreibe das Ergebnis auf.','Hund = Nomen, rennt = Verb, kleine = Adjektiv.']]),
+'wortarten3':('Satz: «Er rennt schnell zur Schule.» Wir bestimmen die Wortarten.',[
+ ['Lies den ganzen Satz.','Er rennt schnell zur Schule.'],
+ ['Setze «der, die oder das» davor.','die Schule ✔ → Nomen.'],
+ ['Frage: Was wird getan?','rennt → Verb.'],
+ ['Frage: Wie rennt er?','schnell → Adjektiv.'],
+ ['Steht ein Wort für ein Nomen?','«Er» steht für eine Person → Pronomen.']]),
+'wortarten5':('Satz: «Der Hund rennt sehr schnell in den Garten.»',[
+ ['Lies den Satz und markiere «in».','in den Garten'],
+ ['Steht es vor einem Nomen und nennt den Ort?','Ja → «in» ist eine Präposition.'],
+ ['Markiere «sehr». Kannst du es verändern?','Nein, «sehr» bleibt immer gleich → Partikel.'],
+ ['Markiere «schnell». Kannst du es steigern?','schnell → schneller ✔ → Adjektiv.'],
+ ['Markiere «rennt». Kannst du die Zeit ändern?','rennt → rannte ✔ → Verb.']]),
+'subjekt':('Satz: «Heute klaut der freche Hund die Wurst.»',[
+ ['Suche das Verb.','klaut → das ist das Prädikat.'],
+ ['Frage: Wer oder was klaut?','Wer klaut?'],
+ ['Die Antwort ist das Subjekt.','der freche Hund'],
+ ['Mache die Verschiebeprobe.','Der freche Hund klaut heute die Wurst. → «der freche Hund» bleibt zusammen ✔'],
+ ['Schreibe das Ergebnis auf.','Prädikat: klaut. Subjekt: der freche Hund.']]),
+'alphabet':('Wörter: Hund, Hase, Apfel, Maus. Wie ordnest du sie?',[
+ ['Schau auf den ersten Buchstaben jedes Wortes.','H, H, A, M'],
+ ['Ordne nach diesen Buchstaben.','A (Apfel) → H → M (Maus)'],
+ ['Zwei Wörter beginnen mit H. Vergleiche den zweiten Buchstaben.','Hund: u. Hase: a. a kommt vor u → Hase vor Hund.'],
+ ['Lies die Reihe zur Kontrolle.','Apfel, Hase, Hund, Maus ✔']]),
+'nebensatzarten':('Satz: «Wir bleiben drinnen, weil es regnet.»',[
+ ['Finde den Nebensatz.','weil es regnet (Einleitewort «weil», Verb am Ende)'],
+ ['Wird ein Nomen davor beschrieben?','Nein → kein Relativsatz.'],
+ ['Stelle die Frage: Warum bleiben wir drinnen?','Weil es regnet → ein Grund.'],
+ ['Bestimme die Art.','Kausalsatz (Nebensatz des Grundes)']]),
+'pronomen':('Text: «Anna spielt. Sie lacht. Ihr Hund bellt.»',[
+ ['Lies den Text.','Anna spielt. Sie lacht. Ihr Hund bellt.'],
+ ['Prüfe «Sie»: Kannst du es durch ein Nomen ersetzen?','Anna lacht ✔ → «Sie» ist ein Stellvertreter.'],
+ ['Prüfe «Ihr»: Steht es vor einem Nomen und gehört dazu?','«Ihr Hund» ✔ → «Ihr» ist ein Begleiter.'],
+ ['Schreibe das Ergebnis auf.','Sie = Stellvertreter, Ihr = Begleiter.']]),
+'plusquam':('Satz: «Nachdem Anna gegessen hatte, ging sie spielen.»',[
+ ['Suche die Verbgruppen.','«gegessen hatte» und «ging»'],
+ ['Steht «werden» + Grundform da?','Nein → kein Futur.'],
+ ['Prüfe «hatte gegessen»: «hatte» + Partizip II.','Ja → Plusquamperfekt (passierte zuerst).'],
+ ['Prüfe «ging».','Eine einfache Vergangenheitsform → Präteritum.'],
+ ['Schreibe das Ergebnis auf.','Zuerst: Plusquamperfekt. Danach: Präteritum.']])}
+def worked_key(tid):
+    f=tid.split('-',2)[2];k=int(tid.split('-')[0][2:])
+    if f=='wortarten':return 'wortarten3' if k<=4 else 'wortarten5'
+    return f if f in WORK else None

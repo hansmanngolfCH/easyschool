@@ -172013,37 +172013,43 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ein Beispiel Schritt für Schritt",
+     "text": "Satz: «Der kleine Hund rennt.» Welche Wortart hat jedes Wort?",
      "visuals": [
       {
-       "type": "tbl",
-       "rows": [
+       "type": "lines",
+       "num": true,
+       "items": [
         [
-         "Das Nomen «Hund» ist ein Verb.",
-         "Hund ist ein Nomen.",
-         "Du kannst «der Hund» sagen."
+         "Nimm ein Wort aus dem Satz: «Hund».",
+         "",
+         "Wir prüfen zuerst «Hund».",
+         "Im Beispiel"
         ],
         [
-         "«laut» ist ein Nomen.",
-         "laut ist ein Adjektiv.",
-         "Es sagt, wie etwas ist."
+         "Probiere «der, die oder das» davor.",
+         "",
+         "der Hund ✔ → Nomen.",
+         "Im Beispiel"
         ],
         [
-         "«laufen» ist ein Adjektiv.",
-         "laufen ist ein Verb.",
-         "Man kann es tun."
+         "Nimm das nächste Wort: «rennt». Kann man es tun?",
+         "",
+         "Ja, man kann rennen → Verb.",
+         "Im Beispiel"
+        ],
+        [
+         "Prüfe «kleine»: Sagt es, wie etwas ist?",
+         "",
+         "Der Hund ist klein → Adjektiv.",
+         "Im Beispiel"
+        ],
+        [
+         "Schreibe das Ergebnis auf.",
+         "",
+         "Hund = Nomen, rennt = Verb, kleine = Adjektiv.",
+         "Im Beispiel"
         ]
-       ],
-       "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
        ]
       }
      ]
@@ -183845,37 +183851,37 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ein Beispiel Schritt für Schritt",
+     "text": "Text: «Anna spielt. Sie lacht. Ihr Hund bellt.»",
      "visuals": [
       {
-       "type": "tbl",
-       "rows": [
+       "type": "lines",
+       "num": true,
+       "items": [
         [
-         "Anna lacht. Anna spielt. Anna isst.",
-         "Anna lacht. Sie spielt. Sie isst.",
-         "Sag nicht immer das Nomen."
+         "Lies den Text.",
+         "",
+         "Anna spielt. Sie lacht. Ihr Hund bellt.",
+         "Im Beispiel"
         ],
         [
-         "Er Hund ist klein.",
-         "Sein Hund ist klein.",
-         "Vor einem Nomen steht ein Begleiter."
+         "Prüfe «Sie»: Kannst du es durch ein Nomen ersetzen?",
+         "",
+         "Anna lacht ✔ → «Sie» ist ein Stellvertreter.",
+         "Im Beispiel"
         ],
         [
-         "Mein lacht.",
-         "Er lacht.",
-         "Allein steht ein Stellvertreter."
+         "Prüfe «Ihr»: Steht es vor einem Nomen und gehört dazu?",
+         "",
+         "«Ihr Hund» ✔ → «Ihr» ist ein Begleiter.",
+         "Im Beispiel"
+        ],
+        [
+         "Schreibe das Ergebnis auf.",
+         "",
+         "Sie = Stellvertreter, Ihr = Begleiter.",
+         "Im Beispiel"
         ]
-       ],
-       "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
        ]
       }
      ]
@@ -186227,37 +186233,37 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ein Beispiel Schritt für Schritt",
+     "text": "Text: «Anna spielt. Sie lacht. Ihr Hund bellt.»",
      "visuals": [
       {
-       "type": "tbl",
-       "rows": [
+       "type": "lines",
+       "num": true,
+       "items": [
         [
-         "Anna lacht. Anna spielt. Anna isst.",
-         "Anna lacht. Sie spielt. Sie isst.",
-         "Sag nicht immer das Nomen."
+         "Lies den Text.",
+         "",
+         "Anna spielt. Sie lacht. Ihr Hund bellt.",
+         "Im Beispiel"
         ],
         [
-         "Er Hund ist klein.",
-         "Sein Hund ist klein.",
-         "Vor einem Nomen steht ein Begleiter."
+         "Prüfe «Sie»: Kannst du es durch ein Nomen ersetzen?",
+         "",
+         "Anna lacht ✔ → «Sie» ist ein Stellvertreter.",
+         "Im Beispiel"
         ],
         [
-         "Mein lacht.",
-         "Er lacht.",
-         "Allein steht ein Stellvertreter."
+         "Prüfe «Ihr»: Steht es vor einem Nomen und gehört dazu?",
+         "",
+         "«Ihr Hund» ✔ → «Ihr» ist ein Begleiter.",
+         "Im Beispiel"
+        ],
+        [
+         "Schreibe das Ergebnis auf.",
+         "",
+         "Sie = Stellvertreter, Ihr = Begleiter.",
+         "Im Beispiel"
         ]
-       ],
-       "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
        ]
       }
      ]
@@ -194123,37 +194129,37 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ein Beispiel Schritt für Schritt",
+     "text": "Wörter: Hund, Hase, Apfel, Maus. Wie ordnest du sie?",
      "visuals": [
       {
-       "type": "tbl",
-       "rows": [
+       "type": "lines",
+       "num": true,
+       "items": [
         [
-         "Dach, Ball, Esel",
-         "Ball, Dach, Esel",
-         "B kommt vor D."
+         "Schau auf den ersten Buchstaben jedes Wortes.",
+         "",
+         "H, H, A, M",
+         "Im Beispiel"
         ],
         [
-         "Hund, Hand, Hase",
-         "Hand, Hase, Hund",
-         "Zweiter Buchstabe: a kommt vor u."
+         "Ordne nach diesen Buchstaben.",
+         "",
+         "A (Apfel) → H → M (Maus)",
+         "Im Beispiel"
         ],
         [
-         "K kommt nach L",
-         "K kommt vor L",
-         "Das ABC: … J K L …"
+         "Zwei Wörter beginnen mit H. Vergleiche den zweiten Buchstaben.",
+         "",
+         "Hund: u. Hase: a. a kommt vor u → Hase vor Hund.",
+         "Im Beispiel"
+        ],
+        [
+         "Lies die Reihe zur Kontrolle.",
+         "",
+         "Apfel, Hase, Hund, Maus ✔",
+         "Im Beispiel"
         ]
-       ],
-       "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
        ]
       }
      ]
@@ -196015,37 +196021,37 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ein Beispiel Schritt für Schritt",
+     "text": "Wörter: Hund, Hase, Apfel, Maus. Wie ordnest du sie?",
      "visuals": [
       {
-       "type": "tbl",
-       "rows": [
+       "type": "lines",
+       "num": true,
+       "items": [
         [
-         "Dach, Ball, Esel",
-         "Ball, Dach, Esel",
-         "B kommt vor D."
+         "Schau auf den ersten Buchstaben jedes Wortes.",
+         "",
+         "H, H, A, M",
+         "Im Beispiel"
         ],
         [
-         "Hund, Hand, Hase",
-         "Hand, Hase, Hund",
-         "Zweiter Buchstabe: a kommt vor u."
+         "Ordne nach diesen Buchstaben.",
+         "",
+         "A (Apfel) → H → M (Maus)",
+         "Im Beispiel"
         ],
         [
-         "K kommt nach L",
-         "K kommt vor L",
-         "Das ABC: … J K L …"
+         "Zwei Wörter beginnen mit H. Vergleiche den zweiten Buchstaben.",
+         "",
+         "Hund: u. Hase: a. a kommt vor u → Hase vor Hund.",
+         "Im Beispiel"
+        ],
+        [
+         "Lies die Reihe zur Kontrolle.",
+         "",
+         "Apfel, Hase, Hund, Maus ✔",
+         "Im Beispiel"
         ]
-       ],
-       "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
        ]
       }
      ]
@@ -218941,37 +218947,43 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ein Beispiel Schritt für Schritt",
+     "text": "Satz: «Er rennt schnell zur Schule.» Wir bestimmen die Wortarten.",
      "visuals": [
       {
-       "type": "tbl",
-       "rows": [
+       "type": "lines",
+       "num": true,
+       "items": [
         [
-         "«schnell» ist ein Verb.",
-         "«schnell» ist ein Adjektiv.",
-         "Es sagt, wie etwas ist."
+         "Lies den ganzen Satz.",
+         "",
+         "Er rennt schnell zur Schule.",
+         "Im Beispiel"
         ],
         [
-         "«mein» ist ein Nomen.",
-         "«mein» ist ein Pronomen.",
-         "Es begleitet ein Nomen."
+         "Setze «der, die oder das» davor.",
+         "",
+         "die Schule ✔ → Nomen.",
+         "Im Beispiel"
         ],
         [
-         "«rennen» ist ein Adjektiv.",
-         "«rennen» ist ein Verb.",
-         "Man kann es tun."
+         "Frage: Was wird getan?",
+         "",
+         "rennt → Verb.",
+         "Im Beispiel"
+        ],
+        [
+         "Frage: Wie rennt er?",
+         "",
+         "schnell → Adjektiv.",
+         "Im Beispiel"
+        ],
+        [
+         "Steht ein Wort für ein Nomen?",
+         "",
+         "«Er» steht für eine Person → Pronomen.",
+         "Im Beispiel"
         ]
-       ],
-       "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
        ]
       }
      ]
@@ -221567,37 +221579,43 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ein Beispiel Schritt für Schritt",
+     "text": "Satz: «Er rennt schnell zur Schule.» Wir bestimmen die Wortarten.",
      "visuals": [
       {
-       "type": "tbl",
-       "rows": [
+       "type": "lines",
+       "num": true,
+       "items": [
         [
-         "«schnell» ist ein Verb.",
-         "«schnell» ist ein Adjektiv.",
-         "Es sagt, wie etwas ist."
+         "Lies den ganzen Satz.",
+         "",
+         "Er rennt schnell zur Schule.",
+         "Im Beispiel"
         ],
         [
-         "«mein» ist ein Nomen.",
-         "«mein» ist ein Pronomen.",
-         "Es begleitet ein Nomen."
+         "Setze «der, die oder das» davor.",
+         "",
+         "die Schule ✔ → Nomen.",
+         "Im Beispiel"
         ],
         [
-         "«rennen» ist ein Adjektiv.",
-         "«rennen» ist ein Verb.",
-         "Man kann es tun."
+         "Frage: Was wird getan?",
+         "",
+         "rennt → Verb.",
+         "Im Beispiel"
+        ],
+        [
+         "Frage: Wie rennt er?",
+         "",
+         "schnell → Adjektiv.",
+         "Im Beispiel"
+        ],
+        [
+         "Steht ein Wort für ein Nomen?",
+         "",
+         "«Er» steht für eine Person → Pronomen.",
+         "Im Beispiel"
         ]
-       ],
-       "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
        ]
       }
      ]
@@ -233476,37 +233494,43 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ein Beispiel Schritt für Schritt",
+     "text": "Satz: «Der Hund rennt sehr schnell in den Garten.»",
      "visuals": [
       {
-       "type": "tbl",
-       "rows": [
+       "type": "lines",
+       "num": true,
+       "items": [
         [
-         "«auf» ist ein Adjektiv.",
-         "«auf» ist eine Präposition.",
-         "Es steht vor «dem Tisch»."
+         "Lies den Satz und markiere «in».",
+         "",
+         "in den Garten",
+         "Im Beispiel"
         ],
         [
-         "«weil» ist eine Präposition.",
-         "«weil» ist eine Konjunktion.",
-         "Es verbindet zwei Sätze."
+         "Steht es vor einem Nomen und nennt den Ort?",
+         "",
+         "Ja → «in» ist eine Präposition.",
+         "Im Beispiel"
         ],
         [
-         "«schnell» ist ein Nomen.",
-         "«schnell» ist ein Adjektiv.",
-         "Man kann es steigern."
+         "Markiere «sehr». Kannst du es verändern?",
+         "",
+         "Nein, «sehr» bleibt immer gleich → Partikel.",
+         "Im Beispiel"
+        ],
+        [
+         "Markiere «schnell». Kannst du es steigern?",
+         "",
+         "schnell → schneller ✔ → Adjektiv.",
+         "Im Beispiel"
+        ],
+        [
+         "Markiere «rennt». Kannst du die Zeit ändern?",
+         "",
+         "rennt → rannte ✔ → Verb.",
+         "Im Beispiel"
         ]
-       ],
-       "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
        ]
       }
      ]
@@ -237449,37 +237473,43 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ein Beispiel Schritt für Schritt",
+     "text": "Satz: «Der Hund rennt sehr schnell in den Garten.»",
      "visuals": [
       {
-       "type": "tbl",
-       "rows": [
+       "type": "lines",
+       "num": true,
+       "items": [
         [
-         "«auf» ist ein Adjektiv.",
-         "«auf» ist eine Präposition.",
-         "Es steht vor «dem Tisch»."
+         "Lies den Satz und markiere «in».",
+         "",
+         "in den Garten",
+         "Im Beispiel"
         ],
         [
-         "«weil» ist eine Präposition.",
-         "«weil» ist eine Konjunktion.",
-         "Es verbindet zwei Sätze."
+         "Steht es vor einem Nomen und nennt den Ort?",
+         "",
+         "Ja → «in» ist eine Präposition.",
+         "Im Beispiel"
         ],
         [
-         "«schnell» ist ein Nomen.",
-         "«schnell» ist ein Adjektiv.",
-         "Man kann es steigern."
+         "Markiere «sehr». Kannst du es verändern?",
+         "",
+         "Nein, «sehr» bleibt immer gleich → Partikel.",
+         "Im Beispiel"
+        ],
+        [
+         "Markiere «schnell». Kannst du es steigern?",
+         "",
+         "schnell → schneller ✔ → Adjektiv.",
+         "Im Beispiel"
+        ],
+        [
+         "Markiere «rennt». Kannst du die Zeit ändern?",
+         "",
+         "rennt → rannte ✔ → Verb.",
+         "Im Beispiel"
         ]
-       ],
-       "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
        ]
       }
      ]
@@ -241365,37 +241395,43 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ein Beispiel Schritt für Schritt",
+     "text": "Satz: «Heute klaut der freche Hund die Wurst.»",
      "visuals": [
       {
-       "type": "tbl",
-       "rows": [
+       "type": "lines",
+       "num": true,
+       "items": [
         [
-         "Das Subjekt ist «bellt».",
-         "Das Subjekt ist «Der Hund».",
-         "Wer bellt? Der Hund."
+         "Suche das Verb.",
+         "",
+         "klaut → das ist das Prädikat.",
+         "Im Beispiel"
         ],
         [
-         "Das Prädikat ist «Hund».",
-         "Das Prädikat ist «bellt».",
-         "Das Prädikat ist ein Verb."
+         "Frage: Wer oder was klaut?",
+         "",
+         "Wer klaut?",
+         "Im Beispiel"
         ],
         [
-         "Die Sonne scheint am | Morgen",
-         "Am Morgen scheint die Sonne.",
-         "«Am Morgen» bleibt zusammen."
+         "Die Antwort ist das Subjekt.",
+         "",
+         "der freche Hund",
+         "Im Beispiel"
+        ],
+        [
+         "Mache die Verschiebeprobe.",
+         "",
+         "Der freche Hund klaut heute die Wurst. → «der freche Hund» bleibt zusammen ✔",
+         "Im Beispiel"
+        ],
+        [
+         "Schreibe das Ergebnis auf.",
+         "",
+         "Prädikat: klaut. Subjekt: der freche Hund.",
+         "Im Beispiel"
         ]
-       ],
-       "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
        ]
       }
      ]
@@ -244731,37 +244767,43 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ein Beispiel Schritt für Schritt",
+     "text": "Satz: «Heute klaut der freche Hund die Wurst.»",
      "visuals": [
       {
-       "type": "tbl",
-       "rows": [
+       "type": "lines",
+       "num": true,
+       "items": [
         [
-         "Das Subjekt ist «bellt».",
-         "Das Subjekt ist «Der Hund».",
-         "Wer bellt? Der Hund."
+         "Suche das Verb.",
+         "",
+         "klaut → das ist das Prädikat.",
+         "Im Beispiel"
         ],
         [
-         "Das Prädikat ist «Hund».",
-         "Das Prädikat ist «bellt».",
-         "Das Prädikat ist ein Verb."
+         "Frage: Wer oder was klaut?",
+         "",
+         "Wer klaut?",
+         "Im Beispiel"
         ],
         [
-         "Die Sonne scheint am | Morgen",
-         "Am Morgen scheint die Sonne.",
-         "«Am Morgen» bleibt zusammen."
+         "Die Antwort ist das Subjekt.",
+         "",
+         "der freche Hund",
+         "Im Beispiel"
+        ],
+        [
+         "Mache die Verschiebeprobe.",
+         "",
+         "Der freche Hund klaut heute die Wurst. → «der freche Hund» bleibt zusammen ✔",
+         "Im Beispiel"
+        ],
+        [
+         "Schreibe das Ergebnis auf.",
+         "",
+         "Prädikat: klaut. Subjekt: der freche Hund.",
+         "Im Beispiel"
         ]
-       ],
-       "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
        ]
       }
      ]
@@ -248035,37 +248077,43 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ein Beispiel Schritt für Schritt",
+     "text": "Satz: «Nachdem Anna gegessen hatte, ging sie spielen.»",
      "visuals": [
       {
-       "type": "tbl",
-       "rows": [
+       "type": "lines",
+       "num": true,
+       "items": [
         [
-         "Ich werde gegessen.",
-         "Ich werde essen.",
-         "Futur: werden + Grundform."
+         "Suche die Verbgruppen.",
+         "",
+         "«gegessen hatte» und «ging»",
+         "Im Beispiel"
         ],
         [
-         "Ich hatte lache.",
-         "Ich hatte gelacht.",
-         "Plusquamperfekt: hatte + Partizip II."
+         "Steht «werden» + Grundform da?",
+         "",
+         "Nein → kein Futur.",
+         "Im Beispiel"
         ],
         [
-         "Er war gelaufet.",
-         "Er war gelaufen.",
-         "Das Partizip von laufen ist gelaufen."
+         "Prüfe «hatte gegessen»: «hatte» + Partizip II.",
+         "",
+         "Ja → Plusquamperfekt (passierte zuerst).",
+         "Im Beispiel"
+        ],
+        [
+         "Prüfe «ging».",
+         "",
+         "Eine einfache Vergangenheitsform → Präteritum.",
+         "Im Beispiel"
+        ],
+        [
+         "Schreibe das Ergebnis auf.",
+         "",
+         "Zuerst: Plusquamperfekt. Danach: Präteritum.",
+         "Im Beispiel"
         ]
-       ],
-       "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
        ]
       }
      ]
@@ -251410,37 +251458,43 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ein Beispiel Schritt für Schritt",
+     "text": "Satz: «Nachdem Anna gegessen hatte, ging sie spielen.»",
      "visuals": [
       {
-       "type": "tbl",
-       "rows": [
+       "type": "lines",
+       "num": true,
+       "items": [
         [
-         "Ich werde gegessen.",
-         "Ich werde essen.",
-         "Futur: werden + Grundform."
+         "Suche die Verbgruppen.",
+         "",
+         "«gegessen hatte» und «ging»",
+         "Im Beispiel"
         ],
         [
-         "Ich hatte lache.",
-         "Ich hatte gelacht.",
-         "Plusquamperfekt: hatte + Partizip II."
+         "Steht «werden» + Grundform da?",
+         "",
+         "Nein → kein Futur.",
+         "Im Beispiel"
         ],
         [
-         "Er war gelaufet.",
-         "Er war gelaufen.",
-         "Das Partizip von laufen ist gelaufen."
+         "Prüfe «hatte gegessen»: «hatte» + Partizip II.",
+         "",
+         "Ja → Plusquamperfekt (passierte zuerst).",
+         "Im Beispiel"
+        ],
+        [
+         "Prüfe «ging».",
+         "",
+         "Eine einfache Vergangenheitsform → Präteritum.",
+         "Im Beispiel"
+        ],
+        [
+         "Schreibe das Ergebnis auf.",
+         "",
+         "Zuerst: Plusquamperfekt. Danach: Präteritum.",
+         "Im Beispiel"
         ]
-       ],
-       "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
        ]
       }
      ]
@@ -285109,37 +285163,37 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ein Beispiel Schritt für Schritt",
+     "text": "Satz: «Wir bleiben drinnen, weil es regnet.»",
      "visuals": [
       {
-       "type": "tbl",
-       "rows": [
+       "type": "lines",
+       "num": true,
+       "items": [
         [
-         "«das ich lese» ist ein Konjunktionalsatz.",
-         "«das ich lese» ist ein Relativsatz.",
-         "Er beschreibt «Buch»."
+         "Finde den Nebensatz.",
+         "",
+         "weil es regnet (Einleitewort «weil», Verb am Ende)",
+         "Im Beispiel"
         ],
         [
-         "«weil es regnet» ist ein Relativsatz.",
-         "«weil es regnet» ist ein Konjunktionalsatz.",
-         "Er nennt den Grund."
+         "Wird ein Nomen davor beschrieben?",
+         "",
+         "Nein → kein Relativsatz.",
+         "Im Beispiel"
         ],
         [
-         "Das Buch das ich lese ist neu.",
-         "Das Buch, das ich lese, ist neu.",
-         "Der Relativsatz steht zwischen Kommas."
+         "Stelle die Frage: Warum bleiben wir drinnen?",
+         "",
+         "Weil es regnet → ein Grund.",
+         "Im Beispiel"
+        ],
+        [
+         "Bestimme die Art.",
+         "",
+         "Kausalsatz (Nebensatz des Grundes)",
+         "Im Beispiel"
         ]
-       ],
-       "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
        ]
       }
      ]
@@ -288488,37 +288542,37 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ein Beispiel Schritt für Schritt",
+     "text": "Satz: «Wir bleiben drinnen, weil es regnet.»",
      "visuals": [
       {
-       "type": "tbl",
-       "rows": [
+       "type": "lines",
+       "num": true,
+       "items": [
         [
-         "«das ich lese» ist ein Konjunktionalsatz.",
-         "«das ich lese» ist ein Relativsatz.",
-         "Er beschreibt «Buch»."
+         "Finde den Nebensatz.",
+         "",
+         "weil es regnet (Einleitewort «weil», Verb am Ende)",
+         "Im Beispiel"
         ],
         [
-         "«weil es regnet» ist ein Relativsatz.",
-         "«weil es regnet» ist ein Konjunktionalsatz.",
-         "Er nennt den Grund."
+         "Wird ein Nomen davor beschrieben?",
+         "",
+         "Nein → kein Relativsatz.",
+         "Im Beispiel"
         ],
         [
-         "Das Buch das ich lese ist neu.",
-         "Das Buch, das ich lese, ist neu.",
-         "Der Relativsatz steht zwischen Kommas."
+         "Stelle die Frage: Warum bleiben wir drinnen?",
+         "",
+         "Weil es regnet → ein Grund.",
+         "Im Beispiel"
+        ],
+        [
+         "Bestimme die Art.",
+         "",
+         "Kausalsatz (Nebensatz des Grundes)",
+         "Im Beispiel"
         ]
-       ],
-       "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
        ]
       }
      ]

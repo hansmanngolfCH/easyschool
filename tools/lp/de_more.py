@@ -1040,3 +1040,15 @@ def add_examples(c):
                         it[2]=ex;n+=1
                     else:miss.add(it[0])
     print('Beispiele',n,'ohne:',sorted(miss))
+
+def replace_fehler(c):
+    import de_ex;n=0
+    for t in c['topics']:
+        if t['subject']!='deu':continue
+        k=de_ex.worked_key(t['id'])
+        if not k:continue
+        txt,steps=de_ex.WORK[k]
+        for i,e in enumerate(t['explain']):
+            if e['h']=='Typische Fehler':
+                t['explain'][i]={"h":"Ein Beispiel Schritt für Schritt","text":txt,"visuals":[{"type":"lines","num":True,"items":[[a,'',b,'Im Beispiel'] for a,b in steps]}]};n+=1
+    print('Fehler ersetzt',n)

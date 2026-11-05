@@ -18,6 +18,6 @@ for i,t in enumerate(c['topics']):
         nt,n=de_more.extend_json(t);pr=[]
         c['topics'][i]=nt;out.append(nt) if False else None;print('JSON',t['id'],'+',n)
 c['topics']=[t for t in c['topics'] if t['id'] not in ids]+out
-de_more.add_examples(c)
+de_more.replace_fehler(c);de_more.add_examples(c)
 json.dump(c,open(P,'w'),ensure_ascii=False,indent=1)
 print(len(out),'Themen:',[(t['id'],len(t['cards']),len(t['exam']['questions']),len(t['explain'])) for t in out])
