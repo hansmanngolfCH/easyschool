@@ -1634,6 +1634,18 @@ body.hascalc #app{padding-bottom:84px}
 .dtb tbody th span{padding:3px 5px;border-left-width:3px}
 .dtb tbody td{font-size:.8rem}
 figure.vis:has(.dtb),.vis:has(.dtb){padding-left:4px;padding-right:4px}
+/* v4.77 Korrektur-Feld: waechst mit dem Text, Diff-Anzeige */
+.fixcol{display:flex;flex-direction:column;gap:10px;width:100%}
+textarea.fixin,textarea.pin.fixin{width:100%;box-sizing:border-box;resize:none;overflow:hidden;min-height:56px;line-height:1.45;padding:12px 14px;border-radius:14px;border:2px solid #1a73e8;background:#fff;color:var(--ink);font:600 1.15rem/1.45 inherit;font-family:inherit;white-space:pre-wrap;word-break:break-word}
+textarea.pin.fixin{font-size:1rem;min-height:48px}
+.fixcol .btn{align-self:stretch}
+.dfl2{display:flex;flex-direction:column;gap:3px;margin-top:6px;text-align:left}
+.dfk{font-size:.72rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;opacity:.75}
+.dft{font-size:1.1rem;font-weight:600;line-height:1.5;word-break:break-word}
+del.dfx{text-decoration:line-through;text-decoration-thickness:2px;color:#c5221f;background:rgba(234,67,53,.14);border-radius:4px;padding:0 2px}
+ins.dfy{text-decoration:none;color:#0d652d;background:rgba(52,168,83,.22);border-radius:4px;padding:0 2px;font-weight:800}
+.dgap{display:inline-block;min-width:.7em;border-bottom:2px dashed #c5221f;color:transparent;line-height:1}
+.dfres{display:block;line-height:1.35}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1641,7 +1653,7 @@ figure.vis:has(.dtb),.vis:has(.dtb){padding-left:4px;padding-right:4px}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION="v4.76";
+var APP_VERSION="v4.77";
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -1822,6 +1834,7 @@ function norm(s){return String(s).toLowerCase().replace(/[’‘`´]/g,"'").repl
 function plain(s){return s.normalize('NFD').replace(/[̀-ͯ]/g,'')}
 function loose(s){return plain(norm(s)).replace(/[,;:!?"]/g,'').replace(/\s+/g,' ')}
 function checkAns(inp,answers){
+  if(answers.length&&answers.every(function(x){return /^[\u2212\-]?[\d'.,]+$/.test(String(x).trim())}))inp=String(inp||'').replace(/\s*(cm²|cm³|m²|m³|cm|mm|km|kg|ml|dl|cl|fr\.?|rp\.?|°c|°|%|g|l|m|t)\s*$/i,'');
   var n=norm(inp||'');if(!n)return {ok:false,empty:true};
   for(var i=0;i<answers.length;i++){if(norm(answers[i])===n)return {ok:true}}
   for(var j=0;j<answers.length;j++){if(plain(norm(answers[j]))===plain(n))return {ok:true,accent:answers[j]}}
@@ -2640,6 +2653,21 @@ function vParent(){
   return html+'<p class="sub">Jedes Kind hat seinen eigenen Fortschritt pro Klasse. Damit er auf allen Geräten gespeichert wird, braucht das Kind Zugriff mit Bearbeitungsrechten auf den Link.</p></div>';
 }
 
+function plainT(s){return String(s==null?'':s).replace(/\{\d\|([^}]*)\}/g,'$1')}
+function diffPair(mine,right){
+  mine=plainT(mine).trim();right=plainT(right).trim();
+  var ch=mine.indexOf(' ')<0&&right.indexOf(' ')<0,a=ch?mine.split(''):mine.split(/\s+/),b=ch?right.split(''):right.split(/\s+/),n=a.length,m=b.length,i,j,L=[];
+  for(i=0;i<=n;i++){L.push(new Array(m+1).fill(0))}
+  for(i=n-1;i>=0;i--)for(j=m-1;j>=0;j--)L[i][j]=a[i]===b[j]?L[i+1][j+1]+1:Math.max(L[i+1][j],L[i][j+1]);
+  var sp=ch?'':' ',om=[],or=[];i=0;j=0;
+  while(i<n||j<m){
+    if(i<n&&j<m&&a[i]===b[j]){om.push(esc(a[i]));or.push(esc(b[j]));i++;j++}
+    else if(i<n&&(j>=m||L[i+1][j]>=L[i][j+1])){om.push('<del class="dfx">'+esc(a[i])+'</del>');i++}
+    else{om.push('<span class="dgap">'+(ch?'_':'▢')+'</span>');or.push('<ins class="dfy">'+esc(b[j])+'</ins>');j++}
+  }
+  return {m:om.join(sp),r:or.join(sp)};
+}
+function fixGrow(el){if(!el)return;el.style.height='auto';el.style.height=(el.scrollHeight+2)+'px'}
 
 /* ---------- Üben ---------- */
 function qHtml(q){
@@ -2817,12 +2845,13 @@ function vPractice(){
     else if(c.match)h2+=matchHTML(n,c);
     else if(c.trace)h2+='<div class="trcw"><canvas id="trc" width="600" height="600" data-t="'+esc(c.trace)+'" aria-label="Zeichenfläche"></canvas></div>'+(n.err?'<p class="fb no">'+esc(n.err)+'</p>':'')+'<div class="row"><button class="btn" data-act="trclear">Neu</button><button class="btn pri" data-act="trcheck">Fertig</button><button class="btn ghost" data-act="reveal">Weiter</button></div>';
     else if(c.opts)h2+='<div class="opts">'+n.opts.map(function(op,i){return '<button class="o" data-act="mpick" data-i="'+i+'">'+rt(op.t)+'</button>'}).join('')+'</div>';
-    if(chk)h2+='<div class="stack" style="padding:0;gap:8px"><label class="lab2" for="ans">'+(c.pre!=null?'Verbessere direkt im Feld':'Dein Ergebnis')+'</label><div class="row"><input class="inp'+(c.pre!=null?' fixin':'')+'" id="ans" value="'+esc(n.typed||c.pre||'')+'" placeholder="'+ph(cardAns(c)[0])+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"><button class="btn pri" data-act="check">'+(c.pre!=null?'Absenden':'Prüfen')+'</button></div>'+(n.err?'<p class="fb no">'+esc(n.err)+'</p>':'')+'</div>';
+    if(chk)h2+='<div class="stack" style="padding:0;gap:8px"><label class="lab2" for="ans">'+(c.pre!=null?'Verbessere direkt im Feld':'Dein Ergebnis')+'</label>'+(c.pre!=null?'<div class="fixcol"><textarea class="inp fixin" id="ans" rows="1" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">'+esc(n.typed||c.pre||'')+'</textarea><button class="btn pri" data-act="check">Absenden</button></div>':'<div class="row"><input class="inp" id="ans" value="'+esc(n.typed||'')+'" placeholder="'+ph(cardAns(c)[0])+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"><button class="btn pri" data-act="check">Prüfen</button></div>')+''+(n.err?'<p class="fb no">'+esc(n.err)+'</p>':'')+'</div>';
     h2+=(c.opts||c.match||c.trace?'':'<button class="btn'+(chk?' ghost':' pri big')+'" data-act="reveal">'+(chk?'Ich komme nicht drauf, Lösung zeigen':'Antwort zeigen')+'</button>');
   }else{
     var vd=n.verdict;
     if(vd==='ok')h2+='<div class="verdict ok">Richtig: '+rt(c.a)+(n.accentNote?' Achte noch auf die Schreibweise: '+esc(n.accentNote):'')+'</div>';
-    else if(vd==='no'){var mine=n.typed||(n.opts&&n.chosen!=null&&n.opts[n.chosen]?n.opts[n.chosen].t:'');h2+='<div class="verdict no">Nicht ganz. Deine Antwort: '+(mine?rt(mine):'–')+'</div><div class="verdict ok" style="margin-top:6px">Richtig ist: '+rt(c.a)+'</div>'}
+    else if(vd==='no'){var mine=n.typed||(n.opts&&n.chosen!=null&&n.opts[n.chosen]?n.opts[n.chosen].t:'');if(c.pre!=null||c.cs){var dfp=diffPair(mine,c.a),same=plainT(mine).trim()===plainT(c.pre==null?'':c.pre).trim();h2+='<div class="verdict no">'+(same?'Du hast nichts verändert. Hier steckt ein Fehler.':'Nicht ganz.')+'<div class="dfl2"><span class="dfk">Deine Antwort</span><span class="dft">'+dfp.m+'</span></div></div><div class="verdict ok" style="margin-top:6px"><div class="dfl2"><span class="dfk">Richtig ist</span><span class="dft">'+dfp.r+'</span></div></div>'}else h2+='<div class="verdict no">Nicht ganz. Deine Antwort: '+(mine?rt(mine):'–')+'</div><div class="verdict ok" style="margin-top:6px">Richtig ist: '+rt(c.a)+'</div>'}
+    else if(vd==='near'&&(c.pre!=null||c.cs)){var dn=diffPair(n.typed||'',c.a);h2+='<div class="verdict no">Fast! Schau dir die markierten Stellen an.<div class="dfl2"><span class="dfk">Deine Antwort</span><span class="dft">'+dn.m+'</span></div></div><div class="verdict ok" style="margin-top:6px"><div class="dfl2"><span class="dfk">Richtig ist</span><span class="dft">'+dn.r+'</span></div></div>'}
     else if(vd==='near')h2+='<div class="verdict near">Dein Satz weicht von der Lösung ab. Vergleiche selbst, ob er trotzdem stimmt.</div>';
     if(c.why)h2+='<div class="why">'+rt(c.why)+'</div>';
     h2+=(vd==='no'||vd==='ok'?'':'<p class="fa" style="align-self:flex-start">'+rt(c.a)+'</p>')+(c.steps?'<div class="steps"><p class="lab2">Rechenweg in Schritten</p>'+vLines({items:c.steps,num:true})+'</div>':'')+(c.solvis?visuals(c.solvis):'');
@@ -2875,7 +2904,7 @@ function vExam(){
     var html='<div class="paperpage"><p class="ptitle">Prüfung · '+esc(t.title)+'</p><div class="sheet"><div class="shead"><span>Name: <b>'+esc(n.pname||'')+'</b></span><span>Datum: <b>'+ds+'</b></span></div>'+(t.id.indexOf('bruch')>=0?'<p class="sub" style="margin:0 0 4px">Alle Brüche so weit wie möglich kürzen.</p>':'')+'<ol class="mq">';
     qs.forEach(function(q,i){
       var key='e:'+t.id+':'+q.id,pd=padHTML(key,q.q);
-      html+='<li><div class="mqt"><span class="nc">'+(i+1)+'</span>'+qBlock(q)+'</div>'+visuals(q.visuals)+(q.type==='mc'?'<div class="mcopts">'+q.options.map(function(o,j){return '<label class="mco"><input type="radio" name="r-'+q.id+'" data-q="'+q.id+'" value="'+j+'"'+(n.answers[q.id]===j?' checked':'')+'><span class="mcl">'+String.fromCharCode(65+j)+'</span><span>'+rt(o)+'</span></label>'}).join('')+'</div>':'<input class="pin" id="in-'+q.id+'" data-q="'+q.id+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" value="'+esc(n.answers[q.id]||q.pre||'')+'"><div class="tools">'+pd.btn+'</div>'+pd.box)+'</li>';
+      html+='<li><div class="mqt"><span class="nc">'+(i+1)+'</span>'+qBlock(q)+'</div>'+visuals(q.visuals)+(q.type==='mc'?'<div class="mcopts">'+q.options.map(function(o,j){return '<label class="mco"><input type="radio" name="r-'+q.id+'" data-q="'+q.id+'" value="'+j+'"'+(n.answers[q.id]===j?' checked':'')+'><span class="mcl">'+String.fromCharCode(65+j)+'</span><span>'+rt(o)+'</span></label>'}).join('')+'</div>':(q.pre!=null?'<textarea class="pin fixin" id="in-'+q.id+'" data-q="'+q.id+'" rows="1" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">'+esc(n.answers[q.id]||q.pre||'')+'</textarea>':'<input class="pin" id="in-'+q.id+'" data-q="'+q.id+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" value="'+esc(n.answers[q.id]||'')+'">')+'<div class="tools">'+pd.btn+'</div>'+pd.box)+'</li>';
     });
     html+='</ol></div>';
     return html+'<button class="btn pri big" data-act="finish">Abgeben</button></div>';
@@ -2887,6 +2916,7 @@ function vExam(){
   var rowAns=function(it,i){
     var L=function(j){return String.fromCharCode(65+j)+') '},ans=it.q.type==='mc'?L(it.q.answer)+it.q.options[it.q.answer]:it.q.answer[0],given=it.q.type==='mc'?(it.g==null?'':L(it.g)+it.q.options[it.g]):(it.g||'');
     var tilt=((i*37)%7)-3;
+    if(it.q.pre!=null&&!it.ok){var dq=diffPair(given||it.q.pre,ans);return '<div class="pin cl"><span class="hw dfres">'+dq.m+'</span><span class="hw red dfres">'+dq.r+'</span><span class="mkw" style="transform:rotate('+tilt+'deg)">'+XX+'</span></div>'}
     return '<div class="pin cl">'+(given?'<span class="hw'+(it.ok?'':' strike')+'">'+esc(given)+'</span>':'')+(it.ok?'':'<span class="hw red">'+rt(ans)+'</span>')+'<span class="mkw" style="transform:rotate('+tilt+'deg)">'+(it.ok?TK:XX)+'</span></div>';
   };
   if(isLangT(t)){
@@ -2941,6 +2971,7 @@ function render(){
   calcFab();
   initPads();
   initTrace();
+  document.querySelectorAll('textarea.fixin').forEach(fixGrow);
   if(nav.view==='practice'&&nav.queue&&nav.idx<nav.queue.length&&!nav.revealed){
     var cc=curCard(nav);
     if(isV(cc)){var sg=stageOf(nav,nav.queue[nav.idx]);if(sg===1||sg===3){var ai=document.getElementById('ans');if(ai&&ai.focus)try{ai.focus()}catch(e){}}}
@@ -3175,6 +3206,7 @@ app.addEventListener('input',function(e){
 });
 app.addEventListener('keydown',function(e){
   if(e.key==='Enter'&&e.target.id==='tryin'){e.preventDefault();ACT.try()}
+  if(e.key==='Enter'&&e.target.classList&&e.target.classList.contains('fixin')&&e.target.id.indexOf('in-')===0){e.preventDefault();return}
   if(e.key==='Enter'&&e.target.id==='ans'){e.preventDefault();ACT.check()}
   if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('flipc')){e.preventDefault();ACT.flip(e.target)}
 });
@@ -3994,6 +4026,9 @@ tetris:function(cv,cx0,w,h,score,over){
   var ub=bindSwipe(cv,function(k){if(k==='L')act('L');else if(k==='R')act('R');else if(k==='D')act('drop');else if(k==='U'||k==='tap')act('U')},true);
   nw();draw();return function(){stop();ub()}}
 };
+
+document.addEventListener('input',function(e){if(e.target&&e.target.classList&&e.target.classList.contains('fixin'))fixGrow(e.target)});
+window.addEventListener('resize',function(){document.querySelectorAll('textarea.fixin').forEach(fixGrow)});
 
 
 /* ---------- Extra-XP-Spezialspiel (pro Fach, schwieriger als Paare) ---------- */

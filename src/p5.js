@@ -37,6 +37,7 @@ function render(){
   calcFab();
   initPads();
   initTrace();
+  document.querySelectorAll('textarea.fixin').forEach(fixGrow);
   if(nav.view==='practice'&&nav.queue&&nav.idx<nav.queue.length&&!nav.revealed){
     var cc=curCard(nav);
     if(isV(cc)){var sg=stageOf(nav,nav.queue[nav.idx]);if(sg===1||sg===3){var ai=document.getElementById('ans');if(ai&&ai.focus)try{ai.focus()}catch(e){}}}
@@ -271,6 +272,7 @@ app.addEventListener('input',function(e){
 });
 app.addEventListener('keydown',function(e){
   if(e.key==='Enter'&&e.target.id==='tryin'){e.preventDefault();ACT.try()}
+  if(e.key==='Enter'&&e.target.classList&&e.target.classList.contains('fixin')&&e.target.id.indexOf('in-')===0){e.preventDefault();return}
   if(e.key==='Enter'&&e.target.id==='ans'){e.preventDefault();ACT.check()}
   if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('flipc')){e.preventDefault();ACT.flip(e.target)}
 });
@@ -1090,3 +1092,6 @@ tetris:function(cv,cx0,w,h,score,over){
   var ub=bindSwipe(cv,function(k){if(k==='L')act('L');else if(k==='R')act('R');else if(k==='D')act('drop');else if(k==='U'||k==='tap')act('U')},true);
   nw();draw();return function(){stop();ub()}}
 };
+
+document.addEventListener('input',function(e){if(e.target&&e.target.classList&&e.target.classList.contains('fixin'))fixGrow(e.target)});
+window.addEventListener('resize',function(){document.querySelectorAll('textarea.fixin').forEach(fixGrow)});

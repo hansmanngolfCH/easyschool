@@ -1,3 +1,18 @@
+function plainT(s){return String(s==null?'':s).replace(/\{\d\|([^}]*)\}/g,'$1')}
+function diffPair(mine,right){
+  mine=plainT(mine).trim();right=plainT(right).trim();
+  var ch=mine.indexOf(' ')<0&&right.indexOf(' ')<0,a=ch?mine.split(''):mine.split(/\s+/),b=ch?right.split(''):right.split(/\s+/),n=a.length,m=b.length,i,j,L=[];
+  for(i=0;i<=n;i++){L.push(new Array(m+1).fill(0))}
+  for(i=n-1;i>=0;i--)for(j=m-1;j>=0;j--)L[i][j]=a[i]===b[j]?L[i+1][j+1]+1:Math.max(L[i+1][j],L[i][j+1]);
+  var sp=ch?'':' ',om=[],or=[];i=0;j=0;
+  while(i<n||j<m){
+    if(i<n&&j<m&&a[i]===b[j]){om.push(esc(a[i]));or.push(esc(b[j]));i++;j++}
+    else if(i<n&&(j>=m||L[i+1][j]>=L[i][j+1])){om.push('<del class="dfx">'+esc(a[i])+'</del>');i++}
+    else{om.push('<span class="dgap">'+(ch?'_':'▢')+'</span>');or.push('<ins class="dfy">'+esc(b[j])+'</ins>');j++}
+  }
+  return {m:om.join(sp),r:or.join(sp)};
+}
+function fixGrow(el){if(!el)return;el.style.height='auto';el.style.height=(el.scrollHeight+2)+'px'}
 
 /* ---------- Üben ---------- */
 function qHtml(q){
@@ -175,12 +190,13 @@ function vPractice(){
     else if(c.match)h2+=matchHTML(n,c);
     else if(c.trace)h2+='<div class="trcw"><canvas id="trc" width="600" height="600" data-t="'+esc(c.trace)+'" aria-label="Zeichenfläche"></canvas></div>'+(n.err?'<p class="fb no">'+esc(n.err)+'</p>':'')+'<div class="row"><button class="btn" data-act="trclear">Neu</button><button class="btn pri" data-act="trcheck">Fertig</button><button class="btn ghost" data-act="reveal">Weiter</button></div>';
     else if(c.opts)h2+='<div class="opts">'+n.opts.map(function(op,i){return '<button class="o" data-act="mpick" data-i="'+i+'">'+rt(op.t)+'</button>'}).join('')+'</div>';
-    if(chk)h2+='<div class="stack" style="padding:0;gap:8px"><label class="lab2" for="ans">'+(c.pre!=null?'Verbessere direkt im Feld':'Dein Ergebnis')+'</label><div class="row"><input class="inp'+(c.pre!=null?' fixin':'')+'" id="ans" value="'+esc(n.typed||c.pre||'')+'" placeholder="'+ph(cardAns(c)[0])+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"><button class="btn pri" data-act="check">'+(c.pre!=null?'Absenden':'Prüfen')+'</button></div>'+(n.err?'<p class="fb no">'+esc(n.err)+'</p>':'')+'</div>';
+    if(chk)h2+='<div class="stack" style="padding:0;gap:8px"><label class="lab2" for="ans">'+(c.pre!=null?'Verbessere direkt im Feld':'Dein Ergebnis')+'</label>'+(c.pre!=null?'<div class="fixcol"><textarea class="inp fixin" id="ans" rows="1" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">'+esc(n.typed||c.pre||'')+'</textarea><button class="btn pri" data-act="check">Absenden</button></div>':'<div class="row"><input class="inp" id="ans" value="'+esc(n.typed||'')+'" placeholder="'+ph(cardAns(c)[0])+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"><button class="btn pri" data-act="check">Prüfen</button></div>')+''+(n.err?'<p class="fb no">'+esc(n.err)+'</p>':'')+'</div>';
     h2+=(c.opts||c.match||c.trace?'':'<button class="btn'+(chk?' ghost':' pri big')+'" data-act="reveal">'+(chk?'Ich komme nicht drauf, Lösung zeigen':'Antwort zeigen')+'</button>');
   }else{
     var vd=n.verdict;
     if(vd==='ok')h2+='<div class="verdict ok">Richtig: '+rt(c.a)+(n.accentNote?' Achte noch auf die Schreibweise: '+esc(n.accentNote):'')+'</div>';
-    else if(vd==='no'){var mine=n.typed||(n.opts&&n.chosen!=null&&n.opts[n.chosen]?n.opts[n.chosen].t:'');h2+='<div class="verdict no">Nicht ganz. Deine Antwort: '+(mine?rt(mine):'–')+'</div><div class="verdict ok" style="margin-top:6px">Richtig ist: '+rt(c.a)+'</div>'}
+    else if(vd==='no'){var mine=n.typed||(n.opts&&n.chosen!=null&&n.opts[n.chosen]?n.opts[n.chosen].t:'');if(c.pre!=null||c.cs){var dfp=diffPair(mine,c.a),same=plainT(mine).trim()===plainT(c.pre==null?'':c.pre).trim();h2+='<div class="verdict no">'+(same?'Du hast nichts verändert. Hier steckt ein Fehler.':'Nicht ganz.')+'<div class="dfl2"><span class="dfk">Deine Antwort</span><span class="dft">'+dfp.m+'</span></div></div><div class="verdict ok" style="margin-top:6px"><div class="dfl2"><span class="dfk">Richtig ist</span><span class="dft">'+dfp.r+'</span></div></div>'}else h2+='<div class="verdict no">Nicht ganz. Deine Antwort: '+(mine?rt(mine):'–')+'</div><div class="verdict ok" style="margin-top:6px">Richtig ist: '+rt(c.a)+'</div>'}
+    else if(vd==='near'&&(c.pre!=null||c.cs)){var dn=diffPair(n.typed||'',c.a);h2+='<div class="verdict no">Fast! Schau dir die markierten Stellen an.<div class="dfl2"><span class="dfk">Deine Antwort</span><span class="dft">'+dn.m+'</span></div></div><div class="verdict ok" style="margin-top:6px"><div class="dfl2"><span class="dfk">Richtig ist</span><span class="dft">'+dn.r+'</span></div></div>'}
     else if(vd==='near')h2+='<div class="verdict near">Dein Satz weicht von der Lösung ab. Vergleiche selbst, ob er trotzdem stimmt.</div>';
     if(c.why)h2+='<div class="why">'+rt(c.why)+'</div>';
     h2+=(vd==='no'||vd==='ok'?'':'<p class="fa" style="align-self:flex-start">'+rt(c.a)+'</p>')+(c.steps?'<div class="steps"><p class="lab2">Rechenweg in Schritten</p>'+vLines({items:c.steps,num:true})+'</div>':'')+(c.solvis?visuals(c.solvis):'');
@@ -233,7 +249,7 @@ function vExam(){
     var html='<div class="paperpage"><p class="ptitle">Prüfung · '+esc(t.title)+'</p><div class="sheet"><div class="shead"><span>Name: <b>'+esc(n.pname||'')+'</b></span><span>Datum: <b>'+ds+'</b></span></div>'+(t.id.indexOf('bruch')>=0?'<p class="sub" style="margin:0 0 4px">Alle Brüche so weit wie möglich kürzen.</p>':'')+'<ol class="mq">';
     qs.forEach(function(q,i){
       var key='e:'+t.id+':'+q.id,pd=padHTML(key,q.q);
-      html+='<li><div class="mqt"><span class="nc">'+(i+1)+'</span>'+qBlock(q)+'</div>'+visuals(q.visuals)+(q.type==='mc'?'<div class="mcopts">'+q.options.map(function(o,j){return '<label class="mco"><input type="radio" name="r-'+q.id+'" data-q="'+q.id+'" value="'+j+'"'+(n.answers[q.id]===j?' checked':'')+'><span class="mcl">'+String.fromCharCode(65+j)+'</span><span>'+rt(o)+'</span></label>'}).join('')+'</div>':'<input class="pin" id="in-'+q.id+'" data-q="'+q.id+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" value="'+esc(n.answers[q.id]||q.pre||'')+'"><div class="tools">'+pd.btn+'</div>'+pd.box)+'</li>';
+      html+='<li><div class="mqt"><span class="nc">'+(i+1)+'</span>'+qBlock(q)+'</div>'+visuals(q.visuals)+(q.type==='mc'?'<div class="mcopts">'+q.options.map(function(o,j){return '<label class="mco"><input type="radio" name="r-'+q.id+'" data-q="'+q.id+'" value="'+j+'"'+(n.answers[q.id]===j?' checked':'')+'><span class="mcl">'+String.fromCharCode(65+j)+'</span><span>'+rt(o)+'</span></label>'}).join('')+'</div>':(q.pre!=null?'<textarea class="pin fixin" id="in-'+q.id+'" data-q="'+q.id+'" rows="1" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">'+esc(n.answers[q.id]||q.pre||'')+'</textarea>':'<input class="pin" id="in-'+q.id+'" data-q="'+q.id+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" value="'+esc(n.answers[q.id]||'')+'">')+'<div class="tools">'+pd.btn+'</div>'+pd.box)+'</li>';
     });
     html+='</ol></div>';
     return html+'<button class="btn pri big" data-act="finish">Abgeben</button></div>';
@@ -245,6 +261,7 @@ function vExam(){
   var rowAns=function(it,i){
     var L=function(j){return String.fromCharCode(65+j)+') '},ans=it.q.type==='mc'?L(it.q.answer)+it.q.options[it.q.answer]:it.q.answer[0],given=it.q.type==='mc'?(it.g==null?'':L(it.g)+it.q.options[it.g]):(it.g||'');
     var tilt=((i*37)%7)-3;
+    if(it.q.pre!=null&&!it.ok){var dq=diffPair(given||it.q.pre,ans);return '<div class="pin cl"><span class="hw dfres">'+dq.m+'</span><span class="hw red dfres">'+dq.r+'</span><span class="mkw" style="transform:rotate('+tilt+'deg)">'+XX+'</span></div>'}
     return '<div class="pin cl">'+(given?'<span class="hw'+(it.ok?'':' strike')+'">'+esc(given)+'</span>':'')+(it.ok?'':'<span class="hw red">'+rt(ans)+'</span>')+'<span class="mkw" style="transform:rotate('+tilt+'deg)">'+(it.ok?TK:XX)+'</span></div>';
   };
   if(isLangT(t)){

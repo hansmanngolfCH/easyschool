@@ -2,7 +2,7 @@ import sys,json,importlib
 sys.path.insert(0,'.')
 from core import Topic
 import k1w
-mods=['k1','k1b','k2','k2b','k3','k4','k5','k5b','k6','k7']
+mods=['k1','k1b','k2','k2b','k3','k4','k5','k5b','k6','k7','k7b']
 THEORY={}
 for tm in ['th_k1','th_k2','th_k3','th_k4','th_k5','th_k6']:
     try:THEORY.update(importlib.import_module(tm).T_())

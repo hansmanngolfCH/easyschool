@@ -1,7 +1,7 @@
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION="v4.76";
+var APP_VERSION="v4.77";
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -182,6 +182,7 @@ function norm(s){return String(s).toLowerCase().replace(/[’‘`´]/g,"'").repl
 function plain(s){return s.normalize('NFD').replace(/[̀-ͯ]/g,'')}
 function loose(s){return plain(norm(s)).replace(/[,;:!?"]/g,'').replace(/\s+/g,' ')}
 function checkAns(inp,answers){
+  if(answers.length&&answers.every(function(x){return /^[\u2212\-]?[\d'.,]+$/.test(String(x).trim())}))inp=String(inp||'').replace(/\s*(cm²|cm³|m²|m³|cm|mm|km|kg|ml|dl|cl|fr\.?|rp\.?|°c|°|%|g|l|m|t)\s*$/i,'');
   var n=norm(inp||'');if(!n)return {ok:false,empty:true};
   for(var i=0;i<answers.length;i++){if(norm(answers[i])===n)return {ok:true}}
   for(var j=0;j<answers.length;j++){if(plain(norm(answers[j]))===plain(n))return {ok:true,accent:answers[j]}}

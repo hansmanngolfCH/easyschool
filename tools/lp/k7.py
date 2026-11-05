@@ -190,7 +190,10 @@ def pz():
     def dz_(r):
         a,b=r.choice([('0,3','30'),('0,45','45'),('0,6','60'),('0,08','8'),('0,15','15'),('0,9','90')])
         return F(1,'%s als Prozent: wie viel %%?'%a,b+' %',[x+' %' for x in['3','30','300','0,3','45','6','60'] if x!=b][:3],'Multipliziere mit 100.',[[b+' %','Prozent']],[b,b+' %',b+'%'])
-    return [w,pr,gr,rb,au,br,dz_,w,pr,rb,gr]
+    def mw(r):
+        G=r.choice([50,100,150,200,250,300,400,500,750,1000]);q=r.choice([2,4,8]);M=G*q//100
+        return F(3,'Ein Artikel kostet %d Fr. ohne Mehrwertsteuer. Die Mehrwertsteuer beträgt in dieser Aufgabe %d %%. Wie viel kostet er mit Mehrwertsteuer?'%(G,q),G+M,[M,G-M,G+2*M],'Rechne zuerst die Steuer aus.',[['%d %% von %d = %d'%(q,G,M),'Mehrwertsteuer'],['%d + %d = %d'%(G,M,G+M),'Preis mit Steuer']],[str(G+M)])
+    return [w,pr,gr,rb,au,br,dz_,mw,w,pr,rb,gr]
 def t_pz():
     t=make('kl7-mathe-prozent','kl7','Prozent und Verhältnisse','Prozentrechnen',704,pz(),('Prozent','Prozent heisst „von hundert“. 1 % ist der hundertste Teil.',[['50 %','= 1/2']]))
     TH(t,'Im Laden steht: 25 % Rabatt auf einen Pulli für 80 Fr. Wie viel sparst du? Dafür rechnest du mit Prozent.',
@@ -497,14 +500,18 @@ def ko():
         a,b,c=r.randint(2,6),r.randint(2,6),r.randint(2,6);k=r.randint(2,4);return F(3,'Ein Quader %d cm × %d cm × %d cm wird mit einem Würfel der Kantenlänge %d cm verbunden. Wie gross ist das Gesamtvolumen in cm³?'%(a,b,c,k),a*b*c+k**3,[a*b*c,k**3,a*b*c*k**3],'Rechne beide Körper einzeln und addiere.',[['%d · %d · %d = %d'%(a,b,c,a*b*c),'Quader'],['%d · %d · %d = %d'%(k,k,k,k**3),'Würfel'],['%d + %d = %d'%(a*b*c,k**3,a*b*c+k**3),'zusammen']],[str(a*b*c+k**3)])
     def lt(r):
         V=r.choice([1000,2500,4000,500,2000]);return F(1,'Ein Behälter fasst %d cm³. Wie viele Milliliter sind das?'%V,V,[V//10,V*10,V//100],'1 cm³ ist 1 ml.',[['%d cm³ = %d ml'%(V,V),'Umrechnen']],[str(V)])
-    return [zy,py,ke,mz,hz,zs,lt,zy,py,ke,hz]
+    def kv(r):
+        rr=r.choice([3,6,9,12]);V=4*PI*rr**3/3;return F(3,'Eine Kugel hat den Radius %d cm. Wie gross ist das Volumen in cm³? (π ≈ 3,14)'%rr,dc(V),[dc(V*3/4),dc(V*3),dc(PI*rr**3)],'V = 4 · π · r · r · r : 3.',[['%d · %d · %d = %d'%(rr,rr,rr,rr**3),'r hoch 3'],['4 · 3,14 · %d : 3 = %s'%(rr**3,dc(V)),'Volumen']],dz(V))
+    def ko_(r):
+        rr=r.choice([2,5,10,20]);O=4*PI*rr*rr;return F(3,'Eine Kugel hat den Radius %d cm. Wie gross ist die Oberfläche in cm²? (π ≈ 3,14)'%rr,dc(O),[dc(O/4),dc(O/2),dc(PI*rr*rr)],'O = 4 · π · r · r.',[['%d · %d = %d'%(rr,rr,rr*rr),'r · r'],['4 · 3,14 · %d = %s'%(rr*rr,dc(O)),'Oberfläche']],dz(O))
+    return [zy,py,ke,mz,hz,zs,lt,kv,ko_,zy,py,ke,hz]
 def t_ko():
-    t=make('kl9-mathe-koerper','kl9','Geometrie','Zylinder, Pyramide und Kegel',903,ko(),('Körper','Zylinder: V = r · r · π · h. Pyramide und Kegel: V = Grundfläche · Höhe : 3.',[['Pyramide','G · h : 3']]),ncards=34)
+    t=make('kl9-mathe-koerper','kl9','Geometrie','Zylinder, Pyramide, Kegel und Kugel',903,ko(),('Körper','Zylinder: V = r · r · π · h. Pyramide und Kegel: V = G · h : 3. Kugel: V = 4 · π · r³ : 3.',[['Pyramide','G · h : 3']]),ncards=34)
     TH(t,'Eine Konservendose ist ein Zylinder. Wie viel passt hinein? Dafür rechnest du das Volumen. Auch Pyramiden und Kegel kannst du so berechnen.',
        'Die Dose hat r = 5 cm.','Höhe 10 cm: 785 cm³.',
-       [['Zylinder','Kreis als Grundfläche','Dose'],['Pyramide','Spitze über der Grundfläche','Zelt'],['Kegel','Kreis mit Spitze','Eistüte'],['Volumen','Wie viel hineinpasst','in cm³']],
+       [['Kugel','Alle Punkte gleich weit von der Mitte','Ball'],['Zylinder','Kreis als Grundfläche','Dose'],['Pyramide','Spitze über der Grundfläche','Zelt'],['Kegel','Kreis mit Spitze','Eistüte'],['Volumen','Wie viel hineinpasst','in cm³']],
        'Ein Kegel hat genau ein Drittel des Volumens eines Zylinders gleicher Grösse.',[CH([['Zylinder','G · h',0],['÷','',2],['3','',2],['=','',2],['Kegel','',1]])],
-       [['Zylinder','V = G · h'],['Pyramide','V = G · h : 3'],['Kegel','V = G · h : 3']],
+       [['Zylinder','V = G · h'],['Pyramide','V = G · h : 3'],['Kegel','V = G · h : 3'],['Kugel','V = 4 · π · r³ : 3']],
        'So berechnest du ein Volumen.',[['Körper erkennen','Zylinder, Pyramide oder Kegel?',0],['Grundfläche berechnen','Kreis oder Quadrat',1],['Mal Höhe nehmen','G · h',2],['Bei Spitze durch 3','Pyramide und Kegel',3]],
        [[['5 · 5 · 3,14','',0],['=','',2],['78,5','G',1],['·','',2],['10','h',2],['=','',2],['785','V',7]],[['4 · 4','',0],['=','',2],['16','G',1],['·','',2],['6 : 3','',2],['=','',2],['32','V',7]]],
        'Merke diese Regeln.',[['Zylinder','V = r · r · π · h','5 · 5 · 3,14 · 10',0],['Spitze','Durch 3 teilen','Pyramide, Kegel',1],['Liter','1 cm³ = 1 ml','1000 cm³ = 1 l',2]])
