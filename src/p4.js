@@ -15,7 +15,7 @@ function diffPair(mine,right){
 function fixGrow(el){if(!el)return;el.style.height='auto';el.style.height=(el.scrollHeight+2)+'px'}
 
 /* ---------- Üben ---------- */
-function mqFix(s){return String(s).replace(/((?:^|[\s=(])[-−]?[\d?❓xyz][\w,²³%°\/?]*)\.\s+(?!Schritt|Klasse|Platz|Rang|Stelle|Teil)(?=[A-ZÄÖÜ])/g,'$1<br>')}
+function mqFix(s){return String(s).replace(/(^|[\s(=+\-−·×:\/])_(?=[\s)=+\-−·×:\/.,]|$)/g,'$1<span class="gap">_</span>').replace(/((?:^|[\s=(])[-−]?[\d?❓xyz][\w,²³%°\/?]*)\.\s+(?!Schritt|Klasse|Platz|Rang|Stelle|Teil)(?=[A-ZÄÖÜ])/g,'$1<br>')}
 function qHtml(q){
   if(q.indexOf('\n')<0)return '<p class="fq">'+mqFix(rt(q))+'</p>';
   var ls=q.split('\n'),sent=ls[0],rest=ls.slice(1).join(' '),m=/«([^»]+)»/.exec(rest),h='',i=m?sent.toLowerCase().indexOf(m[1].toLowerCase()):-1;

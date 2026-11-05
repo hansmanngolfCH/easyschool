@@ -1746,6 +1746,7 @@ ins.dfy{text-decoration:none;color:#0d652d;background:rgba(52,168,83,.22);border
 .tb4.m-x::after{width:45%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.38),transparent);animation:xshine 4.5s ease-in-out infinite}
 .xg-msg{line-height:1.3;padding:0 4px}
 .xg-calc{font-size:1.1rem;line-height:34px;margin-right:auto}
+.gap{color:#c5cad3;font-weight:400}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1753,7 +1754,7 @@ ins.dfy{text-decoration:none;color:#0d652d;background:rgba(52,168,83,.22);border
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION="v5.18";
+var APP_VERSION="v5.19";
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -3122,7 +3123,7 @@ function diffPair(mine,right){
 function fixGrow(el){if(!el)return;el.style.height='auto';el.style.height=(el.scrollHeight+2)+'px'}
 
 /* ---------- Üben ---------- */
-function mqFix(s){return String(s).replace(/((?:^|[\s=(])[-−]?[\d?❓xyz][\w,²³%°\/?]*)\.\s+(?!Schritt|Klasse|Platz|Rang|Stelle|Teil)(?=[A-ZÄÖÜ])/g,'$1<br>')}
+function mqFix(s){return String(s).replace(/(^|[\s(=+\-−·×:\/])_(?=[\s)=+\-−·×:\/.,]|$)/g,'$1<span class="gap">_</span>').replace(/((?:^|[\s=(])[-−]?[\d?❓xyz][\w,²³%°\/?]*)\.\s+(?!Schritt|Klasse|Platz|Rang|Stelle|Teil)(?=[A-ZÄÖÜ])/g,'$1<br>')}
 function qHtml(q){
   if(q.indexOf('\n')<0)return '<p class="fq">'+mqFix(rt(q))+'</p>';
   var ls=q.split('\n'),sent=ls[0],rest=ls.slice(1).join(' '),m=/«([^»]+)»/.exec(rest),h='',i=m?sent.toLowerCase().indexOf(m[1].toLowerCase()):-1;
