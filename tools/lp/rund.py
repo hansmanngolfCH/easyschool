@@ -14,7 +14,7 @@ if bad:sys.exit(1)
 ids={t['id'] for t in out}
 import de_more
 for i,t in enumerate(c['topics']):
-    if t['subject']=='deu' and t['id'] not in ids and not t.get('ext') and t['id'].startswith('kl8-deu-') and de_more.fam(type('X',(),{'t':t})) in de_more.FAMS:
+    if t['subject']=='deu' and t['id'] not in ids and not t.get('ext2') and t['id'].startswith('kl8-deu-') and de_more.fam(type('X',(),{'t':t})) in de_more.FAMS:
         nt,n=de_more.extend_json(t);pr=[]
         c['topics'][i]=nt;out.append(nt) if False else None;print('JSON',t['id'],'+',n)
 c['topics']=[t for t in c['topics'] if t['id'] not in ids]+out

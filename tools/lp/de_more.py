@@ -27,12 +27,14 @@ def A(g,case='nom',defn=True):
     return {'nom':{'m':'ein','f':'eine','n':'ein'},'akk':{'m':'einen','f':'eine','n':'ein'},'dat':{'m':'einem','f':'einer','n':'einem'},'gen':{'m':'eines','f':'einer','n':'eines'}}[case][g]
 def adjend(g,case):
     return 'e' if (case=='nom' or (case=='akk' and g!='m')) else 'en'
+def AD(a,e):
+    return a+e[1:] if a.endswith('e') and e.startswith('e') else a+e
 def NP(n,case='nom',adj=None,defn=True,cap=False):
     sg,pl,g,gen,_=n
     noun=gen if case=='gen' and g!='f' else sg
     if case=='dat' and False:noun=sg
     parts=[A(g,case,defn)]
-    if adj:parts.append(adj+(adjend(g,case) if defn else {'m':'er','f':'e','n':'es'}[g] if case=='nom' else adjend(g,case)))
+    if adj:parts.append(AD(adj,(adjend(g,case) if defn else {'m':'er','f':'e','n':'es'}[g] if case=='nom' else adjend(g,case))))
     parts.append(noun)
     s=' '.join(parts)
     return s[0].upper()+s[1:] if cap else s
@@ -40,7 +42,7 @@ def NPtok(n,case='nom',adj=None,cap=False):
     sg,pl,g,gen,_=n
     noun=gen if case=='gen' and g!='f' else sg
     t=[(A(g,case),'Artikel')]
-    if adj:t.append((adj+adjend(g,case),'Adjektiv'))
+    if adj:t.append((AD(adj,adjend(g,case)),'Adjektiv'))
     t.append((noun,'Nomen'))
     if cap:t[0]=(t[0][0].capitalize(),t[0][1])
     return t
@@ -491,12 +493,12 @@ def f_hn_all(t,r):
     for a,cj,b,art in r.sample(NS,len(NS)):
         w=b.split()
         if len(w)>=2:
-            bad='%s %s %s %s'%(cj,w[0],w[-1],' '.join(w[1:-1])) if len(w)>2 else '%s %s %s'%(cj,w[-1],w[0])
+            bad='%s %s %s'%(cj,w[-1],' '.join(w[:-1]))
             t.fix(2,'Im Nebensatz steht das Verb am Ende. Verbessere im Feld.','%s, %s.'%(a,bad.strip()),'%s, %s %s.'%(a,cj,b),'Im Nebensatz steht das Verb ganz hinten.')
 def f_na_all(t,r):
     f_nebenarten(t,r)
     ALT={'Kausalsatz':('obwohl','weil','Der Nebensatz soll einen Grund nennen.'),'Konzessivsatz':('weil','obwohl','Der Nebensatz soll einen Gegengrund nennen.'),'Finalsatz':('weil','damit','Der Nebensatz soll einen Zweck nennen.'),'Konditionalsatz':('weil','wenn','Der Nebensatz soll eine Bedingung nennen.')}
-    for a,cj,b,art in r.sample(NS,len(NS)):
+    for a,cj,b,art in r.sample(NS0,len(NS0)):
         if art in ALT and cj==ALT[art][1]:
             bad,ok,q=ALT[art];t.fix(2,q+' Verbessere die Konjunktion im Feld.','%s, %s %s.'%(a,bad,b),'%s, %s %s.'%(a,ok,b),'Das Einleitewort verrät die Art des Nebensatzes.')
 def f_pro_all(t,r):
@@ -526,6 +528,7 @@ def extend(t):
         ex={(q['q'],q['options'][q['answer']] if q['type']=='mc' else q['answer'][0]) for q in t.qs}
         t.cards=[c for c in t.cards if (c['q'],c['a']) not in ex]
         for i,c in enumerate(t.cards):c['id']='c%d'%(i+1)
+        boost(t,r)
         return len(t.cards)-before
     return 0
 
@@ -537,5 +540,209 @@ def extend_json(tp):
     for c in t.cards:
         t.seen.add('x'+c['q']+str(c.get('pre'))+c['a'])
         if 'opts' in c and not c.get('multi'):t.sig.add(c['q']+'|'.join(sorted(c['opts'])))
-    n=extend(t)
-    out=t.build();out['ext']=1;return out,n
+    n=extend(t) if not tp.get('ext') else (boost(t,rr(t)) or 0)
+    out=t.build();out['ext']=1;out['ext2']=1;return out,n
+
+# ===================================================== v4.83: 50 % Korrekturkarten ab Klasse 4
+WEAK=[('spielen','spiel'),('lachen','lach'),('arbeiten','arbeit'),('warten','wart'),('tanzen','tanz'),('wohnen','wohn'),('malen','mal'),('kaufen','kauf'),('hören','hör'),('lernen','lern'),
+('putzen','putz'),('baden','bad'),('machen','mach'),('suchen','such'),('zeigen','zeig'),('rechnen','rechn'),('fragen','frag'),('kochen','koch'),('zählen','zähl'),('tragen_','')]
+WEAK=[w for w in WEAK if w[1]]
+def conj(stem,p):
+    sib=stem[-1] in 'szx'
+    et=stem[-1] in 'td' or stem.endswith(('chn','gn','ffn'))
+    return {'ich':stem+'e','du':stem+('t' if sib else 'est' if et else 'st'),'er':stem+('et' if et else 't'),'wir':stem+'en','ihr':stem+('et' if et else 't'),'sie':stem+'en'}[p]
+SUBJ=[('Ich','ich'),('Du','du'),('Er','er'),('Sie','er'),('Wir','wir'),('Ihr','ihr'),('Die Kinder','sie'),('Mein Freund','er'),('Meine Schwester','er'),('Die Katzen','sie'),('Anna und Tom','sie')]
+def g_agree(r,k):
+    inf,stem=r.choice(WEAK);sj,p=r.choice(SUBJ);bad=r.choice([x for x in('ich','du','er','wir','ihr','sie') if conj(stem,x)!=conj(stem,p)])
+    adv=r.choice(['heute','gern','im Garten','jeden Tag','am Nachmittag','zusammen'])
+    return (2,'Das Verb passt nicht zum Subjekt. Verbessere im Feld.','%s %s %s.'%(sj,conj(stem,bad),adv),'%s %s %s.'%(sj,conj(stem,p),adv),'Das Verb richtet sich nach dem Subjekt.')
+def g_cap(r,k):
+    tok=sent_gen(r,('i','t','l'));a=text(tok);b=lowernouns(tok)
+    return (2,'Schreibe richtig: Gross oder klein? Verbessere im Feld.',b,a,'Satzanfang und Nomen schreibt man gross.') if a!=b else None
+def g_adj(r,k):
+    nn=r.choice(NOUNS);ad=r.choice(ADJ);c=r.choice(['nom','akk'])
+    good=NP(nn,c,ad,cap=(c=='nom'));bad=A(nn[2],c)+' '+ad+' '+(nn[0]);bad=bad[0].upper()+bad[1:] if c=='nom' else bad
+    if c=='nom':return (2,'Die Endung des Adjektivs fehlt. Verbessere im Feld.','%s steht dort.'%bad,'%s steht dort.'%good,'Das Adjektiv passt sich an: der kleine, die kleine, das kleine.')
+    return (3,'Die Endung des Adjektivs fehlt. Verbessere im Feld.','Ich sehe %s.'%bad,'Ich sehe %s.'%good,'Nach «den» endet das Adjektiv auf -en, nach «die» und «das» auf -e.')
+def g_pron(r,k):
+    nn=r.choice(pool('person')+pool('tier')+pool('ding'));g=nn[2];ans={'m':'Er','f':'Sie','n':'Es'}[g];bad=r.choice([x for x in('Er','Sie','Es') if x!=ans])
+    v=r.choice(['steht dort','ist neu','ist schön','liegt hier']) if nn[4]=='ding' else r.choice(['schläft','lacht','spielt','wartet'])
+    return (2,'Ersetze das Nomen durch das richtige Pronomen. Verbessere im Feld.','%s %s. %s ist da.'%(NP(nn,'nom',cap=True),v,bad),'%s %s. %s ist da.'%(NP(nn,'nom',cap=True),v,ans),'Der: er. Die: sie. Das: es.')
+def g_tense(r,k):
+    v=r.choice(VERBS);nm=r.choice(NAMES)[0];inf,pr,pt,pp,aux,st=v;x=r.random()
+    wa='hat' if aux=='ist' else 'ist'
+    if x<.3:return (2,'Setze die richtige Hilfsform ein (hat oder ist). Verbessere im Feld.','%s %s gestern %s.'%(nm,wa,pp),'%s %s gestern %s.'%(nm,aux,pp),'Bewegung und Zustandsänderung: ist. Sonst: hat.')
+    if x<.5:return (2,'Schreibe im Präteritum. Verbessere im Feld.','%s %s gestern.'%(nm,pr),'%s %s gestern.'%(nm,pt),'Präteritum: erzählte Vergangenheit.')
+    if x<.7:return (3,'Schreibe im Plusquamperfekt. Verbessere im Feld.','%s %s vorher %s.'%(nm,'hatte' if aux=='ist' else 'war',pp),'%s %s vorher %s.'%(nm,'war' if aux=='ist' else 'hatte',pp),'Plusquamperfekt: hatte/war + Partizip II.')
+    if x<.85:return (2,'Schreibe im Perfekt. Verbessere im Feld.','%s %s gestern.'%(nm,pt),'%s %s gestern %s.'%(nm,aux,pp),'Perfekt: hat/ist + Partizip II.')
+    return (2,'Schreibe im Futur. Verbessere im Feld.','%s %s morgen.'%(nm,pr),'%s wird morgen %s.'%(nm,inf),'Futur: wird + Grundform.')
+def g_cl(r,k):
+    ok,nc,cb,fr,it,cj=listsent(r,k);bad=r.choice([nc,cb]);return (2,'Setze die Kommas richtig. Verbessere im Feld.',bad,ok,'Zwischen den Aufzählungen steht ein Komma, vor «und» und «oder» keins.')
+def g_chs(r,k):
+    a,cj,b=r.choice(HS);return (2,'Setze das Komma. Verbessere im Feld.','%s %s %s.'%(a,cj,b),'%s, %s %s.'%(a,cj,b),'Vor «%s» steht bei zwei Hauptsätzen ein Komma.'%cj)
+def g_cns(r,k):
+    a,cj,b,_=r.choice(NSALL);return (2,'Setze das Komma. Verbessere im Feld.','%s %s %s.'%(a,cj,b),'%s, %s %s.'%(a,cj,b),'Vor dem Nebensatz steht ein Komma.')
+def g_crel(r,k):
+    h,rel,rest=r.choice(RELALL);return (3,'Setze die Kommas. Verbessere im Feld.','%s %s %s.'%(h,rel,rest),'%s, %s, %s.'%(h,rel,rest),'Der Relativsatz wird von Kommas eingeschlossen.')
+def g_nsord(r,k):
+    a,cj,b,_=r.choice(NSALL);w=b.split()
+    if len(w)<2:return None
+    bad='%s %s %s'%(cj,w[-1],' '.join(w[:-1]));return (2,'Im Nebensatz steht das Verb am Ende. Verbessere im Feld.','%s, %s.'%(a,bad.replace('  ',' ').strip()),'%s, %s %s.'%(a,cj,b),'Im Nebensatz steht das Verb ganz hinten.')
+def g_nsconj(r,k):
+    ALT={'Kausalsatz':('obwohl','weil','Der Nebensatz soll einen Grund nennen.'),'Konzessivsatz':('weil','obwohl','Der Nebensatz soll einen Gegengrund nennen.'),'Finalsatz':('weil','damit','Der Nebensatz soll einen Zweck nennen.'),'Konditionalsatz':('weil','wenn','Der Nebensatz soll eine Bedingung nennen.')}
+    a,cj,b,art=r.choice(NS)
+    if art in ALT and cj==ALT[art][1]:
+        bad,ok,q=ALT[art];return (2,q+' Verbessere die Konjunktion im Feld.','%s, %s %s.'%(a,bad,b),'%s, %s %s.'%(a,ok,b),'Das Einleitewort verrät die Art des Nebensatzes.')
+def g_case(r,k):
+    nn=r.choice(NOUNS);cs=r.choice(['akk','dat']);fr={'akk':['Ich sehe %s.','Wir besuchen %s.','Sie geht durch %s.','Er kauft %s für uns.'],'dat':['Ich helfe %s.','Sie dankt %s.','Wir gehen mit %s.','Er spricht mit %s.']}
+    if nn[4]=='ding' and cs=='dat':fr['dat']=['Wir gehen mit %s.','Sie sitzt bei %s.','Ich komme von %s.']
+    if nn[4]!='ding' and cs=='akk':fr['akk']=['Ich sehe %s.','Wir besuchen %s.']
+    f=r.choice(fr[cs]);ad=r.choice(ADJ) if r.random()<.35 else None
+    good=f%NP(nn,cs,ad)
+    wr={'akk':{'m':'dem','f':'der','n':'dem'},'dat':{'m':'den','f':'die','n':'das'}}[cs][nn[2]]
+    right=A(nn[2],cs)
+    bad=good.replace(right+' ',wr+' ',1)
+    return (3,'Der Artikel ist falsch. Verbessere im Feld.',bad,good,'Frage: %s'%('Wen oder was?' if cs=='akk' else 'Wem?')) if bad!=good else None
+def g_gen(r,k):
+    nn=r.choice([n for n in NOUNS if n[4] in('person','tier')])
+    good='Das ist das Fahrrad %s.'%NP(nn,'gen');bad='Das ist das Fahrrad %s.'%NP(nn,'nom')
+    return (3,'Setze in den Genitiv (wessen?). Verbessere im Feld.',bad,good,'Frage: Wessen Fahrrad?') if bad!=good else None
+def g_plur(r,k):
+    nn=r.choice(NOUNS)
+    if nn[0]==nn[1]:return None
+    fr=r.choice(['Ich sehe {} {}.','Auf dem Bild sind {} {}.','Dort stehen {} {}.','Im Zimmer sind {} {}.']);num=r.choice(['zwei','drei','vier','viele','fünf'])
+    return (2,'Nach «%s» steht die Mehrzahl. Verbessere im Feld.'%num,fr.format(num,nn[0]),fr.format(num,nn[1]),'Die Mehrzahl hat oft eine andere Endung oder einen Umlaut.')
+def g_punct(r,k):
+    x=r.random()
+    if x<.4:tok=sent_gen(r,('i','t','l'));a=text(tok);return (1,'Setze das richtige Satzzeichen ans Ende. Verbessere im Feld.',a[:-1],a,'Eine Aussage endet mit einem Punkt.')
+    if x<.75:
+        q=r.choice(SATZ_Q);nm=r.choice(NAMES)[0];nn=r.choice(NOUNS);s=q.format(n=nm,a=A(nn[2],'akk',False),x=nn[0]) if '{a}' in q else q.format(n=nm);return (1,'Setze das richtige Satzzeichen ans Ende. Verbessere im Feld.',s[:-1],s,'Eine Frage endet mit einem Fragezeichen.')
+    s=r.choice(SATZ_E);return (1,'Setze das richtige Satzzeichen ans Ende. Verbessere im Feld.',s[:-1]+'.',s,'Ein Ausruf oder Befehl endet mit einem Ausrufezeichen.')
+def g_alpha(r,k):
+    ws=r.sample([x[0] for x in NOUNS if x[0][0] not in 'ÄÖÜ'],4) if r.random()<.5 else r.sample(r.choice(ABC_POOLS),4)
+    so=sorted(ws,key=_k)
+    return (2,'Ordne die Wörter nach dem Alphabet. Verbessere im Feld.',', '.join(ws),', '.join(so),'Vergleiche Buchstabe für Buchstabe.') if ws!=so else None
+def g_langv(r,k):
+    c=r.choice(list(LANGV));w,wr=r.choice(LANGV[c]);fr=r.choice(['Wir üben das Wort «{}».','Ich schreibe das Wort «{}» richtig.','Das Wort «{}» ist nicht leicht.','Wie schreibt man «{}»?'])
+    return (2,'Verbessere direkt im Feld.',fr.format(wr),fr.format(w),'Regel: '+c+'.')
+def g_pas(r,k):
+    akt,pas,inf=r.choice(AKTALL);nop=pas.replace(' wird ',' ').replace(' werden ',' ')
+    if r.random()<.5 and nop!=pas:return (2,'Das Passiv braucht «werden». Verbessere im Feld.',nop,pas,'Passiv: werden + Partizip II.')
+    return (3,'Schreibe im Passiv. Verbessere im Feld.',akt,pas,'Der Gegenstand wird zum Subjekt: werden + Partizip II.')
+def g_konj(r,k):
+    d,ind,wr=r.choice(KONJALL)
+    if r.random()<.6:return (2,'Schreibe in der indirekten Rede. Verbessere im Feld.',wr,ind,'Konjunktiv I: sei, habe, gehe, komme …')
+    s,a,w=r.choice(KONJ2);return (3,'Setze die richtige Form ein. Verbessere im Feld.',s.replace('___',w[0]),s.replace('___',a),'Möglichkeit oder Wunsch: Konjunktiv II.')
+NOMF=['Beim {} vergeht die Zeit.','Das {} macht Spass.','Zum {} braucht man Zeit.','Ich freue mich auf das {}.','Vor dem {} putze ich die Zähne.' if False else 'Beim {} hilft er mit.']
+NOMV=['Lesen','Schwimmen','Kochen','Backen','Tanzen','Malen','Singen','Rennen','Spielen','Lernen','Basteln','Wandern','Turnen','Zeichnen','Aufräumen']
+def g_nom(r,k):
+    v=r.choice(NOMV);f=r.choice(NOMF);return (2,'Schreibe richtig: Gross oder klein? Verbessere im Feld.',f.format(v.lower()),f.format(v),'Nach «beim», «zum», «das» wird das Verb zum Nomen: gross.')
+def g_subjpl(r,k):
+    nn=r.choice([n for n in NOUNS if n[4] in('person','tier') and n[0]!=n[1]]);inf,stem=r.choice(WEAK);adv=r.choice(['im Garten','gern','heute','laut'])
+    return (3,'Setze das Subjekt in die Mehrzahl. Verbessere im Feld.','%s %s %s.'%(NP(nn,'nom',cap=True),conj(stem,'er'),adv),'Die %s %s %s.'%(nn[1],conj(stem,'sie'),adv),'Auch das Verb ändert sich.')
+GEN={'agree':g_agree,'cap':g_cap,'adj':g_adj,'pron':g_pron,'tense':g_tense,'cl':g_cl,'chs':g_chs,'cns':g_cns,'crel':g_crel,'nsord':g_nsord,'nsconj':g_nsconj,'case':g_case,'gen':g_gen,'plur':g_plur,'punct':g_punct,'alpha':g_alpha,'langv':g_langv,'pas':g_pas,'konj':g_konj,'nom':g_nom,'subjpl':g_subjpl}
+FIXSET={'wortarten':['cap','adj','agree','pron'],'pronomen':['pron','agree','case'],'zeitformen':['tense','agree'],'plusquam':['tense'],'alphabet':['alpha'],'langvokal':['langv'],'stammformen':['tense'],
+'satzzeichen':['punct'],'komma':['cl','chs','cns'],'subjekt':['agree','subjpl','case','pron'],'satzglieder':['agree','subjpl','case','gen'],'hauptsaetze':['chs','cl'],'grossklein':['cap','nom'],'faelle':['case','gen','adj'],
+'passiv':['pas'],'konjunktiv':['konj'],'hauptneben':['nsord','cns','crel'],'nebensatzarten':['nsconj','cns'],'kommaerw':['cns','crel','nsord']}
+def boost(t,r):
+    f=fam(t)
+    if cls_of(t)<4 or f not in FIXSET:return 0
+    gens=[GEN[g] for g in FIXSET[f]];added=0
+    def nfix():return sum(1 for c in t.cards if 'pre' in c)
+    def need():return max(0,len(t.cards)-2*nfix())
+    tries=0
+    while need()>0 and tries<6000:
+        tries+=1;x=r.choice(gens)(r,cls_of(t))
+        if not x:continue
+        lvl,q,pre,a,h=x
+        if pre==a or any(c.get('pre')==pre or c['a']==a and 'pre' in c for c in t.cards):continue
+        if any(z.get('pre')==pre or z['answer'][0]==a for z in t.qs if 'answer' in z and z['type']=='input'):continue
+        d={"q":q,"a":a,"ans":[a],"pre":pre,"lvl":lvl,"th":'basis',"hints":[h]};t.cards.append(d);added+=1
+    for i,c in enumerate(t.cards):c['id']='c%d'%(i+1)
+    # Pruefung: 50 %
+    cardkeys={(c['q'],c['a']) for c in t.cards}
+    def nef():return sum(1 for z in t.qs if z.get('pre'))
+    tries=0
+    while len(t.qs)-2*nef()>0 and tries<6000:
+        tries+=1;x=r.choice(gens)(r,cls_of(t))
+        if not x:continue
+        lvl,q,pre,a,h=x
+        if pre==a or (q,a) in cardkeys or any(c.get('pre')==pre or c['a']==a for c in t.cards if 'pre' in c):continue
+        if any(z.get('pre')==pre or (z['type']=='input' and z['answer'][0]==a) for z in t.qs):continue
+        t.efix(q,pre,a,h)
+    return added
+
+# ===================================================== mehr Variation: generierte Satzmuster
+PP={'isst':'gegessen','liest':'gelesen','malt':'gemalt','kauft':'gekauft','baut':'gebaut','trägt':'getragen','sieht':'gesehen','fängt':'gefangen','wäscht':'gewaschen','öffnet':'geöffnet','putzt':'geputzt','zeichnet':'gezeichnet'}
+def _gen_pas(r):
+    v,sg,objs=r.choice([x for x in TRANS if 'person' in x[1] and x[0] in PP]);sn=r.choice(pool('person'));on=NB[r.choice(objs)]
+    if sn[0]==on[0]:return None
+    akt='%s %s %s.'%(NP(sn,'nom',cap=True),v,NP(on,'akk'))
+    ag=('vom ' if sn[2]!='f' else 'von der ')+sn[0]
+    pas='%s wird %s %s.'%(NP(on,'nom',cap=True),ag,PP[v]) if False else '%s wird %s %s.'%(NP(on,'nom',cap=True),ag,PP[v])
+    return akt,pas,v
+_r0=random.Random(77);_seen=set(a for a,_,_ in AKTPAS)
+for _ in range(400):
+    x=_gen_pas(_r0)
+    if x and x[0] not in _seen and len(AKTPAS)<70:_seen.add(x[0]);AKTPAS.append(x)
+def g_pas2(r,k):
+    x=_gen_pas(r)
+    if not x:return None
+    akt,pas,v=x;nop=pas.replace(' wird ',' ')
+    if r.random()<.5:return (2,'Das Passiv braucht «werden». Verbessere im Feld.',nop,pas,'Passiv: werden + Partizip II.')
+    return (3,'Schreibe im Passiv. Verbessere im Feld.',akt,pas,'Der Gegenstand wird zum Subjekt: werden + Partizip II.')
+KB=[('bin','sei','ist','müde'),('habe','habe','hat','Hunger'),('komme','komme','kommt','später'),('gehe','gehe','geht','nach Hause'),('kann','könne','kann','schwimmen'),('muss','müsse','muss','lernen'),('will','wolle','will','ein Eis'),
+('weiss','wisse','weiss','die Antwort'),('spiele','spiele','spielt','gern Fussball'),('lerne','lerne','lernt','jeden Tag'),('arbeite','arbeite','arbeitet','heute länger'),('fahre','fahre','fährt','mit dem Zug'),('lese','lese','liest','ein Buch'),('schlafe','schlafe','schläft','schon')]
+SAY=['sagt','meint','erzählt','berichtet','behauptet']
+def _gen_konj(r):
+    nm,g=r.choice(NAMES+[('Der Lehrer','m'),('Die Mutter','f'),('Der Trainer','m'),('Die Nachbarin','f')]);p='er' if g=='m' else 'sie';i,k1,ind,c=r.choice(KB);sy=r.choice(SAY)
+    if k1==ind:ind_form=ind
+    d='%s %s: «Ich %s %s.»'%(nm,sy,i,c);good='%s %s, %s %s %s.'%(nm,sy,p,k1,c);bad='%s %s, %s %s %s.'%(nm,sy,p,ind,c)
+    return d,good,bad
+_rk=random.Random(91);_sk=set(d for d,_,_ in KONJ)
+for _ in range(300):
+    d,g,b=_gen_konj(_rk)
+    if g!=b and d not in _sk and len(KONJ)<60:_sk.add(d);KONJ.append((d,g,b))
+def g_konj2(r,k):
+    d,g,b=_gen_konj(r)
+    return (2,'Schreibe in der indirekten Rede. Verbessere im Feld.',b,g,'Konjunktiv I: sei, habe, gehe, komme …') if g!=b else None
+# Nebensaetze generieren
+NS0=list(NS)
+_MP=['bleibt zu Hause','geht schwimmen','spielt draussen','lernt viel','macht einen Spaziergang','isst ein Eis','liest ein Buch','ruft die Oma an','geht früh ins Bett','räumt das Zimmer auf','fährt mit dem Velo','kauft ein Brot','holt den Ball','zieht eine Jacke an']
+_SB={'weil':('Kausalsatz',['es regnet','{p} müde ist','{p} Hunger hat','es kalt ist','morgen ein Test ist','{p} krank ist','{p} Zeit hat','es spät ist']),
+'wenn':('Konditionalsatz',['es regnet','die Sonne scheint','{p} Zeit hat','{p} Hunger hat','es warm ist','{p} fertig ist','es schneit']),
+'bevor':('Temporalsatz',['{p} isst','{p} das Haus verlässt','es dunkel wird']),'während':('Temporalsatz',['es regnet','{p} wartet','der Hund schläft']),
+'sobald':('Temporalsatz',['{p} fertig ist','die Schule aus ist','es aufhört zu regnen']),'bis':('Temporalsatz',['es dunkel wird','{p} müde ist','die Mutter kommt']),
+'nachdem':('Temporalsatz',['{p} gegessen hat','es geregnet hat','{p} gearbeitet hat']),'obwohl':('Konzessivsatz',['es regnet','{p} müde ist','es kalt ist','{p} krank ist','{p} wenig Zeit hat','es spät ist']),
+'damit':('Finalsatz',['{p} gut vorbereitet ist','alle es verstehen','{p} nichts vergisst','{p} pünktlich ankommt','wir sicher ankommen'])}
+def _gen_ns(r):
+    nm,g=r.choice(NAMES);p='er' if g=='m' else 'sie';cj=r.choice(list(_SB));art,sbs=_SB[cj];b=r.choice(sbs).format(p=p)
+    return ('%s %s'%(nm,r.choice(_MP)),cj,b,art)
+_rn=random.Random(53);_sn=set((a,c,b) for a,c,b,_ in NS)
+for _ in range(500):
+    x=_gen_ns(_rn)
+    if (x[0],x[1],x[2]) not in _sn and len(NS)<120:_sn.add((x[0],x[1],x[2]));NS.append(x)
+_RP=[('{rp} dort wartet',['ist sehr nett','kommt aus Bern','ist neu']),('{rp} im Garten spielt',['ist sehr laut','gehört uns','ist müde']),('{rp} neben der Tür steht',['ist alt','gehört meinem Vater','ist schön']),('{rp} so laut lacht',['ist mein Freund','ist heute gut gelaunt'])]
+def _gen_rel(r):
+    nn=r.choice(NOUNS);rp={'m':'der','f':'die','n':'das'}[nn[2]];vp,rest=r.choice(_RP)
+    if nn[4]=='ding' and 'lacht' in vp:return None
+    return (NP(nn,'nom',cap=True),vp.format(rp=rp),r.choice(rest))
+_rr=random.Random(12)
+for _ in range(200):
+    x=_gen_rel(_rr)
+    if x and x not in REL and len(REL)<40:REL.append(x)
+def g_nsconj2(r,k):return g_nsconj(r,k)
+# Semantik-sichere Liste fuer Konjunktions-Korrektur
+_old_nsconj=g_nsconj
+def g_nsconj(r,k):
+    ALT={'Kausalsatz':('obwohl','weil','Der Nebensatz soll einen Grund nennen.'),'Konzessivsatz':('weil','obwohl','Der Nebensatz soll einen Gegengrund nennen.'),'Finalsatz':('weil','damit','Der Nebensatz soll einen Zweck nennen.'),'Konditionalsatz':('weil','wenn','Der Nebensatz soll eine Bedingung nennen.')}
+    a,cj,b,art=r.choice(NS0)
+    if art in ALT and cj==ALT[art][1]:
+        bad,ok,q=ALT[art];return (2,q+' Verbessere die Konjunktion im Feld.','%s, %s %s.'%(a,bad,b),'%s, %s %s.'%(a,ok,b),'Das Einleitewort verrät die Art des Nebensatzes.')
+GEN['nsconj']=g_nsconj;GEN['pas2']=g_pas2;GEN['konj2']=g_konj2
+NSALL=list(NS);NS[:]=NS0
+RELALL=list(REL);REL[:]=REL[:8]
+AKTALL=list(AKTPAS);AKTPAS[:]=AKTPAS[:18]
+KONJALL=list(KONJ);KONJ[:]=KONJ[:12]
+FIXSET['passiv']=['pas','pas2'];FIXSET['konjunktiv']=['konj','konj2']
+FIXSET['nebensatzarten']=['nsconj','cns','nsord','crel'];FIXSET['hauptneben']=['nsord','cns','crel']
