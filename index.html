@@ -1740,6 +1740,10 @@ ins.dfy{text-decoration:none;color:#0d652d;background:rgba(52,168,83,.22);border
 @keyframes xshine{0%,70%{left:-60%}100%{left:130%}}
 @media (prefers-reduced-motion:reduce){.tb4.m-x::after{animation:none;display:none}}
 .tb4.m-x .xbrain{margin-right:5px}
+
+/* v5.13 Easy lernen: der Knopf glänzt, kein Symbol */
+.tb4.m-x{box-shadow:0 4px 0 rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.35)}
+.tb4.m-x::after{width:45%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.38),transparent);animation:xshine 4.5s ease-in-out infinite}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1747,7 +1751,7 @@ ins.dfy{text-decoration:none;color:#0d652d;background:rgba(52,168,83,.22);border
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION="v5.12";
+var APP_VERSION="v5.13";
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -2985,7 +2989,7 @@ function topicCard(ch,t){
   +(open?'<div class="tc4"><button class="tb4 m-v" data-act="learn" data-id="'+id+'">'+((t.subject==='franz'||t.subject==='engl')?'Wörterliste':'Theorie')+'</button>'
   +'<button class="tb4 m-u" data-act="practice" data-scope="topic:'+id+'" data-force="1">AI-Karten</button>'
   +'<button class="tb4 m-p" data-act="exam" data-id="'+id+'">Prüfung</button>'
-  +'<button class="tb4 m-x" data-act="xgame" data-id="'+id+'"><span class="xbrain" aria-hidden="true">🧠</span> Easy lernen</button></div>':'')+'</article>';
+  +'<button class="tb4 m-x" data-act="xgame" data-id="'+id+'">Easy lernen</button></div>':'')+'</article>';
 }
 function vocTag(t){var l=t.subject==='franz'?'Vocabulaire':t.subject==='engl'?'Vocabulary':'';if(!l||/vocab/i.test(t.title))return '';return '<span class="vtag">'+l+'</span> · '}
 function vSubject(){
