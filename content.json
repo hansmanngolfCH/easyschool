@@ -8572,6 +8572,37 @@
      ]
     },
     {
+     "h": "Ausnahmen",
+     "text": "Wörter wechseln manchmal die Wortart.",
+     "visuals": [
+      {
+       "type": "tbl",
+       "rows": [
+        [
+         "das / dass",
+         "Probe: dieses oder welches?",
+         "«das» Artikel oder Pronomen, «dass» Konjunktion"
+        ],
+        [
+         "Partizip",
+         "Verb oder Adjektiv",
+         "«ein gelesenes Buch» ist ein Adjektiv"
+        ],
+        [
+         "Nominalisierung",
+         "Verb wird Nomen",
+         "«das Laufen» schreibst du gross"
+        ]
+       ],
+       "head": [
+        "Wort",
+        "Besonderheit",
+        "Beispiel"
+       ]
+      }
+     ]
+    },
+    {
      "h": "Regeln und Wichtigstes",
      "text": "**Regeln:** Zuerst die Artikel-Probe, dann die Zeit-Probe, dann Steigern. Was gleich bleibt und vor einem Nomen steht, ist eine Präposition. Was Sätze verbindet, ist eine Konjunktion.",
      "visuals": [
@@ -13127,6 +13158,47 @@
      ]
     },
     {
+     "h": "Ausnahmen",
+     "text": "Diese Fälle musst du besonders beachten.",
+     "visuals": [
+      {
+       "type": "tbl",
+       "rows": [
+        [
+         "helfen, danken, gehören",
+         "verlangen den Dativ",
+         "«Ich helfe dem Mann.»"
+        ],
+        [
+         "auf, in, an, über",
+         "wo? Dativ – wohin? Akkusativ",
+         "«auf dem Stuhl» – «auf den Stuhl»"
+        ],
+        [
+         "es gibt",
+         "verlangt den Akkusativ",
+         "«Es gibt einen Apfel.»"
+        ],
+        [
+         "wegen, trotz",
+         "verlangen den Genitiv",
+         "«wegen des Regens»"
+        ],
+        [
+         "die, das",
+         "Nominativ = Akkusativ",
+         "«Die Frau sieht das Kind.»: Probe mit «wer/was»"
+        ]
+       ],
+       "head": [
+        "Fall",
+        "Regel",
+        "Beispiel"
+       ]
+      }
+     ]
+    },
+    {
      "h": "Regeln und Wichtigstes",
      "text": "**Regeln:** Der Fall wird mit einer Frage bestimmt. Manche Verben und Wörter verlangen einen Fall. Artikel, Adjektiv und Nomen passen sich gemeinsam an.",
      "visuals": [
@@ -17187,6 +17259,37 @@
      ]
     },
     {
+     "h": "Ausnahmen",
+     "text": "Diese Verben und Fälle verlangen besondere Beachtung.",
+     "visuals": [
+      {
+       "type": "tbl",
+       "rows": [
+        [
+         "unregelmässige Verben",
+         "eigene Formen",
+         "«gehen – ging – gegangen»"
+        ],
+        [
+         "Zukunft",
+         "oft Präsens mit Zeitangabe",
+         "«Morgen fahre ich nach Bern.»"
+        ],
+        [
+         "sein, haben, Modalverben",
+         "Präteritum statt Perfekt",
+         "«Ich war müde.» (nicht «Ich bin müde gewesen»)"
+        ]
+       ],
+       "head": [
+        "Fall",
+        "Regel",
+        "Beispiel"
+       ]
+      }
+     ]
+    },
+    {
      "h": "Regeln und Wichtigstes",
      "text": "**Regeln:** Perfekt = habe/bin + Partizip II. Plusquamperfekt = hatte/war + Partizip II. Futur I = werde + Infinitiv. Bei Bewegung und Zustandswechsel steht sein.",
      "visuals": [
@@ -21001,6 +21104,37 @@
          "Dativobjekt",
          3
         ]
+       ]
+      }
+     ]
+    },
+    {
+     "h": "Ausnahmen",
+     "text": "Nicht jedes Satzglied ist ein einzelnes Wort.",
+     "visuals": [
+      {
+       "type": "tbl",
+       "rows": [
+        [
+         "Prädikat",
+         "kann zweiteilig sein",
+         "«Er steht früh auf.» – «Ich habe gelacht.»"
+        ],
+        [
+         "sich",
+         "gehört zum Verb",
+         "«Er freut sich.»: kein eigenes Satzglied"
+        ],
+        [
+         "es",
+         "manchmal kein Handelnder",
+         "«Es regnet.»: «es» ist das Subjekt"
+        ]
+       ],
+       "head": [
+        "Fall",
+        "Besonderheit",
+        "Beispiel"
        ]
       }
      ]
@@ -172049,6 +172183,37 @@
      ]
     },
     {
+     "h": "Ausnahmen",
+     "text": "Manche Wörter sehen wie Verben aus und sind doch Nomen. Mach die Probe mit «der, die, das».",
+     "visuals": [
+      {
+       "type": "tbl",
+       "rows": [
+        [
+         "das Essen",
+         "ein Verb",
+         "ein Nomen: «das Essen» passt"
+        ],
+        [
+         "das Lachen",
+         "ein Verb",
+         "ein Nomen: «das Lachen» passt"
+        ],
+        [
+         "das Spielen",
+         "ein Verb",
+         "ein Nomen: «Das Spielen macht Spass.»"
+        ]
+       ],
+       "head": [
+        "Wort",
+        "Sieht aus wie",
+        "Ist aber"
+       ]
+      }
+     ]
+    },
+    {
      "h": "Merke",
      "text": "Das ist wichtig.",
      "visuals": [
@@ -175142,37 +175307,42 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ausnahmen",
+     "text": "Nicht jedes Nomen bekommt eine neue Endung.",
      "visuals": [
       {
        "type": "tbl",
        "rows": [
         [
-         "die Katzes",
-         "die Katzen",
-         "Katze bekommt -n."
+         "das Fenster",
+         "Mehrzahl bleibt gleich",
+         "die Fenster"
         ],
         [
-         "die Baume",
-         "die Bäume",
-         "Aus au wird äu."
+         "der Lehrer",
+         "Mehrzahl bleibt gleich",
+         "die Lehrer"
         ],
         [
-         "die Kinde",
-         "die Kinder",
-         "Kind bekommt -er."
+         "das Mädchen",
+         "Mehrzahl bleibt gleich",
+         "die Mädchen"
+        ],
+        [
+         "die Milch",
+         "keine Mehrzahl",
+         "nur Einzahl"
+        ],
+        [
+         "die Ferien",
+         "keine Einzahl",
+         "nur Mehrzahl: die Eltern, die Ferien"
         ]
        ],
        "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
+        "Wort",
+        "Besonderheit",
+        "Beispiel"
        ]
       }
      ]
@@ -182131,37 +182301,32 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ausnahmen",
+     "text": "Auch bei der Grossschreibung gibt es Sonderfälle.",
      "visuals": [
       {
        "type": "tbl",
        "rows": [
         [
-         "der hund bellt.",
-         "Der Hund bellt.",
-         "Satzanfang und Nomen gross."
+         "Lauf schnell!",
+         "Verben schreibt man klein",
+         "am Satzanfang gross: «Lauf schnell!»"
         ],
         [
-         "Ich Lese ein Buch.",
-         "Ich lese ein Buch.",
-         "Verben schreibt man klein."
+         "ich",
+         "Wörter in der Mitte klein",
+         "«ich» ist nur am Satzanfang gross: «Heute lese ich.»"
         ],
         [
-         "Das Rote Auto.",
-         "Das rote Auto.",
-         "Adjektive schreibt man klein."
+         "Anna, Zürich, die Aare",
+         "Namen sind Nomen",
+         "Namen schreibst du immer gross"
         ]
        ],
        "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
+        "Ausnahme",
+        "Die Regel sagt",
+        "Hier aber"
        ]
       }
      ]
@@ -183895,6 +184060,42 @@
         ]
        ],
        "cap": "Anna spielt. Sie lacht. Ihr Hund bellt."
+      }
+     ]
+    },
+    {
+     "h": "Ausnahmen",
+     "text": "Pronomen haben ein paar Tricks.",
+     "visuals": [
+      {
+       "type": "tbl",
+       "rows": [
+        [
+         "es",
+         "steht manchmal für nichts",
+         "Es regnet. Es ist kalt."
+        ],
+        [
+         "Sie",
+         "Höflichkeitsform: gross",
+         "Haben Sie Zeit?"
+        ],
+        [
+         "ihr",
+         "zwei Aufgaben",
+         "«Ihr kommt» (Stellvertreter) – «ihr Hund» (Begleiter)"
+        ],
+        [
+         "sie",
+         "Einzahl oder Mehrzahl",
+         "Sie lacht. Sie lachen."
+        ]
+       ],
+       "head": [
+        "Wort",
+        "Besonderheit",
+        "Beispiel"
+       ]
       }
      ]
     },
@@ -186300,46 +186501,92 @@
     },
     {
      "h": "Die Pronomen im Überblick",
-     "text": "Stellvertreter und Begleiter gibt es für jede Person. Merke dir die Reihen.",
+     "text": "Zu jeder Person gibt es einen Stellvertreter und einen Begleiter. Merke dir beide Reihen.",
      "visuals": [
       {
        "type": "tbl",
        "rows": [
         [
          "ich",
-         "ich",
-         "mein"
+         "ich lese",
+         "mein Buch"
         ],
         [
          "du",
-         "du",
-         "dein"
+         "du liest",
+         "dein Buch"
         ],
         [
-         "er / es",
-         "er, es",
-         "sein"
+         "er",
+         "er liest",
+         "sein Buch"
         ],
         [
-         "sie",
-         "sie",
-         "ihr"
+         "es",
+         "es spielt",
+         "sein Spielzeug"
+        ],
+        [
+         "sie (eine)",
+         "sie liest",
+         "ihr Buch"
         ],
         [
          "wir",
-         "wir",
-         "unser"
+         "wir lesen",
+         "unser Buch"
         ],
         [
          "ihr",
-         "ihr",
-         "euer"
+         "ihr lest",
+         "euer Buch"
+        ],
+        [
+         "sie (mehrere)",
+         "sie lesen",
+         "ihr Buch"
         ]
        ],
        "head": [
         "Person",
         "Stellvertreter",
         "Begleiter"
+       ]
+      }
+     ]
+    },
+    {
+     "h": "Ausnahmen",
+     "text": "Pronomen haben ein paar Tricks.",
+     "visuals": [
+      {
+       "type": "tbl",
+       "rows": [
+        [
+         "es",
+         "steht manchmal für nichts",
+         "Es regnet. Es ist kalt."
+        ],
+        [
+         "Sie",
+         "Höflichkeitsform: gross",
+         "Haben Sie Zeit?"
+        ],
+        [
+         "ihr",
+         "zwei Aufgaben",
+         "«Ihr kommt» (Stellvertreter) – «ihr Hund» (Begleiter)"
+        ],
+        [
+         "sie",
+         "Einzahl oder Mehrzahl",
+         "Sie lacht. Sie lachen."
+        ]
+       ],
+       "head": [
+        "Wort",
+        "Besonderheit",
+        "Beispiel"
        ]
       }
      ]
@@ -189352,37 +189599,37 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ausnahmen",
+     "text": "Nicht alle Verben halten sich an die Regel.",
      "visuals": [
       {
        "type": "tbl",
        "rows": [
         [
-         "Gestern spiele ich Fussball.",
-         "Gestern spielte ich Fussball.",
-         "«Gestern» verlangt die Vergangenheit."
+         "gehen",
+         "Präteritum mit -te",
+         "«ging», nicht «gehte»"
         ],
         [
-         "Ich habe gespielte.",
-         "Ich habe gespielt.",
-         "Das Partizip von spielen endet auf -t."
+         "laufen, fahren, kommen",
+         "Perfekt mit «haben»",
+         "Bewegung: «ich bin gelaufen»"
         ],
         [
-         "Jetzt lachte ich.",
-         "Jetzt lache ich.",
-         "«Jetzt» ist Gegenwart: Präsens."
+         "sein, haben",
+         "Präteritum mit -te",
+         "«ich war», «ich hatte»"
+        ],
+        [
+         "morgen",
+         "Zukunft mit «werden»",
+         "Meist Präsens: «Morgen gehe ich schwimmen.»"
         ]
        ],
        "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
+        "Ausnahme",
+        "Die Regel sagt",
+        "Hier aber"
        ]
       }
      ]
@@ -191339,37 +191586,32 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ausnahmen",
+     "text": "Nicht alle Verben halten sich an die Regel.",
      "visuals": [
       {
        "type": "tbl",
        "rows": [
         [
-         "Gestern spiele ich Fussball.",
-         "Gestern spielte ich Fussball.",
-         "«Gestern» verlangt die Vergangenheit."
+         "gehen",
+         "Präteritum mit -te",
+         "«ging», nicht «gehte»"
         ],
         [
-         "Ich habe gespielte.",
-         "Ich habe gespielt.",
-         "Das Partizip von spielen endet auf -t."
+         "sein, haben",
+         "Präteritum mit -te",
+         "«ich war», «ich hatte»"
         ],
         [
-         "Jetzt lachte ich.",
-         "Jetzt lache ich.",
-         "«Jetzt» ist Gegenwart: Präsens."
+         "morgen",
+         "Zukunft mit «werden»",
+         "Meist Präsens: «Morgen gehe ich schwimmen.»"
         ]
        ],
        "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
+        "Ausnahme",
+        "Die Regel sagt",
+        "Hier aber"
        ]
       }
      ]
@@ -194039,27 +194281,33 @@
        "rows": [
         [
          "{0|Reihe}",
+         "Die Buchstaben stehen immer in der gleichen Reihenfolge.",
          "A B C D E … X Y Z"
         ],
         [
          "{1|Platz}",
+         "Jeder Buchstabe hat eine feste Nummer.",
          "A ist der 1., M der 13., Z der 26."
         ],
         [
          "{2|Davor}",
+         "Der Buchstabe, der gleich vorher kommt.",
          "Vor K steht J."
         ],
         [
          "{3|Danach}",
+         "Der Buchstabe, der gleich nachher kommt.",
          "Nach K steht L."
         ],
         [
          "{4|Vokale}",
+         "Die Selbstlaute: Sie klingen ganz von allein.",
          "A, E, I, O, U"
         ]
        ],
        "head": [
         "Was",
+        "Bedeutung",
         "Beispiel"
        ]
       }
@@ -194341,6 +194589,37 @@
         ]
        ],
        "cap": "Alle beginnen mit H. Dann zählt der zweite Buchstabe: a, a, u."
+      }
+     ]
+    },
+    {
+     "h": "Ausnahmen",
+     "text": "Beim Ordnen nach dem ABC gibt es Sonderfälle.",
+     "visuals": [
+      {
+       "type": "tbl",
+       "rows": [
+        [
+         "ä, ö, ü",
+         "stehen nicht im ABC",
+         "im Wörterbuch bei a, o, u: «Bär» steht bei «Bad»"
+        ],
+        [
+         "gleicher Anfang",
+         "1. Buchstabe entscheidet",
+         "dann der 2.: «Affe» vor «Apfel» (f vor p)"
+        ],
+        [
+         "sch",
+         "klingt wie ein Laut",
+         "zählt als drei Buchstaben: s, c, h"
+        ]
+       ],
+       "head": [
+        "Ausnahme",
+        "Die Regel sagt",
+        "Hier aber"
+       ]
       }
      ]
     },
@@ -196378,27 +196657,33 @@
        "rows": [
         [
          "{0|Reihe}",
+         "Die Buchstaben stehen immer in der gleichen Reihenfolge.",
          "A B C D E … X Y Z"
         ],
         [
          "{1|Platz}",
+         "Jeder Buchstabe hat eine feste Nummer.",
          "A ist der 1., M der 13., Z der 26."
         ],
         [
          "{2|Davor}",
+         "Der Buchstabe, der gleich vorher kommt.",
          "Vor K steht J."
         ],
         [
          "{3|Danach}",
+         "Der Buchstabe, der gleich nachher kommt.",
          "Nach K steht L."
         ],
         [
          "{4|Vokale}",
+         "Die Selbstlaute: Sie klingen ganz von allein.",
          "A, E, I, O, U"
         ]
        ],
        "head": [
         "Was",
+        "Bedeutung",
         "Beispiel"
        ]
       }
@@ -196710,6 +196995,32 @@
         "Wort",
         "Sortiert wie",
         "Beispiel-Reihe"
+       ]
+      }
+     ]
+    },
+    {
+     "h": "Ausnahmen",
+     "text": "Beim Ordnen nach dem ABC gibt es Sonderfälle.",
+     "visuals": [
+      {
+       "type": "tbl",
+       "rows": [
+        [
+         "gleicher Anfang",
+         "1. Buchstabe entscheidet",
+         "dann der 2.: «Affe» vor «Apfel» (f vor p)"
+        ],
+        [
+         "sch",
+         "klingt wie ein Laut",
+         "zählt als drei Buchstaben: s, c, h"
+        ]
+       ],
+       "head": [
+        "Ausnahme",
+        "Die Regel sagt",
+        "Hier aber"
        ]
       }
      ]
@@ -199034,43 +199345,42 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ausnahmen",
+     "text": "Hier gibt es viele Ausnahmen. Sie lernst du am besten auswendig.",
      "visuals": [
       {
        "type": "tbl",
        "rows": [
         [
-         "komen",
-         "kommen",
-         "Kurzer Vokal: mm."
+         "ck, tz",
+         "kurzer Vokal: Doppelbuchstabe",
+         "statt «kk» und «zz»: Decke, Katze"
         ],
         [
-         "Bine",
-         "Biene",
-         "Langes i: ie."
+         "Tiger, Igel, Biber",
+         "langes i: ie",
+         "langes i ohne «ie»"
         ],
         [
-         "Bot",
-         "Boot",
-         "Doppelter Vokal."
+         "mir, dir, wir",
+         "langes i: ie",
+         "langes i ohne «ie»"
         ],
         [
-         "Ban",
-         "Bahn",
-         "Dehnungs-h."
+         "Bus, das, mit, in",
+         "kurzer Vokal: doppelt",
+         "kurzer Vokal ohne Doppelbuchstabe"
+        ],
+        [
+         "Name, Tag, Mond",
+         "langer Vokal: h oder doppelt",
+         "langer Vokal ganz ohne Zeichen"
         ]
        ],
        "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7,
-        7
+        "Ausnahme",
+        "Die Regel sagt",
+        "Hier aber"
        ]
       }
      ]
@@ -203639,43 +203949,42 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ausnahmen",
+     "text": "Hier gibt es viele Ausnahmen. Sie lernst du am besten auswendig.",
      "visuals": [
       {
        "type": "tbl",
        "rows": [
         [
-         "komen",
-         "kommen",
-         "Kurzer Vokal: mm."
+         "ck, tz",
+         "kurzer Vokal: Doppelbuchstabe",
+         "statt «kk» und «zz»: Decke, Katze"
         ],
         [
-         "Bine",
-         "Biene",
-         "Langes i: ie."
+         "Tiger, Igel, Biber",
+         "langes i: ie",
+         "langes i ohne «ie»"
         ],
         [
-         "Bot",
-         "Boot",
-         "Doppelter Vokal."
+         "mir, dir, wir",
+         "langes i: ie",
+         "langes i ohne «ie»"
         ],
         [
-         "Ban",
-         "Bahn",
-         "Dehnungs-h."
+         "Bus, das, mit, in",
+         "kurzer Vokal: doppelt",
+         "kurzer Vokal ohne Doppelbuchstabe"
+        ],
+        [
+         "Name, Tag, Mond",
+         "langer Vokal: h oder doppelt",
+         "langer Vokal ganz ohne Zeichen"
         ]
        ],
        "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7,
-        7
+        "Ausnahme",
+        "Die Regel sagt",
+        "Hier aber"
        ]
       }
      ]
@@ -209379,61 +209688,66 @@
        "num": true,
        "items": [
         [
-         "Sage alle drei Formen laut auf.",
+         "Schreibe die Grundform auf und sage sie laut.",
          "",
-         "gehen – ging – gegangen"
+         "singen"
         ],
         [
-         "Schreibe sie untereinander auf.",
+         "Frage: Ändert sich der Stamm? Dann ist das Verb unregelmässig.",
          "",
-         "gehen / ging / gegangen"
+         "singen → sang (aus i wird a)"
         ],
         [
-         "Decke zwei Formen zu und rate sie.",
+         "Bilde das Partizip II: meist ge- + Stamm + -en.",
          "",
-         "gehen – ? – ? → ging, gegangen"
+         "ge + sung + en = gesungen"
+        ],
+        [
+         "Sage die drei Formen wie eine Melodie.",
+         "",
+         "singen – sang – gesungen"
         ],
         [
          "Prüfe mit der Liste.",
          "",
-         "Liste: gehen – ging – gegangen ✔"
+         "Liste: singen – sang – gesungen ✔"
         ]
        ]
       }
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ausnahmen",
+     "text": "Mischverben ändern den Stamm UND enden auf -te und -t. Sie passen in keine Gruppe.",
      "visuals": [
       {
        "type": "tbl",
        "rows": [
         [
-         "gehte",
-         "ging",
-         "gehen ist unregelmässig."
+         "denken",
+         "dachte",
+         "gedacht"
         ],
         [
-         "gesehn",
-         "gesehen",
-         "Das Partizip endet auf -en."
+         "bringen",
+         "brachte",
+         "gebracht"
         ],
         [
-         "trinkte",
-         "trank",
-         "trinken wird zu trank."
+         "kennen",
+         "kannte",
+         "gekannt"
+        ],
+        [
+         "wissen",
+         "wusste",
+         "gewusst"
         ]
        ],
        "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
+        "Grundform",
+        "Präteritum",
+        "Partizip II"
        ]
       }
      ]
@@ -212973,61 +213287,66 @@
        "num": true,
        "items": [
         [
-         "Sage alle drei Formen laut auf.",
+         "Schreibe die Grundform auf und sage sie laut.",
          "",
-         "gehen – ging – gegangen"
+         "singen"
         ],
         [
-         "Schreibe sie untereinander auf.",
+         "Frage: Ändert sich der Stamm? Dann ist das Verb unregelmässig.",
          "",
-         "gehen / ging / gegangen"
+         "singen → sang (aus i wird a)"
         ],
         [
-         "Decke zwei Formen zu und rate sie.",
+         "Bilde das Partizip II: meist ge- + Stamm + -en.",
          "",
-         "gehen – ? – ? → ging, gegangen"
+         "ge + sung + en = gesungen"
+        ],
+        [
+         "Sage die drei Formen wie eine Melodie.",
+         "",
+         "singen – sang – gesungen"
         ],
         [
          "Prüfe mit der Liste.",
          "",
-         "Liste: gehen – ging – gegangen ✔"
+         "Liste: singen – sang – gesungen ✔"
         ]
        ]
       }
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ausnahmen",
+     "text": "Mischverben ändern den Stamm UND enden auf -te und -t. Sie passen in keine Gruppe.",
      "visuals": [
       {
        "type": "tbl",
        "rows": [
         [
-         "gehte",
-         "ging",
-         "gehen ist unregelmässig."
+         "denken",
+         "dachte",
+         "gedacht"
         ],
         [
-         "gesehn",
-         "gesehen",
-         "Das Partizip endet auf -en."
+         "bringen",
+         "brachte",
+         "gebracht"
         ],
         [
-         "trinkte",
-         "trank",
-         "trinken wird zu trank."
+         "kennen",
+         "kannte",
+         "gekannt"
+        ],
+        [
+         "wissen",
+         "wusste",
+         "gewusst"
         ]
        ],
        "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
+        "Grundform",
+        "Präteritum",
+        "Partizip II"
        ]
       }
      ]
@@ -219001,6 +219320,37 @@
      ]
     },
     {
+     "h": "Ausnahmen",
+     "text": "Manche Wörter täuschen. Prüfe immer mit der Probe.",
+     "visuals": [
+      {
+       "type": "tbl",
+       "rows": [
+        [
+         "das Essen",
+         "Nomen",
+         "«das Essen» passt, auch wenn es wie ein Verb klingt"
+        ],
+        [
+         "die Freude",
+         "Nomen",
+         "die Freude, eine Freude (man kann sie nicht anfassen)"
+        ],
+        [
+         "uns",
+         "Pronomen",
+         "ersetzt «wir»"
+        ]
+       ],
+       "head": [
+        "Wort",
+        "Wortart",
+        "Probe"
+       ]
+      }
+     ]
+    },
+    {
      "h": "Merke",
      "text": "Das ist wichtig.",
      "visuals": [
@@ -221633,16 +221983,21 @@
      ]
     },
     {
-     "h": "Schwierigere Wörter",
-     "text": "Manche Wörter sind nicht auf den ersten Blick erkennbar. Prüfe immer mit den Proben.",
+     "h": "Ausnahmen",
+     "text": "Manche Wörter täuschen. Prüfe immer mit der Probe.",
      "visuals": [
       {
        "type": "tbl",
        "rows": [
         [
+         "das Essen",
+         "Nomen",
+         "«das Essen» passt, auch wenn es wie ein Verb klingt"
+        ],
+        [
          "die Freude",
          "Nomen",
-         "die Freude, eine Freude"
+         "die Freude, eine Freude (man kann sie nicht anfassen)"
         ],
         [
          "uns",
@@ -225680,37 +226035,37 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ausnahmen",
+     "text": "Nicht immer passt das Satzzeichen zur Satzart.",
      "visuals": [
       {
        "type": "tbl",
        "rows": [
         [
-         "Wie heisst du.",
-         "Wie heisst du?",
-         "Eine Frage endet mit ?."
+         "Indirekte Frage",
+         "Fragezeichen",
+         "Punkt: «Ich weiss nicht, wie er heisst.»"
         ],
         [
-         "Es regnet?",
-         "Es regnet.",
-         "Eine Aussage endet mit einem Punkt."
+         "Ruhiger Befehl",
+         "Ausrufezeichen",
+         "Punkt ist möglich: «Bitte komm her.»"
         ],
         [
-         "Sei leise.",
-         "Sei leise!",
-         "Ein Befehl endet mit !."
+         "Ausruf",
+         "Punkt",
+         "Ausrufezeichen: «Hilfe!» «Super!»"
+        ],
+        [
+         "Frage ohne Fragewort",
+         "Punkt",
+         "Fragezeichen: «Du kommst mit?»"
         ]
        ],
        "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
+        "Fall",
+        "Man denkt",
+        "Aber"
        ]
       }
      ]
@@ -227597,37 +227952,37 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ausnahmen",
+     "text": "Nicht immer passt das Satzzeichen zur Satzart.",
      "visuals": [
       {
        "type": "tbl",
        "rows": [
         [
-         "Wie heisst du.",
-         "Wie heisst du?",
-         "Eine Frage endet mit ?."
+         "Indirekte Frage",
+         "Fragezeichen",
+         "Punkt: «Ich weiss nicht, wie er heisst.»"
         ],
         [
-         "Es regnet?",
-         "Es regnet.",
-         "Eine Aussage endet mit einem Punkt."
+         "Ruhiger Befehl",
+         "Ausrufezeichen",
+         "Punkt ist möglich: «Bitte komm her.»"
         ],
         [
-         "Sei leise.",
-         "Sei leise!",
-         "Ein Befehl endet mit !."
+         "Ausruf",
+         "Punkt",
+         "Ausrufezeichen: «Hilfe!» «Super!»"
+        ],
+        [
+         "Frage ohne Fragewort",
+         "Punkt",
+         "Fragezeichen: «Du kommst mit?»"
         ]
        ],
        "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
+        "Fall",
+        "Man denkt",
+        "Aber"
        ]
       }
      ]
@@ -229695,37 +230050,37 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ausnahmen",
+     "text": "Beim Komma gibt es feste Wörter.",
      "visuals": [
       {
        "type": "tbl",
        "rows": [
         [
-         "Ich esse Äpfel Birnen und Nüsse.",
-         "Ich esse Äpfel, Birnen und Nüsse.",
-         "Zwischen den Wörtern fehlt das Komma."
+         "und, oder",
+         "kein Komma davor",
+         "«Äpfel, Birnen und Nüsse»"
         ],
         [
-         "Ich esse Äpfel, Birnen, und Nüsse.",
-         "Ich esse Äpfel, Birnen und Nüsse.",
-         "Vor «und» steht kein Komma."
+         "aber",
+         "Komma davor",
+         "«Ich will, aber ich darf nicht.»"
         ],
         [
-         "Ich, esse Äpfel Birnen und Nüsse.",
-         "Ich esse Äpfel, Birnen und Nüsse.",
-         "Nach «Ich» steht kein Komma."
+         "Anrede",
+         "Komma danach",
+         "«Anna, komm her!»"
+        ],
+        [
+         "Ja, Nein",
+         "Komma danach",
+         "«Ja, ich komme.»"
         ]
        ],
        "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
+        "Wort",
+        "Komma?",
+        "Beispiel"
        ]
       }
      ]
@@ -231609,37 +231964,37 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ausnahmen",
+     "text": "Beim Komma gibt es feste Wörter.",
      "visuals": [
       {
        "type": "tbl",
        "rows": [
         [
-         "Ich esse Äpfel Birnen und Nüsse.",
-         "Ich esse Äpfel, Birnen und Nüsse.",
-         "Zwischen den Wörtern fehlt das Komma."
+         "und, oder",
+         "kein Komma davor",
+         "«Äpfel, Birnen und Nüsse»"
         ],
         [
-         "Ich esse Äpfel, Birnen, und Nüsse.",
-         "Ich esse Äpfel, Birnen und Nüsse.",
-         "Vor «und» steht kein Komma."
+         "aber",
+         "Komma davor",
+         "«Ich will, aber ich darf nicht.»"
         ],
         [
-         "Ich, esse Äpfel Birnen und Nüsse.",
-         "Ich esse Äpfel, Birnen und Nüsse.",
-         "Nach «Ich» steht kein Komma."
+         "Anrede",
+         "Komma danach",
+         "«Anna, komm her!»"
+        ],
+        [
+         "Ja, Nein",
+         "Komma danach",
+         "«Ja, ich komme.»"
         ]
        ],
        "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
+        "Wort",
+        "Komma?",
+        "Beispiel"
        ]
       }
      ]
@@ -233581,6 +233936,37 @@
        "head": [
         "Wortart",
         "Aufgabe",
+        "Beispiel"
+       ]
+      }
+     ]
+    },
+    {
+     "h": "Ausnahmen",
+     "text": "Manche Wörter sind schwierig. Die Probe hilft.",
+     "visuals": [
+      {
+       "type": "tbl",
+       "rows": [
+        [
+         "ihr",
+         "zwei Aufgaben",
+         "«ihr kommt» (Stellvertreter) – «ihr Hund» (Begleiter)"
+        ],
+        [
+         "das Lesen",
+         "Verb wird Nomen",
+         "«Das Lesen macht Spass.»"
+        ],
+        [
+         "heute, hier",
+         "nicht veränderbar",
+         "Adverbien: man kann sie nicht beugen oder steigern"
+        ]
+       ],
+       "head": [
+        "Wort",
+        "Besonderheit",
         "Beispiel"
        ]
       }
@@ -237584,6 +237970,37 @@
      ]
     },
     {
+     "h": "Ausnahmen",
+     "text": "Manche Wörter sind schwierig. Die Probe hilft.",
+     "visuals": [
+      {
+       "type": "tbl",
+       "rows": [
+        [
+         "ihr",
+         "zwei Aufgaben",
+         "«ihr kommt» (Stellvertreter) – «ihr Hund» (Begleiter)"
+        ],
+        [
+         "das Lesen",
+         "Verb wird Nomen",
+         "«Das Lesen macht Spass.»"
+        ],
+        [
+         "heute, hier",
+         "nicht veränderbar",
+         "Adverbien: man kann sie nicht beugen oder steigern"
+        ]
+       ],
+       "head": [
+        "Wort",
+        "Besonderheit",
+        "Beispiel"
+       ]
+      }
+     ]
+    },
+    {
      "h": "Merke",
      "text": "Das ist wichtig.",
      "visuals": [
@@ -241479,6 +241896,42 @@
      ]
     },
     {
+     "h": "Ausnahmen",
+     "text": "Das Subjekt ist nicht immer leicht zu finden.",
+     "visuals": [
+      {
+       "type": "tbl",
+       "rows": [
+        [
+         "Es regnet.",
+         "«es» ohne Handelnden",
+         "«es» ist trotzdem das Subjekt: Es schneit."
+        ],
+        [
+         "Befehl",
+         "das Subjekt fehlt",
+         "«Komm her!» – «du» ist mitgedacht"
+        ],
+        [
+         "Frage",
+         "Subjekt nach dem Verb",
+         "«Kommt dein Bruder?» → dein Bruder"
+        ],
+        [
+         "anderer Satzbeginn",
+         "Subjekt nicht vorne",
+         "«Gestern las meine Schwester.» → meine Schwester"
+        ]
+       ],
+       "head": [
+        "Fall",
+        "Besonderheit",
+        "Beispiel"
+       ]
+      }
+     ]
+    },
+    {
      "h": "Merke",
      "text": "Das ist wichtig.",
      "visuals": [
@@ -244868,6 +245321,42 @@
      ]
     },
     {
+     "h": "Ausnahmen",
+     "text": "Das Subjekt ist nicht immer leicht zu finden.",
+     "visuals": [
+      {
+       "type": "tbl",
+       "rows": [
+        [
+         "Es regnet.",
+         "«es» ohne Handelnden",
+         "«es» ist trotzdem das Subjekt: Es schneit."
+        ],
+        [
+         "Befehl",
+         "das Subjekt fehlt",
+         "«Komm her!» – «du» ist mitgedacht"
+        ],
+        [
+         "Frage",
+         "Subjekt nach dem Verb",
+         "«Kommt dein Bruder?» → dein Bruder"
+        ],
+        [
+         "anderer Satzbeginn",
+         "Subjekt nicht vorne",
+         "«Gestern las meine Schwester.» → meine Schwester"
+        ]
+       ],
+       "head": [
+        "Fall",
+        "Besonderheit",
+        "Beispiel"
+       ]
+      }
+     ]
+    },
+    {
      "h": "Merke",
      "text": "Das ist wichtig.",
      "visuals": [
@@ -248139,6 +248628,37 @@
         ]
        ],
        "cap": "Nachdem Anna gegessen hatte, ging sie spielen."
+      }
+     ]
+    },
+    {
+     "h": "Ausnahmen",
+     "text": "Das Plusquamperfekt brauchst du nur, wenn zwei Dinge nacheinander geschehen.",
+     "visuals": [
+      {
+       "type": "tbl",
+       "rows": [
+        [
+         "nur ein Ereignis",
+         "kein Plusquamperfekt nötig",
+         "«Ich ging nach Hause.»"
+        ],
+        [
+         "Verben der Bewegung",
+         "mit «war»",
+         "«Er war gegangen.» (nicht «hatte»)"
+        ],
+        [
+         "zwei Ereignisse",
+         "das frühere im Plusquamperfekt",
+         "«Nachdem er gegessen hatte, ging er.»"
+        ]
+       ],
+       "head": [
+        "Fall",
+        "Regel",
+        "Beispiel"
+       ]
       }
      ]
     },
@@ -251538,6 +252058,37 @@
      ]
     },
     {
+     "h": "Ausnahmen",
+     "text": "Das Plusquamperfekt brauchst du nur, wenn zwei Dinge nacheinander geschehen.",
+     "visuals": [
+      {
+       "type": "tbl",
+       "rows": [
+        [
+         "nur ein Ereignis",
+         "kein Plusquamperfekt nötig",
+         "«Ich ging nach Hause.»"
+        ],
+        [
+         "Verben der Bewegung",
+         "mit «war»",
+         "«Er war gegangen.» (nicht «hatte»)"
+        ],
+        [
+         "zwei Ereignisse",
+         "das frühere im Plusquamperfekt",
+         "«Nachdem er gegessen hatte, ging er.»"
+        ]
+       ],
+       "head": [
+        "Fall",
+        "Regel",
+        "Beispiel"
+       ]
+      }
+     ]
+    },
+    {
      "h": "Merke",
      "text": "Das ist wichtig.",
      "visuals": [
@@ -254860,37 +255411,32 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ausnahmen",
+     "text": "Bei diesen Wörtern musst du aufpassen.",
      "visuals": [
       {
        "type": "tbl",
        "rows": [
         [
-         "Es regnet aber wir gehen hinaus.",
-         "Es regnet, aber wir gehen hinaus.",
-         "Vor «aber» steht ein Komma."
+         "und, oder",
+         "Komma darf fehlen",
+         "«Ich lese und sie malt.»"
         ],
         [
-         "Ich lerne denn ich will gut sein.",
-         "Ich lerne, denn ich will gut sein.",
-         "Vor «denn» steht ein Komma."
+         "aber, denn, sondern",
+         "Komma muss stehen",
+         "«Es regnet, aber wir gehen hinaus.»"
         ],
         [
-         "Die Sonne scheint es ist warm.",
-         "Die Sonne scheint, es ist warm.",
-         "Zwei Hauptsätze trennt ein Komma."
+         "weil, dass",
+         "gehört zum Nebensatz",
+         "«Wir bleiben, weil es regnet.»"
         ]
        ],
        "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
+        "Wort",
+        "Komma?",
+        "Beispiel"
        ]
       }
      ]
@@ -258355,37 +258901,27 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ausnahmen",
+     "text": "Bei diesen Wörtern musst du aufpassen.",
      "visuals": [
       {
        "type": "tbl",
        "rows": [
         [
-         "Es regnet aber wir gehen hinaus.",
-         "Es regnet, aber wir gehen hinaus.",
-         "Vor «aber» steht ein Komma."
+         "aber, denn, sondern",
+         "Komma muss stehen",
+         "«Es regnet, aber wir gehen hinaus.»"
         ],
         [
-         "Ich lerne denn ich will gut sein.",
-         "Ich lerne, denn ich will gut sein.",
-         "Vor «denn» steht ein Komma."
-        ],
-        [
-         "Die Sonne scheint es ist warm.",
-         "Die Sonne scheint, es ist warm.",
-         "Zwei Hauptsätze trennt ein Komma."
+         "weil, dass",
+         "gehört zum Nebensatz",
+         "«Wir bleiben, weil es regnet.»"
         ]
        ],
        "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
+        "Wort",
+        "Komma?",
+        "Beispiel"
        ]
       }
      ]
@@ -261889,37 +262425,37 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ausnahmen",
+     "text": "Hier gibt es Sonderfälle.",
      "visuals": [
       {
        "type": "tbl",
        "rows": [
         [
-         "beim lesen",
-         "beim Lesen",
-         "Signalwort «beim»: Verb wird gross."
+         "montags, abends",
+         "Zeitwörter auf -s: klein",
+         "«abends», aber «am Abend»"
         ],
         [
-         "etwas schönes",
-         "etwas Schönes",
-         "Signalwort «etwas»: Adjektiv wird gross."
+         "heute Abend",
+         "Tageszeit nach heute, gestern: gross",
+         "«gestern Morgen»"
         ],
         [
-         "der Schnelle Läufer",
-         "der schnelle Läufer",
-         "«schnelle» beschreibt «Läufer» und bleibt klein."
+         "Auto fahren",
+         "Nomen mit Verb: gross",
+         "«Rad fahren», «Ski fahren»"
+        ],
+        [
+         "nichts Neues",
+         "nach «etwas, nichts, viel»: gross",
+         "«etwas Schönes», «viel Gutes»"
         ]
        ],
        "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
+        "Fall",
+        "Regel",
+        "Beispiel"
        ]
       }
      ]
@@ -263385,37 +263921,32 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ausnahmen",
+     "text": "Hier gibt es Sonderfälle.",
      "visuals": [
       {
        "type": "tbl",
        "rows": [
         [
-         "beim lesen",
-         "beim Lesen",
-         "Signalwort «beim»: Verb wird gross."
+         "montags, abends",
+         "Zeitwörter auf -s: klein",
+         "«abends», aber «am Abend»"
         ],
         [
-         "etwas schönes",
-         "etwas Schönes",
-         "Signalwort «etwas»: Adjektiv wird gross."
+         "Auto fahren",
+         "Nomen mit Verb: gross",
+         "«Rad fahren», «Ski fahren»"
         ],
         [
-         "der Schnelle Läufer",
-         "der schnelle Läufer",
-         "«schnelle» beschreibt «Läufer» und bleibt klein."
+         "nichts Neues",
+         "nach «etwas, nichts, viel»: gross",
+         "«etwas Schönes», «viel Gutes»"
         ]
        ],
        "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
+        "Fall",
+        "Regel",
+        "Beispiel"
        ]
       }
      ]
@@ -264885,37 +265416,42 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ausnahmen",
+     "text": "Diese Fälle musst du besonders beachten.",
      "visuals": [
       {
        "type": "tbl",
        "rows": [
         [
-         "Ich helfe den Mann.",
-         "Ich helfe dem Mann.",
-         "helfen verlangt den Dativ."
+         "helfen, danken, gehören",
+         "verlangen den Dativ",
+         "«Ich helfe dem Mann.»"
         ],
         [
-         "Das Auto der Vater.",
-         "Das Auto des Vaters.",
-         "Besitz: Genitiv, Endung -s."
+         "auf, in, an, über",
+         "wo? Dativ – wohin? Akkusativ",
+         "«auf dem Stuhl» – «auf den Stuhl»"
         ],
         [
-         "Ich sehe dem Hund.",
-         "Ich sehe den Hund.",
-         "sehen verlangt den Akkusativ."
+         "es gibt",
+         "verlangt den Akkusativ",
+         "«Es gibt einen Apfel.»"
+        ],
+        [
+         "wegen, trotz",
+         "verlangen den Genitiv",
+         "«wegen des Regens»"
+        ],
+        [
+         "die, das",
+         "Nominativ = Akkusativ",
+         "«Die Frau sieht das Kind.»: Probe mit «wer/was»"
         ]
        ],
        "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
+        "Fall",
+        "Regel",
+        "Beispiel"
        ]
       }
      ]
@@ -269250,37 +269786,32 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ausnahmen",
+     "text": "Nicht jedes Verb bildet ein Passiv wie gewohnt.",
      "visuals": [
       {
        "type": "tbl",
        "rows": [
         [
-         "Die Suppe kocht vom Koch.",
-         "Die Suppe wird vom Koch gekocht.",
-         "Passiv braucht «werden» + Partizip II."
+         "Verben ohne Objekt",
+         "Passiv nur mit «es»",
+         "«Es wird getanzt.»"
         ],
         [
-         "Die Suppe wird kochen.",
-         "Die Suppe wird gekocht.",
-         "Nach «werden» steht das Partizip II."
+         "sein statt werden",
+         "Zustandspassiv",
+         "«Die Tür ist geöffnet.» (Zustand)"
         ],
         [
-         "Die Suppe wird von der Koch gekocht.",
-         "Die Suppe wird vom Koch gekocht.",
-         "von + dem = vom."
+         "haben, wissen, kennen",
+         "kein Passiv",
+         "«Das Buch wird gehabt» geht nicht"
         ]
        ],
        "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
+        "Fall",
+        "Besonderheit",
+        "Beispiel"
        ]
       }
      ]
@@ -272169,37 +272700,32 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ausnahmen",
+     "text": "Nicht jedes Verb bildet ein Passiv wie gewohnt.",
      "visuals": [
       {
        "type": "tbl",
        "rows": [
         [
-         "Die Suppe kocht vom Koch.",
-         "Die Suppe wird vom Koch gekocht.",
-         "Passiv braucht «werden» + Partizip II."
+         "Verben ohne Objekt",
+         "Passiv nur mit «es»",
+         "«Es wird getanzt.»"
         ],
         [
-         "Die Suppe wird kochen.",
-         "Die Suppe wird gekocht.",
-         "Nach «werden» steht das Partizip II."
+         "sein statt werden",
+         "Zustandspassiv",
+         "«Die Tür ist geöffnet.» (Zustand)"
         ],
         [
-         "Die Suppe wird von der Koch gekocht.",
-         "Die Suppe wird vom Koch gekocht.",
-         "von + dem = vom."
+         "haben, wissen, kennen",
+         "kein Passiv",
+         "«Das Buch wird gehabt» geht nicht"
         ]
        ],
        "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
+        "Fall",
+        "Besonderheit",
+        "Beispiel"
        ]
       }
      ]
@@ -275082,37 +275608,32 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ausnahmen",
+     "text": "Wenn die Form gleich wie im Indikativ klingt, nimmst du eine Ersatzform.",
      "visuals": [
       {
        "type": "tbl",
        "rows": [
         [
-         "Er sagt, er ist krank.",
-         "Er sagt, er sei krank.",
-         "Indirekte Rede: Konjunktiv I."
+         "sie haben",
+         "Konjunktiv I = Indikativ",
+         "«sie hätten» (Konjunktiv II)"
         ],
         [
-         "Wenn ich Zeit habe, käme ich.",
-         "Wenn ich Zeit hätte, käme ich.",
-         "Möglichkeit: Konjunktiv II."
+         "ich gehe",
+         "gleich wie Indikativ",
+         "«ich ginge» oder «ich würde gehen»"
         ],
         [
-         "Sie sagte, sie hatte keine Zeit.",
-         "Sie sagte, sie habe keine Zeit.",
-         "Konjunktiv I: habe."
+         "sein",
+         "einziges Verb mit eigener Form in allen Personen",
+         "«ich sei, du seist, er sei, wir seien»"
         ]
        ],
        "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
+        "Fall",
+        "Problem",
+        "Lösung"
        ]
       }
      ]
@@ -277481,37 +278002,32 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ausnahmen",
+     "text": "Diese Wörter lösen oft Fehler aus.",
      "visuals": [
       {
        "type": "tbl",
        "rows": [
         [
-         "weil es ist kalt",
-         "weil es kalt ist",
-         "Im Nebensatz steht das Verb am Ende."
+         "denn, aber, sondern",
+         "verbinden Hauptsätze",
+         "Verb bleibt an zweiter Stelle: «..., denn es ist kalt.»"
         ],
         [
-         "dass er kommt morgen",
-         "dass er morgen kommt",
-         "Verb ans Ende."
+         "Nebensatz vorne",
+         "danach folgt gleich das Verb",
+         "«Weil es regnet, bleiben wir.»"
         ],
         [
-         "Wir bleiben zu Hause weil es regnet.",
-         "Wir bleiben zu Hause, weil es regnet.",
-         "Komma zwischen den Sätzen."
+         "mehrteiliges Verb",
+         "Hilfsverb ganz hinten",
+         "«..., weil er gekommen ist.»"
         ]
        ],
        "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
+        "Fall",
+        "Besonderheit",
+        "Beispiel"
        ]
       }
      ]
@@ -281288,37 +281804,32 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ausnahmen",
+     "text": "Diese Wörter lösen oft Fehler aus.",
      "visuals": [
       {
        "type": "tbl",
        "rows": [
         [
-         "weil es ist kalt",
-         "weil es kalt ist",
-         "Im Nebensatz steht das Verb am Ende."
+         "denn, aber, sondern",
+         "verbinden Hauptsätze",
+         "Verb bleibt an zweiter Stelle: «..., denn es ist kalt.»"
         ],
         [
-         "dass er kommt morgen",
-         "dass er morgen kommt",
-         "Verb ans Ende."
+         "Nebensatz vorne",
+         "danach folgt gleich das Verb",
+         "«Weil es regnet, bleiben wir.»"
         ],
         [
-         "Wir bleiben zu Hause weil es regnet.",
-         "Wir bleiben zu Hause, weil es regnet.",
-         "Komma zwischen den Sätzen."
+         "mehrteiliges Verb",
+         "Hilfsverb ganz hinten",
+         "«..., weil er gekommen ist.»"
         ]
        ],
        "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
+        "Fall",
+        "Besonderheit",
+        "Beispiel"
        ]
       }
      ]
@@ -285205,6 +285716,37 @@
      ]
     },
     {
+     "h": "Ausnahmen",
+     "text": "Kleine Wörter, grosse Wirkung.",
+     "visuals": [
+      {
+       "type": "tbl",
+       "rows": [
+        [
+         "das / dass",
+         "Probe: dieses oder welches?",
+         "«Das Buch, das ich lese» – «Ich weiss, dass du kommst.»"
+        ],
+        [
+         "als / wenn",
+         "einmalig oder wiederholt?",
+         "«Als ich klein war, …» – «Wenn ich Zeit habe, …»"
+        ],
+        [
+         "ob",
+         "keine direkte Frage",
+         "«Ich frage, ob er kommt.» (Punkt!)"
+        ]
+       ],
+       "head": [
+        "Wort",
+        "Besonderheit",
+        "Beispiel"
+       ]
+      }
+     ]
+    },
+    {
      "h": "Merke",
      "text": "Das ist wichtig.",
      "visuals": [
@@ -288614,6 +289156,37 @@
         "Art",
         "Frage",
         "Einleitewörter"
+       ]
+      }
+     ]
+    },
+    {
+     "h": "Ausnahmen",
+     "text": "Kleine Wörter, grosse Wirkung.",
+     "visuals": [
+      {
+       "type": "tbl",
+       "rows": [
+        [
+         "das / dass",
+         "Probe: dieses oder welches?",
+         "«Das Buch, das ich lese» – «Ich weiss, dass du kommst.»"
+        ],
+        [
+         "als / wenn",
+         "einmalig oder wiederholt?",
+         "«Als ich klein war, …» – «Wenn ich Zeit habe, …»"
+        ],
+        [
+         "ob",
+         "keine direkte Frage",
+         "«Ich frage, ob er kommt.» (Punkt!)"
+        ]
+       ],
+       "head": [
+        "Wort",
+        "Besonderheit",
+        "Beispiel"
        ]
       }
      ]
@@ -292094,37 +292667,32 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ausnahmen",
+     "text": "Bei Infinitivgruppen und Aufzählungen gibt es feste Regeln.",
      "visuals": [
       {
        "type": "tbl",
        "rows": [
         [
-         "Ich hoffe dass du kommst.",
-         "Ich hoffe, dass du kommst.",
-         "Komma vor dem Nebensatz."
+         "um, ohne, statt zu",
+         "Komma muss stehen",
+         "«Er ging, ohne zu grüssen.»"
         ],
         [
-         "Das Buch das ich lese ist neu.",
-         "Das Buch, das ich lese, ist neu.",
-         "Der Relativsatz hat zwei Kommas."
+         "einfaches «zu»",
+         "Komma darf fehlen",
+         "«Ich versuche zu lernen.»"
         ],
         [
-         "Er ging ohne zu grüssen.",
-         "Er ging, ohne zu grüssen.",
-         "Komma vor «ohne zu»."
+         "zwei Nebensätze mit und",
+         "kein Komma vor «und»",
+         "«Ich weiss, dass er kommt und dass sie bleibt.»"
         ]
        ],
        "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
+        "Fall",
+        "Komma?",
+        "Beispiel"
        ]
       }
      ]
@@ -295378,37 +295946,32 @@
      ]
     },
     {
-     "h": "Typische Fehler",
-     "text": "Diese Fehler passieren oft. So machst du es richtig.",
+     "h": "Ausnahmen",
+     "text": "Bei Infinitivgruppen und Aufzählungen gibt es feste Regeln.",
      "visuals": [
       {
        "type": "tbl",
        "rows": [
         [
-         "Ich hoffe dass du kommst.",
-         "Ich hoffe, dass du kommst.",
-         "Komma vor dem Nebensatz."
+         "um, ohne, statt zu",
+         "Komma muss stehen",
+         "«Er ging, ohne zu grüssen.»"
         ],
         [
-         "Das Buch das ich lese ist neu.",
-         "Das Buch, das ich lese, ist neu.",
-         "Der Relativsatz hat zwei Kommas."
+         "einfaches «zu»",
+         "Komma darf fehlen",
+         "«Ich versuche zu lernen.»"
         ],
         [
-         "Er ging ohne zu grüssen.",
-         "Er ging, ohne zu grüssen.",
-         "Komma vor «ohne zu»."
+         "zwei Nebensätze mit und",
+         "kein Komma vor «und»",
+         "«Ich weiss, dass er kommt und dass sie bleibt.»"
         ]
        ],
        "head": [
-        "Falsch",
-        "Richtig",
-        "Warum"
-       ],
-       "c": [
-        7,
-        7,
-        7
+        "Fall",
+        "Komma?",
+        "Beispiel"
        ]
       }
      ]
