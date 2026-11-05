@@ -323,7 +323,6 @@ function rewardAfter(ok){
   else if(QN>=RWN){var q=QN;rwReset();showReward(q+' Fragen geschafft!')}
 }
 function theoryTask(){if(!nav||nav.view!=='learn')return;TT++;if(TT>=3){rwReset();setTimeout(function(){showReward('3 Aufgaben gelöst!')},600)}}
-(function(){var last=Date.now();setInterval(function(){var n=Date.now(),d=n-last;last=n;if(d>5000)d=5000;if(document.hidden||RW||document.getElementById('rwd'))return;if(nav&&(nav.view==='learn'||nav.view==='practice')){LT+=d;if(LT>=180000){rwReset();showReward('3 Minuten gelernt!')}}},1000)})();
 function T3(f){f=Math.ceil(f*.8);return [Math.ceil(f*.5),Math.ceil(f*.8),f]}
 var GAMES=[
  {id:'flappy',n:'Vogelflucht',e:'🕊️',g:T3(14),time:60,d:'cave',gs:'tap',lb:'Tippen',ctl:'👆 Tippen = flattern',how:'Flieg durch den Gang!'},

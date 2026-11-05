@@ -1754,7 +1754,7 @@ ins.dfy{text-decoration:none;color:#0d652d;background:rgba(52,168,83,.22);border
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION="v5.20";
+var APP_VERSION="v5.21";
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -3711,7 +3711,6 @@ function rewardAfter(ok){
   else if(QN>=RWN){var q=QN;rwReset();showReward(q+' Fragen geschafft!')}
 }
 function theoryTask(){if(!nav||nav.view!=='learn')return;TT++;if(TT>=3){rwReset();setTimeout(function(){showReward('3 Aufgaben gelöst!')},600)}}
-(function(){var last=Date.now();setInterval(function(){var n=Date.now(),d=n-last;last=n;if(d>5000)d=5000;if(document.hidden||RW||document.getElementById('rwd'))return;if(nav&&(nav.view==='learn'||nav.view==='practice')){LT+=d;if(LT>=180000){rwReset();showReward('3 Minuten gelernt!')}}},1000)})();
 function T3(f){f=Math.ceil(f*.8);return [Math.ceil(f*.5),Math.ceil(f*.8),f]}
 var GAMES=[
  {id:'flappy',n:'Vogelflucht',e:'🕊️',g:T3(14),time:60,d:'cave',gs:'tap',lb:'Tippen',ctl:'👆 Tippen = flattern',how:'Flieg durch den Gang!'},
