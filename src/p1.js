@@ -1,7 +1,7 @@
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION="v4.95";
+var APP_VERSION="v4.96";
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -179,12 +179,13 @@ function buildQueue(child,topics,force){
   var p=prog(child),now=Date.now(),all=cardsIn(topics),MAX=10,fv=0;
   var due=all.filter(function(x){return p.cards[x.k]&&p.cards[x.k].d<=now}).sort(function(a,b){return p.cards[a.k].b-p.cards[b.k].b||p.cards[a.k].d-p.cards[b.k].d});
   var fresh=shuffle(all.filter(function(x){return !p.cards[x.k]})).filter(function(x){if(isV(x.c)){fv++;return fv<=5}return true});
-  var q=due.slice(0,MAX);
+  var q=shuffle(due.slice(0,12)).slice(0,5);
   if(q.length<MAX){var room=MAX-q.length,df={},used={};
     all.forEach(function(x){var seen={};sigWords(x.c).forEach(function(w){if(!seen[w]){seen[w]=1;df[w]=(df[w]||0)+1}})});
     var lim=Math.max(6,Math.round(all.length*.06));
     q.forEach(function(x){sigWords(x.c).forEach(function(w){used[w]=1})});
-    q=q.concat(pickDiverse(fresh,due.length?Math.min(room,4):room,used,df,lim))}
+    q=q.concat(pickDiverse(fresh,room,used,df,lim));
+    if(q.length<MAX){due.forEach(function(x){if(q.length<MAX&&q.indexOf(x)<0)q.push(x)})}}
   if(!q.length&&force){q=shuffle(all.filter(function(x){return p.cards[x.k]})).sort(function(a,b){return p.cards[a.k].b-p.cards[b.k].b||p.cards[a.k].t-p.cards[b.k].t}).slice(0,8)}
   return q.map(function(x){return x.k});
 }

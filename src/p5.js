@@ -326,7 +326,7 @@ function theoryTask(){if(!nav||nav.view!=='learn')return;TT++;if(TT>=3){rwReset(
 function T3(f){f=Math.ceil(f*.8);return [Math.ceil(f*.5),Math.ceil(f*.8),f]}
 var GAMES=[
  {id:'flappy',n:'Vogelflucht',e:'🕊️',g:T3(14),time:60,d:'cave',gs:'tap',lb:'Tippen',ctl:'👆 Tippen = flattern',how:'Flieg durch den Gang!'},
- {id:'tetris',n:'Tetris',e:'🧱',g:T3(400),time:60,d:'tet',gs:'tet',lb:'Wischen · Tippen',ctl:'👆 Tippen = drehen · ↔ wischen = bewegen · ↓ wischen = fallen',how:'Volle Reihen geben Punkte!'},
+ {id:'tetris',n:'Tetris',e:'🧱',g:T3(400),time:60,d:'tet',gs:'tet',lb:'Wischen · Tippen',ctl:'👆 Tippen = drehen · ↔ wischen = bewegen · ↓ lang wischen = fallen',how:'Volle Reihen geben Punkte!'},
  {id:'cannon',n:'Taubenjagd',e:'🔫',g:[5,8,10],time:60,d:'shoot',gs:'tap',lb:'Tippen',ctl:'👆 Tippen = schiessen',how:'10 Patronen. Triff die schwarzen Tauben, nicht die bunten!'},
  {id:'runner',n:'Tsunami-Flucht',e:'🌊',g:T3(14),time:60,d:'run',gs:'tap',lb:'Tippen',ctl:'👆 Tippen = springen',how:'Spring über Hindernisse. Krabben darfst du anspringen.'},
  {id:'stack',n:'Burger-Turm',e:'🍔',g:T3(28),time:60,d:'drop',gs:'tap',lb:'Tippen',ctl:'👆 Tippen = Zutat fallen lassen',how:'Triff genau, sonst wird die Lage schmaler.'},
@@ -468,10 +468,15 @@ function gpad(ctl,keys){if(!ctl)return;var M={U:['ArrowUp','▲'],D:['ArrowDown'
   ctl.querySelectorAll('button').forEach(function(b){var f=function(e){e.preventDefault();e.stopPropagation();document.dispatchEvent(new KeyboardEvent('keydown',{key:M[b.dataset.k][0],bubbles:true}));b.classList.add('on');setTimeout(function(){b.classList.remove('on')},120)};b.addEventListener('touchstart',f,{passive:false});b.addEventListener('mousedown',f)})}
 function bindTap(cv,fn){var d=function(e){var t=e.touches?e.touches[0]:e,r=cv.getBoundingClientRect();if(e.cancelable)e.preventDefault();fn(t.clientX-r.left,t.clientY-r.top)};var k=function(e){if(e.key===' '||e.key==='ArrowUp'){e.preventDefault();fn(null)}};cv.addEventListener('touchstart',d,{passive:false});cv.addEventListener('mousedown',d);document.addEventListener('keydown',k);return function(){cv.removeEventListener('touchstart',d);cv.removeEventListener('mousedown',d);document.removeEventListener('keydown',k)}}
 
-function bindSwipe(cv,fn,steps){var st=null;
+function bindSwipe(cv,fn,steps,opt){var st=null;
   function pt(e){var t=(e.touches&&e.touches[0])||(e.changedTouches&&e.changedTouches[0])||e;return {x:t.clientX,y:t.clientY}}
-  function dn(e){if(e.cancelable)e.preventDefault();var p=pt(e),r=cv.getBoundingClientRect();st={x:p.x,y:p.y,ox:p.x,oy:p.y,rx:p.x-r.left,ry:p.y-r.top,mv:false,fired:false}}
+  function dn(e){if(e.cancelable)e.preventDefault();var p=pt(e),r=cv.getBoundingClientRect();st={x:p.x,y:p.y,ox:p.x,oy:p.y,rx:p.x-r.left,ry:p.y-r.top,mv:false,fired:false,rx0:p.x,ry0:p.y}}
   function mv(e){if(!st)return;if(e.cancelable)e.preventDefault();var p=pt(e),dx=p.x-st.ox,dy=p.y-st.oy,T=14;
+    if(opt){var ax=Math.abs(p.x-st.rx0),ay=Math.abs(p.y-st.ry0);
+      if(!st.axis){if(Math.max(ax,ay)<12)return;st.axis=(ay>ax*2)?'y':(ax>=ay?'x':null);st.mv=true;if(!st.axis)return}
+      if(st.axis==='x'){var Tx=opt.tx||26;while(Math.abs(dx)>=Tx){st.mv=true;st.fired=true;fn(dx<0?'L':'R');var sg=dx<0?-1:1;st.ox+=sg*Tx;dx=p.x-st.ox}}
+      else if(!st.done){var dyt=p.y-st.ry0;if(Math.abs(dyt)>=(opt.ty||60)){st.mv=true;st.fired=true;st.done=true;fn(dyt<0?'U':'D')}}
+      return}
     if(Math.abs(dx)>=T&&Math.abs(dx)>=Math.abs(dy)*.8){st.mv=true;st.fired=true;fn(dx<0?'L':'R');st.ox=p.x;st.oy=p.y;if(!steps)st.ox=1e9*(dx<0?-1:1)}
     else if(Math.abs(dy)>=T&&Math.abs(dy)>Math.abs(dx)){st.mv=true;st.fired=true;fn(dy<0?'U':'D');st.oy=p.y;st.ox=p.x;if(!steps)st.oy=1e9*(dy<0?-1:1)}}
   function up(e){if(!st)return;var s0=st;st=null;if(!s0.fired&&!s0.mv)fn('tap',s0.rx,s0.ry)}
@@ -1090,7 +1095,7 @@ tetris:function(cv,cx0,w,h,score,over){
   function draw(){cx.fillStyle=grad(cx,0,0,0,R*S,'#1B1F4B','#3A1C71');cx.fillRect(0,0,C*S,R*S);cx.strokeStyle='rgba(255,255,255,.07)';for(var gx=1;gx<C;gx++){cx.beginPath();cx.moveTo(gx*S,0);cx.lineTo(gx*S,R*S);cx.stroke()}for(var gy=1;gy<R;gy++){cx.beginPath();cx.moveTo(0,gy*S);cx.lineTo(C*S,gy*S);cx.stroke()}var tms=Date.now()*.02;twinkle(cx,C*S,R*S,tms,40);for(var bi=0;bi<8;bi++)glow(cx,(bi*61+tms*(1+bi%3)*.3)%(C*S),((bi*97)+Math.sin(tms*.05+bi)*30+R*S)%(R*S),S*2.4,'rgba('+(bi%2?'255,64,129':'64,196,255')+',.12)');function cell(x,y,c){var k=COL[c-1];glossBlock(cx,x*S+1,y*S+1,S-2,k,shade(k),S*.2)}if(p){var gyy=p.y;while(!hit(p.m,p.x,gyy+1))gyy++;p.m.forEach(function(r,y){r.forEach(function(v,x){if(v){cx.fillStyle='rgba(255,255,255,.14)';rr(cx,(p.x+x)*S+2,(gyy+y)*S+2,S-4,S-4,S*.2);cx.fill()}})})}g.forEach(function(r,y){r.forEach(function(v,x){if(v)cell(x,y,v)})});if(p)p.m.forEach(function(r,y){r.forEach(function(v,x){if(v)cell(p.x+x,p.y+y,p.c)})})}
   var t=setInterval(down,640),an=setInterval(function(){if(!dead)draw()},60);function stop(){clearInterval(t);clearInterval(an);document.removeEventListener('keydown',kd)}
   var kd=function(e){var m={ArrowUp:'U',ArrowDown:'D',ArrowLeft:'L',ArrowRight:'R',' ':'drop'}[e.key];if(m){e.preventDefault();act(m)}};document.addEventListener('keydown',kd);
-  var ub=bindSwipe(cv,function(k){if(k==='L')act('L');else if(k==='R')act('R');else if(k==='D')act('drop');else if(k==='U'||k==='tap')act('U')},true);
+  var ub=bindSwipe(cv,function(k){if(k==='L')act('L');else if(k==='R')act('R');else if(k==='D')act('drop');else if(k==='U'||k==='tap')act('U')},true,{tx:26,ty:70});
   nw();draw();return function(){stop();ub()}}
 };
 
