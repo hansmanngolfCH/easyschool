@@ -49653,7 +49653,7 @@
    "origin": "ki",
    "explain": [
     {
-     "h": "1",
+     "h": "Zählen",
      "text": "Hier sind 3 Äpfel.",
      "visuals": [
       {
@@ -49679,7 +49679,7 @@
      ]
     },
     {
-     "h": "2",
+     "h": "Zählen",
      "text": "Hier sind 5 Äpfel.",
      "visuals": [
       {
@@ -49705,7 +49705,7 @@
      ]
     },
     {
-     "h": "3",
+     "h": "Zahlenstrahl",
      "text": "Hier steht die 7.",
      "visuals": [
       {
@@ -49721,7 +49721,7 @@
      ]
     },
     {
-     "h": "4",
+     "h": "Zahlenstrahl",
      "text": "Hier steht die 9.",
      "visuals": [
       {
@@ -49736,7 +49736,7 @@
      ]
     },
     {
-     "h": "5",
+     "h": "Nachbarn",
      "text": "Die 4 liegt dazwischen.",
      "visuals": [
       {
@@ -49771,7 +49771,7 @@
      ]
     },
     {
-     "h": "6",
+     "h": "Punkte",
      "text": "Das sind 6 Punkte.",
      "visuals": [
       {
@@ -49794,7 +49794,7 @@
      ]
     },
     {
-     "h": "7",
+     "h": "Zerlegen",
      "text": "3 plus 4: 7.",
      "visuals": [
       {
@@ -49824,7 +49824,7 @@
      ]
     },
     {
-     "h": "8",
+     "h": "Zehn",
      "text": "Das ist die 10.",
      "visuals": [
       {
@@ -49840,7 +49840,7 @@
      ]
     },
     {
-     "h": "⭐",
+     "h": "Merke",
      "text": "Merke dir diese Zahlen.",
      "visuals": [
       {
@@ -51404,7 +51404,7 @@
    "origin": "ki",
    "explain": [
     {
-     "h": "1",
+     "h": "Zehn",
      "text": "Zehn Punkte sind voll.",
      "visuals": [
       {
@@ -51427,7 +51427,7 @@
      ]
     },
     {
-     "h": "2",
+     "h": "Zehn und mehr",
      "text": "Zehn und drei: 13.",
      "visuals": [
       {
@@ -51457,7 +51457,7 @@
      ]
     },
     {
-     "h": "3",
+     "h": "Zehn und mehr",
      "text": "Zehn und sechs: 16.",
      "visuals": [
       {
@@ -51487,7 +51487,7 @@
      ]
     },
     {
-     "h": "4",
+     "h": "Zehner, Einer",
      "text": "1 Zehner, 4 Einer.",
      "visuals": [
       {
@@ -51519,7 +51519,7 @@
      ]
     },
     {
-     "h": "5",
+     "h": "Zehner, Einer",
      "text": "1 Zehner, 9 Einer.",
      "visuals": [
       {
@@ -51551,7 +51551,7 @@
      ]
     },
     {
-     "h": "6",
+     "h": "Zahlenstrahl",
      "text": "Hier steht die 15.",
      "visuals": [
       {
@@ -51567,7 +51567,7 @@
      ]
     },
     {
-     "h": "7",
+     "h": "Nachbarn",
      "text": "12 liegt vor 18.",
      "visuals": [
       {
@@ -51584,7 +51584,7 @@
      ]
     },
     {
-     "h": "8",
+     "h": "Zerlegen",
      "text": "Zehn und sieben: 17.",
      "visuals": [
       {
@@ -51605,7 +51605,7 @@
      ]
     },
     {
-     "h": "⭐",
+     "h": "Merke",
      "text": "Merke dir diese Zahlen.",
      "visuals": [
       {
@@ -53292,7 +53292,7 @@
    "origin": "ki",
    "explain": [
     {
-     "h": "1",
+     "h": "Mehr",
      "text": "Mehr: 6 gegen 3.",
      "visuals": [
       {
@@ -53332,7 +53332,7 @@
      ]
     },
     {
-     "h": "2",
+     "h": "Weniger",
      "text": "Weniger: 2 gegen 7.",
      "visuals": [
       {
@@ -53372,7 +53372,7 @@
      ]
     },
     {
-     "h": "3",
+     "h": "Gleich",
      "text": "Beide gleich: je 4.",
      "visuals": [
       {
@@ -53412,7 +53412,7 @@
      ]
     },
     {
-     "h": "4",
+     "h": "Balken",
      "text": "Der lange Balken gewinnt.",
      "visuals": [
       {
@@ -53440,7 +53440,7 @@
      ]
     },
     {
-     "h": "5",
+     "h": "Balken",
      "text": "Welcher Balken ist länger?",
      "visuals": [
       {
@@ -53468,7 +53468,7 @@
      ]
     },
     {
-     "h": "6",
+     "h": "Zahlenstrahl",
      "text": "Rechts ist grösser.",
      "visuals": [
       {
@@ -53485,7 +53485,7 @@
      ]
     },
     {
-     "h": "7",
+     "h": "Zeichen",
      "text": "Merke dir diese Zeichen.",
      "visuals": [
       {
@@ -53514,7 +53514,7 @@
      ]
     },
     {
-     "h": "⭐",
+     "h": "Üben",
      "text": "Welches Zeichen passt?",
      "visuals": [
       {
@@ -55992,7 +55992,7 @@
    "origin": "ki",
    "explain": [
     {
-     "h": "1",
+     "h": "Doppelt",
      "text": "Doppelt: 3 plus 3.",
      "visuals": [
       {
@@ -56027,7 +56027,7 @@
      ]
     },
     {
-     "h": "2",
+     "h": "Doppelt",
      "text": "Doppelt: 4 plus 4.",
      "visuals": [
       {
@@ -56062,7 +56062,7 @@
      ]
     },
     {
-     "h": "3",
+     "h": "Doppelt",
      "text": "Doppelt 5 ist 10.",
      "visuals": [
       {
@@ -56092,7 +56092,7 @@
      ]
     },
     {
-     "h": "4",
+     "h": "Balken",
      "text": "Doppelt heisst zweimal gleich.",
      "visuals": [
       {
@@ -56143,7 +56143,7 @@
      ]
     },
     {
-     "h": "5",
+     "h": "Halbe",
      "text": "Die Hälfte von 8.",
      "visuals": [
       {
@@ -56183,7 +56183,7 @@
      ]
     },
     {
-     "h": "6",
+     "h": "Halbe",
      "text": "Die Hälfte von 10.",
      "visuals": [
       {
@@ -56224,7 +56224,7 @@
      ]
     },
     {
-     "h": "7",
+     "h": "Halbe",
      "text": "Halbe von 6: 3.",
      "visuals": [
       {
@@ -56270,7 +56270,7 @@
      ]
     },
     {
-     "h": "⭐",
+     "h": "Merke",
      "text": "Merke dir diese Aufgaben.",
      "visuals": [
       {
@@ -57561,7 +57561,7 @@
    "origin": "ki",
    "explain": [
     {
-     "h": "1",
+     "h": "Plus",
      "text": "Zusammen sind es 5.",
      "visuals": [
       {
@@ -57611,7 +57611,7 @@
      ]
     },
     {
-     "h": "2",
+     "h": "Plus",
      "text": "Zusammen sind es 7.",
      "visuals": [
       {
@@ -57661,7 +57661,7 @@
      ]
     },
     {
-     "h": "3",
+     "h": "Punkte",
      "text": "Zähle alle Punkte.",
      "visuals": [
       {
@@ -57676,7 +57676,7 @@
      ]
     },
     {
-     "h": "4",
+     "h": "Springen",
      "text": "Springe 3 nach rechts.",
      "visuals": [
       {
@@ -57692,7 +57692,7 @@
      ]
     },
     {
-     "h": "5",
+     "h": "Punkte",
      "text": "Grün und blau zusammen.",
      "visuals": [
       {
@@ -57707,7 +57707,7 @@
      ]
     },
     {
-     "h": "6",
+     "h": "Tauschen",
      "text": "Tauschen ändert nichts.",
      "visuals": [
       {
@@ -57743,7 +57743,7 @@
      ]
     },
     {
-     "h": "7",
+     "h": "Üben",
      "text": "Merke dir diese Aufgaben.",
      "visuals": [
       {
@@ -57766,7 +57766,7 @@
      ]
     },
     {
-     "h": "8",
+     "h": "Zehn",
      "text": "Sieben und drei: 10.",
      "visuals": [
       {
@@ -57796,7 +57796,7 @@
      ]
     },
     {
-     "h": "⭐",
+     "h": "Merke",
      "text": "Merke dir diese Zeichen.",
      "visuals": [
       {
@@ -59071,7 +59071,7 @@
    "origin": "ki",
    "explain": [
     {
-     "h": "1",
+     "h": "Minus",
      "text": "Zwei Äpfel gehen weg.",
      "visuals": [
       {
@@ -59118,7 +59118,7 @@
      ]
     },
     {
-     "h": "2",
+     "h": "Minus",
      "text": "Drei Fische schwimmen weg.",
      "visuals": [
       {
@@ -59165,7 +59165,7 @@
      ]
     },
     {
-     "h": "3",
+     "h": "Wegnehmen",
      "text": "Nimm 3 Punkte weg.",
      "visuals": [
       {
@@ -59180,7 +59180,7 @@
      ]
     },
     {
-     "h": "4",
+     "h": "Umkehren",
      "text": "Minus ist Plus rückwärts.",
      "visuals": [
       {
@@ -59212,7 +59212,7 @@
      ]
     },
     {
-     "h": "5",
+     "h": "Null",
      "text": "Alles weg: null übrig.",
      "visuals": [
       {
@@ -59259,7 +59259,7 @@
      ]
     },
     {
-     "h": "6",
+     "h": "Gegenteile",
      "text": "Plus, Minus: Gegenteile.",
      "visuals": [
       {
@@ -59325,7 +59325,7 @@
      ]
     },
     {
-     "h": "7",
+     "h": "Wegnehmen",
      "text": "Nimm 4 Punkte weg.",
      "visuals": [
       {
@@ -59340,7 +59340,7 @@
      ]
     },
     {
-     "h": "8",
+     "h": "Springen",
      "text": "Springe zwei Mal links.",
      "visuals": [
       {
@@ -59360,7 +59360,7 @@
      ]
     },
     {
-     "h": "⭐",
+     "h": "Merke",
      "text": "Merke dir diese Zeichen.",
      "visuals": [
       {
@@ -60563,7 +60563,7 @@
    "origin": "ki",
    "explain": [
     {
-     "h": "1",
+     "h": "Zehner füllen",
      "text": "Fülle zuerst die Zehn.",
      "visuals": [
       {
@@ -60588,7 +60588,7 @@
      ]
     },
     {
-     "h": "2",
+     "h": "Springen",
      "text": "Erst zur Zehn springen.",
      "visuals": [
       {
@@ -60608,7 +60608,7 @@
      ]
     },
     {
-     "h": "3",
+     "h": "Zerlegen",
      "text": "Erst 2, dann 3.",
      "visuals": [
       {
@@ -60658,7 +60658,7 @@
      ]
     },
     {
-     "h": "4",
+     "h": "Zerlegen",
      "text": "Erst 1, dann 5.",
      "visuals": [
       {
@@ -60703,7 +60703,7 @@
      ]
     },
     {
-     "h": "5",
+     "h": "Zerlegen",
      "text": "Erst 3, dann 3.",
      "visuals": [
       {
@@ -60748,7 +60748,7 @@
      ]
     },
     {
-     "h": "6",
+     "h": "Doppelt",
      "text": "Doppelt 7 ergibt 14.",
      "visuals": [
       {
@@ -60778,7 +60778,7 @@
      ]
     },
     {
-     "h": "7",
+     "h": "Doppelt",
      "text": "Doppelt 8 ergibt 16.",
      "visuals": [
       {
@@ -60808,7 +60808,7 @@
      ]
     },
     {
-     "h": "8",
+     "h": "Fast doppelt",
      "text": "Doppelt 7, plus 1.",
      "visuals": [
       {
@@ -60848,7 +60848,7 @@
      ]
     },
     {
-     "h": "⭐",
+     "h": "Merke",
      "text": "Merke dir diese Zahlen.",
      "visuals": [
       {
@@ -62183,7 +62183,7 @@
    "origin": "ki",
    "explain": [
     {
-     "h": "1",
+     "h": "Wegnehmen",
      "text": "Nimm 8 Punkte weg.",
      "visuals": [
       {
@@ -62208,7 +62208,7 @@
      ]
     },
     {
-     "h": "2",
+     "h": "Springen",
      "text": "Erst zur Zehn zurück.",
      "visuals": [
       {
@@ -62228,7 +62228,7 @@
      ]
     },
     {
-     "h": "3",
+     "h": "Zehner",
      "text": "Erst bis 10 zurück.",
      "visuals": [
       {
@@ -62259,7 +62259,7 @@
      ]
     },
     {
-     "h": "4",
+     "h": "Zerlegen",
      "text": "Erst 5, dann 4.",
      "visuals": [
       {
@@ -62304,7 +62304,7 @@
      ]
     },
     {
-     "h": "5",
+     "h": "Zerlegen",
      "text": "Erst 4, dann 2.",
      "visuals": [
       {
@@ -62349,7 +62349,7 @@
      ]
     },
     {
-     "h": "6",
+     "h": "Probe",
      "text": "Plus prüft das Minus.",
      "visuals": [
       {
@@ -62430,7 +62430,7 @@
      ]
     },
     {
-     "h": "7",
+     "h": "Halbe",
      "text": "Halbe von 12: 6.",
      "visuals": [
       {
@@ -62460,7 +62460,7 @@
      ]
     },
     {
-     "h": "⭐",
+     "h": "Merke",
      "text": "Merke dir diese Zeichen.",
      "visuals": [
       {
@@ -63754,7 +63754,7 @@
    "origin": "ki",
    "explain": [
     {
-     "h": "1",
+     "h": "Kreis",
      "text": "Der Kreis ist rund.",
      "visuals": [
       {
@@ -63780,7 +63780,7 @@
      ]
     },
     {
-     "h": "2",
+     "h": "Dreieck",
      "text": "Dreieck: drei Ecken.",
      "visuals": [
       {
@@ -63806,7 +63806,7 @@
      ]
     },
     {
-     "h": "3",
+     "h": "Quadrat",
      "text": "Quadrat: vier gleiche Seiten.",
      "visuals": [
       {
@@ -63832,7 +63832,7 @@
      ]
     },
     {
-     "h": "4",
+     "h": "Rechteck",
      "text": "Rechteck: zwei lange Seiten.",
      "visuals": [
       {
@@ -63858,7 +63858,7 @@
      ]
     },
     {
-     "h": "5",
+     "h": "Viereck",
      "text": "Viereck: vier Ecken.",
      "visuals": [
       {
@@ -63884,7 +63884,7 @@
      ]
     },
     {
-     "h": "6",
+     "h": "Im Alltag",
      "text": "Wo siehst du Formen?",
      "visuals": [
       {
@@ -63912,7 +63912,7 @@
      ]
     },
     {
-     "h": "7",
+     "h": "Vergleichen",
      "text": "Kreis oder Dreieck?",
      "visuals": [
       {
@@ -63928,7 +63928,7 @@
      ]
     },
     {
-     "h": "⭐",
+     "h": "Merke",
      "text": "Merke dir diese Formen.",
      "visuals": [
       {
@@ -65207,7 +65207,7 @@
    "origin": "ki",
    "explain": [
     {
-     "h": "1",
+     "h": "Franken",
      "text": "Diese Münzen kennst du.",
      "visuals": [
       {
@@ -65233,7 +65233,7 @@
      ]
     },
     {
-     "h": "2",
+     "h": "Rappen",
      "text": "Das sind Rappen-Münzen.",
      "visuals": [
       {
@@ -65254,7 +65254,7 @@
      ]
     },
     {
-     "h": "3",
+     "h": "Rappen",
      "text": "Kleine Münzen: Rappen.",
      "visuals": [
       {
@@ -65280,7 +65280,7 @@
      ]
     },
     {
-     "h": "4",
+     "h": "Zählen",
      "text": "Drei Mal 1 Franken.",
      "visuals": [
       {
@@ -65311,7 +65311,7 @@
      ]
     },
     {
-     "h": "5",
+     "h": "Zusammen",
      "text": "5 plus 2 Franken.",
      "visuals": [
       {
@@ -65347,7 +65347,7 @@
      ]
     },
     {
-     "h": "6",
+     "h": "Springen",
      "text": "Erst 5, dann 2.",
      "visuals": [
       {
@@ -65367,7 +65367,7 @@
      ]
     },
     {
-     "h": "7",
+     "h": "Rappen",
      "text": "10 plus 5 Rappen.",
      "visuals": [
       {
@@ -65403,7 +65403,7 @@
      ]
     },
     {
-     "h": "8",
+     "h": "Rückgeld",
      "text": "10 Franken minus 7.",
      "visuals": [
       {
@@ -65454,7 +65454,7 @@
      ]
     },
     {
-     "h": "⭐",
+     "h": "Merke",
      "text": "Merke dir diese Münzen.",
      "visuals": [
       {
@@ -66933,7 +66933,7 @@
    "origin": "ki",
    "explain": [
     {
-     "h": "1",
+     "h": "Drei Uhr",
      "text": "Es ist drei Uhr.",
      "visuals": [
       {
@@ -66954,7 +66954,7 @@
      ]
     },
     {
-     "h": "2",
+     "h": "Sechs Uhr",
      "text": "Es ist sechs Uhr.",
      "visuals": [
       {
@@ -66975,7 +66975,7 @@
      ]
     },
     {
-     "h": "3",
+     "h": "Neun Uhr",
      "text": "Es ist neun Uhr.",
      "visuals": [
       {
@@ -66996,7 +66996,7 @@
      ]
     },
     {
-     "h": "4",
+     "h": "Zwölf Uhr",
      "text": "Es ist zwölf Uhr.",
      "visuals": [
       {
@@ -67017,7 +67017,7 @@
      ]
     },
     {
-     "h": "5",
+     "h": "Eine Stunde",
      "text": "Eine Stunde später.",
      "visuals": [
       {
@@ -67053,7 +67053,7 @@
      ]
     },
     {
-     "h": "6",
+     "h": "Springen",
      "text": "Jede Stunde plus eins.",
      "visuals": [
       {
@@ -67077,7 +67077,7 @@
      ]
     },
     {
-     "h": "7",
+     "h": "Üben",
      "text": "Welche Uhr zeigt sieben?",
      "visuals": [
       {
@@ -67098,7 +67098,7 @@
      ]
     },
     {
-     "h": "⭐",
+     "h": "Merke",
      "text": "Der kurze Zeiger: Stunde.",
      "visuals": [
       {
