@@ -1720,6 +1720,18 @@ ins.dfy{text-decoration:none;color:#0d652d;background:rgba(52,168,83,.22);border
 .xg-pie svg,.xg-eq svg{filter:none}
 .xg-end h1{color:#2b2f5e}
 .xg-h span.on{color:#EA4335}
+.xo b.xl{font-size:.82rem;line-height:1.15;font-weight:700}
+.xg-vis{display:flex;justify-content:center}.xg-vis .visrow{margin:0;gap:10px}.xg-vis svg,.xg-vis .vis{max-height:170px}
+
+/* v5.04 Easy lernen: lange Antworten nie abschneiden */
+.xg-opts,.xg-opts.n2,.xg-opts.n3,.xg-opts.n4,.xg-opts.n5{grid-auto-rows:minmax(64px,auto)}
+.xo{height:auto;min-height:64px;overflow:visible;padding:10px 12px}
+.xo b.xl{font-size:.98rem;line-height:1.25;font-weight:700}
+.xo b.xl2{font-size:.9rem}
+.xg-opts.col1{grid-template-columns:1fr}
+.xg-opts.col1 .xo{align-items:flex-start;text-align:left}
+.xg-opts.n5.col1 .xo:last-child{grid-column:auto}
+.xo,.xo b,.xg-q{overflow-wrap:anywhere;min-width:0}.xg-opts>*{min-width:0}.xg{min-width:0;max-width:100%}.stack{min-width:0}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1727,7 +1739,7 @@ ins.dfy{text-decoration:none;color:#0d652d;background:rgba(52,168,83,.22);border
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION="v5.03";
+var APP_VERSION="v5.04";
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -4460,33 +4472,93 @@ function xgDis(right,pool,k){
     shuffle(good).concat(shuffle(cand.filter(function(x){return good.indexOf(x)<0}))).forEach(add)}
   return out.slice(0,k)
 }
-function xgBuild(t){
-  var n={kind:'',rounds:[]},ch=t.child,sub=t.subject,all=topicsOf(ch,sub),i;
-  if(t.cards.some(isV)){
-    n.kind='salat';
-    var ok=function(c){var f=c.fw||'';return isV(c)&&wc(f)<=2&&!/[\/…(),.?!]/.test(f)&&f.replace(/[^a-zàâäçéèêëîïôöùûüÿœæß]/gi,'').length>=4&&f.replace(/[^a-zàâäçéèêëîïôöùûüÿœæß]/gi,'').length<=13};
-    var own=shuffle(t.cards.filter(ok)),other=[];
-    all.forEach(function(x){if(x.id!==t.id)x.cards.forEach(function(c){if(ok(c))other.push(c)})});
-    var pick=own.concat(shuffle(other)).slice(0,10);
-    pick.forEach(function(c){n.rounds.push({kind:'salat',c:c,fw:c.fw,clue:c.de[0],pos:0,wr:0,used:{}})});
-    n.rounds=shuffle(n.rounds);
-  }else if(sub==='mathe'){
-    n.kind='math';
-    var fam=[],own2=/bruch/.test(t.id)?'f':/pyth/.test(t.id)?'p':'m';
-    all.forEach(function(x){fam.push(/bruch/.test(x.id)?'f':/pyth/.test(x.id)?'p':'m')});
-    fam.push(own2,own2);
-    var sh=t.cards.filter(function(c){return c.q&&c.a&&String(c.a).length<=14&&String(c.q).length<=120&&!/\n/.test(c.q)}),mine=own2==='m'&&sh.length>=4;
-    if(mine){var ans2=sh.map(function(c){return String(c.a)});shuffle(sh).slice(0,10).forEach(function(c){var right=String(c.a),oth=xgDis(right,ans2,3);if(oth.length<2)return;n.rounds.push({kind:'opt',svg:'<div class="xg-q">'+esc(c.q)+'</div>',opts:shuffle([right].concat(oth)).map(function(x){return {h:'<b>'+esc(x)+'</b>',ok:x===right}})})})}
-    else for(i=0;i<10;i++){var r=own2==='f'?xgFrac():own2==='p'?xgPyth():xgMult();r.kind='opt';n.rounds.push(r)}
-  }else{
-    n.kind='quiz';var pool=[],ans=[];
-    [t].forEach(function(x){x.exam.questions.forEach(function(q){if(q.type==='mc'&&Array.isArray(q.options)&&q.options.length>=3&&typeof q.answer==='number')pool.push({q:q.q,o:q.options,a:q.answer});else if(q.type==='input'&&q.answer&&q.answer[0]&&String(q.answer[0]).length<=24)ans.push(q)})});
-    var made=shuffle(pool).slice(0,10).map(function(p){return {kind:'opt',svg:'<div class="xg-q">'+esc(p.q)+'</div>',opts:p.o.map(function(x,k){return {h:'<b>'+esc(x)+'</b>',ok:k===p.a}})}});
-    if(made.length<10){
-      var lib=ans.map(function(q){return String(q.answer[0])});
-      shuffle(ans).slice(0,10-made.length).forEach(function(q){var right=String(q.answer[0]),others=xgDis(right,lib,3);if(others.length<2)return;made.push({kind:'opt',svg:'<div class="xg-q">'+esc(q.q)+'</div>',opts:shuffle([right].concat(others)).map(function(x){return {h:'<b>'+esc(x)+'</b>',ok:x===right}})})});
+function xgSeenGet(k){try{return JSON.parse(localStorage.getItem(k)||'{}')||{}}catch(e){return {}}}
+function xgSeenSet(k,o){try{var ks=Object.keys(o);if(ks.length>400){var n2={};ks.slice(-300).forEach(function(x){n2[x]=1});o=n2}localStorage.setItem(k,JSON.stringify(o))}catch(e){}}
+function xgOptRound(q,right,others,key,vis){
+  var all=[right].concat(others),long=all.some(function(x){return String(x).length>26});
+  var mx=Math.max.apply(null,all.map(function(x){return String(x).length})),vk=vis?JSON.stringify(vis):'';return {cols1:mx>26,key:key||q+'|'+right+vk,ans:right+vk,kind:'opt',svg:(vis?'<div class="xg-vis">'+visuals(vis)+'</div>':'')+'<div class="xg-q">'+esc(q).replace(/\n/g,'<br>')+'</div>',opts:shuffle(all.map(function(x){return {h:'<b'+(mx>45?' class="xl xl2"':long?' class="xl"':'')+'>'+esc(x)+'</b>',ok:x===right}}))}
+}
+function xgCommaVar(sent){
+  var out=[],nc=sent.replace(/,/g,'');if(nc!==sent)out.push(nc);
+  var i=sent.indexOf(',');if(i>0){var w=sent.slice(0,i).lastIndexOf(' ');if(w>0)out.push(sent.slice(0,w)+', '+sent.slice(w+1,i)+sent.slice(i+1))}
+  var sp=sent.indexOf(' ');if(sp>0&&sent.charAt(sp-1)!==','){out.push(sent.slice(0,sp)+','+sent.slice(sp))}
+  return out
+}
+function xgCardPool(t,all){
+  var items=[],BAD=/\b(Bild|Grafik|Zeichnung|siehe|abgebildet|rote Linie|Tabelle|oben|unten)\b/i,textOnly=function(c){return c.q&&c.q.length<=140&&(c.visuals||!BAD.test(c.q))};
+  var shortA=[];all.forEach(function(x){x.cards.forEach(function(c){if(!isV(c)&&textOnly(c)&&c.a&&String(c.a).length<=30)shortA.push(String(c.a))})});
+  t.cards.forEach(function(c){
+    if(isV(c)||!textOnly(c)||c.a==null)return;
+    var right=String(c.a);
+    if(Array.isArray(c.opts)&&c.opts.length>=3&&c.opts.map(String).indexOf(right)>=0){
+      var oth=c.opts.map(String).filter(function(x,i,aa){return x!==right&&aa.indexOf(x)===i&&x.length<=60});
+      if(right.length<=60&&oth.length>=2)items.push(xgOptRound(c.q,right,shuffle(oth).slice(0,3),null,c.visuals));
+    }else if(c.pre&&Array.isArray(c.ans)&&c.ans[0]&&String(c.ans[0]).length<=60&&String(c.pre).length<=60){
+      var r2=String(c.ans[0]),ot=[String(c.pre)].concat(xgCommaVar(r2)).filter(function(x,i,aa){return x!==r2&&aa.indexOf(x)===i});
+      if(ot.length>=2&&/,/.test(r2+c.pre))items.push(xgOptRound('Welcher Satz ist richtig?',r2,ot.slice(0,3)));
+    }else if(right.length<=30&&!/\n/.test(right)){
+      var d=xgDis(right,shortA,3);if(d.length>=2)items.push(xgOptRound(c.q,right,d,null,c.visuals));
     }
-    n.rounds=shuffle(made);
+  });
+  var lib=[];
+  t.exam.questions.forEach(function(q){
+    if(q.type==='mc'&&Array.isArray(q.options)&&q.options.length>=3&&typeof q.answer==='number'&&q.q.length<=140&&!BAD.test(q.q)&&q.options.every(function(o){return String(o).length<=60})){
+      var rt=String(q.options[q.answer]);items.push(xgOptRound(q.q,rt,q.options.map(String).filter(function(x,i){return i!==q.answer}).slice(0,3),null,q.visuals))
+    }else if(q.type==='input'&&q.answer&&q.answer[0]&&String(q.answer[0]).length<=24&&!BAD.test(q.q))lib.push(q)
+  });
+  var libA=lib.map(function(q){return String(q.answer[0])}).concat(shortA);
+  lib.forEach(function(q){var rt=String(q.answer[0]),d=xgDis(rt,libA,3);if(d.length>=2)items.push(xgOptRound(q.q,rt,d,null,q.visuals))});
+  return items
+}
+function xgVocabPool(t,all){
+  var items=[],lang=t.subject==='franz'?'Französisch':'Englisch',cs=t.cards.filter(function(c){return isV(c)&&c.de&&c.de[0]&&String(c.fw).length<=34&&String(c.de[0]).length<=34});
+  var fws=cs.map(function(c){return String(c.fw)}),des=cs.map(function(c){return String(c.de[0])});
+  all.forEach(function(x){if(x.id!==t.id)x.cards.forEach(function(c){if(isV(c)&&c.de&&c.de[0]&&String(c.fw).length<=34&&String(c.de[0]).length<=34){fws.push(String(c.fw));des.push(String(c.de[0]))}})});
+  cs.forEach(function(c){
+    var fw=String(c.fw),de=String(c.de[0]),d1=xgDis(fw,fws,3),d2=xgDis(de,des,3);
+    if(d1.length>=2)items.push(xgOptRound('Wie heisst «'+de+'» auf '+lang+'?',fw,d1));
+    if(d2.length>=2)items.push(xgOptRound('Was bedeutet «'+fw+'»?',de,d2));
+  });
+  return items
+}
+function xgSalatPool(t){
+  var ok=function(c){var f=c.fw||'';return isV(c)&&wc(f)<=2&&!/[\/…(),.?!]/.test(f)&&f.replace(/[^a-zàâäçéèêëîïôöùûüÿœæß]/gi,'').length>=4&&f.replace(/[^a-zàâäçéèêëîïôöùûüÿœæß]/gi,'').length<=13};
+  return t.cards.filter(ok).map(function(c){return {key:'S|'+c.fw,ans:c.fw,salat:1,round:{kind:'salat',c:c,fw:c.fw,clue:c.de[0],pos:0,wr:0,used:{}}}})
+}
+function xgPick(t,items,N,maxSalat){
+  var sk='xgs_'+(nav.child||'')+'_'+t.id,seen=xgSeenGet(sk),fresh=[],stale=[],out=[],ra={},rq={},ns=0;
+  items.forEach(function(x){(seen[x.key]?stale:fresh).push(x)});
+  if(fresh.length<N){seen={};fresh=items.slice();stale=[]}
+  var order=shuffle(fresh).concat(shuffle(stale));
+  function take(strict){order.forEach(function(x){
+    if(out.length>=N||out.indexOf(x)>=0)return;
+    if(x.salat&&ns>=maxSalat)return;
+    if(strict&&(ra[x.ans]||rq[x.svg||x.key]))return;
+    out.push(x);ra[x.ans]=1;rq[x.svg||x.key]=1;if(x.salat)ns++})}
+  take(true);take(false);
+  out=shuffle(out);
+  out.forEach(function(x){seen[x.key]=1});xgSeenSet(sk,seen);
+  return out.map(function(x){return x.salat?x.round:x})
+}
+function xgBuild(t){
+  var n={kind:'',rounds:[]},ch=t.child,sub=t.subject,all=topicsOf(ch,sub),i,N=10;
+  if(t.cards.some(isV)){
+    n.kind='vocab';
+    n.rounds=xgPick(t,xgVocabPool(t,all).concat(xgSalatPool(t)),N,3);
+  }else if(sub==='mathe'&&(/bruch|pyth/.test(t.id))){
+    n.kind='math';var seenS={},tries=0,fr=/bruch/.test(t.id);
+    while(n.rounds.length<N&&tries++<80){var r=fr?xgFrac():xgPyth(),sg=r.svg+r.opts.map(function(o){return o.h}).join('');if(seenS[sg])continue;seenS[sg]=1;r.kind='opt';n.rounds.push(r)}
+  }else{
+    n.kind=sub==='mathe'?'math':'quiz';
+    var pl=xgCardPool(t,all);
+    if(pl.length<30){var base=t.id.replace(/^kl\d+-/,''),cl=+t.id.match(/^kl(\d+)/)[1],sib=all.filter(function(x){return x.id!==t.id&&x.id.replace(/^kl\d+-/,'')===base&&Math.abs(+x.id.match(/^kl(\d+)/)[1]-cl)<=3});
+      sib.forEach(function(x){pl=pl.concat(xgCardPool(x,all))});
+      if(pl.length<30){all.filter(function(x){return x.id!==t.id&&x.chapter&&x.chapter===t.chapter&&sib.indexOf(x)<0}).forEach(function(x){pl=pl.concat(xgCardPool(x,all))})}
+      var sg={};pl=pl.filter(function(x){if(sg[x.key])return false;sg[x.key]=1;return true})}
+    if(sub==='mathe'&&/plus|minus/.test(t.id)){var big=/20/.test(t.id)?20:10,pm=/plus/.test(t.id),k2=0,sx={};pl.forEach(function(x){sx[x.key]=1});
+      while(pl.length<40&&k2++<400){var a2=1+Math.floor(Math.random()*(big-1)),b2=1+Math.floor(Math.random()*(big-1));if(pm&&a2+b2>big)continue;if(!pm&&b2>a2)continue;var q2=a2+(pm?' + ':' − ')+b2+' = ?',r2=pm?a2+b2:a2-b2;if(sx[q2+r2])continue;sx[q2+r2]=1;var o2=[r2+1,r2-1,r2+2,r2-2,r2+10,r2-10].filter(function(v){return v>=0&&v!==r2});pl.push(xgOptRound(q2,String(r2),shuffle(o2).slice(0,3).map(String),q2+r2))}}
+    n.rounds=xgPick(t,pl,N,0);
+    if(sub==='mathe'&&n.rounds.length<N){var tr=0,seenM={};n.rounds.forEach(function(r){seenM[r.svg]=1});while(n.rounds.length<N&&tr++<60){var rr=xgMult();if(seenM[rr.svg])continue;seenM[rr.svg]=1;rr.kind='opt';n.rounds.push(rr)}}
   }
   return n;
 }
@@ -4499,7 +4571,7 @@ ACT.xgame=function(b){
 ACT.xgquit=function(){clearTimeout(XGT);ACT.back()};
 function xgHearts(n){return ''}
 function vXg(){
-  var n=nav,t=topicById(n.topicId),NAME={salat:'Buchstaben-Salat',math:'Mathe-Knobler',quiz:'Blitz-Quiz'}[n.kind];
+  var n=nav,t=topicById(n.topicId),NAME={salat:'Buchstaben-Salat',vocab:'Vokabel-Mix',math:'Mathe-Knobler',quiz:'Blitz-Quiz'}[n.kind];
   if(n.phase==='end'){
     var tot=n.rounds.length;
     return '<div class="stack"><div class="xg xg-end xg-'+n.kind+' s-'+t.subject+'"><div class="xg-trophy">'+(n.ok===tot&&!n.miss?'🏆':n.ok>=7?'🥇':n.ok>=4?'🥈':'🎯')+'</div><h1>'+n.ok+' / '+tot+'</h1><p>'+n.ok+' von '+tot+' Aufgaben geschafft'+(n.ok===tot&&!n.miss?' · Perfekt, ohne Fehler!':'')+'</p></div><div class="row"><button class="btn pri big" data-act="xgquit">Fertig</button></div></div>';
@@ -4512,7 +4584,7 @@ function vXg(){
     if(!r.tiles){var al='abcdefghilmnoprstuv'.split(''),dec=shuffle(al.filter(function(x){return letters.indexOf(x)<0})).slice(0,2);r.letters=letters;r.tiles=shuffle(letters.concat(dec)).map(function(ch,k){return {ch:ch,col:k%4}})}
     h+='<div class="xg-clue">'+esc(r.clue)+'</div><div class="xg-slots">'+slots+'</div><div class="xg-tiles">'+r.tiles.map(function(x,k){return '<button class="xt c'+x.col+'" id="xt'+k+'" data-act="xgt" data-i="'+k+'">'+x.ch+'</button>'}).join('')+'</div><p class="xg-hint">Tippe die Buchstaben in der richtigen Reihenfolge. Zwei Buchstaben sind zu viel.</p>';
   }else{
-    h+=r.svg+'<div class="xg-opts n'+r.opts.length+'">'+r.opts.map(function(o,k){return '<button class="xo c'+(k%4)+'" data-act="xgo" data-i="'+k+'">'+o.h+'</button>'}).join('')+'</div>';
+    h+=r.svg+'<div class="xg-opts n'+r.opts.length+(r.cols1?' col1':'')+'">'+r.opts.map(function(o,k){return '<button class="xo c'+(k%4)+'" data-act="xgo" data-i="'+k+'">'+o.h+'</button>'}).join('')+'</div>';
   }
   h+='<div class="xg-msg" id="xgm"></div></div></div>';
   

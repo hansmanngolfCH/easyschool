@@ -1509,3 +1509,15 @@ ins.dfy{text-decoration:none;color:#0d652d;background:rgba(52,168,83,.22);border
 .xg-pie svg,.xg-eq svg{filter:none}
 .xg-end h1{color:#2b2f5e}
 .xg-h span.on{color:#EA4335}
+.xo b.xl{font-size:.82rem;line-height:1.15;font-weight:700}
+.xg-vis{display:flex;justify-content:center}.xg-vis .visrow{margin:0;gap:10px}.xg-vis svg,.xg-vis .vis{max-height:170px}
+
+/* v5.04 Easy lernen: lange Antworten nie abschneiden */
+.xg-opts,.xg-opts.n2,.xg-opts.n3,.xg-opts.n4,.xg-opts.n5{grid-auto-rows:minmax(64px,auto)}
+.xo{height:auto;min-height:64px;overflow:visible;padding:10px 12px}
+.xo b.xl{font-size:.98rem;line-height:1.25;font-weight:700}
+.xo b.xl2{font-size:.9rem}
+.xg-opts.col1{grid-template-columns:1fr}
+.xg-opts.col1 .xo{align-items:flex-start;text-align:left}
+.xg-opts.n5.col1 .xo:last-child{grid-column:auto}
+.xo,.xo b,.xg-q{overflow-wrap:anywhere;min-width:0}.xg-opts>*{min-width:0}.xg{min-width:0;max-width:100%}.stack{min-width:0}
