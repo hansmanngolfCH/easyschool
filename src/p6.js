@@ -95,7 +95,7 @@ ACT.xgame=function(b){
   go({view:'xg',child:nav.child,topicId:t.id,kind:g.kind,rounds:g.rounds,i:0,lives:5,ok:0,miss:0,phase:'play',xp:0,tok:0,armed:-1},{view:'subject',child:nav.child,subject:t.subject,from:{view:'child',child:nav.child,from:{view:'home'}}});
 };
 ACT.xgquit=function(){clearTimeout(XGT);ACT.back()};
-function xgHearts(n){var s='',i;for(i=0;i<5;i++)s+='<span class="'+(i<n.lives?'on':'')+'">❤</span>';return s}
+function xgHearts(n){return ''}
 function vXg(){
   var n=nav,t=topicById(n.topicId),NAME={salat:'Buchstaben-Salat',math:'Mathe-Knobler',quiz:'Blitz-Quiz'}[n.kind];
   if(n.phase==='end'){
@@ -117,7 +117,7 @@ function vXg(){
   return h;
 }
 function xgSched(secs){clearTimeout(XGT);var n=nav,tok=++n.tok;XGT=setTimeout(function wait(){if(nav!==n||n.tok!==tok||n.phase!=='play')return;if(document.getElementById('rwd')){XGT=setTimeout(wait,3000);return}xgFail(true)},secs*1000)}
-function xgNext(){var n=nav;if(n.view!=='xg')return;if(n.lives<=0||n.i+1>=n.rounds.length){xgEnd();return}n.i++;n.phase='play';render()}
+function xgNext(){var n=nav;if(n.view!=='xg')return;if(n.i+1>=n.rounds.length){xgEnd();return}n.i++;n.phase='play';render()}
 function xgEnd(){
   var n=nav;n.phase='end';clearTimeout(XGT);
     if(n.ok>=2)ach(n.child,'pairs');
@@ -125,7 +125,7 @@ function xgEnd(){
 }
 function xgDone(good,msg){
   var n=nav,m=document.getElementById('xgm');n.phase='fb';clearTimeout(XGT);n.tok++;
-  if(good){n.ok++}else{n.lives--;n.miss++}
+  if(good){n.ok++}else{n.miss++}
   logAnswer(n.child,good);
   var hh=document.getElementById('xgh');if(hh)hh.innerHTML=xgHearts(n);
   if(m){m.className='xg-msg '+(good?'ok':'bad');m.textContent=msg}
