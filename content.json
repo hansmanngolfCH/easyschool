@@ -155245,7 +155245,7 @@
    "cards": [
     {
      "id": "c1",
-     "q": "Löse: 7x = 14. x = ?",
+     "q": "Löse: 7x = 14. Wie gross ist x?",
      "a": "2",
      "lvl": 1,
      "th": "basis",
@@ -155267,7 +155267,7 @@
     },
     {
      "id": "c2",
-     "q": "Löse: x : 5 = 4. x = ?",
+     "q": "Löse: x : 5 = 4. Wie gross ist x?",
      "a": "20",
      "lvl": 2,
      "th": "basis",
@@ -155289,7 +155289,7 @@
     },
     {
      "id": "c3",
-     "q": "Löse: 5x + 2 = 12. x = ?",
+     "q": "Löse: 5x + 2 = 12. Wie gross ist x?",
      "a": "2",
      "lvl": 2,
      "th": "basis",
@@ -155315,7 +155315,7 @@
     },
     {
      "id": "c4",
-     "q": "Löse: 4x − 3 = 17. x = ?",
+     "q": "Löse: 4x − 3 = 17. Wie gross ist x?",
      "a": "5",
      "lvl": 2,
      "th": "basis",
@@ -155341,7 +155341,7 @@
     },
     {
      "id": "c5",
-     "q": "Löse: 3 · (x + 2) = 21. x = ?",
+     "q": "Löse: 3 · (x + 2) = 21. Wie gross ist x?",
      "a": "5",
      "lvl": 3,
      "th": "basis",
@@ -155413,7 +155413,7 @@
     },
     {
      "id": "c8",
-     "q": "Löse: 5x + 1 = −19. x = ?",
+     "q": "Löse: 5x + 1 = −19. Wie gross ist x?",
      "a": "−4",
      "lvl": 2,
      "th": "basis",
@@ -155439,7 +155439,7 @@
     },
     {
      "id": "c9",
-     "q": "Löse: 3x − 3 = 33. x = ?",
+     "q": "Löse: 3x − 3 = 33. Wie gross ist x?",
      "a": "12",
      "lvl": 2,
      "th": "basis",
@@ -155465,7 +155465,7 @@
     },
     {
      "id": "c10",
-     "q": "Löse: x + 2 = 8. x = ?",
+     "q": "Löse: x + 2 = 8. Wie gross ist x?",
      "a": "6",
      "lvl": 1,
      "th": "basis",
@@ -155487,7 +155487,7 @@
     },
     {
      "id": "c11",
-     "q": "Löse: x + 2 = 4. x = ?",
+     "q": "Löse: x + 2 = 4. Wie gross ist x?",
      "a": "2",
      "lvl": 1,
      "th": "basis",
@@ -155509,7 +155509,7 @@
     },
     {
      "id": "c12",
-     "q": "Löse: 4x = 60. x = ?",
+     "q": "Löse: 4x = 60. Wie gross ist x?",
      "a": "15",
      "lvl": 1,
      "th": "basis",
@@ -155531,7 +155531,7 @@
     },
     {
      "id": "c13",
-     "q": "Löse: x : 3 = 9. x = ?",
+     "q": "Löse: x : 3 = 9. Wie gross ist x?",
      "a": "27",
      "lvl": 2,
      "th": "basis",
@@ -155553,7 +155553,7 @@
     },
     {
      "id": "c14",
-     "q": "Löse: 2x + 7 = 27. x = ?",
+     "q": "Löse: 2x + 7 = 27. Wie gross ist x?",
      "a": "10",
      "lvl": 2,
      "th": "basis",
@@ -155579,7 +155579,7 @@
     },
     {
      "id": "c15",
-     "q": "Löse: 7x − 11 = 52. x = ?",
+     "q": "Löse: 7x − 11 = 52. Wie gross ist x?",
      "a": "9",
      "lvl": 2,
      "th": "basis",
@@ -155605,7 +155605,7 @@
     },
     {
      "id": "c16",
-     "q": "Löse: 2 · (x + 1) = 6. x = ?",
+     "q": "Löse: 2 · (x + 1) = 6. Wie gross ist x?",
      "a": "2",
      "lvl": 3,
      "th": "basis",
@@ -155676,7 +155676,7 @@
     },
     {
      "id": "c19",
-     "q": "Löse: 3x + 1 = −2. x = ?",
+     "q": "Löse: 3x + 1 = −2. Wie gross ist x?",
      "a": "−1",
      "lvl": 2,
      "th": "basis",
@@ -155702,7 +155702,7 @@
     },
     {
      "id": "c20",
-     "q": "Löse: 3x − 10 = 26. x = ?",
+     "q": "Löse: 3x − 10 = 26. Wie gross ist x?",
      "a": "12",
      "lvl": 2,
      "th": "basis",
@@ -155728,7 +155728,7 @@
     },
     {
      "id": "c21",
-     "q": "Löse: x + 9 = 6. x = ?",
+     "q": "Löse: x + 9 = 6. Wie gross ist x?",
      "a": "−3",
      "lvl": 1,
      "th": "basis",
@@ -155750,7 +155750,7 @@
     },
     {
      "id": "c22",
-     "q": "Löse: x + 3 = 9. x = ?",
+     "q": "Löse: x + 3 = 9. Wie gross ist x?",
      "a": "6",
      "lvl": 1,
      "th": "basis",
@@ -155772,7 +155772,7 @@
     },
     {
      "id": "c23",
-     "q": "Löse: 7x = 28. x = ?",
+     "q": "Löse: 7x = 28. Wie gross ist x?",
      "a": "4",
      "lvl": 1,
      "th": "basis",
@@ -155794,7 +155794,7 @@
     },
     {
      "id": "c24",
-     "q": "Löse: x : 2 = 7. x = ?",
+     "q": "Löse: x : 2 = 7. Wie gross ist x?",
      "a": "14",
      "lvl": 2,
      "th": "basis",
@@ -155816,7 +155816,7 @@
     },
     {
      "id": "c25",
-     "q": "Löse: 4x + 5 = 25. x = ?",
+     "q": "Löse: 4x + 5 = 25. Wie gross ist x?",
      "a": "5",
      "lvl": 2,
      "th": "basis",
@@ -155842,7 +155842,7 @@
     },
     {
      "id": "c26",
-     "q": "Löse: 2x − 3 = 13. x = ?",
+     "q": "Löse: 2x − 3 = 13. Wie gross ist x?",
      "a": "8",
      "lvl": 2,
      "th": "basis",
@@ -155868,7 +155868,7 @@
     },
     {
      "id": "c27",
-     "q": "Löse: 3 · (x + 7) = 33. x = ?",
+     "q": "Löse: 3 · (x + 7) = 33. Wie gross ist x?",
      "a": "4",
      "lvl": 3,
      "th": "basis",
@@ -155940,7 +155940,7 @@
     },
     {
      "id": "c30",
-     "q": "Löse: 4x + 5 = 29. x = ?",
+     "q": "Löse: 4x + 5 = 29. Wie gross ist x?",
      "a": "6",
      "lvl": 2,
      "th": "basis",
@@ -155966,7 +155966,7 @@
     },
     {
      "id": "c31",
-     "q": "Löse: 5x − 2 = 48. x = ?",
+     "q": "Löse: 5x − 2 = 48. Wie gross ist x?",
      "a": "10",
      "lvl": 2,
      "th": "basis",
@@ -155992,7 +155992,7 @@
     },
     {
      "id": "c32",
-     "q": "Löse: x + 12 = 27. x = ?",
+     "q": "Löse: x + 12 = 27. Wie gross ist x?",
      "a": "15",
      "lvl": 1,
      "th": "basis",
@@ -156014,7 +156014,7 @@
     },
     {
      "id": "c33",
-     "q": "Löse: x + 6 = 0. x = ?",
+     "q": "Löse: x + 6 = 0. Wie gross ist x?",
      "a": "−6",
      "lvl": 1,
      "th": "basis",
@@ -156036,7 +156036,7 @@
     },
     {
      "id": "c34",
-     "q": "Löse: 8x = 32. x = ?",
+     "q": "Löse: 8x = 32. Wie gross ist x?",
      "a": "4",
      "lvl": 1,
      "th": "basis",
@@ -156058,7 +156058,7 @@
     },
     {
      "id": "c35",
-     "q": "Löse: x : 4 = 4. x = ?",
+     "q": "Löse: x : 4 = 4. Wie gross ist x?",
      "a": "16",
      "lvl": 2,
      "th": "basis",
@@ -156080,7 +156080,7 @@
     },
     {
      "id": "c36",
-     "q": "Löse: 2x + 2 = 20. x = ?",
+     "q": "Löse: 2x + 2 = 20. Wie gross ist x?",
      "a": "9",
      "lvl": 2,
      "th": "basis",
@@ -156110,7 +156110,7 @@
     "questions": [
      {
       "id": "q1",
-      "q": "Löse: x + 4 = 12. x = ?",
+      "q": "Löse: x + 4 = 12. Wie gross ist x?",
       "explain": "x + 4 = 12. Gegenrechnung: x = 12 − 4 = 8.",
       "type": "mc",
       "options": [
@@ -156132,7 +156132,7 @@
      },
      {
       "id": "q3",
-      "q": "Löse: x : 3 = 10. x = ?",
+      "q": "Löse: x : 3 = 10. Wie gross ist x?",
       "explain": "x : 3 = 10. Gegenrechnung: x = 10 · 3 = 30.",
       "type": "mc",
       "options": [
@@ -156145,7 +156145,7 @@
      },
      {
       "id": "q4",
-      "q": "Löse: 6x − 1 = 53. x = ?",
+      "q": "Löse: 6x − 1 = 53. Wie gross ist x?",
       "explain": "9",
       "type": "input",
       "answer": [
@@ -156154,7 +156154,7 @@
      },
      {
       "id": "q5",
-      "q": "Löse: 4 · (x + 5) = 44. x = ?",
+      "q": "Löse: 4 · (x + 5) = 44. Wie gross ist x?",
       "explain": "6",
       "type": "mc",
       "options": [
@@ -156167,7 +156167,7 @@
      },
      {
       "id": "q6",
-      "q": "Löse: 3x = 30. x = ?",
+      "q": "Löse: 3x = 30. Wie gross ist x?",
       "explain": "10",
       "type": "input",
       "answer": [
@@ -156176,7 +156176,7 @@
      },
      {
       "id": "q7",
-      "q": "Löse: 2x − 7 = -5. x = ?",
+      "q": "Löse: 2x − 7 = -5. Wie gross ist x?",
       "explain": "1",
       "type": "mc",
       "options": [
@@ -156189,7 +156189,7 @@
      },
      {
       "id": "q8",
-      "q": "Löse: x + 7 = 7. x = ?",
+      "q": "Löse: x + 7 = 7. Wie gross ist x?",
       "explain": "x + 7 = 7. Gegenrechnung: x = 7 − 7 = 0.",
       "type": "input",
       "answer": [
@@ -156209,7 +156209,7 @@
      },
      {
       "id": "q10",
-      "q": "Löse: 4x + 7 = −5. x = ?",
+      "q": "Löse: 4x + 7 = −5. Wie gross ist x?",
       "explain": "−3",
       "type": "input",
       "answer": [
@@ -156219,7 +156219,7 @@
      },
      {
       "id": "q11",
-      "q": "Löse: x + 7 = 12. x = ?",
+      "q": "Löse: x + 7 = 12. Wie gross ist x?",
       "explain": "x + 7 = 12. Gegenrechnung: x = 12 − 7 = 5.",
       "type": "mc",
       "options": [
@@ -156241,7 +156241,7 @@
      },
      {
       "id": "q13",
-      "q": "Löse: x : 4 = 5. x = ?",
+      "q": "Löse: x : 4 = 5. Wie gross ist x?",
       "explain": "x : 4 = 5. Gegenrechnung: x = 5 · 4 = 20.",
       "type": "mc",
       "options": [
@@ -156254,7 +156254,7 @@
      },
      {
       "id": "q14",
-      "q": "Löse: 4x − 11 = 33. x = ?",
+      "q": "Löse: 4x − 11 = 33. Wie gross ist x?",
       "explain": "11",
       "type": "input",
       "answer": [
@@ -156263,7 +156263,7 @@
      },
      {
       "id": "q15",
-      "q": "Löse: 4 · (x + 3) = 40. x = ?",
+      "q": "Löse: 4 · (x + 3) = 40. Wie gross ist x?",
       "explain": "7",
       "type": "mc",
       "options": [
@@ -156276,7 +156276,7 @@
      },
      {
       "id": "q16",
-      "q": "Löse: 4x = 8. x = ?",
+      "q": "Löse: 4x = 8. Wie gross ist x?",
       "explain": "2",
       "type": "input",
       "answer": [
@@ -156285,7 +156285,7 @@
      },
      {
       "id": "q17",
-      "q": "Löse: 7x + 10 = 10. x = ?",
+      "q": "Löse: 7x + 10 = 10. Wie gross ist x?",
       "explain": "0",
       "type": "mc",
       "options": [
@@ -156298,7 +156298,7 @@
      },
      {
       "id": "q18",
-      "q": "Löse: 4x − 10 = -6. x = ?",
+      "q": "Löse: 4x − 10 = -6. Wie gross ist x?",
       "explain": "1",
       "type": "input",
       "answer": [
