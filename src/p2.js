@@ -113,6 +113,10 @@ function vChips(v){
 function vTline(v){
   return '<ol class="dtl">'+v.items.map(function(p,i){return '<li class="'+(i===v.now?'now':'')+'" style="--c:'+dcol(p[3])+'"><span class="dot"></span><div><b>'+bd(p[0])+'</b><span>'+bd(p[1])+'</span>'+(p[2]?'<em>'+bd(p[2])+'</em>':'')+'</div></li>'}).join('')+'</ol>';
 }
+function vAnno(v){
+  return '<div class="anno">'+v.groups.map(function(g){var c=g[2]===''||g[2]===undefined?null:dcol(g[2]);
+    return '<div class="ag"'+(c?' style="--c:'+c+'"':'')+'><b class="at">'+bd(g[0])+'</b>'+(g[1]?'<svg class="aa" viewBox="0 0 16 34" aria-hidden="true"><path d="M8 33V5M2 11L8 3l6 8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><b class="al">'+bd(g[1])+'</b>':'')+(g[3]?'<span class="as">'+bd(g[3])+'</span>':'')+'</div>'}).join('')+'</div>'+(v.cap?'<p class="dcap">'+bd(v.cap)+'</p>':'');
+}
 function vFlow(v){
   return '<ol class="dfl">'+v.steps.map(function(p,i){return '<li style="--c:'+dcol(p[2]===undefined?i:p[2])+'"><span class="n">'+(i+1)+'</span><div><b>'+bd(p[0])+'</b><span>'+bd(p[1])+'</span></div></li>'}).join('')+'</ol>';
 }
@@ -343,7 +347,7 @@ function vCol(v){
 }
 function visuals(list){
   if(!list||!list.length)return '';
-  var map={dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar,tbl:vTbl,chips:vChips,tline:vTline,flow:vFlow,cards:vCards,area:vArea,emo:vEmo,field:vField,clock:vClock,coins:vCoins,shape:vShape,nline:vNline,angle:vAngle,circle:vCircle,jug:vJug,quader:vQuader,par:vPar,blocks:vBlocks,jumps:vJumps,arr:vArr,col:vCol,wall:vWall,scene:vScene};
+  var map={dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar,tbl:vTbl,chips:vChips,tline:vTline,flow:vFlow,anno:vAnno,cards:vCards,area:vArea,emo:vEmo,field:vField,clock:vClock,coins:vCoins,shape:vShape,nline:vNline,angle:vAngle,circle:vCircle,jug:vJug,quader:vQuader,par:vPar,blocks:vBlocks,jumps:vJumps,arr:vArr,col:vCol,wall:vWall,scene:vScene};
   return '<div class="visrow">'+list.map(function(v){return map[v.type]?map[v.type](v):''}).join('')+'</div>';
 }
 

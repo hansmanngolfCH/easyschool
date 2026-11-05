@@ -1047,8 +1047,8 @@ def replace_fehler(c):
         if t['subject']!='deu':continue
         k=de_ex.worked_key(t['id'])
         if not k:continue
-        txt,steps=de_ex.WORK[k]
+        txt,groups,cap=de_ex.ANNO[k]
         for i,e in enumerate(t['explain']):
-            if e['h']=='Typische Fehler':
-                t['explain'][i]={"h":"Ein Beispiel Schritt für Schritt","text":txt,"visuals":[{"type":"lines","num":True,"items":[[a,'',b,'Im Beispiel'] for a,b in steps]}]};n+=1
+            if e['h'] in('Typische Fehler','Ein Beispiel Schritt für Schritt'):
+                t['explain'][i]={"h":"Ein Beispiel gezeichnet","text":txt,"visuals":[{"type":"anno","groups":groups,"cap":cap}]};n+=1
     print('Fehler ersetzt',n)

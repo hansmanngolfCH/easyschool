@@ -172013,44 +172013,38 @@
      ]
     },
     {
-     "h": "Ein Beispiel Schritt für Schritt",
-     "text": "Satz: «Der kleine Hund rennt.» Welche Wortart hat jedes Wort?",
+     "h": "Ein Beispiel gezeichnet",
+     "text": "Der Satz, gezeichnet. Die Pfeile zeigen, was jedes Wort ist.",
      "visuals": [
       {
-       "type": "lines",
-       "num": true,
-       "items": [
+       "type": "anno",
+       "groups": [
         [
-         "Nimm ein Wort aus dem Satz: «Hund».",
-         "",
-         "Wir prüfen zuerst «Hund».",
-         "Im Beispiel"
+         "Der",
+         "Artikel",
+         3,
+         "begleitet das Nomen"
         ],
         [
-         "Probiere «der, die oder das» davor.",
-         "",
-         "der Hund ✔ → Nomen.",
-         "Im Beispiel"
+         "kleine",
+         "Adjektiv",
+         2,
+         "Wie ist der Hund?"
         ],
         [
-         "Nimm das nächste Wort: «rennt». Kann man es tun?",
-         "",
-         "Ja, man kann rennen → Verb.",
-         "Im Beispiel"
+         "Hund",
+         "Nomen",
+         0,
+         "der Hund"
         ],
         [
-         "Prüfe «kleine»: Sagt es, wie etwas ist?",
-         "",
-         "Der Hund ist klein → Adjektiv.",
-         "Im Beispiel"
-        ],
-        [
-         "Schreibe das Ergebnis auf.",
-         "",
-         "Hund = Nomen, rennt = Verb, kleine = Adjektiv.",
-         "Im Beispiel"
+         "rennt",
+         "Verb",
+         1,
+         "Was tut er?"
         ]
-       ]
+       ],
+       "cap": "Der kleine Hund rennt."
       }
      ]
     },
@@ -183851,38 +183845,56 @@
      ]
     },
     {
-     "h": "Ein Beispiel Schritt für Schritt",
-     "text": "Text: «Anna spielt. Sie lacht. Ihr Hund bellt.»",
+     "h": "Ein Beispiel gezeichnet",
+     "text": "Der Text, gezeichnet. Die Pfeile zeigen, was was ist.",
      "visuals": [
       {
-       "type": "lines",
-       "num": true,
-       "items": [
+       "type": "anno",
+       "groups": [
         [
-         "Lies den Text.",
-         "",
-         "Anna spielt. Sie lacht. Ihr Hund bellt.",
-         "Im Beispiel"
+         "Anna",
+         "Nomen",
+         0,
+         ""
         ],
         [
-         "Prüfe «Sie»: Kannst du es durch ein Nomen ersetzen?",
-         "",
-         "Anna lacht ✔ → «Sie» ist ein Stellvertreter.",
-         "Im Beispiel"
+         "spielt",
+         "Verb",
+         1,
+         ""
         ],
         [
-         "Prüfe «Ihr»: Steht es vor einem Nomen und gehört dazu?",
-         "",
-         "«Ihr Hund» ✔ → «Ihr» ist ein Begleiter.",
-         "Im Beispiel"
+         "Sie",
+         "Stellvertreter",
+         4,
+         "steht für Anna"
         ],
         [
-         "Schreibe das Ergebnis auf.",
-         "",
-         "Sie = Stellvertreter, Ihr = Begleiter.",
-         "Im Beispiel"
+         "lacht",
+         "Verb",
+         1,
+         ""
+        ],
+        [
+         "Ihr",
+         "Begleiter",
+         4,
+         "gehört zu «Hund»"
+        ],
+        [
+         "Hund",
+         "Nomen",
+         0,
+         ""
+        ],
+        [
+         "bellt",
+         "Verb",
+         1,
+         ""
         ]
-       ]
+       ],
+       "cap": "Anna spielt. Sie lacht. Ihr Hund bellt."
       }
      ]
     },
@@ -186233,38 +186245,56 @@
      ]
     },
     {
-     "h": "Ein Beispiel Schritt für Schritt",
-     "text": "Text: «Anna spielt. Sie lacht. Ihr Hund bellt.»",
+     "h": "Ein Beispiel gezeichnet",
+     "text": "Der Text, gezeichnet. Die Pfeile zeigen, was was ist.",
      "visuals": [
       {
-       "type": "lines",
-       "num": true,
-       "items": [
+       "type": "anno",
+       "groups": [
         [
-         "Lies den Text.",
-         "",
-         "Anna spielt. Sie lacht. Ihr Hund bellt.",
-         "Im Beispiel"
+         "Anna",
+         "Nomen",
+         0,
+         ""
         ],
         [
-         "Prüfe «Sie»: Kannst du es durch ein Nomen ersetzen?",
-         "",
-         "Anna lacht ✔ → «Sie» ist ein Stellvertreter.",
-         "Im Beispiel"
+         "spielt",
+         "Verb",
+         1,
+         ""
         ],
         [
-         "Prüfe «Ihr»: Steht es vor einem Nomen und gehört dazu?",
-         "",
-         "«Ihr Hund» ✔ → «Ihr» ist ein Begleiter.",
-         "Im Beispiel"
+         "Sie",
+         "Stellvertreter",
+         4,
+         "steht für Anna"
         ],
         [
-         "Schreibe das Ergebnis auf.",
-         "",
-         "Sie = Stellvertreter, Ihr = Begleiter.",
-         "Im Beispiel"
+         "lacht",
+         "Verb",
+         1,
+         ""
+        ],
+        [
+         "Ihr",
+         "Begleiter",
+         4,
+         "gehört zu «Hund»"
+        ],
+        [
+         "Hund",
+         "Nomen",
+         0,
+         ""
+        ],
+        [
+         "bellt",
+         "Verb",
+         1,
+         ""
         ]
-       ]
+       ],
+       "cap": "Anna spielt. Sie lacht. Ihr Hund bellt."
       }
      ]
     },
@@ -194129,38 +194159,38 @@
      ]
     },
     {
-     "h": "Ein Beispiel Schritt für Schritt",
-     "text": "Wörter: Hund, Hase, Apfel, Maus. Wie ordnest du sie?",
+     "h": "Ein Beispiel gezeichnet",
+     "text": "Die Wörter, gezeichnet. Die Pfeile zeigen die Reihenfolge.",
      "visuals": [
       {
-       "type": "lines",
-       "num": true,
-       "items": [
+       "type": "anno",
+       "groups": [
         [
-         "Schau auf den ersten Buchstaben jedes Wortes.",
-         "",
-         "H, H, A, M",
-         "Im Beispiel"
+         "Apfel",
+         "1. Platz",
+         5,
+         "A kommt zuerst"
         ],
         [
-         "Ordne nach diesen Buchstaben.",
-         "",
-         "A (Apfel) → H → M (Maus)",
-         "Im Beispiel"
+         "Hase",
+         "2. Platz",
+         6,
+         "H, dann a"
         ],
         [
-         "Zwei Wörter beginnen mit H. Vergleiche den zweiten Buchstaben.",
-         "",
-         "Hund: u. Hase: a. a kommt vor u → Hase vor Hund.",
-         "Im Beispiel"
+         "Hund",
+         "3. Platz",
+         4,
+         "H, dann u"
         ],
         [
-         "Lies die Reihe zur Kontrolle.",
-         "",
-         "Apfel, Hase, Hund, Maus ✔",
-         "Im Beispiel"
+         "Maus",
+         "4. Platz",
+         2,
+         "M kommt zuletzt"
         ]
-       ]
+       ],
+       "cap": "Apfel, Hase, Hund, Maus"
       }
      ]
     },
@@ -196021,38 +196051,38 @@
      ]
     },
     {
-     "h": "Ein Beispiel Schritt für Schritt",
-     "text": "Wörter: Hund, Hase, Apfel, Maus. Wie ordnest du sie?",
+     "h": "Ein Beispiel gezeichnet",
+     "text": "Die Wörter, gezeichnet. Die Pfeile zeigen die Reihenfolge.",
      "visuals": [
       {
-       "type": "lines",
-       "num": true,
-       "items": [
+       "type": "anno",
+       "groups": [
         [
-         "Schau auf den ersten Buchstaben jedes Wortes.",
-         "",
-         "H, H, A, M",
-         "Im Beispiel"
+         "Apfel",
+         "1. Platz",
+         5,
+         "A kommt zuerst"
         ],
         [
-         "Ordne nach diesen Buchstaben.",
-         "",
-         "A (Apfel) → H → M (Maus)",
-         "Im Beispiel"
+         "Hase",
+         "2. Platz",
+         6,
+         "H, dann a"
         ],
         [
-         "Zwei Wörter beginnen mit H. Vergleiche den zweiten Buchstaben.",
-         "",
-         "Hund: u. Hase: a. a kommt vor u → Hase vor Hund.",
-         "Im Beispiel"
+         "Hund",
+         "3. Platz",
+         4,
+         "H, dann u"
         ],
         [
-         "Lies die Reihe zur Kontrolle.",
-         "",
-         "Apfel, Hase, Hund, Maus ✔",
-         "Im Beispiel"
+         "Maus",
+         "4. Platz",
+         2,
+         "M kommt zuletzt"
         ]
-       ]
+       ],
+       "cap": "Apfel, Hase, Hund, Maus"
       }
      ]
     },
@@ -218947,44 +218977,44 @@
      ]
     },
     {
-     "h": "Ein Beispiel Schritt für Schritt",
-     "text": "Satz: «Er rennt schnell zur Schule.» Wir bestimmen die Wortarten.",
+     "h": "Ein Beispiel gezeichnet",
+     "text": "Der Satz, gezeichnet. Die Pfeile zeigen die Wortarten.",
      "visuals": [
       {
-       "type": "lines",
-       "num": true,
-       "items": [
+       "type": "anno",
+       "groups": [
         [
-         "Lies den ganzen Satz.",
-         "",
-         "Er rennt schnell zur Schule.",
-         "Im Beispiel"
+         "Er",
+         "Pronomen",
+         4,
+         "steht für ein Nomen"
         ],
         [
-         "Setze «der, die oder das» davor.",
-         "",
-         "die Schule ✔ → Nomen.",
-         "Im Beispiel"
+         "rennt",
+         "Verb",
+         1,
+         "Was wird getan?"
         ],
         [
-         "Frage: Was wird getan?",
-         "",
-         "rennt → Verb.",
-         "Im Beispiel"
+         "schnell",
+         "Adjektiv",
+         2,
+         "Wie rennt er?"
         ],
         [
-         "Frage: Wie rennt er?",
-         "",
-         "schnell → Adjektiv.",
-         "Im Beispiel"
+         "zur",
+         "Artikel",
+         3,
+         "zur = zu der"
         ],
         [
-         "Steht ein Wort für ein Nomen?",
-         "",
-         "«Er» steht für eine Person → Pronomen.",
-         "Im Beispiel"
+         "Schule",
+         "Nomen",
+         0,
+         "die Schule"
         ]
-       ]
+       ],
+       "cap": "Er rennt schnell zur Schule."
       }
      ]
     },
@@ -221579,44 +221609,44 @@
      ]
     },
     {
-     "h": "Ein Beispiel Schritt für Schritt",
-     "text": "Satz: «Er rennt schnell zur Schule.» Wir bestimmen die Wortarten.",
+     "h": "Ein Beispiel gezeichnet",
+     "text": "Der Satz, gezeichnet. Die Pfeile zeigen die Wortarten.",
      "visuals": [
       {
-       "type": "lines",
-       "num": true,
-       "items": [
+       "type": "anno",
+       "groups": [
         [
-         "Lies den ganzen Satz.",
-         "",
-         "Er rennt schnell zur Schule.",
-         "Im Beispiel"
+         "Er",
+         "Pronomen",
+         4,
+         "steht für ein Nomen"
         ],
         [
-         "Setze «der, die oder das» davor.",
-         "",
-         "die Schule ✔ → Nomen.",
-         "Im Beispiel"
+         "rennt",
+         "Verb",
+         1,
+         "Was wird getan?"
         ],
         [
-         "Frage: Was wird getan?",
-         "",
-         "rennt → Verb.",
-         "Im Beispiel"
+         "schnell",
+         "Adjektiv",
+         2,
+         "Wie rennt er?"
         ],
         [
-         "Frage: Wie rennt er?",
-         "",
-         "schnell → Adjektiv.",
-         "Im Beispiel"
+         "zur",
+         "Artikel",
+         3,
+         "zur = zu der"
         ],
         [
-         "Steht ein Wort für ein Nomen?",
-         "",
-         "«Er» steht für eine Person → Pronomen.",
-         "Im Beispiel"
+         "Schule",
+         "Nomen",
+         0,
+         "die Schule"
         ]
-       ]
+       ],
+       "cap": "Er rennt schnell zur Schule."
       }
      ]
     },
@@ -233494,44 +233524,62 @@
      ]
     },
     {
-     "h": "Ein Beispiel Schritt für Schritt",
-     "text": "Satz: «Der Hund rennt sehr schnell in den Garten.»",
+     "h": "Ein Beispiel gezeichnet",
+     "text": "Der Satz, gezeichnet. Die Pfeile zeigen die Wortarten.",
      "visuals": [
       {
-       "type": "lines",
-       "num": true,
-       "items": [
+       "type": "anno",
+       "groups": [
         [
-         "Lies den Satz und markiere «in».",
-         "",
-         "in den Garten",
-         "Im Beispiel"
+         "Der",
+         "Artikel",
+         3,
+         ""
         ],
         [
-         "Steht es vor einem Nomen und nennt den Ort?",
-         "",
-         "Ja → «in» ist eine Präposition.",
-         "Im Beispiel"
+         "Hund",
+         "Nomen",
+         0,
+         "Mehrzahl: Hunde"
         ],
         [
-         "Markiere «sehr». Kannst du es verändern?",
-         "",
-         "Nein, «sehr» bleibt immer gleich → Partikel.",
-         "Im Beispiel"
+         "rennt",
+         "Verb",
+         1,
+         "rannte"
         ],
         [
-         "Markiere «schnell». Kannst du es steigern?",
-         "",
-         "schnell → schneller ✔ → Adjektiv.",
-         "Im Beispiel"
+         "sehr",
+         "Partikel",
+         7,
+         "bleibt immer gleich"
         ],
         [
-         "Markiere «rennt». Kannst du die Zeit ändern?",
-         "",
-         "rennt → rannte ✔ → Verb.",
-         "Im Beispiel"
+         "schnell",
+         "Adjektiv",
+         2,
+         "schneller"
+        ],
+        [
+         "in",
+         "Präposition",
+         5,
+         "nennt den Ort"
+        ],
+        [
+         "den",
+         "Artikel",
+         3,
+         ""
+        ],
+        [
+         "Garten",
+         "Nomen",
+         0,
+         ""
         ]
-       ]
+       ],
+       "cap": "Der Hund rennt sehr schnell in den Garten."
       }
      ]
     },
@@ -237473,44 +237521,62 @@
      ]
     },
     {
-     "h": "Ein Beispiel Schritt für Schritt",
-     "text": "Satz: «Der Hund rennt sehr schnell in den Garten.»",
+     "h": "Ein Beispiel gezeichnet",
+     "text": "Der Satz, gezeichnet. Die Pfeile zeigen die Wortarten.",
      "visuals": [
       {
-       "type": "lines",
-       "num": true,
-       "items": [
+       "type": "anno",
+       "groups": [
         [
-         "Lies den Satz und markiere «in».",
-         "",
-         "in den Garten",
-         "Im Beispiel"
+         "Der",
+         "Artikel",
+         3,
+         ""
         ],
         [
-         "Steht es vor einem Nomen und nennt den Ort?",
-         "",
-         "Ja → «in» ist eine Präposition.",
-         "Im Beispiel"
+         "Hund",
+         "Nomen",
+         0,
+         "Mehrzahl: Hunde"
         ],
         [
-         "Markiere «sehr». Kannst du es verändern?",
-         "",
-         "Nein, «sehr» bleibt immer gleich → Partikel.",
-         "Im Beispiel"
+         "rennt",
+         "Verb",
+         1,
+         "rannte"
         ],
         [
-         "Markiere «schnell». Kannst du es steigern?",
-         "",
-         "schnell → schneller ✔ → Adjektiv.",
-         "Im Beispiel"
+         "sehr",
+         "Partikel",
+         7,
+         "bleibt immer gleich"
         ],
         [
-         "Markiere «rennt». Kannst du die Zeit ändern?",
-         "",
-         "rennt → rannte ✔ → Verb.",
-         "Im Beispiel"
+         "schnell",
+         "Adjektiv",
+         2,
+         "schneller"
+        ],
+        [
+         "in",
+         "Präposition",
+         5,
+         "nennt den Ort"
+        ],
+        [
+         "den",
+         "Artikel",
+         3,
+         ""
+        ],
+        [
+         "Garten",
+         "Nomen",
+         0,
+         ""
         ]
-       ]
+       ],
+       "cap": "Der Hund rennt sehr schnell in den Garten."
       }
      ]
     },
@@ -241395,44 +241461,38 @@
      ]
     },
     {
-     "h": "Ein Beispiel Schritt für Schritt",
-     "text": "Satz: «Heute klaut der freche Hund die Wurst.»",
+     "h": "Ein Beispiel gezeichnet",
+     "text": "Der Satz, gezeichnet. Die Pfeile zeigen die Satzglieder.",
      "visuals": [
       {
-       "type": "lines",
-       "num": true,
-       "items": [
+       "type": "anno",
+       "groups": [
         [
-         "Suche das Verb.",
-         "",
-         "klaut → das ist das Prädikat.",
-         "Im Beispiel"
+         "Heute",
+         "Zeit",
+         7,
+         "Wann?"
         ],
         [
-         "Frage: Wer oder was klaut?",
-         "",
-         "Wer klaut?",
-         "Im Beispiel"
+         "klaut",
+         "Prädikat",
+         1,
+         "das Verb"
         ],
         [
-         "Die Antwort ist das Subjekt.",
-         "",
          "der freche Hund",
-         "Im Beispiel"
+         "Subjekt",
+         0,
+         "Wer klaut?"
         ],
         [
-         "Mache die Verschiebeprobe.",
-         "",
-         "Der freche Hund klaut heute die Wurst. → «der freche Hund» bleibt zusammen ✔",
-         "Im Beispiel"
-        ],
-        [
-         "Schreibe das Ergebnis auf.",
-         "",
-         "Prädikat: klaut. Subjekt: der freche Hund.",
-         "Im Beispiel"
+         "die Wurst",
+         "Objekt",
+         5,
+         "Wen oder was?"
         ]
-       ]
+       ],
+       "cap": "Heute klaut der freche Hund die Wurst."
       }
      ]
     },
@@ -244767,44 +244827,38 @@
      ]
     },
     {
-     "h": "Ein Beispiel Schritt für Schritt",
-     "text": "Satz: «Heute klaut der freche Hund die Wurst.»",
+     "h": "Ein Beispiel gezeichnet",
+     "text": "Der Satz, gezeichnet. Die Pfeile zeigen die Satzglieder.",
      "visuals": [
       {
-       "type": "lines",
-       "num": true,
-       "items": [
+       "type": "anno",
+       "groups": [
         [
-         "Suche das Verb.",
-         "",
-         "klaut → das ist das Prädikat.",
-         "Im Beispiel"
+         "Heute",
+         "Zeit",
+         7,
+         "Wann?"
         ],
         [
-         "Frage: Wer oder was klaut?",
-         "",
-         "Wer klaut?",
-         "Im Beispiel"
+         "klaut",
+         "Prädikat",
+         1,
+         "das Verb"
         ],
         [
-         "Die Antwort ist das Subjekt.",
-         "",
          "der freche Hund",
-         "Im Beispiel"
+         "Subjekt",
+         0,
+         "Wer klaut?"
         ],
         [
-         "Mache die Verschiebeprobe.",
-         "",
-         "Der freche Hund klaut heute die Wurst. → «der freche Hund» bleibt zusammen ✔",
-         "Im Beispiel"
-        ],
-        [
-         "Schreibe das Ergebnis auf.",
-         "",
-         "Prädikat: klaut. Subjekt: der freche Hund.",
-         "Im Beispiel"
+         "die Wurst",
+         "Objekt",
+         5,
+         "Wen oder was?"
         ]
-       ]
+       ],
+       "cap": "Heute klaut der freche Hund die Wurst."
       }
      ]
     },
@@ -248077,44 +248131,32 @@
      ]
     },
     {
-     "h": "Ein Beispiel Schritt für Schritt",
-     "text": "Satz: «Nachdem Anna gegessen hatte, ging sie spielen.»",
+     "h": "Ein Beispiel gezeichnet",
+     "text": "Der Satz, gezeichnet. Die Pfeile zeigen die Zeitformen.",
      "visuals": [
       {
-       "type": "lines",
-       "num": true,
-       "items": [
+       "type": "anno",
+       "groups": [
         [
-         "Suche die Verbgruppen.",
+         "Nachdem Anna",
          "",
-         "«gegessen hatte» und «ging»",
-         "Im Beispiel"
+         "",
+         ""
         ],
         [
-         "Steht «werden» + Grundform da?",
-         "",
-         "Nein → kein Futur.",
-         "Im Beispiel"
+         "gegessen hatte,",
+         "Plusquamperfekt",
+         5,
+         "passierte zuerst"
         ],
         [
-         "Prüfe «hatte gegessen»: «hatte» + Partizip II.",
-         "",
-         "Ja → Plusquamperfekt (passierte zuerst).",
-         "Im Beispiel"
-        ],
-        [
-         "Prüfe «ging».",
-         "",
-         "Eine einfache Vergangenheitsform → Präteritum.",
-         "Im Beispiel"
-        ],
-        [
-         "Schreibe das Ergebnis auf.",
-         "",
-         "Zuerst: Plusquamperfekt. Danach: Präteritum.",
-         "Im Beispiel"
+         "ging sie spielen",
+         "Präteritum",
+         6,
+         "passierte danach"
         ]
-       ]
+       ],
+       "cap": "Nachdem Anna gegessen hatte, ging sie spielen."
       }
      ]
     },
@@ -251458,44 +251500,32 @@
      ]
     },
     {
-     "h": "Ein Beispiel Schritt für Schritt",
-     "text": "Satz: «Nachdem Anna gegessen hatte, ging sie spielen.»",
+     "h": "Ein Beispiel gezeichnet",
+     "text": "Der Satz, gezeichnet. Die Pfeile zeigen die Zeitformen.",
      "visuals": [
       {
-       "type": "lines",
-       "num": true,
-       "items": [
+       "type": "anno",
+       "groups": [
         [
-         "Suche die Verbgruppen.",
+         "Nachdem Anna",
          "",
-         "«gegessen hatte» und «ging»",
-         "Im Beispiel"
+         "",
+         ""
         ],
         [
-         "Steht «werden» + Grundform da?",
-         "",
-         "Nein → kein Futur.",
-         "Im Beispiel"
+         "gegessen hatte,",
+         "Plusquamperfekt",
+         5,
+         "passierte zuerst"
         ],
         [
-         "Prüfe «hatte gegessen»: «hatte» + Partizip II.",
-         "",
-         "Ja → Plusquamperfekt (passierte zuerst).",
-         "Im Beispiel"
-        ],
-        [
-         "Prüfe «ging».",
-         "",
-         "Eine einfache Vergangenheitsform → Präteritum.",
-         "Im Beispiel"
-        ],
-        [
-         "Schreibe das Ergebnis auf.",
-         "",
-         "Zuerst: Plusquamperfekt. Danach: Präteritum.",
-         "Im Beispiel"
+         "ging sie spielen",
+         "Präteritum",
+         6,
+         "passierte danach"
         ]
-       ]
+       ],
+       "cap": "Nachdem Anna gegessen hatte, ging sie spielen."
       }
      ]
     },
@@ -285163,38 +285193,32 @@
      ]
     },
     {
-     "h": "Ein Beispiel Schritt für Schritt",
-     "text": "Satz: «Wir bleiben drinnen, weil es regnet.»",
+     "h": "Ein Beispiel gezeichnet",
+     "text": "Der Satz, gezeichnet. Die Pfeile zeigen die Satzteile.",
      "visuals": [
       {
-       "type": "lines",
-       "num": true,
-       "items": [
+       "type": "anno",
+       "groups": [
         [
-         "Finde den Nebensatz.",
-         "",
-         "weil es regnet (Einleitewort «weil», Verb am Ende)",
-         "Im Beispiel"
+         "Wir bleiben drinnen,",
+         "Hauptsatz",
+         5,
+         "kann allein stehen"
         ],
         [
-         "Wird ein Nomen davor beschrieben?",
-         "",
-         "Nein → kein Relativsatz.",
-         "Im Beispiel"
+         "weil",
+         "Einleitewort",
+         6,
+         "Warum?"
         ],
         [
-         "Stelle die Frage: Warum bleiben wir drinnen?",
-         "",
-         "Weil es regnet → ein Grund.",
-         "Im Beispiel"
-        ],
-        [
-         "Bestimme die Art.",
-         "",
-         "Kausalsatz (Nebensatz des Grundes)",
-         "Im Beispiel"
+         "es regnet",
+         "Nebensatz",
+         1,
+         "Verb am Ende"
         ]
-       ]
+       ],
+       "cap": "Der Nebensatz nennt einen Grund: Kausalsatz."
       }
      ]
     },
@@ -288542,38 +288566,32 @@
      ]
     },
     {
-     "h": "Ein Beispiel Schritt für Schritt",
-     "text": "Satz: «Wir bleiben drinnen, weil es regnet.»",
+     "h": "Ein Beispiel gezeichnet",
+     "text": "Der Satz, gezeichnet. Die Pfeile zeigen die Satzteile.",
      "visuals": [
       {
-       "type": "lines",
-       "num": true,
-       "items": [
+       "type": "anno",
+       "groups": [
         [
-         "Finde den Nebensatz.",
-         "",
-         "weil es regnet (Einleitewort «weil», Verb am Ende)",
-         "Im Beispiel"
+         "Wir bleiben drinnen,",
+         "Hauptsatz",
+         5,
+         "kann allein stehen"
         ],
         [
-         "Wird ein Nomen davor beschrieben?",
-         "",
-         "Nein → kein Relativsatz.",
-         "Im Beispiel"
+         "weil",
+         "Einleitewort",
+         6,
+         "Warum?"
         ],
         [
-         "Stelle die Frage: Warum bleiben wir drinnen?",
-         "",
-         "Weil es regnet → ein Grund.",
-         "Im Beispiel"
-        ],
-        [
-         "Bestimme die Art.",
-         "",
-         "Kausalsatz (Nebensatz des Grundes)",
-         "Im Beispiel"
+         "es regnet",
+         "Nebensatz",
+         1,
+         "Verb am Ende"
         ]
-       ]
+       ],
+       "cap": "Der Nebensatz nennt einen Grund: Kausalsatz."
       }
      ]
     },
