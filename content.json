@@ -102365,6 +102365,2720 @@
    }
   },
   {
+   "id": "kl3-mathe-einmaleins-tafel",
+   "child": "kl3",
+   "subject": "mathe",
+   "chapter": "Operationen",
+   "title": "Einmaleins-Tafel und alle Reihen",
+   "art": "mathe",
+   "origin": "ki",
+   "theory": {
+    "basis": {
+     "h": "Die Reihen",
+     "text": "Das Einmaleins sind die Malreihen von 1 bis 10. Jede Aufgabe hat zwei Zahlen und ein Ergebnis.",
+     "lines": [
+      [
+       "6 × 7",
+       "= 42"
+      ]
+     ]
+    },
+    "tricks": {
+     "h": "Tricks",
+     "text": "Mal 2: verdoppeln. Mal 5: halbe Zehnerzahl. Mal 9: mal 10 minus eine Gruppe.",
+     "lines": [
+      [
+       "9 × 7",
+       "70 − 7 = 63"
+      ]
+     ]
+    },
+    "umkehr": {
+     "h": "Umkehraufgaben",
+     "text": "Teilen ist die Umkehrung von Malnehmen. Aus 6 × 7 = 42 wird 42 : 7 = 6.",
+     "lines": [
+      [
+       "42 : 7",
+       "= 6"
+      ]
+     ]
+    }
+   },
+   "explain": [
+    {
+     "h": "Die ganze Tafel",
+     "text": "Hier siehst du alle Aufgaben des kleinen Einmaleins auf einen Blick. Die Zeile und die Spalte der Zahlen treffen sich im Ergebnis. 4 × 7 steht dort, wo Zeile 4 und Spalte 7 sich kreuzen.",
+     "visuals": [
+      {
+       "type": "mtab",
+       "max": 10,
+       "cells": [
+        [
+         4,
+         7
+        ]
+       ],
+       "hr": [
+        4
+       ],
+       "hc": [
+        7
+       ],
+       "cap": "4 × 7 = 28"
+      }
+     ]
+    },
+    {
+     "h": "1er-Reihe",
+     "text": "Mal 1 ändert nichts. Die Zahl bleibt gleich.",
+     "visuals": [
+      {
+       "type": "mreihe",
+       "n": 1,
+       "core": [
+        1,
+        2,
+        5,
+        10
+       ]
+      }
+     ]
+    },
+    {
+     "h": "2er-Reihe",
+     "text": "Verdopple die Zahl: 2 × 6 = 6 + 6.",
+     "visuals": [
+      {
+       "type": "mreihe",
+       "n": 2,
+       "core": [
+        1,
+        2,
+        5,
+        10
+       ]
+      }
+     ]
+    },
+    {
+     "h": "3er-Reihe",
+     "text": "Verdopple und nimm eine Gruppe dazu: 3 × 7 = 14 + 7.",
+     "visuals": [
+      {
+       "type": "mreihe",
+       "n": 3,
+       "core": [
+        1,
+        2,
+        5,
+        10
+       ]
+      }
+     ]
+    },
+    {
+     "h": "4er-Reihe",
+     "text": "Verdopple zweimal: 4 × 6 = 12, 24.",
+     "visuals": [
+      {
+       "type": "mreihe",
+       "n": 4,
+       "core": [
+        1,
+        2,
+        5,
+        10
+       ]
+      }
+     ]
+    },
+    {
+     "h": "5er-Reihe",
+     "text": "Halbe Zehnerzahl: 5 × 8 = die Hälfte von 80. Endet auf 0 oder 5.",
+     "visuals": [
+      {
+       "type": "mreihe",
+       "n": 5,
+       "core": [
+        1,
+        2,
+        5,
+        10
+       ]
+      }
+     ]
+    },
+    {
+     "h": "6er-Reihe",
+     "text": "Nimm die 5er-Aufgabe und eine Gruppe dazu: 6 × 7 = 35 + 7.",
+     "visuals": [
+      {
+       "type": "mreihe",
+       "n": 6,
+       "core": [
+        1,
+        2,
+        5,
+        10
+       ]
+      }
+     ]
+    },
+    {
+     "h": "7er-Reihe",
+     "text": "Nimm 5er plus 2er: 7 × 8 = 40 + 16. Merke 56 = 7 × 8.",
+     "visuals": [
+      {
+       "type": "mreihe",
+       "n": 7,
+       "core": [
+        1,
+        2,
+        5,
+        10
+       ]
+      }
+     ]
+    },
+    {
+     "h": "8er-Reihe",
+     "text": "Verdopple dreimal: 8 × 6 = 12, 24, 48. Die Einer fallen: 8, 6, 4, 2, 0.",
+     "visuals": [
+      {
+       "type": "mreihe",
+       "n": 8,
+       "core": [
+        1,
+        2,
+        5,
+        10
+       ]
+      }
+     ]
+    },
+    {
+     "h": "9er-Reihe",
+     "text": "Mal 10 minus eine Gruppe: 9 × 7 = 70 − 7. Die Quersumme ist immer 9.",
+     "visuals": [
+      {
+       "type": "mreihe",
+       "n": 9,
+       "core": [
+        1,
+        2,
+        5,
+        10
+       ]
+      }
+     ]
+    },
+    {
+     "h": "10er-Reihe",
+     "text": "Hänge eine Null an: 10 × 7 = 70.",
+     "visuals": [
+      {
+       "type": "mreihe",
+       "n": 10,
+       "core": [
+        1,
+        2,
+        5,
+        10
+       ]
+      }
+     ]
+    },
+    {
+     "h": "Quadratzahlen",
+     "text": "Wenn beide Zahlen gleich sind, steht das Ergebnis auf der grünen Diagonale: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100.",
+     "visuals": [
+      {
+       "type": "mtab",
+       "max": 10,
+       "sq": true,
+       "cap": "Die Diagonale = Quadratzahlen"
+      }
+     ]
+    },
+    {
+     "h": "Tauschen spart die Hälfte",
+     "text": "3 × 7 und 7 × 3 haben dasselbe Ergebnis. Die Tafel ist an der Diagonale gespiegelt, du musst nur die Hälfte lernen.",
+     "visuals": [
+      {
+       "type": "mtab",
+       "max": 10,
+       "cells": [
+        [
+         3,
+         7
+        ],
+        [
+         7,
+         3
+        ]
+       ],
+       "hr": [
+        3
+       ],
+       "hc": [
+        3
+       ],
+       "cap": "3 × 7 = 7 × 3 = 21"
+      }
+     ]
+    },
+    {
+     "h": "Die schwierigsten Aufgaben",
+     "text": "Diese vier machen oft Mühe: 6 × 7 = 42, 6 × 8 = 48, 7 × 8 = 56 und 7 × 9 = 63. Übe sie extra.",
+     "visuals": [
+      {
+       "type": "mtab",
+       "max": 10,
+       "cells": [
+        [
+         6,
+         7
+        ],
+        [
+         7,
+         6
+        ],
+        [
+         6,
+         8
+        ],
+        [
+         8,
+         6
+        ],
+        [
+         7,
+         8
+        ],
+        [
+         8,
+         7
+        ],
+        [
+         7,
+         9
+        ],
+        [
+         9,
+         7
+        ]
+       ],
+       "cap": "Das sind die Knacknüsse"
+      }
+     ]
+    },
+    {
+     "h": "Regeln und Wichtigstes",
+     "text": "Merke dir diese drei Karten.",
+     "visuals": [
+      {
+       "type": "cards",
+       "items": [
+        [
+         "Tafel",
+         "Zeile × Spalte",
+         "4 × 7 = 28",
+         0
+        ],
+        [
+         "Tauschen",
+         "a × b = b × a",
+         "3 × 7 = 7 × 3",
+         1
+        ],
+        [
+         "Kernaufgaben",
+         "1er · 2er · 5er · 10er",
+         "Rest ableiten",
+         2
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "cards": [
+    {
+     "id": "c1",
+     "q": "5 × 7 = ?",
+     "a": "35",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "35",
+      "25",
+      "36",
+      "34"
+     ],
+     "hints": [
+      "Mal 5: halbe Zehnerzahl. Das Ergebnis endet auf 0 oder 5."
+     ],
+     "steps": [
+      [
+       "5 × 7 = 35",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c2",
+     "q": "2 × 2 = ?",
+     "a": "4",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "4",
+      "5",
+      "2",
+      "6"
+     ],
+     "hints": [
+      "Mal 2 heisst verdoppeln."
+     ],
+     "steps": [
+      [
+       "2 × 2 = 4",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c3",
+     "q": "6 × 10 = ?",
+     "a": "60",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "60",
+      "55",
+      "62",
+      "65"
+     ],
+     "hints": [
+      "Mal 6: 5er-Aufgabe plus eine Gruppe."
+     ],
+     "steps": [
+      [
+       "6 × 10 = 5 × 10 + 1 × 10 = 50 + 10 = 60",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c4",
+     "q": "4 × 8 = ?",
+     "a": "32",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "32",
+      "40",
+      "36",
+      "29"
+     ],
+     "hints": [
+      "Mal 4: zweimal verdoppeln."
+     ],
+     "steps": [
+      [
+       "4 × 8 = 32",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c5",
+     "q": "7 × 6 = ?",
+     "a": "42",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "42",
+      "39",
+      "43",
+      "52"
+     ],
+     "hints": [
+      "Mal 6: 5er-Aufgabe plus eine Gruppe."
+     ],
+     "steps": [
+      [
+       "6 × 7 = 5 × 7 + 1 × 7 = 35 + 7 = 42",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c6",
+     "q": "2 × 7 = ?",
+     "a": "14",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "17",
+      "19",
+      "13",
+      "14"
+     ],
+     "hints": [
+      "Mal 2 heisst verdoppeln."
+     ],
+     "steps": [
+      [
+       "2 × 7 = 14",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c7",
+     "q": "4 × 4 = ?",
+     "a": "16",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "16",
+      "20",
+      "6",
+      "12"
+     ],
+     "hints": [
+      "Mal 4: zweimal verdoppeln."
+     ],
+     "steps": [
+      [
+       "4 × 4 = 16",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c8",
+     "q": "6 × 5 = ?",
+     "a": "30",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "30",
+      "24",
+      "27",
+      "29"
+     ],
+     "hints": [
+      "Mal 5: halbe Zehnerzahl. Das Ergebnis endet auf 0 oder 5."
+     ],
+     "steps": [
+      [
+       "6 × 5 = 30",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c9",
+     "q": "9 × 8 = ?",
+     "a": "72",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "63",
+      "72",
+      "69",
+      "82"
+     ],
+     "hints": [
+      "Mal 8: dreimal verdoppeln."
+     ],
+     "steps": [
+      [
+       "8 × 9 = 5 × 9 + 3 × 9 = 45 + 27 = 72",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c10",
+     "q": "6 × 8 = ?",
+     "a": "48",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "56",
+      "48",
+      "54",
+      "47"
+     ],
+     "hints": [
+      "Mal 6: 5er-Aufgabe plus eine Gruppe."
+     ],
+     "steps": [
+      [
+       "6 × 8 = 5 × 8 + 1 × 8 = 40 + 8 = 48",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c11",
+     "q": "5 × 4 = ?",
+     "a": "20",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "20",
+      "17",
+      "19",
+      "16"
+     ],
+     "hints": [
+      "Mal 4: zweimal verdoppeln."
+     ],
+     "steps": [
+      [
+       "5 × 4 = 20",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c12",
+     "q": "3 × 9 = ?",
+     "a": "27",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "37",
+      "27",
+      "29",
+      "25"
+     ],
+     "hints": [
+      "Mal 3: verdoppeln und eine Gruppe dazu."
+     ],
+     "steps": [
+      [
+       "3 × 9 = 27",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c13",
+     "q": "5 × 3 = ?",
+     "a": "15",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "12",
+      "15",
+      "14",
+      "16"
+     ],
+     "hints": [
+      "Mal 3: verdoppeln und eine Gruppe dazu."
+     ],
+     "steps": [
+      [
+       "5 × 3 = 15",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c14",
+     "q": "5 × 8 = ?",
+     "a": "40",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "37",
+      "40",
+      "42",
+      "38"
+     ],
+     "hints": [
+      "Mal 5: halbe Zehnerzahl. Das Ergebnis endet auf 0 oder 5."
+     ],
+     "steps": [
+      [
+       "5 × 8 = 40",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c15",
+     "q": "7 × 5 = ?",
+     "a": "35",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "33",
+      "37",
+      "35",
+      "40"
+     ],
+     "hints": [
+      "Mal 5: halbe Zehnerzahl. Das Ergebnis endet auf 0 oder 5."
+     ],
+     "steps": [
+      [
+       "7 × 5 = 35",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c16",
+     "q": "10 × 10 = ?",
+     "a": "100",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "100",
+      "95",
+      "102",
+      "101"
+     ],
+     "hints": [
+      "Mal 10: Hänge eine Null an."
+     ],
+     "steps": [
+      [
+       "10 × 10 = 100",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c17",
+     "q": "6 × 4 = ?",
+     "a": "24",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "20",
+      "19",
+      "30",
+      "24"
+     ],
+     "hints": [
+      "Mal 4: zweimal verdoppeln."
+     ],
+     "steps": [
+      [
+       "6 × 4 = 24",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c18",
+     "q": "8 × 9 = ?",
+     "a": "72",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "69",
+      "72",
+      "71",
+      "63"
+     ],
+     "hints": [
+      "Mal 8: dreimal verdoppeln."
+     ],
+     "steps": [
+      [
+       "8 × 9 = 5 × 9 + 3 × 9 = 45 + 27 = 72",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c19",
+     "q": "7 × 4 = ?",
+     "a": "28",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "32",
+      "23",
+      "29",
+      "28"
+     ],
+     "hints": [
+      "Mal 4: zweimal verdoppeln."
+     ],
+     "steps": [
+      [
+       "7 × 4 = 28",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c20",
+     "q": "3 × 3 = ?",
+     "a": "9",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "4",
+      "9",
+      "8",
+      "11"
+     ],
+     "hints": [
+      "Mal 3: verdoppeln und eine Gruppe dazu."
+     ],
+     "steps": [
+      [
+       "3 × 3 = 9",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c21",
+     "q": "3 × 6 = ?",
+     "a": "18",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "24",
+      "23",
+      "18",
+      "15"
+     ],
+     "hints": [
+      "Mal 3: verdoppeln und eine Gruppe dazu."
+     ],
+     "steps": [
+      [
+       "3 × 6 = 18",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c22",
+     "q": "9 × 10 = ?",
+     "a": "90",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "90",
+      "87",
+      "95",
+      "81"
+     ],
+     "hints": [
+      "Mal 9: Mal 10 minus eine Gruppe. Die Quersumme ist 9."
+     ],
+     "steps": [
+      [
+       "9 × 10 = 10 × 10 − 10 = 100 − 10 = 90",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c23",
+     "q": "4 × 5 = ?",
+     "a": "20",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "15",
+      "20",
+      "22",
+      "23"
+     ],
+     "hints": [
+      "Mal 4: zweimal verdoppeln."
+     ],
+     "steps": [
+      [
+       "4 × 5 = 20",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c24",
+     "q": "3 × 8 = ?",
+     "a": "24",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "24",
+      "19",
+      "27",
+      "21"
+     ],
+     "hints": [
+      "Mal 3: verdoppeln und eine Gruppe dazu."
+     ],
+     "steps": [
+      [
+       "3 × 8 = 24",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c25",
+     "q": "5 × 6 = ?",
+     "a": "30",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "33",
+      "40",
+      "30",
+      "35"
+     ],
+     "hints": [
+      "Mal 5: halbe Zehnerzahl. Das Ergebnis endet auf 0 oder 5."
+     ],
+     "steps": [
+      [
+       "5 × 6 = 30",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c26",
+     "q": "10 × 8 = ?",
+     "a": "80",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "88",
+      "75",
+      "90",
+      "80"
+     ],
+     "hints": [
+      "Mal 8: dreimal verdoppeln."
+     ],
+     "steps": [
+      [
+       "8 × 10 = 5 × 10 + 3 × 10 = 50 + 30 = 80",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c27",
+     "q": "2 × 3 = ?",
+     "a": "6",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "5",
+      "6",
+      "9",
+      "3"
+     ],
+     "hints": [
+      "Mal 2 heisst verdoppeln."
+     ],
+     "steps": [
+      [
+       "2 × 3 = 6",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c28",
+     "q": "6 × 9 = ?",
+     "a": "54",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "55",
+      "54",
+      "45",
+      "53"
+     ],
+     "hints": [
+      "Mal 6: 5er-Aufgabe plus eine Gruppe."
+     ],
+     "steps": [
+      [
+       "6 × 9 = 5 × 9 + 1 × 9 = 45 + 9 = 54",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c29",
+     "q": "10 × 3 = ?",
+     "a": "30",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "28",
+      "40",
+      "27",
+      "30"
+     ],
+     "hints": [
+      "Mal 3: verdoppeln und eine Gruppe dazu."
+     ],
+     "steps": [
+      [
+       "10 × 3 = 30",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c30",
+     "q": "4 × 6 = ?",
+     "a": "24",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "25",
+      "21",
+      "34",
+      "24"
+     ],
+     "hints": [
+      "Mal 4: zweimal verdoppeln."
+     ],
+     "steps": [
+      [
+       "4 × 6 = 24",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c31",
+     "q": "3 × 10 = ?",
+     "a": "30",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "32",
+      "31",
+      "30",
+      "28"
+     ],
+     "hints": [
+      "Mal 3: verdoppeln und eine Gruppe dazu."
+     ],
+     "steps": [
+      [
+       "3 × 10 = 30",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c32",
+     "q": "8 × 2 = ?",
+     "a": "16",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "16",
+      "21",
+      "17",
+      "11"
+     ],
+     "hints": [
+      "Mal 2 heisst verdoppeln."
+     ],
+     "steps": [
+      [
+       "8 × 2 = 16",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c33",
+     "q": "4 × 7 = ?",
+     "a": "28",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "26",
+      "38",
+      "28",
+      "23"
+     ],
+     "hints": [
+      "Mal 4: zweimal verdoppeln."
+     ],
+     "steps": [
+      [
+       "4 × 7 = 28",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c34",
+     "q": "10 × 4 = ?",
+     "a": "40",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "41",
+      "39",
+      "36",
+      "40"
+     ],
+     "hints": [
+      "Mal 4: zweimal verdoppeln."
+     ],
+     "steps": [
+      [
+       "10 × 4 = 40",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c35",
+     "q": "1 × 5 = ?",
+     "a": "5",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "5",
+      "7",
+      "2",
+      "8"
+     ],
+     "hints": [
+      "Mal 5: halbe Zehnerzahl. Das Ergebnis endet auf 0 oder 5."
+     ],
+     "steps": [
+      [
+       "1 × 5 = 5",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c37",
+     "q": "1 × 3 = ?",
+     "a": "3",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "3",
+      "8",
+      "13",
+      "6"
+     ],
+     "hints": [
+      "Mal 3: verdoppeln und eine Gruppe dazu."
+     ],
+     "steps": [
+      [
+       "1 × 3 = 3",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c38",
+     "q": "2 × 5 = ?",
+     "a": "10",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "7",
+      "11",
+      "13",
+      "10"
+     ],
+     "hints": [
+      "Mal 2 heisst verdoppeln."
+     ],
+     "steps": [
+      [
+       "2 × 5 = 10",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c39",
+     "q": "9 × 3 = ?",
+     "a": "27",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "17",
+      "37",
+      "28",
+      "27"
+     ],
+     "hints": [
+      "Mal 3: verdoppeln und eine Gruppe dazu."
+     ],
+     "steps": [
+      [
+       "9 × 3 = 27",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c40",
+     "q": "7 × 3 = ?",
+     "a": "21",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "26",
+      "21",
+      "20",
+      "11"
+     ],
+     "hints": [
+      "Mal 3: verdoppeln und eine Gruppe dazu."
+     ],
+     "steps": [
+      [
+       "7 × 3 = 21",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c41",
+     "q": "7 × 9 = ?",
+     "a": "63",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "63",
+      "64",
+      "58",
+      "62"
+     ],
+     "hints": [
+      "Mal 7: 5er-Aufgabe plus 2er-Aufgabe."
+     ],
+     "steps": [
+      [
+       "7 × 9 = 5 × 9 + 2 × 9 = 45 + 18 = 63",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c42",
+     "q": "6 × 7 = ?",
+     "a": "42",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "40",
+      "39",
+      "42",
+      "43"
+     ],
+     "hints": [
+      "Mal 6: 5er-Aufgabe plus eine Gruppe."
+     ],
+     "steps": [
+      [
+       "6 × 7 = 5 × 7 + 1 × 7 = 35 + 7 = 42",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c44",
+     "q": "10 × 6 = ?",
+     "a": "60",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "60",
+      "58",
+      "50",
+      "65"
+     ],
+     "hints": [
+      "Mal 6: 5er-Aufgabe plus eine Gruppe."
+     ],
+     "steps": [
+      [
+       "6 × 10 = 5 × 10 + 1 × 10 = 50 + 10 = 60",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c45",
+     "q": "4 × ? = 8",
+     "a": "2",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "5",
+      "7",
+      "2",
+      "3"
+     ],
+     "hints": [
+      "Welche Zahl mal 4 ergibt 8? Probiere mit der 4er-Reihe."
+     ],
+     "steps": [
+      [
+       "4 × 2 = 8",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c46",
+     "q": "8 × ? = 56",
+     "a": "7",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "12",
+      "5",
+      "7",
+      "17"
+     ],
+     "hints": [
+      "Welche Zahl mal 8 ergibt 56? Probiere mit der 8er-Reihe."
+     ],
+     "steps": [
+      [
+       "8 × 7 = 56",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c47",
+     "q": "8 × ? = 16",
+     "a": "2",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "4",
+      "1",
+      "3",
+      "2"
+     ],
+     "hints": [
+      "Welche Zahl mal 8 ergibt 16? Probiere mit der 8er-Reihe."
+     ],
+     "steps": [
+      [
+       "8 × 2 = 16",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c48",
+     "q": "10 × ? = 40",
+     "a": "4",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "7",
+      "4",
+      "14",
+      "9"
+     ],
+     "hints": [
+      "Welche Zahl mal 10 ergibt 40? Probiere mit der 10er-Reihe."
+     ],
+     "steps": [
+      [
+       "10 × 4 = 40",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c49",
+     "q": "7 × ? = 63",
+     "a": "9",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "9",
+      "8",
+      "10",
+      "12"
+     ],
+     "hints": [
+      "Welche Zahl mal 7 ergibt 63? Probiere mit der 7er-Reihe."
+     ],
+     "steps": [
+      [
+       "7 × 9 = 63",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c50",
+     "q": "2 × ? = 14",
+     "a": "7",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "7",
+      "8",
+      "17",
+      "6"
+     ],
+     "hints": [
+      "Welche Zahl mal 2 ergibt 14? Probiere mit der 2er-Reihe."
+     ],
+     "steps": [
+      [
+       "2 × 7 = 14",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c51",
+     "q": "10 × ? = 80",
+     "a": "8",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "18",
+      "5",
+      "8",
+      "3"
+     ],
+     "hints": [
+      "Welche Zahl mal 10 ergibt 80? Probiere mit der 10er-Reihe."
+     ],
+     "steps": [
+      [
+       "10 × 8 = 80",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c52",
+     "q": "6 × ? = 24",
+     "a": "4",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "9",
+      "7",
+      "4",
+      "3"
+     ],
+     "hints": [
+      "Welche Zahl mal 6 ergibt 24? Probiere mit der 6er-Reihe."
+     ],
+     "steps": [
+      [
+       "6 × 4 = 24",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c53",
+     "q": "9 × ? = 18",
+     "a": "2",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "2",
+      "5",
+      "7",
+      "3"
+     ],
+     "hints": [
+      "Welche Zahl mal 9 ergibt 18? Probiere mit der 9er-Reihe."
+     ],
+     "steps": [
+      [
+       "9 × 2 = 18",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c54",
+     "q": "9 × ? = 36",
+     "a": "4",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "7",
+      "4",
+      "9",
+      "14"
+     ],
+     "hints": [
+      "Welche Zahl mal 9 ergibt 36? Probiere mit der 9er-Reihe."
+     ],
+     "steps": [
+      [
+       "9 × 4 = 36",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c55",
+     "q": "5 × ? = 35",
+     "a": "7",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "5",
+      "12",
+      "7",
+      "2"
+     ],
+     "hints": [
+      "Welche Zahl mal 5 ergibt 35? Probiere mit der 5er-Reihe."
+     ],
+     "steps": [
+      [
+       "5 × 7 = 35",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c56",
+     "q": "4 × ? = 24",
+     "a": "6",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "9",
+      "6",
+      "8",
+      "7"
+     ],
+     "hints": [
+      "Welche Zahl mal 4 ergibt 24? Probiere mit der 4er-Reihe."
+     ],
+     "steps": [
+      [
+       "4 × 6 = 24",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c57",
+     "q": "7 × ? = 49",
+     "a": "7",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "2",
+      "7",
+      "9",
+      "12"
+     ],
+     "hints": [
+      "Welche Zahl mal 7 ergibt 49? Probiere mit der 7er-Reihe."
+     ],
+     "steps": [
+      [
+       "7 × 7 = 49",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c58",
+     "q": "9 × ? = 27",
+     "a": "3",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "3",
+      "5",
+      "4",
+      "13"
+     ],
+     "hints": [
+      "Welche Zahl mal 9 ergibt 27? Probiere mit der 9er-Reihe."
+     ],
+     "steps": [
+      [
+       "9 × 3 = 27",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c59",
+     "q": "20 : 4 = ?",
+     "a": "5",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "7",
+      "5",
+      "10",
+      "4"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 4 × ? = 20."
+     ],
+     "steps": [
+      [
+       "4 × 5 = 20",
+       "Rechenweg"
+      ],
+      [
+       "also 20 : 4 = 5",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c60",
+     "q": "25 : 5 = ?",
+     "a": "5",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "2",
+      "6",
+      "5",
+      "4"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 5 × ? = 25."
+     ],
+     "steps": [
+      [
+       "5 × 5 = 25",
+       "Rechenweg"
+      ],
+      [
+       "also 25 : 5 = 5",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c61",
+     "q": "56 : 8 = ?",
+     "a": "7",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "6",
+      "2",
+      "7",
+      "9"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 8 × ? = 56."
+     ],
+     "steps": [
+      [
+       "8 × 7 = 56",
+       "Rechenweg"
+      ],
+      [
+       "also 56 : 8 = 7",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c62",
+     "q": "6 : 3 = ?",
+     "a": "2",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "7",
+      "1",
+      "4",
+      "2"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 3 × ? = 6."
+     ],
+     "steps": [
+      [
+       "3 × 2 = 6",
+       "Rechenweg"
+      ],
+      [
+       "also 6 : 3 = 2",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c63",
+     "q": "72 : 8 = ?",
+     "a": "9",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "12",
+      "7",
+      "4",
+      "9"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 8 × ? = 72."
+     ],
+     "steps": [
+      [
+       "8 × 9 = 72",
+       "Rechenweg"
+      ],
+      [
+       "also 72 : 8 = 9",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c64",
+     "q": "54 : 6 = ?",
+     "a": "9",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "9",
+      "6",
+      "12",
+      "10"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 6 × ? = 54."
+     ],
+     "steps": [
+      [
+       "6 × 9 = 54",
+       "Rechenweg"
+      ],
+      [
+       "also 54 : 6 = 9",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c65",
+     "q": "16 : 2 = ?",
+     "a": "8",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "8",
+      "6",
+      "11",
+      "13"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 2 × ? = 16."
+     ],
+     "steps": [
+      [
+       "2 × 8 = 16",
+       "Rechenweg"
+      ],
+      [
+       "also 16 : 2 = 8",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c66",
+     "q": "8 : 4 = ?",
+     "a": "2",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "1",
+      "2",
+      "4",
+      "7"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 4 × ? = 8."
+     ],
+     "steps": [
+      [
+       "4 × 2 = 8",
+       "Rechenweg"
+      ],
+      [
+       "also 8 : 4 = 2",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c67",
+     "q": "100 : 10 = ?",
+     "a": "10",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "10",
+      "13",
+      "20",
+      "12"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 10 × ? = 100."
+     ],
+     "steps": [
+      [
+       "10 × 10 = 100",
+       "Rechenweg"
+      ],
+      [
+       "also 100 : 10 = 10",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c68",
+     "q": "20 : 2 = ?",
+     "a": "10",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "8",
+      "5",
+      "15",
+      "10"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 2 × ? = 20."
+     ],
+     "steps": [
+      [
+       "2 × 10 = 20",
+       "Rechenweg"
+      ],
+      [
+       "also 20 : 2 = 10",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c69",
+     "q": "24 : 8 = ?",
+     "a": "3",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "5",
+      "4",
+      "3",
+      "6"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 8 × ? = 24."
+     ],
+     "steps": [
+      [
+       "8 × 3 = 24",
+       "Rechenweg"
+      ],
+      [
+       "also 24 : 8 = 3",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c70",
+     "q": "72 : 9 = ?",
+     "a": "8",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "5",
+      "13",
+      "8",
+      "3"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 9 × ? = 72."
+     ],
+     "steps": [
+      [
+       "9 × 8 = 72",
+       "Rechenweg"
+      ],
+      [
+       "also 72 : 9 = 8",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c71",
+     "q": "35 : 7 = ?",
+     "a": "5",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "2",
+      "7",
+      "4",
+      "5"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 7 × ? = 35."
+     ],
+     "steps": [
+      [
+       "7 × 5 = 35",
+       "Rechenweg"
+      ],
+      [
+       "also 35 : 7 = 5",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c72",
+     "q": "9 : 3 = ?",
+     "a": "3",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "2",
+      "6",
+      "4",
+      "3"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 3 × ? = 9."
+     ],
+     "steps": [
+      [
+       "3 × 3 = 9",
+       "Rechenweg"
+      ],
+      [
+       "also 9 : 3 = 3",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c73",
+     "q": "Setze fort: 2, 4, ?",
+     "a": "6",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "8",
+      "16",
+      "3",
+      "6"
+     ],
+     "hints": [
+      "Jeder Schritt macht 2 mehr."
+     ],
+     "steps": [
+      [
+       "4 + 2 = 6",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c74",
+     "q": "Setze fort: 9, 18, 27, 36, ?",
+     "a": "45",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "40",
+      "48",
+      "54",
+      "45"
+     ],
+     "hints": [
+      "Jeder Schritt macht 9 mehr."
+     ],
+     "steps": [
+      [
+       "36 + 9 = 45",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c75",
+     "q": "Setze fort: 4, 8, ?",
+     "a": "12",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "10",
+      "16",
+      "12",
+      "17"
+     ],
+     "hints": [
+      "Jeder Schritt macht 4 mehr."
+     ],
+     "steps": [
+      [
+       "8 + 4 = 12",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c76",
+     "q": "Setze fort: 6, 12, ?",
+     "a": "18",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "18",
+      "15",
+      "20",
+      "8"
+     ],
+     "hints": [
+      "Jeder Schritt macht 6 mehr."
+     ],
+     "steps": [
+      [
+       "12 + 6 = 18",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c77",
+     "q": "Setze fort: 3, 6, 9, ?",
+     "a": "12",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "13",
+      "9",
+      "11",
+      "12"
+     ],
+     "hints": [
+      "Jeder Schritt macht 3 mehr."
+     ],
+     "steps": [
+      [
+       "9 + 3 = 12",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c78",
+     "q": "Setze fort: 7, 14, 21, ?",
+     "a": "28",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "30",
+      "27",
+      "31",
+      "28"
+     ],
+     "hints": [
+      "Jeder Schritt macht 7 mehr."
+     ],
+     "steps": [
+      [
+       "21 + 7 = 28",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c79",
+     "q": "Setze fort: 8, 16, 24, ?",
+     "a": "32",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "24",
+      "35",
+      "32",
+      "33"
+     ],
+     "hints": [
+      "Jeder Schritt macht 8 mehr."
+     ],
+     "steps": [
+      [
+       "24 + 8 = 32",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c80",
+     "q": "Setze fort: 5, 10, 15, ?",
+     "a": "20",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "18",
+      "25",
+      "23",
+      "20"
+     ],
+     "hints": [
+      "Jeder Schritt macht 5 mehr."
+     ],
+     "steps": [
+      [
+       "15 + 5 = 20",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c81",
+     "q": "Mia hat 2 Tüten mit je 3 Gummibärchen. Wie viele Gummibärchen sind das?",
+     "a": "6",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "7",
+      "6",
+      "5",
+      "16"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 2 × 3."
+     ],
+     "steps": [
+      [
+       "2 × 3 = 6",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c82",
+     "q": "Ben hat 10 Schachteln mit je 4 Stiften. Wie viele Stifte sind das?",
+     "a": "40",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "38",
+      "40",
+      "37",
+      "50"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 10 × 4."
+     ],
+     "steps": [
+      [
+       "10 × 4 = 40",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c83",
+     "q": "Lea hat 6 Reihen mit je 2 Stühlen. Wie viele Stühle sind das?",
+     "a": "12",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "22",
+      "12",
+      "2",
+      "8"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 6 × 2."
+     ],
+     "steps": [
+      [
+       "6 × 2 = 12",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c84",
+     "q": "Noah hat 4 Körbe mit je 10 Äpfeln. Wie viele Äpfel sind das?",
+     "a": "40",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "44",
+      "40",
+      "37",
+      "35"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 4 × 10."
+     ],
+     "steps": [
+      [
+       "4 × 10 = 40",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c85",
+     "q": "Lina hat 2 Tische mit je 4 Kindern. Wie viele Kinder sind das?",
+     "a": "8",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "18",
+      "8",
+      "7",
+      "5"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 2 × 4."
+     ],
+     "steps": [
+      [
+       "2 × 4 = 8",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c86",
+     "q": "Jan hat 5 Taschen mit je 5 Büchern. Wie viele Bücher sind das?",
+     "a": "25",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "25",
+      "24",
+      "20",
+      "15"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 5 × 5."
+     ],
+     "steps": [
+      [
+       "5 × 5 = 25",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c87",
+     "q": "Sara hat 4 Gläser mit je 8 Kirschen. Wie viele Kirschen sind das?",
+     "a": "32",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "40",
+      "32",
+      "36",
+      "31"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 4 × 8."
+     ],
+     "steps": [
+      [
+       "4 × 8 = 32",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c88",
+     "q": "Tim hat 7 Packungen mit je 3 Keksen. Wie viele Kekse sind das?",
+     "a": "21",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "21",
+      "26",
+      "19",
+      "18"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 7 × 3."
+     ],
+     "steps": [
+      [
+       "7 × 3 = 21",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c89",
+     "q": "8 × 8 = ? (Quadratzahl)",
+     "a": "64",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "54",
+      "56",
+      "64",
+      "74"
+     ],
+     "hints": [
+      "Quadratzahlen: Zahl mal sich selbst."
+     ],
+     "steps": [
+      [
+       "8 × 8 = 64",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c90",
+     "q": "7 × 7 = ? (Quadratzahl)",
+     "a": "49",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "49",
+      "44",
+      "52",
+      "56"
+     ],
+     "hints": [
+      "Quadratzahlen: Zahl mal sich selbst."
+     ],
+     "steps": [
+      [
+       "7 × 7 = 49",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c91",
+     "q": "5 × 5 = ? (Quadratzahl)",
+     "a": "25",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "27",
+      "25",
+      "23",
+      "26"
+     ],
+     "hints": [
+      "Quadratzahlen: Zahl mal sich selbst."
+     ],
+     "steps": [
+      [
+       "5 × 5 = 25",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c92",
+     "q": "6 × 6 = ? (Quadratzahl)",
+     "a": "36",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "36",
+      "39",
+      "34",
+      "35"
+     ],
+     "hints": [
+      "Quadratzahlen: Zahl mal sich selbst."
+     ],
+     "steps": [
+      [
+       "6 × 6 = 36",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c93",
+     "q": "4 × 4 = ? (Quadratzahl)",
+     "a": "16",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "16",
+      "15",
+      "11",
+      "18"
+     ],
+     "hints": [
+      "Quadratzahlen: Zahl mal sich selbst."
+     ],
+     "steps": [
+      [
+       "4 × 4 = 16",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c94",
+     "q": "9 × 9 = ? (Quadratzahl)",
+     "a": "81",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "84",
+      "78",
+      "91",
+      "81"
+     ],
+     "hints": [
+      "Quadratzahlen: Zahl mal sich selbst."
+     ],
+     "steps": [
+      [
+       "9 × 9 = 81",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c95",
+     "q": "Mia rechnet 6 × 9 = 63. Was stimmt?",
+     "a": "Falsch, richtig ist 54",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "Falsch, richtig ist 45",
+      "Es stimmt alles",
+      "Falsch, richtig ist 60",
+      "Falsch, richtig ist 54"
+     ],
+     "hints": [
+      "Rechne mit einer Kernaufgabe nach."
+     ],
+     "steps": [
+      [
+       "6 × 9 = 5 × 9 + 1 × 9 = 45 + 9 = 54",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c96",
+     "q": "Ben rechnet 8 × 3 = 25. Was stimmt?",
+     "a": "Falsch, richtig ist 24",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "Falsch, richtig ist 32",
+      "Falsch, richtig ist 21",
+      "Falsch, richtig ist 24",
+      "Es stimmt alles"
+     ],
+     "hints": [
+      "Rechne mit einer Kernaufgabe nach."
+     ],
+     "steps": [
+      [
+       "8 × 3 = 24",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c97",
+     "q": "Lea rechnet 5 × 4 = 21. Was stimmt?",
+     "a": "Falsch, richtig ist 20",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "Falsch, richtig ist 25",
+      "Falsch, richtig ist 20",
+      "Falsch, richtig ist 16",
+      "Es stimmt alles"
+     ],
+     "hints": [
+      "Rechne mit einer Kernaufgabe nach."
+     ],
+     "steps": [
+      [
+       "5 × 4 = 20",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c98",
+     "q": "Noah rechnet 5 × 3 = 10. Was stimmt?",
+     "a": "Falsch, richtig ist 15",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "Falsch, richtig ist 15",
+      "Es stimmt alles",
+      "Falsch, richtig ist 20",
+      "Falsch, richtig ist 12"
+     ],
+     "hints": [
+      "Rechne mit einer Kernaufgabe nach."
+     ],
+     "steps": [
+      [
+       "5 × 3 = 15",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c99",
+     "q": "Lina rechnet 10 × 5 = 60. Was stimmt?",
+     "a": "Falsch, richtig ist 50",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "Falsch, richtig ist 50",
+      "Es stimmt alles",
+      "Falsch, richtig ist 45",
+      "Falsch, richtig ist 60"
+     ],
+     "hints": [
+      "Rechne mit einer Kernaufgabe nach."
+     ],
+     "steps": [
+      [
+       "10 × 5 = 50",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c100",
+     "q": "Jan rechnet 9 × 8 = 80. Was stimmt?",
+     "a": "Falsch, richtig ist 72",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "Falsch, richtig ist 72",
+      "Falsch, richtig ist 81",
+      "Falsch, richtig ist 64",
+      "Es stimmt alles"
+     ],
+     "hints": [
+      "Rechne mit einer Kernaufgabe nach."
+     ],
+     "steps": [
+      [
+       "8 × 9 = 5 × 9 + 3 × 9 = 45 + 27 = 72",
+       "Rechenweg"
+      ]
+     ]
+    }
+   ],
+   "exam": {
+    "minutes": 20,
+    "questions": [
+     {
+      "id": "q1",
+      "q": "4 × 4 = ?",
+      "explain": "4 × 4 = 16",
+      "type": "mc",
+      "options": [
+       "16",
+       "15",
+       "11",
+       "18"
+      ],
+      "answer": 0
+     },
+     {
+      "id": "q2",
+      "q": "1 × 5 = ?",
+      "explain": "1 × 5 = 5",
+      "type": "mc",
+      "options": [
+       "5",
+       "7",
+       "2",
+       "8"
+      ],
+      "answer": 0
+     },
+     {
+      "id": "q3",
+      "q": "10 × 8 = ?",
+      "explain": "8 × 10 = 5 × 10 + 3 × 10 = 50 + 30 = 80",
+      "type": "mc",
+      "options": [
+       "88",
+       "75",
+       "90",
+       "80"
+      ],
+      "answer": 3
+     },
+     {
+      "id": "q4",
+      "q": "8 × 8 = ?",
+      "explain": "8 × 8 = 64",
+      "type": "mc",
+      "options": [
+       "54",
+       "56",
+       "64",
+       "74"
+      ],
+      "answer": 2
+     },
+     {
+      "id": "q5",
+      "q": "4 × 6 = ?",
+      "explain": "4 × 6 = 24",
+      "type": "mc",
+      "options": [
+       "25",
+       "21",
+       "34",
+       "24"
+      ],
+      "answer": 3
+     },
+     {
+      "id": "q6",
+      "q": "Setze fort: 4, 8, ?",
+      "explain": "8 + 4 = 12",
+      "type": "mc",
+      "options": [
+       "10",
+       "16",
+       "12",
+       "17"
+      ],
+      "answer": 2
+     },
+     {
+      "id": "q7",
+      "q": "6 × 10 = ?",
+      "explain": "6 × 10 = 5 × 10 + 1 × 10 = 50 + 10 = 60",
+      "type": "mc",
+      "options": [
+       "60",
+       "55",
+       "62",
+       "65"
+      ],
+      "answer": 0
+     },
+     {
+      "id": "q8",
+      "q": "6 × 4 = ?",
+      "explain": "6 × 4 = 24",
+      "type": "mc",
+      "options": [
+       "20",
+       "19",
+       "30",
+       "24"
+      ],
+      "answer": 3
+     },
+     {
+      "id": "q9",
+      "q": "Setze fort: 2, 4, ?",
+      "explain": "4 + 2 = 6",
+      "type": "mc",
+      "options": [
+       "8",
+       "16",
+       "3",
+       "6"
+      ],
+      "answer": 3
+     },
+     {
+      "id": "q10",
+      "q": "7 × 7 = ?",
+      "explain": "7 × 7 = 49",
+      "type": "mc",
+      "options": [
+       "49",
+       "44",
+       "52",
+       "56"
+      ],
+      "answer": 0
+     },
+     {
+      "id": "q11",
+      "q": "Setze fort: 6, 12, ?",
+      "explain": "12 + 6 = 18",
+      "type": "mc",
+      "options": [
+       "18",
+       "15",
+       "20",
+       "8"
+      ],
+      "answer": 0
+     },
+     {
+      "id": "q12",
+      "q": "5 × 3 = ?",
+      "explain": "5 × 3 = 15",
+      "type": "mc",
+      "options": [
+       "12",
+       "15",
+       "14",
+       "16"
+      ],
+      "answer": 1
+     }
+    ]
+   }
+  },
+  {
    "id": "kl3-mathe-division-10er",
    "child": "kl3",
    "subject": "mathe",
@@ -116801,6 +119515,2056 @@
       "answer": [
        "8"
       ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "kl5-mathe-einmaleins-gross",
+   "child": "kl5",
+   "subject": "mathe",
+   "chapter": "Beliebig grosse Zahlen",
+   "title": "Einmaleins bis 12 und die 25er-Reihe",
+   "art": "mathe",
+   "origin": "ki",
+   "theory": {
+    "basis": {
+     "h": "Das grosse Einmaleins",
+     "text": "Das grosse Einmaleins geht bis 12 × 12. Rechne mit Zerlegen: 12 × 7 = 10 × 7 + 2 × 7.",
+     "lines": [
+      [
+       "12 × 7",
+       "70 + 14 = 84"
+      ]
+     ]
+    },
+    "umkehr": {
+     "h": "Teilen",
+     "text": "132 : 12 = 11, weil 12 × 11 = 132.",
+     "lines": [
+      [
+       "132 : 12",
+       "= 11"
+      ]
+     ]
+    }
+   },
+   "explain": [
+    {
+     "h": "Die grosse Tafel bis 12",
+     "text": "Das grosse Einmaleins geht bis 12 × 12. Die 11er- und 12er-Reihe sind neu.",
+     "visuals": [
+      {
+       "type": "mtab",
+       "max": 12,
+       "hr": [
+        11,
+        12
+       ],
+       "cap": "Neu: 11er- und 12er-Reihe"
+      }
+     ]
+    },
+    {
+     "h": "Die 11er-Reihe",
+     "text": "Bei den einstelligen Zahlen verdoppelst du die Ziffer: 11 × 4 = 44. Bei 11 × 10 = 110, 11 × 11 = 121, 11 × 12 = 132.",
+     "visuals": [
+      {
+       "type": "mreihe",
+       "n": 11,
+       "core": [
+        1,
+        10
+       ]
+      }
+     ]
+    },
+    {
+     "h": "Die 12er-Reihe",
+     "text": "12 × n ist 10 × n plus 2 × n. Beispiel: 12 × 7 = 70 + 14 = 84.",
+     "visuals": [
+      {
+       "type": "mreihe",
+       "n": 12,
+       "core": [
+        1,
+        10
+       ]
+      }
+     ]
+    },
+    {
+     "h": "Die 25er-Reihe",
+     "text": "4 × 25 = 100. Zähle in Vierteln: 25, 50, 75, 100, 125, 150 …",
+     "visuals": [
+      {
+       "type": "mreihe",
+       "n": 25,
+       "core": [
+        4,
+        8
+       ]
+      }
+     ]
+    },
+    {
+     "h": "Quadratzahlen bis 15",
+     "text": "Von 11² bis 15² kommen diese Zahlen dazu.",
+     "visuals": [
+      {
+       "type": "tbl",
+       "head": [
+        "Aufgabe",
+        "Ergebnis"
+       ],
+       "rows": [
+        [
+         "11 × 11",
+         "121"
+        ],
+        [
+         "12 × 12",
+         "144"
+        ],
+        [
+         "13 × 13",
+         "169"
+        ],
+        [
+         "14 × 14",
+         "196"
+        ],
+        [
+         "15 × 15",
+         "225"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "h": "Zerlegen: 13 × 7",
+     "text": "Zerlege 13 in 10 + 3. Rechne 10 × 7 = 70 und 3 × 7 = 21. Das gibt 91.",
+     "visuals": [
+      {
+       "type": "mtab",
+       "max": 12,
+       "cells": [
+        [
+         12,
+         7
+        ]
+       ],
+       "hr": [
+        10,
+        2
+       ],
+       "hc": [
+        7
+       ],
+       "cap": "Beispiel 12 × 7 = 70 + 14"
+      }
+     ]
+    },
+    {
+     "h": "Teilen bis 144",
+     "text": "132 : 12 = 11, weil 12 × 11 = 132. Nutze die Tafel rückwärts.",
+     "visuals": [
+      {
+       "type": "mtab",
+       "max": 12,
+       "cells": [
+        [
+         12,
+         11
+        ]
+       ],
+       "hr": [
+        12
+       ],
+       "hc": [
+        11
+       ],
+       "cap": "132 : 12 = 11"
+      }
+     ]
+    },
+    {
+     "h": "Regeln und Wichtigstes",
+     "text": "Merke dir diese drei Karten.",
+     "visuals": [
+      {
+       "type": "cards",
+       "items": [
+        [
+         "11er",
+         "Ziffer doppelt",
+         "11 × 4 = 44",
+         0
+        ],
+        [
+         "12er",
+         "10er + 2er",
+         "12 × 7 = 84",
+         1
+        ],
+        [
+         "25er",
+         "4 × 25 = 100",
+         "8 × 25 = 200",
+         2
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "cards": [
+    {
+     "id": "c1",
+     "q": "7 × 6 = ?",
+     "a": "42",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "52",
+      "42",
+      "48",
+      "44"
+     ],
+     "hints": [
+      "Mal 6: 5er-Aufgabe plus eine Gruppe."
+     ],
+     "steps": [
+      [
+       "6 × 7 = 5 × 7 + 1 × 7 = 35 + 7 = 42",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c2",
+     "q": "7 × 8 = ?",
+     "a": "56",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "55",
+      "56",
+      "49",
+      "53"
+     ],
+     "hints": [
+      "Mal 7: 5er-Aufgabe plus 2er-Aufgabe."
+     ],
+     "steps": [
+      [
+       "7 × 8 = 5 × 8 + 2 × 8 = 40 + 16 = 56",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c3",
+     "q": "11 × 8 = ?",
+     "a": "88",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "86",
+      "98",
+      "85",
+      "88"
+     ],
+     "hints": [
+      "Mal 8: dreimal verdoppeln."
+     ],
+     "steps": [
+      [
+       "8 × 11 = 5 × 11 + 3 × 11 = 55 + 33 = 88",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c4",
+     "q": "11 × 9 = ?",
+     "a": "99",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "90",
+      "97",
+      "99",
+      "88"
+     ],
+     "hints": [
+      "Mal 9: Mal 10 minus eine Gruppe. Die Quersumme ist 9."
+     ],
+     "steps": [
+      [
+       "9 × 11 = 10 × 11 − 11 = 110 − 11 = 99",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c5",
+     "q": "6 × 12 = ?",
+     "a": "72",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "73",
+      "75",
+      "72",
+      "84"
+     ],
+     "hints": [
+      "Mal 6: 5er-Aufgabe plus eine Gruppe."
+     ],
+     "steps": [
+      [
+       "6 × 12 = 5 × 12 + 1 × 12 = 60 + 12 = 72",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c6",
+     "q": "8 × 8 = ?",
+     "a": "64",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "56",
+      "65",
+      "69",
+      "64"
+     ],
+     "hints": [
+      "Mal 8: dreimal verdoppeln."
+     ],
+     "steps": [
+      [
+       "8 × 8 = 64",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c7",
+     "q": "9 × 9 = ?",
+     "a": "81",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "81",
+      "91",
+      "79",
+      "90"
+     ],
+     "hints": [
+      "Mal 9: Mal 10 minus eine Gruppe. Die Quersumme ist 9."
+     ],
+     "steps": [
+      [
+       "9 × 9 = 81",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c8",
+     "q": "9 × 7 = ?",
+     "a": "63",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "54",
+      "68",
+      "63",
+      "66"
+     ],
+     "hints": [
+      "Mal 7: 5er-Aufgabe plus 2er-Aufgabe."
+     ],
+     "steps": [
+      [
+       "7 × 9 = 5 × 9 + 2 × 9 = 45 + 18 = 63",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c9",
+     "q": "7 × 7 = ?",
+     "a": "49",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "39",
+      "44",
+      "49",
+      "48"
+     ],
+     "hints": [
+      "Mal 7: 5er-Aufgabe plus 2er-Aufgabe."
+     ],
+     "steps": [
+      [
+       "7 × 7 = 49",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c10",
+     "q": "11 × 11 = ?",
+     "a": "121",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "118",
+      "123",
+      "121",
+      "111"
+     ],
+     "hints": [
+      "Zerlege in Kernaufgaben."
+     ],
+     "steps": [
+      [
+       "11 × 11 = 121",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c11",
+     "q": "9 × 8 = ?",
+     "a": "72",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "81",
+      "80",
+      "72",
+      "63"
+     ],
+     "hints": [
+      "Mal 8: dreimal verdoppeln."
+     ],
+     "steps": [
+      [
+       "8 × 9 = 5 × 9 + 3 × 9 = 45 + 27 = 72",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c12",
+     "q": "10 × 11 = ?",
+     "a": "110",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "105",
+      "108",
+      "110",
+      "99"
+     ],
+     "hints": [
+      "Mal 10: Hänge eine Null an."
+     ],
+     "steps": [
+      [
+       "10 × 11 = 110",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c13",
+     "q": "7 × 10 = ?",
+     "a": "70",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "63",
+      "69",
+      "70",
+      "65"
+     ],
+     "hints": [
+      "Mal 7: 5er-Aufgabe plus 2er-Aufgabe."
+     ],
+     "steps": [
+      [
+       "7 × 10 = 5 × 10 + 2 × 10 = 50 + 20 = 70",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c14",
+     "q": "7 × 9 = ?",
+     "a": "63",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "73",
+      "64",
+      "58",
+      "63"
+     ],
+     "hints": [
+      "Mal 7: 5er-Aufgabe plus 2er-Aufgabe."
+     ],
+     "steps": [
+      [
+       "7 × 9 = 5 × 9 + 2 × 9 = 45 + 18 = 63",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c15",
+     "q": "12 × 11 = ?",
+     "a": "132",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "144",
+      "132",
+      "120",
+      "143"
+     ],
+     "hints": [
+      "Zerlege in Kernaufgaben."
+     ],
+     "steps": [
+      [
+       "12 × 11 = 132",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c16",
+     "q": "12 × 9 = ?",
+     "a": "108",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "105",
+      "103",
+      "108",
+      "110"
+     ],
+     "hints": [
+      "Mal 9: Mal 10 minus eine Gruppe. Die Quersumme ist 9."
+     ],
+     "steps": [
+      [
+       "9 × 12 = 10 × 12 − 12 = 120 − 12 = 108",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c17",
+     "q": "9 × 6 = ?",
+     "a": "54",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "52",
+      "48",
+      "44",
+      "54"
+     ],
+     "hints": [
+      "Mal 6: 5er-Aufgabe plus eine Gruppe."
+     ],
+     "steps": [
+      [
+       "6 × 9 = 5 × 9 + 1 × 9 = 45 + 9 = 54",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c18",
+     "q": "11 × 12 = ?",
+     "a": "132",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "132",
+      "121",
+      "135",
+      "144"
+     ],
+     "hints": [
+      "Zerlege in Kernaufgaben."
+     ],
+     "steps": [
+      [
+       "11 × 12 = 132",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c19",
+     "q": "12 × 12 = ?",
+     "a": "144",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "145",
+      "141",
+      "134",
+      "144"
+     ],
+     "hints": [
+      "Zerlege in Kernaufgaben."
+     ],
+     "steps": [
+      [
+       "12 × 12 = 144",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c20",
+     "q": "11 × 6 = ?",
+     "a": "66",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "55",
+      "56",
+      "66",
+      "61"
+     ],
+     "hints": [
+      "Mal 6: 5er-Aufgabe plus eine Gruppe."
+     ],
+     "steps": [
+      [
+       "6 × 11 = 5 × 11 + 1 × 11 = 55 + 11 = 66",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c21",
+     "q": "8 × 7 = ?",
+     "a": "56",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "61",
+      "55",
+      "56",
+      "58"
+     ],
+     "hints": [
+      "Mal 7: 5er-Aufgabe plus 2er-Aufgabe."
+     ],
+     "steps": [
+      [
+       "7 × 8 = 5 × 8 + 2 × 8 = 40 + 16 = 56",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c22",
+     "q": "8 × 11 = ?",
+     "a": "88",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "90",
+      "87",
+      "88",
+      "80"
+     ],
+     "hints": [
+      "Mal 8: dreimal verdoppeln."
+     ],
+     "steps": [
+      [
+       "8 × 11 = 5 × 11 + 3 × 11 = 55 + 33 = 88",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c23",
+     "q": "12 × 6 = ?",
+     "a": "72",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "66",
+      "67",
+      "70",
+      "72"
+     ],
+     "hints": [
+      "Mal 6: 5er-Aufgabe plus eine Gruppe."
+     ],
+     "steps": [
+      [
+       "6 × 12 = 5 × 12 + 1 × 12 = 60 + 12 = 72",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c24",
+     "q": "12 × 10 = ?",
+     "a": "120",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "110",
+      "108",
+      "117",
+      "120"
+     ],
+     "hints": [
+      "Mal 10: Hänge eine Null an."
+     ],
+     "steps": [
+      [
+       "12 × 10 = 120",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c25",
+     "q": "10 × 8 = ?",
+     "a": "80",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "79",
+      "80",
+      "88",
+      "78"
+     ],
+     "hints": [
+      "Mal 8: dreimal verdoppeln."
+     ],
+     "steps": [
+      [
+       "8 × 10 = 5 × 10 + 3 × 10 = 50 + 30 = 80",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c26",
+     "q": "6 × 9 = ?",
+     "a": "54",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "52",
+      "49",
+      "54",
+      "57"
+     ],
+     "hints": [
+      "Mal 6: 5er-Aufgabe plus eine Gruppe."
+     ],
+     "steps": [
+      [
+       "6 × 9 = 5 × 9 + 1 × 9 = 45 + 9 = 54",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c27",
+     "q": "11 × ? = 66",
+     "a": "6",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "7",
+      "3",
+      "6",
+      "5"
+     ],
+     "hints": [
+      "Welche Zahl mal 11 ergibt 66? Probiere mit der 11er-Reihe."
+     ],
+     "steps": [
+      [
+       "11 × 6 = 66",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c28",
+     "q": "10 × ? = 90",
+     "a": "9",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "12",
+      "14",
+      "10",
+      "9"
+     ],
+     "hints": [
+      "Welche Zahl mal 10 ergibt 90? Probiere mit der 10er-Reihe."
+     ],
+     "steps": [
+      [
+       "10 × 9 = 90",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c29",
+     "q": "8 × ? = 88",
+     "a": "11",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "6",
+      "11",
+      "10",
+      "12"
+     ],
+     "hints": [
+      "Welche Zahl mal 8 ergibt 88? Probiere mit der 8er-Reihe."
+     ],
+     "steps": [
+      [
+       "8 × 11 = 88",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c30",
+     "q": "6 × ? = 72",
+     "a": "12",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "17",
+      "10",
+      "12",
+      "22"
+     ],
+     "hints": [
+      "Welche Zahl mal 6 ergibt 72? Probiere mit der 6er-Reihe."
+     ],
+     "steps": [
+      [
+       "6 × 12 = 72",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c31",
+     "q": "7 × ? = 70",
+     "a": "10",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "8",
+      "10",
+      "12",
+      "5"
+     ],
+     "hints": [
+      "Welche Zahl mal 7 ergibt 70? Probiere mit der 7er-Reihe."
+     ],
+     "steps": [
+      [
+       "7 × 10 = 70",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c32",
+     "q": "7 × ? = 42",
+     "a": "6",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "7",
+      "6",
+      "8",
+      "3"
+     ],
+     "hints": [
+      "Welche Zahl mal 7 ergibt 42? Probiere mit der 7er-Reihe."
+     ],
+     "steps": [
+      [
+       "7 × 6 = 42",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c33",
+     "q": "12 × ? = 144",
+     "a": "12",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "12",
+      "15",
+      "7",
+      "9"
+     ],
+     "hints": [
+      "Welche Zahl mal 12 ergibt 144? Probiere mit der 12er-Reihe."
+     ],
+     "steps": [
+      [
+       "12 × 12 = 144",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c34",
+     "q": "12 × ? = 96",
+     "a": "8",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "3",
+      "6",
+      "10",
+      "8"
+     ],
+     "hints": [
+      "Welche Zahl mal 12 ergibt 96? Probiere mit der 12er-Reihe."
+     ],
+     "steps": [
+      [
+       "12 × 8 = 96",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c35",
+     "q": "70 : 7 = ?",
+     "a": "10",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "11",
+      "8",
+      "10",
+      "12"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 7 × ? = 70."
+     ],
+     "steps": [
+      [
+       "7 × 10 = 70",
+       "Rechenweg"
+      ],
+      [
+       "also 70 : 7 = 10",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c36",
+     "q": "120 : 10 = ?",
+     "a": "12",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "12",
+      "9",
+      "14",
+      "17"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 10 × ? = 120."
+     ],
+     "steps": [
+      [
+       "10 × 12 = 120",
+       "Rechenweg"
+      ],
+      [
+       "also 120 : 10 = 12",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c37",
+     "q": "99 : 11 = ?",
+     "a": "9",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "10",
+      "8",
+      "11",
+      "9"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 11 × ? = 99."
+     ],
+     "steps": [
+      [
+       "11 × 9 = 99",
+       "Rechenweg"
+      ],
+      [
+       "also 99 : 11 = 9",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c38",
+     "q": "42 : 7 = ?",
+     "a": "6",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "3",
+      "6",
+      "16",
+      "8"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 7 × ? = 42."
+     ],
+     "steps": [
+      [
+       "7 × 6 = 42",
+       "Rechenweg"
+      ],
+      [
+       "also 42 : 7 = 6",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c39",
+     "q": "56 : 8 = ?",
+     "a": "7",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "8",
+      "9",
+      "7",
+      "6"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 8 × ? = 56."
+     ],
+     "steps": [
+      [
+       "8 × 7 = 56",
+       "Rechenweg"
+      ],
+      [
+       "also 56 : 8 = 7",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c40",
+     "q": "110 : 11 = ?",
+     "a": "10",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "12",
+      "9",
+      "15",
+      "10"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 11 × ? = 110."
+     ],
+     "steps": [
+      [
+       "11 × 10 = 110",
+       "Rechenweg"
+      ],
+      [
+       "also 110 : 11 = 10",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c41",
+     "q": "144 : 12 = ?",
+     "a": "12",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "12",
+      "9",
+      "2",
+      "17"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 12 × ? = 144."
+     ],
+     "steps": [
+      [
+       "12 × 12 = 144",
+       "Rechenweg"
+      ],
+      [
+       "also 144 : 12 = 12",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c42",
+     "q": "90 : 10 = ?",
+     "a": "9",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "4",
+      "14",
+      "19",
+      "9"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 10 × ? = 90."
+     ],
+     "steps": [
+      [
+       "10 × 9 = 90",
+       "Rechenweg"
+      ],
+      [
+       "also 90 : 10 = 9",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c43",
+     "q": "66 : 6 = ?",
+     "a": "11",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "11",
+      "14",
+      "6",
+      "16"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 6 × ? = 66."
+     ],
+     "steps": [
+      [
+       "6 × 11 = 66",
+       "Rechenweg"
+      ],
+      [
+       "also 66 : 6 = 11",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c44",
+     "q": "88 : 11 = ?",
+     "a": "8",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "10",
+      "18",
+      "9",
+      "8"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 11 × ? = 88."
+     ],
+     "steps": [
+      [
+       "11 × 8 = 88",
+       "Rechenweg"
+      ],
+      [
+       "also 88 : 11 = 8",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c45",
+     "q": "14 × 5 = ?",
+     "a": "70",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "69",
+      "73",
+      "71",
+      "70"
+     ],
+     "hints": [
+      "Zerlege 14 in 10 + 4."
+     ],
+     "steps": [
+      [
+       "14 × 5 = 10 × 5 + 4 × 5",
+       "Rechenweg"
+      ],
+      [
+       "= 50 + 20 = 70",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c46",
+     "q": "15 × 3 = ?",
+     "a": "45",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "42",
+      "35",
+      "45",
+      "46"
+     ],
+     "hints": [
+      "Zerlege 15 in 10 + 5."
+     ],
+     "steps": [
+      [
+       "15 × 3 = 10 × 3 + 5 × 3",
+       "Rechenweg"
+      ],
+      [
+       "= 30 + 15 = 45",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c47",
+     "q": "13 × 7 = ?",
+     "a": "91",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "93",
+      "92",
+      "90",
+      "91"
+     ],
+     "hints": [
+      "Zerlege 13 in 10 + 3."
+     ],
+     "steps": [
+      [
+       "13 × 7 = 10 × 7 + 3 × 7",
+       "Rechenweg"
+      ],
+      [
+       "= 70 + 21 = 91",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c48",
+     "q": "18 × 8 = ?",
+     "a": "144",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "154",
+      "144",
+      "146",
+      "141"
+     ],
+     "hints": [
+      "Zerlege 18 in 10 + 8."
+     ],
+     "steps": [
+      [
+       "18 × 8 = 10 × 8 + 8 × 8",
+       "Rechenweg"
+      ],
+      [
+       "= 80 + 64 = 144",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c49",
+     "q": "19 × 9 = ?",
+     "a": "171",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "176",
+      "171",
+      "174",
+      "181"
+     ],
+     "hints": [
+      "Zerlege 19 in 10 + 9."
+     ],
+     "steps": [
+      [
+       "19 × 9 = 10 × 9 + 9 × 9",
+       "Rechenweg"
+      ],
+      [
+       "= 90 + 81 = 171",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c50",
+     "q": "17 × 9 = ?",
+     "a": "153",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "148",
+      "163",
+      "155",
+      "153"
+     ],
+     "hints": [
+      "Zerlege 17 in 10 + 7."
+     ],
+     "steps": [
+      [
+       "17 × 9 = 10 × 9 + 7 × 9",
+       "Rechenweg"
+      ],
+      [
+       "= 90 + 63 = 153",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c51",
+     "q": "19 × 7 = ?",
+     "a": "133",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "134",
+      "128",
+      "143",
+      "133"
+     ],
+     "hints": [
+      "Zerlege 19 in 10 + 9."
+     ],
+     "steps": [
+      [
+       "19 × 7 = 10 × 7 + 9 × 7",
+       "Rechenweg"
+      ],
+      [
+       "= 70 + 63 = 133",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c52",
+     "q": "13 × 5 = ?",
+     "a": "65",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "55",
+      "65",
+      "63",
+      "64"
+     ],
+     "hints": [
+      "Zerlege 13 in 10 + 3."
+     ],
+     "steps": [
+      [
+       "13 × 5 = 10 × 5 + 3 × 5",
+       "Rechenweg"
+      ],
+      [
+       "= 50 + 15 = 65",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c53",
+     "q": "18 × 5 = ?",
+     "a": "90",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "91",
+      "95",
+      "90",
+      "89"
+     ],
+     "hints": [
+      "Zerlege 18 in 10 + 8."
+     ],
+     "steps": [
+      [
+       "18 × 5 = 10 × 5 + 8 × 5",
+       "Rechenweg"
+      ],
+      [
+       "= 50 + 40 = 90",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c54",
+     "q": "14 × 8 = ?",
+     "a": "112",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "110",
+      "112",
+      "102",
+      "113"
+     ],
+     "hints": [
+      "Zerlege 14 in 10 + 4."
+     ],
+     "steps": [
+      [
+       "14 × 8 = 10 × 8 + 4 × 8",
+       "Rechenweg"
+      ],
+      [
+       "= 80 + 32 = 112",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c55",
+     "q": "Mia hat 12 Tüten mit je 9 Gummibärchen. Wie viele Gummibärchen sind das?",
+     "a": "108",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "105",
+      "108",
+      "117",
+      "103"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 12 × 9."
+     ],
+     "steps": [
+      [
+       "9 × 12 = 10 × 12 − 12 = 120 − 12 = 108",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c56",
+     "q": "Ben hat 7 Schachteln mit je 11 Stiften. Wie viele Stifte sind das?",
+     "a": "77",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "84",
+      "76",
+      "77",
+      "67"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 7 × 11."
+     ],
+     "steps": [
+      [
+       "7 × 11 = 5 × 11 + 2 × 11 = 55 + 22 = 77",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c57",
+     "q": "Lea hat 11 Reihen mit je 6 Stühlen. Wie viele Stühle sind das?",
+     "a": "66",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "66",
+      "77",
+      "76",
+      "69"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 11 × 6."
+     ],
+     "steps": [
+      [
+       "6 × 11 = 5 × 11 + 1 × 11 = 55 + 11 = 66",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c58",
+     "q": "Noah hat 7 Körbe mit je 8 Äpfeln. Wie viele Äpfel sind das?",
+     "a": "56",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "53",
+      "63",
+      "56",
+      "55"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 7 × 8."
+     ],
+     "steps": [
+      [
+       "7 × 8 = 5 × 8 + 2 × 8 = 40 + 16 = 56",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c59",
+     "q": "Lina hat 6 Tische mit je 7 Kindern. Wie viele Kinder sind das?",
+     "a": "42",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "37",
+      "39",
+      "48",
+      "42"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 6 × 7."
+     ],
+     "steps": [
+      [
+       "6 × 7 = 5 × 7 + 1 × 7 = 35 + 7 = 42",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c60",
+     "q": "Jan hat 10 Taschen mit je 9 Büchern. Wie viele Bücher sind das?",
+     "a": "90",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "87",
+      "90",
+      "89",
+      "91"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 10 × 9."
+     ],
+     "steps": [
+      [
+       "9 × 10 = 10 × 10 − 10 = 100 − 10 = 90",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c61",
+     "q": "Sara hat 12 Gläser mit je 11 Kirschen. Wie viele Kirschen sind das?",
+     "a": "132",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "142",
+      "144",
+      "132",
+      "129"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 12 × 11."
+     ],
+     "steps": [
+      [
+       "12 × 11 = 132",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c62",
+     "q": "Tim hat 9 Packungen mit je 11 Keksen. Wie viele Kekse sind das?",
+     "a": "99",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "104",
+      "99",
+      "101",
+      "108"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 9 × 11."
+     ],
+     "steps": [
+      [
+       "9 × 11 = 10 × 11 − 11 = 110 − 11 = 99",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c63",
+     "q": "11 × 11 = ? (Quadratzahl)",
+     "a": "121",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "121",
+      "131",
+      "126",
+      "122"
+     ],
+     "hints": [
+      "Quadratzahlen: Zahl mal sich selbst."
+     ],
+     "steps": [
+      [
+       "11 × 11 = 121",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c64",
+     "q": "15 × 15 = ? (Quadratzahl)",
+     "a": "225",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "226",
+      "225",
+      "235",
+      "228"
+     ],
+     "hints": [
+      "Quadratzahlen: Zahl mal sich selbst."
+     ],
+     "steps": [
+      [
+       "15 × 15 = 225",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c65",
+     "q": "14 × 14 = ? (Quadratzahl)",
+     "a": "196",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "194",
+      "206",
+      "186",
+      "196"
+     ],
+     "hints": [
+      "Quadratzahlen: Zahl mal sich selbst."
+     ],
+     "steps": [
+      [
+       "14 × 14 = 196",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c66",
+     "q": "13 × 13 = ? (Quadratzahl)",
+     "a": "169",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "174",
+      "168",
+      "179",
+      "169"
+     ],
+     "hints": [
+      "Quadratzahlen: Zahl mal sich selbst."
+     ],
+     "steps": [
+      [
+       "13 × 13 = 169",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c67",
+     "q": "12 × 12 = ? (Quadratzahl)",
+     "a": "144",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "132",
+      "147",
+      "141",
+      "144"
+     ],
+     "hints": [
+      "Quadratzahlen: Zahl mal sich selbst."
+     ],
+     "steps": [
+      [
+       "12 × 12 = 144",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c68",
+     "q": "Mia rechnet 10 × 12 = 130. Was stimmt?",
+     "a": "Falsch, richtig ist 120",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "Falsch, richtig ist 108",
+      "Falsch, richtig ist 120",
+      "Falsch, richtig ist 130",
+      "Es stimmt alles"
+     ],
+     "hints": [
+      "Rechne mit einer Kernaufgabe nach."
+     ],
+     "steps": [
+      [
+       "10 × 12 = 120",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c69",
+     "q": "Ben rechnet 6 × 12 = 66. Was stimmt?",
+     "a": "Falsch, richtig ist 72",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "Es stimmt alles",
+      "Falsch, richtig ist 72",
+      "Falsch, richtig ist 60",
+      "Falsch, richtig ist 78"
+     ],
+     "hints": [
+      "Rechne mit einer Kernaufgabe nach."
+     ],
+     "steps": [
+      [
+       "6 × 12 = 5 × 12 + 1 × 12 = 60 + 12 = 72",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c70",
+     "q": "Lea rechnet 12 × 11 = 133. Was stimmt?",
+     "a": "Falsch, richtig ist 132",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "Falsch, richtig ist 132",
+      "Falsch, richtig ist 144",
+      "Falsch, richtig ist 121",
+      "Es stimmt alles"
+     ],
+     "hints": [
+      "Rechne mit einer Kernaufgabe nach."
+     ],
+     "steps": [
+      [
+       "12 × 11 = 132",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c71",
+     "q": "Noah rechnet 7 × 12 = 72. Was stimmt?",
+     "a": "Falsch, richtig ist 84",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "Falsch, richtig ist 72",
+      "Falsch, richtig ist 91",
+      "Es stimmt alles",
+      "Falsch, richtig ist 84"
+     ],
+     "hints": [
+      "Rechne mit einer Kernaufgabe nach."
+     ],
+     "steps": [
+      [
+       "7 × 12 = 5 × 12 + 2 × 12 = 60 + 24 = 84",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c72",
+     "q": "Lina rechnet 11 × 12 = 144. Was stimmt?",
+     "a": "Falsch, richtig ist 132",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "Falsch, richtig ist 143",
+      "Falsch, richtig ist 120",
+      "Es stimmt alles",
+      "Falsch, richtig ist 132"
+     ],
+     "hints": [
+      "Rechne mit einer Kernaufgabe nach."
+     ],
+     "steps": [
+      [
+       "11 × 12 = 132",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c73",
+     "q": "Jan rechnet 9 × 7 = 73. Was stimmt?",
+     "a": "Falsch, richtig ist 63",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "Falsch, richtig ist 72",
+      "Falsch, richtig ist 56",
+      "Falsch, richtig ist 63",
+      "Es stimmt alles"
+     ],
+     "hints": [
+      "Rechne mit einer Kernaufgabe nach."
+     ],
+     "steps": [
+      [
+       "7 × 9 = 5 × 9 + 2 × 9 = 45 + 18 = 63",
+       "Rechenweg"
+      ]
+     ]
+    }
+   ],
+   "exam": {
+    "minutes": 20,
+    "questions": [
+     {
+      "id": "q1",
+      "q": "14 × 14 = ?",
+      "explain": "14 × 14 = 196",
+      "type": "mc",
+      "options": [
+       "194",
+       "206",
+       "186",
+       "196"
+      ],
+      "answer": 3
+     },
+     {
+      "id": "q2",
+      "q": "6 × 9 = ?",
+      "explain": "6 × 9 = 5 × 9 + 1 × 9 = 45 + 9 = 54",
+      "type": "mc",
+      "options": [
+       "52",
+       "49",
+       "54",
+       "57"
+      ],
+      "answer": 2
+     },
+     {
+      "id": "q3",
+      "q": "12 × 9 = ?",
+      "explain": "9 × 12 = 10 × 12 − 12 = 120 − 12 = 108",
+      "type": "mc",
+      "options": [
+       "105",
+       "103",
+       "108",
+       "110"
+      ],
+      "answer": 2
+     },
+     {
+      "id": "q4",
+      "q": "Ben rechnet 6 × 12 = 66. Was stimmt?",
+      "explain": "6 × 12 = 5 × 12 + 1 × 12 = 60 + 12 = 72",
+      "type": "mc",
+      "options": [
+       "Es stimmt alles",
+       "Falsch, richtig ist 72",
+       "Falsch, richtig ist 60",
+       "Falsch, richtig ist 78"
+      ],
+      "answer": 1
+     },
+     {
+      "id": "q5",
+      "q": "Sara hat 12 Gläser mit je 11 Kirschen. Wie viele Kirschen sind das?",
+      "explain": "12 × 11 = 132",
+      "type": "mc",
+      "options": [
+       "142",
+       "144",
+       "132",
+       "129"
+      ],
+      "answer": 2
+     },
+     {
+      "id": "q6",
+      "q": "Lina rechnet 11 × 12 = 144. Was stimmt?",
+      "explain": "11 × 12 = 132",
+      "type": "mc",
+      "options": [
+       "Falsch, richtig ist 143",
+       "Falsch, richtig ist 120",
+       "Es stimmt alles",
+       "Falsch, richtig ist 132"
+      ],
+      "answer": 3
+     },
+     {
+      "id": "q7",
+      "q": "7 × 9 = ?",
+      "explain": "7 × 9 = 5 × 9 + 2 × 9 = 45 + 18 = 63",
+      "type": "mc",
+      "options": [
+       "73",
+       "64",
+       "58",
+       "63"
+      ],
+      "answer": 3
+     },
+     {
+      "id": "q8",
+      "q": "13 × 7 = ?",
+      "explain": "13 × 7 = 10 × 7 + 3 × 7; = 70 + 21 = 91",
+      "type": "mc",
+      "options": [
+       "93",
+       "92",
+       "90",
+       "91"
+      ],
+      "answer": 3
+     },
+     {
+      "id": "q9",
+      "q": "8 × 8 = ?",
+      "explain": "8 × 8 = 64",
+      "type": "mc",
+      "options": [
+       "56",
+       "65",
+       "69",
+       "64"
+      ],
+      "answer": 3
+     },
+     {
+      "id": "q10",
+      "q": "17 × 9 = ?",
+      "explain": "17 × 9 = 10 × 9 + 7 × 9; = 90 + 63 = 153",
+      "type": "mc",
+      "options": [
+       "148",
+       "163",
+       "155",
+       "153"
+      ],
+      "answer": 3
+     },
+     {
+      "id": "q11",
+      "q": "56 : 8 = ?",
+      "explain": "8 × 7 = 56; also 56 : 8 = 7",
+      "type": "mc",
+      "options": [
+       "8",
+       "9",
+       "7",
+       "6"
+      ],
+      "answer": 2
+     },
+     {
+      "id": "q12",
+      "q": "7 × 6 = ?",
+      "explain": "6 × 7 = 5 × 7 + 1 × 7 = 35 + 7 = 42",
+      "type": "mc",
+      "options": [
+       "52",
+       "42",
+       "48",
+       "44"
+      ],
+      "answer": 1
      }
     ]
    }
@@ -133430,6 +138194,2157 @@
        "15,95",
        "15.95"
       ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "kl6-mathe-einmaleins-blitz",
+   "child": "kl6",
+   "subject": "mathe",
+   "chapter": "Rationale Zahlen",
+   "title": "Einmaleins blitzschnell: Zerlegen und Verdoppeln",
+   "art": "mathe",
+   "origin": "ki",
+   "theory": {
+    "basis": {
+     "h": "Blitzschnell rechnen",
+     "text": "Zerlege grosse Aufgaben in Kernaufgaben. Das spart Zeit und Fehler.",
+     "lines": [
+      [
+       "24 × 5",
+       "100 + 20 = 120"
+      ]
+     ]
+    },
+    "umkehr": {
+     "h": "Teilen mit Rest",
+     "text": "Suche die nächstkleinere Malaufgabe. Der Rest ist die Differenz.",
+     "lines": [
+      [
+       "50 : 7",
+       "7 Rest 1"
+      ]
+     ]
+    }
+   },
+   "explain": [
+    {
+     "h": "Wiederholung: die Tafel",
+     "text": "Das Einmaleins ist die Grundlage für alles Kopfrechnen: Dezimalzahlen, Brüche, Prozente.",
+     "visuals": [
+      {
+       "type": "mtab",
+       "max": 10,
+       "tint": true,
+       "cap": "Alle Aufgaben bis 10 × 10"
+      }
+     ]
+    },
+    {
+     "h": "Mal 10, 100 und 1000",
+     "text": "Das Komma wandert nach rechts: 0,4 × 100 = 40. Bei ganzen Zahlen hängst du Nullen an.",
+     "visuals": [
+      {
+       "type": "mreihe",
+       "n": 4,
+       "core": [
+        10
+       ],
+       "upto": 10,
+       "cap": "0,4 × 10 = 4  ·  0,4 × 100 = 40"
+      }
+     ]
+    },
+    {
+     "h": "Zerlegen grosser Aufgaben",
+     "text": "24 × 5 = 20 × 5 + 4 × 5 = 100 + 20 = 120.",
+     "visuals": [
+      {
+       "type": "mtab",
+       "max": 10,
+       "cells": [
+        [
+         4,
+         5
+        ]
+       ],
+       "hr": [
+        4
+       ],
+       "hc": [
+        5
+       ],
+       "cap": "4 × 5 = 20 → 24 × 5 = 100 + 20"
+      }
+     ]
+    },
+    {
+     "h": "Verdoppeln und Halbieren",
+     "text": "16 × 25 = 8 × 50 = 4 × 100 = 400. Halbiere die eine, verdopple die andere Zahl.",
+     "visuals": [
+      {
+       "type": "mreihe",
+       "n": 25,
+       "core": [
+        4,
+        8
+       ],
+       "cap": "4 × 25 = 100"
+      }
+     ]
+    },
+    {
+     "h": "Mal 5, mal 50",
+     "text": "Mal 5 heisst mal 10 und halbieren: 48 × 5 = 480 : 2 = 240.",
+     "visuals": [
+      {
+       "type": "mreihe",
+       "n": 5,
+       "core": [
+        2,
+        10
+       ]
+      }
+     ]
+    },
+    {
+     "h": "Teilen mit Rest",
+     "text": "50 : 7 = 7 Rest 1, weil 7 × 7 = 49. Suche die nächstkleinere Aufgabe.",
+     "visuals": [
+      {
+       "type": "mtab",
+       "max": 10,
+       "cells": [
+        [
+         7,
+         7
+        ]
+       ],
+       "hr": [
+        7
+       ],
+       "hc": [
+        7
+       ],
+       "sq": true,
+       "cap": "7 × 7 = 49, Rest 1"
+      }
+     ]
+    },
+    {
+     "h": "Quadratzahlen bis 20",
+     "text": "Diese Quadratzahlen helfen beim Wurzelziehen später.",
+     "visuals": [
+      {
+       "type": "tbl",
+       "head": [
+        "Aufgabe",
+        "Ergebnis"
+       ],
+       "rows": [
+        [
+         "11²",
+         "121"
+        ],
+        [
+         "12²",
+         "144"
+        ],
+        [
+         "13²",
+         "169"
+        ],
+        [
+         "14²",
+         "196"
+        ],
+        [
+         "15²",
+         "225"
+        ],
+        [
+         "16²",
+         "256"
+        ],
+        [
+         "20²",
+         "400"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "h": "Regeln und Wichtigstes",
+     "text": "Merke dir diese drei Karten.",
+     "visuals": [
+      {
+       "type": "cards",
+       "items": [
+        [
+         "Zerlegen",
+         "Zehner + Einer",
+         "24 × 5 = 100 + 20",
+         0
+        ],
+        [
+         "Verdoppeln",
+         "halbieren + verdoppeln",
+         "16 × 25 = 8 × 50",
+         1
+        ],
+        [
+         "Komma",
+         "wandert bei mal 10",
+         "0,4 × 10 = 4",
+         2
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "cards": [
+    {
+     "id": "c1",
+     "q": "10 × 7 = ?",
+     "a": "70",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "72",
+      "65",
+      "80",
+      "70"
+     ],
+     "hints": [
+      "Mal 7: 5er-Aufgabe plus 2er-Aufgabe."
+     ],
+     "steps": [
+      [
+       "7 × 10 = 5 × 10 + 2 × 10 = 50 + 20 = 70",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c2",
+     "q": "10 × 6 = ?",
+     "a": "60",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "60",
+      "65",
+      "62",
+      "57"
+     ],
+     "hints": [
+      "Mal 6: 5er-Aufgabe plus eine Gruppe."
+     ],
+     "steps": [
+      [
+       "6 × 10 = 5 × 10 + 1 × 10 = 50 + 10 = 60",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c3",
+     "q": "11 × 6 = ?",
+     "a": "66",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "66",
+      "55",
+      "76",
+      "72"
+     ],
+     "hints": [
+      "Mal 6: 5er-Aufgabe plus eine Gruppe."
+     ],
+     "steps": [
+      [
+       "6 × 11 = 5 × 11 + 1 × 11 = 55 + 11 = 66",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c4",
+     "q": "6 × 6 = ?",
+     "a": "36",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "34",
+      "46",
+      "42",
+      "36"
+     ],
+     "hints": [
+      "Mal 6: 5er-Aufgabe plus eine Gruppe."
+     ],
+     "steps": [
+      [
+       "6 × 6 = 36",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c5",
+     "q": "12 × 8 = ?",
+     "a": "96",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "108",
+      "96",
+      "91",
+      "99"
+     ],
+     "hints": [
+      "Mal 8: dreimal verdoppeln."
+     ],
+     "steps": [
+      [
+       "8 × 12 = 5 × 12 + 3 × 12 = 60 + 36 = 96",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c6",
+     "q": "6 × 7 = ?",
+     "a": "42",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "43",
+      "48",
+      "32",
+      "42"
+     ],
+     "hints": [
+      "Mal 6: 5er-Aufgabe plus eine Gruppe."
+     ],
+     "steps": [
+      [
+       "6 × 7 = 5 × 7 + 1 × 7 = 35 + 7 = 42",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c7",
+     "q": "6 × 11 = ?",
+     "a": "66",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "63",
+      "66",
+      "64",
+      "72"
+     ],
+     "hints": [
+      "Mal 6: 5er-Aufgabe plus eine Gruppe."
+     ],
+     "steps": [
+      [
+       "6 × 11 = 5 × 11 + 1 × 11 = 55 + 11 = 66",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c8",
+     "q": "9 × 12 = ?",
+     "a": "108",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "99",
+      "103",
+      "108",
+      "106"
+     ],
+     "hints": [
+      "Mal 9: Mal 10 minus eine Gruppe. Die Quersumme ist 9."
+     ],
+     "steps": [
+      [
+       "9 × 12 = 10 × 12 − 12 = 120 − 12 = 108",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c9",
+     "q": "11 × 9 = ?",
+     "a": "99",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "98",
+      "94",
+      "90",
+      "99"
+     ],
+     "hints": [
+      "Mal 9: Mal 10 minus eine Gruppe. Die Quersumme ist 9."
+     ],
+     "steps": [
+      [
+       "9 × 11 = 10 × 11 − 11 = 110 − 11 = 99",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c10",
+     "q": "11 × 11 = ?",
+     "a": "121",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "123",
+      "122",
+      "121",
+      "110"
+     ],
+     "hints": [
+      "Zerlege in Kernaufgaben."
+     ],
+     "steps": [
+      [
+       "11 × 11 = 121",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c11",
+     "q": "8 × 8 = ?",
+     "a": "64",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "69",
+      "72",
+      "64",
+      "65"
+     ],
+     "hints": [
+      "Mal 8: dreimal verdoppeln."
+     ],
+     "steps": [
+      [
+       "8 × 8 = 64",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c12",
+     "q": "11 × 10 = ?",
+     "a": "110",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "112",
+      "100",
+      "110",
+      "113"
+     ],
+     "hints": [
+      "Mal 10: Hänge eine Null an."
+     ],
+     "steps": [
+      [
+       "11 × 10 = 110",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c13",
+     "q": "9 × 6 = ?",
+     "a": "54",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "54",
+      "59",
+      "48",
+      "49"
+     ],
+     "hints": [
+      "Mal 6: 5er-Aufgabe plus eine Gruppe."
+     ],
+     "steps": [
+      [
+       "6 × 9 = 5 × 9 + 1 × 9 = 45 + 9 = 54",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c14",
+     "q": "7 × 8 = ?",
+     "a": "56",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "58",
+      "56",
+      "51",
+      "55"
+     ],
+     "hints": [
+      "Mal 7: 5er-Aufgabe plus 2er-Aufgabe."
+     ],
+     "steps": [
+      [
+       "7 × 8 = 5 × 8 + 2 × 8 = 40 + 16 = 56",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c15",
+     "q": "8 × 11 = ?",
+     "a": "88",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "90",
+      "86",
+      "78",
+      "88"
+     ],
+     "hints": [
+      "Mal 8: dreimal verdoppeln."
+     ],
+     "steps": [
+      [
+       "8 × 11 = 5 × 11 + 3 × 11 = 55 + 33 = 88",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c16",
+     "q": "9 × 8 = ?",
+     "a": "72",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "62",
+      "72",
+      "73",
+      "80"
+     ],
+     "hints": [
+      "Mal 8: dreimal verdoppeln."
+     ],
+     "steps": [
+      [
+       "8 × 9 = 5 × 9 + 3 × 9 = 45 + 27 = 72",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c17",
+     "q": "23 × 7 = ?",
+     "a": "161",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "161",
+      "158",
+      "160",
+      "150"
+     ],
+     "hints": [
+      "Zerlege 23 in 20 + 3."
+     ],
+     "steps": [
+      [
+       "23 × 7 = 20 × 7 + 3 × 7",
+       "Rechenweg"
+      ],
+      [
+       "= 140 + 21 = 161",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c18",
+     "q": "19 × 6 = ?",
+     "a": "114",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "109",
+      "116",
+      "124",
+      "114"
+     ],
+     "hints": [
+      "Zerlege 19 in 10 + 9."
+     ],
+     "steps": [
+      [
+       "19 × 6 = 10 × 6 + 9 × 6",
+       "Rechenweg"
+      ],
+      [
+       "= 60 + 54 = 114",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c19",
+     "q": "29 × 6 = ?",
+     "a": "174",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "172",
+      "174",
+      "176",
+      "177"
+     ],
+     "hints": [
+      "Zerlege 29 in 20 + 9."
+     ],
+     "steps": [
+      [
+       "29 × 6 = 20 × 6 + 9 × 6",
+       "Rechenweg"
+      ],
+      [
+       "= 120 + 54 = 174",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c20",
+     "q": "20 × 4 = ?",
+     "a": "80",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "78",
+      "77",
+      "85",
+      "80"
+     ],
+     "hints": [
+      "Zerlege 20 in 20 + 0."
+     ],
+     "steps": [
+      [
+       "20 × 4 = 20 × 4 + 0 × 4",
+       "Rechenweg"
+      ],
+      [
+       "= 80 + 0 = 80",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c21",
+     "q": "25 × 7 = ?",
+     "a": "175",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "175",
+      "172",
+      "170",
+      "176"
+     ],
+     "hints": [
+      "Zerlege 25 in 20 + 5."
+     ],
+     "steps": [
+      [
+       "25 × 7 = 20 × 7 + 5 × 7",
+       "Rechenweg"
+      ],
+      [
+       "= 140 + 35 = 175",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c22",
+     "q": "17 × 5 = ?",
+     "a": "85",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "85",
+      "84",
+      "90",
+      "86"
+     ],
+     "hints": [
+      "Zerlege 17 in 10 + 7."
+     ],
+     "steps": [
+      [
+       "17 × 5 = 10 × 5 + 7 × 5",
+       "Rechenweg"
+      ],
+      [
+       "= 50 + 35 = 85",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c23",
+     "q": "22 × 4 = ?",
+     "a": "88",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "88",
+      "78",
+      "83",
+      "85"
+     ],
+     "hints": [
+      "Zerlege 22 in 20 + 2."
+     ],
+     "steps": [
+      [
+       "22 × 4 = 20 × 4 + 2 × 4",
+       "Rechenweg"
+      ],
+      [
+       "= 80 + 8 = 88",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c24",
+     "q": "15 × 4 = ?",
+     "a": "60",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "63",
+      "60",
+      "58",
+      "50"
+     ],
+     "hints": [
+      "Zerlege 15 in 10 + 5."
+     ],
+     "steps": [
+      [
+       "15 × 4 = 10 × 4 + 5 × 4",
+       "Rechenweg"
+      ],
+      [
+       "= 40 + 20 = 60",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c25",
+     "q": "25 × 9 = ?",
+     "a": "225",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "230",
+      "228",
+      "215",
+      "225"
+     ],
+     "hints": [
+      "Zerlege 25 in 20 + 5."
+     ],
+     "steps": [
+      [
+       "25 × 9 = 20 × 9 + 5 × 9",
+       "Rechenweg"
+      ],
+      [
+       "= 180 + 45 = 225",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c26",
+     "q": "13 × 7 = ?",
+     "a": "91",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "86",
+      "94",
+      "91",
+      "81"
+     ],
+     "hints": [
+      "Zerlege 13 in 10 + 3."
+     ],
+     "steps": [
+      [
+       "13 × 7 = 10 × 7 + 3 × 7",
+       "Rechenweg"
+      ],
+      [
+       "= 70 + 21 = 91",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c27",
+     "q": "44 × 50 = ?",
+     "a": "2200",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "2200",
+      "2202",
+      "2198",
+      "2197"
+     ],
+     "hints": [
+      "Halbiere die eine Zahl, verdopple die andere."
+     ],
+     "steps": [
+      [
+       "44 × 50 = 22 × 100",
+       "Rechenweg"
+      ],
+      [
+       "= 2200",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c28",
+     "q": "18 × 50 = ?",
+     "a": "900",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "905",
+      "900",
+      "899",
+      "897"
+     ],
+     "hints": [
+      "Halbiere die eine Zahl, verdopple die andere."
+     ],
+     "steps": [
+      [
+       "18 × 50 = 9 × 100",
+       "Rechenweg"
+      ],
+      [
+       "= 900",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c29",
+     "q": "12 × 5 = ?",
+     "a": "60",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "57",
+      "55",
+      "70",
+      "60"
+     ],
+     "hints": [
+      "Halbiere die eine Zahl, verdopple die andere."
+     ],
+     "steps": [
+      [
+       "12 × 5 = 6 × 10",
+       "Rechenweg"
+      ],
+      [
+       "= 60",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c30",
+     "q": "12 × 50 = ?",
+     "a": "600",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "610",
+      "597",
+      "600",
+      "602"
+     ],
+     "hints": [
+      "Halbiere die eine Zahl, verdopple die andere."
+     ],
+     "steps": [
+      [
+       "12 × 50 = 6 × 100",
+       "Rechenweg"
+      ],
+      [
+       "= 600",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c31",
+     "q": "48 × 5 = ?",
+     "a": "240",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "243",
+      "240",
+      "238",
+      "242"
+     ],
+     "hints": [
+      "Halbiere die eine Zahl, verdopple die andere."
+     ],
+     "steps": [
+      [
+       "48 × 5 = 24 × 10",
+       "Rechenweg"
+      ],
+      [
+       "= 240",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c32",
+     "q": "36 × 50 = ?",
+     "a": "1800",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "1798",
+      "1799",
+      "1800",
+      "1810"
+     ],
+     "hints": [
+      "Halbiere die eine Zahl, verdopple die andere."
+     ],
+     "steps": [
+      [
+       "36 × 50 = 18 × 100",
+       "Rechenweg"
+      ],
+      [
+       "= 1800",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c33",
+     "q": "36 × 5 = ?",
+     "a": "180",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "179",
+      "182",
+      "180",
+      "185"
+     ],
+     "hints": [
+      "Halbiere die eine Zahl, verdopple die andere."
+     ],
+     "steps": [
+      [
+       "36 × 5 = 18 × 10",
+       "Rechenweg"
+      ],
+      [
+       "= 180",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c34",
+     "q": "12 × 25 = ?",
+     "a": "300",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "299",
+      "310",
+      "303",
+      "300"
+     ],
+     "hints": [
+      "Halbiere die eine Zahl, verdopple die andere."
+     ],
+     "steps": [
+      [
+       "12 × 25 = 6 × 50",
+       "Rechenweg"
+      ],
+      [
+       "= 300",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c35",
+     "q": "44 × 5 = ?",
+     "a": "220",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "210",
+      "220",
+      "215",
+      "221"
+     ],
+     "hints": [
+      "Halbiere die eine Zahl, verdopple die andere."
+     ],
+     "steps": [
+      [
+       "44 × 5 = 22 × 10",
+       "Rechenweg"
+      ],
+      [
+       "= 220",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c36",
+     "q": "18 × 5 = ?",
+     "a": "90",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "89",
+      "88",
+      "87",
+      "90"
+     ],
+     "hints": [
+      "Halbiere die eine Zahl, verdopple die andere."
+     ],
+     "steps": [
+      [
+       "18 × 5 = 9 × 10",
+       "Rechenweg"
+      ],
+      [
+       "= 90",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c37",
+     "q": "0,7 × 10 = ?",
+     "a": "7",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "0,7",
+      "7",
+      "70",
+      "17"
+     ],
+     "hints": [
+      "Mal 10: das Komma wandert 1 Stellen nach rechts."
+     ],
+     "steps": [
+      [
+       "0,7 × 10 = 7",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c38",
+     "q": "0,9 × 10 = ?",
+     "a": "9",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "9",
+      "0,9",
+      "90",
+      "19"
+     ],
+     "hints": [
+      "Mal 10: das Komma wandert 1 Stellen nach rechts."
+     ],
+     "steps": [
+      [
+       "0,9 × 10 = 9",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c39",
+     "q": "4,8 × 100 = ?",
+     "a": "480",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "4800",
+      "580",
+      "480",
+      "48"
+     ],
+     "hints": [
+      "Mal 100: das Komma wandert 2 Stellen nach rechts."
+     ],
+     "steps": [
+      [
+       "4,8 × 100 = 480",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c40",
+     "q": "3,6 × 10 = ?",
+     "a": "36",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "46",
+      "360",
+      "3,6",
+      "36"
+     ],
+     "hints": [
+      "Mal 10: das Komma wandert 1 Stellen nach rechts."
+     ],
+     "steps": [
+      [
+       "3,6 × 10 = 36",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c41",
+     "q": "3,6 × 100 = ?",
+     "a": "360",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "36",
+      "460",
+      "360",
+      "3600"
+     ],
+     "hints": [
+      "Mal 100: das Komma wandert 2 Stellen nach rechts."
+     ],
+     "steps": [
+      [
+       "3,6 × 100 = 360",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c42",
+     "q": "1,5 × 10 = ?",
+     "a": "15",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "15",
+      "25",
+      "1,5",
+      "150"
+     ],
+     "hints": [
+      "Mal 10: das Komma wandert 1 Stellen nach rechts."
+     ],
+     "steps": [
+      [
+       "1,5 × 10 = 15",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c43",
+     "q": "7,5 × 100 = ?",
+     "a": "750",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "75",
+      "850",
+      "750",
+      "7500"
+     ],
+     "hints": [
+      "Mal 100: das Komma wandert 2 Stellen nach rechts."
+     ],
+     "steps": [
+      [
+       "7,5 × 100 = 750",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c44",
+     "q": "0,4 × 10 = ?",
+     "a": "4",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "14",
+      "40",
+      "4",
+      "0,4"
+     ],
+     "hints": [
+      "Mal 10: das Komma wandert 1 Stellen nach rechts."
+     ],
+     "steps": [
+      [
+       "0,4 × 10 = 4",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c45",
+     "q": "5 × 80 = ?",
+     "a": "400",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "405",
+      "399",
+      "400",
+      "403"
+     ],
+     "hints": [
+      "Rechne 5 × 8 und hänge die Nullen an."
+     ],
+     "steps": [
+      [
+       "5 × 8 = 40",
+       "Rechenweg"
+      ],
+      [
+       "mit 1 Nullen: 400",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c46",
+     "q": "3 × 700 = ?",
+     "a": "2100",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "2100",
+      "2099",
+      "2101",
+      "2110"
+     ],
+     "hints": [
+      "Rechne 3 × 7 und hänge die Nullen an."
+     ],
+     "steps": [
+      [
+       "3 × 7 = 21",
+       "Rechenweg"
+      ],
+      [
+       "mit 2 Nullen: 2100",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c47",
+     "q": "2 × 800 = ?",
+     "a": "1600",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "1610",
+      "1600",
+      "1602",
+      "1598"
+     ],
+     "hints": [
+      "Rechne 2 × 8 und hänge die Nullen an."
+     ],
+     "steps": [
+      [
+       "2 × 8 = 16",
+       "Rechenweg"
+      ],
+      [
+       "mit 2 Nullen: 1600",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c48",
+     "q": "8 × 900 = ?",
+     "a": "7200",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "7210",
+      "7197",
+      "7199",
+      "7200"
+     ],
+     "hints": [
+      "Rechne 8 × 9 und hänge die Nullen an."
+     ],
+     "steps": [
+      [
+       "8 × 9 = 72",
+       "Rechenweg"
+      ],
+      [
+       "mit 2 Nullen: 7200",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c49",
+     "q": "4 × 400 = ?",
+     "a": "1600",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "1610",
+      "1600",
+      "1601",
+      "1595"
+     ],
+     "hints": [
+      "Rechne 4 × 4 und hänge die Nullen an."
+     ],
+     "steps": [
+      [
+       "4 × 4 = 16",
+       "Rechenweg"
+      ],
+      [
+       "mit 2 Nullen: 1600",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c50",
+     "q": "6 × 600 = ?",
+     "a": "3600",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "3610",
+      "3598",
+      "3600",
+      "3590"
+     ],
+     "hints": [
+      "Rechne 6 × 6 und hänge die Nullen an."
+     ],
+     "steps": [
+      [
+       "6 × 6 = 36",
+       "Rechenweg"
+      ],
+      [
+       "mit 2 Nullen: 3600",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c51",
+     "q": "9 × 700 = ?",
+     "a": "6300",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "6301",
+      "6298",
+      "6300",
+      "6305"
+     ],
+     "hints": [
+      "Rechne 9 × 7 und hänge die Nullen an."
+     ],
+     "steps": [
+      [
+       "9 × 7 = 63",
+       "Rechenweg"
+      ],
+      [
+       "mit 2 Nullen: 6300",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c52",
+     "q": "6 × 30 = ?",
+     "a": "180",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "180",
+      "170",
+      "182",
+      "177"
+     ],
+     "hints": [
+      "Rechne 6 × 3 und hänge die Nullen an."
+     ],
+     "steps": [
+      [
+       "6 × 3 = 18",
+       "Rechenweg"
+      ],
+      [
+       "mit 1 Nullen: 180",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c53",
+     "q": "49 : 8 = ? Rest ?",
+     "a": "6 Rest 1",
+     "lvl": 3,
+     "th": "umkehr",
+     "opts": [
+      "6 Rest 2",
+      "6 Rest 1",
+      "7 Rest 1",
+      "5 Rest 1"
+     ],
+     "hints": [
+      "Suche die nächste Aufgabe unter 49."
+     ],
+     "steps": [
+      [
+       "8 × 6 = 48",
+       "Rechenweg"
+      ],
+      [
+       "49 − 48 = 1 Rest",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c54",
+     "q": "23 : 6 = ? Rest ?",
+     "a": "3 Rest 5",
+     "lvl": 3,
+     "th": "umkehr",
+     "opts": [
+      "2 Rest 5",
+      "3 Rest 6",
+      "3 Rest 5",
+      "4 Rest 5"
+     ],
+     "hints": [
+      "Suche die nächste Aufgabe unter 23."
+     ],
+     "steps": [
+      [
+       "6 × 3 = 18",
+       "Rechenweg"
+      ],
+      [
+       "23 − 18 = 5 Rest",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c55",
+     "q": "17 : 5 = ? Rest ?",
+     "a": "3 Rest 2",
+     "lvl": 3,
+     "th": "umkehr",
+     "opts": [
+      "3 Rest 3",
+      "3 Rest 2",
+      "4 Rest 2",
+      "2 Rest 2"
+     ],
+     "hints": [
+      "Suche die nächste Aufgabe unter 17."
+     ],
+     "steps": [
+      [
+       "5 × 3 = 15",
+       "Rechenweg"
+      ],
+      [
+       "17 − 15 = 2 Rest",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c56",
+     "q": "47 : 5 = ? Rest ?",
+     "a": "9 Rest 2",
+     "lvl": 3,
+     "th": "umkehr",
+     "opts": [
+      "9 Rest 3",
+      "8 Rest 2",
+      "10 Rest 2",
+      "9 Rest 2"
+     ],
+     "hints": [
+      "Suche die nächste Aufgabe unter 47."
+     ],
+     "steps": [
+      [
+       "5 × 9 = 45",
+       "Rechenweg"
+      ],
+      [
+       "47 − 45 = 2 Rest",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c57",
+     "q": "48 : 9 = ? Rest ?",
+     "a": "5 Rest 3",
+     "lvl": 3,
+     "th": "umkehr",
+     "opts": [
+      "6 Rest 3",
+      "5 Rest 4",
+      "4 Rest 3",
+      "5 Rest 3"
+     ],
+     "hints": [
+      "Suche die nächste Aufgabe unter 48."
+     ],
+     "steps": [
+      [
+       "9 × 5 = 45",
+       "Rechenweg"
+      ],
+      [
+       "48 − 45 = 3 Rest",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c58",
+     "q": "50 : 7 = ? Rest ?",
+     "a": "7 Rest 1",
+     "lvl": 3,
+     "th": "umkehr",
+     "opts": [
+      "7 Rest 2",
+      "8 Rest 1",
+      "6 Rest 1",
+      "7 Rest 1"
+     ],
+     "hints": [
+      "Suche die nächste Aufgabe unter 50."
+     ],
+     "steps": [
+      [
+       "7 × 7 = 49",
+       "Rechenweg"
+      ],
+      [
+       "50 − 49 = 1 Rest",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c59",
+     "q": "78 : 8 = ? Rest ?",
+     "a": "9 Rest 6",
+     "lvl": 3,
+     "th": "umkehr",
+     "opts": [
+      "9 Rest 6",
+      "8 Rest 6",
+      "9 Rest 7",
+      "10 Rest 6"
+     ],
+     "hints": [
+      "Suche die nächste Aufgabe unter 78."
+     ],
+     "steps": [
+      [
+       "8 × 9 = 72",
+       "Rechenweg"
+      ],
+      [
+       "78 − 72 = 6 Rest",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c60",
+     "q": "37 : 5 = ? Rest ?",
+     "a": "7 Rest 2",
+     "lvl": 3,
+     "th": "umkehr",
+     "opts": [
+      "8 Rest 2",
+      "7 Rest 3",
+      "6 Rest 2",
+      "7 Rest 2"
+     ],
+     "hints": [
+      "Suche die nächste Aufgabe unter 37."
+     ],
+     "steps": [
+      [
+       "5 × 7 = 35",
+       "Rechenweg"
+      ],
+      [
+       "37 − 35 = 2 Rest",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c61",
+     "q": "29 : 7 = ? Rest ?",
+     "a": "4 Rest 1",
+     "lvl": 3,
+     "th": "umkehr",
+     "opts": [
+      "3 Rest 1",
+      "4 Rest 2",
+      "5 Rest 1",
+      "4 Rest 1"
+     ],
+     "hints": [
+      "Suche die nächste Aufgabe unter 29."
+     ],
+     "steps": [
+      [
+       "7 × 4 = 28",
+       "Rechenweg"
+      ],
+      [
+       "29 − 28 = 1 Rest",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c62",
+     "q": "41 : 9 = ? Rest ?",
+     "a": "4 Rest 5",
+     "lvl": 3,
+     "th": "umkehr",
+     "opts": [
+      "3 Rest 5",
+      "5 Rest 5",
+      "4 Rest 5",
+      "4 Rest 6"
+     ],
+     "hints": [
+      "Suche die nächste Aufgabe unter 41."
+     ],
+     "steps": [
+      [
+       "9 × 4 = 36",
+       "Rechenweg"
+      ],
+      [
+       "41 − 36 = 5 Rest",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c63",
+     "q": "15 × 15 = ? (Quadratzahl)",
+     "a": "225",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "226",
+      "215",
+      "225",
+      "235"
+     ],
+     "hints": [
+      "Quadratzahlen: Zahl mal sich selbst."
+     ],
+     "steps": [
+      [
+       "15 × 15 = 225",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c64",
+     "q": "20 × 20 = ? (Quadratzahl)",
+     "a": "400",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "390",
+      "403",
+      "399",
+      "400"
+     ],
+     "hints": [
+      "Quadratzahlen: Zahl mal sich selbst."
+     ],
+     "steps": [
+      [
+       "20 × 20 = 400",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c65",
+     "q": "18 × 18 = ? (Quadratzahl)",
+     "a": "324",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "325",
+      "314",
+      "324",
+      "329"
+     ],
+     "hints": [
+      "Quadratzahlen: Zahl mal sich selbst."
+     ],
+     "steps": [
+      [
+       "18 × 18 = 324",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c66",
+     "q": "11 × 11 = ? (Quadratzahl)",
+     "a": "121",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "111",
+      "126",
+      "123",
+      "121"
+     ],
+     "hints": [
+      "Quadratzahlen: Zahl mal sich selbst."
+     ],
+     "steps": [
+      [
+       "11 × 11 = 121",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c67",
+     "q": "12 × 12 = ? (Quadratzahl)",
+     "a": "144",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "156",
+      "144",
+      "147",
+      "141"
+     ],
+     "hints": [
+      "Quadratzahlen: Zahl mal sich selbst."
+     ],
+     "steps": [
+      [
+       "12 × 12 = 144",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c68",
+     "q": "13 × 13 = ? (Quadratzahl)",
+     "a": "169",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "170",
+      "166",
+      "169",
+      "167"
+     ],
+     "hints": [
+      "Quadratzahlen: Zahl mal sich selbst."
+     ],
+     "steps": [
+      [
+       "13 × 13 = 169",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c69",
+     "q": "Mia hat 8 Tüten mit je 7 Gummibärchen. Wie viele Gummibärchen sind das?",
+     "a": "56",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "56",
+      "63",
+      "46",
+      "66"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 8 × 7."
+     ],
+     "steps": [
+      [
+       "7 × 8 = 5 × 8 + 2 × 8 = 40 + 16 = 56",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c70",
+     "q": "Ben hat 8 Schachteln mit je 11 Stiften. Wie viele Stifte sind das?",
+     "a": "88",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "88",
+      "98",
+      "90",
+      "83"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 8 × 11."
+     ],
+     "steps": [
+      [
+       "8 × 11 = 5 × 11 + 3 × 11 = 55 + 33 = 88",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c71",
+     "q": "Lea hat 10 Reihen mit je 10 Stühlen. Wie viele Stühle sind das?",
+     "a": "100",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "99",
+      "100",
+      "102",
+      "105"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 10 × 10."
+     ],
+     "steps": [
+      [
+       "10 × 10 = 100",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c72",
+     "q": "Noah hat 11 Körbe mit je 7 Äpfeln. Wie viele Äpfel sind das?",
+     "a": "77",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "67",
+      "77",
+      "75",
+      "74"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 11 × 7."
+     ],
+     "steps": [
+      [
+       "7 × 11 = 5 × 11 + 2 × 11 = 55 + 22 = 77",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c73",
+     "q": "Lina hat 8 Tische mit je 8 Kindern. Wie viele Kinder sind das?",
+     "a": "64",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "64",
+      "74",
+      "67",
+      "66"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 8 × 8."
+     ],
+     "steps": [
+      [
+       "8 × 8 = 64",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c74",
+     "q": "Jan hat 9 Taschen mit je 8 Büchern. Wie viele Bücher sind das?",
+     "a": "72",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "72",
+      "75",
+      "69",
+      "82"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 9 × 8."
+     ],
+     "steps": [
+      [
+       "8 × 9 = 5 × 9 + 3 × 9 = 45 + 27 = 72",
+       "Rechenweg"
+      ]
+     ]
+    }
+   ],
+   "exam": {
+    "minutes": 20,
+    "questions": [
+     {
+      "id": "q1",
+      "q": "6 × 6 = ?",
+      "explain": "6 × 6 = 36",
+      "type": "mc",
+      "options": [
+       "34",
+       "46",
+       "42",
+       "36"
+      ],
+      "answer": 3
+     },
+     {
+      "id": "q2",
+      "q": "4,8 × 100 = ?",
+      "explain": "4,8 × 100 = 480",
+      "type": "mc",
+      "options": [
+       "4800",
+       "580",
+       "480",
+       "48"
+      ],
+      "answer": 2
+     },
+     {
+      "id": "q3",
+      "q": "10 × 7 = ?",
+      "explain": "7 × 10 = 5 × 10 + 2 × 10 = 50 + 20 = 70",
+      "type": "mc",
+      "options": [
+       "72",
+       "65",
+       "80",
+       "70"
+      ],
+      "answer": 3
+     },
+     {
+      "id": "q4",
+      "q": "9 × 8 = ?",
+      "explain": "8 × 9 = 5 × 9 + 3 × 9 = 45 + 27 = 72",
+      "type": "mc",
+      "options": [
+       "62",
+       "72",
+       "73",
+       "80"
+      ],
+      "answer": 1
+     },
+     {
+      "id": "q5",
+      "q": "11 × 11 = ?",
+      "explain": "11 × 11 = 121",
+      "type": "mc",
+      "options": [
+       "111",
+       "126",
+       "123",
+       "121"
+      ],
+      "answer": 3
+     },
+     {
+      "id": "q6",
+      "q": "11 × 11 = ?",
+      "explain": "11 × 11 = 121",
+      "type": "mc",
+      "options": [
+       "123",
+       "122",
+       "121",
+       "110"
+      ],
+      "answer": 2
+     },
+     {
+      "id": "q7",
+      "q": "4 × 400 = ?",
+      "explain": "4 × 4 = 16; mit 2 Nullen: 1600",
+      "type": "mc",
+      "options": [
+       "1610",
+       "1600",
+       "1601",
+       "1595"
+      ],
+      "answer": 1
+     },
+     {
+      "id": "q8",
+      "q": "49 : 8 = ? Rest ?",
+      "explain": "8 × 6 = 48; 49 − 48 = 1 Rest",
+      "type": "mc",
+      "options": [
+       "6 Rest 2",
+       "6 Rest 1",
+       "7 Rest 1",
+       "5 Rest 1"
+      ],
+      "answer": 1
+     },
+     {
+      "id": "q9",
+      "q": "36 × 50 = ?",
+      "explain": "36 × 50 = 18 × 100; = 1800",
+      "type": "mc",
+      "options": [
+       "1798",
+       "1799",
+       "1800",
+       "1810"
+      ],
+      "answer": 2
+     },
+     {
+      "id": "q10",
+      "q": "12 × 5 = ?",
+      "explain": "12 × 5 = 6 × 10; = 60",
+      "type": "mc",
+      "options": [
+       "57",
+       "55",
+       "70",
+       "60"
+      ],
+      "answer": 3
+     },
+     {
+      "id": "q11",
+      "q": "44 × 5 = ?",
+      "explain": "44 × 5 = 22 × 10; = 220",
+      "type": "mc",
+      "options": [
+       "210",
+       "220",
+       "215",
+       "221"
+      ],
+      "answer": 1
+     },
+     {
+      "id": "q12",
+      "q": "7 × 8 = ?",
+      "explain": "7 × 8 = 5 × 8 + 2 × 8 = 40 + 16 = 56",
+      "type": "mc",
+      "options": [
+       "58",
+       "56",
+       "51",
+       "55"
+      ],
+      "answer": 1
      }
     ]
    }
@@ -176485,6 +183400,2402 @@
        "321100",
        "321'100"
       ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "kl4-mathe-einmaleins-sicher",
+   "child": "kl4",
+   "subject": "mathe",
+   "chapter": "Schriftliche Grundoperationen",
+   "title": "Einmaleins sicher und schnell",
+   "art": "mathe",
+   "origin": "ki",
+   "theory": {
+    "basis": {
+     "h": "Einmaleins sicher",
+     "text": "Wer das Einmaleins sicher kann, rechnet auch grosse Aufgaben schnell. Leite ab, wenn du ein Ergebnis nicht weisst.",
+     "lines": [
+      [
+       "6 × 7",
+       "35 + 7 = 42"
+      ]
+     ]
+    },
+    "umkehr": {
+     "h": "Teilen",
+     "text": "Teilen ist die Umkehrung von Malnehmen.",
+     "lines": [
+      [
+       "56 : 7",
+       "7 × 8 = 56, also 8"
+      ]
+     ]
+    }
+   },
+   "explain": [
+    {
+     "h": "Kernaufgaben zuerst",
+     "text": "Aus den Kernaufgaben der 1er-, 2er-, 5er- und 10er-Reihe leitest du alle anderen ab. Sie sind in der Tafel markiert.",
+     "visuals": [
+      {
+       "type": "mtab",
+       "max": 10,
+       "hr": [
+        1,
+        2,
+        5,
+        10
+       ],
+       "cap": "Kernreihen: 1, 2, 5, 10"
+      }
+     ]
+    },
+    {
+     "h": "Ableiten statt auswendig",
+     "text": "6 × 7 kennst du nicht? Nimm 5 × 7 = 35 und eine Gruppe mehr: 35 + 7 = 42.",
+     "visuals": [
+      {
+       "type": "mtab",
+       "max": 10,
+       "cells": [
+        [
+         6,
+         7
+        ]
+       ],
+       "hr": [
+        5,
+        6
+       ],
+       "hc": [
+        7
+       ],
+       "cap": "6 × 7 = 5 × 7 + 7"
+      }
+     ]
+    },
+    {
+     "h": "Teilen ist Rückwärts-Malnehmen",
+     "text": "56 : 7 = ? Suche in der 7er-Zeile die 56. Die Spalte sagt dir das Ergebnis: 8.",
+     "visuals": [
+      {
+       "type": "mtab",
+       "max": 10,
+       "cells": [
+        [
+         7,
+         8
+        ]
+       ],
+       "hr": [
+        7
+       ],
+       "hc": [
+        8
+       ],
+       "cap": "56 : 7 = 8, weil 7 × 8 = 56"
+      }
+     ]
+    },
+    {
+     "h": "Zehnerzahlen",
+     "text": "3 × 40: rechne 3 × 4 = 12 und hänge eine Null an. Das gibt 120.",
+     "visuals": [
+      {
+       "type": "mreihe",
+       "n": 4,
+       "core": [
+        3
+       ],
+       "cap": "3 × 4 = 12  →  3 × 40 = 120"
+      }
+     ]
+    },
+    {
+     "h": "Hunderterzahlen",
+     "text": "6 × 200: rechne 6 × 2 = 12 und hänge zwei Nullen an. Das gibt 1200.",
+     "visuals": [
+      {
+       "type": "mreihe",
+       "n": 2,
+       "core": [
+        6
+       ],
+       "cap": "6 × 2 = 12  →  6 × 200 = 1200"
+      }
+     ]
+    },
+    {
+     "h": "Quadratzahlen bis 100",
+     "text": "Diese zehn Zahlen solltest du auswendig kennen.",
+     "visuals": [
+      {
+       "type": "mtab",
+       "max": 10,
+       "sq": true,
+       "cap": "1 4 9 16 25 36 49 64 81 100"
+      }
+     ]
+    },
+    {
+     "h": "Tauschen hilft",
+     "text": "Du kennst 4 × 9 nicht? Rechne 9 × 4: 40 − 4 = 36.",
+     "visuals": [
+      {
+       "type": "mtab",
+       "max": 10,
+       "cells": [
+        [
+         4,
+         9
+        ],
+        [
+         9,
+         4
+        ]
+       ],
+       "hr": [
+        9
+       ],
+       "hc": [
+        9
+       ],
+       "cap": "4 × 9 = 9 × 4 = 36"
+      }
+     ]
+    },
+    {
+     "h": "Regeln und Wichtigstes",
+     "text": "Merke dir diese drei Karten.",
+     "visuals": [
+      {
+       "type": "cards",
+       "items": [
+        [
+         "Ableiten",
+         "5er-Aufgabe ± Gruppe",
+         "6 × 7 = 35 + 7",
+         0
+        ],
+        [
+         "Teilen",
+         "Umkehr von Mal",
+         "56 : 7 = 8",
+         1
+        ],
+        [
+         "Nullen",
+         "erst rechnen, dann Nullen",
+         "3 × 40 = 120",
+         2
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "cards": [
+    {
+     "id": "c1",
+     "q": "8 × 8 = ?",
+     "a": "64",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "59",
+      "72",
+      "64",
+      "61"
+     ],
+     "hints": [
+      "Mal 8: dreimal verdoppeln."
+     ],
+     "steps": [
+      [
+       "8 × 8 = 64",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c2",
+     "q": "10 × 9 = ?",
+     "a": "90",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "87",
+      "85",
+      "90",
+      "88"
+     ],
+     "hints": [
+      "Mal 9: Mal 10 minus eine Gruppe. Die Quersumme ist 9."
+     ],
+     "steps": [
+      [
+       "9 × 10 = 10 × 10 − 10 = 100 − 10 = 90",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c3",
+     "q": "10 × 6 = ?",
+     "a": "60",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "66",
+      "60",
+      "61",
+      "55"
+     ],
+     "hints": [
+      "Mal 6: 5er-Aufgabe plus eine Gruppe."
+     ],
+     "steps": [
+      [
+       "6 × 10 = 5 × 10 + 1 × 10 = 50 + 10 = 60",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c4",
+     "q": "3 × 3 = ?",
+     "a": "9",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "6",
+      "9",
+      "8",
+      "4"
+     ],
+     "hints": [
+      "Mal 3: verdoppeln und eine Gruppe dazu."
+     ],
+     "steps": [
+      [
+       "3 × 3 = 9",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c5",
+     "q": "3 × 9 = ?",
+     "a": "27",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "17",
+      "25",
+      "24",
+      "27"
+     ],
+     "hints": [
+      "Mal 3: verdoppeln und eine Gruppe dazu."
+     ],
+     "steps": [
+      [
+       "3 × 9 = 27",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c6",
+     "q": "6 × 3 = ?",
+     "a": "18",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "20",
+      "8",
+      "18",
+      "15"
+     ],
+     "hints": [
+      "Mal 3: verdoppeln und eine Gruppe dazu."
+     ],
+     "steps": [
+      [
+       "6 × 3 = 18",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c7",
+     "q": "2 × 9 = ?",
+     "a": "18",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "21",
+      "16",
+      "18",
+      "20"
+     ],
+     "hints": [
+      "Mal 2 heisst verdoppeln."
+     ],
+     "steps": [
+      [
+       "2 × 9 = 18",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c8",
+     "q": "7 × 5 = ?",
+     "a": "35",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "45",
+      "42",
+      "35",
+      "40"
+     ],
+     "hints": [
+      "Mal 5: halbe Zehnerzahl. Das Ergebnis endet auf 0 oder 5."
+     ],
+     "steps": [
+      [
+       "7 × 5 = 35",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c9",
+     "q": "5 × 5 = ?",
+     "a": "25",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "15",
+      "22",
+      "23",
+      "25"
+     ],
+     "hints": [
+      "Mal 5: halbe Zehnerzahl. Das Ergebnis endet auf 0 oder 5."
+     ],
+     "steps": [
+      [
+       "5 × 5 = 25",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c10",
+     "q": "5 × 9 = ?",
+     "a": "45",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "45",
+      "47",
+      "40",
+      "55"
+     ],
+     "hints": [
+      "Mal 5: halbe Zehnerzahl. Das Ergebnis endet auf 0 oder 5."
+     ],
+     "steps": [
+      [
+       "5 × 9 = 45",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c11",
+     "q": "10 × 2 = ?",
+     "a": "20",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "19",
+      "15",
+      "20",
+      "23"
+     ],
+     "hints": [
+      "Mal 2 heisst verdoppeln."
+     ],
+     "steps": [
+      [
+       "10 × 2 = 20",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c12",
+     "q": "9 × 4 = ?",
+     "a": "36",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "39",
+      "35",
+      "41",
+      "36"
+     ],
+     "hints": [
+      "Mal 4: zweimal verdoppeln."
+     ],
+     "steps": [
+      [
+       "9 × 4 = 36",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c13",
+     "q": "6 × 4 = ?",
+     "a": "24",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "20",
+      "24",
+      "18",
+      "14"
+     ],
+     "hints": [
+      "Mal 4: zweimal verdoppeln."
+     ],
+     "steps": [
+      [
+       "6 × 4 = 24",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c14",
+     "q": "2 × 2 = ?",
+     "a": "4",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "3",
+      "7",
+      "4",
+      "1"
+     ],
+     "hints": [
+      "Mal 2 heisst verdoppeln."
+     ],
+     "steps": [
+      [
+       "2 × 2 = 4",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c15",
+     "q": "4 × 3 = ?",
+     "a": "12",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "15",
+      "11",
+      "2",
+      "12"
+     ],
+     "hints": [
+      "Mal 3: verdoppeln und eine Gruppe dazu."
+     ],
+     "steps": [
+      [
+       "4 × 3 = 12",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c16",
+     "q": "7 × 9 = ?",
+     "a": "63",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "62",
+      "63",
+      "53",
+      "56"
+     ],
+     "hints": [
+      "Mal 7: 5er-Aufgabe plus 2er-Aufgabe."
+     ],
+     "steps": [
+      [
+       "7 × 9 = 5 × 9 + 2 × 9 = 45 + 18 = 63",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c17",
+     "q": "2 × 6 = ?",
+     "a": "12",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "7",
+      "14",
+      "12",
+      "17"
+     ],
+     "hints": [
+      "Mal 2 heisst verdoppeln."
+     ],
+     "steps": [
+      [
+       "2 × 6 = 12",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c18",
+     "q": "3 × 7 = ?",
+     "a": "21",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "16",
+      "14",
+      "18",
+      "21"
+     ],
+     "hints": [
+      "Mal 3: verdoppeln und eine Gruppe dazu."
+     ],
+     "steps": [
+      [
+       "3 × 7 = 21",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c19",
+     "q": "2 × 5 = ?",
+     "a": "10",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "8",
+      "13",
+      "10",
+      "11"
+     ],
+     "hints": [
+      "Mal 2 heisst verdoppeln."
+     ],
+     "steps": [
+      [
+       "2 × 5 = 10",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c20",
+     "q": "9 × 3 = ?",
+     "a": "27",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "27",
+      "37",
+      "36",
+      "22"
+     ],
+     "hints": [
+      "Mal 3: verdoppeln und eine Gruppe dazu."
+     ],
+     "steps": [
+      [
+       "9 × 3 = 27",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c21",
+     "q": "4 × 5 = ?",
+     "a": "20",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "23",
+      "15",
+      "21",
+      "20"
+     ],
+     "hints": [
+      "Mal 4: zweimal verdoppeln."
+     ],
+     "steps": [
+      [
+       "4 × 5 = 20",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c22",
+     "q": "9 × 10 = ?",
+     "a": "90",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "92",
+      "87",
+      "93",
+      "90"
+     ],
+     "hints": [
+      "Mal 9: Mal 10 minus eine Gruppe. Die Quersumme ist 9."
+     ],
+     "steps": [
+      [
+       "9 × 10 = 10 × 10 − 10 = 100 − 10 = 90",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c23",
+     "q": "6 × 5 = ?",
+     "a": "30",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "27",
+      "30",
+      "32",
+      "36"
+     ],
+     "hints": [
+      "Mal 5: halbe Zehnerzahl. Das Ergebnis endet auf 0 oder 5."
+     ],
+     "steps": [
+      [
+       "6 × 5 = 30",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c24",
+     "q": "4 × 8 = ?",
+     "a": "32",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "32",
+      "27",
+      "31",
+      "29"
+     ],
+     "hints": [
+      "Mal 4: zweimal verdoppeln."
+     ],
+     "steps": [
+      [
+       "4 × 8 = 32",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c25",
+     "q": "4 × 10 = ?",
+     "a": "40",
+     "lvl": 1,
+     "th": "basis",
+     "opts": [
+      "40",
+      "44",
+      "45",
+      "50"
+     ],
+     "hints": [
+      "Mal 4: zweimal verdoppeln."
+     ],
+     "steps": [
+      [
+       "4 × 10 = 40",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c26",
+     "q": "7 × 3 = ?",
+     "a": "21",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "11",
+      "28",
+      "21",
+      "22"
+     ],
+     "hints": [
+      "Mal 3: verdoppeln und eine Gruppe dazu."
+     ],
+     "steps": [
+      [
+       "7 × 3 = 21",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c27",
+     "q": "2 × ? = 20",
+     "a": "10",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "20",
+      "10",
+      "9",
+      "13"
+     ],
+     "hints": [
+      "Welche Zahl mal 2 ergibt 20? Probiere mit der 2er-Reihe."
+     ],
+     "steps": [
+      [
+       "2 × 10 = 20",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c28",
+     "q": "5 × ? = 45",
+     "a": "9",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "9",
+      "4",
+      "14",
+      "19"
+     ],
+     "hints": [
+      "Welche Zahl mal 5 ergibt 45? Probiere mit der 5er-Reihe."
+     ],
+     "steps": [
+      [
+       "5 × 9 = 45",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c29",
+     "q": "10 × ? = 70",
+     "a": "7",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "17",
+      "10",
+      "9",
+      "7"
+     ],
+     "hints": [
+      "Welche Zahl mal 10 ergibt 70? Probiere mit der 10er-Reihe."
+     ],
+     "steps": [
+      [
+       "10 × 7 = 70",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c30",
+     "q": "5 × ? = 25",
+     "a": "5",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "15",
+      "6",
+      "5",
+      "4"
+     ],
+     "hints": [
+      "Welche Zahl mal 5 ergibt 25? Probiere mit der 5er-Reihe."
+     ],
+     "steps": [
+      [
+       "5 × 5 = 25",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c31",
+     "q": "7 × ? = 28",
+     "a": "4",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "5",
+      "7",
+      "4",
+      "3"
+     ],
+     "hints": [
+      "Welche Zahl mal 7 ergibt 28? Probiere mit der 7er-Reihe."
+     ],
+     "steps": [
+      [
+       "7 × 4 = 28",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c32",
+     "q": "2 × ? = 18",
+     "a": "9",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "9",
+      "6",
+      "7",
+      "4"
+     ],
+     "hints": [
+      "Welche Zahl mal 2 ergibt 18? Probiere mit der 2er-Reihe."
+     ],
+     "steps": [
+      [
+       "2 × 9 = 18",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c33",
+     "q": "6 × ? = 48",
+     "a": "8",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "9",
+      "6",
+      "5",
+      "8"
+     ],
+     "hints": [
+      "Welche Zahl mal 6 ergibt 48? Probiere mit der 6er-Reihe."
+     ],
+     "steps": [
+      [
+       "6 × 8 = 48",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c34",
+     "q": "6 × ? = 36",
+     "a": "6",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "11",
+      "3",
+      "6",
+      "1"
+     ],
+     "hints": [
+      "Welche Zahl mal 6 ergibt 36? Probiere mit der 6er-Reihe."
+     ],
+     "steps": [
+      [
+       "6 × 6 = 36",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c35",
+     "q": "2 × ? = 6",
+     "a": "3",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "4",
+      "13",
+      "3",
+      "6"
+     ],
+     "hints": [
+      "Welche Zahl mal 2 ergibt 6? Probiere mit der 2er-Reihe."
+     ],
+     "steps": [
+      [
+       "2 × 3 = 6",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c36",
+     "q": "9 × ? = 81",
+     "a": "9",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "9",
+      "12",
+      "14",
+      "19"
+     ],
+     "hints": [
+      "Welche Zahl mal 9 ergibt 81? Probiere mit der 9er-Reihe."
+     ],
+     "steps": [
+      [
+       "9 × 9 = 81",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c37",
+     "q": "8 : 2 = ?",
+     "a": "4",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "4",
+      "14",
+      "6",
+      "2"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 2 × ? = 8."
+     ],
+     "steps": [
+      [
+       "2 × 4 = 8",
+       "Rechenweg"
+      ],
+      [
+       "also 8 : 2 = 4",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c38",
+     "q": "54 : 6 = ?",
+     "a": "9",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "4",
+      "11",
+      "8",
+      "9"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 6 × ? = 54."
+     ],
+     "steps": [
+      [
+       "6 × 9 = 54",
+       "Rechenweg"
+      ],
+      [
+       "also 54 : 6 = 9",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c39",
+     "q": "40 : 5 = ?",
+     "a": "8",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "5",
+      "9",
+      "7",
+      "8"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 5 × ? = 40."
+     ],
+     "steps": [
+      [
+       "5 × 8 = 40",
+       "Rechenweg"
+      ],
+      [
+       "also 40 : 5 = 8",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c40",
+     "q": "20 : 10 = ?",
+     "a": "2",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "4",
+      "12",
+      "3",
+      "2"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 10 × ? = 20."
+     ],
+     "steps": [
+      [
+       "10 × 2 = 20",
+       "Rechenweg"
+      ],
+      [
+       "also 20 : 10 = 2",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c41",
+     "q": "9 : 3 = ?",
+     "a": "3",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "8",
+      "4",
+      "3",
+      "2"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 3 × ? = 9."
+     ],
+     "steps": [
+      [
+       "3 × 3 = 9",
+       "Rechenweg"
+      ],
+      [
+       "also 9 : 3 = 3",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c42",
+     "q": "35 : 7 = ?",
+     "a": "5",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "3",
+      "4",
+      "5",
+      "2"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 7 × ? = 35."
+     ],
+     "steps": [
+      [
+       "7 × 5 = 35",
+       "Rechenweg"
+      ],
+      [
+       "also 35 : 7 = 5",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c43",
+     "q": "18 : 6 = ?",
+     "a": "3",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "3",
+      "1",
+      "13",
+      "6"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 6 × ? = 18."
+     ],
+     "steps": [
+      [
+       "6 × 3 = 18",
+       "Rechenweg"
+      ],
+      [
+       "also 18 : 6 = 3",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c44",
+     "q": "90 : 10 = ?",
+     "a": "9",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "9",
+      "8",
+      "10",
+      "14"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 10 × ? = 90."
+     ],
+     "steps": [
+      [
+       "10 × 9 = 90",
+       "Rechenweg"
+      ],
+      [
+       "also 90 : 10 = 9",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c45",
+     "q": "60 : 10 = ?",
+     "a": "6",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "16",
+      "4",
+      "1",
+      "6"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 10 × ? = 60."
+     ],
+     "steps": [
+      [
+       "10 × 6 = 60",
+       "Rechenweg"
+      ],
+      [
+       "also 60 : 10 = 6",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c46",
+     "q": "40 : 10 = ?",
+     "a": "4",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "7",
+      "1",
+      "4",
+      "6"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 10 × ? = 40."
+     ],
+     "steps": [
+      [
+       "10 × 4 = 40",
+       "Rechenweg"
+      ],
+      [
+       "also 40 : 10 = 4",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c47",
+     "q": "30 : 10 = ?",
+     "a": "3",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "8",
+      "1",
+      "13",
+      "3"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 10 × ? = 30."
+     ],
+     "steps": [
+      [
+       "10 × 3 = 30",
+       "Rechenweg"
+      ],
+      [
+       "also 30 : 10 = 3",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c48",
+     "q": "6 : 3 = ?",
+     "a": "2",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "4",
+      "2",
+      "7",
+      "5"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 3 × ? = 6."
+     ],
+     "steps": [
+      [
+       "3 × 2 = 6",
+       "Rechenweg"
+      ],
+      [
+       "also 6 : 3 = 2",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c49",
+     "q": "32 : 8 = ?",
+     "a": "4",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "3",
+      "5",
+      "14",
+      "4"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 8 × ? = 32."
+     ],
+     "steps": [
+      [
+       "8 × 4 = 32",
+       "Rechenweg"
+      ],
+      [
+       "also 32 : 8 = 4",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c50",
+     "q": "18 : 9 = ?",
+     "a": "2",
+     "lvl": 2,
+     "th": "umkehr",
+     "opts": [
+      "4",
+      "2",
+      "12",
+      "7"
+     ],
+     "hints": [
+      "Teilen ist die Umkehrung: 9 × ? = 18."
+     ],
+     "steps": [
+      [
+       "9 × 2 = 18",
+       "Rechenweg"
+      ],
+      [
+       "also 18 : 9 = 2",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c51",
+     "q": "9 × 600 = ?",
+     "a": "5400",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "5400",
+      "5398",
+      "5395",
+      "5390"
+     ],
+     "hints": [
+      "Rechne 9 × 6 und hänge die Nullen an."
+     ],
+     "steps": [
+      [
+       "9 × 6 = 54",
+       "Rechenweg"
+      ],
+      [
+       "mit 2 Nullen: 5400",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c52",
+     "q": "7 × 30 = ?",
+     "a": "210",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "210",
+      "208",
+      "205",
+      "209"
+     ],
+     "hints": [
+      "Rechne 7 × 3 und hänge die Nullen an."
+     ],
+     "steps": [
+      [
+       "7 × 3 = 21",
+       "Rechenweg"
+      ],
+      [
+       "mit 1 Nullen: 210",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c53",
+     "q": "4 × 700 = ?",
+     "a": "2800",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "2803",
+      "2790",
+      "2799",
+      "2800"
+     ],
+     "hints": [
+      "Rechne 4 × 7 und hänge die Nullen an."
+     ],
+     "steps": [
+      [
+       "4 × 7 = 28",
+       "Rechenweg"
+      ],
+      [
+       "mit 2 Nullen: 2800",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c54",
+     "q": "9 × 200 = ?",
+     "a": "1800",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "1800",
+      "1798",
+      "1799",
+      "1810"
+     ],
+     "hints": [
+      "Rechne 9 × 2 und hänge die Nullen an."
+     ],
+     "steps": [
+      [
+       "9 × 2 = 18",
+       "Rechenweg"
+      ],
+      [
+       "mit 2 Nullen: 1800",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c55",
+     "q": "6 × 20 = ?",
+     "a": "120",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "121",
+      "120",
+      "130",
+      "110"
+     ],
+     "hints": [
+      "Rechne 6 × 2 und hänge die Nullen an."
+     ],
+     "steps": [
+      [
+       "6 × 2 = 12",
+       "Rechenweg"
+      ],
+      [
+       "mit 1 Nullen: 120",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c56",
+     "q": "6 × 900 = ?",
+     "a": "5400",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "5410",
+      "5401",
+      "5405",
+      "5400"
+     ],
+     "hints": [
+      "Rechne 6 × 9 und hänge die Nullen an."
+     ],
+     "steps": [
+      [
+       "6 × 9 = 54",
+       "Rechenweg"
+      ],
+      [
+       "mit 2 Nullen: 5400",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c57",
+     "q": "8 × 80 = ?",
+     "a": "640",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "640",
+      "650",
+      "641",
+      "630"
+     ],
+     "hints": [
+      "Rechne 8 × 8 und hänge die Nullen an."
+     ],
+     "steps": [
+      [
+       "8 × 8 = 64",
+       "Rechenweg"
+      ],
+      [
+       "mit 1 Nullen: 640",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c58",
+     "q": "4 × 300 = ?",
+     "a": "1200",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "1210",
+      "1195",
+      "1190",
+      "1200"
+     ],
+     "hints": [
+      "Rechne 4 × 3 und hänge die Nullen an."
+     ],
+     "steps": [
+      [
+       "4 × 3 = 12",
+       "Rechenweg"
+      ],
+      [
+       "mit 2 Nullen: 1200",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c59",
+     "q": "4 × 800 = ?",
+     "a": "3200",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "3200",
+      "3199",
+      "3197",
+      "3203"
+     ],
+     "hints": [
+      "Rechne 4 × 8 und hänge die Nullen an."
+     ],
+     "steps": [
+      [
+       "4 × 8 = 32",
+       "Rechenweg"
+      ],
+      [
+       "mit 2 Nullen: 3200",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c60",
+     "q": "9 × 700 = ?",
+     "a": "6300",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "6302",
+      "6300",
+      "6298",
+      "6290"
+     ],
+     "hints": [
+      "Rechne 9 × 7 und hänge die Nullen an."
+     ],
+     "steps": [
+      [
+       "9 × 7 = 63",
+       "Rechenweg"
+      ],
+      [
+       "mit 2 Nullen: 6300",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c61",
+     "q": "5 × 70 = ?",
+     "a": "350",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "349",
+      "355",
+      "360",
+      "350"
+     ],
+     "hints": [
+      "Rechne 5 × 7 und hänge die Nullen an."
+     ],
+     "steps": [
+      [
+       "5 × 7 = 35",
+       "Rechenweg"
+      ],
+      [
+       "mit 1 Nullen: 350",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c62",
+     "q": "3 × 900 = ?",
+     "a": "2700",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "2690",
+      "2705",
+      "2700",
+      "2695"
+     ],
+     "hints": [
+      "Rechne 3 × 9 und hänge die Nullen an."
+     ],
+     "steps": [
+      [
+       "3 × 9 = 27",
+       "Rechenweg"
+      ],
+      [
+       "mit 2 Nullen: 2700",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c63",
+     "q": "Setze fort: 8, 16, 24, 32, ?",
+     "a": "40",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "40",
+      "39",
+      "48",
+      "37"
+     ],
+     "hints": [
+      "Jeder Schritt macht 8 mehr."
+     ],
+     "steps": [
+      [
+       "32 + 8 = 40",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c64",
+     "q": "Setze fort: 5, 10, 15, ?",
+     "a": "20",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "20",
+      "23",
+      "18",
+      "17"
+     ],
+     "hints": [
+      "Jeder Schritt macht 5 mehr."
+     ],
+     "steps": [
+      [
+       "15 + 5 = 20",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c65",
+     "q": "Setze fort: 9, 18, ?",
+     "a": "27",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "18",
+      "27",
+      "26",
+      "22"
+     ],
+     "hints": [
+      "Jeder Schritt macht 9 mehr."
+     ],
+     "steps": [
+      [
+       "18 + 9 = 27",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c66",
+     "q": "Setze fort: 7, 14, ?",
+     "a": "21",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "11",
+      "26",
+      "22",
+      "21"
+     ],
+     "hints": [
+      "Jeder Schritt macht 7 mehr."
+     ],
+     "steps": [
+      [
+       "14 + 7 = 21",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c67",
+     "q": "Setze fort: 6, 12, ?",
+     "a": "18",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "23",
+      "16",
+      "18",
+      "24"
+     ],
+     "hints": [
+      "Jeder Schritt macht 6 mehr."
+     ],
+     "steps": [
+      [
+       "12 + 6 = 18",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c68",
+     "q": "Setze fort: 3, 6, ?",
+     "a": "9",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "10",
+      "8",
+      "9",
+      "11"
+     ],
+     "hints": [
+      "Jeder Schritt macht 3 mehr."
+     ],
+     "steps": [
+      [
+       "6 + 3 = 9",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c69",
+     "q": "Mia hat 7 Tüten mit je 10 Gummibärchen. Wie viele Gummibärchen sind das?",
+     "a": "70",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "80",
+      "67",
+      "70",
+      "73"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 7 × 10."
+     ],
+     "steps": [
+      [
+       "7 × 10 = 5 × 10 + 2 × 10 = 50 + 20 = 70",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c70",
+     "q": "Ben hat 8 Schachteln mit je 6 Stiften. Wie viele Stifte sind das?",
+     "a": "48",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "45",
+      "53",
+      "48",
+      "46"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 8 × 6."
+     ],
+     "steps": [
+      [
+       "6 × 8 = 5 × 8 + 1 × 8 = 40 + 8 = 48",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c71",
+     "q": "Lea hat 10 Reihen mit je 10 Stühlen. Wie viele Stühle sind das?",
+     "a": "100",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "90",
+      "105",
+      "100",
+      "102"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 10 × 10."
+     ],
+     "steps": [
+      [
+       "10 × 10 = 100",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c72",
+     "q": "Noah hat 9 Körbe mit je 8 Äpfeln. Wie viele Äpfel sind das?",
+     "a": "72",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "70",
+      "71",
+      "77",
+      "72"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 9 × 8."
+     ],
+     "steps": [
+      [
+       "8 × 9 = 5 × 9 + 3 × 9 = 45 + 27 = 72",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c73",
+     "q": "Lina hat 5 Tische mit je 5 Kindern. Wie viele Kinder sind das?",
+     "a": "25",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "28",
+      "25",
+      "22",
+      "30"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 5 × 5."
+     ],
+     "steps": [
+      [
+       "5 × 5 = 25",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c74",
+     "q": "Jan hat 6 Taschen mit je 6 Büchern. Wie viele Bücher sind das?",
+     "a": "36",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "35",
+      "39",
+      "38",
+      "36"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 6 × 6."
+     ],
+     "steps": [
+      [
+       "6 × 6 = 36",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c75",
+     "q": "Sara hat 6 Gläser mit je 10 Kirschen. Wie viele Kirschen sind das?",
+     "a": "60",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "70",
+      "60",
+      "55",
+      "57"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 6 × 10."
+     ],
+     "steps": [
+      [
+       "6 × 10 = 5 × 10 + 1 × 10 = 50 + 10 = 60",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c76",
+     "q": "Tim hat 6 Packungen mit je 5 Keksen. Wie viele Kekse sind das?",
+     "a": "30",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "30",
+      "40",
+      "29",
+      "31"
+     ],
+     "hints": [
+      "Gleiche Gruppen: 6 × 5."
+     ],
+     "steps": [
+      [
+       "6 × 5 = 30",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c77",
+     "q": "5 × 5 = ? (Quadratzahl)",
+     "a": "25",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "35",
+      "27",
+      "24",
+      "25"
+     ],
+     "hints": [
+      "Quadratzahlen: Zahl mal sich selbst."
+     ],
+     "steps": [
+      [
+       "5 × 5 = 25",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c78",
+     "q": "3 × 3 = ? (Quadratzahl)",
+     "a": "9",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "9",
+      "6",
+      "11",
+      "4"
+     ],
+     "hints": [
+      "Quadratzahlen: Zahl mal sich selbst."
+     ],
+     "steps": [
+      [
+       "3 × 3 = 9",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c79",
+     "q": "8 × 8 = ? (Quadratzahl)",
+     "a": "64",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "64",
+      "54",
+      "56",
+      "74"
+     ],
+     "hints": [
+      "Quadratzahlen: Zahl mal sich selbst."
+     ],
+     "steps": [
+      [
+       "8 × 8 = 64",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c80",
+     "q": "7 × 7 = ? (Quadratzahl)",
+     "a": "49",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "44",
+      "56",
+      "49",
+      "42"
+     ],
+     "hints": [
+      "Quadratzahlen: Zahl mal sich selbst."
+     ],
+     "steps": [
+      [
+       "7 × 7 = 49",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c81",
+     "q": "10 × 10 = ? (Quadratzahl)",
+     "a": "100",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "110",
+      "101",
+      "100",
+      "95"
+     ],
+     "hints": [
+      "Quadratzahlen: Zahl mal sich selbst."
+     ],
+     "steps": [
+      [
+       "10 × 10 = 100",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c82",
+     "q": "4 × 4 = ? (Quadratzahl)",
+     "a": "16",
+     "lvl": 2,
+     "th": "basis",
+     "opts": [
+      "11",
+      "16",
+      "26",
+      "17"
+     ],
+     "hints": [
+      "Quadratzahlen: Zahl mal sich selbst."
+     ],
+     "steps": [
+      [
+       "4 × 4 = 16",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c83",
+     "q": "Mia rechnet 8 × 9 = 63. Was stimmt?",
+     "a": "Falsch, richtig ist 72",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "Falsch, richtig ist 63",
+      "Falsch, richtig ist 80",
+      "Falsch, richtig ist 72",
+      "Es stimmt alles"
+     ],
+     "hints": [
+      "Rechne mit einer Kernaufgabe nach."
+     ],
+     "steps": [
+      [
+       "8 × 9 = 5 × 9 + 3 × 9 = 45 + 27 = 72",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c84",
+     "q": "Ben rechnet 10 × 9 = 100. Was stimmt?",
+     "a": "Falsch, richtig ist 90",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "Es stimmt alles",
+      "Falsch, richtig ist 100",
+      "Falsch, richtig ist 81",
+      "Falsch, richtig ist 90"
+     ],
+     "hints": [
+      "Rechne mit einer Kernaufgabe nach."
+     ],
+     "steps": [
+      [
+       "9 × 10 = 10 × 10 − 10 = 100 − 10 = 90",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c85",
+     "q": "Lea rechnet 8 × 6 = 40. Was stimmt?",
+     "a": "Falsch, richtig ist 48",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "Es stimmt alles",
+      "Falsch, richtig ist 56",
+      "Falsch, richtig ist 42",
+      "Falsch, richtig ist 48"
+     ],
+     "hints": [
+      "Rechne mit einer Kernaufgabe nach."
+     ],
+     "steps": [
+      [
+       "6 × 8 = 5 × 8 + 1 × 8 = 40 + 8 = 48",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c86",
+     "q": "Noah rechnet 9 × 7 = 64. Was stimmt?",
+     "a": "Falsch, richtig ist 63",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "Falsch, richtig ist 56",
+      "Falsch, richtig ist 72",
+      "Falsch, richtig ist 63",
+      "Es stimmt alles"
+     ],
+     "hints": [
+      "Rechne mit einer Kernaufgabe nach."
+     ],
+     "steps": [
+      [
+       "7 × 9 = 5 × 9 + 2 × 9 = 45 + 18 = 63",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c87",
+     "q": "Lina rechnet 5 × 8 = 48. Was stimmt?",
+     "a": "Falsch, richtig ist 40",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "Falsch, richtig ist 45",
+      "Falsch, richtig ist 32",
+      "Es stimmt alles",
+      "Falsch, richtig ist 40"
+     ],
+     "hints": [
+      "Rechne mit einer Kernaufgabe nach."
+     ],
+     "steps": [
+      [
+       "5 × 8 = 40",
+       "Rechenweg"
+      ]
+     ]
+    },
+    {
+     "id": "c88",
+     "q": "Jan rechnet 10 × 5 = 40. Was stimmt?",
+     "a": "Falsch, richtig ist 50",
+     "lvl": 3,
+     "th": "basis",
+     "opts": [
+      "Falsch, richtig ist 50",
+      "Falsch, richtig ist 45",
+      "Es stimmt alles",
+      "Falsch, richtig ist 60"
+     ],
+     "hints": [
+      "Rechne mit einer Kernaufgabe nach."
+     ],
+     "steps": [
+      [
+       "10 × 5 = 50",
+       "Rechenweg"
+      ]
+     ]
+    }
+   ],
+   "exam": {
+    "minutes": 20,
+    "questions": [
+     {
+      "id": "q1",
+      "q": "4 × 8 = ?",
+      "explain": "4 × 8 = 32",
+      "type": "mc",
+      "options": [
+       "32",
+       "27",
+       "31",
+       "29"
+      ],
+      "answer": 0
+     },
+     {
+      "id": "q2",
+      "q": "2 × 5 = ?",
+      "explain": "2 × 5 = 10",
+      "type": "mc",
+      "options": [
+       "8",
+       "13",
+       "10",
+       "11"
+      ],
+      "answer": 2
+     },
+     {
+      "id": "q3",
+      "q": "5 × 5 = ?",
+      "explain": "5 × 5 = 25",
+      "type": "mc",
+      "options": [
+       "35",
+       "27",
+       "24",
+       "25"
+      ],
+      "answer": 3
+     },
+     {
+      "id": "q4",
+      "q": "9 × 700 = ?",
+      "explain": "9 × 7 = 63; mit 2 Nullen: 6300",
+      "type": "mc",
+      "options": [
+       "6302",
+       "6300",
+       "6298",
+       "6290"
+      ],
+      "answer": 1
+     },
+     {
+      "id": "q5",
+      "q": "Setze fort: 9, 18, ?",
+      "explain": "18 + 9 = 27",
+      "type": "mc",
+      "options": [
+       "18",
+       "27",
+       "26",
+       "22"
+      ],
+      "answer": 1
+     },
+     {
+      "id": "q6",
+      "q": "6 × 5 = ?",
+      "explain": "6 × 5 = 30",
+      "type": "mc",
+      "options": [
+       "27",
+       "30",
+       "32",
+       "36"
+      ],
+      "answer": 1
+     },
+     {
+      "id": "q7",
+      "q": "8 : 2 = ?",
+      "explain": "2 × 4 = 8; also 8 : 2 = 4",
+      "type": "mc",
+      "options": [
+       "4",
+       "14",
+       "6",
+       "2"
+      ],
+      "answer": 0
+     },
+     {
+      "id": "q8",
+      "q": "Lea rechnet 8 × 6 = 40. Was stimmt?",
+      "explain": "6 × 8 = 5 × 8 + 1 × 8 = 40 + 8 = 48",
+      "type": "mc",
+      "options": [
+       "Es stimmt alles",
+       "Falsch, richtig ist 56",
+       "Falsch, richtig ist 42",
+       "Falsch, richtig ist 48"
+      ],
+      "answer": 3
+     },
+     {
+      "id": "q9",
+      "q": "9 × 600 = ?",
+      "explain": "9 × 6 = 54; mit 2 Nullen: 5400",
+      "type": "mc",
+      "options": [
+       "5400",
+       "5398",
+       "5395",
+       "5390"
+      ],
+      "answer": 0
+     },
+     {
+      "id": "q10",
+      "q": "40 : 5 = ?",
+      "explain": "5 × 8 = 40; also 40 : 5 = 8",
+      "type": "mc",
+      "options": [
+       "5",
+       "9",
+       "7",
+       "8"
+      ],
+      "answer": 3
+     },
+     {
+      "id": "q11",
+      "q": "10 × 6 = ?",
+      "explain": "6 × 10 = 5 × 10 + 1 × 10 = 50 + 10 = 60",
+      "type": "mc",
+      "options": [
+       "66",
+       "60",
+       "61",
+       "55"
+      ],
+      "answer": 1
+     },
+     {
+      "id": "q12",
+      "q": "7 × ? = 28",
+      "explain": "7 × 4 = 28",
+      "type": "mc",
+      "options": [
+       "5",
+       "7",
+       "4",
+       "3"
+      ],
+      "answer": 2
      }
     ]
    }

@@ -452,6 +452,32 @@ function vGeo(v){
   return '<figure class="vis" style="width:100%"><svg viewBox="0 0 '+Wp.toFixed(1)+' '+Hp.toFixed(1)+'" width="100%" style="max-width:'+Math.round(Wp*(v.zoom||1.12))+'px;max-height:none;display:block;margin:0 auto;overflow:visible" role="img" aria-label="'+esc(v.alt||'Geometrie-Zeichnung')+'"><defs>'+defs+'</defs>'+o+t+'</svg>'+cap+'</figure>';
 }
 
+
+/* Einmaleins-Tafel (alle Aufgaben auf einen Blick) */
+function vMtab(v){
+  var m=v.max||10,u=m>10?31:36,o='',F='font-family="Arial,Helvetica,sans-serif"',hr=v.hr||[],hc=v.hc||[],cells=v.cells||[],hide=v.hide||[],r,c,W=(m+1)*u+4;
+  var rowTint=['#FDE7E4','#FFF1D6','#FFF8CC','#E4F4E8','#DDF1F4','#E3EEFD','#ECE5FB','#F9E3F2','#E8EDF2','#EDEDE0','#E0F0E8','#F5E6D8'];
+  o+='<rect x="2" y="2" width="'+u+'" height="'+u+'" rx="8" fill="#2B3350"/>'+_t(2+u/2,2+u/2+6,16,'×','#fff','middle',800);
+  for(c=1;c<=m;c++){var hh=hc.indexOf(c)>=0;o+='<rect x="'+(2+c*u)+'" y="2" width="'+u+'" height="'+u+'" fill="'+(hh?'#1A56C4':'#E8EEFA')+'"/>'+_t(2+c*u+u/2,2+u/2+6,17,c,hh?'#fff':'#1A3FA0','middle',800)}
+  for(r=1;r<=m;r++){var hr2=hr.indexOf(r)>=0;o+='<rect x="2" y="'+(2+r*u)+'" width="'+u+'" height="'+u+'" fill="'+(hr2?'#1A56C4':'#E8EEFA')+'"/>'+_t(2+u/2,2+r*u+u/2+6,17,r,hr2?'#fff':'#1A3FA0','middle',800)}
+  for(r=1;r<=m;r++)for(c=1;c<=m;c++){
+    var inR=hr.indexOf(r)>=0,inC=hc.indexOf(c)>=0,cell=cells.some(function(q){return q[0]===r&&q[1]===c}),sq=v.sq&&r===c,hd=hide.some(function(q){return q[0]===r&&q[1]===c});
+    var bg=cell?'#FBBC04':hd?'#FFF3C4':sq?'#CDEBD3':(inR||inC)?'#D6E6FC':(v.tint?rowTint[(r-1)%12]:(r+c)%2?'#FFFFFF':'#F6F8FC');
+    o+='<rect x="'+(2+c*u)+'" y="'+(2+r*u)+'" width="'+u+'" height="'+u+'" fill="'+bg+'" stroke="#fff" stroke-width="1.5"/>'+_t(2+c*u+u/2,2+r*u+u/2+5,m>10?14.5:16.5,hd?'?':r*c,cell?'#4A2A00':hd?'#B06000':'#2B3350','middle',cell||sq||inR&&inC?800:600)}
+  hr.forEach(function(r){o+='<rect x="'+(2+u)+'" y="'+(2+r*u)+'" width="'+(m*u)+'" height="'+u+'" fill="none" stroke="#1A56C4" stroke-width="2.4" rx="3"/>'});
+  hc.forEach(function(c){o+='<rect x="'+(2+c*u)+'" y="'+(2+u)+'" width="'+u+'" height="'+(m*u)+'" fill="none" stroke="#1A56C4" stroke-width="2.4" rx="3"/>'});
+  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 '+W+' '+W+'" width="100%" style="display:block;max-width:'+(m>10?420:400)+'px;margin:0 auto" role="img" aria-label="Einmaleins-Tafel">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+}
+/* Eine Reihe als zwei Spalten mit Kernaufgaben */
+function vMreihe(v){
+  var n=v.n,up=v.upto||10,core=v.core||[],o='',F='font-family="Arial,Helvetica,sans-serif"',col=DC[n%8],half=Math.ceil(up/2),i;
+  for(i=1;i<=up;i++){var cI=i>half?1:0,rI=cI?i-half-1:i-1,x=6+cI*296,y=6+rI*54,k=core.indexOf(i)>=0;
+    o+='<rect x="'+x+'" y="'+y+'" width="288" height="46" rx="14" fill="'+(k?'#EAF6EC':'#F5F7FB')+'" stroke="'+(k?'#34A853':'#E0E5EF')+'" stroke-width="'+(k?2.4:1.5)+'"/>'+
+     '<circle cx="'+(x+25)+'" cy="'+(y+23)+'" r="14" fill="'+col+'"/>'+_t(x+25,y+29,15,i,'#fff','middle',800)+
+     _t(x+52,y+31,23,'× '+n,'#2B3350','start',700)+_t(x+150,y+31,23,'=','#9AA3B2','middle',700)+_t(x+272,y+31,28,n*i,col,'end',800)}
+  var H=6+half*54;
+  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 '+H+'" width="100%" style="display:block;max-width:600px;margin:0 auto" role="img" aria-label="'+n+'er-Reihe">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+}
 function vNline(v){
   var fmt=function(n){n=Math.round(n*1000)/1000;return String(n).replace('.',',').replace('-','−')},cnt=function(a,b,st){var r=[],k;for(k=0;a+k*st<=b+1e-9;k++)r.push(Math.round((a+k*st)*1000)/1000);return r};
   var x0=30,x1=570,ty=78,span=v.max-v.min,F='font-family="Arial,Helvetica,sans-serif"',id='nl'+(++_guid);function X(n){return x0+(x1-x0)*(n-v.min)/span}
@@ -651,7 +677,7 @@ function vCol(v){
 }
 function visuals(list){
   if(!list||!list.length)return '';
-  var map={dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar,tbl:vTbl,chips:vChips,tline:vTline,flow:vFlow,anno:vAnno,cards:vCards,area:vArea,emo:vEmo,field:vField,clock:vClock,coins:vCoins,shape:vShape,symm:vSymm,solid:vSolid,nline:vNline,angle:vAngle,circle:vCircle,jug:vJug,quader:vQuader,par:vPar,blocks:vBlocks,jumps:vJumps,arr:vArr,col:vCol,wall:vWall,scene:vScene,geo:vGeo};
+  var map={dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar,tbl:vTbl,chips:vChips,tline:vTline,flow:vFlow,anno:vAnno,cards:vCards,area:vArea,emo:vEmo,field:vField,clock:vClock,coins:vCoins,shape:vShape,mtab:vMtab,mreihe:vMreihe,symm:vSymm,solid:vSolid,nline:vNline,angle:vAngle,circle:vCircle,jug:vJug,quader:vQuader,par:vPar,blocks:vBlocks,jumps:vJumps,arr:vArr,col:vCol,wall:vWall,scene:vScene,geo:vGeo};
   return '<div class="visrow">'+list.map(function(v){return map[v.type]?map[v.type](v):''}).join('')+'</div>';
 }
 
