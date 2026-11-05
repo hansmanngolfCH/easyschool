@@ -20,5 +20,6 @@ for i,t in enumerate(c['topics']):
 c['topics']=[t for t in c['topics'] if t['id'] not in ids]+out
 de_more.replace_fehler(c);de_more.add_examples(c)
 import de_fix;de_fix.apply(c)
+import de_review;de_review.apply(c);de_review.clean(c)
 json.dump(c,open(P,'w'),ensure_ascii=False,indent=1)
 print(len(out),'Themen:',[(t['id'],len(t['cards']),len(t['exam']['questions']),len(t['explain'])) for t in out])

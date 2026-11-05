@@ -1,0 +1,5925 @@
+[
+{
+"topic": "kl2-deu-mehrzahl",
+"where": "card",
+"id": "c103",
+"field": "opts",
+"old": [
+"Bänke",
+"Bänk",
+"Banker",
+"Banken"
+],
+"new": [
+"Bänke",
+"Bänk",
+"Banker",
+"Bankn"
+]
+},
+{
+"topic": "kl2-deu-mehrzahl",
+"where": "card",
+"id": "c121",
+"field": "opts",
+"old": [
+"Schale",
+"Schal",
+"Schals",
+"Schaler"
+],
+"new": [
+"Schäle",
+"Schal",
+"Schals",
+"Schaler"
+]
+},
+{
+"topic": "kl2-deu-mehrzahl",
+"where": "card",
+"id": "c239",
+"field": "opts",
+"old": [
+"Regenbögen",
+"Regenbogen",
+"Regenbogenen"
+],
+"new": [
+"Regenböge",
+"Regenbogen",
+"Regenbogenen"
+]
+},
+{
+"topic": "kl2-deu-mehrzahl",
+"where": "card",
+"id": "c47",
+"field": "hints",
+"old": [
+"Schreibe die Antwort genau so, wie sie in der Auswahl stünde."
+],
+"new": [
+"Ist es ein Ding oder sind es mehrere? Schreibe das Wort genau so auf."
+]
+},
+{
+"topic": "kl2-deu-mehrzahl",
+"where": "card",
+"id": "c48",
+"field": "hints",
+"old": [
+"Schreibe die Antwort genau so, wie sie in der Auswahl stünde."
+],
+"new": [
+"Ist es ein Ding oder sind es mehrere? Schreibe das Wort genau so auf."
+]
+},
+{
+"topic": "kl2-deu-mehrzahl",
+"where": "card",
+"id": "c38",
+"field": "q",
+"old": "Welches davon ist ein Einzahl?",
+"new": "Welches davon ist eine Einzahl?"
+},
+{
+"topic": "kl2-deu-mehrzahl",
+"where": "card",
+"id": "c40",
+"field": "q",
+"old": "Welches davon ist ein Einzahl?",
+"new": "Welches davon ist eine Einzahl?"
+},
+{
+"topic": "kl2-deu-mehrzahl",
+"where": "card",
+"id": "c42",
+"field": "q",
+"old": "Welches davon ist ein Einzahl?",
+"new": "Welches davon ist eine Einzahl?"
+},
+{
+"topic": "kl2-deu-mehrzahl",
+"where": "card",
+"id": "c44",
+"field": "q",
+"old": "Welches davon ist ein Einzahl?",
+"new": "Welches davon ist eine Einzahl?"
+},
+{
+"topic": "kl2-deu-mehrzahl",
+"where": "card",
+"id": "c39",
+"field": "q",
+"old": "Welches davon ist ein Mehrzahl?",
+"new": "Welches davon ist eine Mehrzahl?"
+},
+{
+"topic": "kl2-deu-mehrzahl",
+"where": "card",
+"id": "c41",
+"field": "q",
+"old": "Welches davon ist ein Mehrzahl?",
+"new": "Welches davon ist eine Mehrzahl?"
+},
+{
+"topic": "kl2-deu-mehrzahl",
+"where": "card",
+"id": "c43",
+"field": "q",
+"old": "Welches davon ist ein Mehrzahl?",
+"new": "Welches davon ist eine Mehrzahl?"
+},
+{
+"topic": "kl2-deu-mehrzahl",
+"where": "card",
+"id": "c45",
+"field": "q",
+"old": "Welches davon ist ein Mehrzahl?",
+"new": "Welches davon ist eine Mehrzahl?"
+},
+{
+"topic": "kl2-deu-mehrzahl",
+"where": "exam",
+"id": "q14",
+"field": "q",
+"old": "Welches dieser Wörter ist ein Mehrzahl?",
+"new": "Welches dieser Wörter ist eine Mehrzahl?"
+},
+{
+"topic": "kl2-deu-mehrzahl",
+"where": "exam",
+"id": "q15",
+"field": "q",
+"old": "Welches dieser Wörter ist ein Einzahl?",
+"new": "Welches dieser Wörter ist eine Einzahl?"
+},
+{
+"topic": "kl2-deu-mehrzahl",
+"where": "exam",
+"id": "q16",
+"field": "q",
+"old": "Welches dieser Wörter ist ein Mehrzahl?",
+"new": "Welches dieser Wörter ist eine Mehrzahl?"
+},
+{
+"topic": "kl9-deu-hauptneben",
+"where": "card",
+"id": "c7",
+"field": "q",
+"old": "«gehen die Kinder hinaus»\nHauptsatz oder Nebensatz?",
+"new": "«Die Kinder gehen hinaus»\nHauptsatz oder Nebensatz?"
+},
+{
+"topic": "kl9-deu-hauptneben",
+"where": "card",
+"id": "c13",
+"field": "q",
+"old": "Stimmt das? «gehen die Kinder hinaus» ist ein Nebensatz.",
+"new": "Stimmt das? «Die Kinder gehen hinaus» ist ein Nebensatz."
+},
+{
+"topic": "kl9-deu-hauptneben",
+"where": "card",
+"id": "c17",
+"field": "opts",
+"old": [
+"wie man den Aufsatz plant",
+"gehen die Kinder hinaus",
+"Die Lehrerin erklärt",
+"sobald die Ferien beginnen",
+"ob der Zug pünktlich abfährt",
+"Ich hoffe"
+],
+"new": [
+"wie man den Aufsatz plant",
+"Die Kinder gehen hinaus",
+"Die Lehrerin erklärt",
+"sobald die Ferien beginnen",
+"ob der Zug pünktlich abfährt",
+"Ich hoffe"
+]
+},
+{
+"topic": "kl9-deu-hauptneben",
+"where": "card",
+"id": "c20",
+"field": "a",
+"old": "gehen die Kinder hinaus",
+"new": "Die Kinder gehen hinaus"
+},
+{
+"topic": "kl9-deu-hauptneben",
+"where": "card",
+"id": "c20",
+"field": "opts",
+"old": [
+"weil er es versprochen hat",
+"ob der Zug pünktlich abfährt",
+"Obwohl es seit Stunden regnet",
+"gehen die Kinder hinaus"
+],
+"new": [
+"weil er es versprochen hat",
+"ob der Zug pünktlich abfährt",
+"Obwohl es seit Stunden regnet",
+"Die Kinder gehen hinaus"
+]
+},
+{
+"topic": "kl9-deu-hauptneben",
+"where": "exam",
+"id": "q2",
+"field": "q",
+"old": "«kaufen wir Popcorn»\nHauptsatz oder Nebensatz?",
+"new": "«Wir kaufen Popcorn»\nHauptsatz oder Nebensatz?"
+},
+{
+"topic": "kl6-deu-plusquam",
+"where": "card",
+"id": "c39",
+"field": "pre",
+"old": "Er hatte gelaufet.",
+"new": "Er war gelaufet."
+},
+{
+"topic": "kl6-deu-plusquam",
+"where": "exam",
+"id": "q15",
+"field": "pre",
+"old": "Sie hatte geflogt.",
+"new": "Sie war geflogt."
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "card",
+"id": "c15",
+"field": "q",
+"old": "Tippe alle an, die ein Subjekte sind.",
+"new": "Tippe alle an, die Subjekte sind."
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "card",
+"id": "c16",
+"field": "q",
+"old": "Tippe alle an, die ein Prädikate sind.",
+"new": "Tippe alle an, die Prädikate sind."
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "card",
+"id": "c99",
+"field": "a",
+"old": "Meine Freunde kommen laut.",
+"new": "Meine Freunde kommen heute."
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "card",
+"id": "c99",
+"field": "ans",
+"old": [
+"Meine Freunde kommen laut."
+],
+"new": [
+"Meine Freunde kommen heute."
+]
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "card",
+"id": "c99",
+"field": "pre",
+"old": "Meine Freunde kommt laut.",
+"new": "Meine Freunde kommt heute."
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "card",
+"id": "c101",
+"field": "a",
+"old": "Die Hunde laufen laut.",
+"new": "Die Hunde laufen schnell."
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "card",
+"id": "c101",
+"field": "ans",
+"old": [
+"Die Hunde laufen laut."
+],
+"new": [
+"Die Hunde laufen schnell."
+]
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "card",
+"id": "c101",
+"field": "pre",
+"old": "Die Hunde läuft laut.",
+"new": "Die Hunde läuft schnell."
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "card",
+"id": "c100",
+"field": "pre",
+"old": "Sie tanzt am Morgen.",
+"new": "Sie tanze am Morgen."
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "card",
+"id": "c154",
+"field": "pre",
+"old": "Sie tanzen auf der Bühne.",
+"new": "Sie tanze auf der Bühne."
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "card",
+"id": "c144",
+"field": "a",
+"old": "Die Bären brummen zufrieden in seiner Höhle.",
+"new": "Die Bären brummen zufrieden in der Höhle."
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "card",
+"id": "c144",
+"field": "ans",
+"old": [
+"Die Bären brummen zufrieden in seiner Höhle."
+],
+"new": [
+"Die Bären brummen zufrieden in der Höhle."
+]
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "card",
+"id": "c144",
+"field": "pre",
+"old": "Der Bär brummt zufrieden in seiner Höhle.",
+"new": "Der Bär brummt zufrieden in der Höhle."
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "card",
+"id": "c135",
+"field": "a",
+"old": "Er grüsst die glatte Tante.",
+"new": "Er grüsst die nette Tante."
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "card",
+"id": "c135",
+"field": "ans",
+"old": [
+"Er grüsst die glatte Tante."
+],
+"new": [
+"Er grüsst die nette Tante."
+]
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "card",
+"id": "c135",
+"field": "pre",
+"old": "Er grüsst der glatte Tante.",
+"new": "Er grüsst der nette Tante."
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "card",
+"id": "c180",
+"field": "a",
+"old": "Der Ball liegt unter dem frechen Spielplatz.",
+"new": "Der Ball liegt unter dem grossen Tisch."
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "card",
+"id": "c180",
+"field": "ans",
+"old": [
+"Der Ball liegt unter dem frechen Spielplatz."
+],
+"new": [
+"Der Ball liegt unter dem grossen Tisch."
+]
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "card",
+"id": "c180",
+"field": "pre",
+"old": "Der Ball liegt unter den frechen Spielplatz.",
+"new": "Der Ball liegt unter den grossen Tisch."
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "card",
+"id": "c173",
+"field": "a",
+"old": "Der Hund versteckt sich hinter der lieben Treppe.",
+"new": "Der Hund versteckt sich hinter der grossen Tür."
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "card",
+"id": "c173",
+"field": "ans",
+"old": [
+"Der Hund versteckt sich hinter der lieben Treppe."
+],
+"new": [
+"Der Hund versteckt sich hinter der grossen Tür."
+]
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "card",
+"id": "c173",
+"field": "pre",
+"old": "Der Hund versteckt sich hinter die lieben Treppe.",
+"new": "Der Hund versteckt sich hinter die grossen Tür."
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "card",
+"id": "c178",
+"field": "a",
+"old": "Ich suche den jungen Apfel.",
+"new": "Ich suche den roten Apfel."
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "card",
+"id": "c178",
+"field": "ans",
+"old": [
+"Ich suche den jungen Apfel."
+],
+"new": [
+"Ich suche den roten Apfel."
+]
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "card",
+"id": "c178",
+"field": "pre",
+"old": "Ich suche dem jungen Apfel.",
+"new": "Ich suche dem roten Apfel."
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "card",
+"id": "c184",
+"field": "a",
+"old": "Er gratuliert dem runden Onkel.",
+"new": "Er gratuliert dem netten Onkel."
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "card",
+"id": "c184",
+"field": "ans",
+"old": [
+"Er gratuliert dem runden Onkel."
+],
+"new": [
+"Er gratuliert dem netten Onkel."
+]
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "card",
+"id": "c184",
+"field": "pre",
+"old": "Er gratuliert den runden Onkel.",
+"new": "Er gratuliert den netten Onkel."
+},
+{
+"topic": "kl5-deu-subjekt",
+"where": "exam",
+"id": "q32",
+"field": "answer",
+"old": [
+"Die Clowns wirfen den Ball in die Luft."
+],
+"new": [
+"Die Clowns werfen den Ball in die Luft."
+]
+},
+{
+"topic": "kl4-deu-zeitformen",
+"where": "exam",
+"id": "q13",
+"field": "q",
+"old": "Sie ___ gerade ein Buch.\nWelche Verbform passt?",
+"new": "Sie ___ im Moment ein Buch.\nWelche Verbform passt?"
+},
+{
+"topic": "kl3-deu-pronomen",
+"where": "card",
+"id": "c35",
+"field": "q",
+"old": "Du lacht.\nIst «Du» ein Begleiter oder ein Stellvertreter?",
+"new": "Du lachst.\nIst «Du» ein Begleiter oder ein Stellvertreter?"
+},
+{
+"topic": "kl3-deu-pronomen",
+"where": "card",
+"id": "c49",
+"field": "q",
+"old": "Du singt.\nIst «Du» ein Begleiter oder ein Stellvertreter?",
+"new": "Du singst.\nIst «Du» ein Begleiter oder ein Stellvertreter?"
+},
+{
+"topic": "kl3-deu-pronomen",
+"where": "card",
+"id": "c37",
+"field": "q",
+"old": "Der Igel ist da. ___ schläft .\nWelches Pronomen passt in die Lücke?",
+"new": "Der Igel ist da. ___ schläft.\nWelches Pronomen passt in die Lücke?"
+},
+{
+"topic": "kl3-deu-pronomen",
+"where": "card",
+"id": "c42",
+"field": "q",
+"old": "Das Pferd ist da. ___ schläft .\nWelches Pronomen passt in die Lücke?",
+"new": "Das Pferd ist da. ___ schläft.\nWelches Pronomen passt in die Lücke?"
+},
+{
+"topic": "kl3-deu-pronomen",
+"where": "card",
+"id": "c84",
+"field": "q",
+"old": "Das Meerschweinchen ist da. ___ schläft .\nWelches Pronomen passt in die Lücke?",
+"new": "Das Meerschweinchen ist da. ___ schläft.\nWelches Pronomen passt in die Lücke?"
+},
+{
+"topic": "kl3-deu-pronomen",
+"where": "card",
+"id": "c86",
+"field": "q",
+"old": "Der Löwe ist da. ___ schläft .\nWelches Pronomen passt in die Lücke?",
+"new": "Der Löwe ist da. ___ schläft.\nWelches Pronomen passt in die Lücke?"
+},
+{
+"topic": "kl3-deu-pronomen",
+"where": "card",
+"id": "c38",
+"field": "a",
+"old": "ihr",
+"new": "ihre"
+},
+{
+"topic": "kl3-deu-pronomen",
+"where": "card",
+"id": "c52",
+"field": "a",
+"old": "ihr",
+"new": "ihre"
+},
+{
+"topic": "kl3-deu-pronomen",
+"where": "card",
+"id": "c71",
+"field": "a",
+"old": "ihr",
+"new": "ihre"
+},
+{
+"topic": "kl3-deu-pronomen",
+"where": "card",
+"id": "c72",
+"field": "a",
+"old": "ihr",
+"new": "ihre"
+},
+{
+"topic": "kl3-deu-pronomen",
+"where": "card",
+"id": "c38",
+"field": "opts",
+"old": [
+"sein",
+"ihr",
+"dein",
+"mein"
+],
+"new": [
+"seine",
+"ihre",
+"deine",
+"meine"
+]
+},
+{
+"topic": "kl3-deu-pronomen",
+"where": "card",
+"id": "c52",
+"field": "opts",
+"old": [
+"dein",
+"mein",
+"sein",
+"ihr"
+],
+"new": [
+"deine",
+"meine",
+"seine",
+"ihre"
+]
+},
+{
+"topic": "kl3-deu-pronomen",
+"where": "card",
+"id": "c71",
+"field": "opts",
+"old": [
+"sein",
+"ihr",
+"dein",
+"mein"
+],
+"new": [
+"seine",
+"ihre",
+"deine",
+"meine"
+]
+},
+{
+"topic": "kl3-deu-pronomen",
+"where": "card",
+"id": "c72",
+"field": "opts",
+"old": [
+"dein",
+"ihr",
+"sein",
+"mein"
+],
+"new": [
+"deine",
+"ihre",
+"seine",
+"meine"
+]
+},
+{
+"topic": "kl3-deu-pronomen",
+"where": "card",
+"id": "c75",
+"field": "q",
+"old": "Das ist Mia. Das ist ___ Wand.\nWelches Wort passt in die Lücke?",
+"new": "Das ist Mia. Das ist ___ Tasche.\nWelches Wort passt in die Lücke?"
+},
+{
+"topic": "kl3-deu-pronomen",
+"where": "card",
+"id": "c75",
+"field": "a",
+"old": "ihr",
+"new": "ihre"
+},
+{
+"topic": "kl3-deu-pronomen",
+"where": "card",
+"id": "c75",
+"field": "opts",
+"old": [
+"mein",
+"dein",
+"sein",
+"ihr"
+],
+"new": [
+"meine",
+"deine",
+"seine",
+"ihre"
+]
+},
+{
+"topic": "kl3-deu-pronomen",
+"where": "card",
+"id": "c56",
+"field": "q",
+"old": "Die Lehrer schlafen. ___ haben Spass.\nWelches Pronomen passt in die Lücke?",
+"new": "Die Lehrer singen. ___ haben Spass.\nWelches Pronomen passt in die Lücke?"
+},
+{
+"topic": "kl3-deu-pronomen",
+"where": "card",
+"id": "c89",
+"field": "q",
+"old": "Die Kinder schlafen. ___ haben Spass.\nWelches Pronomen passt in die Lücke?",
+"new": "Die Kinder tanzen. ___ haben Spass.\nWelches Pronomen passt in die Lücke?"
+},
+{
+"topic": "kl3-deu-pronomen",
+"where": "card",
+"id": "c91",
+"field": "q",
+"old": "Meine Freunde schlafen. ___ haben Spass.\nWelches Pronomen passt in die Lücke?",
+"new": "Meine Freunde tanzen. ___ haben Spass.\nWelches Pronomen passt in die Lücke?"
+},
+{
+"topic": "kl3-deu-pronomen",
+"where": "card",
+"id": "c118",
+"field": "a",
+"old": "Das ist Paul. Das ist seine Wand.",
+"new": "Das ist Paul. Das ist seine Mütze."
+},
+{
+"topic": "kl3-deu-pronomen",
+"where": "card",
+"id": "c118",
+"field": "ans",
+"old": [
+"Das ist Paul. Das ist seine Wand."
+],
+"new": [
+"Das ist Paul. Das ist seine Mütze."
+]
+},
+{
+"topic": "kl3-deu-pronomen",
+"where": "card",
+"id": "c118",
+"field": "pre",
+"old": "Das ist Paul. Das ist ihre Wand.",
+"new": "Das ist Paul. Das ist ihre Mütze."
+},
+{
+"topic": "kl6-deu-grossklein",
+"where": "theory",
+"id": "",
+"field": "th",
+"old": "Zeitwörter auf -s: klein",
+"new": "Zeitangaben auf -s: klein"
+},
+{
+"topic": "kl5-deu-grossklein",
+"where": "theory",
+"id": "",
+"field": "th",
+"old": "Zeitwörter auf -s: klein",
+"new": "Zeitangaben auf -s: klein"
+},
+{
+"topic": "kl4-deu-stammformen",
+"where": "card",
+"id": "c30",
+"field": "hints",
+"old": [
+"Es endet nicht auf -te."
+],
+"new": [
+"Mischverb: Der Stamm ändert sich und es endet auf -te."
+]
+},
+{
+"topic": "kl4-deu-stammformen",
+"where": "card",
+"id": "c61",
+"field": "hints",
+"old": [
+"Starke Verben verändern oft den Vokal im Stamm."
+],
+"new": [
+"Mischverben ändern den Stamm und enden auf -t."
+]
+},
+{
+"topic": "kl4-deu-stammformen",
+"where": "card",
+"id": "c113",
+"field": "hints",
+"old": [
+"Starke Verben verändern oft den Vokal im Stamm."
+],
+"new": [
+"Mischverben ändern den Stamm und enden auf -t."
+]
+},
+{
+"topic": "kl4-deu-stammformen",
+"where": "card",
+"id": "c152",
+"field": "hints",
+"old": [
+"Starke Verben verändern oft den Vokal im Stamm."
+],
+"new": [
+"Mischverben ändern den Stamm und enden auf -t."
+]
+},
+{
+"topic": "kl4-deu-stammformen",
+"where": "card",
+"id": "c62",
+"field": "hints",
+"old": [
+"Das Präteritum ist oft unregelmässig."
+],
+"new": [
+"Mischverben ändern den Stamm und enden auf -te."
+]
+},
+{
+"topic": "kl4-deu-stammformen",
+"where": "card",
+"id": "c114",
+"field": "hints",
+"old": [
+"Das Präteritum ist oft unregelmässig."
+],
+"new": [
+"Mischverben ändern den Stamm und enden auf -te."
+]
+},
+{
+"topic": "kl4-deu-stammformen",
+"where": "card",
+"id": "c153",
+"field": "hints",
+"old": [
+"Das Präteritum ist oft unregelmässig."
+],
+"new": [
+"Mischverben ändern den Stamm und enden auf -te."
+]
+},
+{
+"topic": "kl4-deu-stammformen",
+"where": "card",
+"id": "c64",
+"field": "hints",
+"old": [
+"Das ist ein starkes Verb."
+],
+"new": [
+"Das ist ein Mischverb: Der Stamm ändert sich, das Partizip endet auf -t."
+]
+},
+{
+"topic": "kl4-deu-stammformen",
+"where": "card",
+"id": "c154",
+"field": "hints",
+"old": [
+"Das ist ein starkes Verb."
+],
+"new": [
+"Das ist ein Mischverb: Der Stamm ändert sich, das Partizip endet auf -t."
+]
+},
+{
+"topic": "kl4-deu-stammformen",
+"where": "card",
+"id": "c271",
+"field": "a",
+"old": "Ben hat gestern das Eis gebrochen.",
+"new": "Ben hat gestern den Ast gebrochen."
+},
+{
+"topic": "kl4-deu-stammformen",
+"where": "card",
+"id": "c271",
+"field": "ans",
+"old": [
+"Ben hat gestern das Eis gebrochen."
+],
+"new": [
+"Ben hat gestern den Ast gebrochen."
+]
+},
+{
+"topic": "kl4-deu-stammformen",
+"where": "card",
+"id": "c271",
+"field": "pre",
+"old": "Ben ist gestern das Eis gebrochen.",
+"new": "Ben ist gestern den Ast gebrochen."
+},
+{
+"topic": "kl4-deu-stammformen",
+"where": "card",
+"id": "c233",
+"field": "a",
+"old": "Sara hat gestern auf dem Land gewohnt.",
+"new": "Sara hat früher auf dem Land gewohnt."
+},
+{
+"topic": "kl4-deu-stammformen",
+"where": "card",
+"id": "c233",
+"field": "ans",
+"old": [
+"Sara hat gestern auf dem Land gewohnt."
+],
+"new": [
+"Sara hat früher auf dem Land gewohnt."
+]
+},
+{
+"topic": "kl4-deu-stammformen",
+"where": "card",
+"id": "c233",
+"field": "pre",
+"old": "Sara ist gestern auf dem Land gewohnt.",
+"new": "Sara ist früher auf dem Land gewohnt."
+},
+{
+"topic": "kl3-deu-stammformen",
+"where": "card",
+"id": "c30",
+"field": "hints",
+"old": [
+"Es endet nicht auf -te."
+],
+"new": [
+"Mischverb: Der Stamm ändert sich und es endet auf -te."
+]
+},
+{
+"topic": "kl3-deu-stammformen",
+"where": "card",
+"id": "c38",
+"field": "hints",
+"old": [
+"Starke Verben verändern oft den Vokal im Stamm."
+],
+"new": [
+"Mischverben ändern den Stamm und enden auf -t."
+]
+},
+{
+"topic": "kl3-deu-stammformen",
+"where": "card",
+"id": "c120",
+"field": "hints",
+"old": [
+"Starke Verben verändern oft den Vokal im Stamm."
+],
+"new": [
+"Mischverben ändern den Stamm und enden auf -t."
+]
+},
+{
+"topic": "kl3-deu-stammformen",
+"where": "card",
+"id": "c195",
+"field": "hints",
+"old": [
+"Starke Verben verändern oft den Vokal im Stamm."
+],
+"new": [
+"Mischverben ändern den Stamm und enden auf -t."
+]
+},
+{
+"topic": "kl3-deu-stammformen",
+"where": "card",
+"id": "c39",
+"field": "hints",
+"old": [
+"Das Präteritum ist oft unregelmässig."
+],
+"new": [
+"Mischverben ändern den Stamm und enden auf -te."
+]
+},
+{
+"topic": "kl3-deu-stammformen",
+"where": "card",
+"id": "c121",
+"field": "hints",
+"old": [
+"Das Präteritum ist oft unregelmässig."
+],
+"new": [
+"Mischverben ändern den Stamm und enden auf -te."
+]
+},
+{
+"topic": "kl3-deu-stammformen",
+"where": "card",
+"id": "c196",
+"field": "hints",
+"old": [
+"Das Präteritum ist oft unregelmässig."
+],
+"new": [
+"Mischverben ändern den Stamm und enden auf -te."
+]
+},
+{
+"topic": "kl3-deu-stammformen",
+"where": "card",
+"id": "c40",
+"field": "hints",
+"old": [
+"Das ist ein starkes Verb."
+],
+"new": [
+"Das ist ein Mischverb: Der Stamm ändert sich, das Partizip endet auf -t."
+]
+},
+{
+"topic": "kl3-deu-stammformen",
+"where": "card",
+"id": "c123",
+"field": "hints",
+"old": [
+"Das ist ein starkes Verb."
+],
+"new": [
+"Das ist ein Mischverb: Der Stamm ändert sich, das Partizip endet auf -t."
+]
+},
+{
+"topic": "kl3-deu-stammformen",
+"where": "card",
+"id": "c198",
+"field": "hints",
+"old": [
+"Das ist ein starkes Verb."
+],
+"new": [
+"Das ist ein Mischverb: Der Stamm ändert sich, das Partizip endet auf -t."
+]
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "th-ausnahmen",
+"field": "th",
+"old": "\"head\": [\"Fall\", \"Regel\", \"Beispiel\"]",
+"new": "\"head\": [\"Wörter\", \"Regel\", \"Beispiel\"]"
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "th-ausnahmen",
+"field": "th",
+"old": "\"head\": [\"Fall\", \"Regel\", \"Beispiel\"]",
+"new": "\"head\": [\"Wörter\", \"Regel\", \"Beispiel\"]"
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c55",
+"field": "q",
+"old": "Wir helfen ___ Nachbarn.\nWelcher Artikel passt?",
+"new": "Wir helfen ___ Lehrer.\nWelcher Artikel passt?"
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c74",
+"field": "q",
+"old": "Das ist das Fahrrad ___ Nachbarn.\nWelcher Artikel passt?",
+"new": "Das ist das Fahrrad ___ Bäckers.\nWelcher Artikel passt?"
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c144",
+"field": "a",
+"old": "Wir sitzen auf dem frohen Zelt.",
+"new": "Wir sitzen auf dem roten Sofa."
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c144",
+"field": "ans",
+"old": [
+"Wir sitzen auf dem frohen Zelt."
+],
+"new": [
+"Wir sitzen auf dem roten Sofa."
+]
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c144",
+"field": "pre",
+"old": "Wir sitzen auf das frohen Zelt.",
+"new": "Wir sitzen auf das roten Sofa."
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c183",
+"field": "a",
+"old": "Ich warte vor dem weichen Schrank.",
+"new": "Ich warte vor dem alten Schrank."
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c183",
+"field": "ans",
+"old": [
+"Ich warte vor dem weichen Schrank."
+],
+"new": [
+"Ich warte vor dem alten Schrank."
+]
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c183",
+"field": "pre",
+"old": "Ich warte vor den weichen Schrank.",
+"new": "Ich warte vor den alten Schrank."
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c200",
+"field": "a",
+"old": "Ich helfe der scharfen Tante.",
+"new": "Ich helfe der netten Tante."
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c200",
+"field": "ans",
+"old": [
+"Ich helfe der scharfen Tante."
+],
+"new": [
+"Ich helfe der netten Tante."
+]
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c200",
+"field": "pre",
+"old": "Ich helfe die scharfen Tante.",
+"new": "Ich helfe die netten Tante."
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c236",
+"field": "a",
+"old": "Wir besuchen den scharfen Piloten.",
+"new": "Wir besuchen den netten Piloten."
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c236",
+"field": "ans",
+"old": [
+"Wir besuchen den scharfen Piloten."
+],
+"new": [
+"Wir besuchen den netten Piloten."
+]
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c236",
+"field": "pre",
+"old": "Wir besuchen dem scharfen Piloten.",
+"new": "Wir besuchen dem netten Piloten."
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c207",
+"field": "a",
+"old": "Ich warte vor dem kranken Stuhl.",
+"new": "Ich warte vor dem kleinen Stuhl."
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c207",
+"field": "ans",
+"old": [
+"Ich warte vor dem kranken Stuhl."
+],
+"new": [
+"Ich warte vor dem kleinen Stuhl."
+]
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c207",
+"field": "pre",
+"old": "Ich warte vor den kranken Stuhl.",
+"new": "Ich warte vor den kleinen Stuhl."
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c242",
+"field": "a",
+"old": "Ich warte vor dem lustigen Haus.",
+"new": "Ich warte vor dem grossen Haus."
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c242",
+"field": "ans",
+"old": [
+"Ich warte vor dem lustigen Haus."
+],
+"new": [
+"Ich warte vor dem grossen Haus."
+]
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c242",
+"field": "pre",
+"old": "Ich warte vor das lustigen Haus.",
+"new": "Ich warte vor das grossen Haus."
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c146",
+"field": "a",
+"old": "Ich helfe dem Polizisten.",
+"new": "Ich helfe dem Bäcker."
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c146",
+"field": "ans",
+"old": [
+"Ich helfe dem Polizisten."
+],
+"new": [
+"Ich helfe dem Bäcker."
+]
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c146",
+"field": "pre",
+"old": "Ich helfe den Polizisten.",
+"new": "Ich helfe den Bäcker."
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c196",
+"field": "a",
+"old": "Ich helfe dem kranken Affen.",
+"new": "Ich helfe dem kranken Hund."
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c196",
+"field": "ans",
+"old": [
+"Ich helfe dem kranken Affen."
+],
+"new": [
+"Ich helfe dem kranken Hund."
+]
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c196",
+"field": "pre",
+"old": "Ich helfe den kranken Affen.",
+"new": "Ich helfe den kranken Hund."
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c159",
+"field": "a",
+"old": "Der Hund versteckt sich hinter dem Teich.",
+"new": "Der Hund liegt hinter dem Teich."
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c159",
+"field": "ans",
+"old": [
+"Der Hund versteckt sich hinter dem Teich."
+],
+"new": [
+"Der Hund liegt hinter dem Teich."
+]
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "card",
+"id": "c159",
+"field": "pre",
+"old": "Der Hund versteckt sich hinter den Teich.",
+"new": "Der Hund liegt hinter den Teich."
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "exam",
+"id": "q35",
+"field": "answer",
+"old": [
+"Wir sitzen auf der jungen Schule."
+],
+"new": [
+"Wir sitzen auf der alten Bank."
+]
+},
+{
+"topic": "kl7-deu-faelle",
+"where": "exam",
+"id": "q35",
+"field": "pre",
+"old": "Wir sitzen auf die jungen Schule.",
+"new": "Wir sitzen auf die alten Bank."
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c71",
+"field": "q",
+"old": "Die dunkele Ziege wartet.\nIn welchem Fall steht «die dunkele Ziege»?",
+"new": "Die dunkle Ziege wartet.\nIn welchem Fall steht «die dunkle Ziege»?"
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c57",
+"field": "q",
+"old": "Ich helfe der leichten Prinzessin.\nIn welchem Fall steht «der leichten Prinzessin»?",
+"new": "Ich helfe der mutigen Prinzessin.\nIn welchem Fall steht «der mutigen Prinzessin»?"
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c79",
+"field": "q",
+"old": "Der leichte Bruder wartet.\nIn welchem Fall steht «der leichte Bruder»?",
+"new": "Der kleine Bruder wartet.\nIn welchem Fall steht «der kleine Bruder»?"
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c143",
+"field": "a",
+"old": "Sie geht durch den Mantel.",
+"new": "Sie geht durch den Park."
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c143",
+"field": "ans",
+"old": [
+"Sie geht durch den Mantel."
+],
+"new": [
+"Sie geht durch den Park."
+]
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c143",
+"field": "pre",
+"old": "Sie geht durch dem Mantel.",
+"new": "Sie geht durch dem Park."
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c161",
+"field": "a",
+"old": "Sie geht durch den leichten See.",
+"new": "Sie geht durch den dunklen Wald."
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c161",
+"field": "ans",
+"old": [
+"Sie geht durch den leichten See."
+],
+"new": [
+"Sie geht durch den dunklen Wald."
+]
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c161",
+"field": "pre",
+"old": "Sie geht durch dem leichten See.",
+"new": "Sie geht durch dem dunklen Wald."
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c168",
+"field": "a",
+"old": "Sie geht durch die neue Torte.",
+"new": "Sie geht durch die neue Halle."
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c168",
+"field": "ans",
+"old": [
+"Sie geht durch die neue Torte."
+],
+"new": [
+"Sie geht durch die neue Halle."
+]
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c168",
+"field": "pre",
+"old": "Sie geht durch der neue Torte.",
+"new": "Sie geht durch der neue Halle."
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c184",
+"field": "a",
+"old": "Sie geht durch den freundlichen Teller.",
+"new": "Sie geht durch den freundlichen Laden."
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c184",
+"field": "ans",
+"old": [
+"Sie geht durch den freundlichen Teller."
+],
+"new": [
+"Sie geht durch den freundlichen Laden."
+]
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c184",
+"field": "pre",
+"old": "Sie geht durch dem freundlichen Teller.",
+"new": "Sie geht durch dem freundlichen Laden."
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c190",
+"field": "a",
+"old": "Sie geht durch die Pizza.",
+"new": "Sie geht durch die Stadt."
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c190",
+"field": "ans",
+"old": [
+"Sie geht durch die Pizza."
+],
+"new": [
+"Sie geht durch die Stadt."
+]
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c190",
+"field": "pre",
+"old": "Sie geht durch der Pizza.",
+"new": "Sie geht durch der Stadt."
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c135",
+"field": "a",
+"old": "Ich komme von der mutigen Wand.",
+"new": "Ich komme von der alten Brücke."
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c135",
+"field": "ans",
+"old": [
+"Ich komme von der mutigen Wand."
+],
+"new": [
+"Ich komme von der alten Brücke."
+]
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c135",
+"field": "pre",
+"old": "Ich komme von die mutigen Wand.",
+"new": "Ich komme von die alten Brücke."
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c140",
+"field": "a",
+"old": "Wir gehen mit der neuen Torte.",
+"new": "Wir gehen mit der neuen Lehrerin."
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c140",
+"field": "ans",
+"old": [
+"Wir gehen mit der neuen Torte."
+],
+"new": [
+"Wir gehen mit der neuen Lehrerin."
+]
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c140",
+"field": "pre",
+"old": "Wir gehen mit die neuen Torte.",
+"new": "Wir gehen mit die neuen Lehrerin."
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c149",
+"field": "a",
+"old": "Sie dankt der scharfen Kuh.",
+"new": "Sie dankt der braunen Kuh."
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c149",
+"field": "ans",
+"old": [
+"Sie dankt der scharfen Kuh."
+],
+"new": [
+"Sie dankt der braunen Kuh."
+]
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c149",
+"field": "pre",
+"old": "Sie dankt die scharfen Kuh.",
+"new": "Sie dankt die braunen Kuh."
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c176",
+"field": "a",
+"old": "Wir gehen mit dem starken Heft.",
+"new": "Wir gehen mit dem neuen Heft."
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c176",
+"field": "ans",
+"old": [
+"Wir gehen mit dem starken Heft."
+],
+"new": [
+"Wir gehen mit dem neuen Heft."
+]
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "card",
+"id": "c176",
+"field": "pre",
+"old": "Wir gehen mit das starken Heft.",
+"new": "Wir gehen mit das neuen Heft."
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "exam",
+"id": "q23",
+"field": "answer",
+"old": [
+"Ich helfe dem Affen."
+],
+"new": [
+"Ich helfe dem Papagei."
+]
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "exam",
+"id": "q23",
+"field": "pre",
+"old": "Ich helfe den Affen.",
+"new": "Ich helfe den Papagei."
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "exam",
+"id": "q26",
+"field": "answer",
+"old": [
+"Wir besuchen die helle Schulleiterin."
+],
+"new": [
+"Wir besuchen die nette Schulleiterin."
+]
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "exam",
+"id": "q26",
+"field": "pre",
+"old": "Wir besuchen der helle Schulleiterin.",
+"new": "Wir besuchen der nette Schulleiterin."
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "exam",
+"id": "q28",
+"field": "answer",
+"old": [
+"Wir gehen mit dem Kollegen."
+],
+"new": [
+"Wir gehen mit dem Lehrer."
+]
+},
+{
+"topic": "kl8-deu-faelle",
+"where": "exam",
+"id": "q28",
+"field": "pre",
+"old": "Wir gehen mit den Kollegen.",
+"new": "Wir gehen mit den Lehrer."
+},
+{
+"topic": "kl3-deu-langvokal",
+"where": "card",
+"id": "c45",
+"field": "q",
+"old": "Verbessere direkt im Feld.",
+"new": "Verbessere direkt im Feld. (Eine Strasse mit Bäumen.)"
+},
+{
+"topic": "kl3-deu-langvokal",
+"where": "card",
+"id": "c46",
+"field": "q",
+"old": "Wie schreibt man es richtig?",
+"new": "Wie schreibt man es richtig? (Eine Strasse mit Bäumen.)"
+},
+{
+"topic": "kl3-deu-langvokal",
+"where": "card",
+"id": "c88",
+"field": "q",
+"old": "Verbessere direkt im Feld.",
+"new": "Verbessere direkt im Feld. (Mehrzahl von Seele.)"
+},
+{
+"topic": "kl3-deu-langvokal",
+"where": "card",
+"id": "c89",
+"field": "q",
+"old": "Wie schreibt man es richtig?",
+"new": "Wie schreibt man es richtig? (Mehrzahl von Seele.)"
+},
+{
+"topic": "kl3-deu-langvokal",
+"where": "card",
+"id": "c108",
+"field": "q",
+"old": "Verbessere direkt im Feld.",
+"new": "Verbessere direkt im Feld. (Damit wiegt man.)"
+},
+{
+"topic": "kl3-deu-langvokal",
+"where": "card",
+"id": "c109",
+"field": "q",
+"old": "Wie schreibt man es richtig?",
+"new": "Wie schreibt man es richtig? (Damit wiegt man.)"
+},
+{
+"topic": "kl3-deu-langvokal",
+"where": "card",
+"id": "c223",
+"field": "q",
+"old": "Verbessere direkt im Feld.",
+"new": "Verbessere direkt im Feld. (Mehrzahl von Boot.)"
+},
+{
+"topic": "kl3-deu-langvokal",
+"where": "card",
+"id": "c224",
+"field": "q",
+"old": "Wie schreibt man es richtig?",
+"new": "Wie schreibt man es richtig? (Mehrzahl von Boot.)"
+},
+{
+"topic": "kl3-deu-langvokal",
+"where": "card",
+"id": "c258",
+"field": "q",
+"old": "Verbessere direkt im Feld.",
+"new": "Verbessere direkt im Feld. (Viele Soldaten.)"
+},
+{
+"topic": "kl3-deu-langvokal",
+"where": "card",
+"id": "c259",
+"field": "q",
+"old": "Wie schreibt man es richtig?",
+"new": "Wie schreibt man es richtig? (Viele Soldaten.)"
+},
+{
+"topic": "kl3-deu-langvokal",
+"where": "card",
+"id": "c261",
+"field": "q",
+"old": "Verbessere direkt im Feld.",
+"new": "Verbessere direkt im Feld. (Bei einer … stimmt man ab.)"
+},
+{
+"topic": "kl3-deu-langvokal",
+"where": "card",
+"id": "c262",
+"field": "q",
+"old": "Wie schreibt man es richtig?",
+"new": "Wie schreibt man es richtig? (Bei einer … stimmt man ab.)"
+},
+{
+"topic": "kl3-deu-langvokal",
+"where": "card",
+"id": "c177",
+"field": "a",
+"old": "Lieber",
+"new": "lieber"
+},
+{
+"topic": "kl3-deu-langvokal",
+"where": "card",
+"id": "c177",
+"field": "ans",
+"old": [
+"Lieber"
+],
+"new": [
+"lieber"
+]
+},
+{
+"topic": "kl3-deu-langvokal",
+"where": "card",
+"id": "c177",
+"field": "pre",
+"old": "Liber",
+"new": "liber"
+},
+{
+"topic": "kl3-deu-langvokal",
+"where": "card",
+"id": "c178",
+"field": "a",
+"old": "Lieber",
+"new": "lieber"
+},
+{
+"topic": "kl3-deu-langvokal",
+"where": "card",
+"id": "c178",
+"field": "opts",
+"old": [
+"Liber",
+"Lieber"
+],
+"new": [
+"liber",
+"lieber"
+]
+},
+{
+"topic": "kl3-deu-langvokal",
+"where": "card",
+"id": "c208",
+"field": "a",
+"old": "Speer",
+"new": "Beere"
+},
+{
+"topic": "kl3-deu-langvokal",
+"where": "card",
+"id": "c208",
+"field": "ans",
+"old": [
+"Speer"
+],
+"new": [
+"Beere"
+]
+},
+{
+"topic": "kl3-deu-langvokal",
+"where": "card",
+"id": "c208",
+"field": "pre",
+"old": "Sper",
+"new": "Bere"
+},
+{
+"topic": "kl3-deu-langvokal",
+"where": "card",
+"id": "c209",
+"field": "a",
+"old": "Speer",
+"new": "Beere"
+},
+{
+"topic": "kl3-deu-langvokal",
+"where": "card",
+"id": "c209",
+"field": "opts",
+"old": [
+"Sper",
+"Speer"
+],
+"new": [
+"Bere",
+"Beere"
+]
+},
+{
+"topic": "kl3-deu-langvokal",
+"where": "card",
+"id": "c210",
+"field": "q",
+"old": "Welche Regel gilt bei «Speer»?",
+"new": "Welche Regel gilt bei «Beere»?"
+},
+{
+"topic": "kl3-deu-langvokal",
+"where": "card",
+"id": "c271",
+"field": "a",
+"old": "Krieg",
+"new": "Spiegel"
+},
+{
+"topic": "kl3-deu-langvokal",
+"where": "card",
+"id": "c271",
+"field": "ans",
+"old": [
+"Krieg"
+],
+"new": [
+"Spiegel"
+]
+},
+{
+"topic": "kl3-deu-langvokal",
+"where": "card",
+"id": "c271",
+"field": "pre",
+"old": "Krig",
+"new": "Spigel"
+},
+{
+"topic": "kl3-deu-langvokal",
+"where": "card",
+"id": "c272",
+"field": "a",
+"old": "Krieg",
+"new": "Spiegel"
+},
+{
+"topic": "kl3-deu-langvokal",
+"where": "card",
+"id": "c272",
+"field": "opts",
+"old": [
+"Krieg",
+"Krig"
+],
+"new": [
+"Spiegel",
+"Spigel"
+]
+},
+{
+"topic": "kl4-deu-satzzeichen",
+"where": "card",
+"id": "c48",
+"field": "q",
+"old": "Wie heisst einen Ballon\nWelches Satzzeichen steht am Ende?",
+"new": "Wie heisst dein Hund\nWelches Satzzeichen steht am Ende?"
+},
+{
+"topic": "kl4-deu-satzzeichen",
+"where": "card",
+"id": "c58",
+"field": "q",
+"old": "Wie heisst eine Hausaufgabe\nWelches Satzzeichen steht am Ende?",
+"new": "Wie heisst deine Lehrerin\nWelches Satzzeichen steht am Ende?"
+},
+{
+"topic": "kl4-deu-satzzeichen",
+"where": "card",
+"id": "c86",
+"field": "q",
+"old": "Wie heisst eine Birne\nWelches Satzzeichen steht am Ende?",
+"new": "Wie heisst deine Schwester\nWelches Satzzeichen steht am Ende?"
+},
+{
+"topic": "kl4-deu-satzzeichen",
+"where": "card",
+"id": "c77",
+"field": "a",
+"old": "Wie heisst eine Maus?",
+"new": "Wie heisst deine Katze?"
+},
+{
+"topic": "kl4-deu-satzzeichen",
+"where": "card",
+"id": "c77",
+"field": "ans",
+"old": [
+"Wie heisst eine Maus?"
+],
+"new": [
+"Wie heisst deine Katze?"
+]
+},
+{
+"topic": "kl4-deu-satzzeichen",
+"where": "card",
+"id": "c77",
+"field": "pre",
+"old": "Wie heisst eine Maus",
+"new": "Wie heisst deine Katze"
+},
+{
+"topic": "kl4-deu-satzzeichen",
+"where": "exam",
+"id": "q18",
+"field": "answer",
+"old": [
+"Hast du eine Frau?"
+],
+"new": [
+"Hast du eine Katze?"
+]
+},
+{
+"topic": "kl4-deu-satzzeichen",
+"where": "exam",
+"id": "q18",
+"field": "pre",
+"old": "Hast du eine Frau",
+"new": "Hast du eine Katze"
+},
+{
+"topic": "kl4-deu-satzzeichen",
+"where": "card",
+"id": "c3",
+"field": "q",
+"old": "Bring deine Turnsachen mit …\nWelches Satzzeichen steht am Ende?",
+"new": "Bring sofort deine Turnsachen mit …\nWelches Satzzeichen steht am Ende?"
+},
+{
+"topic": "kl4-deu-satzzeichen",
+"where": "card",
+"id": "c17",
+"field": "q",
+"old": "Bring deine Turnsachen mit\nStimmt das? Am Ende steht ein Punkt.",
+"new": "Bring sofort deine Turnsachen mit\nStimmt das? Am Ende steht ein Punkt."
+},
+{
+"topic": "kl4-deu-satzzeichen",
+"where": "card",
+"id": "c28",
+"field": "a",
+"old": "Bring deine Turnsachen mit!",
+"new": "Bring sofort deine Turnsachen mit!"
+},
+{
+"topic": "kl4-deu-satzzeichen",
+"where": "card",
+"id": "c28",
+"field": "ans",
+"old": [
+"Bring deine Turnsachen mit!"
+],
+"new": [
+"Bring sofort deine Turnsachen mit!"
+]
+},
+{
+"topic": "kl4-deu-satzzeichen",
+"where": "card",
+"id": "c28",
+"field": "pre",
+"old": "Bring deine Turnsachen mit",
+"new": "Bring sofort deine Turnsachen mit"
+},
+{
+"topic": "kl4-deu-satzzeichen",
+"where": "card",
+"id": "c24",
+"field": "a",
+"old": "Pass auf, die Strasse ist glatt, Bring deine Turnsachen mit, Komm sofort zu mir",
+"new": "Pass auf, die Strasse ist glatt, Bring sofort deine Turnsachen mit, Komm sofort zu mir"
+},
+{
+"topic": "kl4-deu-satzzeichen",
+"where": "card",
+"id": "c24",
+"field": "ans",
+"old": [
+"Pass auf, die Strasse ist glatt",
+"Bring deine Turnsachen mit",
+"Komm sofort zu mir"
+],
+"new": [
+"Pass auf, die Strasse ist glatt",
+"Bring sofort deine Turnsachen mit",
+"Komm sofort zu mir"
+]
+},
+{
+"topic": "kl4-deu-satzzeichen",
+"where": "card",
+"id": "c24",
+"field": "opts",
+"old": [
+"Komm sofort zu mir",
+"Bring deine Turnsachen mit",
+"Pass auf, die Strasse ist glatt",
+"Hast du die Hausaufgaben schon gemacht",
+"Im Sommer baden wir im See",
+"Kannst du mir bitte helfen"
+],
+"new": [
+"Komm sofort zu mir",
+"Bring sofort deine Turnsachen mit",
+"Pass auf, die Strasse ist glatt",
+"Hast du die Hausaufgaben schon gemacht",
+"Im Sommer baden wir im See",
+"Kannst du mir bitte helfen"
+]
+},
+{
+"topic": "kl4-deu-satzzeichen",
+"where": "card",
+"id": "c25",
+"field": "match",
+"old": {
+"items": [
+[
+"Bring deine Turnsachen mit",
+2
+],
+[
+"Der Zug fährt um acht Uhr ab",
+0
+],
+[
+"Wohin fährst du in den Ferien",
+1
+]
+],
+"cats": [
+"Punkt",
+"Fragezeichen",
+"Ausrufezeichen"
+]
+},
+"new": {
+"items": [
+[
+"Bring sofort deine Turnsachen mit",
+2
+],
+[
+"Der Zug fährt um acht Uhr ab",
+0
+],
+[
+"Wohin fährst du in den Ferien",
+1
+]
+],
+"cats": [
+"Punkt",
+"Fragezeichen",
+"Ausrufezeichen"
+]
+}
+},
+{
+"topic": "kl4-deu-satzzeichen",
+"where": "card",
+"id": "c25",
+"field": "a",
+"old": "Der Zug fährt um acht Uhr ab → Punkt; Wohin fährst du in den Ferien → Fragezeichen; Bring deine Turnsachen mit → Ausrufezeichen",
+"new": "Der Zug fährt um acht Uhr ab → Punkt; Wohin fährst du in den Ferien → Fragezeichen; Bring sofort deine Turnsachen mit → Ausrufezeichen"
+},
+{
+"topic": "kl4-deu-satzzeichen",
+"where": "card",
+"id": "c88",
+"field": "q",
+"old": "Hör mir bitte zu\nWelches Satzzeichen steht am Ende?",
+"new": "Hör sofort auf zu schreien\nWelches Satzzeichen steht am Ende?"
+},
+{
+"topic": "kl4-deu-satzzeichen",
+"where": "card",
+"id": "c103",
+"field": "a",
+"old": "Hör mir bitte zu!",
+"new": "Hör sofort auf zu schreien!"
+},
+{
+"topic": "kl4-deu-satzzeichen",
+"where": "card",
+"id": "c103",
+"field": "ans",
+"old": [
+"Hör mir bitte zu!"
+],
+"new": [
+"Hör sofort auf zu schreien!"
+]
+},
+{
+"topic": "kl4-deu-satzzeichen",
+"where": "card",
+"id": "c103",
+"field": "pre",
+"old": "Hör mir bitte zu.",
+"new": "Hör sofort auf zu schreien."
+},
+{
+"topic": "kl4-deu-satzzeichen",
+"where": "exam",
+"id": "q6",
+"field": "q",
+"old": "Gib mir den Ball …\nWelches Satzzeichen steht am Ende?",
+"new": "Gib mir sofort den Ball …\nWelches Satzzeichen steht am Ende?"
+},
+{
+"topic": "kl4-deu-satzzeichen",
+"where": "exam",
+"id": "q14",
+"field": "answer",
+"old": [
+"Gib mir den Ball!"
+],
+"new": [
+"Gib mir sofort den Ball!"
+]
+},
+{
+"topic": "kl4-deu-satzzeichen",
+"where": "exam",
+"id": "q14",
+"field": "pre",
+"old": "Gib mir den Ball",
+"new": "Gib mir sofort den Ball"
+},
+{
+"topic": "kl4-deu-alphabet",
+"where": "card",
+"id": "th-umlaute",
+"field": "th",
+"old": "[\"Mütze\", \"Mutze\", \"Mund, Mütze, Mutter\"]",
+"new": "[\"Mütze\", \"Mutze\", \"Mund, Mutter, Mütze\"]"
+},
+{
+"topic": "kl3-deu-satzzeichen",
+"where": "card",
+"id": "c63",
+"field": "q",
+"old": "Wie heisst einen Korb\nWelches Satzzeichen steht am Ende?",
+"new": "Wie gross ist der Korb\nWelches Satzzeichen steht am Ende?"
+},
+{
+"topic": "kl3-deu-satzzeichen",
+"where": "card",
+"id": "c52",
+"field": "a",
+"old": "Hast du einen Pirat?",
+"new": "Kennst du einen Piraten?",
+"ans": [
+"Kennst du einen Piraten?"
+],
+"pre": "Kennst du einen Piraten"
+},
+{
+"topic": "kl2-deu-nva",
+"where": "card",
+"id": "c72",
+"field": "q",
+"old": "Der Polizist bleibt hell.\nWelche Wortart hat «hell»?",
+"new": "Der Polizist bleibt ruhig.\nWelche Wortart hat «ruhig»?"
+},
+{
+"topic": "kl2-deu-nva",
+"where": "card",
+"id": "c75",
+"field": "q",
+"old": "Das Fahrrad bleibt freundlich.\nWelche Wortart hat «bleibt»?",
+"new": "Das Fahrrad bleibt neu.\nWelche Wortart hat «bleibt»?"
+},
+{
+"topic": "kl2-deu-nva",
+"where": "card",
+"id": "c76",
+"field": "q",
+"old": "Der Maler bleibt spitz.\nWelche Wortart hat «bleibt»?",
+"new": "Der Maler bleibt ruhig.\nWelche Wortart hat «bleibt»?"
+},
+{
+"topic": "kl2-deu-nva",
+"where": "card",
+"id": "c80",
+"field": "q",
+"old": "Der Schulhof war klug.\nWelche Wortart hat «Schulhof»?",
+"new": "Der Schulhof war gross.\nWelche Wortart hat «Schulhof»?"
+},
+{
+"topic": "kl2-deu-nva",
+"where": "card",
+"id": "c97",
+"field": "q",
+"old": "Der Garten war jung.\nWelche Wortart hat «war»?",
+"new": "Der Garten war schön.\nWelche Wortart hat «war»?"
+},
+{
+"topic": "kl2-deu-nva",
+"where": "card",
+"id": "c137",
+"field": "q",
+"old": "Der Garten war krank.\nWelche Wortart hat «Garten»?",
+"new": "Der Garten war gross.\nWelche Wortart hat «Garten»?"
+},
+{
+"topic": "kl2-deu-nva",
+"where": "card",
+"id": "c133",
+"field": "q",
+"old": "Das Lied bleibt kalt.\nWelche Wortart hat «bleibt»?",
+"new": "Das Lied bleibt schön.\nWelche Wortart hat «bleibt»?"
+},
+{
+"topic": "kl2-deu-nva",
+"where": "card",
+"id": "c124",
+"field": "q",
+"old": "Der Stuhl bleibt stark.\nWelche Wortart hat «bleibt»?",
+"new": "Der Stuhl bleibt leer.\nWelche Wortart hat «bleibt»?"
+},
+{
+"topic": "kl2-deu-nva",
+"where": "card",
+"id": "c128",
+"field": "q",
+"old": "Die Schwester bleibt warm.\nWelche Wortart hat «Schwester»?",
+"new": "Die Schwester bleibt ruhig.\nWelche Wortart hat «Schwester»?"
+},
+{
+"topic": "kl6-deu-subjekt",
+"where": "card",
+"id": "c5",
+"field": "q",
+"old": "Nach dem Unterricht haben die Schüler den Klassenzimmer aufgeräumt.\nIst «die Schüler» das Subjekt oder das Prädikat?",
+"new": "Nach dem Unterricht haben die Schüler das Klassenzimmer aufgeräumt.\nIst «die Schüler» das Subjekt oder das Prädikat?"
+},
+{
+"topic": "kl6-deu-subjekt",
+"where": "card",
+"id": "c6",
+"field": "q",
+"old": "Nach dem Unterricht haben die Schüler den Klassenzimmer aufgeräumt.\nIst «haben aufgeräumt» das Subjekt oder das Prädikat?",
+"new": "Nach dem Unterricht haben die Schüler das Klassenzimmer aufgeräumt.\nIst «haben aufgeräumt» das Subjekt oder das Prädikat?"
+},
+{
+"topic": "kl6-deu-subjekt",
+"where": "card",
+"id": "c10",
+"field": "q",
+"old": "Nach dem Unterricht haben die Schüler den Klassenzimmer aufgeräumt.\nStimmt das? «die Schüler» ist ein Subjekt.",
+"new": "Nach dem Unterricht haben die Schüler das Klassenzimmer aufgeräumt.\nStimmt das? «die Schüler» ist ein Subjekt."
+},
+{
+"topic": "kl6-deu-subjekt",
+"where": "card",
+"id": "c13",
+"field": "q",
+"old": "Tippe alle an, die ein Subjekte sind.",
+"new": "Tippe alle Subjekte an."
+},
+{
+"topic": "kl6-deu-subjekt",
+"where": "card",
+"id": "c14",
+"field": "q",
+"old": "Tippe alle an, die ein Prädikate sind.",
+"new": "Tippe alle Prädikate an."
+},
+{
+"topic": "kl6-deu-subjekt",
+"where": "card",
+"id": "c91",
+"field": "a",
+"old": "Meine Freunde kommen laut.",
+"new": "Meine Freunde kommen heute.",
+"ans": [
+"Meine Freunde kommen heute."
+],
+"pre": "Meine Freunde kommt heute."
+},
+{
+"topic": "kl6-deu-subjekt",
+"where": "card",
+"id": "c93",
+"field": "a",
+"old": "Sie tanzen heute.",
+"new": "Wir tanzen heute.",
+"ans": [
+"Wir tanzen heute."
+],
+"pre": "Wir tanzt heute.",
+"note": "Vorgabe «Sie tanzt heute.» ist selbst korrekt (Sie = sie, Singular): mehrdeutig"
+},
+{
+"topic": "kl6-deu-subjekt",
+"where": "card",
+"id": "c113",
+"field": "a",
+"old": "Sie ruft laut um Hilfe.",
+"new": "Er ruft laut um Hilfe.",
+"ans": [
+"Er ruft laut um Hilfe."
+],
+"pre": "Er rufen laut um Hilfe.",
+"note": "«Sie rufen» ist ebenfalls korrekt: mehrdeutig"
+},
+{
+"topic": "kl6-deu-subjekt",
+"where": "card",
+"id": "c150",
+"field": "a",
+"old": "Sie tanzt auf der Bühne.",
+"new": "Er tanzt auf der Bühne.",
+"ans": [
+"Er tanzt auf der Bühne."
+],
+"pre": "Er tanzen auf der Bühne.",
+"note": "«Sie tanzen» ist ebenfalls korrekt: mehrdeutig"
+},
+{
+"topic": "kl6-deu-subjekt",
+"where": "card",
+"id": "c108",
+"field": "a",
+"old": "Der Ball liegt unter dem fleissigen Teich.",
+"new": "Der Ball liegt unter dem Tisch.",
+"ans": [
+"Der Ball liegt unter dem Tisch."
+],
+"pre": "Der Ball liegt unter den Tisch."
+},
+{
+"topic": "kl6-deu-subjekt",
+"where": "card",
+"id": "c153",
+"field": "a",
+"old": "Ich warte vor dem freundlichen Teich.",
+"new": "Ich warte vor dem Laden.",
+"ans": [
+"Ich warte vor dem Laden."
+],
+"pre": "Ich warte vor den Laden."
+},
+{
+"topic": "kl6-deu-subjekt",
+"where": "card",
+"id": "c125",
+"field": "a",
+"old": "Der Hund versteckt sich hinter der Wolke.",
+"new": "Der Hund schläft hinter der Tür.",
+"ans": [
+"Der Hund schläft hinter der Tür."
+],
+"pre": "Der Hund schläft hinter die Tür.",
+"note": "«sich verstecken hinter + Akk.» ist auch korrekt (Wohin?): mehrdeutig; Wolke unpassend"
+},
+{
+"topic": "kl6-deu-subjekt",
+"where": "card",
+"id": "c127",
+"field": "a",
+"old": "Der Hund versteckt sich hinter dem Stuhl.",
+"new": "Der Hund liegt hinter dem Stuhl.",
+"ans": [
+"Der Hund liegt hinter dem Stuhl."
+],
+"pre": "Der Hund liegt hinter den Stuhl.",
+"note": "«sich verstecken hinter den Stuhl» ist auch korrekt: mehrdeutig"
+},
+{
+"topic": "kl6-deu-subjekt",
+"where": "card",
+"id": "c122",
+"field": "a",
+"old": "Sie schenkt mir die fleissige Mütze.",
+"new": "Sie schenkt mir die rote Mütze.",
+"ans": [
+"Sie schenkt mir die rote Mütze."
+],
+"pre": "Sie schenkt mir der rote Mütze."
+},
+{
+"topic": "kl6-deu-subjekt",
+"where": "card",
+"id": "c155",
+"field": "a",
+"old": "Er gratuliert dem Nachbarn.",
+"new": "Er gratuliert dem Lehrer.",
+"ans": [
+"Er gratuliert dem Lehrer."
+],
+"pre": "Er gratuliert den Lehrer.",
+"note": "«den Nachbarn» ist korrekter Dativ Plural: mehrdeutig"
+},
+{
+"topic": "kl6-deu-subjekt",
+"where": "exam",
+"id": "q27",
+"field": "answer",
+"old": "[\"Die Clowns wirfen den Ball in die Luft.\"]",
+"new": "[\"Die Clowns werfen den Ball in die Luft.\"]"
+},
+{
+"topic": "kl6-deu-subjekt",
+"where": "exam",
+"id": "q34",
+"field": "answer",
+"old": "[\"Ich warte vor dem Bett.\"]",
+"new": "[\"Ich warte vor dem Laden.\"]",
+"pre": "Ich warte vor den Laden."
+},
+{
+"topic": "kl5-deu-hauptsaetze",
+"where": "card",
+"id": "c42",
+"field": "opts",
+"old": "[\"doch\", \"denn\", \"sondern\", \"aber\"]",
+"new": "[\"oder\", \"denn\", \"sondern\", \"aber\"]",
+"note": "aber und doch passen beide; zweites Bindewort durch «oder» ersetzt"
+},
+{
+"topic": "kl5-deu-hauptsaetze",
+"where": "card",
+"id": "c48",
+"field": "opts",
+"old": "[\"doch\", \"sondern\", \"aber\", \"denn\"]",
+"new": "[\"oder\", \"sondern\", \"aber\", \"denn\"]",
+"note": "aber und doch passen beide; zweites Bindewort durch «oder» ersetzt"
+},
+{
+"topic": "kl5-deu-hauptsaetze",
+"where": "card",
+"id": "c53",
+"field": "opts",
+"old": "[\"denn\", \"sondern\", \"doch\", \"aber\"]",
+"new": "[\"denn\", \"sondern\", \"oder\", \"aber\"]",
+"note": "aber und doch passen beide; zweites Bindewort durch «oder» ersetzt"
+},
+{
+"topic": "kl5-deu-hauptsaetze",
+"where": "card",
+"id": "c56",
+"field": "opts",
+"old": "[\"sondern\", \"denn\", \"doch\", \"aber\"]",
+"new": "[\"sondern\", \"denn\", \"oder\", \"aber\"]",
+"note": "aber und doch passen beide; zweites Bindewort durch «oder» ersetzt"
+},
+{
+"topic": "kl5-deu-hauptsaetze",
+"where": "card",
+"id": "c61",
+"field": "opts",
+"old": "[\"aber\", \"denn\", \"doch\", \"sondern\"]",
+"new": "[\"oder\", \"denn\", \"doch\", \"sondern\"]",
+"note": "aber und doch passen beide; zweites Bindewort durch «oder» ersetzt"
+},
+{
+"topic": "kl5-deu-hauptsaetze",
+"where": "card",
+"id": "c64",
+"field": "opts",
+"old": "[\"aber\", \"doch\", \"sondern\", \"denn\"]",
+"new": "[\"aber\", \"oder\", \"sondern\", \"denn\"]",
+"note": "aber und doch passen beide; zweites Bindewort durch «oder» ersetzt"
+},
+{
+"topic": "kl5-deu-hauptsaetze",
+"where": "card",
+"id": "c66",
+"field": "opts",
+"old": "[\"aber\", \"denn\", \"sondern\", \"doch\"]",
+"new": "[\"aber\", \"denn\", \"sondern\", \"oder\"]",
+"note": "aber und doch passen beide; zweites Bindewort durch «oder» ersetzt"
+},
+{
+"topic": "kl5-deu-hauptsaetze",
+"where": "card",
+"id": "c69",
+"field": "opts",
+"old": "[\"sondern\", \"aber\", \"doch\", \"denn\"]",
+"new": "[\"sondern\", \"aber\", \"oder\", \"denn\"]",
+"note": "aber und doch passen beide; zweites Bindewort durch «oder» ersetzt"
+},
+{
+"topic": "kl5-deu-hauptsaetze",
+"where": "card",
+"id": "c74",
+"field": "opts",
+"old": "[\"sondern\", \"aber\", \"denn\", \"doch\"]",
+"new": "[\"sondern\", \"aber\", \"denn\", \"oder\"]",
+"note": "aber und doch passen beide; zweites Bindewort durch «oder» ersetzt"
+},
+{
+"topic": "kl5-deu-hauptsaetze",
+"where": "card",
+"id": "c80",
+"field": "opts",
+"old": "[\"denn\", \"sondern\", \"doch\", \"aber\"]",
+"new": "[\"denn\", \"sondern\", \"oder\", \"aber\"]",
+"note": "aber und doch passen beide; zweites Bindewort durch «oder» ersetzt"
+},
+{
+"topic": "kl5-deu-hauptsaetze",
+"where": "card",
+"id": "c86",
+"field": "opts",
+"old": "[\"sondern\", \"denn\", \"doch\", \"aber\"]",
+"new": "[\"sondern\", \"denn\", \"oder\", \"aber\"]",
+"note": "aber und doch passen beide; zweites Bindewort durch «oder» ersetzt"
+},
+{
+"topic": "kl5-deu-hauptsaetze",
+"where": "card",
+"id": "c89",
+"field": "opts",
+"old": "[\"sondern\", \"doch\", \"denn\", \"aber\"]",
+"new": "[\"sondern\", \"doch\", \"denn\", \"oder\"]",
+"note": "aber und doch passen beide; zweites Bindewort durch «oder» ersetzt"
+},
+{
+"topic": "kl5-deu-hauptsaetze",
+"where": "card",
+"id": "c95",
+"field": "opts",
+"old": "[\"aber\", \"doch\", \"denn\", \"sondern\"]",
+"new": "[\"aber\", \"oder\", \"denn\", \"sondern\"]",
+"note": "aber und doch passen beide; zweites Bindewort durch «oder» ersetzt"
+},
+{
+"topic": "kl5-deu-hauptsaetze",
+"where": "card",
+"id": "c98",
+"field": "opts",
+"old": "[\"denn\", \"doch\", \"sondern\", \"aber\"]",
+"new": "[\"denn\", \"oder\", \"sondern\", \"aber\"]",
+"note": "aber und doch passen beide; zweites Bindewort durch «oder» ersetzt"
+},
+{
+"topic": "kl5-deu-hauptsaetze",
+"where": "card",
+"id": "c104",
+"field": "opts",
+"old": "[\"aber\", \"sondern\", \"denn\", \"doch\"]",
+"new": "[\"aber\", \"sondern\", \"denn\", \"oder\"]",
+"note": "aber und doch passen beide; zweites Bindewort durch «oder» ersetzt"
+},
+{
+"topic": "kl5-deu-hauptsaetze",
+"where": "card",
+"id": "c113",
+"field": "opts",
+"old": "[\"denn\", \"doch\", \"aber\", \"sondern\"]",
+"new": "[\"denn\", \"doch\", \"oder\", \"sondern\"]",
+"note": "aber und doch passen beide; zweites Bindewort durch «oder» ersetzt"
+},
+{
+"topic": "kl5-deu-hauptsaetze",
+"where": "card",
+"id": "c119",
+"field": "opts",
+"old": "[\"denn\", \"sondern\", \"doch\", \"aber\"]",
+"new": "[\"denn\", \"sondern\", \"doch\", \"oder\"]",
+"note": "aber und doch passen beide; zweites Bindewort durch «oder» ersetzt"
+},
+{
+"topic": "kl5-deu-hauptsaetze",
+"where": "card",
+"id": "c122",
+"field": "opts",
+"old": "[\"doch\", \"sondern\", \"denn\", \"aber\"]",
+"new": "[\"doch\", \"sondern\", \"denn\", \"oder\"]",
+"note": "aber und doch passen beide; zweites Bindewort durch «oder» ersetzt"
+},
+{
+"topic": "kl5-deu-hauptsaetze",
+"where": "card",
+"id": "c125",
+"field": "opts",
+"old": "[\"sondern\", \"doch\", \"aber\", \"denn\"]",
+"new": "[\"sondern\", \"oder\", \"aber\", \"denn\"]",
+"note": "aber und doch passen beide; zweites Bindewort durch «oder» ersetzt"
+},
+{
+"topic": "kl5-deu-hauptsaetze",
+"where": "card",
+"id": "c137",
+"field": "opts",
+"old": "[\"doch\", \"denn\", \"aber\", \"sondern\"]",
+"new": "[\"oder\", \"denn\", \"aber\", \"sondern\"]",
+"note": "aber und doch passen beide; zweites Bindewort durch «oder» ersetzt"
+},
+{
+"topic": "kl5-deu-hauptsaetze",
+"where": "card",
+"id": "c143",
+"field": "opts",
+"old": "[\"doch\", \"sondern\", \"aber\", \"denn\"]",
+"new": "[\"doch\", \"sondern\", \"oder\", \"denn\"]",
+"note": "aber und doch passen beide; zweites Bindewort durch «oder» ersetzt"
+},
+{
+"topic": "kl5-deu-hauptsaetze",
+"where": "card",
+"id": "c99",
+"field": "a",
+"old": "Heute ist Sonntag, denn die Schule hat zu.",
+"new": "Die Schule hat zu, denn heute ist Sonntag.",
+"ans": [
+"Die Schule hat zu, denn heute ist Sonntag."
+],
+"pre": "Die Schule hat zu denn heute ist Sonntag",
+"note": "Kausalität verkehrt"
+},
+{
+"topic": "kl5-deu-hauptsaetze",
+"where": "card",
+"id": "c100",
+"field": "q",
+"old": "Heute ist Sonntag denn die Schule hat zu.\nStimmt die Kommasetzung?",
+"new": "Die Schule hat zu denn heute ist Sonntag.\nStimmt die Kommasetzung?"
+},
+{
+"topic": "kl5-deu-hauptsaetze",
+"where": "card",
+"id": "c101",
+"field": "q",
+"old": "Heute ist Sonntag ___ die Schule hat zu.\nWelches Wort verbindet die zwei Hauptsätze sinnvoll?",
+"new": "Die Schule hat zu ___ heute ist Sonntag.\nWelches Wort verbindet die zwei Hauptsätze sinnvoll?"
+},
+{
+"topic": "kl5-deu-hauptsaetze",
+"where": "card",
+"id": "c150",
+"field": "a",
+"old": "Zum Frühstück gibt es Nudeln, Tomaten, Brot, Honig oder Zucker.",
+"new": "Zum Frühstück gibt es Müesli, Joghurt, Brot, Honig oder Käse.",
+"ans": [
+"Zum Frühstück gibt es Müesli, Joghurt, Brot, Honig oder Käse."
+],
+"pre": "Zum Frühstück gibt es Müesli Joghurt Brot Honig oder Käse."
+},
+{
+"topic": "kl5-deu-hauptsaetze",
+"where": "card",
+"id": "c198",
+"field": "a",
+"old": "Zum Frühstück gibt es Honig, Käse, Mehl oder Birnen.",
+"new": "Zum Frühstück gibt es Honig, Käse, Joghurt oder Birnen.",
+"ans": [
+"Zum Frühstück gibt es Honig, Käse, Joghurt oder Birnen."
+],
+"pre": "Zum Frühstück gibt es Honig, Käse, Joghurt, oder Birnen."
+},
+{
+"topic": "kl8-deu-zeitformen",
+"where": "card",
+"id": "c20",
+"field": "q",
+"old": "Nachdem sie gegessen hatte, ging sie spielen.\nIn welcher Zeitform steht der Satz?",
+"new": "Nachdem sie gegessen hatte, ging sie spielen.\nIn welcher Zeitform steht «sie gegessen hatte»?",
+"note": "Satz enthält Plusquamperfekt und Präteritum; beide stehen in opts"
+},
+{
+"topic": "kl8-deu-zeitformen",
+"where": "card",
+"id": "c24",
+"field": "q",
+"old": "Er war schon gegangen, als ich kam.\nIn welcher Zeitform steht der Satz?",
+"new": "Er war schon gegangen, als ich kam.\nIn welcher Zeitform steht «er war schon gegangen»?",
+"note": "Satz enthält Plusquamperfekt und Präteritum; beide stehen in opts"
+},
+{
+"topic": "kl8-deu-zeitformen",
+"where": "card",
+"id": "c26",
+"field": "q",
+"old": "Wir fahren morgen nach Bern.\nIn welcher Zeitform steht der Satz?",
+"new": "Morgen fahre ich nach Zürich.\nIn welcher Zeitform steht der Satz?",
+"note": "exaktes Duplikat von c2"
+},
+{
+"topic": "kl8-deu-zeitformen",
+"where": "card",
+"id": "c115",
+"field": "a",
+"old": "Lea hat gestern auf der Bank gesessen.",
+"new": "Lea hat gestern auf der Bank gelesen.",
+"ans": [
+"Lea hat gestern auf der Bank gelesen."
+],
+"pre": "Lea ist gestern auf der Bank gelesen.",
+"note": "In der Schweiz ist «ist gesessen» Standard: mehrdeutig"
+},
+{
+"topic": "kl8-deu-zeitformen",
+"where": "card",
+"id": "c126",
+"field": "a",
+"old": "Die Kinder regnen im Garten.",
+"new": "Die Kinder spielen im Garten.",
+"ans": [
+"Die Kinder spielen im Garten."
+],
+"pre": "Die Kinder spielt im Garten."
+},
+{
+"topic": "kl8-deu-zeitformen",
+"where": "card",
+"id": "c105",
+"field": "a",
+"old": "Sie packt gern.",
+"new": "Er packt gern.",
+"ans": [
+"Er packt gern."
+],
+"pre": "Er packen gern.",
+"note": "«Sie packen» ist ebenfalls korrekt: mehrdeutig"
+},
+{
+"topic": "kl8-deu-zeitformen",
+"where": "card",
+"id": "c153",
+"field": "a",
+"old": "Die Katzen kochen im Garten.",
+"new": "Die Katzen schlafen im Garten.",
+"ans": [
+"Die Katzen schlafen im Garten."
+],
+"pre": "Die Katzen schläft im Garten."
+},
+{
+"topic": "kl8-deu-zeitformen",
+"where": "card",
+"id": "c150",
+"field": "a",
+"old": "Die Katzen danken zusammen.",
+"new": "Die Katzen spielen zusammen.",
+"ans": [
+"Die Katzen spielen zusammen."
+],
+"pre": "Die Katzen spielt zusammen."
+},
+{
+"topic": "kl8-deu-zeitformen",
+"where": "exam",
+"id": "q29",
+"field": "answer",
+"old": "[\"Ich regne im Garten.\"]",
+"new": "[\"Ich spiele im Garten.\"]",
+"pre": "Ich spielt im Garten."
+},
+{
+"topic": "kl8-deu-zeitformen",
+"where": "exam",
+"id": "q34",
+"field": "answer",
+"old": "[\"Mia ist gestern ins Wasser gesprungen.\"]",
+"new": "[\"Max ist gestern über den Bach gesprungen.\"]",
+"pre": "Max hat gestern über den Bach gesprungen.",
+"note": "Duplikat von q33"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c163",
+"field": "a",
+"old": "Die Ärzte lächelen freundlich im Zimmer.",
+"new": "Die Ärzte lächeln freundlich im Zimmer.",
+"ans": [
+"Die Ärzte lächeln freundlich im Zimmer."
+]
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c192",
+"field": "a",
+"old": "Die Spinnen krabbelen langsam die Wand hinauf.",
+"new": "Die Spinnen krabbeln langsam die Wand hinauf.",
+"ans": [
+"Die Spinnen krabbeln langsam die Wand hinauf."
+]
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c187",
+"field": "a",
+"old": "Die Clowns wirfen den Ball in die Luft.",
+"new": "Die Clowns werfen den Ball in die Luft.",
+"ans": [
+"Die Clowns werfen den Ball in die Luft."
+]
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c66",
+"field": "q",
+"old": "Elias gehört der Frau.\nWelcher Teil ist das Dativobjekt (wem)?",
+"new": "Das Buch gehört der Frau.\nWelcher Teil ist das Dativobjekt (wem)?"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c66",
+"field": "opts",
+"old": "[\"der Frau\", \"Elias\", \"gehört\"]",
+"new": "[\"der Frau\", \"Das Buch\", \"gehört\"]"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c113",
+"field": "q",
+"old": "Tom gehört dem Zebra.\nWelcher Teil ist das Dativobjekt (wem)?",
+"new": "Das Velo gehört dem Bruder.\nWelcher Teil ist das Dativobjekt (wem)?"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c113",
+"field": "a",
+"old": "dem Zebra",
+"new": "dem Bruder"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c113",
+"field": "opts",
+"old": "[\"Tom\", \"dem Zebra\", \"gehört\"]",
+"new": "[\"Das Velo\", \"dem Bruder\", \"gehört\"]"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c119",
+"field": "q",
+"old": "Mia gehört der Mutter.\nWelcher Teil ist das Dativobjekt (wem)?",
+"new": "Die Jacke gehört der Mutter.\nWelcher Teil ist das Dativobjekt (wem)?"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c119",
+"field": "opts",
+"old": "[\"gehört\", \"Mia\", \"der Mutter\"]",
+"new": "[\"gehört\", \"Die Jacke\", \"der Mutter\"]"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c133",
+"field": "q",
+"old": "Emma gehört dem Trainer.\nWelcher Teil ist das Dativobjekt (wem)?",
+"new": "Der Ball gehört dem Trainer.\nWelcher Teil ist das Dativobjekt (wem)?"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c133",
+"field": "opts",
+"old": "[\"gehört\", \"Emma\", \"dem Trainer\"]",
+"new": "[\"gehört\", \"Der Ball\", \"dem Trainer\"]"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c156",
+"field": "a",
+"old": "Sie dankt dem scharfen Känguru.",
+"new": "Sie dankt dem kleinen Känguru.",
+"ans": [
+"Sie dankt dem kleinen Känguru."
+],
+"pre": "Sie dankt das kleinen Känguru.",
+"note": "sinnloser Satz"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c173",
+"field": "a",
+"old": "Er spricht mit dem hellen Fisch.",
+"new": "Er spricht mit dem grossen Fisch.",
+"ans": [
+"Er spricht mit dem grossen Fisch."
+],
+"pre": "Er spricht mit den grossen Fisch.",
+"note": "sinnloser Satz"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c184",
+"field": "a",
+"old": "Wir gehen mit dem Mond.",
+"new": "Wir gehen mit dem Hund.",
+"ans": [
+"Wir gehen mit dem Hund."
+],
+"pre": "Wir gehen mit den Hund.",
+"note": "sinnloser Satz"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c205",
+"field": "a",
+"old": "Sie sitzt bei dem neuen Tisch.",
+"new": "Sie sitzt bei dem neuen Lehrer.",
+"ans": [
+"Sie sitzt bei dem neuen Lehrer."
+],
+"pre": "Sie sitzt bei den neuen Lehrer.",
+"note": "sinnloser Satz"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c214",
+"field": "a",
+"old": "Wir gehen mit der süssen Wolke.",
+"new": "Wir gehen mit der netten Lehrerin.",
+"ans": [
+"Wir gehen mit der netten Lehrerin."
+],
+"pre": "Wir gehen mit die netten Lehrerin.",
+"note": "sinnloser Satz"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c215",
+"field": "a",
+"old": "Wir gehen mit der Schokolade.",
+"new": "Wir gehen mit der Freundin.",
+"ans": [
+"Wir gehen mit der Freundin."
+],
+"pre": "Wir gehen mit die Freundin.",
+"note": "sinnloser Satz"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c223",
+"field": "a",
+"old": "Wir gehen mit dem Elefanten.",
+"new": "Wir gehen mit dem Lehrer.",
+"ans": [
+"Wir gehen mit dem Lehrer."
+],
+"pre": "Wir gehen mit den Lehrer.",
+"note": "«mit den Elefanten» ist korrekter Dativ Plural: mehrdeutig"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c228",
+"field": "a",
+"old": "Sie geht durch die lustige Nuss.",
+"new": "Sie geht durch die grosse Halle.",
+"ans": [
+"Sie geht durch die grosse Halle."
+],
+"pre": "Sie geht durch der grosse Halle.",
+"note": "sinnloser Satz"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c231",
+"field": "a",
+"old": "Sie sitzt bei dem Brot.",
+"new": "Sie sitzt bei dem Opa.",
+"ans": [
+"Sie sitzt bei dem Opa."
+],
+"pre": "Sie sitzt bei den Opa.",
+"note": "sinnloser Satz"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c236",
+"field": "a",
+"old": "Wir besuchen den Schrank.",
+"new": "Wir besuchen den Lehrer.",
+"ans": [
+"Wir besuchen den Lehrer."
+],
+"pre": "Wir besuchen dem Lehrer.",
+"note": "sinnloser Satz"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c239",
+"field": "a",
+"old": "Ich komme von dem grossen Licht.",
+"new": "Ich komme von dem grossen Fest.",
+"ans": [
+"Ich komme von dem grossen Fest."
+],
+"pre": "Ich komme von das grossen Fest.",
+"note": "sinnloser Satz"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c243",
+"field": "a",
+"old": "Wir gehen mit dem hellen Dach.",
+"new": "Wir gehen mit dem kleinen Bruder.",
+"ans": [
+"Wir gehen mit dem kleinen Bruder."
+],
+"pre": "Wir gehen mit das kleinen Bruder.",
+"note": "sinnloser Satz"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c244",
+"field": "a",
+"old": "Sie sitzt bei dem Stuhl.",
+"new": "Sie sitzt bei dem Freund.",
+"ans": [
+"Sie sitzt bei dem Freund."
+],
+"pre": "Sie sitzt bei den Freund.",
+"note": "sinnloser Satz"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c249",
+"field": "a",
+"old": "Sie geht durch das freundliche Pausenbrot.",
+"new": "Sie geht durch das kleine Dorf.",
+"ans": [
+"Sie geht durch das kleine Dorf."
+],
+"pre": "Sie geht durch dem kleine Dorf.",
+"note": "sinnloser Satz"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c255",
+"field": "a",
+"old": "Wir besuchen die Pause.",
+"new": "Wir besuchen die Tante.",
+"ans": [
+"Wir besuchen die Tante."
+],
+"pre": "Wir besuchen der Tante.",
+"note": "sinnloser Satz"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c280",
+"field": "a",
+"old": "Wir gehen mit dem See.",
+"new": "Wir gehen mit dem Vater.",
+"ans": [
+"Wir gehen mit dem Vater."
+],
+"pre": "Wir gehen mit den Vater.",
+"note": "sinnloser Satz"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c282",
+"field": "a",
+"old": "Ich komme von der Torte.",
+"new": "Ich komme von der Schule.",
+"ans": [
+"Ich komme von der Schule."
+],
+"pre": "Ich komme von die Schule.",
+"note": "sinnloser Satz"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c289",
+"field": "a",
+"old": "Sie geht durch den Keks.",
+"new": "Sie geht durch den Park.",
+"ans": [
+"Sie geht durch den Park."
+],
+"pre": "Sie geht durch dem Park.",
+"note": "sinnloser Satz"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c291",
+"field": "a",
+"old": "Wir gehen mit dem scharfen Fisch.",
+"new": "Wir gehen mit dem netten Onkel.",
+"ans": [
+"Wir gehen mit dem netten Onkel."
+],
+"pre": "Wir gehen mit den netten Onkel.",
+"note": "sinnloser Satz"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c295",
+"field": "a",
+"old": "Wir gehen mit dem Schal.",
+"new": "Wir gehen mit dem Opa.",
+"ans": [
+"Wir gehen mit dem Opa."
+],
+"pre": "Wir gehen mit den Opa.",
+"note": "sinnloser Satz"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c299",
+"field": "a",
+"old": "Wir gehen mit der glatten Treppe.",
+"new": "Wir gehen mit der netten Nachbarin.",
+"ans": [
+"Wir gehen mit der netten Nachbarin."
+],
+"pre": "Wir gehen mit die netten Nachbarin.",
+"note": "sinnloser Satz"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c164",
+"field": "a",
+"old": "Die Katzen fehlen gern.",
+"new": "Die Katzen spielen gern.",
+"ans": [
+"Die Katzen spielen gern."
+],
+"pre": "Die Katzen spielt gern.",
+"note": "sinnlose/unvollständige Verb-Adverb-Kombination"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c211",
+"field": "a",
+"old": "Du regnest heute.",
+"new": "Du spielst heute.",
+"ans": [
+"Du spielst heute."
+],
+"pre": "Du spielen heute.",
+"note": "sinnlose/unvollständige Verb-Adverb-Kombination"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c212",
+"field": "a",
+"old": "Ihr glaubt am Nachmittag.",
+"new": "Ihr lernt am Nachmittag.",
+"ans": [
+"Ihr lernt am Nachmittag."
+],
+"pre": "Ihr lerne am Nachmittag.",
+"note": "sinnlose/unvollständige Verb-Adverb-Kombination"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c182",
+"field": "a",
+"old": "Mein Freund schenkt zusammen.",
+"new": "Mein Freund spielt zusammen.",
+"ans": [
+"Mein Freund spielt zusammen."
+],
+"pre": "Mein Freund spielen zusammen.",
+"note": "sinnlose/unvollständige Verb-Adverb-Kombination"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c230",
+"field": "a",
+"old": "Er hört zusammen.",
+"new": "Er singt heute.",
+"ans": [
+"Er singt heute."
+],
+"pre": "Er singst heute.",
+"note": "sinnlose/unvollständige Verb-Adverb-Kombination"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c296",
+"field": "a",
+"old": "Die Katzen kaufen jeden Tag.",
+"new": "Die Kinder spielen jeden Tag.",
+"ans": [
+"Die Kinder spielen jeden Tag."
+],
+"pre": "Die Kinder spielt jeden Tag.",
+"note": "sinnlose/unvollständige Verb-Adverb-Kombination"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c310",
+"field": "a",
+"old": "Die Katzen malen im Garten.",
+"new": "Die Kinder malen im Garten.",
+"ans": [
+"Die Kinder malen im Garten."
+],
+"pre": "Die Kinder malt im Garten.",
+"note": "sinnlose/unvollständige Verb-Adverb-Kombination"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "card",
+"id": "c279",
+"field": "a",
+"old": "Ich fehle im Garten.",
+"new": "Ich spiele im Garten.",
+"ans": [
+"Ich spiele im Garten."
+],
+"pre": "Ich spielen im Garten.",
+"note": "sinnlose/unvollständige Verb-Adverb-Kombination"
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "exam",
+"id": "q27",
+"field": "answer",
+"old": "[\"Die Kinder lieben zusammen.\"]",
+"new": "[\"Die Kinder spielen zusammen.\"]",
+"pre": "Die Kinder spiele zusammen."
+},
+{
+"topic": "kl8-deu-satzglieder",
+"where": "exam",
+"id": "q21",
+"field": "answer",
+"old": "[\"Wir kaufen im Garten.\"]",
+"new": "[\"Wir spielen im Garten.\"]",
+"pre": "Wir spielt im Garten."
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c18",
+"field": "q",
+"old": "Welche Wortart ist «ruhig» in: Sie erklärt die Lösung ruhig?",
+"new": "Welche Wortart ist «hier» in: Sie erklärt die Lösung hier?"
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c18",
+"field": "hints",
+"old": [
+"Es sagt, wie sie erklärt, und gehört zum Verb."
+],
+"new": [
+"Es sagt, wo sie erklärt, und bleibt immer gleich."
+]
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c26",
+"field": "q",
+"old": "Er läuft schnell nach Hause.\nBestimme die Wortart des Wortes «schnell».",
+"new": "Er läuft bald nach Hause.\nBestimme die Wortart des Wortes «bald»."
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c26",
+"field": "hints",
+"old": [
+"Es bestimmt das Verb läuft näher."
+],
+"new": [
+"Es sagt, wann er läuft, und bleibt immer gleich."
+]
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c177",
+"field": "a",
+"old": "Mein Freund liebt zusammen.",
+"new": "Mein Freund lacht gern."
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c177",
+"field": "ans",
+"old": [
+"Mein Freund liebt zusammen."
+],
+"new": [
+"Mein Freund lacht gern."
+]
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c177",
+"field": "pre",
+"old": "Mein Freund liebe zusammen.",
+"new": "Mein Freund lache gern."
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c185",
+"field": "a",
+"old": "Ich glaube am Nachmittag.",
+"new": "Ich lerne am Nachmittag."
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c185",
+"field": "ans",
+"old": [
+"Ich glaube am Nachmittag."
+],
+"new": [
+"Ich lerne am Nachmittag."
+]
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c185",
+"field": "pre",
+"old": "Ich glaubst am Nachmittag.",
+"new": "Ich lernst am Nachmittag."
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c191",
+"field": "a",
+"old": "Mein Freund füllt gern.",
+"new": "Mein Freund lacht oft."
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c191",
+"field": "ans",
+"old": [
+"Mein Freund füllt gern."
+],
+"new": [
+"Mein Freund lacht oft."
+]
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c191",
+"field": "pre",
+"old": "Mein Freund füllst gern.",
+"new": "Mein Freund lachst oft."
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c135",
+"field": "a",
+"old": "Ihr packt im Garten.",
+"new": "Ihr spielt im Garten."
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c135",
+"field": "ans",
+"old": [
+"Ihr packt im Garten."
+],
+"new": [
+"Ihr spielt im Garten."
+]
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c135",
+"field": "pre",
+"old": "Ihr packe im Garten.",
+"new": "Ihr spiele im Garten."
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c137",
+"field": "a",
+"old": "Mein Freund dankt im Garten.",
+"new": "Mein Freund spielt im Garten."
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c137",
+"field": "ans",
+"old": [
+"Mein Freund dankt im Garten."
+],
+"new": [
+"Mein Freund spielt im Garten."
+]
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c137",
+"field": "pre",
+"old": "Mein Freund dankst im Garten.",
+"new": "Mein Freund spielst im Garten."
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c207",
+"field": "a",
+"old": "Wir fehlen jeden Tag.",
+"new": "Wir lernen jeden Tag."
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c207",
+"field": "ans",
+"old": [
+"Wir fehlen jeden Tag."
+],
+"new": [
+"Wir lernen jeden Tag."
+]
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c207",
+"field": "pre",
+"old": "Wir fehlt jeden Tag.",
+"new": "Wir lernt jeden Tag."
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c227",
+"field": "a",
+"old": "Wir stellen im Garten.",
+"new": "Wir spielen im Garten."
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c227",
+"field": "ans",
+"old": [
+"Wir stellen im Garten."
+],
+"new": [
+"Wir spielen im Garten."
+]
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c227",
+"field": "pre",
+"old": "Wir stellst im Garten.",
+"new": "Wir spielst im Garten."
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c121",
+"field": "a",
+"old": "Der neugierige Elefant spritzt das neue Wasser auf den Zoowärter.",
+"new": "Der neugierige Elefant spritzt das kalte Wasser auf den Zoowärter."
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c121",
+"field": "ans",
+"old": [
+"Der neugierige Elefant spritzt das neue Wasser auf den Zoowärter."
+],
+"new": [
+"Der neugierige Elefant spritzt das kalte Wasser auf den Zoowärter."
+]
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c121",
+"field": "pre",
+"old": "der neugierige elefant spritzt das neue wasser auf den zoowärter.",
+"new": "der neugierige elefant spritzt das kalte wasser auf den zoowärter."
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c154",
+"field": "a",
+"old": "Die Prinzessin tanzt im Garten und das Mädchen malt den schweren Regenbogen an die Tafel.",
+"new": "Die Prinzessin tanzt im Garten und das Mädchen malt den bunten Regenbogen an die Tafel."
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c154",
+"field": "ans",
+"old": [
+"Die Prinzessin tanzt im Garten und das Mädchen malt den schweren Regenbogen an die Tafel."
+],
+"new": [
+"Die Prinzessin tanzt im Garten und das Mädchen malt den bunten Regenbogen an die Tafel."
+]
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c154",
+"field": "pre",
+"old": "die prinzessin tanzt im garten und das mädchen malt den schweren regenbogen an die tafel.",
+"new": "die prinzessin tanzt im garten und das mädchen malt den bunten regenbogen an die tafel."
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c118",
+"field": "a",
+"old": "Der Trainer pumpt den schweren Ballon für das Fest.",
+"new": "Der Trainer pumpt den roten Ballon für das Fest."
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c118",
+"field": "ans",
+"old": [
+"Der Trainer pumpt den schweren Ballon für das Fest."
+],
+"new": [
+"Der Trainer pumpt den roten Ballon für das Fest."
+]
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c118",
+"field": "pre",
+"old": "der trainer pumpt den schweren ballon für das fest.",
+"new": "der trainer pumpt den roten ballon für das fest."
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c138",
+"field": "a",
+"old": "Die laute Freundin schenkt das leckere Bonbon ihrer Nachbarin und der freche Zauberer zaubert das leichte Kaninchen aus dem Hut.",
+"new": "Die laute Freundin schenkt das leckere Bonbon ihrer Nachbarin und der freche Zauberer zaubert das weisse Kaninchen aus dem Hut."
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c138",
+"field": "ans",
+"old": [
+"Die laute Freundin schenkt das leckere Bonbon ihrer Nachbarin und der freche Zauberer zaubert das leichte Kaninchen aus dem Hut."
+],
+"new": [
+"Die laute Freundin schenkt das leckere Bonbon ihrer Nachbarin und der freche Zauberer zaubert das weisse Kaninchen aus dem Hut."
+]
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "card",
+"id": "c138",
+"field": "pre",
+"old": "die laute freundin schenkt das leckere bonbon ihrer nachbarin und der freche zauberer zaubert das leichte kaninchen aus dem hut.",
+"new": "die laute freundin schenkt das leckere bonbon ihrer nachbarin und der freche zauberer zaubert das weisse kaninchen aus dem hut."
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "exam",
+"id": "q30",
+"field": "answer",
+"old": [
+"Ich regne heute."
+],
+"new": [
+"Ich rechne heute."
+]
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "exam",
+"id": "q30",
+"field": "pre",
+"old": "Ich regnet heute.",
+"new": "Ich rechnet heute."
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "exam",
+"id": "q34",
+"field": "answer",
+"old": [
+"Ihr legt am Nachmittag."
+],
+"new": [
+"Ihr lernt am Nachmittag."
+]
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "exam",
+"id": "q34",
+"field": "pre",
+"old": "Ihr legen am Nachmittag.",
+"new": "Ihr lernen am Nachmittag."
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "exam",
+"id": "q35",
+"field": "answer",
+"old": [
+"Die Kinder machen im Garten."
+],
+"new": [
+"Die Kinder spielen im Garten."
+]
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "exam",
+"id": "q35",
+"field": "pre",
+"old": "Die Kinder mache im Garten.",
+"new": "Die Kinder spiele im Garten."
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "exam",
+"id": "q22",
+"field": "answer",
+"old": [
+"Der Zauberer zaubert das leichte Kaninchen aus dem Hut."
+],
+"new": [
+"Der Zauberer zaubert das weisse Kaninchen aus dem Hut."
+]
+},
+{
+"topic": "kl8-deu-wortarten",
+"where": "exam",
+"id": "q22",
+"field": "pre",
+"old": "der zauberer zaubert das leichte kaninchen aus dem hut.",
+"new": "der zauberer zaubert das weisse kaninchen aus dem hut."
+},
+{
+"topic": "kl6-deu-wortarten",
+"where": "card",
+"id": "theory",
+"field": "th",
+"old": "hier, heute, gern, sehr",
+"new": "hier, heute, gern, dort"
+},
+{
+"topic": "kl6-deu-wortarten",
+"where": "card",
+"id": "c9",
+"field": "q",
+"old": "Die Lehrerin erklärt, wie man einen Aufsatz schreibt, und wir hören aufmerksam zu.\nWelche Wortart hat «wie»?",
+"new": "Die Lehrerin erklärt, wie man einen Aufsatz schreibt, und wir hören aufmerksam zu.\nWelche Wortart hat «man»?"
+},
+{
+"topic": "kl6-deu-wortarten",
+"where": "card",
+"id": "c9",
+"field": "a",
+"old": "Konjunktion",
+"new": "Pronomen"
+},
+{
+"topic": "kl6-deu-wortarten",
+"where": "card",
+"id": "c9",
+"field": "opts",
+"old": [
+"Präposition",
+"Pronomen",
+"Konjunktion",
+"Verb"
+],
+"new": [
+"Präposition",
+"Pronomen",
+"Konjunktion",
+"Verb"
+]
+},
+{
+"topic": "kl6-deu-wortarten",
+"where": "card",
+"id": "c9",
+"field": "why",
+"old": "«wie» ist eine Konjunktion.",
+"new": "«man» ist ein Pronomen."
+},
+{
+"topic": "kl6-deu-wortarten",
+"where": "card",
+"id": "c9",
+"field": "hints",
+"old": [
+"Es verbindet zwei Sätze und kann nicht verändert werden."
+],
+"new": [
+"Es steht für eine Person, ohne sie zu nennen."
+]
+},
+{
+"topic": "kl6-deu-wortarten",
+"where": "card",
+"id": "c28",
+"field": "q",
+"old": "Die Lehrerin erklärt, wie man einen Aufsatz schreibt, und wir hören aufmerksam zu.\nWelche Wortart hat «aufmerksam»?\nSchreibe die Antwort.",
+"new": "Wegen des schlechten Wetters bleibt unsere Klasse im Schulhaus.\nWelche Wortart hat «schlechten»?\nSchreibe die Antwort."
+},
+{
+"topic": "kl6-deu-wortarten",
+"where": "card",
+"id": "c28",
+"field": "why",
+"old": "«aufmerksam» ist ein Adjektiv.",
+"new": "«schlechten» ist ein Adjektiv."
+},
+{
+"topic": "kl6-deu-wortarten",
+"where": "card",
+"id": "c104",
+"field": "a",
+"old": "Der müde Esel trottet müde nach Hause.",
+"new": "Der kleine Esel trottet müde nach Hause."
+},
+{
+"topic": "kl6-deu-wortarten",
+"where": "card",
+"id": "c104",
+"field": "ans",
+"old": [
+"Der müde Esel trottet müde nach Hause."
+],
+"new": [
+"Der kleine Esel trottet müde nach Hause."
+]
+},
+{
+"topic": "kl6-deu-wortarten",
+"where": "card",
+"id": "c104",
+"field": "pre",
+"old": "der müde esel trottet müde nach hause.",
+"new": "der kleine esel trottet müde nach hause."
+},
+{
+"topic": "kl6-deu-wortarten",
+"where": "card",
+"id": "c135",
+"field": "a",
+"old": "Die Pause liegt hier. Sie ist da.",
+"new": "Die Pause beginnt. Sie ist da."
+},
+{
+"topic": "kl6-deu-wortarten",
+"where": "card",
+"id": "c135",
+"field": "ans",
+"old": [
+"Die Pause liegt hier. Sie ist da."
+],
+"new": [
+"Die Pause beginnt. Sie ist da."
+]
+},
+{
+"topic": "kl6-deu-wortarten",
+"where": "card",
+"id": "c135",
+"field": "pre",
+"old": "Die Pause liegt hier. Es ist da.",
+"new": "Die Pause beginnt. Es ist da."
+},
+{
+"topic": "kl6-deu-wortarten",
+"where": "card",
+"id": "c160",
+"field": "a",
+"old": "Die Katzen kaufen ein Heft.",
+"new": "Die Kinder kaufen ein Heft."
+},
+{
+"topic": "kl6-deu-wortarten",
+"where": "card",
+"id": "c160",
+"field": "ans",
+"old": [
+"Die Katzen kaufen ein Heft."
+],
+"new": [
+"Die Kinder kaufen ein Heft."
+]
+},
+{
+"topic": "kl6-deu-wortarten",
+"where": "card",
+"id": "c160",
+"field": "pre",
+"old": "Die Katzen kaufst ein Heft.",
+"new": "Die Kinder kaufst ein Heft."
+},
+{
+"topic": "kl6-deu-wortarten",
+"where": "card",
+"id": "c188",
+"field": "a",
+"old": "Der freche Bär brummt zufrieden in seiner Höhle und die Oma strickt die leichte Mütze für ihren Enkel.",
+"new": "Der freche Bär brummt zufrieden in seiner Höhle und die Oma strickt die warme Mütze für ihren Enkel."
+},
+{
+"topic": "kl6-deu-wortarten",
+"where": "card",
+"id": "c188",
+"field": "ans",
+"old": [
+"Der freche Bär brummt zufrieden in seiner Höhle und die Oma strickt die leichte Mütze für ihren Enkel."
+],
+"new": [
+"Der freche Bär brummt zufrieden in seiner Höhle und die Oma strickt die warme Mütze für ihren Enkel."
+]
+},
+{
+"topic": "kl6-deu-wortarten",
+"where": "card",
+"id": "c188",
+"field": "pre",
+"old": "der freche bär brummt zufrieden in seiner höhle und die oma strickt die leichte mütze für ihren enkel.",
+"new": "der freche bär brummt zufrieden in seiner höhle und die oma strickt die warme mütze für ihren enkel."
+},
+{
+"topic": "kl6-deu-wortarten",
+"where": "card",
+"id": "c49",
+"field": "q",
+"old": "Der müde Pilot fliegt die schwere Rakete zum Mond.\nWelche Wortart hat «Rakete»?",
+"new": "Der müde Pilot fliegt die bunte Rakete zum Mond.\nWelche Wortart hat «Rakete»?"
+},
+{
+"topic": "kl6-deu-wortarten",
+"where": "card",
+"id": "c76",
+"field": "q",
+"old": "Der Clown wirft den schweren Ball in die Luft.\nWelche Wortart hat «in»?",
+"new": "Der Clown wirft den roten Ball in die Luft.\nWelche Wortart hat «in»?"
+},
+{
+"topic": "kl6-deu-wortarten",
+"where": "card",
+"id": "c80",
+"field": "q",
+"old": "Die Sängerin singt das schwere Lied auf der Bühne.\nWelche Wortart hat «schwere»?",
+"new": "Die Sängerin singt das schöne Lied auf der Bühne.\nWelche Wortart hat «schöne»?"
+},
+{
+"topic": "kl6-deu-wortarten",
+"where": "card",
+"id": "c89",
+"field": "q",
+"old": "Der neugierige Gärtner giesst die leichte Blume am Morgen.\nWelche Wortart hat «am»?",
+"new": "Der neugierige Gärtner giesst die schöne Blume am Morgen.\nWelche Wortart hat «am»?"
+},
+{
+"topic": "kl6-deu-wortarten",
+"where": "exam",
+"id": "q15",
+"field": "options",
+"old": [
+"mit",
+"dass",
+"weil",
+"hinter"
+],
+"new": [
+"mit",
+"oder",
+"weil",
+"hinter"
+]
+},
+{
+"topic": "kl8-deu-nebensatzarten",
+"where": "card",
+"id": "c123",
+"field": "a",
+"old": "Ich rufe dich an, wenn ich zu Hause bin.",
+"new": "Ich rufe dich an, wenn ich Zeit habe."
+},
+{
+"topic": "kl8-deu-nebensatzarten",
+"where": "card",
+"id": "c123",
+"field": "ans",
+"old": [
+"Ich rufe dich an, wenn ich zu Hause bin."
+],
+"new": [
+"Ich rufe dich an, wenn ich Zeit habe."
+]
+},
+{
+"topic": "kl8-deu-nebensatzarten",
+"where": "card",
+"id": "c123",
+"field": "pre",
+"old": "Ich rufe dich an, weil ich zu Hause bin.",
+"new": "Ich rufe dich an, weil ich Zeit habe."
+},
+{
+"topic": "kl4-deu-pronomen",
+"where": "card",
+"id": "theory",
+"field": "th",
+"old": "[\"Ihr\", \"Begleiter\", 4, \"gehört zu «Hund»\"]",
+"new": "[\"Ihr\", \"Begleiter\", 3, \"gehört zu «Hund»\"]"
+},
+{
+"topic": "kl4-deu-pronomen",
+"where": "card",
+"id": "c59",
+"field": "q",
+"old": "Deine Schülerin ist da.\nIst «Dein» ein Begleiter oder ein Stellvertreter?",
+"new": "Deine Schülerin ist da.\nIst «Deine» ein Begleiter oder ein Stellvertreter?"
+},
+{
+"topic": "kl4-deu-pronomen",
+"where": "card",
+"id": "c50",
+"field": "q",
+"old": "Der Pirat ist da. ___ schläft .\nWelches Pronomen passt in die Lücke?",
+"new": "Der Pirat ist da. ___ schläft.\nWelches Pronomen passt in die Lücke?"
+},
+{
+"topic": "kl4-deu-pronomen",
+"where": "card",
+"id": "c78",
+"field": "q",
+"old": "Die Lehrer schlafen. ___ haben Spass.\nWelches Pronomen passt in die Lücke?",
+"new": "Die Lehrer lachen. ___ haben Spass.\nWelches Pronomen passt in die Lücke?"
+},
+{
+"topic": "kl4-deu-pronomen",
+"where": "card",
+"id": "c81",
+"field": "q",
+"old": "Die Mädchen schlafen. ___ haben Spass.\nWelches Pronomen passt in die Lücke?",
+"new": "Die Mädchen spielen. ___ haben Spass.\nWelches Pronomen passt in die Lücke?"
+},
+{
+"topic": "kl4-deu-pronomen",
+"where": "card",
+"id": "c64",
+"field": "q",
+"old": "Die Tante ist da. ___ ist neu.\nWelches Pronomen passt in die Lücke?",
+"new": "Die Tante ist da. ___ ist nett.\nWelches Pronomen passt in die Lücke?"
+},
+{
+"topic": "kl4-deu-pronomen",
+"where": "card",
+"id": "c111",
+"field": "a",
+"old": "Das ist David. Das ist sein Messer.",
+"new": "Das ist David. Das ist sein Ball."
+},
+{
+"topic": "kl4-deu-pronomen",
+"where": "card",
+"id": "c111",
+"field": "ans",
+"old": [
+"Das ist David. Das ist sein Messer."
+],
+"new": [
+"Das ist David. Das ist sein Ball."
+]
+},
+{
+"topic": "kl4-deu-pronomen",
+"where": "card",
+"id": "c111",
+"field": "pre",
+"old": "Das ist David. Das ist ihr Messer.",
+"new": "Das ist David. Das ist ihr Ball."
+},
+{
+"topic": "kl4-deu-pronomen",
+"where": "card",
+"id": "c127",
+"field": "a",
+"old": "Der Hund versteckt sich hinter dem Hügel.",
+"new": "Der Hund steht hinter dem Hügel."
+},
+{
+"topic": "kl4-deu-pronomen",
+"where": "card",
+"id": "c127",
+"field": "ans",
+"old": [
+"Der Hund versteckt sich hinter dem Hügel."
+],
+"new": [
+"Der Hund steht hinter dem Hügel."
+]
+},
+{
+"topic": "kl4-deu-pronomen",
+"where": "card",
+"id": "c127",
+"field": "pre",
+"old": "Der Hund versteckt sich hinter den Hügel.",
+"new": "Der Hund steht hinter den Hügel."
+},
+{
+"topic": "kl4-deu-pronomen",
+"where": "card",
+"id": "c127",
+"field": "hints",
+"old": [
+"Frage: Wem?"
+],
+"new": [
+"Frage: Wo?"
+]
+},
+{
+"topic": "kl4-deu-pronomen",
+"where": "card",
+"id": "c152",
+"field": "hints",
+"old": [
+"Frage: Wem?"
+],
+"new": [
+"Frage: Wo?"
+]
+},
+{
+"topic": "kl4-deu-pronomen",
+"where": "card",
+"id": "c157",
+"field": "hints",
+"old": [
+"Frage: Wem?"
+],
+"new": [
+"Frage: Wo?"
+]
+},
+{
+"topic": "kl4-deu-pronomen",
+"where": "card",
+"id": "c154",
+"field": "a",
+"old": "Die Katzen arbeiten fleissig.",
+"new": "Die Kinder arbeiten fleissig."
+},
+{
+"topic": "kl4-deu-pronomen",
+"where": "card",
+"id": "c154",
+"field": "ans",
+"old": [
+"Die Katzen arbeiten fleissig."
+],
+"new": [
+"Die Kinder arbeiten fleissig."
+]
+},
+{
+"topic": "kl4-deu-pronomen",
+"where": "card",
+"id": "c154",
+"field": "pre",
+"old": "Die Katzen arbeitet fleissig.",
+"new": "Die Kinder arbeitet fleissig."
+},
+{
+"topic": "kl4-deu-pronomen",
+"where": "exam",
+"id": "q30",
+"field": "answer",
+"old": [
+"Die Katzen lernen für den Test."
+],
+"new": [
+"Die Kinder lernen für den Test."
+]
+},
+{
+"topic": "kl4-deu-pronomen",
+"where": "exam",
+"id": "q30",
+"field": "pre",
+"old": "Die Katzen lernt für den Test.",
+"new": "Die Kinder lernt für den Test."
+},
+{
+"topic": "kl3-deu-wortarten",
+"where": "card",
+"id": "theory",
+"field": "th",
+"old": "[\"zur\", \"Artikel\", 3, \"zur = zu der\"], [\"Schule\", \"Nomen\", 0, \"die Schule\"]], \"cap\": \"Er rennt schnell zur Schule.\"",
+"new": "[\"in\", \"\", 5, \"ein kleines Wort\"], [\"die\", \"\", 3, \"Begleiter von Schule\"], [\"Schule\", \"Nomen\", 0, \"die Schule\"]], \"cap\": \"Er rennt schnell in die Schule.\""
+},
+{
+"topic": "kl3-deu-wortarten",
+"where": "card",
+"id": "c75",
+"field": "q",
+"old": "Der freundliche Superheld rettet die schwere Katze vom Baum.\nWelche Wortart hat «schwere»?",
+"new": "Der freundliche Superheld rettet die graue Katze vom Baum.\nWelche Wortart hat «graue»?"
+},
+{
+"topic": "kl3-deu-wortarten",
+"where": "card",
+"id": "c106",
+"field": "a",
+"old": "Das hungrige Eichhörnchen versteckt die leichte Nuss unter dem Baum.",
+"new": "Das hungrige Eichhörnchen versteckt die braune Nuss unter dem Baum."
+},
+{
+"topic": "kl3-deu-wortarten",
+"where": "card",
+"id": "c106",
+"field": "ans",
+"old": [
+"Das hungrige Eichhörnchen versteckt die leichte Nuss unter dem Baum."
+],
+"new": [
+"Das hungrige Eichhörnchen versteckt die braune Nuss unter dem Baum."
+]
+},
+{
+"topic": "kl3-deu-wortarten",
+"where": "card",
+"id": "c106",
+"field": "pre",
+"old": "das hungrige eichhörnchen versteckt die leichte nuss unter dem baum.",
+"new": "das hungrige eichhörnchen versteckt die braune nuss unter dem baum."
+},
+{
+"topic": "kl3-deu-alphabet",
+"where": "card",
+"id": "theory",
+"field": "th",
+"old": "im Wörterbuch bei a, o, u: «Bär» steht bei «Bad»",
+"new": "im Wörterbuch bei a, o, u: «Bär» steht bei «Bar»"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c69",
+"field": "q",
+"old": "Welche Regel gilt bei «Fahrrad»?",
+"new": "Welche Regel erklärt das «h» in «Fahrrad»?"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c188",
+"field": "a",
+"old": "Wahl",
+"new": "Zahl"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c188",
+"field": "ans",
+"old": [
+"Wahl"
+],
+"new": [
+"Zahl"
+]
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c188",
+"field": "pre",
+"old": "Wal",
+"new": "Zal"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c189",
+"field": "a",
+"old": "Wahl",
+"new": "Zahl"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c189",
+"field": "opts",
+"old": [
+"Wal",
+"Wahl"
+],
+"new": [
+"Zal",
+"Zahl"
+]
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c203",
+"field": "a",
+"old": "Boote",
+"new": "Moos"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c203",
+"field": "ans",
+"old": [
+"Boote"
+],
+"new": [
+"Moos"
+]
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c203",
+"field": "pre",
+"old": "Bote",
+"new": "Mos"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c204",
+"field": "a",
+"old": "Boote",
+"new": "Moos"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c204",
+"field": "opts",
+"old": [
+"Bote",
+"Boote"
+],
+"new": [
+"Mos",
+"Moos"
+]
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c272",
+"field": "a",
+"old": "Waagen",
+"new": "Seen"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c272",
+"field": "ans",
+"old": [
+"Waagen"
+],
+"new": [
+"Seen"
+]
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c272",
+"field": "pre",
+"old": "Wagen",
+"new": "Sen"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c273",
+"field": "a",
+"old": "Waagen",
+"new": "Seen"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c273",
+"field": "opts",
+"old": [
+"Wagen",
+"Waagen"
+],
+"new": [
+"Sen",
+"Seen"
+]
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c70",
+"field": "opts",
+"old": [
+"Alle",
+"Allee"
+],
+"new": [
+"Alee",
+"Allee"
+]
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "exam",
+"id": "q20",
+"field": "pre",
+"old": "Alle",
+"new": "Alee"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c90",
+"field": "pre",
+"old": "Bot",
+"new": "Bo"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c91",
+"field": "opts",
+"old": [
+"Bot",
+"Boot"
+],
+"new": [
+"Bo",
+"Boot"
+]
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c83",
+"field": "a",
+"old": "Mann",
+"new": "Wanne"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c83",
+"field": "ans",
+"old": [
+"Mann"
+],
+"new": [
+"Wanne"
+]
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c83",
+"field": "pre",
+"old": "Man",
+"new": "Wane"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c84",
+"field": "a",
+"old": "Mann",
+"new": "Wanne"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c84",
+"field": "opts",
+"old": [
+"Man",
+"Mann"
+],
+"new": [
+"Wane",
+"Wanne"
+]
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c103",
+"field": "a",
+"old": "Kamm",
+"new": "Damm"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c103",
+"field": "ans",
+"old": [
+"Kamm"
+],
+"new": [
+"Damm"
+]
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c103",
+"field": "pre",
+"old": "Kam",
+"new": "Dam"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c104",
+"field": "a",
+"old": "Kamm",
+"new": "Damm"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c104",
+"field": "opts",
+"old": [
+"Kamm",
+"Kam"
+],
+"new": [
+"Damm",
+"Dam"
+]
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c153",
+"field": "a",
+"old": "Krieg",
+"new": "Sieb"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c153",
+"field": "ans",
+"old": [
+"Krieg"
+],
+"new": [
+"Sieb"
+]
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c153",
+"field": "pre",
+"old": "Krig",
+"new": "Sib"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c154",
+"field": "a",
+"old": "Krieg",
+"new": "Sieb"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c154",
+"field": "opts",
+"old": [
+"Krieg",
+"Krig"
+],
+"new": [
+"Sieb",
+"Sib"
+]
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c337",
+"field": "a",
+"old": "Das Wort «Speer» ist nicht leicht.",
+"new": "Das Wort «Klee» ist nicht leicht."
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c337",
+"field": "ans",
+"old": [
+"Das Wort «Speer» ist nicht leicht."
+],
+"new": [
+"Das Wort «Klee» ist nicht leicht."
+]
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c337",
+"field": "pre",
+"old": "Das Wort «Sper» ist nicht leicht.",
+"new": "Das Wort «Kle» ist nicht leicht."
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c175",
+"field": "a",
+"old": "Lieber",
+"new": "lieber"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c175",
+"field": "ans",
+"old": [
+"Lieber"
+],
+"new": [
+"lieber"
+]
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c175",
+"field": "pre",
+"old": "Liber",
+"new": "liber"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c176",
+"field": "a",
+"old": "Lieber",
+"new": "lieber"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c176",
+"field": "opts",
+"old": [
+"Liber",
+"Lieber"
+],
+"new": [
+"liber",
+"lieber"
+]
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c177",
+"field": "q",
+"old": "Welche Regel gilt bei «Lieber»?",
+"new": "Welche Regel gilt bei «lieber»?"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c208",
+"field": "a",
+"old": "Mehr",
+"new": "mehr"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c208",
+"field": "ans",
+"old": [
+"Mehr"
+],
+"new": [
+"mehr"
+]
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c208",
+"field": "pre",
+"old": "Mer",
+"new": "mer"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c209",
+"field": "a",
+"old": "Mehr",
+"new": "mehr"
+},
+{
+"topic": "kl4-deu-langvokal",
+"where": "card",
+"id": "c209",
+"field": "opts",
+"old": [
+"Mer",
+"Mehr"
+],
+"new": [
+"mer",
+"mehr"
+]
+},
+{
+"topic": "kl4-deu-wortarten",
+"where": "theory",
+"id": 0,
+"field": "th",
+"old": "[\"zur\", \"Artikel\", 3, \"zur = zu der\"]",
+"new": "[\"zur\", \"Präposition + Artikel\", 3, \"zur = zu der\"]"
+},
+{
+"topic": "kl4-deu-wortarten",
+"where": "theory",
+"id": 0,
+"field": "th",
+"old": "[\"uns\", \"Pronomen\", \"ersetzt «wir»\"]",
+"new": "[\"uns\", \"Pronomen\", \"Form von «wir»: Er lobt uns.\"]"
+},
+{
+"topic": "kl4-deu-wortarten",
+"where": "theory",
+"id": 0,
+"field": "th",
+"old": "Steht das Wort für ein Nomen oder begleitet es? Dann ist es ein Pronomen.",
+"new": "Steht das Wort für ein Nomen (er, sie, es) oder zeigt es, wem etwas gehört (mein, unser)? Dann ist es ein Pronomen."
+},
+{
+"topic": "kl4-deu-wortarten",
+"where": "theory",
+"id": 0,
+"field": "th",
+"old": "Stellvertreter oder Begleiter",
+"new": "Stellvertreter oder Besitzanzeiger"
+},
+{
+"topic": "kl4-deu-wortarten",
+"where": "theory",
+"id": 0,
+"field": "th",
+"old": "Ersetzt oder begleitet ein Nomen.",
+"new": "Ersetzt ein Nomen oder zeigt Besitz."
+},
+{
+"topic": "kl8-deu-hauptneben",
+"where": "card",
+"id": "c34",
+"field": "q",
+"old": "Ich finde.\nIst das ein Hauptsatz oder ein Nebensatz?",
+"new": "Ich finde das Buch toll.\nIst das ein Hauptsatz oder ein Nebensatz?"
+},
+{
+"topic": "kl8-deu-hauptneben",
+"where": "card",
+"id": "c45",
+"field": "q",
+"old": "Tom meint.\nIst das ein Hauptsatz oder ein Nebensatz?",
+"new": "Tom meint es ernst.\nIst das ein Hauptsatz oder ein Nebensatz?"
+},
+{
+"topic": "kl8-deu-hauptneben",
+"where": "card",
+"id": "c66",
+"field": "q",
+"old": "Sie glaubt.\nIst das ein Hauptsatz oder ein Nebensatz?",
+"new": "Sie glaubt ihm kein Wort.\nIst das ein Hauptsatz oder ein Nebensatz?"
+},
+{
+"topic": "kl8-deu-hauptneben",
+"where": "card",
+"id": "c124",
+"field": "q",
+"old": "Wir hoffen.\nIst das ein Hauptsatz oder ein Nebensatz?",
+"new": "Wir hoffen auf gutes Wetter.\nIst das ein Hauptsatz oder ein Nebensatz?"
+},
+{
+"topic": "kl5-deu-plusquam",
+"where": "card",
+"id": "c37",
+"field": "opts",
+"old": [
+"werde",
+"hatte",
+"hat",
+"wird"
+],
+"new": [
+"werde",
+"hatte",
+"haben",
+"wird"
+]
+},
+{
+"topic": "kl5-deu-plusquam",
+"where": "theory",
+"id": 0,
+"field": "th",
+"old": "Steht «habe» oder «bin» + Partizip II? Dann ist es Perfekt.",
+"new": "Steht «haben» oder «sein» im Präsens (habe, hat, bin, ist) + Partizip II? Dann ist es Perfekt."
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c100",
+"field": "a",
+"old": "Das Fenster wird vom Junge geöffnet.",
+"new": "Das Fenster wird vom Jungen geöffnet."
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c100",
+"field": "ans",
+"old": [
+"Das Fenster wird vom Junge geöffnet."
+],
+"new": [
+"Das Fenster wird vom Jungen geöffnet."
+]
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c100",
+"field": "pre",
+"old": "Das Fenster vom Junge geöffnet.",
+"new": "Das Fenster vom Jungen geöffnet."
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c102",
+"field": "a",
+"old": "Der Korb wird vom Pilot getragen.",
+"new": "Der Korb wird vom Piloten getragen."
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c102",
+"field": "ans",
+"old": [
+"Der Korb wird vom Pilot getragen."
+],
+"new": [
+"Der Korb wird vom Piloten getragen."
+]
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c102",
+"field": "pre",
+"old": "Der Korb vom Pilot getragen.",
+"new": "Der Korb vom Piloten getragen."
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c113",
+"field": "a",
+"old": "Die Suppe wird vom Junge gegessen.",
+"new": "Die Suppe wird vom Jungen gegessen."
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c113",
+"field": "ans",
+"old": [
+"Die Suppe wird vom Junge gegessen."
+],
+"new": [
+"Die Suppe wird vom Jungen gegessen."
+]
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c113",
+"field": "pre",
+"old": "Die Suppe vom Junge gegessen.",
+"new": "Die Suppe vom Jungen gegessen."
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c115",
+"field": "a",
+"old": "Die Tür wird vom Polizist geputzt.",
+"new": "Die Tür wird vom Polizisten geputzt."
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c115",
+"field": "ans",
+"old": [
+"Die Tür wird vom Polizist geputzt."
+],
+"new": [
+"Die Tür wird vom Polizisten geputzt."
+]
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c115",
+"field": "pre",
+"old": "Die Tür vom Polizist geputzt.",
+"new": "Die Tür vom Polizisten geputzt."
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c120",
+"field": "a",
+"old": "Das Heft wird vom Pirat gelesen.",
+"new": "Das Heft wird vom Piraten gelesen."
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c120",
+"field": "ans",
+"old": [
+"Das Heft wird vom Pirat gelesen."
+],
+"new": [
+"Das Heft wird vom Piraten gelesen."
+]
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c124",
+"field": "a",
+"old": "Die Tasche wird vom Pilot getragen.",
+"new": "Die Tasche wird vom Piloten getragen."
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c124",
+"field": "ans",
+"old": [
+"Die Tasche wird vom Pilot getragen."
+],
+"new": [
+"Die Tasche wird vom Piloten getragen."
+]
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c127",
+"field": "a",
+"old": "Das Buch wird vom Pilot gelesen.",
+"new": "Das Buch wird vom Piloten gelesen."
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c127",
+"field": "ans",
+"old": [
+"Das Buch wird vom Pilot gelesen."
+],
+"new": [
+"Das Buch wird vom Piloten gelesen."
+]
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c137",
+"field": "a",
+"old": "Das Haus wird vom Pilot gezeichnet.",
+"new": "Das Haus wird vom Piloten gezeichnet."
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c137",
+"field": "ans",
+"old": [
+"Das Haus wird vom Pilot gezeichnet."
+],
+"new": [
+"Das Haus wird vom Piloten gezeichnet."
+]
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c141",
+"field": "a",
+"old": "Das Haus wird vom Pirat gebaut.",
+"new": "Das Haus wird vom Piraten gebaut."
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c141",
+"field": "ans",
+"old": [
+"Das Haus wird vom Pirat gebaut."
+],
+"new": [
+"Das Haus wird vom Piraten gebaut."
+]
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c141",
+"field": "pre",
+"old": "Das Haus vom Pirat gebaut.",
+"new": "Das Haus vom Piraten gebaut."
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c149",
+"field": "a",
+"old": "Die Tasche wird vom Kollege getragen.",
+"new": "Die Tasche wird vom Kollegen getragen."
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c149",
+"field": "ans",
+"old": [
+"Die Tasche wird vom Kollege getragen."
+],
+"new": [
+"Die Tasche wird vom Kollegen getragen."
+]
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c150",
+"field": "a",
+"old": "Der Stift wird vom Pilot gekauft.",
+"new": "Der Stift wird vom Piloten gekauft."
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c150",
+"field": "ans",
+"old": [
+"Der Stift wird vom Pilot gekauft."
+],
+"new": [
+"Der Stift wird vom Piloten gekauft."
+]
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c150",
+"field": "pre",
+"old": "Der Stift vom Pilot gekauft.",
+"new": "Der Stift vom Piloten gekauft."
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "exam",
+"id": "q27",
+"field": "answer",
+"old": [
+"Das Auto wird vom Nachbar gesehen."
+],
+"new": [
+"Das Auto wird vom Nachbarn gesehen."
+]
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "exam",
+"id": "q27",
+"field": "pre",
+"old": "Das Auto vom Nachbar gesehen.",
+"new": "Das Auto vom Nachbarn gesehen."
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c24",
+"field": "opts",
+"old": [
+"hat",
+"ist",
+"wird",
+"lobt"
+],
+"new": [
+"hat",
+"wirst",
+"wird",
+"lobt"
+]
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c27",
+"field": "pre",
+"old": "Die Suppe wird kochen.",
+"new": "Die Suppe wird gekochen."
+},
+{
+"topic": "kl7-deu-passiv",
+"where": "card",
+"id": "c28",
+"field": "pre",
+"old": "Der Kuchen wird backen.",
+"new": "Der Kuchen wird gebackt."
+},
+{
+"topic": "kl4-deu-komma",
+"where": "exam",
+"id": "q23",
+"field": "answer",
+"old": [
+"Leo isst ein Eis, obwohl er schon Bauchweh hat."
+],
+"new": [
+"Anna, komm bitte her!"
+]
+},
+{
+"topic": "kl4-deu-komma",
+"where": "exam",
+"id": "q23",
+"field": "pre",
+"old": "Leo isst ein Eis obwohl er schon Bauchweh hat.",
+"new": "Anna komm bitte her!"
+},
+{
+"topic": "kl4-deu-komma",
+"where": "exam",
+"id": "q23",
+"field": "explain",
+"old": "Vor dem Nebensatz steht ein Komma.",
+"new": "Nach der Anrede steht ein Komma."
+},
+{
+"topic": "kl4-deu-komma",
+"where": "exam",
+"id": "q24",
+"field": "answer",
+"old": [
+"Die Hausaufgaben sind fertig, denn Mia hat schnell gearbeitet."
+],
+"new": [
+"Ich will mitkommen, aber ich darf nicht."
+]
+},
+{
+"topic": "kl4-deu-komma",
+"where": "exam",
+"id": "q24",
+"field": "pre",
+"old": "Die Hausaufgaben sind fertig denn Mia hat schnell gearbeitet.",
+"new": "Ich will mitkommen aber ich darf nicht."
+},
+{
+"topic": "kl4-deu-komma",
+"where": "exam",
+"id": "q24",
+"field": "explain",
+"old": "Vor «denn» steht bei zwei Hauptsätzen ein Komma.",
+"new": "Vor «aber» steht ein Komma."
+},
+{
+"topic": "kl3-deu-zeitformen",
+"where": "exam",
+"id": "q13",
+"field": "q",
+"old": "Sie ___ jetzt ein Buch.\nWelche Verbform passt?",
+"new": "Mia ___ jetzt ein Buch.\nWelche Verbform passt?"
+},
+{
+"topic": "kl3-deu-zeitformen",
+"where": "theory",
+"id": 0,
+"field": "th",
+"old": "Es gibt drei Zeitformen. Sie sagen, wann etwas passiert.",
+"new": "Du lernst drei Zeitformen kennen. Sie sagen, wann etwas passiert."
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c98",
+"field": "a",
+"old": "Das Auto wird vom Kollege gesehen.",
+"new": "Das Auto wird vom Kollegen gesehen."
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c98",
+"field": "ans",
+"old": "[\"Das Auto wird vom Kollege gesehen.\"]",
+"new": "[\"Das Auto wird vom Kollegen gesehen.\"]"
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c98",
+"field": "pre",
+"old": "Das Auto vom Kollege gesehen.",
+"new": "Das Auto vom Kollegen gesehen."
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c100",
+"field": "a",
+"old": "Die Suppe wird vom Junge gegessen.",
+"new": "Die Suppe wird vom Jungen gegessen."
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c100",
+"field": "ans",
+"old": "[\"Die Suppe wird vom Junge gegessen.\"]",
+"new": "[\"Die Suppe wird vom Jungen gegessen.\"]"
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c100",
+"field": "pre",
+"old": "Die Suppe vom Junge gegessen.",
+"new": "Die Suppe vom Jungen gegessen."
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c104",
+"field": "a",
+"old": "Das Heft wird vom Nachbar gelesen.",
+"new": "Das Heft wird vom Nachbarn gelesen."
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c104",
+"field": "ans",
+"old": "[\"Das Heft wird vom Nachbar gelesen.\"]",
+"new": "[\"Das Heft wird vom Nachbarn gelesen.\"]"
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c104",
+"field": "pre",
+"old": "Das Heft vom Nachbar gelesen.",
+"new": "Das Heft vom Nachbarn gelesen."
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c108",
+"field": "a",
+"old": "Das Bild wird vom Kollege gezeichnet.",
+"new": "Das Bild wird vom Kollegen gezeichnet."
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c108",
+"field": "ans",
+"old": "[\"Das Bild wird vom Kollege gezeichnet.\"]",
+"new": "[\"Das Bild wird vom Kollegen gezeichnet.\"]"
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c108",
+"field": "pre",
+"old": "Das Bild vom Kollege gezeichnet.",
+"new": "Das Bild vom Kollegen gezeichnet."
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c110",
+"field": "a",
+"old": "Das Heft wird vom Polizist gekauft.",
+"new": "Das Heft wird vom Polizisten gekauft."
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c110",
+"field": "ans",
+"old": "[\"Das Heft wird vom Polizist gekauft.\"]",
+"new": "[\"Das Heft wird vom Polizisten gekauft.\"]"
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c110",
+"field": "pre",
+"old": "Das Heft vom Polizist gekauft.",
+"new": "Das Heft vom Polizisten gekauft."
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c113",
+"field": "a",
+"old": "Der Ball wird vom Nachbar gekauft.",
+"new": "Der Ball wird vom Nachbarn gekauft."
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c113",
+"field": "ans",
+"old": "[\"Der Ball wird vom Nachbar gekauft.\"]",
+"new": "[\"Der Ball wird vom Nachbarn gekauft.\"]"
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c125",
+"field": "a",
+"old": "Die Tasche wird vom Nachbar gekauft.",
+"new": "Die Tasche wird vom Nachbarn gekauft."
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c125",
+"field": "ans",
+"old": "[\"Die Tasche wird vom Nachbar gekauft.\"]",
+"new": "[\"Die Tasche wird vom Nachbarn gekauft.\"]"
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c125",
+"field": "pre",
+"old": "Die Tasche vom Nachbar gekauft.",
+"new": "Die Tasche vom Nachbarn gekauft."
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c134",
+"field": "a",
+"old": "Das Buch wird vom Kollege gelesen.",
+"new": "Das Buch wird vom Kollegen gelesen."
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c134",
+"field": "ans",
+"old": "[\"Das Buch wird vom Kollege gelesen.\"]",
+"new": "[\"Das Buch wird vom Kollegen gelesen.\"]"
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c134",
+"field": "pre",
+"old": "Das Buch vom Kollege gelesen.",
+"new": "Das Buch vom Kollegen gelesen."
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c143",
+"field": "a",
+"old": "Der Korb wird vom Kollege getragen.",
+"new": "Der Korb wird vom Kollegen getragen."
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c143",
+"field": "ans",
+"old": "[\"Der Korb wird vom Kollege getragen.\"]",
+"new": "[\"Der Korb wird vom Kollegen getragen.\"]"
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c160",
+"field": "a",
+"old": "Die Tür wird vom Polizist geputzt.",
+"new": "Die Tür wird vom Polizisten geputzt."
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c160",
+"field": "ans",
+"old": "[\"Die Tür wird vom Polizist geputzt.\"]",
+"new": "[\"Die Tür wird vom Polizisten geputzt.\"]"
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c160",
+"field": "pre",
+"old": "Die Tür vom Polizist geputzt.",
+"new": "Die Tür vom Polizisten geputzt."
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c161",
+"field": "a",
+"old": "Das Haus wird vom Kollege gezeichnet.",
+"new": "Das Haus wird vom Kollegen gezeichnet."
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c161",
+"field": "ans",
+"old": "[\"Das Haus wird vom Kollege gezeichnet.\"]",
+"new": "[\"Das Haus wird vom Kollegen gezeichnet.\"]"
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c164",
+"field": "a",
+"old": "Das Haus wird vom Pilot gezeichnet.",
+"new": "Das Haus wird vom Piloten gezeichnet."
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c164",
+"field": "ans",
+"old": "[\"Das Haus wird vom Pilot gezeichnet.\"]",
+"new": "[\"Das Haus wird vom Piloten gezeichnet.\"]"
+},
+{
+"topic": "kl8-deu-passiv",
+"where": "card",
+"id": "c164",
+"field": "pre",
+"old": "Das Haus vom Pilot gezeichnet.",
+"new": "Das Haus vom Piloten gezeichnet."
+},
+{
+"topic": "kl8-deu-konjunktiv",
+"where": "card",
+"id": "c63",
+"field": "q",
+"old": "Wenn ich reich ___, kaufte ich ein Schloss.\nWelche Form passt?",
+"new": "Wenn ich reich ___, würde ich ein Schloss kaufen.\nWelche Form passt?"
+},
+{
+"topic": "kl8-deu-konjunktiv",
+"where": "card",
+"id": "c69",
+"field": "q",
+"old": "Wenn sie früher aufstünde, ___ sie den Zug.\nWelche Form passt?",
+"new": "Wenn sie früher aufstehen würde, würde sie den Zug ___.\nWelche Form passt?"
+},
+{
+"topic": "kl8-deu-konjunktiv",
+"where": "card",
+"id": "c69",
+"field": "a",
+"old": "erreichte",
+"new": "erreichen"
+},
+{
+"topic": "kl8-deu-konjunktiv",
+"where": "card",
+"id": "c82",
+"field": "a",
+"old": "Wenn sie früher aufstünde, erreichte sie den Zug.",
+"new": "Wenn sie früher aufstehen würde, würde sie den Zug erreichen."
+},
+{
+"topic": "kl8-deu-konjunktiv",
+"where": "card",
+"id": "c82",
+"field": "ans",
+"old": "[\"Wenn sie früher aufstünde, erreichte sie den Zug.\"]",
+"new": "[\"Wenn sie früher aufstehen würde, würde sie den Zug erreichen.\"]"
+},
+{
+"topic": "kl8-deu-konjunktiv",
+"where": "card",
+"id": "c82",
+"field": "pre",
+"old": "Wenn sie früher aufstünde, erreicht sie den Zug.",
+"new": "Wenn sie früher aufstehen würde, erreicht sie den Zug."
+},
+{
+"topic": "kl8-deu-konjunktiv",
+"where": "exam",
+"id": "q13",
+"field": "q",
+"old": "Wenn ich reich ___, kaufte ich ein Haus.\nWelche Verbform passt? Achte auf Konjunktiv I oder II.",
+"new": "Wenn ich reich ___, würde ich ein Haus kaufen.\nWelche Verbform passt? Achte auf Konjunktiv I oder II."
+},
+{
+"topic": "kl8-deu-konjunktiv",
+"where": "exam",
+"id": "q19",
+"field": "answer",
+"old": "[\"Wenn ich reich wäre, kaufte ich ein Schloss.\"]",
+"new": "[\"Wenn ich reich wäre, würde ich ein Schloss kaufen.\"]"
+},
+{
+"topic": "kl8-deu-konjunktiv",
+"where": "exam",
+"id": "q19",
+"field": "pre",
+"old": "Wenn ich reich bin, kaufte ich ein Schloss.",
+"new": "Wenn ich reich bin, würde ich ein Schloss kaufen."
+},
+{
+"topic": "kl9-deu-nebensatzarten",
+"where": "card",
+"id": "c45",
+"field": "q",
+"old": "Der Hund kommt sofort, wenn du pfeifst.\nWelche Art von Nebensatz ist das?",
+"new": "Der Hund bekommt ein Leckerli, falls er brav ist.\nWelche Art von Nebensatz ist das?"
+},
+{
+"topic": "kl9-deu-nebensatzarten",
+"where": "card",
+"id": "c46",
+"field": "q",
+"old": "wenn du pfeifst.\nWas drückt der Nebensatz aus?",
+"new": "falls er brav ist.\nWas drückt der Nebensatz aus?"
+},
+{
+"topic": "kl9-deu-nebensatzarten",
+"where": "card",
+"id": "c67",
+"field": "q",
+"old": "Ich rufe dich an, wenn ich zu Hause bin.\nWelche Art von Nebensatz ist das?",
+"new": "Ich komme mit, falls es nicht regnet.\nWelche Art von Nebensatz ist das?"
+},
+{
+"topic": "kl9-deu-nebensatzarten",
+"where": "card",
+"id": "c68",
+"field": "q",
+"old": "wenn ich zu Hause bin.\nWas drückt der Nebensatz aus?",
+"new": "falls es nicht regnet.\nWas drückt der Nebensatz aus?"
+},
+{
+"topic": "kl9-deu-nebensatzarten",
+"where": "card",
+"id": "c74",
+"field": "q",
+"old": "Die Katze miaut, wenn sie Hunger hat.\nWelche Art von Nebensatz ist das?",
+"new": "Die Katze bleibt drinnen, falls es gewittert.\nWelche Art von Nebensatz ist das?"
+},
+{
+"topic": "kl9-deu-nebensatzarten",
+"where": "card",
+"id": "c75",
+"field": "q",
+"old": "wenn sie Hunger hat.\nWas drückt der Nebensatz aus?",
+"new": "falls es gewittert.\nWas drückt der Nebensatz aus?"
+},
+{
+"topic": "kl9-deu-nebensatzarten",
+"where": "card",
+"id": "c82",
+"field": "q",
+"old": "Wir gehen schwimmen, wenn die Sonne scheint.\nWelche Art von Nebensatz ist das?",
+"new": "Wir gehen schwimmen, falls die Sonne scheint.\nWelche Art von Nebensatz ist das?"
+},
+{
+"topic": "kl9-deu-nebensatzarten",
+"where": "card",
+"id": "c83",
+"field": "q",
+"old": "wenn die Sonne scheint.\nWas drückt der Nebensatz aus?",
+"new": "falls die Sonne scheint.\nWas drückt der Nebensatz aus?"
+},
+{
+"topic": "kl9-deu-nebensatzarten",
+"where": "card",
+"id": "c89",
+"field": "q",
+"old": "Der Schneemann schmilzt, wenn die Sonne scheint.\nWelche Art von Nebensatz ist das?",
+"new": "Der Schneemann schmilzt, falls es wärmer wird.\nWelche Art von Nebensatz ist das?"
+},
+{
+"topic": "kl9-deu-nebensatzarten",
+"where": "card",
+"id": "c20",
+"field": "opts",
+"old": "[\"Als ich klein war\", \"Da er krank ist\", \"Nachdem wir gegessen hatten\", \"Falls es regnet\", \"Obwohl sie müde war\", \"Wenn du Zeit hast\"]",
+"new": "[\"Als ich klein war\", \"Da er krank ist\", \"Nachdem wir gegessen hatten\", \"Falls es regnet\", \"Obwohl sie müde war\", \"in dem wir wohnen\"]"
+},
+{
+"topic": "kl9-deu-nebensatzarten",
+"where": "card",
+"id": "c25",
+"field": "opts",
+"old": "[\"damit ich die Prüfung bestehe\", \"Als ich klein war\", \"Wenn du Zeit hast\", \"in dem wir wohnen\"]",
+"new": "[\"damit ich die Prüfung bestehe\", \"Als ich klein war\", \"Falls es regnet\", \"in dem wir wohnen\"]"
+},
+{
+"topic": "kl9-deu-nebensatzarten",
+"where": "exam",
+"id": "q13",
+"field": "options",
+"old": "[\"Obwohl\", \"Weil\", \"Damit\", \"Nachdem\"]",
+"new": "[\"Obwohl\", \"Dass\", \"Damit\", \"Nachdem\"]"
+},
+{
+"topic": "kl9-deu-kommaerw",
+"where": "card",
+"id": "c3",
+"field": "hints",
+"old": "[\"Suche den Nebensatz und trenne ihn ab.\"]",
+"new": "[\"Ein Einschub steht zwischen zwei Kommas.\"]"
+},
+{
+"topic": "kl9-deu-kommaerw",
+"where": "card",
+"id": "c5",
+"field": "hints",
+"old": "[\"Suche den Nebensatz und trenne ihn ab.\"]",
+"new": "[\"Ein Einschub steht zwischen zwei Kommas.\"]"
+},
+{
+"topic": "kl9-deu-kommaerw",
+"where": "card",
+"id": "c7",
+"field": "hints",
+"old": "[\"Suche den Nebensatz und trenne ihn ab.\"]",
+"new": "[\"Vor «um, ohne, statt, anstatt zu» steht ein Komma.\"]"
+},
+{
+"topic": "kl9-deu-kommaerw",
+"where": "card",
+"id": "c9",
+"field": "hints",
+"old": "[\"Suche den Nebensatz und trenne ihn ab.\"]",
+"new": "[\"Vor «um, ohne, statt, anstatt zu» steht ein Komma.\"]"
+},
+{
+"topic": "kl9-deu-kommaerw",
+"where": "card",
+"id": "c11",
+"field": "hints",
+"old": "[\"Suche den Nebensatz und trenne ihn ab.\"]",
+"new": "[\"Vor «um, ohne, statt, anstatt zu» steht ein Komma.\"]"
+},
+{
+"topic": "kl9-deu-kommaerw",
+"where": "card",
+"id": "c21",
+"field": "hints",
+"old": "[\"Nebensätze werden mit Komma abgetrennt.\"]",
+"new": "[\"Ein Einschub steht zwischen zwei Kommas.\"]"
+},
+{
+"topic": "kl9-deu-kommaerw",
+"where": "card",
+"id": "c22",
+"field": "hints",
+"old": "[\"Nebensätze werden mit Komma abgetrennt.\"]",
+"new": "[\"Ein Einschub steht zwischen zwei Kommas.\"]"
+},
+{
+"topic": "kl9-deu-kommaerw",
+"where": "card",
+"id": "c23",
+"field": "hints",
+"old": "[\"Nebensätze werden mit Komma abgetrennt.\"]",
+"new": "[\"Ein Einschub steht zwischen zwei Kommas.\"]"
+},
+{
+"topic": "kl9-deu-kommaerw",
+"where": "card",
+"id": "c24",
+"field": "hints",
+"old": "[\"Nebensätze werden mit Komma abgetrennt.\"]",
+"new": "[\"Ein Einschub steht zwischen zwei Kommas.\"]"
+},
+{
+"topic": "kl9-deu-kommaerw",
+"where": "card",
+"id": "c25",
+"field": "hints",
+"old": "[\"Nebensätze werden mit Komma abgetrennt.\"]",
+"new": "[\"Vor «um, ohne, statt, anstatt zu» steht ein Komma.\"]"
+},
+{
+"topic": "kl9-deu-kommaerw",
+"where": "card",
+"id": "c26",
+"field": "hints",
+"old": "[\"Nebensätze werden mit Komma abgetrennt.\"]",
+"new": "[\"Vor «um, ohne, statt, anstatt zu» steht ein Komma.\"]"
+},
+{
+"topic": "kl9-deu-kommaerw",
+"where": "card",
+"id": "c27",
+"field": "hints",
+"old": "[\"Nebensätze werden mit Komma abgetrennt.\"]",
+"new": "[\"Vor «um, ohne, statt, anstatt zu» steht ein Komma.\"]"
+},
+{
+"topic": "kl9-deu-kommaerw",
+"where": "card",
+"id": "c28",
+"field": "hints",
+"old": "[\"Nebensätze werden mit Komma abgetrennt.\"]",
+"new": "[\"Vor «um, ohne, statt, anstatt zu» steht ein Komma.\"]"
+},
+{
+"topic": "kl9-deu-kommaerw",
+"where": "card",
+"id": "c29",
+"field": "hints",
+"old": "[\"Nebensätze werden mit Komma abgetrennt.\"]",
+"new": "[\"Vor «um, ohne, statt, anstatt zu» steht ein Komma.\"]"
+},
+{
+"topic": "kl9-deu-kommaerw",
+"where": "card",
+"id": "c30",
+"field": "hints",
+"old": "[\"Nebensätze werden mit Komma abgetrennt.\"]",
+"new": "[\"Vor «um, ohne, statt, anstatt zu» steht ein Komma.\"]"
+},
+{
+"topic": "kl5-deu-wortarten",
+"where": "card",
+"id": "c10",
+"field": "hints",
+"old": "[\"Es verbindet zwei Sätze und kann nicht verändert werden.\"]",
+"new": "[\"Es verbindet zwei Wörter oder Sätze und kann nicht verändert werden.\"]"
+},
+{
+"topic": "kl5-deu-wortarten",
+"where": "card",
+"id": "c58",
+"field": "q",
+"old": "Der brave Elefant spritzt das leichte Wasser auf den Zoowärter.\nWelche Wortart hat «brave»?",
+"new": "Der brave Elefant spritzt das kühle Wasser auf den Zoowärter.\nWelche Wortart hat «brave»?"
+},
+{
+"topic": "kl5-deu-wortarten",
+"where": "card",
+"id": "c78",
+"field": "q",
+"old": "Der Elefant spritzt das grosse Wasser auf den Zoowärter.\nWelche Wortart hat «Elefant»?",
+"new": "Der Elefant spritzt das kühle Wasser auf den Zoowärter.\nWelche Wortart hat «Elefant»?"
+},
+{
+"topic": "kl5-deu-wortarten",
+"where": "card",
+"id": "c95",
+"field": "q",
+"old": "Der Elefant spritzt das leichte Wasser auf den Zoowärter.\nWelche Wortart hat «spritzt»?",
+"new": "Der Elefant spritzt das kühle Wasser auf den Zoowärter.\nWelche Wortart hat «spritzt»?"
+},
+{
+"topic": "kl5-deu-wortarten",
+"where": "card",
+"id": "c73",
+"field": "q",
+"old": "Sie lacht herzlich.\nWelche Wortart hat «Sie»?",
+"new": "Sie lacht fröhlich.\nWelche Wortart hat «Sie»?"
+},
+{
+"topic": "kl5-deu-wortarten",
+"where": "card",
+"id": "c92",
+"field": "q",
+"old": "Er arbeitet fleissig.\nWelche Wortart hat «Er»?",
+"new": "Er arbeitet gründlich.\nWelche Wortart hat «Er»?"
+},
+{
+"topic": "kl5-deu-wortarten",
+"where": "exam",
+"id": "q15",
+"field": "options",
+"old": "[\"weil\", \"mit\", \"hinter\", \"dass\"]",
+"new": "[\"weil\", \"mit\", \"hinter\", \"unter\"]"
+},
+{
+"topic": "kl2-deu-gross",
+"where": "card",
+"id": "c59",
+"field": "a",
+"old": "Der mutige Elefant spritzt das kleine Wasser auf den Zoowärter.",
+"new": "Der mutige Elefant spritzt das kühle Wasser auf den Zoowärter."
+},
+{
+"topic": "kl2-deu-gross",
+"where": "card",
+"id": "c59",
+"field": "ans",
+"old": "[\"Der mutige Elefant spritzt das kleine Wasser auf den Zoowärter.\"]",
+"new": "[\"Der mutige Elefant spritzt das kühle Wasser auf den Zoowärter.\"]"
+},
+{
+"topic": "kl2-deu-gross",
+"where": "card",
+"id": "c59",
+"field": "pre",
+"old": "der mutige elefant spritzt das kleine wasser auf den zoowärter.",
+"new": "der mutige elefant spritzt das kühle wasser auf den zoowärter."
+}
+]
