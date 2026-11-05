@@ -1521,3 +1521,11 @@ ins.dfy{text-decoration:none;color:#0d652d;background:rgba(52,168,83,.22);border
 .xg-opts.col1 .xo{align-items:flex-start;text-align:left}
 .xg-opts.n5.col1 .xo:last-child{grid-column:auto}
 .xo,.xo b,.xg-q{overflow-wrap:anywhere;min-width:0}.xg-opts>*{min-width:0}.xg{min-width:0;max-width:100%}.stack{min-width:0}
+
+/* v5.12 Easy lernen: Denkkopf mit dezentem Glanz */
+.tb4.m-x{position:relative;overflow:hidden}
+.tb4.m-x .xbrain{display:inline-block;filter:drop-shadow(0 0 3px rgba(255,255,255,.75))}
+.tb4.m-x::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.28),transparent);transform:skewX(-18deg);animation:xshine 5.5s ease-in-out infinite}
+@keyframes xshine{0%,70%{left:-60%}100%{left:130%}}
+@media (prefers-reduced-motion:reduce){.tb4.m-x::after{animation:none;display:none}}
+.tb4.m-x .xbrain{margin-right:5px}

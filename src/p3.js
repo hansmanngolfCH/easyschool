@@ -93,7 +93,7 @@ function topicCard(ch,t){
   +(open?'<div class="tc4"><button class="tb4 m-v" data-act="learn" data-id="'+id+'">'+((t.subject==='franz'||t.subject==='engl')?'Wörterliste':'Theorie')+'</button>'
   +'<button class="tb4 m-u" data-act="practice" data-scope="topic:'+id+'" data-force="1">AI-Karten</button>'
   +'<button class="tb4 m-p" data-act="exam" data-id="'+id+'">Prüfung</button>'
-  +'<button class="tb4 m-x" data-act="xgame" data-id="'+id+'">⚡ Easy lernen</button></div>':'')+'</article>';
+  +'<button class="tb4 m-x" data-act="xgame" data-id="'+id+'"><span class="xbrain" aria-hidden="true">🧠</span> Easy lernen</button></div>':'')+'</article>';
 }
 function vocTag(t){var l=t.subject==='franz'?'Vocabulaire':t.subject==='engl'?'Vocabulary':'';if(!l||/vocab/i.test(t.title))return '';return '<span class="vtag">'+l+'</span> · '}
 function vSubject(){

@@ -171,7 +171,7 @@ ACT.xgame=function(b){
 ACT.xgquit=function(){clearTimeout(XGT);ACT.back()};
 function xgHearts(n){return ''}
 function vXg(){
-  var n=nav,t=topicById(n.topicId),NAME={salat:'Buchstaben-Salat',vocab:'Vokabel-Mix',math:'Mathe-Knobler',quiz:'Blitz-Quiz'}[n.kind];
+  var n=nav,t=topicById(n.topicId),NAME={salat:'Buchstaben-Salat',vocab:'Vokabel-Mix',math:'Mathe-Knobler',quiz:'Quiz'}[n.kind];
   if(n.phase==='end'){
     var tot=n.rounds.length;
     return '<div class="stack"><div class="xg xg-end xg-'+n.kind+' s-'+t.subject+'"><div class="xg-trophy">'+(n.ok===tot&&!n.miss?'🏆':n.ok>=7?'🥇':n.ok>=4?'🥈':'🎯')+'</div><h1>'+n.ok+' / '+tot+'</h1><p>'+n.ok+' von '+tot+' Aufgaben geschafft'+(n.ok===tot&&!n.miss?' · Perfekt, ohne Fehler!':'')+'</p></div><div class="row"><button class="btn pri big" data-act="xgquit">Fertig</button></div></div>';
