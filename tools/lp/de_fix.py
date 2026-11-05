@@ -161,6 +161,12 @@ def apply(c):
                 e['visuals']=[{"type":"tbl","rows":PRON,"head":["Person","Stellvertreter","Begleiter"]}]
                 e['text']='Zu jeder Person gibt es einen Stellvertreter und einen Begleiter. Merke dir beide Reihen.'
             if e['h']=='Schwierigere Wörter':e['_drop']=True
+            if e['h']=='Nachdem-Sätze':
+                e['text']='Nach «nachdem» steht das, was zuerst geschah, im Plusquamperfekt. Das, was danach geschah, steht im Präteritum.'
+                e['visuals']=[{"type":"tbl","head":["Zuerst (Plusquamperfekt)","Danach (Präteritum)"],"rows":[
+                    ["Nachdem er gegessen hatte,","ging er spazieren."],
+                    ["Nachdem die Gäste gegangen waren,","räumten wir auf."],
+                    ["Nachdem es geregnet hatte,","kamen die Schnecken heraus."]]}]
             if e['h']=='Das musst du wissen' and tid.endswith('-deu-alphabet'):
                 e['visuals']=[{"type":"tbl","rows":ALPHA,"head":["Was","Bedeutung","Beispiel"]}]
             if e['h']=='So gehst du vor' and tid.endswith('-deu-stammformen'):

@@ -252033,26 +252033,27 @@
     },
     {
      "h": "Nachdem-Sätze",
-     "text": "Nach «nachdem» steht oft das Plusquamperfekt, im Hauptsatz das Präteritum oder Perfekt. So zeigst du, was zuerst war.",
+     "text": "Nach «nachdem» steht das, was zuerst geschah, im Plusquamperfekt. Das, was danach geschah, steht im Präteritum.",
      "visuals": [
       {
        "type": "tbl",
+       "head": [
+        "Zuerst (Plusquamperfekt)",
+        "Danach (Präteritum)"
+       ],
        "rows": [
         [
          "Nachdem er gegessen hatte,",
-         "ging er spazieren.",
-         "das Essen"
+         "ging er spazieren."
         ],
         [
          "Nachdem die Gäste gegangen waren,",
-         "räumten wir auf.",
-         "der Aufbruch"
+         "räumten wir auf."
+        ],
+        [
+         "Nachdem es geregnet hatte,",
+         "kamen die Schnecken heraus."
         ]
-       ],
-       "head": [
-        "Nebensatz",
-        "Hauptsatz",
-        "Was war zuerst?"
        ]
       }
      ]
