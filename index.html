@@ -1876,6 +1876,31 @@ input.wc-sbox:focus{border-color:#8AB4F8}
 .ccics{gap:3px;flex-wrap:nowrap}.ccic{width:19px;height:19px;border-radius:6px}.ccic svg{width:12px;height:12px}
 .ccard.cc2 .ccgo{display:none}
 .gsr{padding:6px 8px;min-height:44px}.gsm b{font-size:.92rem}
+/* v5.36: dezente Kacheln unten, Minigames im App-Stil */
+.hv2 .hquick{margin:18px 0 4px}
+.hq{color:var(--ink);background:var(--surface)!important;border:1px solid rgba(60,64,67,.14);box-shadow:0 1px 2px rgba(60,64,67,.08)}
+.hq::after{display:none}
+.hq-g .hqi{background:#F3E8FD;color:#7B3FF2}.hq-s .hqi{background:#E8F0FE;color:#1A73E8}
+.hqt small{color:var(--ink2);opacity:1}
+@media (hover:hover){.hq:hover{background:var(--surface2)!important}}
+.ccard.cc2{padding:12px}
+.gcgrid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px 10px}
+@media (min-width:700px){.gcgrid{grid-template-columns:repeat(6,minmax(0,1fr))}}
+.gcc{background:none;border:0;box-shadow:none;border-radius:0;align-items:center;gap:0;overflow:visible}
+.gcimg{width:100%;aspect-ratio:1/1;border-radius:22%;box-shadow:0 3px 8px -2px rgba(0,0,0,.28),inset 0 0 0 .5px rgba(0,0,0,.1)}
+.gcn{font:600 .74rem var(--font-b);padding:6px 0 0;text-align:center;width:100%;color:var(--ink)}
+.gcr{font-size:.66rem;font-weight:700;color:#B06000;line-height:1.2}
+.gcfeat{aspect-ratio:16/9}
+.gcfeat2{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:12px;padding:12px;border-radius:20px;background:var(--surface);border:1px solid rgba(60,64,67,.14);box-shadow:0 1px 2px rgba(60,64,67,.08),0 6px 18px -10px rgba(60,64,67,.3);width:100%}
+.gcf2i{position:relative;flex:none;width:76px;height:76px;border-radius:22%;overflow:hidden;box-shadow:0 3px 8px -2px rgba(0,0,0,.28)}
+.gcf2i img{width:100%;height:100%;object-fit:cover}
+.gcf2t{display:flex;flex-direction:column;min-width:0;flex:1;line-height:1.25}
+.gcf2t small{font:700 .66rem var(--font-b);letter-spacing:.09em;text-transform:uppercase;color:#7B3FF2}
+.gcf2t b{font:700 1.08rem var(--font-d);color:var(--ink)}
+.gcf2t span{font-size:.76rem;color:var(--ink2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.gcf2b{flex:none;font-style:normal;font:700 .85rem var(--font-d);color:#1A73E8;background:#E8F0FE;padding:7px 14px;border-radius:999px}
+.gcsec{margin:6px 0 -4px;font:700 1.05rem var(--font-d);color:var(--ink)}
+.gcp .gchead .sub{font-size:.9rem}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1883,7 +1908,7 @@ input.wc-sbox:focus{border-color:#8AB4F8}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION="v5.35";
+var APP_VERSION="v5.36";
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -3317,7 +3342,7 @@ var CCOL={p:['#4285F4','#34A853','#EA4335','#F9AB00','#8E44AD','#00ACC1'],o:['#3
 function cclass(c,i,grp){
   var subs=subjOf(c),n=subs.length,col=CCOL[grp||'p'][(i||0)%6],ts=topicsOf(c.id),L=level(c.id,ts),w=ts.length?Math.round(L.pct*100):0;
   var ic=subs.map(function(sb){return '<span class="ccic ci-'+esc(sb.id)+'" title="'+esc(sb.name)+'">'+sicon(sb,15)+'</span>'}).join('');
-  return '<button class="ccard simple sm2 cc2" data-act="child" data-id="'+esc(c.id)+'" style="--cc:'+col+'"><span class="cc-top"><span class="cnum">'+esc(String(c.grade||''))+'</span><span class="cc-t"><span class="cc-h">'+esc(label(c))+'</span><span class="ccics">'+(n?ic:'<span class="sub noc">Kein Inhalt</span>')+'</span></span><span class="ccgo" aria-hidden="true">›</span></span><span class="ccbar" role="img" aria-label="'+w+' Prozent geschafft"><i style="width:'+Math.max(w?4:0,w)+'%"></i></span><span class="ccmeta"><span>'+ts.length+' Themen</span><span>'+w+'%</span></span></button>';
+  return '<button class="ccard simple sm2 cc2" data-act="child" data-id="'+esc(c.id)+'" style="--cc:'+col+'"><span class="cc-top"><span class="cnum">'+esc(String(c.grade||''))+'</span><span class="cc-t"><span class="cc-h">'+esc(label(c))+'</span><span class="ccics">'+(n?ic:'<span class="sub noc">Kein Inhalt</span>')+'</span></span><span class="ccgo" aria-hidden="true">›</span></span></button>';
 }
 var STUFE_IC={p:'<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1-4L17 4l3 3L8 19z"/><path d="M14 7l3 3"/></svg>',o:'<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>'};
 function cloudAcct(){try{return JSON.parse(localStorage.getItem('es.acct')||'null')}catch(e){return null}}
@@ -3326,12 +3351,12 @@ function vHome(){
   var kids=C.children.filter(function(c){return topicsOf(c.id).length}).sort(function(a,b){return (a.grade||0)-(b.grade||0)});
   var prim=kids.filter(function(c){return (c.grade||0)<=6}),ober=kids.filter(function(c){return (c.grade||0)>=7});
   var cards=(prim.length?'<p class="hgrp">Primarschule</p><div class="clist cl-p">'+prim.map(function(c,i){return cclass(c,i,'p')}).join('')+'</div>':'')+(ober.length?'<p class="hgrp">Oberstufe</p><div class="clist cl-o">'+ober.map(function(c,i){return cclass(c,i,'o')}).join('')+'</div>':'');
-  var quick='<div class="hquick"><button class="hq hq-g" data-act="games"><span class="hqi">🎮</span><span class="hqt"><b>Gamecenter</b><small>'+GAMES.length+' Spiele</small></span><span class="hqgo">›</span></button><button class="hq hq-s" data-act="search"><span class="hqi"><svg viewBox="0 0 24 24" width="26" height="26"><circle cx="10.5" cy="10.5" r="6" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M15 15l5.5 5.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></span><span class="hqt"><b>Themen suchen</b><small>'+C.topics.length+' Themen</small></span><span class="hqgo">›</span></button></div>';
+  var quick='<div class="hquick"><button class="hq hq-g" data-act="games"><span class="hqi">🎮</span><span class="hqt"><b>Minigames</b><small>'+GAMES.length+' Spiele</small></span><span class="hqgo">›</span></button><button class="hq hq-s" data-act="search"><span class="hqi"><svg viewBox="0 0 24 24" width="26" height="26"><circle cx="10.5" cy="10.5" r="6" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M15 15l5.5 5.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></span><span class="hqt"><b>Themen suchen</b><small>'+C.topics.length+' Themen</small></span><span class="hqgo">›</span></button></div>';
   var tot=0;C.children.forEach(function(c){tot+=xpTotal(c.id)});var HL=plv(tot),hp=(tot%1000)/1000;
   var hb='<div class="banner hbn"><span class="av" style="width:40px;height:40px">'+avPic(myAv(),40)+'</span><div class="bn-m"><div class="bn-row"><span class="bn-lv"><b style="color:'+AVCOL[myCol()][1]+'">'+(esc(myName())||'NoName')+'</b> · Level '+HL+'</span><span class="bn-xp">'+fx(tot)+' XP</span></div><div class="xpg sm" role="img" aria-label="XP"><i style="width:'+Math.max(5,Math.round(hp*100))+'%"></i><u></u></div></div>'+shield(HL,40)+'</div>';
   var picker='';
   if(nav.avpick){var cur=myAv(),cc=myCol();picker='<div class="avmodal"><div class="avback" data-act="avclose"></div><div class="avsheet" role="dialog" aria-label="Avatar aussuchen"><div class="avhead"><b>Dein Avatar</b><button class="btn sm" data-act="avclose">Fertig</button></div><label class="lab2" for="avname">Dein Name (freiwillig)</label><input class="inp avname" id="avname" maxlength="14" placeholder="Zum Beispiel Luca" value="'+esc(myName())+'" autocomplete="off"><p class="lab2" style="margin-top:12px">Farbe</p><div class="avcols">'+AVCOL.map(function(c,i){return '<button class="avcol'+(i===cc?' on':'')+'" style="background:linear-gradient(135deg,'+c[0]+','+c[1]+')" data-act="avcol" data-id="'+i+'" aria-label="Farbe '+(i+1)+'"></button>'}).join('')+'</div><p class="lab2" style="margin-top:12px">Bild</p><div class="avgrid">'+Array.apply(null,{length:AV_N}).map(function(_,i){return '<button class="avopt'+(i===cur?' on':'')+'" data-act="avpick" data-id="'+i+'" aria-label="Avatar '+(i+1)+'">'+avPic(i,56)+'</button>'}).join('')+'</div></div></div>'}
-  return '<div class="home hv2"><button class="avbtn" data-act="avopen" aria-label="Avatar aussuchen"><span class="avdot">'+avPic(myAv(),34)+'</span><span class="avn">'+(esc(myName())||'NoName')+'</span></button><div class="brandrow"><img class="homehero" src="img/hero.webp" alt="" width="340" height="218"><h1>EasySchool</h1></div>'+hb+quick+'<h2 class="ask hask">Wähle deine Klasse</h2>'+cards+''+picker+'</div>';
+  return '<div class="home hv2"><button class="avbtn" data-act="avopen" aria-label="Avatar aussuchen"><span class="avdot">'+avPic(myAv(),34)+'</span><span class="avn">'+(esc(myName())||'NoName')+'</span></button><div class="brandrow"><img class="homehero" src="img/hero.webp" alt="" width="340" height="218"><h1>EasySchool</h1></div>'+hb+'<h2 class="ask hask">Wähle deine Klasse</h2>'+cards+quick+''+picker+'</div>';
 }
 
 function vChild(){
@@ -6164,26 +6189,25 @@ GAMEFN.vault=function(cv,cx,w,h,score,over){
     stepP(cx,P,f);floatTxt(cx,F,f);cx.globalAlpha=1;cx.fillStyle='#000';hearts(cx,lives,w);bigScore(cx,w,s)});
   return function(){L.stop();unb()}};
 
-/* ---------- Gamecenter + Themen suchen (v5.35) ---------- */
+/* ---------- Minigames + Themen suchen (v5.35) ---------- */
 (function(){
 function best(){try{return JSON.parse(localStorage.getItem('es.gbest')||'{}')||{}}catch(e){return {}}}
 function setBest(id,v){var b=best();if(!(b[id]>=v)){b[id]=v;try{localStorage.setItem('es.gbest',JSON.stringify(b))}catch(e){}return true}return false}
-function dayGame(){var d=new Date(),k=d.getFullYear()*372+d.getMonth()*31+d.getDate();return GAMES[k%GAMES.length]}
+function dayGame(){return GAMES.filter(function(g){return g.id==='vault'})[0]||GAMES[GAMES.length-1]}
 function vGames(){
   var b=best(),f=dayGame();
-  var card=function(g){var r=b[g.id];return '<button class="gcc" data-act="gplay" data-id="'+esc(g.id)+'"><span class="gcimg"><img src="img/g_'+esc(g.id)+'.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="gcem">'+g.e+'</span></span><span class="gcn">'+esc(g.n)+'</span><span class="gcm"><span class="gcl">'+esc(g.lb||'')+'</span>'+(r!=null?'<span class="gcr">🏆 '+r+'</span>':'<span class="gcr new">Neu</span>')+'</span></button>'};
-  return '<div class="stack gcp"><div class="gchead"><p class="eyebrow">Gamecenter</p><h1>Spiele</h1><p class="sub">Tippe ein Spiel und los geht\'s. Hier zählt nur dein Rekord.</p></div>'
-   +'<button class="gcfeat" data-act="gplay" data-id="'+esc(f.id)+'"><img src="img/g_'+esc(f.id)+'.jpg" alt="" onerror="this.remove()"><span class="gcfo"><small>Spiel des Tages</small><b>'+f.e+' '+esc(f.n)+'</b><span>'+esc(f.how)+'</span><i class="gcfb">▶ Spielen</i></span></button>'
-   +'<div class="gcgrid">'+GAMES.map(card).join('')+'</div></div>';
+  var card=function(g){var r=b[g.id];return '<button class="gcc" data-act="gplay" data-id="'+esc(g.id)+'" aria-label="'+esc(g.n)+'"><span class="gcimg"><img src="img/g_'+esc(g.id)+'.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="gcn">'+esc(g.n)+'</span><span class="gcr">'+(r!=null?'🏆 '+r:'&nbsp;')+'</span></button>'};
+  return '<div class="stack gcp"><div class="gchead"><p class="eyebrow">Minigames</p><h1>Spiele</h1><p class="sub">Tippe ein Spiel und los geht\'s. Hier zählt nur dein Rekord.</p></div>'
+   +'<button class="gcfeat2" data-act="gplay" data-id="'+esc(f.id)+'"><span class="gcf2i"><img src="img/g_'+esc(f.id)+'.jpg" alt="" onerror="this.remove()"></span><span class="gcf2t"><small>Neustes Spiel</small><b>'+esc(f.n)+'</b><span>'+esc(String(f.how).split(/([.!?])\s/)[0].replace(/[.!?]$/,'')+(/[.!?]\s/.test(f.how)?String(f.how).match(/[.!?]/)[0]:''))+'</span></span><i class="gcf2b">Spielen</i></button><p class="gcsec">Alle Spiele</p>'+'<div class="gcgrid">'+GAMES.map(card).join('')+'</div></div>';
 }
 VIEWS.games=vGames;
 ACT.games=function(){go({view:'games'},{view:'home'})};
-ACT.gplay=function(b){var g=GAMES.filter(function(x){return x.id===b.dataset.id})[0];if(!g)return;rwOpen('🎮 Gamecenter · freies Spiel',g,true,true)};
+ACT.gplay=function(b){var g=GAMES.filter(function(x){return x.id===b.dataset.id})[0];if(!g)return;rwOpen('🎮 Minigames · freies Spiel',g,true,true)};
 window.gcBack=function(){if(nav.view==='games'){var y=window.scrollY;render();window.scrollTo(0,y)}};
 window.gcEnd=function(m,s){var me=RW,g=me.g,nb=setBest(g.id,s),bv=best()[g.id];
-  if(m){m.innerHTML='<b class="'+(nb&&s>0?'rwwin':'')+'">'+(nb&&s>0?'🏆 Neuer Rekord: '+s+'!':s+' Punkte')+'</b><br><small>Rekord: '+bv+' · gleich zurück ins Gamecenter</small><div class="gcagain"><button class="btn pri" id="gcre">🔁 Nochmal</button><button class="btn" id="gcbk">Zum Gamecenter</button></div>';
+  if(m){m.innerHTML='<b class="'+(nb&&s>0?'rwwin':'')+'">'+(nb&&s>0?'🏆 Neuer Rekord: '+s+'!':s+' Punkte')+'</b><br><small>Rekord: '+bv+' · gleich zurück zu den Minigames</small><div class="gcagain"><button class="btn pri" id="gcre">🔁 Nochmal</button><button class="btn" id="gcbk">Zu den Minigames</button></div>';
     var re=m.querySelector('#gcre'),bk=m.querySelector('#gcbk');
-    re.onclick=function(){clearTimeout(tm);closeReward();rwOpen('🎮 Gamecenter · freies Spiel',g,true,true)};
+    re.onclick=function(){clearTimeout(tm);closeReward();rwOpen('🎮 Minigames · freies Spiel',g,true,true)};
     bk.onclick=function(){clearTimeout(tm);closeReward();gcBack()};}
   var tm=setTimeout(function(){if(RW===me){closeReward();gcBack()}},5000);
 };

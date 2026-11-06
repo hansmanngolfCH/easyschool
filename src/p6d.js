@@ -539,26 +539,25 @@ GAMEFN.vault=function(cv,cx,w,h,score,over){
     stepP(cx,P,f);floatTxt(cx,F,f);cx.globalAlpha=1;cx.fillStyle='#000';hearts(cx,lives,w);bigScore(cx,w,s)});
   return function(){L.stop();unb()}};
 
-/* ---------- Gamecenter + Themen suchen (v5.35) ---------- */
+/* ---------- Minigames + Themen suchen (v5.35) ---------- */
 (function(){
 function best(){try{return JSON.parse(localStorage.getItem('es.gbest')||'{}')||{}}catch(e){return {}}}
 function setBest(id,v){var b=best();if(!(b[id]>=v)){b[id]=v;try{localStorage.setItem('es.gbest',JSON.stringify(b))}catch(e){}return true}return false}
-function dayGame(){var d=new Date(),k=d.getFullYear()*372+d.getMonth()*31+d.getDate();return GAMES[k%GAMES.length]}
+function dayGame(){return GAMES.filter(function(g){return g.id==='vault'})[0]||GAMES[GAMES.length-1]}
 function vGames(){
   var b=best(),f=dayGame();
-  var card=function(g){var r=b[g.id];return '<button class="gcc" data-act="gplay" data-id="'+esc(g.id)+'"><span class="gcimg"><img src="img/g_'+esc(g.id)+'.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="gcem">'+g.e+'</span></span><span class="gcn">'+esc(g.n)+'</span><span class="gcm"><span class="gcl">'+esc(g.lb||'')+'</span>'+(r!=null?'<span class="gcr">🏆 '+r+'</span>':'<span class="gcr new">Neu</span>')+'</span></button>'};
-  return '<div class="stack gcp"><div class="gchead"><p class="eyebrow">Gamecenter</p><h1>Spiele</h1><p class="sub">Tippe ein Spiel und los geht\'s. Hier zählt nur dein Rekord.</p></div>'
-   +'<button class="gcfeat" data-act="gplay" data-id="'+esc(f.id)+'"><img src="img/g_'+esc(f.id)+'.jpg" alt="" onerror="this.remove()"><span class="gcfo"><small>Spiel des Tages</small><b>'+f.e+' '+esc(f.n)+'</b><span>'+esc(f.how)+'</span><i class="gcfb">▶ Spielen</i></span></button>'
-   +'<div class="gcgrid">'+GAMES.map(card).join('')+'</div></div>';
+  var card=function(g){var r=b[g.id];return '<button class="gcc" data-act="gplay" data-id="'+esc(g.id)+'" aria-label="'+esc(g.n)+'"><span class="gcimg"><img src="img/g_'+esc(g.id)+'.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="gcn">'+esc(g.n)+'</span><span class="gcr">'+(r!=null?'🏆 '+r:'&nbsp;')+'</span></button>'};
+  return '<div class="stack gcp"><div class="gchead"><p class="eyebrow">Minigames</p><h1>Spiele</h1><p class="sub">Tippe ein Spiel und los geht\'s. Hier zählt nur dein Rekord.</p></div>'
+   +'<button class="gcfeat2" data-act="gplay" data-id="'+esc(f.id)+'"><span class="gcf2i"><img src="img/g_'+esc(f.id)+'.jpg" alt="" onerror="this.remove()"></span><span class="gcf2t"><small>Neustes Spiel</small><b>'+esc(f.n)+'</b><span>'+esc(String(f.how).split(/([.!?])\s/)[0].replace(/[.!?]$/,'')+(/[.!?]\s/.test(f.how)?String(f.how).match(/[.!?]/)[0]:''))+'</span></span><i class="gcf2b">Spielen</i></button><p class="gcsec">Alle Spiele</p>'+'<div class="gcgrid">'+GAMES.map(card).join('')+'</div></div>';
 }
 VIEWS.games=vGames;
 ACT.games=function(){go({view:'games'},{view:'home'})};
-ACT.gplay=function(b){var g=GAMES.filter(function(x){return x.id===b.dataset.id})[0];if(!g)return;rwOpen('🎮 Gamecenter · freies Spiel',g,true,true)};
+ACT.gplay=function(b){var g=GAMES.filter(function(x){return x.id===b.dataset.id})[0];if(!g)return;rwOpen('🎮 Minigames · freies Spiel',g,true,true)};
 window.gcBack=function(){if(nav.view==='games'){var y=window.scrollY;render();window.scrollTo(0,y)}};
 window.gcEnd=function(m,s){var me=RW,g=me.g,nb=setBest(g.id,s),bv=best()[g.id];
-  if(m){m.innerHTML='<b class="'+(nb&&s>0?'rwwin':'')+'">'+(nb&&s>0?'🏆 Neuer Rekord: '+s+'!':s+' Punkte')+'</b><br><small>Rekord: '+bv+' · gleich zurück ins Gamecenter</small><div class="gcagain"><button class="btn pri" id="gcre">🔁 Nochmal</button><button class="btn" id="gcbk">Zum Gamecenter</button></div>';
+  if(m){m.innerHTML='<b class="'+(nb&&s>0?'rwwin':'')+'">'+(nb&&s>0?'🏆 Neuer Rekord: '+s+'!':s+' Punkte')+'</b><br><small>Rekord: '+bv+' · gleich zurück zu den Minigames</small><div class="gcagain"><button class="btn pri" id="gcre">🔁 Nochmal</button><button class="btn" id="gcbk">Zu den Minigames</button></div>';
     var re=m.querySelector('#gcre'),bk=m.querySelector('#gcbk');
-    re.onclick=function(){clearTimeout(tm);closeReward();rwOpen('🎮 Gamecenter · freies Spiel',g,true,true)};
+    re.onclick=function(){clearTimeout(tm);closeReward();rwOpen('🎮 Minigames · freies Spiel',g,true,true)};
     bk.onclick=function(){clearTimeout(tm);closeReward();gcBack()};}
   var tm=setTimeout(function(){if(RW===me){closeReward();gcBack()}},5000);
 };
