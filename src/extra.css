@@ -1536,3 +1536,38 @@ ins.dfy{text-decoration:none;color:#0d652d;background:rgba(52,168,83,.22);border
 .xg-msg{line-height:1.3;padding:0 4px}
 .xg-calc{font-size:1.1rem;line-height:34px;margin-right:auto}
 .gap{color:#c5cad3;font-weight:400}
+/* Schriftlich rechnen: Häuschenpapier wie im Heft */
+.wcf{width:100%;display:flex;flex-direction:column;align-items:center;gap:8px;margin:4px 0}
+.wcg{--wcw:min(38px,calc((100vw - 84px) / var(--wcn)));display:grid;width:max-content;justify-content:center;font-family:var(--font-d);font-variant-numeric:tabular-nums;background-color:#fff;background-image:linear-gradient(#E1E7F0 1px,transparent 1px),linear-gradient(90deg,#E1E7F0 1px,transparent 1px);background-size:var(--wcw) var(--wcw);border:1px solid #E1E7F0;border-radius:6px;margin:0 auto}
+.xg-vis .wcg{--wcw:min(34px,calc((100vw - 96px) / var(--wcn)))}
+.wc-c{position:relative;display:flex;align-items:center;justify-content:center;font-size:calc(var(--wcw)*.74);font-weight:700;color:#202124;line-height:1}
+.wc-op{color:#5F6368}
+.wc-sm{font-size:calc(var(--wcw)*.6)}
+.wc-b{color:#1A73E8}
+.wc-cr{align-items:flex-end;justify-content:flex-start;padding:0 0 3px 3px}
+.wc-cy b{font-size:calc(var(--wcw)*.42);font-weight:800;color:#D93025;line-height:1}
+.wc-ln{height:3px;background:#202124;border-radius:2px;align-self:end;margin-bottom:-1.5px;z-index:1}
+.wc-dl{align-self:end;height:7px;border-top:2.5px solid #202124;border-bottom:2.5px solid #202124;margin-bottom:-3px;box-sizing:border-box;z-index:1}
+.wc-dl0{border-color:#C5CBD3}
+.wc-rs{color:#188038}
+.wc-ok{color:#188038}
+.wc-on{background:rgba(26,115,232,.12)}
+.wc-box{display:block;width:calc(var(--wcw) - 6px);height:calc(var(--wcw) - 6px);border:2px dashed #BDC1C6;border-radius:7px;background:#fff;box-sizing:border-box}
+input.wc-box{border-style:solid;border-color:#9AA0A6;font:700 calc(var(--wcw)*.66)/1 var(--font-d);text-align:center;color:#188038;padding:0;-webkit-appearance:none;appearance:none;outline:none;caret-color:#1A73E8}
+input.wc-box:focus{border-color:#1A73E8;box-shadow:0 0 0 3px #D2E3FC}
+.wc-cbox{display:block;width:calc(var(--wcw)*.56);height:calc(var(--wcw)*.56);border:1.5px dashed #F28B82;border-radius:5px;background:#FFF8F7;box-sizing:border-box}
+input.wc-cbox{border-style:solid;border-color:#F28B82;font:800 calc(var(--wcw)*.4)/1 var(--font-d);text-align:center;color:#D93025;padding:0;-webkit-appearance:none;appearance:none;outline:none}
+input.wc-cbox:focus{border-color:#D93025;box-shadow:0 0 0 3px #FCE8E6}
+.wc-wk{color:#3C4043}
+.wc-mn{color:#5F6368}
+.wc-ul2{height:2.5px;background:#202124;align-self:end;margin-bottom:-1.25px;z-index:1}
+.wc-last{color:#202124}
+.wc-down{color:#1A73E8}
+.wc-sbox{display:block;width:calc(var(--wcw) - 8px);height:calc(var(--wcw) - 8px);border:1.5px dashed #D2D6DC;border-radius:6px;background:#fff;box-sizing:border-box}
+input.wc-sbox{border-style:solid;border-color:#DADCE0;font:700 calc(var(--wcw)*.56)/1 var(--font-d);text-align:center;color:#3C4043;padding:0;-webkit-appearance:none;appearance:none;outline:none;background:#FAFBFC}
+input.wc-sbox:focus{border-color:#8AB4F8}
+.wc-guide{margin:0;font-weight:700;font-size:1.02rem;color:#1A56C4;text-align:center;line-height:1.35}
+.wc-rule{margin:0;font-size:.86rem;color:#5F6368;text-align:center;line-height:1.4;max-width:34em}
+.wc-rule b{color:#D93025}
+.wc-lab{margin:0;font-size:.9rem;color:#5F6368;font-weight:600}
+.wc-ins{font-size:1.15rem!important}

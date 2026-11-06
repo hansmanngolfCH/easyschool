@@ -1747,6 +1747,41 @@ ins.dfy{text-decoration:none;color:#0d652d;background:rgba(52,168,83,.22);border
 .xg-msg{line-height:1.3;padding:0 4px}
 .xg-calc{font-size:1.1rem;line-height:34px;margin-right:auto}
 .gap{color:#c5cad3;font-weight:400}
+/* Schriftlich rechnen: Häuschenpapier wie im Heft */
+.wcf{width:100%;display:flex;flex-direction:column;align-items:center;gap:8px;margin:4px 0}
+.wcg{--wcw:min(38px,calc((100vw - 84px) / var(--wcn)));display:grid;width:max-content;justify-content:center;font-family:var(--font-d);font-variant-numeric:tabular-nums;background-color:#fff;background-image:linear-gradient(#E1E7F0 1px,transparent 1px),linear-gradient(90deg,#E1E7F0 1px,transparent 1px);background-size:var(--wcw) var(--wcw);border:1px solid #E1E7F0;border-radius:6px;margin:0 auto}
+.xg-vis .wcg{--wcw:min(34px,calc((100vw - 96px) / var(--wcn)))}
+.wc-c{position:relative;display:flex;align-items:center;justify-content:center;font-size:calc(var(--wcw)*.74);font-weight:700;color:#202124;line-height:1}
+.wc-op{color:#5F6368}
+.wc-sm{font-size:calc(var(--wcw)*.6)}
+.wc-b{color:#1A73E8}
+.wc-cr{align-items:flex-end;justify-content:flex-start;padding:0 0 3px 3px}
+.wc-cy b{font-size:calc(var(--wcw)*.42);font-weight:800;color:#D93025;line-height:1}
+.wc-ln{height:3px;background:#202124;border-radius:2px;align-self:end;margin-bottom:-1.5px;z-index:1}
+.wc-dl{align-self:end;height:7px;border-top:2.5px solid #202124;border-bottom:2.5px solid #202124;margin-bottom:-3px;box-sizing:border-box;z-index:1}
+.wc-dl0{border-color:#C5CBD3}
+.wc-rs{color:#188038}
+.wc-ok{color:#188038}
+.wc-on{background:rgba(26,115,232,.12)}
+.wc-box{display:block;width:calc(var(--wcw) - 6px);height:calc(var(--wcw) - 6px);border:2px dashed #BDC1C6;border-radius:7px;background:#fff;box-sizing:border-box}
+input.wc-box{border-style:solid;border-color:#9AA0A6;font:700 calc(var(--wcw)*.66)/1 var(--font-d);text-align:center;color:#188038;padding:0;-webkit-appearance:none;appearance:none;outline:none;caret-color:#1A73E8}
+input.wc-box:focus{border-color:#1A73E8;box-shadow:0 0 0 3px #D2E3FC}
+.wc-cbox{display:block;width:calc(var(--wcw)*.56);height:calc(var(--wcw)*.56);border:1.5px dashed #F28B82;border-radius:5px;background:#FFF8F7;box-sizing:border-box}
+input.wc-cbox{border-style:solid;border-color:#F28B82;font:800 calc(var(--wcw)*.4)/1 var(--font-d);text-align:center;color:#D93025;padding:0;-webkit-appearance:none;appearance:none;outline:none}
+input.wc-cbox:focus{border-color:#D93025;box-shadow:0 0 0 3px #FCE8E6}
+.wc-wk{color:#3C4043}
+.wc-mn{color:#5F6368}
+.wc-ul2{height:2.5px;background:#202124;align-self:end;margin-bottom:-1.25px;z-index:1}
+.wc-last{color:#202124}
+.wc-down{color:#1A73E8}
+.wc-sbox{display:block;width:calc(var(--wcw) - 8px);height:calc(var(--wcw) - 8px);border:1.5px dashed #D2D6DC;border-radius:6px;background:#fff;box-sizing:border-box}
+input.wc-sbox{border-style:solid;border-color:#DADCE0;font:700 calc(var(--wcw)*.56)/1 var(--font-d);text-align:center;color:#3C4043;padding:0;-webkit-appearance:none;appearance:none;outline:none;background:#FAFBFC}
+input.wc-sbox:focus{border-color:#8AB4F8}
+.wc-guide{margin:0;font-weight:700;font-size:1.02rem;color:#1A56C4;text-align:center;line-height:1.35}
+.wc-rule{margin:0;font-size:.86rem;color:#5F6368;text-align:center;line-height:1.4;max-width:34em}
+.wc-rule b{color:#D93025}
+.wc-lab{margin:0;font-size:.9rem;color:#5F6368;font-weight:600}
+.wc-ins{font-size:1.15rem!important}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1754,7 +1789,7 @@ ins.dfy{text-decoration:none;color:#0d652d;background:rgba(52,168,83,.22);border
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION="v5.23";
+var APP_VERSION="v5.24";
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -2763,7 +2798,7 @@ function vCol(v){
 }
 function visuals(list){
   if(!list||!list.length)return '';
-  var map={dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar,tbl:vTbl,chips:vChips,tline:vTline,flow:vFlow,anno:vAnno,cards:vCards,area:vArea,emo:vEmo,field:vField,clock:vClock,coins:vCoins,shape:vShape,mtab:vMtab,mreihe:vMreihe,symm:vSymm,solid:vSolid,nline:vNline,angle:vAngle,circle:vCircle,jug:vJug,quader:vQuader,par:vPar,blocks:vBlocks,jumps:vJumps,arr:vArr,col:vCol,wall:vWall,scene:vScene,geo:vGeo};
+  var map={wcol:vWcol,dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar,tbl:vTbl,chips:vChips,tline:vTline,flow:vFlow,anno:vAnno,cards:vCards,area:vArea,emo:vEmo,field:vField,clock:vClock,coins:vCoins,shape:vShape,mtab:vMtab,mreihe:vMreihe,symm:vSymm,solid:vSolid,nline:vNline,angle:vAngle,circle:vCircle,jug:vJug,quader:vQuader,par:vPar,blocks:vBlocks,jumps:vJumps,arr:vArr,col:vCol,wall:vWall,scene:vScene,geo:vGeo};
   return '<div class="visrow">'+list.map(function(v){return map[v.type]?map[v.type](v):''}).join('')+'</div>';
 }
 
@@ -2896,6 +2931,179 @@ function initPads(){
     cv.addEventListener('pointerup',end);cv.addEventListener('pointercancel',end);cv.addEventListener('pointerleave',end);
   });
 }
+
+/* ---------- Schriftlich rechnen: Untereinander-Raster (kl4–kl6, Oberstufe nutzt den Rechner) ---------- */
+var WC_T={'kl4-mathe-schriftlich-plus':1,'kl4-mathe-schriftlich-minus':1,'kl5-mathe-schriftlich-mal':1,'kl5-mathe-schriftlich-durch':1};
+var WCS={},WCSPEC={};
+var WC_PL=['Einer','Zehner','Hunderter','Tausender','Zehntausender'];
+function wcD(n){return String(n).split('').map(Number)}
+/* Löst die Aufgabe so, wie sie auf Papier steht. Übertrag = kleine Zahl über dem Strich (+1). */
+function wcSolve(op,a,b){
+  var s={op:op,a:a,b:b},i,k;
+  if(op==='+'||op==='−'||op==='×'){
+    var res=op==='+'?a+b:op==='−'?a-b:a*b;if(res<0)return null;
+    var da=wcD(a),db=wcD(b),dr=wcD(res),N=op==='−'?da.length:Math.max(da.length,dr.length,op==='+'?db.length:0);
+    if(op==='×'&&db.length>1)return null;
+    s.res=res;s.N=N;s.top=[];s.bot=[];s.out=[];s.car=[];s.guide=[];
+    for(i=0;i<N;i++){s.top.push(null);s.bot.push(null);s.out.push(null);s.car.push(0)}
+    da.forEach(function(d,j){s.top[N-da.length+j]=d});
+    if(op!=='×')db.forEach(function(d,j){s.bot[N-db.length+j]=d});
+    dr.forEach(function(d,j){s.out[N-dr.length+j]=d});
+    var c=0;
+    for(k=0;k<N;k++){i=N-1-k;var t=s.top[i],u=s.bot[i],pl=WC_PL[k]||'Stelle',g;
+      if(op==='+'){if(t==null&&u==null&&!c){g='';}else{var sum=(t||0)+(u||0)+c,parts=[t,u].filter(function(x){return x!=null});g=pl+': '+parts.join(' + ')+(c?' + '+c+' (Übertrag)':'')+' = _';c=sum>=10?1:0}}
+      else if(op==='−'){if(t==null){g=''}else{var uu=(u||0)+c;g=pl+': '+t+' − '+(c?'('+(u||0)+' + '+c+')':(u||0))+(t<uu?' geht nicht. Rechne mit 10 mehr: '+(t+10)+' − '+uu+' = _':' = _');c=t<uu?1:0}}
+      else{if(t==null){g=c?pl+': nur noch der Übertrag '+c:'';c=0}else{var p=t*b+c;g=pl+': '+t+' × '+b+(c?' + '+c+' (Übertrag)':'')+' = _';c=Math.floor(p/10)}}
+      s.guide[i]=g;if(i>0&&c)s.car[i-1]=c}
+    return s}
+  if(op===':'){
+    if(b<1||b>9)return null;
+    var D=wcD(a),n=D.length,pos=0,cur=0,qd=[],rows=[];
+    while(pos<n&&cur<b&&pos<n){cur=cur*10+D[pos];pos++;if(cur>=b)break}
+    var first=true;
+    while(true){var x=Math.floor(cur/b),pr=x*b,rm=cur-pr;qd.push(x);
+      s.guide=s.guide||[];s.guide.push('Wie oft passt '+b+' in '+cur+'? Dann mal '+b+' und abziehen.');
+      rows.push({v:pr,end:pos-1,minus:1});
+      if(pos<n){rm=rm*10+D[pos];rows.push({v:rm,end:pos,dig:String(rm).length<2&&rm<10?1:0});pos++;cur=rm}
+      else{rows.push({v:rm,end:pos-1,last:1});break}
+      first=false}
+    var q=Math.floor(a/b);if(Number(qd.join(''))!==q)return null;
+    s.res=q;s.rest=a%b;s.N=n;s.qd=wcD(q);s.rows=rows;s.D=D;return s}
+  return null;
+}
+/* Welche Aufgabe steckt in Karte/Prüfungsfrage? Nur bei den schriftlichen Themen. */
+function wcFor(tid,it){
+  if(!it||!WC_T[tid])return null;
+  var q=String(it.q||''),m,o=null,ans=it.a!=null?String(it.a):(it.type==='mc'&&it.options?String(it.options[it.answer]):String((it.answer||[''])[0]));
+  if(m=/^(\d+) ([+−×:]) (\d+) =( _ \(mit Rest\))?$/.exec(q))o={op:m[2],a:+m[1],b:+m[3],pure:1};
+  else if(m=/^Rechne (\d+) : (\d+)\.$/.exec(q))o={op:':',a:+m[1],b:+m[2],pure:1};
+  else if(m=/(\d+) Packungen mit je (\d+)/.exec(q))o={op:'×',a:+m[2],b:+m[1]};
+  else if(!/Übertrag|Einer|Rest gibt|Probe|_/.test(q)&&it.steps&&it.steps.length){var st=String(it.steps[it.steps.length-1][0]);if(m=/^(\d+) ([+−×:]) (\d+) = (\d+)( Rest \d+)?$/.exec(st))o={op:m[2],a:+m[1],b:+m[3]}}
+  if(!o)return null;
+  var s=wcSolve(o.op,o.a,o.b);if(!s)return null;
+  var mr=/^(\d+)(?: Rest (\d+))?$/.exec(ans.trim());if(!mr||+mr[1]!==s.res)return null;
+  if(mr[2]!=null&&+mr[2]!==s.rest)return null;
+  s.pure=o.pure;s.withRest=mr[2]!=null;return s;
+}
+var WC_ACT=null;
+function wcCell(col,row,cls,html,span){if(WC_ACT!=null&&col===WC_ACT&&/wc-dg|wc-rs|wc-cr/.test(cls))cls+=' wc-on';return '<span class="wc-c '+cls+'" data-col="'+col+'" style="grid-column:'+col+(span?' / span '+span:'')+';grid-row:'+row+'">'+html+'</span>'}
+function wcIn(key,r,i,val,cls,col){return '<input class="wcin '+cls+'" data-k="'+esc(key)+'" data-r="'+r+'" data-i="'+i+'" data-col="'+col+'" inputmode="numeric" pattern="[0-9]*" maxlength="1" autocomplete="off" aria-label="'+(r==='c'?'Übertrag':r==='s'?'Notiz':'Ziffer')+'" value="'+esc(val||'')+'">'}
+/* v: {type:'wcol',s|op,a,b, mode:'show'|'blank'|'live', upto, hideRes, key} – Häuschenpapier wie im Heft */
+function vWcol(v){
+  var s=v.s||wcSolve(v.op,v.a,v.b);if(!s)return '';
+  var mode=v.mode||'show',key=v.key||'',st=mode==='live'?(WCS[key]||(WCS[key]={r:{},c:{},s:{},x:{}})):null,o='',i;
+  if(mode==='live')WCSPEC[key]=s;
+  WC_ACT=null;if(mode==='live'&&s.op!==':'){for(var a0=s.N-1;a0>=0;a0--)if(!st.r[a0]&&(s.guide[a0]||s.out[a0]!=null)){WC_ACT=a0+2;break}}
+  var up=v.upto==null?99:v.upto,shown=function(i){return s.N-1-i<up},hide=mode==='blank'||v.hideRes,cols,rows;
+  var box=function(r,i,val,col){return mode==='live'?wcIn(key,r,i,val,r==='c'?'wc-cbox':'wc-box',col):'<i class="'+(r==='c'?'wc-cbox':'wc-box')+'"></i>'};
+  if(s.op!==':'){
+    var N=s.N,mal=s.op==='×',db=mal?wcD(s.b):[],R1=1,R2=mal?1:2,RC=R2+1,RR=RC+1;
+    cols=N+1+(mal?1+db.length:0);rows=RR;
+    for(i=0;i<N;i++){var col=i+2;
+      if(s.top[i]!=null)o+=wcCell(col,R1,'wc-dg',s.top[i]);
+      if(!mal&&s.bot[i]!=null)o+=wcCell(col,R2,'wc-dg',s.bot[i]);
+      var cv=s.car[i];
+      if(i<N-1){
+        if(mode==='live')o+=wcCell(col,RC,'wc-cr',box('c',i,st.c[i],col));
+        else if(mode==='blank'&&cv&&v.cslot)o+=wcCell(col,RC,'wc-cr',box('c',i,'',col));
+        else if(mode==='show'&&cv&&shown(i+1)&&!v.hideRes)o+=wcCell(col,RC,'wc-cr wc-cy','<b>'+cv+'</b>');
+        else o+=wcCell(col,RC,'wc-cr','');
+      }else o+=wcCell(col,RC,'wc-cr','');
+      if(mode==='live')o+=wcCell(col,RR,'wc-rs',box('r',i,st.r[i],col));
+      else if(hide)o+=wcCell(col,RR,'wc-rs',box('r',i,'',col));
+      else if(s.out[i]!=null&&shown(i))o+=wcCell(col,RR,'wc-rs wc-ok',s.out[i]);
+      else o+=wcCell(col,RR,'wc-rs','');
+    }
+    if(mal){o+=wcCell(N+2,R1,'wc-op','×');db.forEach(function(d,j){o+=wcCell(N+3+j,R1,'wc-dg wc-b',d)})}
+    else o+=wcCell(1,R2,'wc-op',s.op==='−'?'−':'+');
+    o+='<span class="wc-ln" style="grid-column:1 / span '+(mal?N+1:N+1)+';grid-row:'+RC+'"></span>';
+    if(!hide&&mode!=='live'&&up>=N)o+='<span class="wc-dl" style="grid-column:2 / span '+N+';grid-row:'+RR+'"></span>';
+    if(mode==='live'||hide)o+='<span class="wc-dl wc-dl0" style="grid-column:2 / span '+N+';grid-row:'+RR+'"></span>';
+  }else{
+    var n=s.N,dvs=wcD(s.b),q=s.qd,cq=n+2,cb=cq+1,ce=cb+dvs.length,cr=ce+1,rc=cr+q.length;
+    cols=s.withRest?rc+1:rc-1;rows=1+s.rows.length;
+    s.D.forEach(function(d,j){o+=wcCell(j+2,1,'wc-dg',d)});
+    o+=wcCell(cq,1,'wc-op',':');dvs.forEach(function(d,j){o+=wcCell(cb+j,1,'wc-dg wc-b',d)});o+=wcCell(ce,1,'wc-op','=');
+    var qShow=function(j){return j<(v.upto==null?99:v.upto)};
+    q.forEach(function(d,j){var c=cr+j;
+      if(mode==='live')o+=wcCell(c,1,'wc-rs',box('r',j,st.r[j],c));
+      else if(hide||!qShow(j))o+=wcCell(c,1,'wc-rs',box('r',j,'',c));
+      else o+=wcCell(c,1,'wc-rs wc-ok',d)});
+    if(s.withRest){o+=wcCell(rc,1,'wc-op wc-sm','R');
+      if(mode==='live')o+=wcCell(rc+1,1,'wc-rs',box('x',0,st.x[0],rc+1));
+      else if(hide)o+=wcCell(rc+1,1,'wc-rs',box('x',0,'',rc+1));
+      else o+=wcCell(rc+1,1,'wc-rs wc-ok',s.rest)}
+    o+='<span class="wc-dl'+(mode==='live'||hide?' wc-dl0':'')+'" style="grid-column:'+cr+' / span '+q.length+';grid-row:1"></span>';
+    var rowN=2,si=0;
+    s.rows.forEach(function(r,ri){var ds=wcD(r.v),st0=r.end-ds.length+1,vis=!(v.upto!=null&&Math.floor(ri/2)>=v.upto);
+      if(r.minus)o+=wcCell(st0+1,rowN,'wc-op wc-mn','−');
+      ds.forEach(function(d,j){var c=st0+j+2,cls='wc-wk'+(r.last?' wc-last':'')+(!r.minus&&!r.last&&j===ds.length-1?' wc-down':'');
+        if(mode==='live')o+=wcCell(c,rowN,cls,wcIn(key,'s',si,st.s[si],'wc-sbox',c));
+        else if(hide||!vis)o+=wcCell(c,rowN,cls,'<i class="wc-sbox"></i>');
+        else o+=wcCell(c,rowN,cls,d);
+        si++});
+      if(r.minus)o+='<span class="wc-ul2" style="grid-column:'+(st0+2)+' / span '+ds.length+';grid-row:'+rowN+'"></span>';
+      rowN++});
+  }
+  var g='<div class="wcg'+(s.op===':'?' wcdv':'')+'" style="--wcn:'+cols+';grid-template-columns:repeat('+cols+',var(--wcw));grid-template-rows:repeat('+rows+',var(--wcw))">'+o+'</div>';
+  return wcWrap(v,s,key,g,mode);
+}
+function wcWrap(v,s,key,g,mode){WC_ACT=null;
+  var guide=mode==='live'?'<p class="wc-guide" data-k="'+esc(key)+'">'+esc(wcGuide(s,WCS[key]))+'</p><p class="wc-rule">'+wcRule(s)+'</p>':'';
+  return '<figure class="vis wcf'+(mode==='live'?' wclive':'')+'" data-k="'+esc(key)+'">'+(v.lab?'<p class="wc-lab">'+esc(v.lab)+'</p>':'')+g+guide+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+}
+function wcRule(s){
+  if(s.op==='+')return 'Von rechts nach links. Gibt es 10 oder mehr: Einerziffer unten hinschreiben, die <b>1</b> klein über den Strich bei der nächsten Stelle.';
+  if(s.op==='−')return 'Von rechts nach links. Oben zu klein? Rechne mit 10 mehr und schreibe eine kleine <b>1</b> über den Strich bei der nächsten Stelle. Diese 1 zählst du unten dazu.';
+  if(s.op==='×')return 'Von rechts nach links. Einerziffer unten hinschreiben, die Zehner als kleine <b>Zahl</b> über den Strich bei der nächsten Stelle.';
+  return 'Von links nach rechts. Teilen, mal rechnen, abziehen, nächste Ziffer herunterholen.'+(s.withRest?' Was am Schluss übrig bleibt, kommt hinter R.':'');
+}
+function wcGuide(s,st){
+  st=st||{r:{},c:{},s:{},x:{}};var i;
+  if(s.op===':'){for(i=0;i<s.qd.length;i++)if(!st.r[i])return s.guide[i]||'';if(s.withRest&&!st.x[0])return 'Was bleibt am Schluss übrig? Schreibe es hinter R.';return 'Alles ausgefüllt? Dann prüfe dein Ergebnis.'}
+  for(i=s.N-1;i>=0;i--){if(!st.r[i]&&(s.guide[i]||s.out[i]!=null))return (s.guide[i]||WC_PL[s.N-1-i]+': _')}
+  return 'Alles ausgefüllt? Dann prüfe dein Ergebnis.'
+}
+function wcValue(key){
+  var s=WCSPEC[key],st=WCS[key];if(!s||!st)return '';
+  var n=s.op===':'?s.qd.length:s.N,d=[],i,started=false,gap=false;
+  for(i=0;i<n;i++){var x=st.r[i]||'';if(x)started=true;if(started){if(!x)gap=true;d.push(x)}}
+  if(gap||!d.length)return '';
+  var v=String(Number(d.join('')));
+  if(s.op===':'&&s.withRest){if(!st.x[0])return '';v+=' Rest '+st.x[0]}
+  return v;
+}
+function wcHl(fig,s,st){
+  if(!fig)return;var col=null,i;
+  if(s.op!==':'){for(i=s.N-1;i>=0;i--)if(!st.r[i]&&(s.guide[i]||s.out[i]!=null)){col=i+2;break}}
+  fig.querySelectorAll('span[data-col]').forEach(function(e){e.classList.toggle('wc-on',col!=null&&+e.getAttribute('data-col')===col&&/wc-dg|wc-rs|wc-cr/.test(e.className))});
+}
+function wcBind(root){
+  (root||document).querySelectorAll('figure.wclive').forEach(function(f){var k=f.getAttribute('data-k');if(WCSPEC[k])wcHl(f,WCSPEC[k],WCS[k]||{r:{}})});
+}
+document.addEventListener('input',function(e){
+  var t=e.target;if(!t||!t.classList||!t.classList.contains('wcin'))return;
+  var v=String(t.value||'').replace(/\D/g,'').slice(-1);t.value=v;
+  var k=t.getAttribute('data-k'),r=t.getAttribute('data-r'),i=+t.getAttribute('data-i'),st=WCS[k]||(WCS[k]={r:{},c:{},s:{},x:{}}),s=WCSPEC[k];
+  st[r][i]=v;
+  var val=wcValue(k);
+  if(k.indexOf('e:')===0){var qid=k.split(':').pop();nav.answers=nav.answers||{};nav.answers[qid]=val}
+  else{nav.typed=val;var a=document.getElementById('ans');if(a)a.value=val}
+  var fig=t.closest('figure'),gp=fig&&fig.querySelector('.wc-guide');if(gp&&s)gp.textContent=wcGuide(s,st);
+  if(s)wcHl(fig,s,st);
+  if(v&&fig){var nx=null;
+    if(r==='r'&&s&&s.op!==':')nx=fig.querySelector('input[data-r="r"][data-i="'+(i-1)+'"]');
+    else if(r==='r')nx=fig.querySelector('input[data-r="r"][data-i="'+(i+1)+'"]')||fig.querySelector('input[data-r="x"]');
+    else if(r==='c')nx=fig.querySelector('input[data-r="r"][data-i="'+i+'"]');
+    else if(r==='s')nx=fig.querySelector('input[data-r="s"][data-i="'+(i+1)+'"]');
+    if(nx&&!nx.value)try{nx.focus()}catch(x){}}
+});
+document.addEventListener('keydown',function(e){
+  var t=e.target;if(!t||!t.classList||!t.classList.contains('wcin'))return;
+  if(e.key==='Enter'){e.preventDefault();if(nav.view==='practice'&&typeof ACT!=='undefined'&&ACT.check)ACT.check()}
+  if(e.key==='Backspace'&&!t.value){var f=t.closest('figure'),r=t.getAttribute('data-r'),i=+t.getAttribute('data-i'),s=WCSPEC[t.getAttribute('data-k')],p=null;
+    if(r==='r'&&f&&s)p=f.querySelector('input[data-r="r"][data-i="'+(s.op===':'?i-1:i+1)+'"]');if(p){e.preventDefault();try{p.focus()}catch(x){}}}
+});
 
 
 /* ---------- Ansichten: Start, Klasse, Fach, Verstehen ---------- */
@@ -3165,6 +3373,7 @@ function examArt(){
   +'<g transform="rotate(-4 260 160)"><rect x="200" y="148" width="124" height="24" rx="4" fill="#FDE18A" stroke="#C88C00" stroke-width="2"/>'+ruler+'</g>'
   +'<g transform="translate(300 40)"><path d="M0 -18l5.4 11 12 1.7-8.7 8.5 2 12L0 8.2-10.7 15.2l2-12L-17.4 -5.3l12-1.7z" fill="#FBBC04" stroke="#E37400" stroke-width="2"/></g></svg>';
 }
+function wcIns(w){return w.op===':'?(w.withRest?'Rechne schriftlich. Schreibe den Rest hinter R.':'Rechne schriftlich.'):'Rechne schriftlich untereinander.'}
 function qBlock(q){
   var p=qParts(q);
   return '<div class="mqx"><span class="qm">'+mqFix(rt(p.main))+sayBtn(q.say)+'</span>'+(p.ctx?'<span class="qc">'+mqFix(rt(p.ctx))+'</span>':'')+'<span class="qi">'+esc(p.inst)+'</span></div>';
@@ -3291,7 +3500,10 @@ function vPractice(){
   if(isV(c))return head+vVocab(n,k,c,stageOf(n,k))+'</div>';
   var pkey='p:'+k,pd=padHTML(pkey,c.q),hs=hintList(n,k,c,0),chk=!c.opts&&!c.match&&!c.trace&&checkable(c);
   if(c.opts&&!n.opts)n.opts=shuffle(c.opts.map(function(t){return {t:t,ok:c.multi?c.ans.indexOf(t)>=0:t===c.a}}));
-  var h2=head+'<section class="card flash">'+qHtml(c.q)+sayBtn(c.say)+visuals(c.visuals)+'</section>';
+  var wv=wcFor(x&&x.t&&x.t.id,c),wk='p:'+n.idx+':'+k;
+  if(wv&&n._wck!==wk){n._wck=wk;WCS[wk]={r:{},c:{},s:{},x:{}}}
+  var h2=head+'<section class="card flash">'+(wv?(wv.pure?'<p class="fq wc-ins">'+wcIns(wv)+'</p>':qHtml(c.q))+vWcol({s:wv,mode:n.revealed?'show':'live',key:wk,lab:wv.pure?'':'Schreibe die Rechnung untereinander:'}):qHtml(c.q)+sayBtn(c.say)+visuals(c.visuals))+'</section>';
+  if(wv)chk=!n.revealed;
   if(!n.revealed){
     h2+='<div class="tools">'+(hs.length?'<button class="btn sm" data-act="hint"'+(n.hintN>=hs.length?' disabled':'')+'>Tipp'+(n.hintN<hs.length?' ('+(n.hintN+1)+'/'+hs.length+')':'')+'</button>':'')+pd.btn+'</div>'+hintBoxes(n,hs);
     h2+=pd.box;
@@ -3299,7 +3511,8 @@ function vPractice(){
     else if(c.match)h2+=matchHTML(n,c);
     else if(c.trace)h2+='<div class="trcw"><canvas id="trc" width="600" height="600" data-t="'+esc(c.trace)+'" aria-label="Zeichenfläche"></canvas></div>'+(n.err?'<p class="fb no">'+esc(n.err)+'</p>':'')+'<div class="row"><button class="btn" data-act="trclear">Neu</button><button class="btn pri" data-act="trcheck">Fertig</button><button class="btn ghost" data-act="reveal">Weiter</button></div>';
     else if(c.opts)h2+='<div class="opts">'+n.opts.map(function(op,i){return '<button class="o" data-act="mpick" data-i="'+i+'">'+rt(op.t)+'</button>'}).join('')+'</div>';
-    if(chk)h2+='<div class="stack" style="padding:0;gap:8px"><label class="lab2" for="ans">'+(c.pre!=null?'Verbessere direkt im Feld':'Dein Ergebnis')+'</label>'+(c.pre!=null?'<div class="fixcol"><textarea class="inp fixin" id="ans" rows="1" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">'+esc(n.typed||c.pre||'')+'</textarea><button class="btn pri" data-act="check">Absenden</button></div>':'<div class="row"><input class="inp" id="ans" value="'+esc(n.typed||'')+'" placeholder="'+ph(cardAns(c)[0])+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"><button class="btn pri" data-act="check">Prüfen</button></div>')+''+(n.err?'<p class="fb no">'+esc(n.err)+'</p>':'')+'</div>';
+    if(chk&&wv)h2+='<div class="stack" style="padding:0;gap:8px"><input type="hidden" id="ans" value="'+esc(n.typed||'')+'"><button class="btn pri big" data-act="check">Prüfen</button>'+(n.err?'<p class="fb no">'+esc(n.err)+'</p>':'')+'</div>';
+    else if(chk)h2+='<div class="stack" style="padding:0;gap:8px"><label class="lab2" for="ans">'+(c.pre!=null?'Verbessere direkt im Feld':'Dein Ergebnis')+'</label>'+(c.pre!=null?'<div class="fixcol"><textarea class="inp fixin" id="ans" rows="1" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">'+esc(n.typed||c.pre||'')+'</textarea><button class="btn pri" data-act="check">Absenden</button></div>':'<div class="row"><input class="inp" id="ans" value="'+esc(n.typed||'')+'" placeholder="'+ph(cardAns(c)[0])+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"><button class="btn pri" data-act="check">Prüfen</button></div>')+''+(n.err?'<p class="fb no">'+esc(n.err)+'</p>':'')+'</div>';
     h2+=(c.opts||c.match||c.trace?'':'<button class="btn'+(chk?' ghost':' pri big')+'" data-act="reveal">'+(chk?'Ich komme nicht drauf, Lösung zeigen':'Antwort zeigen')+'</button>');
   }else{
     var vd=n.verdict;
@@ -3351,6 +3564,7 @@ function vPaper(n,t,qs){
   return h+'</tbody></table></div><button class="btn pri big" data-act="finish">Abgeben</button></div>'}
 function vExam(){
   var n=nav,t=topicById(n.topicId),mathe=!isLangT(t),qs=examQs(n,t);
+  if(n.phase==='intro'){for(var wk0 in WCS)if(wk0.indexOf('e:')===0)delete WCS[wk0]}
   if(n.phase==='intro')return '<div class="stack"><div><p class="eyebrow">Musterprüfung</p><h1>'+esc(t.title)+'</h1></div>'+coach('Jetzt zählt es ernst! Zeig, was du gelernt hast. Es ist aber nur eine Musterprüfung: Fehler sind erlaubt.',1)+examArt()+examInfo(qs.length)+(mathe?'':'<div class="modes"><button class="btn seg'+(n.mode!=='kurz'?' on':'')+'" data-act="emode" data-m="alles">Alles</button><button class="btn seg'+(n.mode==='kurz'?' on':'')+'" data-act="emode" data-m="kurz">Kurztext</button></div>')+'<div class="row"><button class="btn pri big" data-act="start">Los geht\'s</button><button class="btn big" data-act="back">Zurück</button></div></div>';
   if(n.phase==='run'&&!mathe)return vPaper(n,t,qs);
   if(n.phase==='run'){
@@ -3358,6 +3572,7 @@ function vExam(){
     var html='<div class="paperpage"><p class="ptitle">Prüfung · '+esc(t.title)+'</p><div class="sheet"><div class="shead"><span>Name: <b>'+esc(n.pname||'')+'</b></span><span>Datum: <b>'+ds+'</b></span></div>'+(t.id.indexOf('bruch')>=0?'<p class="sub" style="margin:0 0 4px">Alle Brüche so weit wie möglich kürzen.</p>':'')+'<ol class="mq">';
     qs.forEach(function(q,i){
       var key='e:'+t.id+':'+q.id,pd=padHTML(key,q.q);
+      var wq=wcFor(t.id,q);if(wq){html+='<li><div class="mqt"><span class="nc">'+(i+1)+'</span>'+(wq.pure?'<div class="mqx"><span class="qm">'+wcIns(wq)+'</span></div>':qBlock(q))+'</div>'+vWcol({s:wq,mode:'live',key:'e:'+t.id+':'+q.id})+'<div class="tools">'+pd.btn+'</div>'+pd.box+'</li>';return}
       html+='<li><div class="mqt"><span class="nc">'+(i+1)+'</span>'+qBlock(q)+'</div>'+visuals(q.visuals)+(q.type==='mc'?'<div class="mcopts">'+q.options.map(function(o,j){return '<label class="mco"><input type="radio" name="r-'+q.id+'" data-q="'+q.id+'" value="'+j+'"'+(n.answers[q.id]===j?' checked':'')+'><span class="mcl">'+String.fromCharCode(65+j)+'</span><span>'+rt(o)+'</span></label>'}).join('')+'</div>':(q.pre!=null?'<textarea class="pin fixin" id="in-'+q.id+'" data-q="'+q.id+'" rows="1" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">'+esc(n.answers[q.id]||q.pre||'')+'</textarea>':'<input class="pin" id="in-'+q.id+'" data-q="'+q.id+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" value="'+esc(n.answers[q.id]||'')+'">')+'<div class="tools">'+pd.btn+'</div>'+pd.box)+'</li>';
     });
     html+='</ol></div>';
@@ -3379,7 +3594,7 @@ function vExam(){
     html3+='</tbody></table>';
   }else{
     html3+=(t.subject==='mathe'&&t.id.indexOf('bruch')>=0?'<p class="sub" style="margin:0 0 4px">Alle Brüche so weit wie möglich kürzen.</p>':'')+'<ol class="mq">';
-    r.items.forEach(function(it,i){html3+='<li><div class="mqt"><span class="nc">'+(i+1)+'</span>'+qBlock(it.q)+'</div>'+visuals(it.q.visuals)+rowAns(it,i)+'</li>'});
+    r.items.forEach(function(it,i){var wq=wcFor(t.id,it.q);html3+='<li><div class="mqt"><span class="nc">'+(i+1)+'</span>'+qBlock(it.q)+'</div>'+(wq?vWcol({s:wq,mode:'show'}):visuals(it.q.visuals))+rowAns(it,i)+'</li>'});
     html3+='</ol>';
   }
   html3+='</div><p class="sub" style="margin:10px 2px">'+esc(msg)+' · +'+r.xp+' XP</p>';
@@ -3630,7 +3845,7 @@ var ACT={
   exam:function(b){go({view:'exam',child:nav.child,subject:nav.subject,topicId:b.dataset.id,phase:'intro',answers:{},padOpen:{}})},
   emode:function(b){nav.mode=b.dataset.m;nav.qlist=null;render()},
   edir:function(b){nav.edir=b.dataset.d;nav.qlist=null;render()},
-  start:function(){nav.pname=funnyName(topicById(nav.topicId));nav.qlist=mkQs(nav,topicById(nav.topicId));clearPads('e:'+nav.topicId+':');nav.phase='run';nav.started=Date.now();nav.answers={};nav.padOpen={};render();window.scrollTo(0,0)},
+  start:function(){for(var wk1 in WCS)if(wk1.indexOf('e:')===0)delete WCS[wk1];nav.pname=funnyName(topicById(nav.topicId));nav.qlist=mkQs(nav,topicById(nav.topicId));clearPads('e:'+nav.topicId+':');nav.phase='run';nav.started=Date.now();nav.answers={};nav.padOpen={};render();window.scrollTo(0,0)},
   retake:function(){clearPads('e:'+nav.topicId+':');nav.phase='intro';nav.answers={};nav.result=null;nav.qlist=null;render();window.scrollTo(0,0)},
   finish:function(){finishExam()}
 };
@@ -4580,27 +4795,28 @@ function xgCommaVar(sent){
 function xgCardPool(t,all){
   var items=[],BAD=/\b(Bild|Grafik|Zeichnung|siehe|abgebildet|rote Linie|Tabelle|oben|unten)\b/i,textOnly=function(c){return c.q&&c.q.length<=140&&(c.visuals||!BAD.test(c.q))};
   var shortA=[];all.forEach(function(x){x.cards.forEach(function(c){if(!isV(c)&&textOnly(c)&&c.a&&String(c.a).length<=30)shortA.push(String(c.a))})});
+  var WQ=function(it){var w=wcFor(t.id,it);return w?[w.pure?wcIns(w):it.q,[{type:'wcol',s:w,mode:'blank'}]]:[it.q,it.visuals]};
   t.cards.forEach(function(c){
     if(isV(c)||!textOnly(c)||c.a==null)return;
-    var right=String(c.a);
+    var right=String(c.a),wq=WQ(c);
     if(Array.isArray(c.opts)&&c.opts.length>=3&&c.opts.map(String).indexOf(right)>=0){
       var oth=c.opts.map(String).filter(function(x,i,aa){return x!==right&&aa.indexOf(x)===i&&x.length<=60});
-      if(right.length<=60&&oth.length>=2)items.push(xgOptRound(c.q,right,shuffle(oth).slice(0,3),null,c.visuals,xgWhy(c)));
+      if(right.length<=60&&oth.length>=2)items.push(xgOptRound(wq[0],right,shuffle(oth).slice(0,3),null,wq[1],xgWhy(c)));
     }else if(c.pre&&Array.isArray(c.ans)&&c.ans[0]&&String(c.ans[0]).length<=60&&String(c.pre).length<=60){
       var r2=String(c.ans[0]),ot=[String(c.pre)].concat(xgCommaVar(r2)).filter(function(x,i,aa){return x!==r2&&aa.indexOf(x)===i});
       if(ot.length>=2&&/,/.test(r2+c.pre))items.push(xgOptRound('Welcher Satz ist richtig?',r2,ot.slice(0,3)));
     }else if(right.length<=30&&!/\n/.test(right)){
-      var d=xgDis(right,shortA,3);if(d.length>=2)items.push(xgOptRound(c.q,right,d,null,c.visuals,xgWhy(c)));
+      var d=xgDis(right,shortA,3);if(d.length>=2)items.push(xgOptRound(wq[0],right,d,null,wq[1],xgWhy(c)));
     }
   });
   var lib=[];
   t.exam.questions.forEach(function(q){
     if(q.type==='mc'&&Array.isArray(q.options)&&q.options.length>=3&&typeof q.answer==='number'&&q.q.length<=140&&!BAD.test(q.q)&&q.options.every(function(o){return String(o).length<=60})){
-      var rt=String(q.options[q.answer]);items.push(xgOptRound(q.q,rt,q.options.map(String).filter(function(x,i){return i!==q.answer}).slice(0,3),null,q.visuals,String(q.explain||'')))
+      var rt=String(q.options[q.answer]),wq=WQ(q);items.push(xgOptRound(wq[0],rt,q.options.map(String).filter(function(x,i){return i!==q.answer}).slice(0,3),null,wq[1],String(q.explain||'')))
     }else if(q.type==='input'&&q.answer&&q.answer[0]&&String(q.answer[0]).length<=24&&!BAD.test(q.q))lib.push(q)
   });
   var libA=lib.map(function(q){return String(q.answer[0])}).concat(shortA);
-  lib.forEach(function(q){var rt=String(q.answer[0]),d=xgDis(rt,libA,3);if(d.length>=2)items.push(xgOptRound(q.q,rt,d,null,q.visuals,String(q.explain||'')))});
+  lib.forEach(function(q){var rt=String(q.answer[0]),d=xgDis(rt,libA,3),wq=WQ(q);if(d.length>=2)items.push(xgOptRound(wq[0],rt,d,null,wq[1],String(q.explain||'')))});
   return items
 }
 function xgVocabPool(t,all){

@@ -242,7 +242,7 @@ var ACT={
   exam:function(b){go({view:'exam',child:nav.child,subject:nav.subject,topicId:b.dataset.id,phase:'intro',answers:{},padOpen:{}})},
   emode:function(b){nav.mode=b.dataset.m;nav.qlist=null;render()},
   edir:function(b){nav.edir=b.dataset.d;nav.qlist=null;render()},
-  start:function(){nav.pname=funnyName(topicById(nav.topicId));nav.qlist=mkQs(nav,topicById(nav.topicId));clearPads('e:'+nav.topicId+':');nav.phase='run';nav.started=Date.now();nav.answers={};nav.padOpen={};render();window.scrollTo(0,0)},
+  start:function(){for(var wk1 in WCS)if(wk1.indexOf('e:')===0)delete WCS[wk1];nav.pname=funnyName(topicById(nav.topicId));nav.qlist=mkQs(nav,topicById(nav.topicId));clearPads('e:'+nav.topicId+':');nav.phase='run';nav.started=Date.now();nav.answers={};nav.padOpen={};render();window.scrollTo(0,0)},
   retake:function(){clearPads('e:'+nav.topicId+':');nav.phase='intro';nav.answers={};nav.result=null;nav.qlist=null;render();window.scrollTo(0,0)},
   finish:function(){finishExam()}
 };

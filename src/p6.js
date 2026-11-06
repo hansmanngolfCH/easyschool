@@ -88,27 +88,28 @@ function xgCommaVar(sent){
 function xgCardPool(t,all){
   var items=[],BAD=/\b(Bild|Grafik|Zeichnung|siehe|abgebildet|rote Linie|Tabelle|oben|unten)\b/i,textOnly=function(c){return c.q&&c.q.length<=140&&(c.visuals||!BAD.test(c.q))};
   var shortA=[];all.forEach(function(x){x.cards.forEach(function(c){if(!isV(c)&&textOnly(c)&&c.a&&String(c.a).length<=30)shortA.push(String(c.a))})});
+  var WQ=function(it){var w=wcFor(t.id,it);return w?[w.pure?wcIns(w):it.q,[{type:'wcol',s:w,mode:'blank'}]]:[it.q,it.visuals]};
   t.cards.forEach(function(c){
     if(isV(c)||!textOnly(c)||c.a==null)return;
-    var right=String(c.a);
+    var right=String(c.a),wq=WQ(c);
     if(Array.isArray(c.opts)&&c.opts.length>=3&&c.opts.map(String).indexOf(right)>=0){
       var oth=c.opts.map(String).filter(function(x,i,aa){return x!==right&&aa.indexOf(x)===i&&x.length<=60});
-      if(right.length<=60&&oth.length>=2)items.push(xgOptRound(c.q,right,shuffle(oth).slice(0,3),null,c.visuals,xgWhy(c)));
+      if(right.length<=60&&oth.length>=2)items.push(xgOptRound(wq[0],right,shuffle(oth).slice(0,3),null,wq[1],xgWhy(c)));
     }else if(c.pre&&Array.isArray(c.ans)&&c.ans[0]&&String(c.ans[0]).length<=60&&String(c.pre).length<=60){
       var r2=String(c.ans[0]),ot=[String(c.pre)].concat(xgCommaVar(r2)).filter(function(x,i,aa){return x!==r2&&aa.indexOf(x)===i});
       if(ot.length>=2&&/,/.test(r2+c.pre))items.push(xgOptRound('Welcher Satz ist richtig?',r2,ot.slice(0,3)));
     }else if(right.length<=30&&!/\n/.test(right)){
-      var d=xgDis(right,shortA,3);if(d.length>=2)items.push(xgOptRound(c.q,right,d,null,c.visuals,xgWhy(c)));
+      var d=xgDis(right,shortA,3);if(d.length>=2)items.push(xgOptRound(wq[0],right,d,null,wq[1],xgWhy(c)));
     }
   });
   var lib=[];
   t.exam.questions.forEach(function(q){
     if(q.type==='mc'&&Array.isArray(q.options)&&q.options.length>=3&&typeof q.answer==='number'&&q.q.length<=140&&!BAD.test(q.q)&&q.options.every(function(o){return String(o).length<=60})){
-      var rt=String(q.options[q.answer]);items.push(xgOptRound(q.q,rt,q.options.map(String).filter(function(x,i){return i!==q.answer}).slice(0,3),null,q.visuals,String(q.explain||'')))
+      var rt=String(q.options[q.answer]),wq=WQ(q);items.push(xgOptRound(wq[0],rt,q.options.map(String).filter(function(x,i){return i!==q.answer}).slice(0,3),null,wq[1],String(q.explain||'')))
     }else if(q.type==='input'&&q.answer&&q.answer[0]&&String(q.answer[0]).length<=24&&!BAD.test(q.q))lib.push(q)
   });
   var libA=lib.map(function(q){return String(q.answer[0])}).concat(shortA);
-  lib.forEach(function(q){var rt=String(q.answer[0]),d=xgDis(rt,libA,3);if(d.length>=2)items.push(xgOptRound(q.q,rt,d,null,q.visuals,String(q.explain||'')))});
+  lib.forEach(function(q){var rt=String(q.answer[0]),d=xgDis(rt,libA,3),wq=WQ(q);if(d.length>=2)items.push(xgOptRound(wq[0],rt,d,null,wq[1],String(q.explain||'')))});
   return items
 }
 function xgVocabPool(t,all){

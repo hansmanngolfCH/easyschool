@@ -677,7 +677,7 @@ function vCol(v){
 }
 function visuals(list){
   if(!list||!list.length)return '';
-  var map={dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar,tbl:vTbl,chips:vChips,tline:vTline,flow:vFlow,anno:vAnno,cards:vCards,area:vArea,emo:vEmo,field:vField,clock:vClock,coins:vCoins,shape:vShape,mtab:vMtab,mreihe:vMreihe,symm:vSymm,solid:vSolid,nline:vNline,angle:vAngle,circle:vCircle,jug:vJug,quader:vQuader,par:vPar,blocks:vBlocks,jumps:vJumps,arr:vArr,col:vCol,wall:vWall,scene:vScene,geo:vGeo};
+  var map={wcol:vWcol,dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar,tbl:vTbl,chips:vChips,tline:vTline,flow:vFlow,anno:vAnno,cards:vCards,area:vArea,emo:vEmo,field:vField,clock:vClock,coins:vCoins,shape:vShape,mtab:vMtab,mreihe:vMreihe,symm:vSymm,solid:vSolid,nline:vNline,angle:vAngle,circle:vCircle,jug:vJug,quader:vQuader,par:vPar,blocks:vBlocks,jumps:vJumps,arr:vArr,col:vCol,wall:vWall,scene:vScene,geo:vGeo};
   return '<div class="visrow">'+list.map(function(v){return map[v.type]?map[v.type](v):''}).join('')+'</div>';
 }
 
@@ -810,3 +810,176 @@ function initPads(){
     cv.addEventListener('pointerup',end);cv.addEventListener('pointercancel',end);cv.addEventListener('pointerleave',end);
   });
 }
+
+/* ---------- Schriftlich rechnen: Untereinander-Raster (kl4–kl6, Oberstufe nutzt den Rechner) ---------- */
+var WC_T={'kl4-mathe-schriftlich-plus':1,'kl4-mathe-schriftlich-minus':1,'kl5-mathe-schriftlich-mal':1,'kl5-mathe-schriftlich-durch':1};
+var WCS={},WCSPEC={};
+var WC_PL=['Einer','Zehner','Hunderter','Tausender','Zehntausender'];
+function wcD(n){return String(n).split('').map(Number)}
+/* Löst die Aufgabe so, wie sie auf Papier steht. Übertrag = kleine Zahl über dem Strich (+1). */
+function wcSolve(op,a,b){
+  var s={op:op,a:a,b:b},i,k;
+  if(op==='+'||op==='−'||op==='×'){
+    var res=op==='+'?a+b:op==='−'?a-b:a*b;if(res<0)return null;
+    var da=wcD(a),db=wcD(b),dr=wcD(res),N=op==='−'?da.length:Math.max(da.length,dr.length,op==='+'?db.length:0);
+    if(op==='×'&&db.length>1)return null;
+    s.res=res;s.N=N;s.top=[];s.bot=[];s.out=[];s.car=[];s.guide=[];
+    for(i=0;i<N;i++){s.top.push(null);s.bot.push(null);s.out.push(null);s.car.push(0)}
+    da.forEach(function(d,j){s.top[N-da.length+j]=d});
+    if(op!=='×')db.forEach(function(d,j){s.bot[N-db.length+j]=d});
+    dr.forEach(function(d,j){s.out[N-dr.length+j]=d});
+    var c=0;
+    for(k=0;k<N;k++){i=N-1-k;var t=s.top[i],u=s.bot[i],pl=WC_PL[k]||'Stelle',g;
+      if(op==='+'){if(t==null&&u==null&&!c){g='';}else{var sum=(t||0)+(u||0)+c,parts=[t,u].filter(function(x){return x!=null});g=pl+': '+parts.join(' + ')+(c?' + '+c+' (Übertrag)':'')+' = _';c=sum>=10?1:0}}
+      else if(op==='−'){if(t==null){g=''}else{var uu=(u||0)+c;g=pl+': '+t+' − '+(c?'('+(u||0)+' + '+c+')':(u||0))+(t<uu?' geht nicht. Rechne mit 10 mehr: '+(t+10)+' − '+uu+' = _':' = _');c=t<uu?1:0}}
+      else{if(t==null){g=c?pl+': nur noch der Übertrag '+c:'';c=0}else{var p=t*b+c;g=pl+': '+t+' × '+b+(c?' + '+c+' (Übertrag)':'')+' = _';c=Math.floor(p/10)}}
+      s.guide[i]=g;if(i>0&&c)s.car[i-1]=c}
+    return s}
+  if(op===':'){
+    if(b<1||b>9)return null;
+    var D=wcD(a),n=D.length,pos=0,cur=0,qd=[],rows=[];
+    while(pos<n&&cur<b&&pos<n){cur=cur*10+D[pos];pos++;if(cur>=b)break}
+    var first=true;
+    while(true){var x=Math.floor(cur/b),pr=x*b,rm=cur-pr;qd.push(x);
+      s.guide=s.guide||[];s.guide.push('Wie oft passt '+b+' in '+cur+'? Dann mal '+b+' und abziehen.');
+      rows.push({v:pr,end:pos-1,minus:1});
+      if(pos<n){rm=rm*10+D[pos];rows.push({v:rm,end:pos,dig:String(rm).length<2&&rm<10?1:0});pos++;cur=rm}
+      else{rows.push({v:rm,end:pos-1,last:1});break}
+      first=false}
+    var q=Math.floor(a/b);if(Number(qd.join(''))!==q)return null;
+    s.res=q;s.rest=a%b;s.N=n;s.qd=wcD(q);s.rows=rows;s.D=D;return s}
+  return null;
+}
+/* Welche Aufgabe steckt in Karte/Prüfungsfrage? Nur bei den schriftlichen Themen. */
+function wcFor(tid,it){
+  if(!it||!WC_T[tid])return null;
+  var q=String(it.q||''),m,o=null,ans=it.a!=null?String(it.a):(it.type==='mc'&&it.options?String(it.options[it.answer]):String((it.answer||[''])[0]));
+  if(m=/^(\d+) ([+−×:]) (\d+) =( _ \(mit Rest\))?$/.exec(q))o={op:m[2],a:+m[1],b:+m[3],pure:1};
+  else if(m=/^Rechne (\d+) : (\d+)\.$/.exec(q))o={op:':',a:+m[1],b:+m[2],pure:1};
+  else if(m=/(\d+) Packungen mit je (\d+)/.exec(q))o={op:'×',a:+m[2],b:+m[1]};
+  else if(!/Übertrag|Einer|Rest gibt|Probe|_/.test(q)&&it.steps&&it.steps.length){var st=String(it.steps[it.steps.length-1][0]);if(m=/^(\d+) ([+−×:]) (\d+) = (\d+)( Rest \d+)?$/.exec(st))o={op:m[2],a:+m[1],b:+m[3]}}
+  if(!o)return null;
+  var s=wcSolve(o.op,o.a,o.b);if(!s)return null;
+  var mr=/^(\d+)(?: Rest (\d+))?$/.exec(ans.trim());if(!mr||+mr[1]!==s.res)return null;
+  if(mr[2]!=null&&+mr[2]!==s.rest)return null;
+  s.pure=o.pure;s.withRest=mr[2]!=null;return s;
+}
+var WC_ACT=null;
+function wcCell(col,row,cls,html,span){if(WC_ACT!=null&&col===WC_ACT&&/wc-dg|wc-rs|wc-cr/.test(cls))cls+=' wc-on';return '<span class="wc-c '+cls+'" data-col="'+col+'" style="grid-column:'+col+(span?' / span '+span:'')+';grid-row:'+row+'">'+html+'</span>'}
+function wcIn(key,r,i,val,cls,col){return '<input class="wcin '+cls+'" data-k="'+esc(key)+'" data-r="'+r+'" data-i="'+i+'" data-col="'+col+'" inputmode="numeric" pattern="[0-9]*" maxlength="1" autocomplete="off" aria-label="'+(r==='c'?'Übertrag':r==='s'?'Notiz':'Ziffer')+'" value="'+esc(val||'')+'">'}
+/* v: {type:'wcol',s|op,a,b, mode:'show'|'blank'|'live', upto, hideRes, key} – Häuschenpapier wie im Heft */
+function vWcol(v){
+  var s=v.s||wcSolve(v.op,v.a,v.b);if(!s)return '';
+  var mode=v.mode||'show',key=v.key||'',st=mode==='live'?(WCS[key]||(WCS[key]={r:{},c:{},s:{},x:{}})):null,o='',i;
+  if(mode==='live')WCSPEC[key]=s;
+  WC_ACT=null;if(mode==='live'&&s.op!==':'){for(var a0=s.N-1;a0>=0;a0--)if(!st.r[a0]&&(s.guide[a0]||s.out[a0]!=null)){WC_ACT=a0+2;break}}
+  var up=v.upto==null?99:v.upto,shown=function(i){return s.N-1-i<up},hide=mode==='blank'||v.hideRes,cols,rows;
+  var box=function(r,i,val,col){return mode==='live'?wcIn(key,r,i,val,r==='c'?'wc-cbox':'wc-box',col):'<i class="'+(r==='c'?'wc-cbox':'wc-box')+'"></i>'};
+  if(s.op!==':'){
+    var N=s.N,mal=s.op==='×',db=mal?wcD(s.b):[],R1=1,R2=mal?1:2,RC=R2+1,RR=RC+1;
+    cols=N+1+(mal?1+db.length:0);rows=RR;
+    for(i=0;i<N;i++){var col=i+2;
+      if(s.top[i]!=null)o+=wcCell(col,R1,'wc-dg',s.top[i]);
+      if(!mal&&s.bot[i]!=null)o+=wcCell(col,R2,'wc-dg',s.bot[i]);
+      var cv=s.car[i];
+      if(i<N-1){
+        if(mode==='live')o+=wcCell(col,RC,'wc-cr',box('c',i,st.c[i],col));
+        else if(mode==='blank'&&cv&&v.cslot)o+=wcCell(col,RC,'wc-cr',box('c',i,'',col));
+        else if(mode==='show'&&cv&&shown(i+1)&&!v.hideRes)o+=wcCell(col,RC,'wc-cr wc-cy','<b>'+cv+'</b>');
+        else o+=wcCell(col,RC,'wc-cr','');
+      }else o+=wcCell(col,RC,'wc-cr','');
+      if(mode==='live')o+=wcCell(col,RR,'wc-rs',box('r',i,st.r[i],col));
+      else if(hide)o+=wcCell(col,RR,'wc-rs',box('r',i,'',col));
+      else if(s.out[i]!=null&&shown(i))o+=wcCell(col,RR,'wc-rs wc-ok',s.out[i]);
+      else o+=wcCell(col,RR,'wc-rs','');
+    }
+    if(mal){o+=wcCell(N+2,R1,'wc-op','×');db.forEach(function(d,j){o+=wcCell(N+3+j,R1,'wc-dg wc-b',d)})}
+    else o+=wcCell(1,R2,'wc-op',s.op==='−'?'−':'+');
+    o+='<span class="wc-ln" style="grid-column:1 / span '+(mal?N+1:N+1)+';grid-row:'+RC+'"></span>';
+    if(!hide&&mode!=='live'&&up>=N)o+='<span class="wc-dl" style="grid-column:2 / span '+N+';grid-row:'+RR+'"></span>';
+    if(mode==='live'||hide)o+='<span class="wc-dl wc-dl0" style="grid-column:2 / span '+N+';grid-row:'+RR+'"></span>';
+  }else{
+    var n=s.N,dvs=wcD(s.b),q=s.qd,cq=n+2,cb=cq+1,ce=cb+dvs.length,cr=ce+1,rc=cr+q.length;
+    cols=s.withRest?rc+1:rc-1;rows=1+s.rows.length;
+    s.D.forEach(function(d,j){o+=wcCell(j+2,1,'wc-dg',d)});
+    o+=wcCell(cq,1,'wc-op',':');dvs.forEach(function(d,j){o+=wcCell(cb+j,1,'wc-dg wc-b',d)});o+=wcCell(ce,1,'wc-op','=');
+    var qShow=function(j){return j<(v.upto==null?99:v.upto)};
+    q.forEach(function(d,j){var c=cr+j;
+      if(mode==='live')o+=wcCell(c,1,'wc-rs',box('r',j,st.r[j],c));
+      else if(hide||!qShow(j))o+=wcCell(c,1,'wc-rs',box('r',j,'',c));
+      else o+=wcCell(c,1,'wc-rs wc-ok',d)});
+    if(s.withRest){o+=wcCell(rc,1,'wc-op wc-sm','R');
+      if(mode==='live')o+=wcCell(rc+1,1,'wc-rs',box('x',0,st.x[0],rc+1));
+      else if(hide)o+=wcCell(rc+1,1,'wc-rs',box('x',0,'',rc+1));
+      else o+=wcCell(rc+1,1,'wc-rs wc-ok',s.rest)}
+    o+='<span class="wc-dl'+(mode==='live'||hide?' wc-dl0':'')+'" style="grid-column:'+cr+' / span '+q.length+';grid-row:1"></span>';
+    var rowN=2,si=0;
+    s.rows.forEach(function(r,ri){var ds=wcD(r.v),st0=r.end-ds.length+1,vis=!(v.upto!=null&&Math.floor(ri/2)>=v.upto);
+      if(r.minus)o+=wcCell(st0+1,rowN,'wc-op wc-mn','−');
+      ds.forEach(function(d,j){var c=st0+j+2,cls='wc-wk'+(r.last?' wc-last':'')+(!r.minus&&!r.last&&j===ds.length-1?' wc-down':'');
+        if(mode==='live')o+=wcCell(c,rowN,cls,wcIn(key,'s',si,st.s[si],'wc-sbox',c));
+        else if(hide||!vis)o+=wcCell(c,rowN,cls,'<i class="wc-sbox"></i>');
+        else o+=wcCell(c,rowN,cls,d);
+        si++});
+      if(r.minus)o+='<span class="wc-ul2" style="grid-column:'+(st0+2)+' / span '+ds.length+';grid-row:'+rowN+'"></span>';
+      rowN++});
+  }
+  var g='<div class="wcg'+(s.op===':'?' wcdv':'')+'" style="--wcn:'+cols+';grid-template-columns:repeat('+cols+',var(--wcw));grid-template-rows:repeat('+rows+',var(--wcw))">'+o+'</div>';
+  return wcWrap(v,s,key,g,mode);
+}
+function wcWrap(v,s,key,g,mode){WC_ACT=null;
+  var guide=mode==='live'?'<p class="wc-guide" data-k="'+esc(key)+'">'+esc(wcGuide(s,WCS[key]))+'</p><p class="wc-rule">'+wcRule(s)+'</p>':'';
+  return '<figure class="vis wcf'+(mode==='live'?' wclive':'')+'" data-k="'+esc(key)+'">'+(v.lab?'<p class="wc-lab">'+esc(v.lab)+'</p>':'')+g+guide+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+}
+function wcRule(s){
+  if(s.op==='+')return 'Von rechts nach links. Gibt es 10 oder mehr: Einerziffer unten hinschreiben, die <b>1</b> klein über den Strich bei der nächsten Stelle.';
+  if(s.op==='−')return 'Von rechts nach links. Oben zu klein? Rechne mit 10 mehr und schreibe eine kleine <b>1</b> über den Strich bei der nächsten Stelle. Diese 1 zählst du unten dazu.';
+  if(s.op==='×')return 'Von rechts nach links. Einerziffer unten hinschreiben, die Zehner als kleine <b>Zahl</b> über den Strich bei der nächsten Stelle.';
+  return 'Von links nach rechts. Teilen, mal rechnen, abziehen, nächste Ziffer herunterholen.'+(s.withRest?' Was am Schluss übrig bleibt, kommt hinter R.':'');
+}
+function wcGuide(s,st){
+  st=st||{r:{},c:{},s:{},x:{}};var i;
+  if(s.op===':'){for(i=0;i<s.qd.length;i++)if(!st.r[i])return s.guide[i]||'';if(s.withRest&&!st.x[0])return 'Was bleibt am Schluss übrig? Schreibe es hinter R.';return 'Alles ausgefüllt? Dann prüfe dein Ergebnis.'}
+  for(i=s.N-1;i>=0;i--){if(!st.r[i]&&(s.guide[i]||s.out[i]!=null))return (s.guide[i]||WC_PL[s.N-1-i]+': _')}
+  return 'Alles ausgefüllt? Dann prüfe dein Ergebnis.'
+}
+function wcValue(key){
+  var s=WCSPEC[key],st=WCS[key];if(!s||!st)return '';
+  var n=s.op===':'?s.qd.length:s.N,d=[],i,started=false,gap=false;
+  for(i=0;i<n;i++){var x=st.r[i]||'';if(x)started=true;if(started){if(!x)gap=true;d.push(x)}}
+  if(gap||!d.length)return '';
+  var v=String(Number(d.join('')));
+  if(s.op===':'&&s.withRest){if(!st.x[0])return '';v+=' Rest '+st.x[0]}
+  return v;
+}
+function wcHl(fig,s,st){
+  if(!fig)return;var col=null,i;
+  if(s.op!==':'){for(i=s.N-1;i>=0;i--)if(!st.r[i]&&(s.guide[i]||s.out[i]!=null)){col=i+2;break}}
+  fig.querySelectorAll('span[data-col]').forEach(function(e){e.classList.toggle('wc-on',col!=null&&+e.getAttribute('data-col')===col&&/wc-dg|wc-rs|wc-cr/.test(e.className))});
+}
+function wcBind(root){
+  (root||document).querySelectorAll('figure.wclive').forEach(function(f){var k=f.getAttribute('data-k');if(WCSPEC[k])wcHl(f,WCSPEC[k],WCS[k]||{r:{}})});
+}
+document.addEventListener('input',function(e){
+  var t=e.target;if(!t||!t.classList||!t.classList.contains('wcin'))return;
+  var v=String(t.value||'').replace(/\D/g,'').slice(-1);t.value=v;
+  var k=t.getAttribute('data-k'),r=t.getAttribute('data-r'),i=+t.getAttribute('data-i'),st=WCS[k]||(WCS[k]={r:{},c:{},s:{},x:{}}),s=WCSPEC[k];
+  st[r][i]=v;
+  var val=wcValue(k);
+  if(k.indexOf('e:')===0){var qid=k.split(':').pop();nav.answers=nav.answers||{};nav.answers[qid]=val}
+  else{nav.typed=val;var a=document.getElementById('ans');if(a)a.value=val}
+  var fig=t.closest('figure'),gp=fig&&fig.querySelector('.wc-guide');if(gp&&s)gp.textContent=wcGuide(s,st);
+  if(s)wcHl(fig,s,st);
+  if(v&&fig){var nx=null;
+    if(r==='r'&&s&&s.op!==':')nx=fig.querySelector('input[data-r="r"][data-i="'+(i-1)+'"]');
+    else if(r==='r')nx=fig.querySelector('input[data-r="r"][data-i="'+(i+1)+'"]')||fig.querySelector('input[data-r="x"]');
+    else if(r==='c')nx=fig.querySelector('input[data-r="r"][data-i="'+i+'"]');
+    else if(r==='s')nx=fig.querySelector('input[data-r="s"][data-i="'+(i+1)+'"]');
+    if(nx&&!nx.value)try{nx.focus()}catch(x){}}
+});
+document.addEventListener('keydown',function(e){
+  var t=e.target;if(!t||!t.classList||!t.classList.contains('wcin'))return;
+  if(e.key==='Enter'){e.preventDefault();if(nav.view==='practice'&&typeof ACT!=='undefined'&&ACT.check)ACT.check()}
+  if(e.key==='Backspace'&&!t.value){var f=t.closest('figure'),r=t.getAttribute('data-r'),i=+t.getAttribute('data-i'),s=WCSPEC[t.getAttribute('data-k')],p=null;
+    if(r==='r'&&f&&s)p=f.querySelector('input[data-r="r"][data-i="'+(s.op===':'?i-1:i+1)+'"]');if(p){e.preventDefault();try{p.focus()}catch(x){}}}
+});

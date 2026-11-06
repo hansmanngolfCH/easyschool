@@ -57,6 +57,7 @@ function examArt(){
   +'<g transform="rotate(-4 260 160)"><rect x="200" y="148" width="124" height="24" rx="4" fill="#FDE18A" stroke="#C88C00" stroke-width="2"/>'+ruler+'</g>'
   +'<g transform="translate(300 40)"><path d="M0 -18l5.4 11 12 1.7-8.7 8.5 2 12L0 8.2-10.7 15.2l2-12L-17.4 -5.3l12-1.7z" fill="#FBBC04" stroke="#E37400" stroke-width="2"/></g></svg>';
 }
+function wcIns(w){return w.op===':'?(w.withRest?'Rechne schriftlich. Schreibe den Rest hinter R.':'Rechne schriftlich.'):'Rechne schriftlich untereinander.'}
 function qBlock(q){
   var p=qParts(q);
   return '<div class="mqx"><span class="qm">'+mqFix(rt(p.main))+sayBtn(q.say)+'</span>'+(p.ctx?'<span class="qc">'+mqFix(rt(p.ctx))+'</span>':'')+'<span class="qi">'+esc(p.inst)+'</span></div>';
@@ -183,7 +184,10 @@ function vPractice(){
   if(isV(c))return head+vVocab(n,k,c,stageOf(n,k))+'</div>';
   var pkey='p:'+k,pd=padHTML(pkey,c.q),hs=hintList(n,k,c,0),chk=!c.opts&&!c.match&&!c.trace&&checkable(c);
   if(c.opts&&!n.opts)n.opts=shuffle(c.opts.map(function(t){return {t:t,ok:c.multi?c.ans.indexOf(t)>=0:t===c.a}}));
-  var h2=head+'<section class="card flash">'+qHtml(c.q)+sayBtn(c.say)+visuals(c.visuals)+'</section>';
+  var wv=wcFor(x&&x.t&&x.t.id,c),wk='p:'+n.idx+':'+k;
+  if(wv&&n._wck!==wk){n._wck=wk;WCS[wk]={r:{},c:{},s:{},x:{}}}
+  var h2=head+'<section class="card flash">'+(wv?(wv.pure?'<p class="fq wc-ins">'+wcIns(wv)+'</p>':qHtml(c.q))+vWcol({s:wv,mode:n.revealed?'show':'live',key:wk,lab:wv.pure?'':'Schreibe die Rechnung untereinander:'}):qHtml(c.q)+sayBtn(c.say)+visuals(c.visuals))+'</section>';
+  if(wv)chk=!n.revealed;
   if(!n.revealed){
     h2+='<div class="tools">'+(hs.length?'<button class="btn sm" data-act="hint"'+(n.hintN>=hs.length?' disabled':'')+'>Tipp'+(n.hintN<hs.length?' ('+(n.hintN+1)+'/'+hs.length+')':'')+'</button>':'')+pd.btn+'</div>'+hintBoxes(n,hs);
     h2+=pd.box;
@@ -191,7 +195,8 @@ function vPractice(){
     else if(c.match)h2+=matchHTML(n,c);
     else if(c.trace)h2+='<div class="trcw"><canvas id="trc" width="600" height="600" data-t="'+esc(c.trace)+'" aria-label="Zeichenfläche"></canvas></div>'+(n.err?'<p class="fb no">'+esc(n.err)+'</p>':'')+'<div class="row"><button class="btn" data-act="trclear">Neu</button><button class="btn pri" data-act="trcheck">Fertig</button><button class="btn ghost" data-act="reveal">Weiter</button></div>';
     else if(c.opts)h2+='<div class="opts">'+n.opts.map(function(op,i){return '<button class="o" data-act="mpick" data-i="'+i+'">'+rt(op.t)+'</button>'}).join('')+'</div>';
-    if(chk)h2+='<div class="stack" style="padding:0;gap:8px"><label class="lab2" for="ans">'+(c.pre!=null?'Verbessere direkt im Feld':'Dein Ergebnis')+'</label>'+(c.pre!=null?'<div class="fixcol"><textarea class="inp fixin" id="ans" rows="1" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">'+esc(n.typed||c.pre||'')+'</textarea><button class="btn pri" data-act="check">Absenden</button></div>':'<div class="row"><input class="inp" id="ans" value="'+esc(n.typed||'')+'" placeholder="'+ph(cardAns(c)[0])+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"><button class="btn pri" data-act="check">Prüfen</button></div>')+''+(n.err?'<p class="fb no">'+esc(n.err)+'</p>':'')+'</div>';
+    if(chk&&wv)h2+='<div class="stack" style="padding:0;gap:8px"><input type="hidden" id="ans" value="'+esc(n.typed||'')+'"><button class="btn pri big" data-act="check">Prüfen</button>'+(n.err?'<p class="fb no">'+esc(n.err)+'</p>':'')+'</div>';
+    else if(chk)h2+='<div class="stack" style="padding:0;gap:8px"><label class="lab2" for="ans">'+(c.pre!=null?'Verbessere direkt im Feld':'Dein Ergebnis')+'</label>'+(c.pre!=null?'<div class="fixcol"><textarea class="inp fixin" id="ans" rows="1" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">'+esc(n.typed||c.pre||'')+'</textarea><button class="btn pri" data-act="check">Absenden</button></div>':'<div class="row"><input class="inp" id="ans" value="'+esc(n.typed||'')+'" placeholder="'+ph(cardAns(c)[0])+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"><button class="btn pri" data-act="check">Prüfen</button></div>')+''+(n.err?'<p class="fb no">'+esc(n.err)+'</p>':'')+'</div>';
     h2+=(c.opts||c.match||c.trace?'':'<button class="btn'+(chk?' ghost':' pri big')+'" data-act="reveal">'+(chk?'Ich komme nicht drauf, Lösung zeigen':'Antwort zeigen')+'</button>');
   }else{
     var vd=n.verdict;
@@ -243,6 +248,7 @@ function vPaper(n,t,qs){
   return h+'</tbody></table></div><button class="btn pri big" data-act="finish">Abgeben</button></div>'}
 function vExam(){
   var n=nav,t=topicById(n.topicId),mathe=!isLangT(t),qs=examQs(n,t);
+  if(n.phase==='intro'){for(var wk0 in WCS)if(wk0.indexOf('e:')===0)delete WCS[wk0]}
   if(n.phase==='intro')return '<div class="stack"><div><p class="eyebrow">Musterprüfung</p><h1>'+esc(t.title)+'</h1></div>'+coach('Jetzt zählt es ernst! Zeig, was du gelernt hast. Es ist aber nur eine Musterprüfung: Fehler sind erlaubt.',1)+examArt()+examInfo(qs.length)+(mathe?'':'<div class="modes"><button class="btn seg'+(n.mode!=='kurz'?' on':'')+'" data-act="emode" data-m="alles">Alles</button><button class="btn seg'+(n.mode==='kurz'?' on':'')+'" data-act="emode" data-m="kurz">Kurztext</button></div>')+'<div class="row"><button class="btn pri big" data-act="start">Los geht\'s</button><button class="btn big" data-act="back">Zurück</button></div></div>';
   if(n.phase==='run'&&!mathe)return vPaper(n,t,qs);
   if(n.phase==='run'){
@@ -250,6 +256,7 @@ function vExam(){
     var html='<div class="paperpage"><p class="ptitle">Prüfung · '+esc(t.title)+'</p><div class="sheet"><div class="shead"><span>Name: <b>'+esc(n.pname||'')+'</b></span><span>Datum: <b>'+ds+'</b></span></div>'+(t.id.indexOf('bruch')>=0?'<p class="sub" style="margin:0 0 4px">Alle Brüche so weit wie möglich kürzen.</p>':'')+'<ol class="mq">';
     qs.forEach(function(q,i){
       var key='e:'+t.id+':'+q.id,pd=padHTML(key,q.q);
+      var wq=wcFor(t.id,q);if(wq){html+='<li><div class="mqt"><span class="nc">'+(i+1)+'</span>'+(wq.pure?'<div class="mqx"><span class="qm">'+wcIns(wq)+'</span></div>':qBlock(q))+'</div>'+vWcol({s:wq,mode:'live',key:'e:'+t.id+':'+q.id})+'<div class="tools">'+pd.btn+'</div>'+pd.box+'</li>';return}
       html+='<li><div class="mqt"><span class="nc">'+(i+1)+'</span>'+qBlock(q)+'</div>'+visuals(q.visuals)+(q.type==='mc'?'<div class="mcopts">'+q.options.map(function(o,j){return '<label class="mco"><input type="radio" name="r-'+q.id+'" data-q="'+q.id+'" value="'+j+'"'+(n.answers[q.id]===j?' checked':'')+'><span class="mcl">'+String.fromCharCode(65+j)+'</span><span>'+rt(o)+'</span></label>'}).join('')+'</div>':(q.pre!=null?'<textarea class="pin fixin" id="in-'+q.id+'" data-q="'+q.id+'" rows="1" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">'+esc(n.answers[q.id]||q.pre||'')+'</textarea>':'<input class="pin" id="in-'+q.id+'" data-q="'+q.id+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" value="'+esc(n.answers[q.id]||'')+'">')+'<div class="tools">'+pd.btn+'</div>'+pd.box)+'</li>';
     });
     html+='</ol></div>';
@@ -271,7 +278,7 @@ function vExam(){
     html3+='</tbody></table>';
   }else{
     html3+=(t.subject==='mathe'&&t.id.indexOf('bruch')>=0?'<p class="sub" style="margin:0 0 4px">Alle Brüche so weit wie möglich kürzen.</p>':'')+'<ol class="mq">';
-    r.items.forEach(function(it,i){html3+='<li><div class="mqt"><span class="nc">'+(i+1)+'</span>'+qBlock(it.q)+'</div>'+visuals(it.q.visuals)+rowAns(it,i)+'</li>'});
+    r.items.forEach(function(it,i){var wq=wcFor(t.id,it.q);html3+='<li><div class="mqt"><span class="nc">'+(i+1)+'</span>'+qBlock(it.q)+'</div>'+(wq?vWcol({s:wq,mode:'show'}):visuals(it.q.visuals))+rowAns(it,i)+'</li>'});
     html3+='</ol>';
   }
   html3+='</div><p class="sub" style="margin:10px 2px">'+esc(msg)+' · +'+r.xp+' XP</p>';
