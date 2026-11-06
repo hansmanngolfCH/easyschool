@@ -294,14 +294,14 @@ HND.vault={k:'tap',x:50,y:72};
 GAMEFN.vault=function(cv,cx,w,h,score,over){
   var G=9.81,s=0,lives=3,P=[],F=[],T=0,ph='run',pt=0,v=5.4,res=null,shake=0,msgT=0,msg='',msgC='#fff',bed=0,squash=0,crackP=null,crackT=0,dizzy=0;
   var com=[-12,1],rot=0,pz=null,vel=[0,0],FL=null,ftime=0,RD=null,acc=0,tapX=0,hurdle=null;
-  var ZW=function(){return Math.max(.26,.62-s*.03)},Z1=-.55,Z0=function(){return Z1-ZW()};
+  var ZW=function(){return Math.max(.16,.34-s*.015)},Z1=-.55,Z0=function(){return Z1-ZW()};
   var BX=2.4,BH=1.2,BL=.42,BW=.31,M0=4,M1=7,MH=.35,TR0=.28,TR1=.52;
   function trTop(x){return TR0+(TR1-TR0)*x}
   /* ---------- Kamera ---------- */
   var E,Fv,Rv,Uv,FOC=w*.9,HZ=h*.52,camX=-11,camY=0,MIR=false;
   function sub(a,b){return [a[0]-b[0],a[1]-b[1],a[2]-b[2]]}function dot(a,b){return a[0]*b[0]+a[1]*b[1]+a[2]*b[2]}
   function cross(a,b){return [a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]]}function nrm(a){var l=Math.hypot(a[0],a[1],a[2]);return [a[0]/l,a[1]/l,a[2]/l]}
-  function cam(){E=[camX-1.55,1.5+camY,-4.1];var tg=[camX+1.7,1.22+camY,.5];Fv=nrm(sub(tg,E));Rv=nrm(cross([0,1,0],Fv));Uv=cross(Fv,Rv)}
+  function cam(){E=[camX-1.15,1.38+camY,-3.15];var tg=[camX+1.45,1.15+camY,.5];Fv=nrm(sub(tg,E));Rv=nrm(cross([0,1,0],Fv));Uv=cross(Fv,Rv)}
   function pr(p){if(MIR)p=[p[0],-p[1],p[2]];var d=sub(p,E),z=dot(d,Fv);if(z<.12)z=.12;return [w/2+FOC*dot(d,Rv)/z+(shake?(Math.random()-.5)*shake:0),HZ-FOC*dot(d,Uv)/z,z]}
   function path(pts){var q=pts.map(pr);cx.beginPath();cx.moveTo(q[0][0],q[0][1]);for(var i=1;i<q.length;i++)cx.lineTo(q[i][0],q[i][1]);cx.closePath();return q}
   function poly(pts,fill,stroke,lw){path(pts);cx.fillStyle=fill;cx.fill();if(stroke){cx.strokeStyle=stroke;cx.lineWidth=lw||1;cx.stroke()}}
@@ -315,6 +315,7 @@ GAMEFN.vault=function(cv,cx,w,h,score,over){
       poly(f[0].map(function(i){return c[i]}),f[1][1]===1&&topc?topc:shade(f[1][1]===1?col:(side||col),f[2]),'rgba(0,0,0,.1)')})}
   /* Text auf eine Wandfläche legen (affin) */
   function wallText(x0,y0,x1,y1,z,draw){var a=pr([x0,y1,z]),b=pr([x1,y1,z]),c=pr([x0,y0,z]);var W2=200,H2=200*(y1-y0)/(x1-x0);cx.save();cx.setTransform((b[0]-a[0])/W2*dpr,(b[1]-a[1])/W2*dpr,(c[0]-a[0])/H2*dpr,(c[1]-a[1])/H2*dpr,a[0]*dpr,a[1]*dpr);draw(W2,H2);cx.restore()}
+  function floorText(x0,x1,z0,z1,draw){var a=pr([x0,.021,z1]),b=pr([x1,.021,z1]),c=pr([x0,.021,z0]);var W2=200,H2=200*(z1-z0)/(x1-x0);cx.save();cx.setTransform((b[0]-a[0])/W2*dpr,(b[1]-a[1])/W2*dpr,(c[0]-a[0])/H2*dpr,(c[1]-a[1])/H2*dpr,a[0]*dpr,a[1]*dpr);draw(W2,H2);cx.restore()}
   var dpr=cv.width/w,LOGO=new Image();LOGO.src='img/stv_logo.jpg';
   /* ---------- Turnhalle ---------- */
   var seed=7;function rnd(){seed=(seed*16807)%2147483647;return seed/2147483647}
@@ -364,7 +365,10 @@ GAMEFN.vault=function(cv,cx,w,h,score,over){
     for(var k=-17;k<-.12;k+=1.2)poly([[k,.014,-.6],[k+.03,.014,-.6],[k+.03,.014,.6],[k,.014,.6]],'rgba(255,255,255,.13)');
     var z0=Z0(),pul=.6+.4*Math.sin(T*7);
     poly([[z0,.016,-.6],[Z1,.016,-.6],[Z1,.016,.6],[z0,.016,.6]],'rgba(255,205,0,'+(.75+.25*pul)+')','#C98A00',1.5);
-    var m0=z0+ZW()*.34,m1=z0+ZW()*.66;poly([[m0,.018,-.6],[m1,.018,-.6],[m1,.018,.6],[m0,.018,.6]],'rgba(255,255,255,.5)');
+    var m0=z0+ZW()*.36,m1=z0+ZW()*.64;poly([[m0,.018,-.6],[m1,.018,-.6],[m1,.018,.6],[m0,.018,.6]],'rgba(255,255,255,.55)');
+    [[z0,-.6,Z1,-.57],[z0,.57,Z1,.6],[z0-.03,-.6,z0,.6],[Z1,-.6,Z1+.03,.6]].forEach(function(b){poly([[b[0],.02,b[1]],[b[2],.02,b[1]],[b[2],.02,b[3]],[b[0],.02,b[3]]],'#FFFFFF')});
+    for(var ch=1;ch<=3;ch++){var cxp=z0-.35*ch,al=.35+.2*Math.sin(T*8-ch);poly([[cxp-.12,.017,-.35],[cxp+.06,.017,0],[cxp-.12,.017,.35],[cxp-.04,.017,.35],[cxp+.14,.017,0],[cxp-.04,.017,-.35]],'rgba(255,214,0,'+Math.max(.15,al)+')')}
+    floorText(z0-2.75,z0-1.2,-.5,.5,function(W2,H2){cx.textAlign='center';cx.textBaseline='middle';cx.fillStyle='rgba(255,255,255,.92)';cx.font='900 '+(H2*.5)+'px Arial,sans-serif';cx.fillText('HIER',W2*.36,H2*.52);cx.font='800 '+(H2*.26)+'px Arial,sans-serif';cx.fillText('TIPPEN',W2*.8,H2*.55)});
   }
   /* Minitramp: Gestell und Netz weiss */
   function tramp(){var W1='#F4F6F8',BL2='#1E5BC6';
@@ -495,7 +499,7 @@ GAMEFN.vault=function(cv,cx,w,h,score,over){
   function stand(Jl,cxp,floorY,R){return [cxp,floorY-minFoot(Jl,R||0)]}
   function fail(why,J,v0,kick){ph='crash';pt=0;txt(why,'#FF8A80');lives--;shake=8;startRag(J,v0,kick)}
   var unb=bindTap(cv,function(){if(ph!=='run')return;var z0=Z0();tapX=com[0];
-    if(com[0]<z0-.05)res='early';else if(com[0]<=Z1+.05){var c=(com[0]-z0)/(Z1-z0);res=Math.abs(c-.5)<.16?'perfect':'good'}else return;
+    if(com[0]<z0)res='early';else if(com[0]<=Z1){var c=(com[0]-z0)/(Z1-z0);res=Math.abs(c-.5)<.14?'perfect':'good'}else return;
     var y0=com[1],Jh=joints(POSE.hurdle),tx=res==='early'?Math.min(tapX+1.0,-.3):.5,ty=res==='early'?-minFoot(Jh):trTop(.5)-minFoot(joints(POSE.squat)),Th=Math.max(.24,(tx-tapX)/v);
     hurdle={x0:tapX,y0:y0,tx:tx,vx:(tx-tapX)/Th,vy:((ty-y0)+.5*G*Th*Th)/Th,T:Th};ph='hurdle';pt=0;var q=pr([tapX,.02,0]);burst(P,q[0],q[1],12,['#fff','#FFF59D'],4)});
   reset();cv.__vs=function(){return {gx:com[0],ph:ph,z0:Z0(),z1:Z1,s:s,lives:lives}};

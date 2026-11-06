@@ -4,7 +4,7 @@ Lern-App (Vanilla-JS, eine `index.html`), GitHub Pages, easy-school.ch. Repo: ha
 
 ## Umgang mit dem Besitzer
 - Immer auf **Deutsch** antworten, kurz, ehrlich. Nur sagen, was wirklich getestet ist. Es gibt keinen iPhone-Test und die Live-Seite ist aus dem Sandkasten nicht erreichbar: Das immer erwähnen.
-- Nach **jeder** Veröffentlichung «Version vX.XX» nennen. Vorher `APP_VERSION` in `src/p1.js` erhöhen (aktuell v5.31; nächste v5.32 usw.).
+- Nach **jeder** Veröffentlichung «Version vX.XX» nennen. Vorher `APP_VERSION` in `src/p1.js` erhöhen (aktuell v5.32; nächste v5.33 usw.).
 - Mehrdeutige Wünsche: Auslegung offen nennen.
 
 ## Bauen und Testen
