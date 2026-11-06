@@ -1577,3 +1577,9 @@ input.wc-sbox:focus{border-color:#8AB4F8}
 /* Karten-Antworten: kurze Antworten 2 × 2 nebeneinander, lange untereinander */
 .opts.o2{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 .opts.o2 .o{min-height:64px;font-size:1.2rem}
+/* Zahlenstrahl immer volle Breite */
+.visrow>figure.nlv,figure.nlv{flex:1 1 100%;width:100%;min-width:min(100%,300px)}
+.xg-vis figure.nlv{width:100%}
+.visrow:has(figure.nlv){align-self:stretch;width:100%;box-sizing:border-box}
+.picv{display:flex;flex-direction:column;align-items:center}
+.picbig{font-size:92px;line-height:1.1;padding:6px 18px;background:linear-gradient(#F8FAFD,#EEF2F8);border-radius:22px}

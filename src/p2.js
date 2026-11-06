@@ -10,9 +10,9 @@ function vPie(v){var r=46,cx=50,cy=50,p=v.parts,s='';
 function vLine(v){var x0=24,x1=576,y=58,n=Math.round((v.max-v.min)/v.step);
   function X(i){return x0+(x1-x0)*i/n}
   var s='<line x1="'+(x0-8)+'" x2="'+(x1+8)+'" y1="'+y+'" y2="'+y+'" class="nl"/>';
-  for(var i=0;i<=n;i++){s+='<line x1="'+X(i)+'" x2="'+X(i)+'" y1="'+(y-6)+'" y2="'+(y+6)+'" class="nl"/><text x="'+X(i)+'" y="'+(y+26)+'" text-anchor="middle" class="nt">'+(v.min+i*v.step)+'</text>';
+  for(var i=0;i<=n;i++){s+='<line x1="'+X(i)+'" x2="'+X(i)+'" y1="'+(y-9)+'" y2="'+(y+9)+'" class="nl" stroke-width="3.2"/><text x="'+X(i)+'" y="'+(y+36)+'" text-anchor="middle" class="nt" style="font-size:'+Math.max(18,Math.min(30,(x1-x0)/n/(String(v.max).length*.62+.25)))+'px;font-weight:800;fill:#1F2937">'+(v.min+i*v.step)+'</text>';
     if(i<n){var xm=(X(i)+X(i+1))/2;s+='<path d="M'+X(i)+' '+(y-8)+'Q'+xm+' '+(y-40)+' '+X(i+1)+' '+(y-8)+'" class="hop"/>'}}
-  return '<figure class="vis" style="width:100%"><div class="scroll" style="width:100%"><svg viewBox="0 0 600 90" class="nlsvg" role="img" aria-label="Zahlenstrahl in '+v.step+'er-Schritten">'+s+'</svg></div><figcaption>Immer '+v.step+' weiter</figcaption></figure>'}
+  return '<figure class="vis" style="width:100%"><div class="scroll" style="width:100%"><svg viewBox="0 0 600 104" class="nlsvg" role="img" aria-label="Zahlenstrahl in '+v.step+'er-Schritten">'+s+'</svg></div><figcaption>Immer '+v.step+' weiter</figcaption></figure>'}
 function vPairs(v){return '<div class="pairs">'+v.items.map(function(p){return '<div>'+(p[2]?'<span class="em" aria-hidden="true">'+p[2]+'</span>':'')+'<span class="tx"><b>'+esc(p[0])+'</b><span>'+esc(p[1])+'</span></span></div>'}).join('')+'</div>'}
 function curLang(){var t=nav.topicId&&topicById(nav.topicId);return t?(LANG[t.subject]||'en-GB'):'en-GB'}
 function vFlip(v){
@@ -160,20 +160,21 @@ function vField(v){
   return '<figure class="vis" style="align-items:center;width:100%"><svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+Math.min(520,W*1.9)+'px" role="img" aria-label="Punktefeld">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vClock(v){
-  var o='<defs><radialGradient id="ckb" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#8AB4F8"/><stop offset="1" stop-color="#1A56C4"/></radialGradient><radialGradient id="ckf" cx=".5" cy=".4" r=".7"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#EEF2F8"/></radialGradient><filter id="cks" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="1.5" dy="2.5" stdDeviation="1.8" flood-opacity=".35"/></filter></defs>';
-  o+='<circle cx="110" cy="110" r="104" fill="url(#ckb)"/><circle cx="110" cy="110" r="90" fill="url(#ckf)" stroke="#fff" stroke-width="3"/>';
+  /* klare Schuluhr: dunkle Ziffern, kurzer dicker Stundenzeiger (dunkel), langer dünner Minutenzeiger (blau) */
+  var o='<defs><radialGradient id="ckb" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#5E97F6"/><stop offset="1" stop-color="#1A56C4"/></radialGradient><filter id="cks" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="1.5" dy="2.5" stdDeviation="1.6" flood-opacity=".35"/></filter></defs>';
+  o+='<circle cx="110" cy="110" r="106" fill="url(#ckb)"/><circle cx="110" cy="110" r="91" fill="#FFFFFF"/><circle cx="110" cy="110" r="91" fill="none" stroke="#DCE3EE" stroke-width="2"/>';
   var i,a;
-  for(i=0;i<12;i++){a=i*Math.PI/6;if(i%3===0)continue;}
-  for(i=0;i<60;i++){a=i*Math.PI/30;var big=i%5===0,r1=big?74:80;o+='<line x1="'+(110+r1*Math.sin(a)).toFixed(1)+'" y1="'+(110-r1*Math.cos(a)).toFixed(1)+'" x2="'+(110+86*Math.sin(a)).toFixed(1)+'" y2="'+(110-86*Math.cos(a)).toFixed(1)+'" stroke="'+(big?'#3c4043':'#9aa0a6')+'" stroke-width="'+(big?3:1.3)+'" stroke-linecap="round"/>'}
+  for(i=0;i<60;i++){a=i*Math.PI/30;var big=i%5===0,r1=big?76:82;o+='<line x1="'+(110+r1*Math.sin(a)).toFixed(1)+'" y1="'+(110-r1*Math.cos(a)).toFixed(1)+'" x2="'+(110+88*Math.sin(a)).toFixed(1)+'" y2="'+(110-88*Math.cos(a)).toFixed(1)+'" stroke="'+(big?'#1F2937':'#B4BCC8')+'" stroke-width="'+(big?3.4:1.4)+'" stroke-linecap="round"/>'}
   for(i=1;i<=12;i++){a=i*Math.PI/6;
-    o+='<text x="'+(110+55*Math.sin(a)).toFixed(1)+'" y="'+(110-55*Math.cos(a)+7).toFixed(1)+'" text-anchor="middle" font-size="20" font-weight="900" fill="#EA4335" font-family="Arial,sans-serif">'+i+'</text>';
-    o+='<text x="'+(110+97*Math.sin(a)).toFixed(1)+'" y="'+(110-97*Math.cos(a)+3.5).toFixed(1)+'" text-anchor="middle" font-size="9.5" font-weight="800" fill="#fff" font-family="Arial,sans-serif">'+(i*5)+'</text>'}
+    o+='<text x="'+(110+62*Math.sin(a)).toFixed(1)+'" y="'+(110-62*Math.cos(a)+8).toFixed(1)+'" text-anchor="middle" font-size="22" font-weight="800" fill="#1F2937" font-family="Arial,sans-serif">'+i+'</text>';
+    if(!v.nomin)o+='<text x="'+(110+98.5*Math.sin(a)).toFixed(1)+'" y="'+(110-98.5*Math.cos(a)+3.5).toFixed(1)+'" text-anchor="middle" font-size="9.5" font-weight="800" fill="#fff" font-family="Arial,sans-serif">'+(i*5)+'</text>'}
   var m=v.m||0,ha=((v.h%12)+m/60)*Math.PI/6,ma=m*Math.PI/30;
-  function hand(ang,len,w,col){var s=Math.sin(ang),c=Math.cos(ang),px=c*w,py=s*w;
-    return '<polygon points="'+(110+px-s*-14*0).toFixed(1)+','+(110+py).toFixed(1)+' '+(110+len*s).toFixed(1)+','+(110-len*c).toFixed(1)+' '+(110-px).toFixed(1)+','+(110-py).toFixed(1)+' '+(110-s*14).toFixed(1)+','+(110+c*14).toFixed(1)+'" fill="'+col+'" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>'}
-  o+='<g filter="url(#cks)">'+hand(ha,40,5.5,'#EA4335')+hand(ma,68,3.6,'#1A56C4')+'</g><circle cx="110" cy="110" r="7.5" fill="#202124" stroke="#fff" stroke-width="2"/>';
-  return '<figure class="vis"><svg viewBox="0 0 220 220" width="100%" style="max-width:240px;display:block;margin:0 auto" role="img" aria-label="Uhr">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  function hand(ang,len,w,tail,col,tip){var s=Math.sin(ang),c=Math.cos(ang),px=c*w,py=s*w;
+    return '<path d="M'+(110-s*tail+px*.7).toFixed(1)+','+(110+c*tail+py*.7).toFixed(1)+' L'+(110+s*(len-tip)+px).toFixed(1)+','+(110-c*(len-tip)+py).toFixed(1)+' L'+(110+s*len).toFixed(1)+','+(110-c*len).toFixed(1)+' L'+(110+s*(len-tip)-px).toFixed(1)+','+(110-c*(len-tip)-py).toFixed(1)+' L'+(110-s*tail-px*.7).toFixed(1)+','+(110+c*tail-py*.7).toFixed(1)+'Z" fill="'+col+'" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/>'}
+  o+='<g filter="url(#cks)">'+hand(ha,46,7,12,'#1F2937',12)+hand(ma,80,4,16,'#1A73E8',10)+'</g><circle cx="110" cy="110" r="8" fill="#1F2937" stroke="#fff" stroke-width="2.5"/><circle cx="110" cy="110" r="2.5" fill="#1A73E8"/>';
+  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 220 220" width="230" height="230" style="display:block;margin:0 auto;max-width:100%" role="img" aria-label="Uhr">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
+
 var NOTEC={10:['#FFF3B0','#F2CB2E','#7A5C00'],20:['#FFD0D0','#EA5A5A','#7A1212'],50:['#D5F0D0','#4DB45A','#14532D'],100:['#D2E3FC','#4285F4','#0B3A8A']};
 function vCoins(v){
   return '<figure class="vis"><div class="coins">'+v.items.map(function(r){var o='',i,fr=r[1]==='Fr',note=fr&&r[0]>=10;
@@ -480,21 +481,24 @@ function vMreihe(v){
 }
 function vNline(v){
   var fmt=function(n){n=Math.round(n*1000)/1000;return String(n).replace('.',',').replace('-','−')},cnt=function(a,b,st){var r=[],k;for(k=0;a+k*st<=b+1e-9;k++)r.push(Math.round((a+k*st)*1000)/1000);return r};
-  var x0=30,x1=570,ty=78,span=v.max-v.min,F='font-family="Arial,Helvetica,sans-serif"',id='nl'+(++_guid);function X(n){return x0+(x1-x0)*(n-v.min)/span}
+  var x0=30,x1=570,ty=86,span=v.max-v.min,F='font-family="Arial,Helvetica,sans-serif"',id='nl'+(++_guid);function X(n){return x0+(x1-x0)*(n-v.min)/span}
+  var ticks=cnt(v.min,v.max,v.step),shown=ticks.filter(function(n,i){return !v.lab||v.lab==='all'||(v.lab==='alt'&&i%2===0)||(v.lab==='ends'&&(i===0||i===ticks.length-1))}),
+    gap=(x1-x0)/Math.max(1,(v.lab==='alt'?ticks.length/2:v.lab==='ends'?2:ticks.length-1)),ml=Math.max.apply(null,shown.map(function(n){return fmt(n).length}).concat([1])),
+    fs=Math.max(18,Math.min(34,gap/(ml*.62+.25)));
   var o='<defs><filter id="'+id+'" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#1c2a4a" flood-opacity=".28"/></filter></defs>';
-  // Spur: negativ rosa, positiv blau
   var zx=v.min<0&&v.max>0?X(0):null;
-  o+='<rect x="'+(x0-10)+'" y="'+(ty-5)+'" width="'+(x1-x0+20)+'" height="10" rx="5" fill="#DDE3EE"/>';
-  if(zx!==null)o+='<rect x="'+(x0-10)+'" y="'+(ty-5)+'" width="'+(zx-x0+10)+'" height="10" rx="5" fill="#F7CFCB"/><rect x="'+zx+'" y="'+(ty-5)+'" width="'+(x1+10-zx)+'" height="10" rx="5" fill="#CFE0FB"/>';
-  if(v.pts&&v.pts.length>=2){var pa=Math.min.apply(null,v.pts),pb=Math.max.apply(null,v.pts);o+='<rect x="'+X(pa)+'" y="'+(ty-5)+'" width="'+(X(pb)-X(pa))+'" height="10" fill="#34A853" fill-opacity=".55"/>'}
-  if(v.minor)cnt(v.min,v.max,v.minor).forEach(function(n){o+='<line x1="'+X(n)+'" x2="'+X(n)+'" y1="'+(ty+8)+'" y2="'+(ty+14)+'" stroke="#B7C0CF" stroke-width="1.8" stroke-linecap="round"/>'});
-  cnt(v.min,v.max,v.step).forEach(function(n){
-    var z=Math.abs(n)<1e-9,show=(!v.lab||v.lab==='all'||(v.lab==='alt'&&Math.round((n-v.min)/v.step)%2===0)||(v.lab==='ends'&&(n===v.min||n+v.step>v.max)));
-    o+='<line x1="'+X(n)+'" x2="'+X(n)+'" y1="'+(ty+8)+'" y2="'+(ty+(z?24:19))+'" stroke="'+(z?'#2B3350':'#7C879B')+'" stroke-width="'+(z?3:2.2)+'" stroke-linecap="round"/>'+(show||z?'<text x="'+X(n)+'" y="'+(ty+46)+'" text-anchor="middle" font-size="'+(z?26:22)+'" font-weight="'+(z?800:700)+'" fill="'+(z?'#2B3350':'#4A5468')+'" '+F+'>'+fmt(n)+'</text>':'')});
-  (v.pts||[]).forEach(function(p,i){var c=VC[i%4],px=X(p),txt=fmt(p),w=Math.max(40,txt.length*15+20);
-    o+='<line x1="'+px+'" y1="'+(ty-14)+'" x2="'+px+'" y2="'+(ty-30)+'" stroke="'+c+'" stroke-width="3" stroke-linecap="round"/><rect x="'+(px-w/2)+'" y="'+(ty-58)+'" width="'+w+'" height="28" rx="14" fill="'+c+'" filter="url(#'+id+')"/><text x="'+px+'" y="'+(ty-38)+'" text-anchor="middle" font-size="20" font-weight="800" fill="#fff" '+F+'>'+txt+'</text><circle cx="'+px+'" cy="'+ty+'" r="11" fill="#fff" stroke="'+c+'" stroke-width="5" filter="url(#'+id+')"/>'});
-  if(v.q!==undefined&&v.q!==null)o+='<line x1="'+X(v.q)+'" y1="'+(ty-14)+'" x2="'+X(v.q)+'" y2="'+(ty-30)+'" stroke="#F9AB00" stroke-width="3" stroke-linecap="round"/><rect x="'+(X(v.q)-20)+'" y="'+(ty-58)+'" width="40" height="28" rx="14" fill="#FFD93D" filter="url(#'+id+')"/><text x="'+X(v.q)+'" y="'+(ty-38)+'" text-anchor="middle" font-size="20" font-weight="900" fill="#5A3A00" '+F+'>?</text><circle cx="'+X(v.q)+'" cy="'+ty+'" r="11" fill="#fff" stroke="#F9AB00" stroke-width="5" stroke-dasharray="4 3" filter="url(#'+id+')"/>';
-  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 136" width="100%" style="display:block;max-width:600px;margin:0 auto" role="img" aria-label="Zahlenstrahl">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  o+='<rect x="'+(x0-12)+'" y="'+(ty-7)+'" width="'+(x1-x0+24)+'" height="14" rx="7" fill="#C9D3E3"/>';
+  if(zx!==null)o+='<rect x="'+(x0-12)+'" y="'+(ty-7)+'" width="'+(zx-x0+12)+'" height="14" rx="7" fill="#F4B9B3"/><rect x="'+zx+'" y="'+(ty-7)+'" width="'+(x1+12-zx)+'" height="14" rx="7" fill="#AECBFA"/>';
+  if(v.pts&&v.pts.length>=2){var pa=Math.min.apply(null,v.pts),pb=Math.max.apply(null,v.pts);o+='<rect x="'+X(pa)+'" y="'+(ty-7)+'" width="'+(X(pb)-X(pa))+'" height="14" fill="#34A853" fill-opacity=".6"/>'}
+  if(v.minor)cnt(v.min,v.max,v.minor).forEach(function(n){o+='<line x1="'+X(n)+'" x2="'+X(n)+'" y1="'+(ty+9)+'" y2="'+(ty+17)+'" stroke="#9AA6B8" stroke-width="2.4" stroke-linecap="round"/>'});
+  ticks.forEach(function(n,i){
+    var z=Math.abs(n)<1e-9,show=shown.indexOf(n)>=0;
+    o+='<line x1="'+X(n)+'" x2="'+X(n)+'" y1="'+(ty+9)+'" y2="'+(ty+(z?30:24))+'" stroke="'+(z?'#1F2937':'#4A5468')+'" stroke-width="'+(z?4:3.2)+'" stroke-linecap="round"/>'+(show||z?'<text x="'+X(n)+'" y="'+(ty+28+fs)+'" text-anchor="middle" font-size="'+fs.toFixed(1)+'" font-weight="'+(z?900:800)+'" fill="#1F2937" '+F+'>'+fmt(n)+'</text>':'')});
+  (v.pts||[]).forEach(function(p,i){var c=VC[i%4],px=X(p),txt=fmt(p),w=Math.max(48,txt.length*18+24);
+    o+='<line x1="'+px+'" y1="'+(ty-16)+'" x2="'+px+'" y2="'+(ty-32)+'" stroke="'+c+'" stroke-width="4" stroke-linecap="round"/><rect x="'+(px-w/2)+'" y="'+(ty-68)+'" width="'+w+'" height="36" rx="18" fill="'+c+'" filter="url(#'+id+')"/><text x="'+px+'" y="'+(ty-42)+'" text-anchor="middle" font-size="25" font-weight="800" fill="#fff" '+F+'>'+txt+'</text><circle cx="'+px+'" cy="'+ty+'" r="13" fill="#fff" stroke="'+c+'" stroke-width="6" filter="url(#'+id+')"/>'});
+  if(v.q!==undefined&&v.q!==null){var qx=X(v.q);o+='<path d="M'+(qx-16)+' '+(ty-50)+'h32l-16 22z" fill="#F9AB00" filter="url(#'+id+')"/><circle cx="'+qx+'" cy="'+ty+'" r="13" fill="#FFF3C4" stroke="#F9AB00" stroke-width="6" filter="url(#'+id+')"/>'}
+  var H=ty+36+fs;
+  return '<figure class="vis nlv" style="width:100%"><svg viewBox="0 '+(v.q!=null||(v.pts&&v.pts.length)?10:52)+' 600 '+(H-(v.q!=null||(v.pts&&v.pts.length)?10:52))+'" width="100%" style="display:block;margin:0 auto" role="img" aria-label="Zahlenstrahl">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vWall(v){
   var R=v.rows,n=R.length,bw=96,bh=46,g=6,W=n*bw+(n-1)*g+20,o='',i,j,cols=['#8AB4F8','#81C995','#FDD663'];
@@ -677,7 +681,7 @@ function vCol(v){
 }
 function visuals(list){
   if(!list||!list.length)return '';
-  var map={wcol:vWcol,dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar,tbl:vTbl,chips:vChips,tline:vTline,flow:vFlow,anno:vAnno,cards:vCards,area:vArea,emo:vEmo,field:vField,clock:vClock,coins:vCoins,shape:vShape,mtab:vMtab,mreihe:vMreihe,symm:vSymm,solid:vSolid,nline:vNline,angle:vAngle,circle:vCircle,jug:vJug,quader:vQuader,par:vPar,blocks:vBlocks,jumps:vJumps,arr:vArr,col:vCol,wall:vWall,scene:vScene,geo:vGeo};
+  var map={pic:vPic,symfig:vSymfig,symgrid:vSymgrid,wcol:vWcol,dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar,tbl:vTbl,chips:vChips,tline:vTline,flow:vFlow,anno:vAnno,cards:vCards,area:vArea,emo:vEmo,field:vField,clock:vClock,coins:vCoins,shape:vShape,mtab:vMtab,mreihe:vMreihe,symm:vSymm,solid:vSolid,nline:vNline,angle:vAngle,circle:vCircle,jug:vJug,quader:vQuader,par:vPar,blocks:vBlocks,jumps:vJumps,arr:vArr,col:vCol,wall:vWall,scene:vScene,geo:vGeo};
   return '<div class="visrow">'+list.map(function(v){return map[v.type]?map[v.type](v):''}).join('')+'</div>';
 }
 
@@ -998,7 +1002,7 @@ function qSplit(t){
 }
 
 /* ---------- Grafiken in Aufgaben: Hilfe ja, Lösung nein ---------- */
-var VT_SKIP={coins:1,bars:1,tbl:1,wcol:1};
+var VT_SKIP={coins:1,bars:1,tbl:1,wcol:1,clock:1,symgrid:1,symfig:1,pic:1,solid:1};
 var VT_ABBR={kilogramm:'kg',gramm:'g',meter:'m',zentimeter:'cm',millimeter:'mm',kilometer:'km',liter:'l',milliliter:'ml',dezimeter:'dm',minuten:'min',stunden:'h',sekunden:'s'};
 function vtRe(s){return s.replace(/[.*+?^${}()|[\]\\\/]/g,'\\$&')}
 function vtTxt(h){return String(h).replace(/<style[\s\S]*?<\/style>/g,' ').replace(/<[^>]+>/g,' ').replace(/&[a-z]+;/g,' ').replace(/\s+/g,' ')}
@@ -1017,7 +1021,7 @@ function visT(list,ans,q,opts){
   var fix=function(s){reN.concat(reW).forEach(function(r){s=s.replace(r,'$1_')});return s};
   return '<div class="visrow">'+list.map(function(v){
     var h=visuals([v]).replace(/^<div class="visrow">/,'').replace(/<\/div>$/,'');
-    if(VT_SKIP[v.type]||!h)return h;
+    if(VT_SKIP[v.type]||!h||(v.type==='nline'&&v.q==null))return h;
     h=h.replace(/<figcaption[^>]*>([\s\S]*?)<\/figcaption>/g,function(m,inner){return has(vtTxt(inner))?'':m});
     var vt=' '+vtTxt(h).toLowerCase()+' ',choice=opts&&opts.length>1&&opts.filter(function(o){var s=String(o).toLowerCase().trim();return s&&!/^\d+$/.test(s)&&new RegExp('(^|[^a-zäöüß0-9])'+vtRe(s)+'(?![a-zäöüß0-9])').test(vt)}).length>=2;
     if(choice)return h;
@@ -1028,3 +1032,40 @@ function visT(list,ans,q,opts){
       out+=inStyle?seg:fix(seg)});
     return out}).join('')+'</div>';
 }
+
+/* ---------- Form und Raum: Bilder statt Text ---------- */
+function vPic(v){return '<figure class="vis picv"><div class="picbig" aria-hidden="true">'+v.e+'</div>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>'}
+var SYMF={
+ butterfly:'<path d="M100 60C70 20 22 26 30 70c6 30 40 34 66 18" fill="#F9AB00"/><path d="M100 60c30-40 78-34 70 10-6 30-40 34-66 18" fill="#F9AB00"/><path d="M98 92C70 100 44 120 58 140c12 16 34 2 42-22" fill="#EA4335"/><path d="M102 92c28 8 54 28 40 48-12 16-34 2-42-22" fill="#EA4335"/><circle cx="64" cy="62" r="9" fill="#fff" opacity=".7"/><circle cx="136" cy="62" r="9" fill="#fff" opacity=".7"/><rect x="95" y="48" width="10" height="92" rx="5" fill="#3C4043"/><path d="M98 50l-12-22M102 50l12-22" stroke="#3C4043" stroke-width="3" stroke-linecap="round"/>',
+ heart:'<path d="M100 150C40 108 26 78 42 54c14-20 44-18 58 6 14-24 44-26 58-6 16 24 2 54-58 96z" fill="#EA4335"/><ellipse cx="66" cy="66" rx="10" ry="6" fill="#fff" opacity=".5" transform="rotate(-30 66 66)"/>',
+ star:'<path d="M100 22l20 46 50 4-38 32 12 49-44-27-44 27 12-49-38-32 50-4z" fill="#FBBC04" stroke="#E37400" stroke-width="3" stroke-linejoin="round"/>',
+ house:'<rect x="50" y="80" width="100" height="72" fill="#F6E3C6" stroke="#8D6E63" stroke-width="3"/><path d="M40 84l60-52 60 52z" fill="#EA4335"/><rect x="88" y="112" width="24" height="40" fill="#8D6E63"/><rect x="58" y="96" width="20" height="18" fill="#AECBFA"/><rect x="122" y="96" width="20" height="18" fill="#AECBFA"/>',
+ tree:'<rect x="94" y="100" width="14" height="54" fill="#8D6E63"/><path d="M102 112l-36-34M104 92l30-40" stroke="#8D6E63" stroke-width="7" stroke-linecap="round"/><circle cx="62" cy="72" r="20" fill="#34A853"/><circle cx="138" cy="48" r="26" fill="#34A853"/><circle cx="104" cy="70" r="14" fill="#5BB974"/>',
+ hand:'<path d="M70 150c-8-20-12-40-12-60V64c0-8 12-8 12 0v26V44c0-8 12-8 12 0v44V36c0-8 12-8 12 0v52V44c0-8 12-8 12 0v50l10-16c6-8 16-2 12 6l-18 34c-6 14-14 26-14 32z" fill="#F2BC96" stroke="#C98A66" stroke-width="2.5" stroke-linejoin="round"/>',
+ ball:'<circle cx="100" cy="92" r="58" fill="#fff" stroke="#3C4043" stroke-width="3"/><path d="M100 64l20 14-8 24h-24l-8-24z" fill="#3C4043"/><path d="M100 34v30M120 78l30-8M112 102l18 26M88 102l-18 26M80 78l-30-8" stroke="#3C4043" stroke-width="3"/>',
+ flag:'<rect x="56" y="30" width="7" height="124" fill="#5F6368"/><path d="M63 34h86l-20 26 20 26H63z" fill="#EA4335"/>',
+ arrow:'<path d="M100 26l46 50h-26v74H80V76H54z" fill="#4285F4"/>',
+ boot:'<path d="M70 30h40v80l40 14c10 4 10 26-6 26H70z" fill="#8D6E63" stroke="#5D4037" stroke-width="3" stroke-linejoin="round"/>',
+ flower:'<circle cx="100" cy="60" r="20" fill="#F48FB1"/><circle cx="76" cy="80" r="20" fill="#F48FB1"/><circle cx="124" cy="80" r="20" fill="#F48FB1"/><circle cx="86" cy="104" r="20" fill="#F48FB1"/><circle cx="114" cy="104" r="20" fill="#F48FB1"/><circle cx="100" cy="84" r="14" fill="#FBBC04"/><rect x="97" y="118" width="6" height="38" fill="#34A853"/>',
+ moon:'<path d="M120 30a62 62 0 1 0 0 124a48 48 0 1 1 0-124z" fill="#FBBC04"/>',
+ snail:'<circle cx="112" cy="92" r="34" fill="#F9AB00"/><path d="M112 92m-20 0a20 20 0 1 1 20 20" fill="none" stroke="#B06000" stroke-width="5"/><path d="M40 136h110c6 0 6-10 0-10H70c-10 0-14-20-24-30" fill="#9CCC65" stroke="#689F38" stroke-width="3"/>',
+ kite:'<path d="M100 22l40 54-40 76-40-76z" fill="#4285F4"/><path d="M100 22v130M60 76h80" stroke="#fff" stroke-width="3"/>'
+};
+function vSymfig(v){var o=SYMF[v.fig]||'';
+  if(v.axis==='v')o+='<line x1="100" y1="10" x2="100" y2="172" stroke="#D93025" stroke-width="4" stroke-dasharray="9 6" stroke-linecap="round"/>';
+  if(v.axis==='h')o+='<line x1="16" y1="90" x2="184" y2="90" stroke="#D93025" stroke-width="4" stroke-dasharray="9 6" stroke-linecap="round"/>';
+  return '<figure class="vis"><svg viewBox="0 0 200 180" width="200" height="180" style="display:block;margin:0 auto;max-width:100%" role="img" aria-label="Bild">'+o+'</svg></figure>'}
+/* Karopapier: links die Vorlage, rechts das Spiegelbild – drei Bilder A, B, C */
+function vSymgrid(v){
+  var W=6,H=5,c=20,pan=function(cells,lab,y0){var o='<g transform="translate(46 '+y0+')">';
+      o+='<rect x="-4" y="-4" width="'+(W*2*c+8)+'" height="'+(H*c+8)+'" rx="8" fill="#fff" stroke="#C9D3E3" stroke-width="2"/>';
+      for(var i=0;i<=W*2;i++)o+='<line x1="'+(i*c)+'" y1="0" x2="'+(i*c)+'" y2="'+(H*c)+'" stroke="#DCE3EE" stroke-width="1.2"/>';
+      for(var j=0;j<=H;j++)o+='<line x1="0" y1="'+(j*c)+'" x2="'+(W*2*c)+'" y2="'+(j*c)+'" stroke="#DCE3EE" stroke-width="1.2"/>';
+      cells.forEach(function(q){o+='<rect x="'+(q[0]*c+1.5)+'" y="'+(q[1]*c+1.5)+'" width="'+(c-3)+'" height="'+(c-3)+'" rx="3" fill="'+(q[0]<W?'#4285F4':'#34A853')+'"/>'});
+      o+='<line x1="'+(W*c)+'" y1="-8" x2="'+(W*c)+'" y2="'+(H*c+8)+'" stroke="#D93025" stroke-width="3.5" stroke-dasharray="7 5"/>';
+      return o+'</g><circle cx="20" cy="'+(y0+H*c/2)+'" r="16" fill="#1F2937"/><text x="20" y="'+(y0+H*c/2+7)+'" text-anchor="middle" font-size="20" font-weight="900" fill="#fff" font-family="Arial,sans-serif">'+lab+'</text>'};
+  var L=v.cells,mir=L.map(function(q){return [2*W-1-q[0],q[1]]}),shift=L.map(function(q){return [q[0]+W,q[1]]}),flipv=L.map(function(q){return [2*W-1-q[0],H-1-q[1]]});
+  var opts={ok:mir,shift:shift,flip:flipv},order=v.order||['ok','shift','flip'],o='',ph=H*c+22;
+  order.forEach(function(k,i){o+=pan(L.concat(opts[k]),'ABC'[i],10+i*ph)});
+  var tw=46+W*2*c+10,th=10+3*ph-8;
+  return '<figure class="vis nlv" style="width:100%"><svg viewBox="0 0 '+tw+' '+th+'" width="100%" style="display:block;max-width:340px;margin:0 auto" role="img" aria-label="Drei Spiegelbilder A, B, C">'+o+'</svg></figure>'}
