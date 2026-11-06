@@ -4,7 +4,7 @@ Lern-App (Vanilla-JS, eine `index.html`), GitHub Pages, easy-school.ch. Repo: ha
 
 ## Umgang mit dem Besitzer
 - Immer auf **Deutsch** antworten, kurz, ehrlich. Nur sagen, was wirklich getestet ist. Es gibt keinen iPhone-Test und die Live-Seite ist aus dem Sandkasten nicht erreichbar: Das immer erwähnen.
-- Nach **jeder** Veröffentlichung «Version vX.XX» nennen. Vorher `APP_VERSION` in `src/p1.js` erhöhen (aktuell v5.24; nächste v5.25 usw.).
+- Nach **jeder** Veröffentlichung «Version vX.XX» nennen. Vorher `APP_VERSION` in `src/p1.js` erhöhen (aktuell v5.25; nächste v5.26 usw.).
 - Mehrdeutige Wünsche: Auslegung offen nennen.
 
 ## Bauen und Testen
@@ -22,7 +22,7 @@ Lern-App (Vanilla-JS, eine `index.html`), GitHub Pages, easy-school.ch. Repo: ha
 - Mathe-Aufgaben ohne «Löse:»; Rechnungen enden mit `=`; Lücken als `_` (wird hellgrau dargestellt), nie «?» oder ❓.
 - Theorie: vorne «Kurz wiederholt» wenn auf anderem Thema aufbauend; nur relevante Begriffe; Formeln **herleiten**; Eselsbrücken; 4–9 Schritte.
 - **Easy lernen** (p6.js): 10 Aufgaben, weisser Hintergrund, keine eigenen XP, keine Herzen, Pool pro Thema ≥ 30 Fragen, verschiedene Fragen/Antworten, Text darf nie abgeschnitten sein. Taschenrechner-Knopf (🧮) nur Mathe ab Klasse 7.
-- **Schriftlich rechnen (kl4–6, Themen schriftlich-plus/-minus/-mal/-durch):** Rechenaufgaben immer als Häuschen-Raster untereinander (`wcol` in p2.js, Erkennung `wcFor`), Kinder füllen Ergebnis- und Übertragsfelder selbst. Übertrag als kleine 1 unten links über dem Strich, Ergebnis doppelt unterstrichen; Minus mit Übertrag zur unteren Zahl; Division mit «−», Strich und Herunterholen. Ab Oberstufe Rechner statt Raster.
+- **Schriftlich rechnen (kl4–6, Themen schriftlich-plus/-minus/-mal/-durch):** Rechenaufgaben immer als Häuschen-Raster untereinander (`wcol` in p2.js, Erkennung `wcFor`), Kinder füllen Ergebnis- und Übertragsfelder selbst. In Karten und Prüfungen keine Hilfe im Raster (keine Spaltenmarkierung, keine Anleitung), Hilfe nur über den Tipp-Knopf und in der Theorie. Übertrag als kleine 1 unten links über dem Strich, Ergebnis doppelt unterstrichen; Minus mit Übertrag zur unteren Zahl; Division mit «−», Strich und Herunterholen. Ab Oberstufe Rechner statt Raster.
 - Buttons heissen **AI-Karten** und **Easy lernen**.
 - **Glücksrad:** nach 5 richtigen Antworten in Folge immer; sonst zufällig nach 4–9 Fragen; am Ende von Prüfung, Karten und Easy lernen; plus Theorie-Regel (3 Aufgaben). Keine 3-Minuten-Regel.
 - Neue Themen aus Drive-Unterlagen: Skill `easyschool-import`. Englisch Double Decker: Wörter nur aus den Heften/Exporten der Kinder (Quizlet-Export, Buchseiten), nichts raten.

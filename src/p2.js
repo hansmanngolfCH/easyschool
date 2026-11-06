@@ -872,7 +872,7 @@ function vWcol(v){
   var s=v.s||wcSolve(v.op,v.a,v.b);if(!s)return '';
   var mode=v.mode||'show',key=v.key||'',st=mode==='live'?(WCS[key]||(WCS[key]={r:{},c:{},s:{},x:{}})):null,o='',i;
   if(mode==='live')WCSPEC[key]=s;
-  WC_ACT=null;if(mode==='live'&&s.op!==':'){for(var a0=s.N-1;a0>=0;a0--)if(!st.r[a0]&&(s.guide[a0]||s.out[a0]!=null)){WC_ACT=a0+2;break}}
+  WC_ACT=null;if(mode==='live'&&v.guide&&s.op!==':'){for(var a0=s.N-1;a0>=0;a0--)if(!st.r[a0]&&(s.guide[a0]||s.out[a0]!=null)){WC_ACT=a0+2;break}}
   var up=v.upto==null?99:v.upto,shown=function(i){return s.N-1-i<up},hide=mode==='blank'||v.hideRes,cols,rows;
   var box=function(r,i,val,col){return mode==='live'?wcIn(key,r,i,val,r==='c'?'wc-cbox':'wc-box',col):'<i class="'+(r==='c'?'wc-cbox':'wc-box')+'"></i>'};
   if(s.op!==':'){
@@ -928,7 +928,7 @@ function vWcol(v){
   return wcWrap(v,s,key,g,mode);
 }
 function wcWrap(v,s,key,g,mode){WC_ACT=null;
-  var guide=mode==='live'?'<p class="wc-guide" data-k="'+esc(key)+'">'+esc(wcGuide(s,WCS[key]))+'</p><p class="wc-rule">'+wcRule(s)+'</p>':'';
+  var guide=mode==='live'&&v.guide?'<p class="wc-guide" data-k="'+esc(key)+'">'+esc(wcGuide(s,WCS[key]))+'</p><p class="wc-rule">'+wcRule(s)+'</p>':'';
   return '<figure class="vis wcf'+(mode==='live'?' wclive':'')+'" data-k="'+esc(key)+'">'+(v.lab?'<p class="wc-lab">'+esc(v.lab)+'</p>':'')+g+guide+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function wcRule(s){
@@ -969,7 +969,7 @@ document.addEventListener('input',function(e){
   if(k.indexOf('e:')===0){var qid=k.split(':').pop();nav.answers=nav.answers||{};nav.answers[qid]=val}
   else{nav.typed=val;var a=document.getElementById('ans');if(a)a.value=val}
   var fig=t.closest('figure'),gp=fig&&fig.querySelector('.wc-guide');if(gp&&s)gp.textContent=wcGuide(s,st);
-  if(s)wcHl(fig,s,st);
+  if(s&&gp)wcHl(fig,s,st);
   if(v&&fig){var nx=null;
     if(r==='r'&&s&&s.op!==':')nx=fig.querySelector('input[data-r="r"][data-i="'+(i-1)+'"]');
     else if(r==='r')nx=fig.querySelector('input[data-r="r"][data-i="'+(i+1)+'"]')||fig.querySelector('input[data-r="x"]');
