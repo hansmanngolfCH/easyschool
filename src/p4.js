@@ -17,7 +17,7 @@ function fixGrow(el){if(!el)return;el.style.height='auto';el.style.height=(el.sc
 /* ---------- Üben ---------- */
 function mqFix(s){return String(s).replace(/(^|[\s(=+\-−·×:\/])_(?=[\s)=+\-−·×:\/.,]|$)/g,'$1<span class="gap">_</span>').replace(/((?:^|[\s=(])[-−]?[\d?❓xyz][\w,²³%°\/?]*)\.\s+(?!Schritt|Klasse|Platz|Rang|Stelle|Teil)(?=[A-ZÄÖÜ])/g,'$1<br>')}
 function qHtml(q){
-  if(q.indexOf('\n')<0)return '<p class="fq">'+mqFix(rt(q))+'</p>';
+  if(q.indexOf('\n')<0){var sp=qSplit(q);return '<p class="fq">'+mqFix(rt(sp.main))+'</p>'+(sp.sub?'<p class="fqi">'+mqFix(rt(sp.sub))+'</p>':'')}
   var ls=q.split('\n'),sent=ls[0],rest=ls.slice(1).join(' '),m=/«([^»]+)»/.exec(rest),h='',i=m?sent.toLowerCase().indexOf(m[1].toLowerCase()):-1;
   h=i>=0?esc(sent.slice(0,i))+'<mark>'+esc(sent.slice(i,i+m[1].length))+'</mark>'+esc(sent.slice(i+m[1].length)):esc(sent);
   return '<div class="dsent"><p>'+h+'</p></div><p class="dqq">'+esc(rest).replace(/«([^»]+)»/g,'<b class="dtg">$1</b>')+'</p>';
@@ -25,6 +25,7 @@ function qHtml(q){
 function qParts(q){
   if(q.say)return {main:String(q.q),ctx:'',inst:''};
   var t=String(q.q).replace(/\s+/g,' ').trim(),ins=[],m;
+  var sp0=qSplit(t);if(sp0.sub){t=sp0.main;sp0.sub.split(/(?<=[.!?])\s+/).forEach(function(x){ins.push(x)})}
   [[/\s*\(Schreibe nur die Zahl\.\)/,'Schreibe nur die Zahl.'],[/\s*\(so weit wie möglich kürzen\)/,'Kürze so weit wie möglich.'],[/\s*Runde auf eine Stelle nach dem Komma\./,'Runde auf eine Stelle nach dem Komma.'],[/\s*\(in (cm|m|km|g|kg|min)\)\.?/,null],[/\s*Schreibe den ganzen Satz\./,'Schreibe den ganzen Satz.']].forEach(function(r){var x=r[0].exec(t);if(x){t=t.replace(r[0],'');ins.push(r[1]||('Antwort in '+x[1]+', nur die Zahl.'))}});
   var main=t,ctx='',mm=/^(.*?[?:])\s+(\S.*)$/.exec(t);
   if(mm&&/^(Welch|Bestimme|Berechne|Ins |Setze|Nenne|Schreibe|Bilde|Wandle|Kürze|Was für)/.test(mm[1])){main=mm[1];ctx=mm[2]}
@@ -186,7 +187,7 @@ function vPractice(){
   if(c.opts&&!n.opts)n.opts=shuffle(c.opts.map(function(t){return {t:t,ok:c.multi?c.ans.indexOf(t)>=0:t===c.a}}));
   var wv=wcFor(x&&x.t&&x.t.id,c),wk='p:'+n.idx+':'+k;
   if(wv&&n._wck!==wk){n._wck=wk;WCS[wk]={r:{},c:{},s:{},x:{}}}
-  var h2=head+'<section class="card flash">'+(wv?(wv.pure?'<p class="fq wc-ins">'+wcIns(wv)+'</p>':qHtml(c.q))+vWcol({s:wv,mode:n.revealed?'show':'live',key:wk,lab:wv.pure?'':'Schreibe die Rechnung untereinander:'}):qHtml(c.q)+sayBtn(c.say)+visuals(c.visuals))+'</section>';
+  var h2=head+'<section class="card flash">'+(wv?(wv.pure?'<p class="fq wc-ins">'+wcIns(wv)+'</p>':qHtml(c.q))+vWcol({s:wv,mode:n.revealed?'show':'live',key:wk,lab:wv.pure?'':'Schreibe die Rechnung untereinander:'}):qHtml(c.q)+sayBtn(c.say)+(n.revealed?visuals(c.visuals):visT(c.visuals,c.a,c.q,c.opts)))+'</section>';
   if(wv)chk=!n.revealed;
   if(!n.revealed){
     h2+='<div class="tools">'+(hs.length?'<button class="btn sm" data-act="hint"'+(n.hintN>=hs.length?' disabled':'')+'>Tipp'+(n.hintN<hs.length?' ('+(n.hintN+1)+'/'+hs.length+')':'')+'</button>':'')+pd.btn+'</div>'+hintBoxes(n,hs);
@@ -257,7 +258,7 @@ function vExam(){
     qs.forEach(function(q,i){
       var key='e:'+t.id+':'+q.id,pd=padHTML(key,q.q);
       var wq=wcFor(t.id,q);if(wq){html+='<li><div class="mqt"><span class="nc">'+(i+1)+'</span>'+(wq.pure?'<div class="mqx"><span class="qm">'+wcIns(wq)+'</span></div>':qBlock(q))+'</div>'+vWcol({s:wq,mode:'live',key:'e:'+t.id+':'+q.id})+'<div class="tools">'+pd.btn+'</div>'+pd.box+'</li>';return}
-      html+='<li><div class="mqt"><span class="nc">'+(i+1)+'</span>'+qBlock(q)+'</div>'+visuals(q.visuals)+(q.type==='mc'?'<div class="mcopts">'+q.options.map(function(o,j){return '<label class="mco"><input type="radio" name="r-'+q.id+'" data-q="'+q.id+'" value="'+j+'"'+(n.answers[q.id]===j?' checked':'')+'><span class="mcl">'+String.fromCharCode(65+j)+'</span><span>'+rt(o)+'</span></label>'}).join('')+'</div>':(q.pre!=null?'<textarea class="pin fixin" id="in-'+q.id+'" data-q="'+q.id+'" rows="1" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">'+esc(n.answers[q.id]||q.pre||'')+'</textarea>':'<input class="pin" id="in-'+q.id+'" data-q="'+q.id+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" value="'+esc(n.answers[q.id]||'')+'">')+'<div class="tools">'+pd.btn+'</div>'+pd.box)+'</li>';
+      html+='<li><div class="mqt"><span class="nc">'+(i+1)+'</span>'+qBlock(q)+'</div>'+visT(q.visuals,q.type==='mc'&&q.options?q.options[q.answer]:(q.answer||[''])[0],q.q,q.options)+(q.type==='mc'?'<div class="mcopts">'+q.options.map(function(o,j){return '<label class="mco"><input type="radio" name="r-'+q.id+'" data-q="'+q.id+'" value="'+j+'"'+(n.answers[q.id]===j?' checked':'')+'><span class="mcl">'+String.fromCharCode(65+j)+'</span><span>'+rt(o)+'</span></label>'}).join('')+'</div>':(q.pre!=null?'<textarea class="pin fixin" id="in-'+q.id+'" data-q="'+q.id+'" rows="1" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">'+esc(n.answers[q.id]||q.pre||'')+'</textarea>':'<input class="pin" id="in-'+q.id+'" data-q="'+q.id+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" value="'+esc(n.answers[q.id]||'')+'">')+'<div class="tools">'+pd.btn+'</div>'+pd.box)+'</li>';
     });
     html+='</ol></div>';
     return html+'<button class="btn pri big" data-act="finish">Abgeben</button></div>';

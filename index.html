@@ -1782,6 +1782,9 @@ input.wc-sbox:focus{border-color:#8AB4F8}
 .wc-rule b{color:#D93025}
 .wc-lab{margin:0;font-size:.9rem;color:#5F6368;font-weight:600}
 .wc-ins{font-size:1.15rem!important}
+/* Zusatz/Anleitung unter der Hauptfrage: klein und ruhig */
+.fqi{margin:6px 0 0;font:500 .95rem/1.4 var(--font-b,inherit);color:var(--ink2,#5F6368);letter-spacing:0;text-wrap:balance}
+.xg-qi{display:block;margin-top:5px;font-size:.85rem;font-weight:500;line-height:1.35;color:var(--ink2,#5F6368)}
 </style></head><body>
 <div id="app" aria-live="polite"></div>
 <div id="toasts" class="toasts" aria-live="polite"></div>
@@ -1789,7 +1792,7 @@ input.wc-sbox:focus{border-color:#8AB4F8}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION="v5.25";
+var APP_VERSION="v5.26";
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -3105,6 +3108,51 @@ document.addEventListener('keydown',function(e){
     if(r==='r'&&f&&s)p=f.querySelector('input[data-r="r"][data-i="'+(s.op===':'?i-1:i+1)+'"]');if(p){e.preventDefault();try{p.focus()}catch(x){}}}
 });
 
+/* ---------- Aufgaben: Hauptfrage gross, Zusatz/Anleitung klein darunter ---------- */
+var Q_INS=/^(Schreibe|Runde|Gib|Antworte|Kürze|Achte|Tipp|Hinweis|Benutze|Verwende|Kreuze|Nur|Mit|In|Ganze|Ohne|Rechne im Kopf|Rechne mit)\b/;
+function qSplit(t){
+  t=String(t==null?'':t).trim();var sub=[],m,g=0;
+  if(t.indexOf('\n')>=0)return {main:t,sub:''};
+  while(g++<4&&(m=/\s*\(([^()]{2,80})\)\s*\.?$/.exec(t))&&(Q_INS.test(m[1].trim())||/^(in|auf) [a-zäöüA-Z²³ ]{1,14}$/.test(m[1].trim()))&&m.index>0){
+    var x=m[1].trim();if(/\?/.test(x))break;sub.unshift(/^in [a-zäöüA-Z²³ ]{1,14}$/i.test(x)?'Antwort '+x.toLowerCase().replace(/^in /,'in ')+'.':/[.!?]$/.test(x)?x:x.charAt(0).toUpperCase()+x.slice(1)+'.');t=t.slice(0,m.index).trim()}
+  var parts=t.split(/(?<=[.!?:])\s+(?=[A-ZÄÖÜ])/);
+  if(parts.length>1){var keep=[parts[0]],mv=[];for(var i=1;i<parts.length;i++){if(/^(Schreibe|Runde|Gib|Antworte|Kürze|Achte|Tipp|Hinweis|Benutze|Verwende|Kreuze)\b/.test(parts[i])&&!/[?_]/.test(parts[i]))mv.push(parts[i]);else keep.push(parts[i])}
+    if(mv.length&&/[?_=]|:$/.test(keep.join(' '))){sub=sub.concat(mv);t=keep.join(' ')}}
+  return {main:t,sub:sub.join(' ')};
+}
+
+/* ---------- Grafiken in Aufgaben: Hilfe ja, Lösung nein ---------- */
+var VT_SKIP={coins:1,bars:1,tbl:1,wcol:1};
+var VT_ABBR={kilogramm:'kg',gramm:'g',meter:'m',zentimeter:'cm',millimeter:'mm',kilometer:'km',liter:'l',milliliter:'ml',dezimeter:'dm',minuten:'min',stunden:'h',sekunden:'s'};
+function vtRe(s){return s.replace(/[.*+?^${}()|[\]\\\/]/g,'\\$&')}
+function vtTxt(h){return String(h).replace(/<style[\s\S]*?<\/style>/g,' ').replace(/<[^>]+>/g,' ').replace(/&[a-z]+;/g,' ').replace(/\s+/g,' ')}
+/* Zeigt die Grafik einer Aufgabe ohne Lösung: Bildunterschriften mit der Lösung fallen weg, Lösungszahlen/-wörter werden zu «_». */
+function visT(list,ans,q,opts){
+  if(!list||!list.length)return '';
+  var A=String(ans==null?'':ans).replace(/\s+/g,' ').trim(),Q=' '+String(q||'').toLowerCase()+' ';
+  if(!A)return visuals(list);
+  var nums=(A.match(/\d+(?:[.,]\d+)?/g)||[]).filter(function(n){return !new RegExp('(^|[^\\d.,\\/])'+vtRe(n.toLowerCase())+'(?!\\d|[.,]\\d|\\/)').test(Q)});
+  var words=[];
+  if(!/\d/.test(A)){var w=A.toLowerCase().replace(/[.!?]$/,'');if(w.length>=3&&Q.indexOf(w)<0)words.push(w);if(VT_ABBR[w]&&!new RegExp('[^a-zäöü]'+VT_ABBR[w]+'[^a-zäöü]').test(Q))words.push(VT_ABBR[w])}
+  if(!nums.length&&!words.length)return visuals(list);
+  var reN=nums.map(function(n){return new RegExp('(^|[^\\d.,\\/])'+vtRe(n)+'(?!\\d|[.,]\\d)','g')});
+  var reW=words.map(function(w){return new RegExp('(^|[^a-zäöüß])'+vtRe(w)+'(?![a-zäöüß])','gi')});
+  var has=function(s){s=' '+s+' ';return reN.some(function(r){r.lastIndex=0;return r.test(s)})||reW.some(function(r){r.lastIndex=0;return r.test(s)})};
+  var fix=function(s){reN.concat(reW).forEach(function(r){s=s.replace(r,'$1_')});return s};
+  return '<div class="visrow">'+list.map(function(v){
+    var h=visuals([v]).replace(/^<div class="visrow">/,'').replace(/<\/div>$/,'');
+    if(VT_SKIP[v.type]||!h)return h;
+    h=h.replace(/<figcaption[^>]*>([\s\S]*?)<\/figcaption>/g,function(m,inner){return has(vtTxt(inner))?'':m});
+    var vt=' '+vtTxt(h).toLowerCase()+' ',choice=opts&&opts.length>1&&opts.filter(function(o){var s=String(o).toLowerCase().trim();return s&&!/^\d+$/.test(s)&&new RegExp('(^|[^a-zäöüß0-9])'+vtRe(s)+'(?![a-zäöüß0-9])').test(vt)}).length>=2;
+    if(choice)return h;
+    var out='',inStyle=false;
+    h.split(/(<[^>]+>)/).forEach(function(seg){
+      if(seg.charAt(0)==='<'){if(/^<style/i.test(seg))inStyle=true;if(/^<\/style/i.test(seg))inStyle=false;
+        out+=seg.replace(/(aria-label|title)="([^"]*)"/g,function(m,k,val){return k+'="'+fix(' '+val).slice(1)+'"'});return}
+      out+=inStyle?seg:fix(seg)});
+    return out}).join('')+'</div>';
+}
+
 
 /* ---------- Ansichten: Start, Klasse, Fach, Verstehen ---------- */
 function syncNote(){return ''}
@@ -3333,7 +3381,7 @@ function fixGrow(el){if(!el)return;el.style.height='auto';el.style.height=(el.sc
 /* ---------- Üben ---------- */
 function mqFix(s){return String(s).replace(/(^|[\s(=+\-−·×:\/])_(?=[\s)=+\-−·×:\/.,]|$)/g,'$1<span class="gap">_</span>').replace(/((?:^|[\s=(])[-−]?[\d?❓xyz][\w,²³%°\/?]*)\.\s+(?!Schritt|Klasse|Platz|Rang|Stelle|Teil)(?=[A-ZÄÖÜ])/g,'$1<br>')}
 function qHtml(q){
-  if(q.indexOf('\n')<0)return '<p class="fq">'+mqFix(rt(q))+'</p>';
+  if(q.indexOf('\n')<0){var sp=qSplit(q);return '<p class="fq">'+mqFix(rt(sp.main))+'</p>'+(sp.sub?'<p class="fqi">'+mqFix(rt(sp.sub))+'</p>':'')}
   var ls=q.split('\n'),sent=ls[0],rest=ls.slice(1).join(' '),m=/«([^»]+)»/.exec(rest),h='',i=m?sent.toLowerCase().indexOf(m[1].toLowerCase()):-1;
   h=i>=0?esc(sent.slice(0,i))+'<mark>'+esc(sent.slice(i,i+m[1].length))+'</mark>'+esc(sent.slice(i+m[1].length)):esc(sent);
   return '<div class="dsent"><p>'+h+'</p></div><p class="dqq">'+esc(rest).replace(/«([^»]+)»/g,'<b class="dtg">$1</b>')+'</p>';
@@ -3341,6 +3389,7 @@ function qHtml(q){
 function qParts(q){
   if(q.say)return {main:String(q.q),ctx:'',inst:''};
   var t=String(q.q).replace(/\s+/g,' ').trim(),ins=[],m;
+  var sp0=qSplit(t);if(sp0.sub){t=sp0.main;sp0.sub.split(/(?<=[.!?])\s+/).forEach(function(x){ins.push(x)})}
   [[/\s*\(Schreibe nur die Zahl\.\)/,'Schreibe nur die Zahl.'],[/\s*\(so weit wie möglich kürzen\)/,'Kürze so weit wie möglich.'],[/\s*Runde auf eine Stelle nach dem Komma\./,'Runde auf eine Stelle nach dem Komma.'],[/\s*\(in (cm|m|km|g|kg|min)\)\.?/,null],[/\s*Schreibe den ganzen Satz\./,'Schreibe den ganzen Satz.']].forEach(function(r){var x=r[0].exec(t);if(x){t=t.replace(r[0],'');ins.push(r[1]||('Antwort in '+x[1]+', nur die Zahl.'))}});
   var main=t,ctx='',mm=/^(.*?[?:])\s+(\S.*)$/.exec(t);
   if(mm&&/^(Welch|Bestimme|Berechne|Ins |Setze|Nenne|Schreibe|Bilde|Wandle|Kürze|Was für)/.test(mm[1])){main=mm[1];ctx=mm[2]}
@@ -3502,7 +3551,7 @@ function vPractice(){
   if(c.opts&&!n.opts)n.opts=shuffle(c.opts.map(function(t){return {t:t,ok:c.multi?c.ans.indexOf(t)>=0:t===c.a}}));
   var wv=wcFor(x&&x.t&&x.t.id,c),wk='p:'+n.idx+':'+k;
   if(wv&&n._wck!==wk){n._wck=wk;WCS[wk]={r:{},c:{},s:{},x:{}}}
-  var h2=head+'<section class="card flash">'+(wv?(wv.pure?'<p class="fq wc-ins">'+wcIns(wv)+'</p>':qHtml(c.q))+vWcol({s:wv,mode:n.revealed?'show':'live',key:wk,lab:wv.pure?'':'Schreibe die Rechnung untereinander:'}):qHtml(c.q)+sayBtn(c.say)+visuals(c.visuals))+'</section>';
+  var h2=head+'<section class="card flash">'+(wv?(wv.pure?'<p class="fq wc-ins">'+wcIns(wv)+'</p>':qHtml(c.q))+vWcol({s:wv,mode:n.revealed?'show':'live',key:wk,lab:wv.pure?'':'Schreibe die Rechnung untereinander:'}):qHtml(c.q)+sayBtn(c.say)+(n.revealed?visuals(c.visuals):visT(c.visuals,c.a,c.q,c.opts)))+'</section>';
   if(wv)chk=!n.revealed;
   if(!n.revealed){
     h2+='<div class="tools">'+(hs.length?'<button class="btn sm" data-act="hint"'+(n.hintN>=hs.length?' disabled':'')+'>Tipp'+(n.hintN<hs.length?' ('+(n.hintN+1)+'/'+hs.length+')':'')+'</button>':'')+pd.btn+'</div>'+hintBoxes(n,hs);
@@ -3573,7 +3622,7 @@ function vExam(){
     qs.forEach(function(q,i){
       var key='e:'+t.id+':'+q.id,pd=padHTML(key,q.q);
       var wq=wcFor(t.id,q);if(wq){html+='<li><div class="mqt"><span class="nc">'+(i+1)+'</span>'+(wq.pure?'<div class="mqx"><span class="qm">'+wcIns(wq)+'</span></div>':qBlock(q))+'</div>'+vWcol({s:wq,mode:'live',key:'e:'+t.id+':'+q.id})+'<div class="tools">'+pd.btn+'</div>'+pd.box+'</li>';return}
-      html+='<li><div class="mqt"><span class="nc">'+(i+1)+'</span>'+qBlock(q)+'</div>'+visuals(q.visuals)+(q.type==='mc'?'<div class="mcopts">'+q.options.map(function(o,j){return '<label class="mco"><input type="radio" name="r-'+q.id+'" data-q="'+q.id+'" value="'+j+'"'+(n.answers[q.id]===j?' checked':'')+'><span class="mcl">'+String.fromCharCode(65+j)+'</span><span>'+rt(o)+'</span></label>'}).join('')+'</div>':(q.pre!=null?'<textarea class="pin fixin" id="in-'+q.id+'" data-q="'+q.id+'" rows="1" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">'+esc(n.answers[q.id]||q.pre||'')+'</textarea>':'<input class="pin" id="in-'+q.id+'" data-q="'+q.id+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" value="'+esc(n.answers[q.id]||'')+'">')+'<div class="tools">'+pd.btn+'</div>'+pd.box)+'</li>';
+      html+='<li><div class="mqt"><span class="nc">'+(i+1)+'</span>'+qBlock(q)+'</div>'+visT(q.visuals,q.type==='mc'&&q.options?q.options[q.answer]:(q.answer||[''])[0],q.q,q.options)+(q.type==='mc'?'<div class="mcopts">'+q.options.map(function(o,j){return '<label class="mco"><input type="radio" name="r-'+q.id+'" data-q="'+q.id+'" value="'+j+'"'+(n.answers[q.id]===j?' checked':'')+'><span class="mcl">'+String.fromCharCode(65+j)+'</span><span>'+rt(o)+'</span></label>'}).join('')+'</div>':(q.pre!=null?'<textarea class="pin fixin" id="in-'+q.id+'" data-q="'+q.id+'" rows="1" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">'+esc(n.answers[q.id]||q.pre||'')+'</textarea>':'<input class="pin" id="in-'+q.id+'" data-q="'+q.id+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" value="'+esc(n.answers[q.id]||'')+'">')+'<div class="tools">'+pd.btn+'</div>'+pd.box)+'</li>';
     });
     html+='</ol></div>';
     return html+'<button class="btn pri big" data-act="finish">Abgeben</button></div>';
@@ -4784,7 +4833,7 @@ function xgSeenGet(k){try{return JSON.parse(localStorage.getItem(k)||'{}')||{}}c
 function xgSeenSet(k,o){try{var ks=Object.keys(o);if(ks.length>400){var n2={};ks.slice(-300).forEach(function(x){n2[x]=1});o=n2}localStorage.setItem(k,JSON.stringify(o))}catch(e){}}
 function xgOptRound(q,right,others,key,vis,why){
   var all=[right].concat(others),long=all.some(function(x){return String(x).length>26});
-  var mx=Math.max.apply(null,all.map(function(x){return String(x).length})),vk=vis?JSON.stringify(vis):'';return {why:why||'',cols1:mx>26,key:key||q+'|'+right+vk,ans:right+vk,kind:'opt',svg:(vis?'<div class="xg-vis">'+visuals(vis)+'</div>':'')+'<div class="xg-q">'+mqFix(esc(q).replace(/\n/g,'<br>'))+'</div>',opts:shuffle(all.map(function(x){return {h:'<b'+(mx>45?' class="xl xl2"':long?' class="xl"':'')+'>'+esc(x)+'</b>',ok:x===right}}))}
+  var mx=Math.max.apply(null,all.map(function(x){return String(x).length})),vk=vis?JSON.stringify(vis):'';return {why:why||'',cols1:mx>26,key:key||q+'|'+right+vk,ans:right+vk,kind:'opt',svg:(vis?'<div class="xg-vis">'+visT(vis,right,q,all)+'</div>':'')+(function(){var sp=qSplit(q);return '<div class="xg-q">'+mqFix(esc(sp.main).replace(/\n/g,'<br>'))+(sp.sub?'<span class="xg-qi">'+mqFix(esc(sp.sub))+'</span>':'')+'</div>'})(),opts:shuffle(all.map(function(x){return {h:'<b'+(mx>45?' class="xl xl2"':long?' class="xl"':'')+'>'+esc(x)+'</b>',ok:x===right}}))}
 }
 function xgCommaVar(sent){
   var out=[],nc=sent.replace(/,/g,'');if(nc!==sent)out.push(nc);

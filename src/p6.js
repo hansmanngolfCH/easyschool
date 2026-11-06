@@ -77,7 +77,7 @@ function xgSeenGet(k){try{return JSON.parse(localStorage.getItem(k)||'{}')||{}}c
 function xgSeenSet(k,o){try{var ks=Object.keys(o);if(ks.length>400){var n2={};ks.slice(-300).forEach(function(x){n2[x]=1});o=n2}localStorage.setItem(k,JSON.stringify(o))}catch(e){}}
 function xgOptRound(q,right,others,key,vis,why){
   var all=[right].concat(others),long=all.some(function(x){return String(x).length>26});
-  var mx=Math.max.apply(null,all.map(function(x){return String(x).length})),vk=vis?JSON.stringify(vis):'';return {why:why||'',cols1:mx>26,key:key||q+'|'+right+vk,ans:right+vk,kind:'opt',svg:(vis?'<div class="xg-vis">'+visuals(vis)+'</div>':'')+'<div class="xg-q">'+mqFix(esc(q).replace(/\n/g,'<br>'))+'</div>',opts:shuffle(all.map(function(x){return {h:'<b'+(mx>45?' class="xl xl2"':long?' class="xl"':'')+'>'+esc(x)+'</b>',ok:x===right}}))}
+  var mx=Math.max.apply(null,all.map(function(x){return String(x).length})),vk=vis?JSON.stringify(vis):'';return {why:why||'',cols1:mx>26,key:key||q+'|'+right+vk,ans:right+vk,kind:'opt',svg:(vis?'<div class="xg-vis">'+visT(vis,right,q,all)+'</div>':'')+(function(){var sp=qSplit(q);return '<div class="xg-q">'+mqFix(esc(sp.main).replace(/\n/g,'<br>'))+(sp.sub?'<span class="xg-qi">'+mqFix(esc(sp.sub))+'</span>':'')+'</div>'})(),opts:shuffle(all.map(function(x){return {h:'<b'+(mx>45?' class="xl xl2"':long?' class="xl"':'')+'>'+esc(x)+'</b>',ok:x===right}}))}
 }
 function xgCommaVar(sent){
   var out=[],nc=sent.replace(/,/g,'');if(nc!==sent)out.push(nc);

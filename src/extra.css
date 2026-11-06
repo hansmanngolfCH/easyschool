@@ -1571,3 +1571,6 @@ input.wc-sbox:focus{border-color:#8AB4F8}
 .wc-rule b{color:#D93025}
 .wc-lab{margin:0;font-size:.9rem;color:#5F6368;font-weight:600}
 .wc-ins{font-size:1.15rem!important}
+/* Zusatz/Anleitung unter der Hauptfrage: klein und ruhig */
+.fqi{margin:6px 0 0;font:500 .95rem/1.4 var(--font-b,inherit);color:var(--ink2,#5F6368);letter-spacing:0;text-wrap:balance}
+.xg-qi{display:block;margin-top:5px;font-size:.85rem;font-weight:500;line-height:1.35;color:var(--ink2,#5F6368)}

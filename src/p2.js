@@ -983,3 +983,48 @@ document.addEventListener('keydown',function(e){
   if(e.key==='Backspace'&&!t.value){var f=t.closest('figure'),r=t.getAttribute('data-r'),i=+t.getAttribute('data-i'),s=WCSPEC[t.getAttribute('data-k')],p=null;
     if(r==='r'&&f&&s)p=f.querySelector('input[data-r="r"][data-i="'+(s.op===':'?i-1:i+1)+'"]');if(p){e.preventDefault();try{p.focus()}catch(x){}}}
 });
+
+/* ---------- Aufgaben: Hauptfrage gross, Zusatz/Anleitung klein darunter ---------- */
+var Q_INS=/^(Schreibe|Runde|Gib|Antworte|Kürze|Achte|Tipp|Hinweis|Benutze|Verwende|Kreuze|Nur|Mit|In|Ganze|Ohne|Rechne im Kopf|Rechne mit)\b/;
+function qSplit(t){
+  t=String(t==null?'':t).trim();var sub=[],m,g=0;
+  if(t.indexOf('\n')>=0)return {main:t,sub:''};
+  while(g++<4&&(m=/\s*\(([^()]{2,80})\)\s*\.?$/.exec(t))&&(Q_INS.test(m[1].trim())||/^(in|auf) [a-zäöüA-Z²³ ]{1,14}$/.test(m[1].trim()))&&m.index>0){
+    var x=m[1].trim();if(/\?/.test(x))break;sub.unshift(/^in [a-zäöüA-Z²³ ]{1,14}$/i.test(x)?'Antwort '+x.toLowerCase().replace(/^in /,'in ')+'.':/[.!?]$/.test(x)?x:x.charAt(0).toUpperCase()+x.slice(1)+'.');t=t.slice(0,m.index).trim()}
+  var parts=t.split(/(?<=[.!?:])\s+(?=[A-ZÄÖÜ])/);
+  if(parts.length>1){var keep=[parts[0]],mv=[];for(var i=1;i<parts.length;i++){if(/^(Schreibe|Runde|Gib|Antworte|Kürze|Achte|Tipp|Hinweis|Benutze|Verwende|Kreuze)\b/.test(parts[i])&&!/[?_]/.test(parts[i]))mv.push(parts[i]);else keep.push(parts[i])}
+    if(mv.length&&/[?_=]|:$/.test(keep.join(' '))){sub=sub.concat(mv);t=keep.join(' ')}}
+  return {main:t,sub:sub.join(' ')};
+}
+
+/* ---------- Grafiken in Aufgaben: Hilfe ja, Lösung nein ---------- */
+var VT_SKIP={coins:1,bars:1,tbl:1,wcol:1};
+var VT_ABBR={kilogramm:'kg',gramm:'g',meter:'m',zentimeter:'cm',millimeter:'mm',kilometer:'km',liter:'l',milliliter:'ml',dezimeter:'dm',minuten:'min',stunden:'h',sekunden:'s'};
+function vtRe(s){return s.replace(/[.*+?^${}()|[\]\\\/]/g,'\\$&')}
+function vtTxt(h){return String(h).replace(/<style[\s\S]*?<\/style>/g,' ').replace(/<[^>]+>/g,' ').replace(/&[a-z]+;/g,' ').replace(/\s+/g,' ')}
+/* Zeigt die Grafik einer Aufgabe ohne Lösung: Bildunterschriften mit der Lösung fallen weg, Lösungszahlen/-wörter werden zu «_». */
+function visT(list,ans,q,opts){
+  if(!list||!list.length)return '';
+  var A=String(ans==null?'':ans).replace(/\s+/g,' ').trim(),Q=' '+String(q||'').toLowerCase()+' ';
+  if(!A)return visuals(list);
+  var nums=(A.match(/\d+(?:[.,]\d+)?/g)||[]).filter(function(n){return !new RegExp('(^|[^\\d.,\\/])'+vtRe(n.toLowerCase())+'(?!\\d|[.,]\\d|\\/)').test(Q)});
+  var words=[];
+  if(!/\d/.test(A)){var w=A.toLowerCase().replace(/[.!?]$/,'');if(w.length>=3&&Q.indexOf(w)<0)words.push(w);if(VT_ABBR[w]&&!new RegExp('[^a-zäöü]'+VT_ABBR[w]+'[^a-zäöü]').test(Q))words.push(VT_ABBR[w])}
+  if(!nums.length&&!words.length)return visuals(list);
+  var reN=nums.map(function(n){return new RegExp('(^|[^\\d.,\\/])'+vtRe(n)+'(?!\\d|[.,]\\d)','g')});
+  var reW=words.map(function(w){return new RegExp('(^|[^a-zäöüß])'+vtRe(w)+'(?![a-zäöüß])','gi')});
+  var has=function(s){s=' '+s+' ';return reN.some(function(r){r.lastIndex=0;return r.test(s)})||reW.some(function(r){r.lastIndex=0;return r.test(s)})};
+  var fix=function(s){reN.concat(reW).forEach(function(r){s=s.replace(r,'$1_')});return s};
+  return '<div class="visrow">'+list.map(function(v){
+    var h=visuals([v]).replace(/^<div class="visrow">/,'').replace(/<\/div>$/,'');
+    if(VT_SKIP[v.type]||!h)return h;
+    h=h.replace(/<figcaption[^>]*>([\s\S]*?)<\/figcaption>/g,function(m,inner){return has(vtTxt(inner))?'':m});
+    var vt=' '+vtTxt(h).toLowerCase()+' ',choice=opts&&opts.length>1&&opts.filter(function(o){var s=String(o).toLowerCase().trim();return s&&!/^\d+$/.test(s)&&new RegExp('(^|[^a-zäöüß0-9])'+vtRe(s)+'(?![a-zäöüß0-9])').test(vt)}).length>=2;
+    if(choice)return h;
+    var out='',inStyle=false;
+    h.split(/(<[^>]+>)/).forEach(function(seg){
+      if(seg.charAt(0)==='<'){if(/^<style/i.test(seg))inStyle=true;if(/^<\/style/i.test(seg))inStyle=false;
+        out+=seg.replace(/(aria-label|title)="([^"]*)"/g,function(m,k,val){return k+'="'+fix(' '+val).slice(1)+'"'});return}
+      out+=inStyle?seg:fix(seg)});
+    return out}).join('')+'</div>';
+}
