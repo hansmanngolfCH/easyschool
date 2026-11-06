@@ -199,7 +199,7 @@ var ACT={
     n.typed=val;
     if(!val.trim()){n.err='Schreib zuerst dein Ergebnis hin.';render();return}
     if(isV(c)){
-      var stg=stageOf(n,n.queue[n.idx]),list=stg===3?[c.fw]:c.de,r=checkAns(val,list);
+      var stg=stageOf(n,n.queue[n.idx]),list=stg===3?[c.fw].concat(c.fw.indexOf(' / ')>0?c.fw.split(' / '):[]):c.de,r=checkAns(val,list);
       n.revealed=true;n.err='';n.accentNote=r.accent||'';
       if(r.ok){n.verdict='ok';vocabOutcome(n.pen>=2?'hard':'good')}
       else if(nearMiss(val,list)){n.verdict='near';vocabOutcome('hard')}

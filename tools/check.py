@@ -23,7 +23,9 @@ if args and args[0] in('--accept','--accept-all'):
 err=[];warn=[];new=[]
 def quality(t):
     e=[];lang=t['subject'] in('franz','engl')
-    mn={'cards':25 if lang else 30,'exam':16,'explain':1 if lang else 6}
+    voc=lang and t['cards'] and all('fw' in x for x in t['cards'])
+    # Wortlisten aus dem Lehrmittel: so viele Karten wie die Liste hat (mind. 15), nichts dazuerfinden
+    mn={'cards':15 if voc else 25 if lang else 30,'exam':15 if voc else 16,'explain':1 if lang else 6}
     if len(t['cards'])<mn['cards']:e.append('zu wenige Karten (%d, min %d)'%(len(t['cards']),mn['cards']))
     if len(t['exam']['questions'])<mn['exam']:e.append('zu wenige Pruefungsfragen (%d, min %d)'%(len(t['exam']['questions']),mn['exam']))
     if len(t['explain'])<mn['explain']:e.append('zu wenige Theorie-Schritte (%d, min %d)'%(len(t['explain']),mn['explain']))
@@ -33,7 +35,9 @@ def quality(t):
     for x in t['cards']:
         if x['id'] in ids:e.append('doppelte Karten-ID '+x['id'])
         ids.add(x['id'])
-        if not str(x.get('q','')).strip() or not str(x.get('a','')).strip():e.append('Karte ohne Frage/Antwort: '+x['id'])
+        if 'fw' in x:
+            if not str(x.get('fw','')).strip() or not x.get('de'):e.append('Wortkarte ohne Wort/Übersetzung: '+x['id'])
+        elif not str(x.get('q','')).strip() or not str(x.get('a','')).strip():e.append('Karte ohne Frage/Antwort: '+x['id'])
         if x.get('opts') and not x.get('multi') and str(x['a']) not in [str(o) for o in x['opts']]:warn.append('%s/%s: richtige Antwort nicht in den Optionen'%(t['id'],x['id']))
     for s in t['explain']:
         if not (s.get('h') and s.get('text')):e.append('Theorie-Schritt ohne Titel/Text')
