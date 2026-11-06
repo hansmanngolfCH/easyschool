@@ -1574,3 +1574,6 @@ input.wc-sbox:focus{border-color:#8AB4F8}
 /* Zusatz/Anleitung unter der Hauptfrage: klein und ruhig */
 .fqi{margin:6px 0 0;font:500 .95rem/1.4 var(--font-b,inherit);color:var(--ink2,#5F6368);letter-spacing:0;text-wrap:balance}
 .xg-qi{display:block;margin-top:5px;font-size:.85rem;font-weight:500;line-height:1.35;color:var(--ink2,#5F6368)}
+/* Karten-Antworten: kurze Antworten 2 × 2 nebeneinander, lange untereinander */
+.opts.o2{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.opts.o2 .o{min-height:64px;font-size:1.2rem}

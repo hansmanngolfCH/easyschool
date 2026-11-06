@@ -58,6 +58,7 @@ function examArt(){
   +'<g transform="rotate(-4 260 160)"><rect x="200" y="148" width="124" height="24" rx="4" fill="#FDE18A" stroke="#C88C00" stroke-width="2"/>'+ruler+'</g>'
   +'<g transform="translate(300 40)"><path d="M0 -18l5.4 11 12 1.7-8.7 8.5 2 12L0 8.2-10.7 15.2l2-12L-17.4 -5.3l12-1.7z" fill="#FBBC04" stroke="#E37400" stroke-width="2"/></g></svg>';
 }
+function optCols(o){var mx=0;(o||[]).forEach(function(x){var t=String(x&&x.t!=null?x.t:x).replace(/<[^>]+>/g,'');mx=Math.max(mx,t.length)});return (o||[]).length>=2&&mx<=14?' o2':''}
 function wcIns(w){return w.op===':'?(w.withRest?'Rechne schriftlich. Schreibe den Rest hinter R.':'Rechne schriftlich.'):'Rechne schriftlich untereinander.'}
 function qBlock(q){
   var p=qParts(q);
@@ -192,10 +193,10 @@ function vPractice(){
   if(!n.revealed){
     h2+='<div class="tools">'+(hs.length?'<button class="btn sm" data-act="hint"'+(n.hintN>=hs.length?' disabled':'')+'>Tipp'+(n.hintN<hs.length?' ('+(n.hintN+1)+'/'+hs.length+')':'')+'</button>':'')+pd.btn+'</div>'+hintBoxes(n,hs);
     h2+=pd.box;
-    if(c.multi)h2+='<p class="sub">Es können mehrere richtig sein.</p><div class="opts">'+n.opts.map(function(op,i){return '<button class="o'+((n.mset||[]).indexOf(i)>=0?' sel':'')+'" data-act="mtog" data-i="'+i+'">'+rt(op.t)+'</button>'}).join('')+'</div><button class="btn pri big" data-act="mcheck"'+((n.mset||[]).length?'':' disabled')+'>Prüfen</button>';
+    if(c.multi)h2+='<p class="sub">Es können mehrere richtig sein.</p><div class="opts'+optCols(n.opts)+'">'+n.opts.map(function(op,i){return '<button class="o'+((n.mset||[]).indexOf(i)>=0?' sel':'')+'" data-act="mtog" data-i="'+i+'">'+rt(op.t)+'</button>'}).join('')+'</div><button class="btn pri big" data-act="mcheck"'+((n.mset||[]).length?'':' disabled')+'>Prüfen</button>';
     else if(c.match)h2+=matchHTML(n,c);
     else if(c.trace)h2+='<div class="trcw"><canvas id="trc" width="600" height="600" data-t="'+esc(c.trace)+'" aria-label="Zeichenfläche"></canvas></div>'+(n.err?'<p class="fb no">'+esc(n.err)+'</p>':'')+'<div class="row"><button class="btn" data-act="trclear">Neu</button><button class="btn pri" data-act="trcheck">Fertig</button><button class="btn ghost" data-act="reveal">Weiter</button></div>';
-    else if(c.opts)h2+='<div class="opts">'+n.opts.map(function(op,i){return '<button class="o" data-act="mpick" data-i="'+i+'">'+rt(op.t)+'</button>'}).join('')+'</div>';
+    else if(c.opts)h2+='<div class="opts'+optCols(n.opts)+'">'+n.opts.map(function(op,i){return '<button class="o" data-act="mpick" data-i="'+i+'">'+rt(op.t)+'</button>'}).join('')+'</div>';
     if(chk&&wv)h2+='<div class="stack" style="padding:0;gap:8px"><input type="hidden" id="ans" value="'+esc(n.typed||'')+'"><button class="btn pri big" data-act="check">Prüfen</button>'+(n.err?'<p class="fb no">'+esc(n.err)+'</p>':'')+'</div>';
     else if(chk)h2+='<div class="stack" style="padding:0;gap:8px"><label class="lab2" for="ans">'+(c.pre!=null?'Verbessere direkt im Feld':'Dein Ergebnis')+'</label>'+(c.pre!=null?'<div class="fixcol"><textarea class="inp fixin" id="ans" rows="1" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">'+esc(n.typed||c.pre||'')+'</textarea><button class="btn pri" data-act="check">Absenden</button></div>':'<div class="row"><input class="inp" id="ans" value="'+esc(n.typed||'')+'" placeholder="'+ph(cardAns(c)[0])+'" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"><button class="btn pri" data-act="check">Prüfen</button></div>')+''+(n.err?'<p class="fb no">'+esc(n.err)+'</p>':'')+'</div>';
     h2+=(c.opts||c.match||c.trace?'':'<button class="btn'+(chk?' ghost':' pri big')+'" data-act="reveal">'+(chk?'Ich komme nicht drauf, Lösung zeigen':'Antwort zeigen')+'</button>');
