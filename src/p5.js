@@ -406,14 +406,14 @@ function rwWheel(why,g){
 }
 function xpPos(g){var p=[g.g[0]/g.g[2],g.g[1]/g.g[2],1];if(p[2]-p[1]<.2)p[1]=p[2]-.2;if(p[1]-p[0]<.2)p[0]=p[1]-.2;if(p[0]<.12)p[0]=.12;return p}
 function xpFrac(g,v){var p=xpPos(g),T=[0,g.g[0],g.g[1],g.g[2]],P=[0,p[0],p[1],1];for(var i=1;i<4;i++)if(v<=T[i])return P[i-1]+(P[i]-P[i-1])*(v-T[i-1])/(T[i]-T[i-1]);return 1}
-function rwOpen(why,g,force){
-  RW={child:nav.child,g:g,stop:null,score:0,done:false,why:why,test:!!force};
+function rwOpen(why,g,force,gc){
+  RW={child:nav.child,g:g,stop:null,score:0,done:false,why:why,test:!!force,gc:!!gc};
   var o=document.createElement('div');o.id='rwd';o.className='rwd';
   o.innerHTML='<div class="rwbox" role="dialog" aria-modal="true"><div class="rwtop"><b>'+g.e+' '+g.n+'</b><span id="rwt" class="rwtime">'+fmtT(g.time)+'</span><button class="rwx" aria-label="Schliessen">×</button></div>'
    +'<div class="xp2"><div class="xp2t"><i id="rwf"></i></div>'+xpPos(g).map(function(p,i){return '<b class="xp2c" data-t="'+g.g[i]+'" style="--p:'+p+'">'+['50','150','300'][i]+'</b>'}).join('')+'</div>'
    +'<div class="rwcvw"><canvas id="rwc" class="rwcv"></canvas><div id="rwst" class="rwstart"><p class="rwwhy">'+why+'</p>'+demoHTML(g)+''+gzHTML(g)+'<p class="rwhow">'+g.how+'</p><button class="btn pri big" id="rwgo">Los!</button></div></div><div id="rwctl"></div><div id="rwmsg" class="rwmsg"></div></div>';
   document.body.appendChild(o);document.body.classList.add('rwopen');
-  o.querySelector('.rwx').onclick=function(){var t=RW&&RW.test;closeReward();if(t)showPicker()};
+  o.querySelector('.rwx').onclick=function(){var t=RW&&RW.test,gc=RW&&RW.gc;closeReward();if(gc)gcBack();else if(t)showPicker()};
   var W=Math.floor(Math.min(window.innerWidth-48,440)),H=Math.floor(Math.min(W*1.1,window.innerHeight-270));if(H<200)H=200;
   var cv=document.getElementById('rwc'),dpr=Math.min(2,window.devicePixelRatio||1);
   cv.width=W*dpr;cv.height=H*dpr;cv.style.width=W+'px';cv.style.height=H+'px';var cx=cv.getContext('2d');cx.scale(dpr,dpr);
@@ -445,6 +445,7 @@ function rwEnd(){
   var s=RW.score,g=RW.g,xp=s>=g.g[2]?300:s>=g.g[1]?150:s>=g.g[0]?50:0;
   if(xp>0&&!RW.test){addXp(RW.child,xp);toast('+'+xp+' Extra-XP')}
   var m=document.getElementById('rwmsg');
+  if(RW.gc){gcEnd(m,s);return}
   if(m)m.innerHTML=(xp?'<b class="rwwin">🎉 +'+xp+' XP!</b>':'<b>Knapp! Beim nächsten Mal klappt es.</b>')+'<br><small>'+s+' Punkte · weiter geht\'s mit Lernen</small>';
   var me=RW;setTimeout(function(){if(RW===me){var tst=me.test;closeReward();if(tst)showPicker()}},2600);
 }

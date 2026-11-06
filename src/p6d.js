@@ -538,3 +538,61 @@ GAMEFN.vault=function(cv,cx,w,h,score,over){
     if(msgT>0){msgT-=dt;cx.save();cx.globalAlpha=Math.min(1,msgT*2);var fs=Math.floor(w*(msg==='KNACKS!'?.14:.09));cx.font='900 '+fs+'px sans-serif';cx.textAlign='center';cx.lineWidth=7;cx.strokeStyle='rgba(0,0,0,.5)';var my=h*.2,sc=msg==='KNACKS!'?1+Math.max(0,crackT-.9):1;cx.translate(w/2,my);cx.scale(sc,sc);cx.rotate(msg==='KNACKS!'?-.08:0);cx.strokeText(msg,0,0);cx.fillStyle=msgC;cx.fillText(msg,0,0);cx.restore()}
     stepP(cx,P,f);floatTxt(cx,F,f);cx.globalAlpha=1;cx.fillStyle='#000';hearts(cx,lives,w);bigScore(cx,w,s)});
   return function(){L.stop();unb()}};
+
+/* ---------- Gamecenter + Themen suchen (v5.35) ---------- */
+(function(){
+function best(){try{return JSON.parse(localStorage.getItem('es.gbest')||'{}')||{}}catch(e){return {}}}
+function setBest(id,v){var b=best();if(!(b[id]>=v)){b[id]=v;try{localStorage.setItem('es.gbest',JSON.stringify(b))}catch(e){}return true}return false}
+function dayGame(){var d=new Date(),k=d.getFullYear()*372+d.getMonth()*31+d.getDate();return GAMES[k%GAMES.length]}
+function vGames(){
+  var b=best(),f=dayGame();
+  var card=function(g){var r=b[g.id];return '<button class="gcc" data-act="gplay" data-id="'+esc(g.id)+'"><span class="gcimg"><img src="img/g_'+esc(g.id)+'.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="gcem">'+g.e+'</span></span><span class="gcn">'+esc(g.n)+'</span><span class="gcm"><span class="gcl">'+esc(g.lb||'')+'</span>'+(r!=null?'<span class="gcr">🏆 '+r+'</span>':'<span class="gcr new">Neu</span>')+'</span></button>'};
+  return '<div class="stack gcp"><div class="gchead"><p class="eyebrow">Gamecenter</p><h1>Spiele</h1><p class="sub">Tippe ein Spiel und los geht\'s. Hier zählt nur dein Rekord.</p></div>'
+   +'<button class="gcfeat" data-act="gplay" data-id="'+esc(f.id)+'"><img src="img/g_'+esc(f.id)+'.jpg" alt="" onerror="this.remove()"><span class="gcfo"><small>Spiel des Tages</small><b>'+f.e+' '+esc(f.n)+'</b><span>'+esc(f.how)+'</span><i class="gcfb">▶ Spielen</i></span></button>'
+   +'<div class="gcgrid">'+GAMES.map(card).join('')+'</div></div>';
+}
+VIEWS.games=vGames;
+ACT.games=function(){go({view:'games'},{view:'home'})};
+ACT.gplay=function(b){var g=GAMES.filter(function(x){return x.id===b.dataset.id})[0];if(!g)return;rwOpen('🎮 Gamecenter · freies Spiel',g,true,true)};
+window.gcBack=function(){if(nav.view==='games'){var y=window.scrollY;render();window.scrollTo(0,y)}};
+window.gcEnd=function(m,s){var me=RW,g=me.g,nb=setBest(g.id,s),bv=best()[g.id];
+  if(m){m.innerHTML='<b class="'+(nb&&s>0?'rwwin':'')+'">'+(nb&&s>0?'🏆 Neuer Rekord: '+s+'!':s+' Punkte')+'</b><br><small>Rekord: '+bv+' · gleich zurück ins Gamecenter</small><div class="gcagain"><button class="btn pri" id="gcre">🔁 Nochmal</button><button class="btn" id="gcbk">Zum Gamecenter</button></div>';
+    var re=m.querySelector('#gcre'),bk=m.querySelector('#gcbk');
+    re.onclick=function(){clearTimeout(tm);closeReward();rwOpen('🎮 Gamecenter · freies Spiel',g,true,true)};
+    bk.onclick=function(){clearTimeout(tm);closeReward();gcBack()};}
+  var tm=setTimeout(function(){if(RW===me){closeReward();gcBack()}},5000);
+};
+
+/* Themen suchen */
+function nz(s){return String(s||'').toLowerCase().replace(/ß/g,'ss').normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9+ ]+/g,' ').replace(/\s+/g,' ').trim()}
+var SKW={mathe:'mathe mathematik rechnen',deu:'deutsch',franz:'franzosisch franz francais vocabulaire vocab wortschatz',engl:'englisch english vocabulary vocab wortschatz'};
+function kidOf(t){return C.children.filter(function(c){return c.id===t.child})[0]||{}}
+function hayOf(t){var k=kidOf(t),g=k.grade||'',sb=C.subjects.filter(function(x){return x.id===t.subject})[0]||{};return ' '+nz([t.title,t.chapter,t.src||'',sb.name,SKW[t.subject]||'',g+' klasse kl'+g,g?g+'klasse':''].join(' '))+' '}
+function gcol(k){var g=k.grade||1;return g<=6?CCOL.p[(g-1)%6]:CCOL.o[(g-7)%6]}
+var SN={mathe:'Mathe',deu:'Deutsch',franz:'Französisch',engl:'Englisch'};
+function vSearch(){
+  var f=nav.gsf||'',kids=C.children.slice().sort(function(a,b){return (a.grade||0)-(b.grade||0)}),rows='';
+  kids.forEach(function(k){var ts=C.topics.filter(function(t){return t.child===k.id});if(!ts.length)return;
+    rows+='<div class="gsg" data-g="'+esc(k.id)+'"><p class="gsgh"><span class="gsk" style="--cc:'+gcol(k)+'">'+esc(String(k.grade||''))+'</span>'+esc(label(k))+'</p>';
+    ts.forEach(function(t){var L=level(k.id,[t]),w=Math.round(L.pct*100),sb=C.subjects.filter(function(x){return x.id===t.subject})[0]||{id:t.subject,name:t.subject};
+      rows+='<button class="gsr" data-act="gsopen" data-id="'+esc(t.id)+'" data-s="'+esc(t.subject)+'" data-h="'+esc(hayOf(t))+'"><span class="gss ci-'+esc(t.subject)+'">'+sicon(sb,16)+'</span><span class="gsm"><b>'+esc(t.title)+'</b><small>'+esc(label(k))+' · '+esc(SN[t.subject]||sb.name)+(t.chapter&&t.chapter!==t.title?' · '+esc(t.chapter):'')+'</small></span><span class="gsp'+(w?'':' z')+'">'+w+'%</span></button>'});
+    rows+='</div>'});
+  var chips=[['','Alle']].concat(C.subjects.map(function(s){return [s.id,SN[s.id]||s.name]})).map(function(c){return '<button class="gsc'+(f===c[0]?' on':'')+(c[0]?' ci-'+c[0]:'')+'" data-act="gsf" data-id="'+c[0]+'">'+esc(c[1])+'</button>'}).join('');
+  setTimeout(gsFilter,0);
+  return '<div class="stack gsp2"><div><p class="eyebrow">Alle Klassen · alle Fächer</p><h1>Themen suchen</h1></div><div class="gstop"><label class="gsbar"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15 15l5.5 5.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg><input id="gsq" type="search" placeholder="Suche, z. B. 5 brüche" value="'+esc(nav.q||'')+'" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search"></label><div class="gschips">'+chips+'</div></div><p class="gscount" id="gscount"></p><div class="gslist" id="gslist">'+rows+'</div><p class="gsno" id="gsno" hidden>Nichts gefunden. Versuche ein anderes Wort.</p></div>';
+}
+function gsFilter(){
+  var q=document.getElementById('gsq');if(!q)return;nav.q=q.value;
+  var w=nz(q.value).split(' ').filter(Boolean),f=nav.gsf||'',n=0;
+  document.querySelectorAll('.gsg').forEach(function(g){var vis=0;g.querySelectorAll('.gsr').forEach(function(r){var h=r.getAttribute('data-h'),ok=(!f||r.getAttribute('data-s')===f)&&w.every(function(x){return /^\d+$/.test(x)?h.indexOf(' '+x+' ')>=0:h.indexOf(x)>=0});r.hidden=!ok;if(ok)vis++});g.hidden=!vis;n+=vis});
+  var c=document.getElementById('gscount');if(c)c.textContent=n+(n===1?' Thema':' Themen');
+  var no=document.getElementById('gsno');if(no)no.hidden=n>0;
+}
+VIEWS.search=vSearch;
+ACT.search=function(){go({view:'search',q:'',gsf:''},{view:'home'});setTimeout(function(){var q=document.getElementById('gsq');if(q&&window.innerWidth>700)q.focus()},60)};
+ACT.gsf=function(b){nav.gsf=b.dataset.id||'';document.querySelectorAll('.gsc').forEach(function(c){c.classList.toggle('on',(c.dataset.id||'')===nav.gsf)});gsFilter()};
+ACT.gsopen=function(b){var id=b.dataset.id,t=topicById(id);if(!t)return;var o={};o[id]=true;var ch={};ch[t.subject+'|'+t.chapter]=true;
+  go({view:'subject',child:t.child,subject:t.subject,topen:o,chopen:ch});
+  var el=document.querySelector('.tctog[data-id="'+id+'"]');if(el){var c=el.closest('.card');c.scrollIntoView({block:'center'});c.classList.add('tsflash');setTimeout(function(){c.classList.remove('tsflash')},1600)}};
+document.addEventListener('input',function(e){if(e.target&&e.target.id==='gsq')gsFilter()});
+})();
