@@ -2058,3 +2058,69 @@ VEXT.quader2=function(v){
   return s.split('#137333').join(g2c(v.lc===undefined?0:v.lc)).split('#B06000').join(g2c(v.bc===undefined?2:v.bc)).split('#B3261E').join(g2c(v.hc===undefined?3:v.hc));
 };
 })();
+
+/* ===== Erweiterung vis_b.js (v5.60, gekapselt) ===== */
+(function(){
+/* ---------- Agent b: Einführungsszenen für Deutsch-Themen (VEXT.bscene) ----------
+   {"type":"bscene","kind":"line|train|podium|roof|build|probe", ...}
+   Farben über dcol(0–7), damit Text, Grafik und Deutsch-Farbmodus übereinstimmen. */
+VEXT.bscene=function(v){
+  var k=v.kind,o='',F='font-family="Arial,Helvetica,sans-serif" font-weight="800"',i;
+  function tw(s,fs){return String(s).length*fs*.58}
+  function tile(x,y,w,h,txt,c,fs){return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="12" fill="#fff" stroke="'+c+'" stroke-width="3.5"/><text x="'+(x+w/2)+'" y="'+(y+h/2+fs*.36)+'" text-anchor="middle" font-size="'+fs+'" fill="'+c+'" '+F+'>'+esc(txt)+'</text>'}
+  function face(cx,cy,r,col){return '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="'+col+'"/><circle cx="'+(cx-r*.34)+'" cy="'+(cy-r*.15)+'" r="'+(r*.13)+'" fill="#202124"/><circle cx="'+(cx+r*.34)+'" cy="'+(cy-r*.15)+'" r="'+(r*.13)+'" fill="#202124"/><path d="M'+(cx-r*.36)+' '+(cy+r*.28)+'q'+(r*.36)+' '+(r*.32)+' '+(r*.72)+' 0" stroke="#202124" stroke-width="'+(r*.11)+'" fill="none" stroke-linecap="round"/>'}
+  function tag(cx,y,txt,c,fs){var w=tw(txt,fs)+26;return '<rect x="'+(cx-w/2)+'" y="'+y+'" width="'+w+'" height="'+(fs+16)+'" rx="'+((fs+16)/2)+'" fill="#fff" stroke="'+c+'" stroke-width="2.5"/><text x="'+cx+'" y="'+(y+fs+4)+'" text-anchor="middle" font-size="'+fs+'" fill="'+c+'" '+F+'>'+esc(txt)+'</text>'}
+  if(k==='line'){ /* Heftzeile: Wort am Zeilenende getrennt */
+    var L=v.l1||'Die Katze schläft auf dem Fens',L2=v.l2||'terbrett in der Sonne.',c1=dcol(v.c===undefined?1:v.c);
+    o+='<rect width="600" height="230" fill="#F3F6FC"/><rect x="34" y="16" width="532" height="200" rx="10" fill="#fff" stroke="#D5DCE8" stroke-width="2"/>';
+    [78,132,186].forEach(function(y){o+='<line x1="50" x2="550" y1="'+y+'" y2="'+y+'" stroke="#CFE0FA" stroke-width="2"/>'});
+    o+='<line x1="488" x2="488" y1="26" y2="206" stroke="#9AA3B5" stroke-width="2" stroke-dasharray="6 5"/><text x="524" y="40" text-anchor="middle" font-size="12" fill="#6B7280" '+F+'>Rand</text>';
+    o+='<text x="462" y="70" text-anchor="end" font-size="24" fill="#2B3350" '+F+'>'+esc(L)+'</text>';
+    o+='<g class="sc-pop"><rect x="463" y="49" width="20" height="28" rx="5" fill="'+c1+'" fill-opacity=".14"/><text x="473" y="70" text-anchor="middle" font-size="26" fill="'+c1+'" '+F+'>-</text></g>';
+    o+='<text x="62" y="124" font-size="24" fill="#2B3350" '+F+'>'+esc(L2)+'</text>';
+    o+='<g class="bsc-pen"><path d="M330 168l92-58 12 18-92 58-18 4z" fill="#FBBC04" stroke="#B06000" stroke-width="2" stroke-linejoin="round"/><path d="M330 168l-6 4 2-12z" fill="#3C4043"/><path d="M422 110l12 18 8-5-12-18z" fill="#F28B82" stroke="#B06000" stroke-width="2"/></g>';
+    if(v.say)o+=tag(190,160,v.say,c1,17);
+  }else if(k==='train'){ /* Zug: Wagen 1 und 3 tauschen, Wagen 2 (Verb) bleibt */
+    var w=v.wagons||[['der Hund',0],['bellt',1],['im Garten',5]],X=[112,272,432],WW=152,Y=144,H=64;
+    o+='<rect width="600" height="230" fill="#EAF3FF"/><rect y="220" width="600" height="10" fill="#CFE8C8"/><line x1="0" x2="600" y1="220" y2="220" stroke="#8D6E63" stroke-width="4"/>';
+    o+='<g><rect x="10" y="138" width="90" height="70" rx="10" fill="#5F6B7A"/><rect x="18" y="106" width="42" height="36" rx="6" fill="#5F6B7A"/><rect x="25" y="113" width="28" height="18" rx="3" fill="#D2E3FC"/><rect x="72" y="114" width="16" height="26" rx="3" fill="#3C4043"/><circle cx="32" cy="212" r="8" fill="#3C4043"/><circle cx="80" cy="212" r="8" fill="#3C4043"/></g>';
+    o+='<g class="bsc-steam"><circle cx="80" cy="100" r="8" fill="#fff" stroke="#C5CCD6" stroke-width="2"/><circle cx="92" cy="84" r="11" fill="#fff" stroke="#C5CCD6" stroke-width="2"/></g>';
+    o+='<line x1="100" x2="'+(X[2]+WW)+'" y1="196" y2="196" stroke="#5F6B7A" stroke-width="4"/>';
+    w.forEach(function(p,j){var c=dcol(p[1]),cl=j===0?'bsc-swA':j===2?'bsc-swC':'';
+      o+='<g'+(cl?' class="'+cl+'"':'')+'>'+tile(X[j],Y,WW,H,p[0],c,25)+'<circle cx="'+(X[j]+32)+'" cy="'+(Y+H+4)+'" r="8" fill="#3C4043"/><circle cx="'+(X[j]+WW-32)+'" cy="'+(Y+H+4)+'" r="8" fill="#3C4043"/></g>'});
+  }else if(k==='podium'){ /* Treppchen: Grundform, Vergleichsform, Höchstform */
+    var s=v.steps||[['schnell',5],['schneller',1],['am schnellsten',4]],hs=[56,96,136],x0=[48,218,388],SW=164;
+    o+='<rect width="600" height="230" fill="#F3F6FC"/><rect y="214" width="600" height="16" fill="#E3E9F5"/>';
+    s.forEach(function(p,j){var c=dcol(p[1]),top=214-hs[j],fs=String(p[0]).length>11?19:22;
+      o+='<rect x="'+x0[j]+'" y="'+top+'" width="'+SW+'" height="'+hs[j]+'" rx="10" fill="#fff" stroke="'+c+'" stroke-width="3.5"/>';
+      o+='<text x="'+(x0[j]+SW/2)+'" y="'+(top+Math.min(hs[j]/2,40)+fs*.36)+'" text-anchor="middle" font-size="'+fs+'" fill="'+c+'" '+F+'>'+esc(p[0])+'</text>';
+      o+='<g class="bsc-bob" style="animation-delay:'+(j*.45)+'s">'+face(x0[j]+SW/2,top-30,25,'#FBBC04')+'</g>'});
+    o+='<g class="sc-pop"><path d="M'+(x0[2]+SW-26)+' 40l5 10 11 1.6-8 7.8 1.9 11-9.9-5.2-9.9 5.2 1.9-11-8-7.8 11-1.6z" fill="#FBBC04" stroke="#E37400" stroke-width="2" stroke-linejoin="round"/></g>';
+  }else if(k==='roof'){ /* Katze: auf dem Dach (Wo?) → auf den Baum (Wohin?) */
+    var cD=dcol(v.c1===undefined?1:v.c1),cA=dcol(v.c2===undefined?4:v.c2);
+    o+='<rect width="600" height="230" fill="#EAF3FF"/><rect y="200" width="600" height="30" fill="#CFE8C8"/>';
+    o+='<rect x="64" y="120" width="164" height="84" fill="#F6E3C6" stroke="#8D6E63" stroke-width="3"/><path d="M48 122L146 58L244 122Z" fill="#E8A87C" stroke="#8D6E63" stroke-width="3" stroke-linejoin="round"/><rect x="132" y="156" width="28" height="48" fill="#8D6E63"/><rect x="82" y="138" width="30" height="24" fill="#D2E3FC" stroke="#8D6E63" stroke-width="2"/><rect x="180" y="138" width="30" height="24" fill="#D2E3FC" stroke="#8D6E63" stroke-width="2"/>';
+    o+='<rect x="482" y="128" width="20" height="76" fill="#8D6E63"/><circle cx="492" cy="104" r="50" fill="#81C995"/><circle cx="462" cy="122" r="26" fill="#6CBF84"/><circle cx="522" cy="120" r="24" fill="#6CBF84"/>';
+    o+='<path d="M168 52Q320 10 470 58" fill="none" stroke="'+cA+'" stroke-width="3" stroke-dasharray="8 7"/><path d="M470 58l-15-2 8-10z" fill="'+cA+'"/>';
+    o+='<g class="bsc-cat"><ellipse cx="146" cy="46" rx="18" ry="13" fill="#5F6B7A"/><circle cx="133" cy="32" r="10" fill="#5F6B7A"/><path d="M125 26l1-11 7 7zM136 22l5-9 3 10z" fill="#5F6B7A"/><path d="M162 44q16-4 12-20" stroke="#5F6B7A" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="130" cy="31" r="1.8" fill="#fff"/><circle cx="136" cy="31" r="1.8" fill="#fff"/></g>';
+    o+=tag(146,166,'Wo? auf dem Dach',cD,15)+tag(338,160,'Wohin? auf den Baum',cA,15);
+  }else if(k==='build'){ /* Wortbausteine: Stamm oben, Ableitungen unten */
+    var top=v.top||[['Freund',6]],rows=v.rows||[[['freund',6],['lich',2]],[['Freund',6],['schaft',0]],[['un',3],['freund',6],['lich',2]]],FS=22;
+    o+='<rect width="600" height="230" fill="#F3F6FC"/><rect y="206" width="600" height="24" fill="#E3E9F5"/>';
+    var tt=top.map(function(p){return p[0]}).join(''),tw0=tw(tt,26)+40;
+    o+='<rect x="'+(300-tw0/2)+'" y="18" width="'+tw0+'" height="52" rx="12" fill="#fff" stroke="'+dcol(top[0][1])+'" stroke-width="3.5"/><text x="300" y="53" text-anchor="middle" font-size="26" fill="'+dcol(top[0][1])+'" '+F+'>'+esc(tt)+'</text>';
+    var n=rows.length,cw=Math.min(180,540/n),xs=(600-n*cw)/2;
+    rows.forEach(function(r,j){var cx=xs+j*cw+cw/2,word=r.map(function(p){return p[0]}).join(''),ww=Math.min(cw-12,tw(word,FS)+28);
+      o+='<path d="M300 72L'+cx+' 128" stroke="#9AA3B5" stroke-width="2.5" fill="none"/><path d="M'+cx+' 132l-6-10h12z" fill="#9AA3B5"/>';
+      o+='<g class="sc-cookie" style="animation-delay:'+(j*.5)+'s"><rect x="'+(cx-ww/2)+'" y="140" width="'+ww+'" height="52" rx="12" fill="#fff" stroke="#C5CCD6" stroke-width="2.5"/><text x="'+cx+'" y="175" text-anchor="middle" font-size="'+FS+'" '+F+'>'+r.map(function(p){return '<tspan fill="'+dcol(p[1])+'">'+esc(p[0])+'</tspan>'}).join('')+'</text></g>'});
+  }else if(k==='probe'){ /* Satz mit das und dass, darunter die Ersatzprobe */
+    var ws=v.words||[['Ich weiss,',7],['dass',4,'passt nichts'],['das',1,'dieses'],['Buch spannend ist.',7]],FS2=22,G=10,wd=ws.map(function(p){return tw(p[0],FS2)+22}),tot=wd.reduce(function(a,b){return a+b},0)+G*(ws.length-1),x=(600-tot)/2,nt=0;
+    o+='<rect width="600" height="230" fill="#F3F6FC"/><rect y="214" width="600" height="16" fill="#E3E9F5"/>';
+    ws.forEach(function(p,j){var c=dcol(p[1]);o+=tile(x,60,wd[j],52,p[0],c,FS2);
+      if(p[2]){var ty=nt%2?170:130;nt++;o+='<g class="sc-cookie" style="animation-delay:'+(j*.6)+'s"><path d="M'+(x+wd[j]/2)+' 114V'+ty+'" stroke="'+c+'" stroke-width="2.5"/>'+tag(x+wd[j]/2,ty,p[2],c,16)+'</g>'}
+      x+=wd[j]+G});
+    if(v.say)o+=tag(300,8,v.say,dcol(7),17);
+  }
+  return '<figure class="vis scn" style="width:100%"><svg viewBox="0 0 600 230" width="100%" role="img" aria-label="'+esc(v.cap||'Bild zum Thema')+'" style="border-radius:16px">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
+};
+})();

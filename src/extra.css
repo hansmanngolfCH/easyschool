@@ -1871,3 +1871,20 @@ input.wc-sbox:focus{border-color:#8AB4F8}
 
 /* Deutsch: Emoji-Knöpfe nur über .emoopt vergrössern (nicht doppelt mit EsEmoji) */
 [data-de="1"] .opts .o.emoopt,[data-de="1"] .xo.emoopt,[data-de="1"] .mco>span.emoopt{font-family:var(--font-d)}
+
+/* ===== vis_b.css ===== */
+/* Agent b: Bewegung für VEXT.bscene */
+.bsc-pen,.bsc-steam,.bsc-swA,.bsc-swC,.bsc-bob,.bsc-cat{transform-box:view-box}
+.bsc-pen{animation:bscpen 2.6s ease-in-out infinite}
+@keyframes bscpen{0%,100%{transform:translate(0,0)}50%{transform:translate(10px,-6px)}}
+.bsc-steam{animation:bscsteam 2.4s ease-out infinite}
+@keyframes bscsteam{0%{transform:translate(0,8px);opacity:0}30%{opacity:1}100%{transform:translate(12px,-14px);opacity:0}}
+.bsc-swA{animation:bscswa 7s ease-in-out infinite}
+@keyframes bscswa{0%,20%{transform:translate(0,0)}26%{transform:translate(0,-132px)}38%{transform:translate(320px,-132px)}44%,70%{transform:translate(320px,0)}76%{transform:translate(320px,-132px)}88%{transform:translate(0,-132px)}94%,100%{transform:translate(0,0)}}
+.bsc-swC{animation:bscswc 7s ease-in-out infinite}
+@keyframes bscswc{0%,20%{transform:translate(0,0)}26%{transform:translate(0,-66px)}38%{transform:translate(-320px,-66px)}44%,70%{transform:translate(-320px,0)}76%{transform:translate(-320px,-66px)}88%{transform:translate(0,-66px)}94%,100%{transform:translate(0,0)}}
+.bsc-bob{animation:bscbob 2.4s ease-in-out infinite}
+@keyframes bscbob{0%,60%,100%{transform:translate(0,0)}30%{transform:translate(0,-12px)}}
+.bsc-cat{animation:bsccat 5s ease-in-out infinite}
+@keyframes bsccat{0%,30%{transform:translate(0,0);opacity:1}45%{transform:translate(160px,-14px)}60%,88%{transform:translate(318px,8px);opacity:1}96%{transform:translate(318px,8px);opacity:0}97%{transform:translate(0,0);opacity:0}100%{transform:translate(0,0);opacity:1}}
+@media (prefers-reduced-motion:reduce){.bsc-pen,.bsc-steam,.bsc-swA,.bsc-swC,.bsc-bob,.bsc-cat{animation:none}}

@@ -4,7 +4,7 @@ Lern-App (Vanilla-JS, eine `index.html`), GitHub Pages, easy-school.ch. Repo: ha
 
 ## Umgang mit dem Besitzer
 - Immer auf **Deutsch** antworten, kurz, ehrlich. Nur sagen, was wirklich getestet ist. Es gibt keinen iPhone-Test und die Live-Seite ist aus dem Sandkasten nicht erreichbar: Das immer erwähnen.
-- Nach **jeder** Veröffentlichung «Version vX.XX» nennen. Vorher `APP_VERSION` in `src/p1.js` erhöhen (aktuell v5.59; nächste v5.60 usw.).
+- Nach **jeder** Veröffentlichung «Version vX.XX» nennen. Vorher `APP_VERSION` in `src/p1.js` erhöhen (aktuell v5.60; nächste v5.61 usw.).
 - Mehrdeutige Wünsche: Auslegung offen nennen.
 
 ## Bauen und Testen
@@ -36,6 +36,8 @@ Lern-App (Vanilla-JS, eine `index.html`), GitHub Pages, easy-school.ch. Repo: ha
 
 ## Offene Ideen
 - Fehlende Pools (<30 Fragen): kl8 Pythagoras, kl2-deu-gross, kl5/kl6-deu-grossklein.
+- Karten/Prüfung kl3-gramm-kg, kl4-meter-km, kl2-meter-cm: noch Balken/nline statt Waage/Messstab, Lücken «?»/«___». Spiegelachse (vSymm) und Körperkanten (vSolid) noch rot (Entscheid Besitzer offen).
+- Easy lernen: Ablenker aus fremden Themen bei kurzen Eingabe-/Mehrfachauswahl-Karten (xgCardPool in p6.js).
 - Erklärungen für ~968 Prüfungs-MC-Fragen mit leerer/kurzer Erklärung.
 - Karten kl1: Hinweise; Bilder-Karten kl1–4 im neuen Stil.
 - Altes kl3 «Das kleine Einmaleins» ggf. entfernen (neues 1×1 ab kl4).
