@@ -16,7 +16,7 @@ with sync_playwright() as p:
             pg.evaluate("([c,s])=>{var n=window.__nav();n.child=c;n.subject=s;n.view='child';window.__r()}",[t['child'],t['subject']])
             ok=pg.evaluate("(id)=>{try{window.__A.practice({dataset:{scope:'topic:'+id,force:'1'}});var n=window.__nav();return n.queue?n.queue.length:0}catch(e){return -1}}",t['id'])
             for k in range(max(ok,0)):
-                pg.evaluate("(k)=>{var n=window.__nav();n.idx=k;window.__r()}",k)
+                pg.evaluate("(k)=>{var n=window.__nav();n.idx=k;n.cur=null;n.answered=false;window.__r()}",k)
                 r=pg.evaluate(JS);n+=1
                 if r[0] or r[1]:bad[t['id']].append((k,r))
     print(n,'cards checked; topics with problems:',len(bad),errs[:2])

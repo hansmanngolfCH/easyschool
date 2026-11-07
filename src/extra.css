@@ -1753,3 +1753,121 @@ input.wc-sbox:focus{border-color:#8AB4F8}
 .pinbox{background:rgba(32,36,48,.35)!important}
 .vis.vplace svg{max-height:430px}
 .xg-vis .vis.vplace svg{max-height:170px}
+[data-de="1"] .dtb td:last-child{white-space:normal}
+
+/* ===== vis_a.css ===== */
+/* ---------- Agent A (v5.57): Silben-Grafik «syl» und Szenen «scx» ---------- */
+.syfig{width:100%;display:flex;flex-direction:column;align-items:center}
+.syb{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-end;gap:14px 26px;width:100%;padding:6px 2px 2px}
+.syb .syi{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0}
+.syb .sye{font-size:46px;line-height:1.1}
+.syb .sye.solo{font-size:76px;line-height:1.15;padding:4px 10px}
+.syb .syw{display:flex;align-items:flex-start;gap:.16em;font:700 2.05rem/1.1 var(--font-d);color:#3C4043;white-space:nowrap;letter-spacing:.01em}
+.syb.sz-m .syw{font-size:1.6rem}.syb.sz-s .syw{font-size:1.28rem}
+.syb .sys{position:relative;display:inline-block;padding:0 .07em .56em}
+.syb.sy-mk .sys{padding-bottom:.78em}
+.syb.sy-wn .syw{margin-bottom:1.3em}
+.syb.sy-arc .sys::after{content:'';position:absolute;left:5%;right:5%;bottom:.04em;height:.44em;border:.1em solid var(--ac);border-top:0;border-radius:0 0 50% 50%/0 0 100% 100%}
+.syb .syw.blank .sys{min-width:1.7em}
+.syb .syh{color:var(--c);background:color-mix(in srgb,var(--c) 14%,#fff);border-radius:.18em;padding:0 .05em;font-weight:800}
+.syb .syv{position:relative;color:var(--m);font-weight:800}
+.syb .syv::after{content:'';position:absolute;left:50%;transform:translateX(-50%);top:100%;margin-top:.04em;background:var(--m)}
+.syb .syv.kz::after{width:.2em;height:.2em;border-radius:50%}
+.syb .syv.lg::after{width:calc(100% + .06em);height:.11em;border-radius:.06em;margin-top:.08em}
+.syb .syn,.syb .syc{position:absolute;left:50%;transform:translateX(-50%);top:100%;margin-top:.12em;font-style:normal}
+.syb .syn{font:800 .5em/1 var(--font-b);color:var(--ac);border:2px solid var(--ac);border-radius:50%;width:1.55em;height:1.55em;display:flex;align-items:center;justify-content:center;background:#fff}
+.syb .syc{font-size:.62em;line-height:1}
+.syb .syl{font:700 .82rem/1.2 var(--font-b);color:#5F6368}
+.xg-vis .syb .sye.solo{font-size:64px}
+/* Szenen */
+.scx .sxa-in,.scx .sxa-hl,.scx .sxa-hr,.scx .sxa-fly,.scx .sxa-move,.scx .sxa-jl,.scx .sxa-jr,.scx .sxa-pulse,.scx .sxa-door,.scx .sxa-flame{transform-box:fill-box;transform-origin:center}
+.scx .sxa-in{animation:sxain 4.2s ease-out infinite both}
+@keyframes sxain{0%{opacity:0;transform:scale(.6)}12%{opacity:1;transform:scale(1.08)}18%{transform:scale(1)}92%{opacity:1}100%{opacity:1}}
+.scx .sxa-hl{animation:sxahl 1.4s ease-in-out infinite}
+.scx .sxa-hr{animation:sxahr 1.4s ease-in-out infinite}
+@keyframes sxahl{0%,100%{transform:translateX(0)}50%{transform:translateX(26px)}}
+@keyframes sxahr{0%,100%{transform:translateX(0)}50%{transform:translateX(-26px)}}
+.scx .sxa-draw{stroke-dasharray:160;animation:sxadraw 4.2s ease-out infinite both}
+@keyframes sxadraw{0%{stroke-dashoffset:160}25%,100%{stroke-dashoffset:0}}
+.scx .sxa-fly{transform-box:view-box;transform-origin:0 0;animation:sxafly 7s ease-in-out infinite}
+@keyframes sxafly{0%{transform:translate(70px,50px)}25%{transform:translate(185px,40px)}50%{transform:translate(300px,54px)}75%{transform:translate(420px,40px)}100%{transform:translate(70px,50px)}}
+.scx .sxa-move{animation:sxamove 4.2s ease-in-out infinite both}
+@keyframes sxamove{0%{transform:translate(258px,-44px);opacity:.35}12%{transform:translate(258px,-44px);opacity:.35}40%,100%{transform:translate(0,0);opacity:1}}
+.scx .sxa-jl{animation:sxajl 4.2s ease-in-out infinite both}
+.scx .sxa-jr{animation:sxajr 4.2s ease-in-out infinite both}
+@keyframes sxajl{0%,8%{transform:translateX(-40px)}30%,100%{transform:translateX(0)}}
+@keyframes sxajr{0%,8%{transform:translateX(40px)}30%,100%{transform:translateX(0)}}
+.scx .sxa-pulse{animation:scpop 3s ease-in-out infinite}
+.scx .sxa-door{transform-origin:left center;animation:sxadoor 4.2s ease-in-out infinite}
+@keyframes sxadoor{0%,15%{transform:scaleX(1.55)}40%,100%{transform:scaleX(1)}}
+.scx .sxa-flame{animation:scpop 1.6s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.scx .sxa-in,.scx .sxa-hl,.scx .sxa-hr,.scx .sxa-draw,.scx .sxa-fly,.scx .sxa-move,.scx .sxa-jl,.scx .sxa-jr,.scx .sxa-pulse,.scx .sxa-door,.scx .sxa-flame{animation:none;opacity:1;stroke-dashoffset:0}.scx .sxa-fly{transform:translate(300px,40px)}}
+.opts .o.emoopt.emoopt,.xo.emoopt b{font-size:2.3rem;line-height:1.1}
+.mco>span.emoopt{font-size:2rem;line-height:1.1}
+
+/* ===== vis_d.css ===== */
+/* ---------- Grafiken Bau-Agent D (v5.57) ---------- */
+.dmon-r{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 8px;width:100%}
+.dmon-g{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0}
+.dmon-g .coins{padding:10px;background:color-mix(in srgb,var(--c) 6%,#fff);border:2px solid color-mix(in srgb,var(--c) 60%,#fff)}
+.dmon-g.n .coins{background:linear-gradient(180deg,#FBF7EF,#F1E8D6);border-color:#E3D6BC}
+.dmon-g.xd .coins{opacity:.45}
+.dmon-l{font-size:1.15rem;font-weight:900;color:var(--c);line-height:1.2;text-align:center}
+.dmon-op{font-size:1.6rem;font-weight:900;color:#9AA3B2;line-height:1}
+.dmon .note{width:92px;height:50px}
+.ckx svg{max-height:240px}
+.dsc-shake{animation:dscshake 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes dscshake{0%,55%,100%{transform:rotate(0)}62%{transform:rotate(-4deg)}70%{transform:rotate(4deg)}78%{transform:rotate(-3deg)}86%{transform:rotate(2deg)}}
+.dsc-hop{animation:dschop 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes dschop{0%,55%,100%{transform:translate(0,0)}68%{transform:translate(0,-16px)}80%{transform:translate(0,0)}}
+.dsc-drop{animation:dscdrop 3s ease-in infinite;transform-box:fill-box;transform-origin:center}
+@keyframes dscdrop{0%{transform:translate(0,-90px);opacity:0}15%{opacity:1}45%,100%{transform:translate(0,0);opacity:1}}
+.dsc-fly{animation:dscfly 3.6s ease-out infinite;opacity:0}
+@keyframes dscfly{0%{opacity:0;transform:translate(0,-40px)}12%{opacity:1}30%,90%{opacity:1;transform:translate(0,0)}100%{opacity:0}}
+.dsc-tag{animation:dsctag 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center top}
+@keyframes dsctag{0%,100%{transform:rotate(0)}50%{transform:rotate(-3deg)}}
+.dsc-min{animation:dscmin 6s steps(12) infinite}
+@keyframes dscmin{0%{transform:rotate(210deg)}100%{transform:rotate(282deg)}}
+@media (prefers-reduced-motion:reduce){.dsc-shake,.dsc-hop,.dsc-drop,.dsc-fly,.dsc-tag,.dsc-min{animation:none;opacity:1}}
+/* Emoji-Antworten (Muster Kl. 1) gut sichtbar: nur Emoji-Zeichen in Antwortknöpfen 1.5× grösser, Text unverändert */
+@font-face{font-family:"EsEmoji";src:local("Apple Color Emoji"),local("AppleColorEmoji"),local("Noto Color Emoji"),local("NotoColorEmoji"),local("Segoe UI Emoji");size-adjust:150%;unicode-range:U+1F300-1FAFF,U+2600,U+26BD,U+2B50,U+2714,U+274C}
+.opts .o,.xo,.mco{font-family:"EsEmoji",var(--font-d)}
+
+/* ===== vis_e.css ===== */
+/* Agent E: Grafiken Umfang, Strichliste, Diagramm, Plan, Würfelnetz, Baumdiagramm */
+.vis.ve-chart svg,.vis.ve-tally svg,.vis.ve-plan svg{max-height:290px}
+.vis.ve-tree svg{max-height:400px}
+.vis.ve-wnets svg{max-height:320px}
+.vis.ve-wnet svg{max-height:250px}
+.vis.ve-umf svg{max-height:250px}
+.xg-vis .vis.ve-chart svg,.xg-vis .vis.ve-tally svg,.xg-vis .vis.ve-plan svg,.xg-vis .vis.ve-tree svg,.xg-vis .vis.ve-wnet svg,.xg-vis .vis.ve-umf svg{max-height:200px}
+.vis.ve-kgrid svg{max-height:300px}
+
+/* ===== vis_f.css ===== */
+
+/* ---------- Agent F (v5.57): Wertetabelle «fwtab» ---------- */
+.vis.fwv{align-items:center;width:100%;max-height:none}
+.fwt{border-collapse:collapse;margin:2px auto;background:#fff;font:700 1.12rem/1.2 var(--font-d,Arial,sans-serif);font-variant-numeric:tabular-nums;color:var(--ink,#202124)}
+.fwt th,.fwt td{border:1.5px solid #CBD3E1;padding:8px 11px;text-align:center;min-width:2.4em;white-space:nowrap}
+.fwt th{font-weight:800;font-size:.95rem;color:#2F3A4A;border-right:2.5px solid #9AA6BA;text-align:left}
+.fwt th.v{font:italic 800 1.15rem/1.2 Georgia,serif;text-align:center}
+.fwt td.hc,.fwt th.hc{color:var(--c)}
+.fwt .gap{font-weight:700}
+
+/* ===== vis_g1.css ===== */
+/* G1 (v5.57): Uhren-Reihe */
+.g1ckr{display:flex;gap:8px;justify-content:center;align-items:flex-start;width:100%}
+.g1ck{flex:1 1 0;max-width:160px;min-width:0;display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 4px 8px;border-radius:16px}
+.g1ck svg{width:100%;height:auto}
+.g1ck.ok{background:#E6F4EA;box-shadow:inset 0 0 0 2.5px #34A853}
+.g1ck b{font-size:1.15rem;font-weight:800;color:#1F2937;line-height:1.2}
+.g1ck small{font-size:.8rem;font-weight:700;color:#4B5563;text-align:center;line-height:1.15}
+.g1mul{display:flex;gap:14px;justify-content:center;align-items:flex-start;width:100%}
+.g1mi{flex:1 1 0;min-width:0;max-width:260px;display:flex;flex-direction:column;align-items:center;gap:4px}
+.g1mi svg{width:100%;height:auto}
+.g1mi b{font-size:1.35rem;font-weight:800;color:#1F2937}
+
+/* ===== vis_zz_fix.css ===== */
+
+/* Deutsch: Emoji-Knöpfe nur über .emoopt vergrössern (nicht doppelt mit EsEmoji) */
+[data-de="1"] .opts .o.emoopt,[data-de="1"] .xo.emoopt,[data-de="1"] .mco>span.emoopt{font-family:var(--font-d)}

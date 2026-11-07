@@ -24,7 +24,7 @@ function qHtml(q){
 }
 function qParts(q){
   if(q.say)return {main:String(q.q),ctx:'',inst:''};
-  var t=String(q.q).replace(/\s+/g,' ').trim(),ins=[],m;
+  var t=String(q.q).replace(/[ \t\n\r]+/g,' ').trim().replace(/(\d) (mm|cm|dm|km|m|kg|g|t|ml|dl|l|Fr\.|Rp\.|min|h|s|%)(?![A-Za-zäöüÄÖÜ])/g,'$1\u00a0$2').replace(/(Fr\.) (\d)/g,'$1\u00a0$2'),ins=[],m;
   var sp0=qSplit(t);if(sp0.sub){t=sp0.main;sp0.sub.split(/(?<=[.!?])\s+/).forEach(function(x){ins.push(x)})}
   [[/\s*\(Schreibe nur die Zahl\.\)/,'Schreibe nur die Zahl.'],[/\s*\(so weit wie möglich kürzen\)/,'Kürze so weit wie möglich.'],[/\s*Runde auf eine Stelle nach dem Komma\./,'Runde auf eine Stelle nach dem Komma.'],[/\s*\(in (cm|m|km|g|kg|min)\)\.?/,null],[/\s*Schreibe den ganzen Satz\./,'Schreibe den ganzen Satz.']].forEach(function(r){var x=r[0].exec(t);if(x){t=t.replace(r[0],'');ins.push(r[1]||('Antwort in '+x[1]+', nur die Zahl.'))}});
   var main=t,ctx='',mm=/^(.*?[?:])\s+(\S.*)$/.exec(t);
@@ -34,7 +34,7 @@ function qParts(q){
   if(q.pre!=null){ins.push('Verbessere direkt im Feld und gib dann ab.')}
   else if(q.type==='mc'){ins.unshift('Kreuze eine Antwort an.')}
   if(q.pre!=null){}
-  else if(!ins.some(function(x){return /Zahl|Satz|Bruch/.test(x)})){
+  else if(q.type!=='mc'&&!ins.some(function(x){return /Zahl|Satz|Bruch/.test(x)})){
     var a=String((q.answer||[''])[0]),words=a.split(/\s+/).length;
     if(/^[\d\s.,]+(\s?[a-z]+)?$/i.test(a))ins.push(/\./.test(a+'')||/,/.test(a)?'Schreibe nur die Zahl.':'Schreibe nur die Zahl (ganze Zahl).');
     else if(/\d\s?\/\s?\d/.test(a))ins.push('Schreibe den Bruch, zum Beispiel 3/5.');
