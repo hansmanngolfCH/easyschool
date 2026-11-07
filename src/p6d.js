@@ -630,7 +630,7 @@ document.addEventListener('input',function(e){if(e.target&&e.target.id==='gsq')g
 GAMEFN.pong=function(cv,cx,w,h,score,over){
   var OL='#1F2A1C',GR='#159447',GR2='#0E7A39',YE='#FFD31A',SKIN='#F6C9A2',SKIN2='#E2A27C',HAIR='#7A4521',HAIR2='#A0622F',dpr=cv.width/w;
   var G=h*.9,M=h*.165;            /* Boden-y, Pixel pro Meter */
-  var XL=w*.24,XR=w*.66,XT=w*.9,GX=w*.075; /* Laufbereich, Einwerferin, Torpfosten */
+  var XL=w*.2,XR=w*.58,XT=w*.92,GX=w*.075; /* Laufbereich, Einwerferin, Torpfosten */
   var LG=new Image();LG.src='img/fcm_logo.png';
   function ol(lw){cx.lineWidth=lw;cx.strokeStyle=OL;cx.lineJoin='round';cx.lineCap='round'}
   /* ---------- Hintergrund ---------- */
@@ -668,13 +668,13 @@ GAMEFN.pong=function(cv,cx,w,h,score,over){
     cx.strokeStyle='#E8E8E8';cx.lineWidth=3;cx.beginPath();cx.moveTo(back,G);cx.lineTo(back+M*.15,top+M*.4);cx.lineTo(GX,top);cx.stroke();
     ol(6.5);cx.beginPath();cx.moveTo(GX,G);cx.lineTo(GX,top);cx.lineTo(back+M*.25,top);cx.stroke();cx.strokeStyle='#fff';cx.lineWidth=4;cx.beginPath();cx.moveTo(GX,G);cx.lineTo(GX,top);cx.lineTo(back+M*.25,top);cx.stroke();cx.restore()}
   /* ---------- Ball ---------- */
-  function ball(x,y,r,rot){cx.save();cx.translate(x,y);cx.rotate(rot||0);cx.fillStyle='#fff';cx.beginPath();cx.arc(0,0,r,0,7);cx.fill();
+  function ball(x,y,r,rot,u){u=u||1;cx.save();cx.translate(x,y);cx.rotate(rot||0);cx.fillStyle='#fff';cx.beginPath();cx.arc(0,0,r,0,7);cx.fill();
     cx.save();cx.beginPath();cx.arc(0,0,r,0,7);cx.clip();cx.fillStyle='#1E1E1E';
     function pent(px,py,s){cx.beginPath();for(var k=0;k<5;k++){var a=-Math.PI/2+k*Math.PI*2/5;cx.lineTo(px+Math.cos(a)*s,py+Math.sin(a)*s)}cx.closePath();cx.fill()}
     pent(0,0,r*.36);for(var k=0;k<5;k++){var a=-Math.PI/2+k*Math.PI*2/5;pent(Math.cos(a)*r*.95,Math.sin(a)*r*.95,r*.3)}
-    cx.strokeStyle='#1E1E1E';cx.lineWidth=Math.max(.6,r*.06);for(k=0;k<5;k++){a=-Math.PI/2+k*Math.PI*2/5;cx.beginPath();cx.moveTo(Math.cos(a)*r*.36,Math.sin(a)*r*.36);cx.lineTo(Math.cos(a)*r*.7,Math.sin(a)*r*.7);cx.stroke()}
+    cx.strokeStyle='#1E1E1E';cx.lineWidth=Math.max(.6*u,r*.06);for(k=0;k<5;k++){a=-Math.PI/2+k*Math.PI*2/5;cx.beginPath();cx.moveTo(Math.cos(a)*r*.36,Math.sin(a)*r*.36);cx.lineTo(Math.cos(a)*r*.7,Math.sin(a)*r*.7);cx.stroke()}
     var sh=cx.createRadialGradient(-r*.35,-r*.4,r*.1,0,0,r);sh.addColorStop(0,'rgba(255,255,255,.5)');sh.addColorStop(.7,'rgba(0,0,0,0)');sh.addColorStop(1,'rgba(0,0,0,.28)');cx.fillStyle=sh;cx.fillRect(-r,-r,2*r,2*r);cx.restore();
-    ol(Math.max(1,r*.14));cx.beginPath();cx.arc(0,0,r,0,7);cx.stroke();cx.restore()}
+    ol(Math.max(u,r*.14));cx.beginPath();cx.arc(0,0,r,0,7);cx.stroke();cx.restore()}
   var BR=.15*M; /* Ballradius (leicht vergrössert, Comic) */
   /* ---------- Fussballerin in Seitenansicht (Körpermasse in Metern) ----------
      p: {r (Körperdrehung), lF,kF,lB,kB (Beine: Winkel ab senkrecht nach unten, + = nach vorne; Knie), aF,eF,aB,eB (Arme), face}
@@ -728,7 +728,7 @@ GAMEFN.pong=function(cv,cx,w,h,score,over){
       if(fc==='focus'){cx.strokeStyle=OL;cx.lineWidth=.014;cx.beginPath();cx.moveTo(.085,hy+.07);cx.lineTo(.115,hy+.065);cx.stroke()}
       else{cx.fillStyle='#8B1E2B';ol(LW*.6);cx.beginPath();cx.moveTo(.07,hy+.06);cx.quadraticCurveTo(.1,hy+.1,.122,hy+.055);cx.closePath();cx.fill();cx.stroke()}}
     armD(p.aF,p.eF,false);
-    if(o.hold){ball(0,-1.12,BR/M,o.hold)}
+    if(o.hold){ball(0,-1.12,BR/M,o.hold,1/M)}
     cx.restore();return foot}
   /* Weltposition eines Punktes im Körper (für den Fuss beim Kick) */
   function toW(X,Y,dir,r,pt){var c=Math.cos(r),s2=Math.sin(r),x=pt[0]*c-pt[1]*s2,y=pt[0]*s2+pt[1]*c;return [X+x*M*dir,Y+y*M]}
@@ -753,12 +753,12 @@ GAMEFN.pong=function(cv,cx,w,h,score,over){
     [.86,{r:-1.57,lF:1.45,kF:.2,lB:1.0,kB:.3,aF:-1.7,eF:-.1,aB:-2.9,eB:-.1},.12],[.94,{r:-.5,lF:1.2,kF:1.8,lB:.8,kB:1.8,aF:-.3,eF:-.8,aB:-.8,eB:-.8},.5],[1,STAND,.95]];
   function kpose(kt,hit){var T2=kt<=.55?KK:(hit?KHIT:KMISS);for(var j=0;j<T2.length-1;j++){if(kt<=T2[j+1][0]){var a=T2[j],b=T2[j+1],k=(kt-a[0])/(b[0]-a[0]);if(!(T2===KMISS&&j===0))k=ease(k);return {p:mix(a[1],b[1],k),hh:a[2]+(b[2]-a[2])*k}}}var l=T2[T2.length-1];return {p:l[1],hh:l[2]}}
   /* ---------- Spielzustand ---------- */
-  var s=0,lives=3,fr=0,P=[],F=[],px=w*.45,tx=px,pause=40,B=null,K=null,thr=0,thrOn=false,cmb=0,flash=0,shake=0,bubble=0,net=0,i,grav=6.5*M,runPh=0,lastX=px;
+  var thrL=0,s=0,lives=3,fr=0,P=[],F=[],px=w*.45,tx=px,pause=40,B=null,K=null,thr=0,thrOn=false,cmb=0,flash=0,shake=0,bubble=0,net=0,i,grav=6.5*M,runPh=0,lastX=px;
   var unb=bindTap(cv,function(x){if(x!=null)tx=Math.max(XL,Math.min(XR,x))});
   function mv(e){var t=e.touches?e.touches[0]:e,rc=cv.getBoundingClientRect();if(e.touches||e.buttons){tx=Math.max(XL,Math.min(XR,t.clientX-rc.left));if(e.cancelable)e.preventDefault()}}
   cv.addEventListener('touchmove',mv,{passive:false});cv.addEventListener('mousemove',mv);
   var CH=2.12; /* Kontakthöhe (m) */
-  function serve(){thrOn=true;thr=0}
+  function serve(){thrOn=true;thr=0;thrL=0}
   function launch(){var T=Math.max(.8,1.25-s*.03),tgt=XL+Math.random()*(XR-XL);if(Math.abs(tgt-px)<w*.12&&Math.random()<.7)tgt=px>(XL+XR)/2?XL+Math.random()*(px-XL-w*.12):px+w*.12+Math.random()*Math.max(1,XR-px-w*.12);
     var x0=XT-.15*M,y0=G-2.15*M,y1=G-CH*M;B={x:x0,y:y0,vx:(tgt-x0)/T,vy:(y1-y0-.5*grav*T*T)/T,t:0,T:T,tgt:tgt,rot:0,st:'in'};bubble=1}
   var L=loopRun(function(f){var dt=f/60;fr+=f;
@@ -766,11 +766,11 @@ GAMEFN.pong=function(cv,cx,w,h,score,over){
     if(!K){var mx2=w*.006*f*1.6,dd=tx-px;px+=Math.max(-mx2,Math.min(mx2,dd))}
     var spd=Math.abs(px-lastX)/Math.max(.001,f);lastX=px;runPh+=spd*.11*f;
     if(pause>0){pause-=f;if(pause<=0)serve()}
-    if(thrOn){thr+=f/24;if(thr>=.6&&!B)launch();if(thr>=1){thrOn=false}}
+    if(thrOn){thr+=f/24;if(thr>=.6&&!thrL){thrL=1;launch()}if(thr>=1){thrOn=false}}
     if(B){B.t+=dt;B.rot-=.15*f*Math.sign(B.vx||-1);
       if(B.st==='in'){B.x+=B.vx*dt;B.vy+=grav*dt;B.y+=B.vy*dt;B.vy-=grav*dt*.5;B.vy+=grav*dt*.5;
         /* Kick auslösen, damit der Fuss beim Ball ist */
-        var Dk=.95,lead=KC*Dk;if(!K&&!B.kk&&B.t>=B.T-lead){B.kk=1;var dx=Math.abs(px-B.tgt)/M;K={kt:0,hit:dx<.5,perf:dx<.2,D:Dk,x:px};}
+        var Dk=.95,lead=KC*Dk;if(!K&&!B.kk&&B.t>=B.T-lead){B.kk=1;var dx=Math.abs(px-B.tgt)/M;K={kt:0,hit:dx<.42,perf:dx<.17,D:Dk,x:px};}
         if(K&&K.hit&&K.kt>=KC&&B.st==='in'){var kp=kpose(KC,true),hip=[K.x,G-kp.hh*M],fp=toW(hip[0],hip[1],1,kp.p.r,footL(kp.p));
           B.st='out';B.x=fp[0];B.y=fp[1];var gy=G-(K.perf?2.15:1.1+Math.random()*.8)*M,Tt=K.perf?.42:.5,gx2=GX-.45*M;B.vx=(gx2-B.x)/Tt;B.vy=(gy-B.y-.5*grav*.35*Tt*Tt)/Tt;B.g2=grav*.35;B.t=0;B.Tt=Tt;
           var dist=Math.round((K.perf?42:28)+Math.random()*12);s+=K.perf?2:1;score(s);cmb++;flash=5;shake=7;burst(P,fp[0],fp[1],K.perf?44:28,[YE,'#fff',GR,'#FF2D6F'],K.perf?11:8);
