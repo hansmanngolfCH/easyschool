@@ -331,7 +331,7 @@ var GAMES=[
  {id:'runner',n:'Tsunami-Flucht',e:'🌊',g:T3(14),time:60,d:'run',gs:'tap',lb:'Tippen',ctl:'👆 Tippen = springen',how:'Spring über Hindernisse. Krabben darfst du anspringen.'},
  {id:'stack',n:'Burger-Turm',e:'🍔',g:T3(28),time:60,d:'drop',gs:'tap',lb:'Tippen',ctl:'👆 Tippen = Zutat fallen lassen',how:'Triff genau, sonst wird die Lage schmaler.'},
  {id:'moto',n:'Dirtbike',e:'🏍️',g:T3(14),time:60,d:'moto',gs:'lr',lb:'Wischen',ctl:'👈 👉 Wischen oder links/rechts tippen',how:'Weiche den Hindernissen aus.'},
- {id:'pong',n:'Fallrückzieher',e:'⚽',g:T3(16),time:60,d:'sam',gs:'drag',lb:'Ziehen',ctl:'☝️ Finger ziehen = unter den Ball laufen',how:'Lauf unter den Einwurf. Stehst du richtig, gibt es einen Fallrückzieher. Daneben = harte Landung!'},
+ {id:'pong',n:'Fallrückzieher',e:'⚽',g:T3(16),time:60,d:'sam',gs:'drag',lb:'Ziehen',ctl:'☝️ Finger ziehen = unter den Ball laufen',how:'Lauf zum gelben Kreis unter den Einwurf. Stehst du richtig, schiesst sie den Ball per Fallrückzieher ins Tor. Daneben = harte Landung!'},
  {id:'roulette',n:'Roulette',e:'🎰',g:[1,2,3],time:60,d:'roul',gs:'tap',lb:'Tippen',ctl:'👆 Feld antippen, dann DREHEN',how:'Du hast 2 Versuche. Die grüne 0 verliert immer!'},
  {id:'snake',n:'Snake',e:'🐍',g:T3(12),time:60,d:'train',gs:'s4',lb:'Wischen',ctl:'☝️ Wische ⬅ ➡ ⬆ ⬇',how:'Sammle die Münzen. Wand und eigener Körper sind tödlich.'},
  {id:'basket',n:'Basketball',e:'🏀',g:T3(13),time:60,d:'bball',gs:'tap',lb:'Tippen',ctl:'👆 Tippen im grünen Bereich',how:'Du darfst 3 Mal danebenwerfen.'},
