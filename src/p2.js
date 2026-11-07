@@ -692,7 +692,7 @@ function vCol(v){
   for(i=0;i<n;i++){
     var tl=['T','H','Z','E'].slice(-n)[i]||'';
     o+='<text x="'+x(i)+'" y="22" text-anchor="middle" font-size="13" font-weight="800" fill="#5F6B7A" font-family="Arial,sans-serif">'+tl+'</text>';
-    var colr=i===n-1?'#B06000':'#1A56C4';
+    var colr={T:'#0B7285',H:'#7B3FC4',Z:'#1A56C4',E:'#4B5260'}[tl]||'#1A56C4';
     if(da[i]!==null)o+='<text x="'+x(i)+'" y="'+(plus?58:64)+'" text-anchor="middle" font-size="34" font-weight="900" fill="'+colr+'" font-family="Arial,sans-serif">'+da[i]+'</text>';
     if(db[i]!==null)o+='<text x="'+x(i)+'" y="'+(plus?88:92)+'" text-anchor="middle" font-size="34" font-weight="900" fill="'+colr+'" font-family="Arial,sans-serif">'+db[i]+'</text>';
     if(dr[i]!==null&&v.show!==false)o+='<text x="'+x(i)+'" y="136" text-anchor="middle" font-size="34" font-weight="900" fill="#137333" font-family="Arial,sans-serif">'+(v.hideRes?'?':dr[i])+'</text>';
@@ -746,17 +746,59 @@ function vRuler(v){
   if((v.pts||[]).some(function(p){return p[1]}))H+=52;
   return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 '+H+'" width="100%" style="display:block;max-width:600px;margin:0 auto" role="img" aria-label="'+esc(v.cap||'Messstab')+'">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
+/* ---------- Stellenwert «place» (v5.58): Einer = Punkte, Zehner = Schachtel mit 10 Punkten, Hunderter = Box mit 10 Schachteln ----------
+   {"type":"place","h":4,"z":5,"e":6,"sty":1}   sty 1 = Zehner senkrecht, 2 = Zehner waagrecht (Streifen), 3 = Zehner als 2×5-Feld */
+function vPlace(v){
+  var h=v.h||0,z=v.z||0,e=v.e||0,sty=v.sty||2,d=14,r=5.3,p=3.5,g=3.5,id='pl'+(++_guid),o='';
+  var CH='#7B3FC4',CZ='#1A56C4',CE='#4B5260';
+  var tc=sty===1?1:sty===2?10:5,tr=sty===1?10:sty===2?1:2,tw=tc*d+2*p,th=tr*d+2*p;            // Zehner-Schachtel
+  var hc=sty===1?10:sty===2?1:2,hr=sty===1?1:sty===2?10:5,P2=6,hw=hc*tw+(hc-1)*g+2*P2,hh=hr*th+(hr-1)*g+2*P2+(sty===2?6:0); // Hunderter-Box
+  function dot(x,y,k){return '<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="'+r+'" fill="url(#'+id+'d)" stroke="#2F3542" stroke-width=".9"/>'}
+  function ten(x,y){var s='<rect x="'+x+'" y="'+y+'" width="'+tw+'" height="'+th+'" rx="5" fill="#F3F7FE" stroke="'+CZ+'" stroke-width="3.2"/>',i,j;
+    for(j=0;j<tr;j++)for(i=0;i<tc;i++)s+=dot(x+p+d/2+i*d,y+p+d/2+j*d,'z');return s}
+  /* kompakter Hunderter (Variante 2): 10 schmale Streifen mit kleinen, flachen Punkten */
+  var cd=8.4,cr=2.8,cP=6,csh=cd+1.6,csg=1.3,cw=10*cd+4,chw=cw+2*cP,chh=10*csh+9*csg+3+2*cP;
+  function hunC(x,y){var s='<rect x="'+x+'" y="'+y+'" width="'+chw+'" height="'+chh+'" rx="7" fill="#F8F3FE" stroke="'+CH+'" stroke-width="4"/>',i,j,yy;
+    for(j=0;j<10;j++){yy=y+cP+j*(csh+csg)+(j>=5?3:0);s+='<rect x="'+(x+cP)+'" y="'+yy.toFixed(1)+'" width="'+cw+'" height="'+csh.toFixed(1)+'" rx="2.5" fill="#F3F7FE" stroke="'+CZ+'" stroke-width="1.6"/>';
+      if(v.hs==='bars'){s+='<rect x="'+(x+cP+1.5)+'" y="'+(yy+1.5).toFixed(1)+'" width="'+(cw-3)+'" height="'+(csh-3).toFixed(1)+'" rx="1.5" fill="#4F86EC"/>';for(i=1;i<10;i++)s+='<line x1="'+(x+cP+2+i*cd).toFixed(1)+'" x2="'+(x+cP+2+i*cd).toFixed(1)+'" y1="'+(yy+1.5).toFixed(1)+'" y2="'+(yy+csh-1.5).toFixed(1)+'" stroke="#fff" stroke-width=".9" opacity=".8"/>'}
+      else for(i=0;i<10;i++)s+='<circle cx="'+(x+cP+2+cd/2+i*cd).toFixed(1)+'" cy="'+(yy+csh/2).toFixed(1)+'" r="'+cr+'" fill="#4B5260"/>'}return s}
+  if(sty===2&&v.full!==true){hw=chw;hh=chh}
+  function hun(x,y){if(sty===2&&v.full!==true)return hunC(x,y);var s='<rect x="'+x+'" y="'+y+'" width="'+hw+'" height="'+hh+'" rx="9" fill="#F8F3FE" stroke="'+CH+'" stroke-width="4.5"/>',i,j,k=0;
+    for(j=0;j<hr;j++)for(i=0;i<hc;i++){s+=ten(x+P2+i*(tw+g),y+P2+j*(th+g)+(sty===2&&j>=5?6:0))}return s}
+  /* Anordnung je Spalte */
+  var cols=[],G=12;
+  if(h){var gc=sty===2&&v.full!==true?(h<=2?h:h<=4?2:3):(h<=1?1:h<=4?2:3),grs=Math.ceil(h/gc);cols.push({k:'H',lab:'Hunderter',c:CH,n:h,w:gc*hw+(gc-1)*G,h:grs*hh+(grs-1)*G,draw:function(x,y){var s='';for(var q=0;q<h;q++)s+=hun(x+(q%gc)*(hw+G),y+Math.floor(q/gc)*(hh+G));return s}})}
+  if(h||z){var zc,zr;if(sty===1){zc=Math.max(z,1);zr=1}else if(sty===2){zc=1;zr=Math.max(z,1)}else{zc=z>5?2:1;zr=Math.max(1,Math.ceil(z/zc))}
+    var ZG=sty===1?7:6;cols.push({k:'Z',lab:'Zehner',c:CZ,n:z,w:zc*tw+(zc-1)*ZG,h:zr*th+(zr-1)*ZG,draw:function(x,y){var s='';for(var q=0;q<z;q++)s+=ten(x+(q%zc)*(tw+ZG),y+Math.floor(q/zc)*(th+ZG));return s}})}
+  var ec=sty===1?1:sty===2?9:5,er=sty===1?9:sty===2?1:2;if(sty===1&&e>5){ec=1}
+  cols.push({k:'E',lab:'Einer',c:CE,n:e,w:(sty===2?Math.min(Math.max(e,1),5)*d:ec*d)+2*p,h:(sty===2?(e>5?2:1)*d:sty===1?Math.max(e,1)*d+(e>5?6:0):2*d)+2*p,draw:function(x,y){var s='';
+    for(var q=0;q<e;q++){var cx,cy;if(sty===1){cx=x+p+d/2;cy=y+p+d/2+q*d+(q>=5?6:0)}else if(sty===2){cx=x+p+d/2+(q%5)*d;cy=y+p+d/2+Math.floor(q/5)*d}else{cx=x+p+d/2+(q%5)*d;cy=y+p+d/2+Math.floor(q/5)*d}s+=dot(cx,cy,'e')}return s}});
+  /* Masse, Schrift relativ zur Gesamtbreite */
+  var raw=cols.reduce(function(a,c){return a+c.w},0),fs=Math.max(14,raw*.036),pillH=fs*1.9,pad=fs*.9;
+  cols.forEach(function(c){c.pw=c.lab.length*fs*.6+fs*1.4;c.cw=Math.max(c.w+2*pad,c.pw+pad)});
+  var W=cols.reduce(function(a,c){return a+c.cw},0)+(cols.length-1)*fs*.6,bodyH=Math.max.apply(null,cols.map(function(c){return c.h})),top=pillH+fs*1.2,H=top+bodyH+fs*3.4,x=0;
+  o+='<defs><radialGradient id="'+id+'z" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#C9DCFD"/><stop offset=".5" stop-color="#6FA0EE"/><stop offset="1" stop-color="#3B78E7"/></radialGradient>'+
+     '<radialGradient id="'+id+'d" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#9AA1AD"/><stop offset=".55" stop-color="#5B6270"/><stop offset="1" stop-color="#3A404C"/></radialGradient></defs>';
+  cols.forEach(function(c){var mid=x+c.cw/2;
+    o+='<rect x="'+x+'" y="0" width="'+c.cw+'" height="'+H+'" rx="'+fs+'" fill="#fff" stroke="'+c.c+'" stroke-opacity=".35" stroke-width="2"/>';
+    o+='<rect x="'+(mid-c.pw/2)+'" y="'+(fs*.6)+'" width="'+c.pw+'" height="'+pillH+'" rx="'+(pillH/2)+'" fill="'+c.c+'"/>'+_t(mid,fs*.6+pillH*.68,fs,c.lab,'#fff','middle',800);
+    o+=c.draw(mid-c.w/2,top+(bodyH-c.h));
+    o+='<line x1="'+(x+pad)+'" x2="'+(x+c.cw-pad)+'" y1="'+(top+bodyH+fs*.7)+'" y2="'+(top+bodyH+fs*.7)+'" stroke="'+c.c+'" stroke-opacity=".3" stroke-width="2"/>';
+    o+=_t(mid,top+bodyH+fs*2.5,fs*1.45,c.n+' '+c.k,c.c,'middle',800);
+    x+=c.cw+fs*.6});
+  return '<figure class="vis vplace" style="width:100%"><svg viewBox="-2 -2 '+(W+4)+' '+(H+4)+'" width="100%" style="display:block;max-width:'+Math.round(W*1.15)+'px;margin:0 auto" role="img" aria-label="'+(h*100+z*10+e)+' als Hunderter, Zehner und Einer">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
+}
 window.VEXT=window.VEXT||{}; /* Erweiterungen: VEXT.typ=function(v){return html} am Ende von p2.js anhängen */
 function visuals(list){
   if(!list||!list.length)return '';
-  var map={hl:vHl,pic:vPic,symfig:vSymfig,symgrid:vSymgrid,wcol:vWcol,dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar,tbl:vTbl,chips:vChips,tline:vTline,flow:vFlow,anno:vAnno,cards:vCards,area:vArea,emo:vEmo,field:vField,clock:vClock,coins:vCoins,shape:vShape,mtab:vMtab,mreihe:vMreihe,symm:vSymm,solid:vSolid,nline:vNline,angle:vAngle,circle:vCircle,jug:vJug,quader:vQuader,par:vPar,blocks:vBlocks,jumps:vJumps,ruler:vRuler,arr:vArr,col:vCol,wall:vWall,scene:vScene,geo:vGeo};
+  var map={hl:vHl,pic:vPic,symfig:vSymfig,symgrid:vSymgrid,wcol:vWcol,dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar,tbl:vTbl,chips:vChips,tline:vTline,flow:vFlow,anno:vAnno,cards:vCards,area:vArea,emo:vEmo,field:vField,clock:vClock,coins:vCoins,shape:vShape,mtab:vMtab,mreihe:vMreihe,symm:vSymm,solid:vSolid,nline:vNline,angle:vAngle,circle:vCircle,jug:vJug,quader:vQuader,par:vPar,blocks:vPlace,jumps:vJumps,ruler:vRuler,place:vPlace,arr:vArr,col:vCol,wall:vWall,scene:vScene,geo:vGeo};
   /* Farben abgleichen II: Rechenkette (Chips) übernimmt die Farben der Grafik (Punktefeld, Zehner/Einer, Sprünge).
      Gleiche Zahl = gleiche Farbe; Zahlen, die in der Grafik nicht farbig sind (Ergebnis, Summe), neutral (7). */
-  var grs=list.filter(function(v){return v.type==='field'||v.type==='blocks'||v.type==='jumps'});
+  var grs=list.filter(function(v){return v.type==='field'||v.type==='blocks'||v.type==='place'||v.type==='jumps'});
   if(grs.length&&list.some(function(v){return v.type==='chips'&&v.parts})){var cmp={},lc=null,set=function(n,c){if(cmp[n]===undefined)cmp[n]=c};
     grs.forEach(function(gr){
       if(gr.type==='field'){set(gr.filled,VC[(gr.col||0)%4]);if(gr.filled2){set(gr.filled2,VC[(gr.col2===undefined?1:gr.col2)%4]);set(gr.filled+gr.filled2,7)}}
-      else if(gr.type==='blocks'){lc={H:'#7B3FC4',Z:'#1A56C4',E:'#B06000'};if(gr.h)set(gr.h*100,lc.H);if(gr.z)set(gr.z*10,lc.Z);if(gr.e)set(gr.e,lc.E)}
+      else if(gr.type==='blocks'||gr.type==='place'){lc={H:'#7B3FC4',Z:'#1A56C4',E:'#4B5260'};if(gr.h)set(gr.h*100,lc.H);if(gr.z)set(gr.z*10,lc.Z);if(gr.e)set(gr.e,lc.E)}
       else{var jp=[gr.from],JI=jumpIdx(gr.jumps);(gr.jumps||[]).forEach(function(j){jp.push(jp[jp.length-1]+j[0])});
         cmp[gr.from]='#34A853';if(jp.length>1)cmp[jp[jp.length-1]]='#4285F4';
         (gr.jumps||[]).forEach(function(j,k){set(Math.abs(j[0]),jIdxCol(JI[k]))});jp.slice(1,-1).forEach(function(n){set(n,'#F29900')})}});

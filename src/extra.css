@@ -1751,3 +1751,5 @@ input.wc-sbox:focus{border-color:#8AB4F8}
 .pk small{color:#5f6368}
 .pk.pdel{background:none!important;color:#1f2430!important}
 .pinbox{background:rgba(32,36,48,.35)!important}
+.vis.vplace svg{max-height:430px}
+.xg-vis .vis.vplace svg{max-height:170px}
