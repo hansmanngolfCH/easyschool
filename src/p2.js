@@ -172,13 +172,13 @@ function vEmo(v){
 function vField(v){
   var P=30,G=10,cols=v.cols,rows=v.rows,W=cols*P+Math.floor((cols-1)/5)*G+16,H=rows*P+16,k=0,o='',i,j,
   gx=function(c){return 8+c*P+Math.floor(c/5)*G+P/2},
-  cs=[VC[(v.col||0)%4],VC[(v.col2===undefined?1:v.col2)%4]];
-  o+='<defs>'+VC.map(function(c,n){return '<radialGradient id="fg'+n+'" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".35" stop-color="'+c+'"/><stop offset="1" stop-color="'+c+'" stop-opacity=".78"/></radialGradient>'}).join('')+'<filter id="fsh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="1.5" stdDeviation="1.2" flood-opacity=".35"/></filter></defs>';
+  FV=VC.concat(['#5B6270']),fi=function(c){return c===4||c===7?4:(c||0)%4};
+  o+='<defs>'+FV.map(function(c,n){return '<radialGradient id="fg'+n+'" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".35" stop-color="'+c+'"/><stop offset="1" stop-color="'+c+'" stop-opacity=".78"/></radialGradient>'}).join('')+'<filter id="fsh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="1.5" stdDeviation="1.2" flood-opacity=".35"/></filter></defs>';
   o+='<rect x="1.5" y="1.5" width="'+(W-3)+'" height="'+(H-3)+'" rx="12" fill="#F4F7FB" stroke="#5F6B7A" stroke-width="3"/>';
   for(j=0;j<rows;j++)for(i=0;i<cols;i++){var cx=gx(i),cy=8+j*P+P/2,f=null;
     o+='<rect x="'+(cx-P/2+2)+'" y="'+(cy-P/2+2)+'" width="'+(P-4)+'" height="'+(P-4)+'" rx="6" fill="#fff" stroke="#C5CCD6" stroke-width="1.5"/>';
-    if(k<v.filled)f=(v.col||0)%4;else if(v.filled2&&k<v.filled+v.filled2)f=(v.col2===undefined?1:v.col2)%4;
-    if(f!==null)o+='<circle cx="'+cx+'" cy="'+cy+'" r="11" fill="url(#fg'+f+')" stroke="'+VC[f]+'" stroke-width="1.5" filter="url(#fsh)"/><ellipse cx="'+(cx-3.5)+'" cy="'+(cy-4)+'" rx="3.6" ry="2.2" fill="#fff" fill-opacity=".55"/>';
+    if(k<v.filled)f=fi(v.col);else if(v.filled2&&k<v.filled+v.filled2)f=fi(v.col2===undefined?1:v.col2);
+    if(f!==null)o+='<circle cx="'+cx+'" cy="'+cy+'" r="11" fill="url(#fg'+f+')" stroke="'+FV[f]+'" stroke-width="1.5" filter="url(#fsh)"/><ellipse cx="'+(cx-3.5)+'" cy="'+(cy-4)+'" rx="3.6" ry="2.2" fill="#fff" fill-opacity=".55"/>';
     k++}
   for(i=5;i<cols;i+=5)o+='<line x1="'+(gx(i)-P/2-G/2)+'" x2="'+(gx(i)-P/2-G/2)+'" y1="6" y2="'+(H-6)+'" stroke="#5F6B7A" stroke-width="2.5" stroke-dasharray="3 4"/>';
   return '<figure class="vis" style="align-items:center;width:100%"><svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+Math.min(520,W*1.9)+'px" role="img" aria-label="Punktefeld">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
@@ -289,7 +289,7 @@ function vShape(v){
   var k=v.kind;
   if(k==='rw'||k==='spitz'||k==='stumpf')return vShapeOld(v);
   var c=VC[(v.col||0)%4],o='<defs><linearGradient id="sg'+(++_guid)+'" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".6"/><stop offset=".6" stop-color="'+c+'" stop-opacity=".55"/><stop offset="1" stop-color="'+c+'" stop-opacity=".8"/></linearGradient></defs>',gid='sg'+_guid,
-  fl='fill="url(#'+gid+')" stroke="#2F3A4A" stroke-width="3.5" stroke-linejoin="round"',tk='stroke="#2F3A4A" stroke-width="2.6" stroke-linecap="round"',ax='stroke="#EA4335" stroke-width="3" stroke-dasharray="7 5" stroke-linecap="round"';
+  fl='fill="url(#'+gid+')" stroke="#2F3A4A" stroke-width="3.5" stroke-linejoin="round"',tk='stroke="#2F3A4A" stroke-width="2.6" stroke-linecap="round"',ax='stroke="#9334E6" stroke-width="3" stroke-dasharray="7 5" stroke-linecap="round"';
   function tick(x,y,ang){return '<line x1="'+(x-5)+'" y1="'+y+'" x2="'+(x+5)+'" y2="'+y+'" '+tk+' transform="rotate('+ang+' '+x+' '+y+')"/>'}
   if(k==='kreis')o+='<circle cx="60" cy="60" r="46" '+fl+'/><circle cx="60" cy="60" r="2.8" fill="#2F3A4A"/>';
   else if(k==='dreieck'){o+='<polygon points="60,12 108,104 12,104" '+fl+'/>';o+=tick(84,58,-27)+tick(36,58,27)}
@@ -299,7 +299,7 @@ function vShape(v){
   else if(k==='rechteck'){o+='<rect x="8" y="30" width="104" height="60" '+fl+'/>';o+=tick(60,30,0)+tick(60,90,0)+'<path d="M8 42h12V30M112 42h-12V30M8 78h12v12M112 78h-12v12" fill="none" stroke="#2F3A4A" stroke-width="1.8"/>'}
   else if(k==='viereck')o+='<polygon points="20,26 104,16 112,96 14,88" '+fl+'/>';
   var ex=1;
-  function A(x1,y1,x2,y2){return '<line x1="'+x1+'" y1="'+y1+'" x2="'+x2+'" y2="'+y2+'" '+ax+'/><circle cx="'+x1+'" cy="'+y1+'" r="3" fill="#EA4335"/><circle cx="'+x2+'" cy="'+y2+'" r="3" fill="#EA4335"/>'}
+  function A(x1,y1,x2,y2){return '<line x1="'+x1+'" y1="'+y1+'" x2="'+x2+'" y2="'+y2+'" '+ax+'/><circle cx="'+x1+'" cy="'+y1+'" r="3" fill="#9334E6"/><circle cx="'+x2+'" cy="'+y2+'" r="3" fill="#9334E6"/>'}
   var axes=v.axes||(v.axis?[v.axis]:[]);
   if(axes==='many')axes=['v','h','d1','d2','e1','e2'];
   if(axes==='four')axes=['v','h','d1','d2'];
@@ -313,7 +313,7 @@ function vShape(v){
 
 /* Symmetrie: Schmetterling, Buchstaben, Falten, Karopapier */
 function vSymm(v){
-  var k=v.kind,o='',vb='0 0 300 130',AX='stroke="#EA4335" stroke-width="3" stroke-dasharray="7 5" stroke-linecap="round"',i,j;
+  var k=v.kind,o='',vb='0 0 300 130',AX='stroke="#9334E6" stroke-width="3" stroke-dasharray="7 5" stroke-linecap="round"',i,j;
   if(k==='butterfly'){
     vb='0 0 160 124';
     var wing='<path d="M80 58C94 22 140 6 151 32C158 50 126 64 80 62Z" fill="#4285F4" fill-opacity=".85" stroke="#1A3FA0" stroke-width="2.4"/><path d="M80 66C110 66 138 76 132 100C126 116 94 102 80 78Z" fill="#FBBC04" fill-opacity=".9" stroke="#B06000" stroke-width="2.4"/><circle cx="118" cy="36" r="9" fill="#fff" fill-opacity=".8"/><circle cx="114" cy="92" r="6" fill="#EA4335" fill-opacity=".85"/>';
@@ -333,7 +333,7 @@ function vSymm(v){
     o+='<g transform="translate(10 12)"><path d="'+heart+'" fill="#EA4335" fill-opacity=".8" stroke="#8C1D18" stroke-width="2.6"/><line x1="60" y1="6" x2="60" y2="120" '+AX+'/>';
     o+='<path d="M96 22C86 4 72 4 64 14" fill="none" stroke="#1A56C4" stroke-width="3" stroke-linecap="round"/><path d="M60 8l10 2-6 9z" fill="#1A56C4" transform="rotate(-20 62 12)"/>'+_t(60,136,13,'falten','#1A56C4')+'</g>';
     o+=_t(150,76,34,'→','#5F6368','middle',700);
-    o+='<g transform="translate(176 12)"><clipPath id="hc'+(++_guid)+'"><rect x="0" y="0" width="60" height="140"/></clipPath><g clip-path="url(#hc'+_guid+')"><path d="'+heart+'" fill="#EA4335" fill-opacity=".8" stroke="#8C1D18" stroke-width="2.6"/></g><path d="M60 26V112" stroke="#EA4335" stroke-width="3"/><path d="'+heart+'" fill="none" stroke="#188038" stroke-width="2.4" stroke-dasharray="3 5" stroke-linecap="round"/>'+_t(60,136,13,'Hälften passen genau ✓','#188038')+'</g>';
+    o+='<g transform="translate(176 12)"><clipPath id="hc'+(++_guid)+'"><rect x="0" y="0" width="60" height="140"/></clipPath><g clip-path="url(#hc'+_guid+')"><path d="'+heart+'" fill="#EA4335" fill-opacity=".8" stroke="#8C1D18" stroke-width="2.6"/></g><path d="M60 26V112" stroke="#9334E6" stroke-width="3"/><path d="'+heart+'" fill="none" stroke="#188038" stroke-width="2.4" stroke-dasharray="3 5" stroke-linecap="round"/>'+_t(60,136,13,'Hälften passen genau ✓','#188038')+'</g>';
   }else if(k==='grid'){
     var s=20,gx=14,gy=10,W=10*s;vb='0 0 '+(W+2*gx)+' '+(7*s+gy+34);
     for(i=0;i<=10;i++)o+='<line x1="'+(gx+i*s)+'" y1="'+gy+'" x2="'+(gx+i*s)+'" y2="'+(gy+7*s)+'" stroke="#B9C7DE" stroke-width="1"/>';
@@ -363,9 +363,9 @@ function _isoBox(ox,oy,lx,ly,lz,a,mode){
   var fills=mode==='faces'?['#8AB4F8','#81C995','#FDD663']:['#CDDFFC','#A9C7FA','#E8F0FE'],st=mode==='edges'?'#8AA4D6':'#1A3FA0';
   s+=poly(left,fills[0],st)+poly(right,fills[1]==='#81C995'?'#81C995':fills[1],st)+poly(top,fills[2],st);
   if(mode==='faces'){[[left,'1'],[right,'2'],[top,'3']].forEach(function(f){var cx=0,cy=0;f[0].forEach(function(p){cx+=p[0]/4;cy+=p[1]/4});s+='<circle cx="'+cx.toFixed(1)+'" cy="'+(cy-1).toFixed(1)+'" r="9" fill="#fff" stroke="#2F3A4A" stroke-width="1.8"/>'+_t(cx.toFixed(1),(cy+4).toFixed(1),12,f[1],'#2F3A4A')})}
-  var hid=mode==='edges'?['#EA4335',2.6,'5 4']:['#5F6B7A',1.8,'4 4'];
+  var hid=mode==='edges'?['#E8710A',2.6,'5 4']:['#5F6B7A',1.8,'4 4'];
   s+=ln(B,R,hid[0],hid[1],hid[2])+ln(B,Lb,hid[0],hid[1],hid[2])+ln(B,B1,hid[0],hid[1],hid[2]);
-  if(mode==='edges'){[[F,Lb],[F,R],[F,F1],[Lb,L1],[R,R1],[F1,R1],[F1,L1],[R1,B1],[L1,B1]].forEach(function(e){s+=ln(e[0],e[1],'#EA4335',4)})}
+  if(mode==='edges'){[[F,Lb],[F,R],[F,F1],[Lb,L1],[R,R1],[F1,R1],[F1,L1],[R1,B1],[L1,B1]].forEach(function(e){s+=ln(e[0],e[1],'#E8710A',4)})}
   if(mode==='corners'){[F,R,Lb,F1,R1,L1,B1].forEach(function(p){s+='<circle cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="5.4" fill="#188038" stroke="#fff" stroke-width="1.6"/>'});s+='<circle cx="'+B[0].toFixed(1)+'" cy="'+B[1].toFixed(1)+'" r="5.4" fill="#fff" stroke="#188038" stroke-width="2.2" stroke-dasharray="2 2"/>'}
   return s;
 }
@@ -797,7 +797,7 @@ function visuals(list){
   var grs=list.filter(function(v){return v.type==='field'||v.type==='blocks'||v.type==='place'||v.type==='jumps'});
   if(grs.length&&list.some(function(v){return v.type==='chips'&&v.parts})){var cmp={},lc=null,set=function(n,c){if(cmp[n]===undefined)cmp[n]=c};
     grs.forEach(function(gr){
-      if(gr.type==='field'){set(gr.filled,VC[(gr.col||0)%4]);if(gr.filled2){set(gr.filled2,VC[(gr.col2===undefined?1:gr.col2)%4]);set(gr.filled+gr.filled2,7)}}
+      if(gr.type==='field'){var FVc=function(c){return c===4||c===7?'#5B6270':VC[(c||0)%4]};set(gr.filled,FVc(gr.col));if(gr.filled2){set(gr.filled2,FVc(gr.col2===undefined?1:gr.col2));set(gr.filled+gr.filled2,7)}}
       else if(gr.type==='blocks'||gr.type==='place'){lc={H:'#7B3FC4',Z:'#1A56C4',E:'#4B5260'};if(gr.h)set(gr.h*100,lc.H);if(gr.z)set(gr.z*10,lc.Z);if(gr.e)set(gr.e,lc.E)}
       else{var jp=[gr.from],JI=jumpIdx(gr.jumps);(gr.jumps||[]).forEach(function(j){jp.push(jp[jp.length-1]+j[0])});
         cmp[gr.from]='#34A853';if(jp.length>1)cmp[jp[jp.length-1]]='#4285F4';

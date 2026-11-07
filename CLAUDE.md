@@ -4,7 +4,7 @@ Lern-App (Vanilla-JS, eine `index.html`), GitHub Pages, easy-school.ch. Repo: ha
 
 ## Umgang mit dem Besitzer
 - Immer auf **Deutsch** antworten, kurz, ehrlich. Nur sagen, was wirklich getestet ist. Es gibt keinen iPhone-Test und die Live-Seite ist aus dem Sandkasten nicht erreichbar: Das immer erwähnen.
-- Nach **jeder** Veröffentlichung «Version vX.XX» nennen. Vorher `APP_VERSION` in `src/p1.js` erhöhen (aktuell v5.60; nächste v5.61 usw.).
+- Nach **jeder** Veröffentlichung «Version vX.XX» nennen. Vorher `APP_VERSION` in `src/p1.js` erhöhen (aktuell v5.61; nächste v5.62 usw.).
 - Mehrdeutige Wünsche: Auslegung offen nennen.
 
 ## Bauen und Testen
@@ -27,6 +27,7 @@ Lern-App (Vanilla-JS, eine `index.html`), GitHub Pages, easy-school.ch. Repo: ha
 - **Grafiken in Aufgaben (Karten, Easy lernen, Prüfung): Hilfe ja, Lösung oder Lösungsteile nein.** `visT` entfernt Lösungen automatisch (Bildunterschrift weg, Lösungszahl → «_»); erst nach dem Prüfen volle Grafik. Neue Grafiken trotzdem ohne Lösung bauen. Ausnahme: Diagramme/Münzen, deren Ablesen die Aufgabe ist.
 - **Grafik themengerecht (Mathe-Grössen):** Die Grafik zeigt das echte Messmittel bzw. Material des Themas, nie einen abstrakten Balken. Längen (mm, cm, dm, m, km) immer auf einem Messstab/Lineal (`ruler`: Strecken als farbige Bänder über dem Stab, Punkte als Marken); Zeit → Uhr (`clock`), Zeitspannen Uhr oder Zeitstrahl; Geld (Franken, Rappen) → Münzen und Noten (`coins`); Hohlmasse (Liter, dl, ml) → Messbecher/Krug (`jug`), nie Messstab und nie Balken; Gewicht → Waage (`scale`); Mengen vergleichen → Gegenstände 1:1 nebeneinander (Paare bilden). Eine Grafik ohne Bezug zum Text (z. B. nur ein Krokodil-Emoji) ist verboten.
 - **Stellenwert (Hunderter/Zehner/Einer):** immer Grafik `blocks` (= `vPlace` in p2.js): Einer = dunkelgraue Punkte, Zehner = blaue Schachtel/Streifen mit 10 Punkten, Hunderter = violette Box mit 10 Streifen (kompakt). Farben überall: Hunderter violett, Zehner blau, Einer dunkelgrau (Text, Tabelle, Rechenkette, Spalten).
+- Spiegelachse violett, Körperkanten (Modus edges) orange; Tausender grün, Zehntausender türkis, Hunderttausender pink.
 - **Theorie-Grafik = Fokus:** Die Grafik eines Schritts hebt genau das hervor, was Titel und Text erklären (Endung, Grossbuchstabe, Komma, geänderte Ziffer, Nenner …), farbig markiert; der Rest neutral. Mittel: Fokus-Grafik `hl` (`"rows":["klein[e|Endung]"]`, `[Text|Label|Farbe]`, `[~x~]` = durchgestrichen) oder `{Farbe|Text}` in tbl/lines/chips/flow und Bildunterschriften.
 - Karten-Antworten (MC): kurze Antworten 2 × 2 nebeneinander, lange (>14 Zeichen) untereinander. Platzhalter in Gleichungen/Vergleichen immer `_`, nie ○.
 - Buttons heissen **AI-Karten** und **Easy lernen**.
@@ -36,8 +37,7 @@ Lern-App (Vanilla-JS, eine `index.html`), GitHub Pages, easy-school.ch. Repo: ha
 
 ## Offene Ideen
 - Fehlende Pools (<30 Fragen): kl8 Pythagoras, kl2-deu-gross, kl5/kl6-deu-grossklein.
-- Karten/Prüfung kl3-gramm-kg, kl4-meter-km, kl2-meter-cm: noch Balken/nline statt Waage/Messstab, Lücken «?»/«___». Spiegelachse (vSymm) und Körperkanten (vSolid) noch rot (Entscheid Besitzer offen).
-- Easy lernen: Ablenker aus fremden Themen bei kurzen Eingabe-/Mehrfachauswahl-Karten (xgCardPool in p6.js).
+- Karten/Prüfung kl3-gramm-kg, kl4-meter-km, kl2-meter-cm: noch Balken/nline statt Waage/Messstab, Lücken «?»/«___».
 - Erklärungen für ~968 Prüfungs-MC-Fragen mit leerer/kurzer Erklärung.
 - Karten kl1: Hinweise; Bilder-Karten kl1–4 im neuen Stil.
 - Altes kl3 «Das kleine Einmaleins» ggf. entfernen (neues 1×1 ab kl4).

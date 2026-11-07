@@ -1888,3 +1888,4 @@ input.wc-sbox:focus{border-color:#8AB4F8}
 .bsc-cat{animation:bsccat 5s ease-in-out infinite}
 @keyframes bsccat{0%,30%{transform:translate(0,0);opacity:1}45%{transform:translate(160px,-14px)}60%,88%{transform:translate(318px,8px);opacity:1}96%{transform:translate(318px,8px);opacity:0}97%{transform:translate(0,0);opacity:0}100%{transform:translate(0,0);opacity:1}}
 @media (prefers-reduced-motion:reduce){.bsc-pen,.bsc-steam,.bsc-swA,.bsc-swC,.bsc-bob,.bsc-cat{animation:none}}
+.vis>.coins{margin-left:auto;margin-right:auto;width:fit-content;max-width:100%}

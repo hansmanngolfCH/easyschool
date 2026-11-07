@@ -87,7 +87,8 @@ function xgCommaVar(sent){
 }
 function xgCardPool(t,all){
   var items=[],BAD=/\b(Bild|Grafik|Zeichnung|siehe|abgebildet|rote Linie|Tabelle|oben|unten)\b/i,textOnly=function(c){return c.q&&c.q.length<=140&&(c.visuals||!BAD.test(c.q))};
-  var shortA=[];all.forEach(function(x){x.cards.forEach(function(c){if(!isV(c)&&textOnly(c)&&c.a&&String(c.a).length<=30)shortA.push(String(c.a))})});
+  /* v5.61: Ablenker nur aus demselben Thema (keine fremden Antworten wie «🐟» oder «Kilogramm») */
+  var shortA=[];t.cards.forEach(function(c){if(!isV(c)&&textOnly(c)&&c.a&&String(c.a).length<=30)shortA.push(String(c.a))});(t.exam&&t.exam.questions||[]).forEach(function(q){if(q.type==='input'&&q.answer&&q.answer[0]&&String(q.answer[0]).length<=30)shortA.push(String(q.answer[0]))});
   var WQ=function(it){var w=wcFor(t.id,it);return w?[w.pure?wcIns(w):it.q,[{type:'wcol',s:w,mode:'blank'}]]:[it.q,it.visuals]};
   t.cards.forEach(function(c){
     if(isV(c)||!textOnly(c)||c.a==null)return;
@@ -95,6 +96,8 @@ function xgCardPool(t,all){
     if(Array.isArray(c.opts)&&c.opts.length>=3&&c.opts.map(String).indexOf(right)>=0){
       var oth=c.opts.map(String).filter(function(x,i,aa){return x!==right&&aa.indexOf(x)===i&&x.length<=60});
       if(right.length<=60&&oth.length>=2)items.push(xgOptRound(wq[0],right,shuffle(oth).slice(0,3),null,wq[1],xgWhy(c)));
+    }else if(Array.isArray(c.opts)&&c.opts.length===2&&c.opts.map(String).indexOf(right)>=0){
+      var o2=c.opts.map(String).filter(function(x){return x!==right});if(o2.length===1)items.push(xgOptRound(wq[0],right,o2,null,wq[1],xgWhy(c)));
     }else if(c.pre&&Array.isArray(c.ans)&&c.ans[0]&&String(c.ans[0]).length<=60&&String(c.pre).length<=60){
       var r2=String(c.ans[0]),ot=[String(c.pre)].concat(xgCommaVar(r2)).filter(function(x,i,aa){return x!==r2&&aa.indexOf(x)===i});
       if(ot.length>=2&&/,/.test(r2+c.pre))items.push(xgOptRound('Welcher Satz ist richtig?',r2,ot.slice(0,3)));
