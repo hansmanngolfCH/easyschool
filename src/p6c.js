@@ -3,7 +3,7 @@
 GAMES.splice(0,GAMES.length,...GAMES.filter(function(g){return g.id!=='moto'&&g.id!=='stack'}));
 GAMES.push(
  {id:'tower',n:'Turmbau',e:'🏗️',g:[6,10,14],time:60,d:'tower',gs:'tap',lb:'Tippen = Block loslassen',ctl:'',how:'Stapel die Blöcke. Wenn es kippt, fällt der Turm!'},
- {id:'wslide',n:'Wasserrutsche',e:'🛝',g:[8,14,20],time:60,d:'wslide',gs:'lr',lb:'Halten links/rechts',ctl:'',how:'Bleib in der Rutsche! Halte links oder rechts gedrückt zum Lenken. Bei einer Lücke kurz tippen = springen.'},
+ {id:'wslide',n:'Wasserrutsche',e:'🛝',g:[8,14,20],time:60,d:'wslide',gs:'lr',lb:'Halten links/rechts',ctl:'',how:'Spring über die Lücken: kurz tippen = springen! Gedrückt halten links/rechts = lenken.'},
  {id:'maze',n:'Mückenjagd',e:'🦟',g:[4,7,10],time:60,d:'maze',gs:'s4',lb:'Wischen',ctl:'',how:'Stich die Leute. Die Oma hat eine Klatsche!'},
  {id:'golf',n:'Golf',e:'⛳',g:[5,9,13],time:60,d:'golf',gs:'flick',lb:'Wischen = Schlagen',ctl:'',how:'Wisch zum Loch. Länger wischen = stärker. Wasser oder Out (weisse Pfähle) = Loch verloren!'}
 );
@@ -19,19 +19,19 @@ function gHash(n){var x=Math.sin(n*127.1+311.7)*43758.5453;return x-Math.floor(x
 /* ---------------- Wasserrutsche (halbrunde Stahlröhre) ---------------- */
 GAMEFN.wslide=function(cv,cx,w,h,score,over){
   /* Pseudo-3D-Rutsche: Strecke aus Abschnitten (gerade, Kurve, Gefälle), Physik in Metern/Sekunden */
-  var gapFall=0,s=0,lives=3,fr=0,P=[],F=[],z=0,v=3,u=0,uv=0,steerI=0,inv=90,fall=0,fx=0,armed=false,nextChk=50,tilt=0,bgOff=0,camS=.06,i;
+  var crossed=0,gapFall=0,s=0,lives=3,fr=0,P=[],F=[],z=0,v=3,u=0,uv=0,steerI=0,inv=90,fall=0,fx=0,armed=false,nextChk=50,tilt=0,bgOff=0,camS=.06,i;
   var HZ=h*.34,CAMD=6,CAMH=2.3,FOC=(h*.8-HZ)*CAMD/CAMH,HW=1.0,RISE=.55,NS=12;
   var K=[],S=[],H=[0],COL=[],GAP=[],jh=0,jv=0,air=false,tapT=0,tapX=0,tapY=0,warnGap=-1;
   var COLS=[['#1E88E5','#1565C0'],['#FDD835','#F9A825'],['#E53935','#C62828'],['#8E24AA','#6A1B9A'],['#00ACC1','#00838F']];
   var plan=[],ci=0;
   function addSeg(len,k,sl){var n0=K.length,kPrev=n0?K[n0-1]:0,c=ci++%COLS.length;for(var j=0;j<len;j++){var e=Math.min(1,Math.min(j,len-j)/8),kk=k*e+(j<8?kPrev*(1-e)*0:0);K.push(k*Math.min(1,j/8)*Math.min(1,(len-j)/8));S.push(sl);H.push(H[H.length-1]-sl);COL.push(c);GAP.push(addSeg.gap?1:0)}}
-  function addGap(){addSeg(24,0,.065);addSeg.gap=1;addSeg(5+Math.round(Math.random()*2),0,.065);addSeg.gap=0;addSeg(12,0,.065)}
-  addSeg(70,0,.07);
+  function addGap(){var d=Math.min(1,K.length/1500);addSeg(14+Math.round(Math.random()*8),0,.065);addSeg.gap=1;addSeg(Math.round(4+d*4+Math.random()*2.5),0,.065);addSeg.gap=0;addSeg(8,0,.065)}
+  addSeg(55,0,.07);
   function gen(){var d=Math.min(1,K.length/1200),r=Math.random();
-    if(K.length>160&&r<.18){addGap();return}r=Math.random();
-    if(r<.22){addSeg(28+Math.random()*10,0,.3+.08*d);addSeg(18,0,.05)}
-    else if(r<.45){var sg=Math.random()<.5?-1:1,kk=(.012+.016*d+Math.random()*.008)*sg;addSeg(30+Math.random()*20,kk,.065);addSeg(30+Math.random()*20,-kk,.065)}
-    else if(r<.8){var sg2=Math.random()<.5?-1:1;addSeg(36+Math.random()*30,(.014+.018*d+Math.random()*.01)*sg2,.065)}
+    if(K.length<100||r<.62){addGap();return}r=Math.random();
+    if(r<.35){addSeg(28+Math.random()*10,0,.3+.08*d);addSeg(18,0,.05)}
+    else if(r<.45){var sg=Math.random()<.5?-1:1,kk=(.005+.004*d+Math.random()*.004)*sg;addSeg(22+Math.random()*12,kk,.065);addSeg(22+Math.random()*12,-kk,.065)}
+    else if(r<.8){var sg2=Math.random()<.5?-1:1;addSeg(24+Math.random()*16,(.006+.006*d+Math.random()*.004)*sg2,.065)}
     else addSeg(20+Math.random()*20,0,.07)}
   function ens(n){while(K.length<n+2)gen()}
   function at(A,q){ens(Math.ceil(q)+1);var i0=Math.floor(q),fq=q-i0;return A[i0]+(A[i0+1]-A[i0])*fq}
@@ -90,7 +90,7 @@ GAMEFN.wslide=function(cv,cx,w,h,score,over){
       /* Querphysik: Lenken gegen Fliehkraft, die Rinne zieht zur Mitte */
       var vc=Math.min(v,15),acc=steerI*4.4-kz*vc*vc*.33-u*2.2;uv+=acc*dt;uv*=Math.exp(-3.2*dt);u+=uv*dt;tilt+=((uv*.35+u*.25)-tilt)*Math.min(1,8*dt);
       if(Math.abs(u)>.86)armed=true;if(armed&&Math.abs(u)<.5){armed=false;s++;score(s);F.push({x:w/2,y:h*.5,t:'Knapp! +1',l:50,c:'#FFEB3B'})}
-      if(air){jv-=12*dt;jh+=jv*dt;if(jh<=0){jh=0;jv=0;air=false;burst(P,w/2,h*.8,14,['#fff','#B3E5FC'],5)}}
+      if(air){jv-=12*dt;jh+=jv*dt;if(GAP[Math.floor(zr)])crossed=1;if(jh<=0){jh=0;jv=0;air=false;burst(P,w/2,h*.8,14,['#fff','#B3E5FC'],5);if(crossed&&!GAP[Math.floor(zr)]){crossed=0;s++;score(s);F.push({x:w/2,y:h*.4,t:'Gesprungen! +1',l:50,c:'#B9F6CA'})}}}
       var gi=Math.floor(zr);ens(gi+1);if(GAP[gi]&&!air){lives--;fall=70;fx=0;gapFall=1;shakeBox();F.push({x:w/2,y:h*.45,t:lives>0?'Abgestürzt!':'Raus!',l:55,c:'#FF8A80'});var ge=gi;while(GAP[ge])ge++;z=ge+2-CAMD}
       if(fall<=0&&Math.abs(u)>1.12){lives--;fall=60;fx=0;gapFall=0;shakeBox();F.push({x:w/2,y:h*.45,t:lives>0?'Hoppla!':'Raus!',l:50,c:'#FF8A80'})}
       if(z>=nextChk){nextChk+=50;s++;score(s);F.push({x:w*.5,y:h*.2,t:Math.round(z)+' m',l:40,c:'#fff'})}}
