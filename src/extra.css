@@ -1715,3 +1715,23 @@ input.wc-sbox:focus{border-color:#8AB4F8}
 .hlv .hlx-m.pu{padding:0 .14em;font-weight:900}
 .frac .cw.cwi{box-shadow:none;padding:0;background:none;font-weight:900}
 .hlv .hlx-lb{margin:5px -6px 0}
+/* PIN-Fenster für Minigames (iPhone-Stil) */
+.pinbox{position:fixed;inset:0;z-index:9999;background:rgba(12,18,40,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);display:flex;align-items:center;justify-content:center;padding:16px}
+.pinin{position:relative;width:min(340px,100%);background:linear-gradient(160deg,#2B3550,#151B2E);color:#fff;border-radius:30px;padding:26px 22px 22px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+.pinin h2{margin:6px 0 6px;font:600 1.25rem var(--font-d);color:#fff}
+.pintx{margin:0 0 16px;font-size:.88rem;line-height:1.35;color:rgba(255,255,255,.8)}
+.pinlock{font-size:1.8rem}
+.pinx{all:unset;cursor:pointer;position:absolute;right:14px;top:12px;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;color:rgba(255,255,255,.7);background:rgba(255,255,255,.1)}
+.pindots{display:flex;justify-content:center;gap:16px;margin:4px 0 6px}
+.pindots i{width:14px;height:14px;border-radius:50%;border:1.6px solid #fff;transition:background .12s}
+.pindots i.on{background:#fff}
+.pinerr{min-height:1.2em;margin:4px 0 10px;color:#FF8A80;font-weight:600;font-size:.9rem}
+.pinpad{display:grid;grid-template-columns:repeat(3,72px);gap:14px 22px;justify-content:center}
+.pk{all:unset;cursor:pointer;width:72px;height:72px;border-radius:50%;background:rgba(255,255,255,.14);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;touch-action:manipulation;-webkit-tap-highlight-color:transparent;transition:background .1s}
+.pk:active{background:rgba(255,255,255,.4)}
+.pk b{font:400 1.9rem var(--font-b);line-height:1}
+.pk small{font-size:.6rem;letter-spacing:.15em;opacity:.8;min-height:.8em}
+.pk.pdel{background:none;font-size:1.5rem}
+.pinshake{animation:pinsh .4s}
+@keyframes pinsh{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-12px)}40%,80%{transform:translateX(12px)}}
+.pinok{transform:scale(.96);opacity:.6;transition:all .25s}

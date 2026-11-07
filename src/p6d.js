@@ -581,7 +581,18 @@ function vGames(){
    +'<button class="gcfeat2" data-act="gplay" data-id="'+esc(f.id)+'"><span class="gcf2i"><img src="img/g_'+esc(f.id)+'.jpg" alt="" onerror="this.remove()"></span><span class="gcf2t"><small>Neustes Spiel</small><b>'+esc(f.n)+'</b><span>'+esc(String(f.how).split(/([.!?])\s/)[0].replace(/[.!?]$/,'')+(/[.!?]\s/.test(f.how)?String(f.how).match(/[.!?]/)[0]:''))+'</span></span><i class="gcf2b">Spielen</i></button><p class="gcsec">Alle Spiele</p>'+'<div class="gcgrid">'+GAMES.map(card).join('')+'</div></div>';
 }
 VIEWS.games=vGames;
-ACT.games=function(){go({view:'games'},{view:'home'})};
+function gOk(){try{return sessionStorage.getItem('es.gpin')==='ok'}catch(e){return false}}
+function pinBox(){if(document.getElementById('pinbox'))return;var code='',o=document.createElement('div');o.id='pinbox';o.className='pinbox';
+  var keys=[['1',''],['2','ABC'],['3','DEF'],['4','GHI'],['5','JKL'],['6','MNO'],['7','PQRS'],['8','TUV'],['9','WXYZ']];
+  o.innerHTML='<div class="pinin"><button class="pinx" aria-label="Schliessen">✕</button><div class="pinlock">🔒</div><h2>Code eingeben</h2><p class="pintx">Für die Minigames brauchst du einen Code.<br>Besorge ihn bei deiner Lehrerin oder deinem Lehrer.</p><div class="pindots"><i></i><i></i><i></i><i></i></div><p class="pinerr" aria-live="polite"></p><div class="pinpad">'+keys.map(function(k){return '<button class="pk" data-k="'+k[0]+'"><b>'+k[0]+'</b><small>'+k[1]+'</small></button>'}).join('')+'<span></span><button class="pk" data-k="0"><b>0</b><small>+</small></button><button class="pk pdel" data-k="del" aria-label="Löschen">⌫</button></div></div>';
+  document.body.appendChild(o);
+  function dots(){o.querySelectorAll('.pindots i').forEach(function(d,i){d.classList.toggle('on',i<code.length)})}
+  function close(){o.remove()}
+  o.querySelector('.pinx').onclick=close;
+  o.querySelectorAll('.pk').forEach(function(b){b.onclick=function(){var k=b.dataset.k;if(k==='del'){code=code.slice(0,-1);dots();return}if(code.length>=4)return;code+=k;dots();
+    if(code.length===4){if(code==='1983'){try{sessionStorage.setItem('es.gpin','ok')}catch(e){}o.querySelector('.pinin').classList.add('pinok');setTimeout(function(){close();go({view:'games'},{view:'home'})},250)}
+      else{var er=o.querySelector('.pinerr');er.textContent='Falscher Code';var inn=o.querySelector('.pinin');inn.classList.remove('pinshake');void inn.offsetWidth;inn.classList.add('pinshake');setTimeout(function(){code='';dots()},450)}}}})}
+ACT.games=function(){if(gOk())go({view:'games'},{view:'home'});else pinBox()};
 ACT.gplay=function(b){var g=GAMES.filter(function(x){return x.id===b.dataset.id})[0];if(!g)return;rwOpen('🎮 Minigames · freies Spiel',g,true,true)};
 window.gcBack=function(){if(nav.view==='games'){var y=window.scrollY;render();window.scrollTo(0,y)}};
 window.gcEnd=function(m,s){var me=RW,g=me.g,nb=setBest(g.id,s),bv=best()[g.id];
