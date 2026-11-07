@@ -1,14 +1,14 @@
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION="v5.48";
+var APP_VERSION="v5.49";
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
 var app=document.getElementById('app');
 
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
-function rt(s){return esc(s).replace(/(\d+)\/(\d+)/g,'<span class="frac"><span>$1</span><span>$2</span></span>').replace(/\{([0-7])\|([^{}]*)\}/g,'<span class="cw c$1">$2</span>')}
+function rt(s){return esc(s).replace(/(\{[0-7]\|\d+\}|\d+)\/(\{[0-7]\|\d+\}|\d+)/g,'<span class="frac"><span>$1</span><span>$2</span></span>').replace(/\{([0-7])\|([^{}]*)\}/g,function(m,c,t,o,all){var L=/[A-Za-zÄÖÜäöüßÀ-ÿ0-9<>]/,a=all.charAt(o-1),b=all.charAt(o+m.length);return '<span class="cw c'+c+((L.test(a)||/[,.']/.test(a)&&/\d/.test(t.charAt(0))||L.test(b))?' cwi':'')+'">'+t+'</span>'})}
 function stable(o){return JSON.stringify(o,function(k,v){return v&&typeof v==='object'&&!Array.isArray(v)?Object.keys(v).sort().reduce(function(a,x){a[x]=v[x];return a},{}):v})}
 function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t}return a}
 

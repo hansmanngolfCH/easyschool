@@ -1690,3 +1690,28 @@ input.wc-sbox:focus{border-color:#8AB4F8}
 .gcf2b{flex:none;font-style:normal;font:700 .85rem var(--font-d);color:#1A73E8;background:#E8F0FE;padding:7px 14px;border-radius:999px}
 .gcsec{margin:6px 0 -4px;font:700 1.05rem var(--font-d);color:var(--ink)}
 .gcp .gchead .sub{font-size:.9rem}
+
+/* v5.x Fokus-Grafik «hl»: nur der erklärte Teil ist farbig markiert */
+.hlv{width:100%;display:flex;flex-direction:column;align-items:center;gap:12px;padding:4px 0}
+.hlv.al{align-items:flex-start}
+.hlv .hlx-r{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;column-gap:.3em;row-gap:8px;max-width:100%;font:600 1.6rem/1.25 var(--font-d);color:#5F6368;font-variant-numeric:tabular-nums}
+.hlv.al .hlx-r{justify-content:flex-start}
+.hlv.sz-m .hlx-r{font-size:1.32rem}.hlv.sz-s .hlx-r{font-size:1.1rem}
+.hlv.dim .hlx-n{color:#9AA0A6}
+.hlv .hlx-w{display:inline-flex;flex-direction:column;align-items:center;min-width:0}
+.hlv .hlx-s{white-space:nowrap}
+.hlv .hlx-m{font-weight:800;color:var(--c);background:color-mix(in srgb,var(--c) 15%,#fff);border-bottom:.1em solid var(--c);border-radius:.2em .2em .08em .08em;padding:0 .07em;margin:0 .01em}
+.hlv .hlx-m.st{text-decoration:line-through;text-decoration-thickness:.08em;opacity:.9}
+.hlv .hlx-lb{display:flex;gap:4px;margin-top:5px}
+.hlv .hlx-lb i{font:800 .68rem/1 var(--font-b);font-style:normal;letter-spacing:.02em;color:color-mix(in srgb,var(--c) 82%,#000);background:color-mix(in srgb,var(--c) 12%,#fff);padding:3px 7px;border-radius:999px;white-space:nowrap}
+.hlv .hlx-note{align-self:center;font:700 .78rem/1.2 var(--font-b);color:var(--ink2);margin-right:.35em}
+.hlv .dcap{text-align:center}
+.cw.cwi{padding:0 .04em;border-radius:3px;box-shadow:inset 0 -2px 0 currentColor}
+.hlv.al .hlx-note{min-width:5.4em;text-align:right}
+.hlv .hlx-r.hn{flex-wrap:nowrap;align-items:baseline;width:100%}
+.hlv:not(.al) .hlx-r.hn{width:auto}
+.hlv .hlx-c{display:flex;flex-wrap:wrap;align-items:flex-start;column-gap:.3em;row-gap:8px;min-width:0}
+.hlv .hlx-r.hn .hlx-note{align-self:auto;flex:none;padding-top:.15em}
+.hlv .hlx-m.pu{padding:0 .14em;font-weight:900}
+.frac .cw.cwi{box-shadow:none;padding:0;background:none;font-weight:900}
+.hlv .hlx-lb{margin:5px -6px 0}

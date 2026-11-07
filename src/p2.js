@@ -1,12 +1,13 @@
 
 /* ---------- Bilder in den Aufgaben ---------- */
+function capt(s){return /\{[0-7]\|/.test(String(s))?rt(s):esc(s)}
 function vDots(v){var g='';for(var i=0;i<v.groups;i++)g+='<span class="grp">'+'<i class="dot"></i>'.repeat(v.size)+'</span>';
   return '<figure class="vis"><div class="dots">'+g+'</div><figcaption>'+v.groups+' Gruppen mit je '+v.size+': '+v.groups+' · '+v.size+' = '+(v.groups*v.size)+'</figcaption></figure>'}
 function vPie(v){var r=46,cx=50,cy=50,p=v.parts,s='';
   for(var i=0;i<p;i++){var a0=-Math.PI/2+i*2*Math.PI/p,a1=-Math.PI/2+(i+1)*2*Math.PI/p;
     var d=p===1?'M'+(cx-r)+' '+cy+'a'+r+' '+r+' 0 1 0 '+(2*r)+' 0a'+r+' '+r+' 0 1 0 '+(-2*r)+' 0z':'M'+cx+' '+cy+'L'+(cx+r*Math.cos(a0)).toFixed(2)+' '+(cy+r*Math.sin(a0)).toFixed(2)+'A'+r+' '+r+' 0 0 1 '+(cx+r*Math.cos(a1)).toFixed(2)+' '+(cy+r*Math.sin(a1)).toFixed(2)+'Z';
     s+='<path d="'+d+'" class="'+(i<v.filled?'pf':'pe')+'"/>'}
-  return '<figure class="vis pie"><svg viewBox="0 0 100 100" role="img" aria-label="'+v.filled+' von '+p+' Teilen gefärbt">'+s+'</svg>'+(v.nocap?'':'<figcaption>'+rt(v.filled+'/'+p)+'</figcaption>')+'</figure>'}
+  return '<figure class="vis pie"><svg viewBox="0 0 100 100" role="img" aria-label="'+v.filled+' von '+p+' Teilen gefärbt">'+s+'</svg>'+(v.nocap?'':'<figcaption>'+(/\{[0-7]\|/.test(v.cap||'')?rt(v.cap):rt(v.filled+'/'+p))+'</figcaption>')+'</figure>'}
 function vLine(v){var x0=24,x1=576,y=58,n=Math.round((v.max-v.min)/v.step);
   function X(i){return x0+(x1-x0)*i/n}
   var s='<line x1="'+(x0-8)+'" x2="'+(x1+8)+'" y1="'+y+'" y2="'+y+'" class="nl"/>';
@@ -46,7 +47,7 @@ function vConv(v){
    +'<rect x="416" y="40" width="170" height="70" rx="18" fill="'+VC[0]+'"/><text x="501" y="87" text-anchor="middle" font-size="34" font-weight="800" fill="#fff" font-family="Arial,sans-serif">'+esc(v.to)+'</text>';
   s+='<path d="M190 58h200" stroke="#EA4335" stroke-width="6" stroke-linecap="round"/><path d="M376 44l16 14-16 14" fill="none" stroke="#EA4335" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><text x="300" y="46" text-anchor="middle" font-size="26" font-weight="800" fill="#EA4335" font-family="Arial,sans-serif">'+esc(v.up)+'</text>';
   s+='<path d="M410 94H210" stroke="#F9AB00" stroke-width="6" stroke-linecap="round"/><path d="M224 80l-16 14 16 14" fill="none" stroke="#F9AB00" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><text x="300" y="130" text-anchor="middle" font-size="26" font-weight="800" fill="#B06000" font-family="Arial,sans-serif">'+esc(v.down)+'</text>';
-  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 146" width="100%" role="img" aria-label="'+esc(v.from)+' mal '+esc(v.up)+' zu '+esc(v.to)+'">'+s+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 146" width="100%" role="img" aria-label="'+esc(v.from)+' mal '+esc(v.up)+' zu '+esc(v.to)+'">'+s+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vBars(v){
   var max=0,n=v.items.length,bw=100,gap=(600-n*bw)/(n+1),s='',top=Math.ceil(Math.max.apply(null,v.items.map(function(q){return q[1]}))/2)*2,k;
@@ -64,7 +65,7 @@ function vScale(v){
    +'<path d="M130 '+(50-dy)+'L470 '+(50+dy)+'" stroke="#202124" stroke-width="7" stroke-linecap="round"/>';
   function pan(x,y,txt,em,col){return '<path d="M'+x+' '+y+'l-48 78h96z" fill="none" stroke="#9aa0a6" stroke-width="3"/><path d="M'+(x-62)+' '+(y+78)+'h124a62 30 0 0 1-124 0z" fill="'+col+'"/><text x="'+x+'" y="'+(y+68)+'" text-anchor="middle" font-size="40" font-family="Arial,sans-serif">'+(em||'')+'</text><text x="'+x+'" y="'+(y+140)+'" text-anchor="middle" font-size="24" font-weight="800" fill="#202124" font-family="Arial,sans-serif">'+esc(txt)+'</text>'}
   s+=pan(130,50-dy,v.l,v.le,VC[1])+pan(470,50+dy,v.r,v.re,VC[0]);
-  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 250" width="100%" role="img" aria-label="Waage: '+esc(v.l)+' und '+esc(v.r)+'">'+s+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 250" width="100%" role="img" aria-label="Waage: '+esc(v.l)+' und '+esc(v.r)+'">'+s+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vPill(x,y,t,col){var w=Math.max(34,String(t).length*10.5+16),q=String(t).indexOf('?')>=0;return '<g><rect x="'+(x-w/2).toFixed(1)+'" y="'+(y-15)+'" width="'+w.toFixed(1)+'" height="28" rx="10" fill="'+(q?'#FFD93D':'#fff')+'" stroke="'+(q?'#fff':col)+'" stroke-width="2.5"/><text x="'+x.toFixed(1)+'" y="'+(y+5)+'" text-anchor="middle" font-size="16" font-weight="800" fill="'+(q?'#4a2a00':col)+'" font-family="Arial,sans-serif">'+esc(t)+'</text></g>'}
 function vTri(v){
@@ -83,7 +84,7 @@ function vPyth(v){
   var sa=[[0,Cy],[-na*s,Cy],[-na*s,0],[0,0]],sb=[[0,0],[Bx,0],[Bx,nb*s],[0,nb*s]],sc=[[0,Cy],[Bx,0],[Bx+nx,ny],[nx,Cy+ny]],o='';
   o+='<polygon points="'+P(sa)+'" fill="#4285F4" fill-opacity=".85" stroke="#fff" stroke-width="2"/><polygon points="'+P(sb)+'" fill="#34A853" fill-opacity=".85" stroke="#fff" stroke-width="2"/><polygon points="'+P(sc)+'" fill="#EA4335" fill-opacity=".85" stroke="#fff" stroke-width="2"/><polygon points="0,0 '+Bx+',0 0,'+Cy+'" fill="#FFF8E1" stroke="#3c4043" stroke-width="2.5" stroke-linejoin="round"/>';
   [[sa,v.fa||('a² = '+na*na)],[sb,v.fb||('b² = '+nb*nb)],[sc,v.fc||('c² = '+(na*na+nb*nb))]].forEach(function(q){var c=cen(q[0]);o+='<text x="'+c[0].toFixed(1)+'" y="'+(c[1]+6).toFixed(1)+'" text-anchor="middle" font-size="'+Math.max(14,Math.min(20,s*4))+'" font-weight="800" fill="#fff" font-family="Arial,sans-serif">'+esc(q[1])+'</text>'});
-  return '<figure class="vis" style="width:100%"><svg viewBox="'+x0.toFixed(0)+' '+y0.toFixed(0)+' '+(x1-x0).toFixed(0)+' '+(y1-y0).toFixed(0)+'" width="100%" style="max-width:340px" role="img" aria-label="Quadrate auf den Seiten des Dreiecks">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis" style="width:100%"><svg viewBox="'+x0.toFixed(0)+' '+y0.toFixed(0)+' '+(x1-x0).toFixed(0)+' '+(y1-y0).toFixed(0)+'" width="100%" style="max-width:340px" role="img" aria-label="Quadrate auf den Seiten des Dreiecks">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vRect(v){
   var s=Math.min(220/v.w,120/v.h),W=v.w*s,H=v.h*s,x=40,y=24,o='<rect x="'+x+'" y="'+y+'" width="'+W+'" height="'+H+'" rx="4" fill="#E8F0FE" stroke="#4285F4" stroke-width="5"/><path d="M'+x+' '+(y+H)+'L'+(x+W)+' '+y+'" stroke="#EA4335" stroke-width="5" stroke-dasharray="10 7" stroke-linecap="round"/>';
@@ -125,6 +126,29 @@ function vAnno(v){
 function vFlow(v){
   return '<ol class="dfl">'+v.steps.map(function(p,i){if(typeof p==='string')p=[p,''];return '<li style="--c:'+dcol(p[2]===undefined?i:p[2])+'"><span class="n">'+(i+1)+'</span><div><b>'+bd(p[0])+'</b><span>'+bd(p[1])+'</span></div></li>'}).join('')+'</ol>';
 }
+/* ---------- Fokus-Grafik «hl» (v5.x): markiert genau den Teil, um den es im Schritt geht ----------
+   {"type":"hl","rows":["[D|Satzanfang]ie kleine [E|Nomen]nte schwimmt."],"cap":"…","c":1,"align":"l","size":"m"}
+   Markierung: [Text] · [Text|Label] · [Text|Farbe 0–7] · [Text|Label|Farbe 0–7] · [~Text~|Label] = durchgestrichen. Zeile auch als [Text, Notiz]. */
+function vHl(v){
+  var DEF=v.c!==undefined?v.c:(DE?1:0),rows=(v.rows||[]).map(function(r){return typeof r==='string'?[r,'']:r});
+  var RX=/\[([^\]|]+)(?:\|([^\]|]*))?(?:\|(\d))?\]/g;
+  function plain(t){return String(t).replace(RX,function(m,a){return a.replace(/^~|~$/g,'')})}
+  var ml=Math.max.apply(null,rows.map(function(r){return plain(r[0]).length+(r[1]?String(r[1]).length*.6+2:0)}).concat([1])),sz=v.size||(ml>34?'s':ml>20?'m':'l');
+  function row(r){
+    var src=String(r[0]),toks=[],last=0,m;RX.lastIndex=0;
+    while((m=RX.exec(src))){if(m.index>last)toks.push({t:src.slice(last,m.index)});var l2=m[2]||'',c2=m[3];if(c2===undefined&&/^\d$/.test(l2)){c2=l2;l2=''}toks.push({t:m[1],m:1,l:l2,c:c2!==undefined?+c2:DEF});last=RX.lastIndex}
+    if(last<src.length)toks.push({t:src.slice(last)});
+    var words=[[]];
+    toks.forEach(function(k){if(k.m){words[words.length-1].push(k);return}
+      k.t.split(/(\s+)/).forEach(function(p,i){if(!p)return;if(/^\s+$/.test(p)){words.push([]);return}words[words.length-1].push({t:p})})});
+    var h=words.filter(function(w){return w.length}).map(function(w){
+      var labs=[],seg=w.map(function(k){if(!k.m)return '<span class="hlx-n">'+esc(k.t)+'</span>';
+        var col=dcol(k.c),st=/^~.*~$/.test(k.t),tx=st?k.t.slice(1,-1):k.t;if(k.l)labs.push('<i style="--c:'+col+'">'+esc(k.l)+'</i>');
+        return '<b class="hlx-m'+(st?' st':'')+(/^[,.;:!?]$/.test(tx)?' pu':'')+'" style="--c:'+col+'">'+esc(tx)+'</b>'}).join('');
+      return '<span class="hlx-w"><span class="hlx-s">'+seg+'</span>'+(labs.length?'<span class="hlx-lb">'+labs.join('')+'</span>':'')+'</span>'}).join('');
+    return r[1]?'<div class="hlx-r hn"><span class="hlx-note">'+bd(r[1])+'</span><span class="hlx-c">'+h+'</span></div>':'<div class="hlx-r">'+h+'</div>'}
+  return '<div class="hlv sz-'+sz+(v.align==='l'?' al':'')+(v.dim?' dim':'')+'">'+rows.map(row).join('')+(v.cap?'<p class="dcap">'+bd(v.cap)+'</p>':'')+'</div>';
+}
 function vCards(v){
   return '<div class="dcd">'+v.items.map(function(p){return '<div class="dk" style="--c:'+dcol(p[3])+'"><h4>'+bd(p[0])+'</h4><p class="q">'+bd(p[1])+'</p><p class="e">'+bd(p[2])+'</p></div>'}).join('')+'</div>';
 }
@@ -134,7 +158,7 @@ function vAreaOld(v){
   for(i=0;i<v.c;i++)for(j=0;j<v.r;j++){var a=i<v.a,b=j<v.b,f=a&&b?'#9334E6':a?'#8AB4F8':b?'#81C995':'#EEF1F7';o+='<rect x="'+(x0+i*cw).toFixed(1)+'" y="'+(y0+j*chh).toFixed(1)+'" width="'+cw.toFixed(1)+'" height="'+chh.toFixed(1)+'" fill="'+f+'" stroke="#fff" stroke-width="2"/>'}
   o+='<text x="'+(x0+v.a*cw/2)+'" y="22" text-anchor="middle" font-size="17" font-weight="800" fill="#1A56C8" font-family="Arial,sans-serif">'+esc(v.la)+'</text>';
   o+='<text x="'+(x0-8)+'" y="'+(y0+v.b*chh/2+6)+'" text-anchor="end" font-size="17" font-weight="800" fill="#188038" font-family="Arial,sans-serif">'+esc(v.lb)+'</text>';
-  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 292 200" width="100%" style="max-width:300px" role="img" aria-label="Flächenmodell fürs Malnehmen">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 292 200" width="100%" style="max-width:300px" role="img" aria-label="Flächenmodell fürs Malnehmen">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 
 /* ---------- Primar-Visuals (v4.47) ---------- */
@@ -143,7 +167,7 @@ function vEmo(v){
   return '<figure class="vis emo"><div class="emorows">'+v.rows.map(function(r,ri){var o='',i,grp='';
     for(i=0;i<r[1];i++){grp+='<span class="e1'+(v.x&&i>=r[1]-v.x?' xd':'')+'" aria-hidden="true">'+r[0]+'</span>';
       if(!g||(i+1)%g===0||i===r[1]-1){o+='<span class="eb c'+(ri%4)+(g?'':' nb')+'">'+grp+'</span>';grp=''}}
-    return '<div class="emorow" role="img" aria-label="'+r[1]+' Stück">'+o+'</div>'}).join('')+'</div>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+    return '<div class="emorow" role="img" aria-label="'+r[1]+' Stück">'+o+'</div>'}).join('')+'</div>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vField(v){
   var P=30,G=10,cols=v.cols,rows=v.rows,W=cols*P+Math.floor((cols-1)/5)*G+16,H=rows*P+16,k=0,o='',i,j,
@@ -157,7 +181,7 @@ function vField(v){
     if(f!==null)o+='<circle cx="'+cx+'" cy="'+cy+'" r="11" fill="url(#fg'+f+')" stroke="'+VC[f]+'" stroke-width="1.5" filter="url(#fsh)"/><ellipse cx="'+(cx-3.5)+'" cy="'+(cy-4)+'" rx="3.6" ry="2.2" fill="#fff" fill-opacity=".55"/>';
     k++}
   for(i=5;i<cols;i+=5)o+='<line x1="'+(gx(i)-P/2-G/2)+'" x2="'+(gx(i)-P/2-G/2)+'" y1="6" y2="'+(H-6)+'" stroke="#5F6B7A" stroke-width="2.5" stroke-dasharray="3 4"/>';
-  return '<figure class="vis" style="align-items:center;width:100%"><svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+Math.min(520,W*1.9)+'px" role="img" aria-label="Punktefeld">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis" style="align-items:center;width:100%"><svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+Math.min(520,W*1.9)+'px" role="img" aria-label="Punktefeld">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vClock(v){
   /* klare Schuluhr: dunkle Ziffern, kurzer dicker Stundenzeiger (dunkel), langer dünner Minutenzeiger (blau) */
@@ -172,7 +196,7 @@ function vClock(v){
   function hand(ang,len,w,tail,col,tip){var s=Math.sin(ang),c=Math.cos(ang),px=c*w,py=s*w;
     return '<path d="M'+(110-s*tail+px*.7).toFixed(1)+','+(110+c*tail+py*.7).toFixed(1)+' L'+(110+s*(len-tip)+px).toFixed(1)+','+(110-c*(len-tip)+py).toFixed(1)+' L'+(110+s*len).toFixed(1)+','+(110-c*len).toFixed(1)+' L'+(110+s*(len-tip)-px).toFixed(1)+','+(110-c*(len-tip)-py).toFixed(1)+' L'+(110-s*tail-px*.7).toFixed(1)+','+(110+c*tail-py*.7).toFixed(1)+'Z" fill="'+col+'" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/>'}
   o+='<g filter="url(#cks)">'+hand(ha,46,7,12,'#1F2937',12)+hand(ma,80,4,16,'#1A73E8',10)+'</g><circle cx="110" cy="110" r="8" fill="#1F2937" stroke="#fff" stroke-width="2.5"/><circle cx="110" cy="110" r="2.5" fill="#1A73E8"/>';
-  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 220 220" width="230" height="230" style="display:block;margin:0 auto;max-width:100%" role="img" aria-label="Uhr">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 220 220" width="230" height="230" style="display:block;margin:0 auto;max-width:100%" role="img" aria-label="Uhr">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 
 var NOTEC={10:['#FFF3B0','#F2CB2E','#7A5C00'],20:['#FFD0D0','#EA5A5A','#7A1212'],50:['#D5F0D0','#4DB45A','#14532D'],100:['#D2E3FC','#4285F4','#0B3A8A']};
@@ -181,7 +205,7 @@ function vCoins(v){
     for(i=0;i<r[2];i++){
       if(note){var c=NOTEC[r[0]]||NOTEC[10];o+='<span class="note" style="background:linear-gradient(135deg,'+c[0]+','+c[1]+');border-color:'+c[1]+';color:'+c[2]+'"><em>'+r[0]+'</em><b>'+r[0]+'</b><small>Franken</small><em class="r">'+r[0]+'</em></span>'}
       else{var sz=fr?(r[0]>=5?60:r[0]>=2?54:48):(r[0]>=20?50:r[0]>=10?44:40);o+='<span class="coin'+(fr?' fr':(r[0]===5?' br':''))+'" style="width:'+sz+'px;height:'+sz+'px"><span class="ci"><b>'+r[0]+'</b><small>'+(fr?'Franken':'Rappen')+'</small></span></span>'}}
-    return o}).join('')+'</div>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+    return o}).join('')+'</div>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vShapeOld(v){
   var c=VC[(v.col||0)%4],k=v.kind,o='<defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="'+c+'"/><stop offset="1" stop-color="'+c+'"/></linearGradient><filter id="ssh" x="-20%" y="-20%" width="150%" height="150%"><feDropShadow dx="2" dy="3" stdDeviation="2.2" flood-opacity=".3"/></filter></defs>',
@@ -197,7 +221,7 @@ function vShapeOld(v){
   else if(k==='stumpf')o+='<path d="M34 100A38 38 0 0 0 10 66L34 100Z" fill="#FBBC04" fill-opacity=".5" stroke="#E37400" stroke-width="3"/><path d="M34 100H106M34 100L-4 36" '+ln+'/>';
   if(v.axis==='v')o+='<line x1="60" y1="4" x2="60" y2="116" stroke="#EA4335" stroke-width="3" stroke-dasharray="7 5"/>';
   if(v.axis==='h')o+='<line x1="4" y1="60" x2="116" y2="60" stroke="#EA4335" stroke-width="3" stroke-dasharray="7 5"/>';
-  return '<figure class="vis shp"><svg viewBox="0 0 120 120" width="100%" style="max-width:112px;overflow:visible" role="img" aria-label="'+esc(v.alt||k)+'">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis shp"><svg viewBox="0 0 120 120" width="100%" style="max-width:112px;overflow:visible" role="img" aria-label="'+esc(v.alt||k)+'">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 /* ---------- Geometrie-Grafiken (v4.98): genau gezeichnet ---------- */
 var _guid=0;
@@ -223,7 +247,7 @@ function vArea(v){
   o+=_dim(x0-16,y0,x0-16,y0+h,v.lb,'#188038',0);
   o+='<rect x="'+x0+'" y="'+(y0+h+14)+'" width="'+u*.55+'" height="'+u*.55+'" fill="#EFE3FC" stroke="#5B21B6" stroke-width="1.6"/>'+_t(x0+u*.55+8,y0+h+14+u*.55-2,12,'= 1 Kästchen = 1 cm²','#5B21B6','start',700);
   var W=x0+w+24,H=y0+h+14+u*.55+8;
-  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 '+Math.max(W,292)+' '+H+'" width="100%" style="max-width:320px;display:block;margin:0 auto" role="img" aria-label="Rechteck auf Häuschenpapier, '+esc(v.la)+' mal '+esc(v.lb)+'">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 '+Math.max(W,292)+' '+H+'" width="100%" style="max-width:320px;display:block;margin:0 auto" role="img" aria-label="Rechteck auf Häuschenpapier, '+esc(v.la)+' mal '+esc(v.lb)+'">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 
 /* Quader im Schrägbild mit Einheitswürfeln */
@@ -257,7 +281,7 @@ function vQuader(v){
   o+=_dim(ox+L*u+B*dx+14,oy+B*dy,ox+L*u+14,oy,v.b||'','#B06000',0);
   o+=_dim(ox-16,oy,ox-16,oy-H*u,v.h,'#B3261E',0);
   var W=ox+L*u+B*dx+62,Hh=oy+36;
-  return '<figure class="vis"><svg viewBox="0 0 '+Math.max(W,300)+' '+Hh+'" width="100%" style="max-width:340px;display:block;margin:0 auto" role="img" aria-label="Quader '+esc(v.l)+' mal '+esc(v.b||'')+' mal '+esc(v.h)+' aus Einheitswürfeln">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis"><svg viewBox="0 0 '+Math.max(W,300)+' '+Hh+'" width="100%" style="max-width:340px;display:block;margin:0 auto" role="img" aria-label="Quader '+esc(v.l)+' mal '+esc(v.b||'')+' mal '+esc(v.h)+' aus Einheitswürfeln">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 
 /* Ebene Figuren mit Spiegelachsen */
@@ -284,7 +308,7 @@ function vShape(v){
     else if(a==='d1')o+=A(10,10,110,110);else if(a==='d2')o+=A(110,10,10,110);
     else if(a==='e1')o+=A(60-55*Math.cos(Math.PI/6),60-55*Math.sin(Math.PI/6),60+55*Math.cos(Math.PI/6),60+55*Math.sin(Math.PI/6));
     else if(a==='e2')o+=A(60-55*Math.cos(Math.PI/6),60+55*Math.sin(Math.PI/6),60+55*Math.cos(Math.PI/6),60-55*Math.sin(Math.PI/6))});
-  return '<figure class="vis shp"><svg viewBox="0 0 120 120" width="100%" style="max-width:'+(v.big?150:112)+'px;overflow:visible" role="img" aria-label="'+esc(v.alt||k)+'">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis shp"><svg viewBox="0 0 120 120" width="100%" style="max-width:'+(v.big?150:112)+'px;overflow:visible" role="img" aria-label="'+esc(v.alt||k)+'">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 
 /* Symmetrie: Schmetterling, Buchstaben, Falten, Karopapier */
@@ -324,7 +348,7 @@ function vSymm(v){
     o+='<line x1="'+P(5,-0.4).split(',')[0]+'" y1="'+(gy-4)+'" x2="'+P(5,7).split(',')[0]+'" y2="'+(gy+7*s+4)+'" '+AX+'/>';
     o+=_t(gx+W/2,gy+7*s+24,13,'Jeder Punkt hat auf der anderen Seite gleich weit weg sein Spiegelpunkt','#188038','middle',700);
   }
-  return '<figure class="vis" style="width:100%"><svg viewBox="'+vb+'" width="100%" style="max-width:'+(v.max||340)+'px;display:block;margin:0 auto" role="img" aria-label="'+esc(v.alt||'Symmetrie')+'">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis" style="width:100%"><svg viewBox="'+vb+'" width="100%" style="max-width:'+(v.max||340)+'px;display:block;margin:0 auto" role="img" aria-label="'+esc(v.alt||'Symmetrie')+'">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 
 /* Körper: Würfel, Quader, Kugel, Zylinder (Schrägbild, verdeckte Kanten gestrichelt) */
@@ -370,7 +394,7 @@ function vSolid(v){
     else if(k==='tower'){var a=24;[0,1,2].forEach(function(t){o+=_isoBox(cx,108-t*a,1,1,1,a,'plain')})}
     o+=_t(cx,132,13,lab,it.c||'#1A3FA0');
   });
-  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 '+W+' 142" width="100%" style="max-width:'+(v.max||340)+'px;display:block;margin:0 auto" role="img" aria-label="'+esc(v.alt||'Körper')+'">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 '+W+' 142" width="100%" style="max-width:'+(v.max||340)+'px;display:block;margin:0 auto" role="img" aria-label="'+esc(v.alt||'Körper')+'">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 
 /* ---------- Allgemeiner Geometrie-Renderer (v4.99): Koordinaten in Einheiten, Masse in px ---------- */
@@ -449,7 +473,7 @@ function vGeo(v){
     else if(k==='curve'){o+='<path d="M'+it.pts.map(function(p){return X(p[0])+' '+Y(p[1])}).join('L')+'" fill="none" stroke="'+s+'" stroke-width="'+w+'" stroke-linecap="round" stroke-linejoin="round"'+dash(it.d)+'/>'}
     else if(k==='raw'){o+=it.svg}
   });
-  var cap=v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'';
+  var cap=v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'';
   return '<figure class="vis" style="width:100%"><svg viewBox="0 0 '+Wp.toFixed(1)+' '+Hp.toFixed(1)+'" width="100%" style="max-width:'+Math.round(Wp*(v.zoom||1.12))+'px;max-height:none;display:block;margin:0 auto;overflow:visible" role="img" aria-label="'+esc(v.alt||'Geometrie-Zeichnung')+'"><defs>'+defs+'</defs>'+o+t+'</svg>'+cap+'</figure>';
 }
 
@@ -467,7 +491,7 @@ function vMtab(v){
     o+='<rect x="'+(2+c*u)+'" y="'+(2+r*u)+'" width="'+u+'" height="'+u+'" fill="'+bg+'" stroke="#fff" stroke-width="1.5"/>'+_t(2+c*u+u/2,2+r*u+u/2+5,m>10?14.5:16.5,hd?'?':r*c,cell?'#4A2A00':hd?'#B06000':'#2B3350','middle',cell||sq||inR&&inC?800:600)}
   hr.forEach(function(r){o+='<rect x="'+(2+u)+'" y="'+(2+r*u)+'" width="'+(m*u)+'" height="'+u+'" fill="none" stroke="#1A56C4" stroke-width="2.4" rx="3"/>'});
   hc.forEach(function(c){o+='<rect x="'+(2+c*u)+'" y="'+(2+u)+'" width="'+u+'" height="'+(m*u)+'" fill="none" stroke="#1A56C4" stroke-width="2.4" rx="3"/>'});
-  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 '+W+' '+W+'" width="100%" style="display:block;max-width:'+(m>10?420:400)+'px;margin:0 auto" role="img" aria-label="Einmaleins-Tafel">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 '+W+' '+W+'" width="100%" style="display:block;max-width:'+(m>10?420:400)+'px;margin:0 auto" role="img" aria-label="Einmaleins-Tafel">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 /* Eine Reihe als zwei Spalten mit Kernaufgaben */
 function vMreihe(v){
@@ -477,7 +501,7 @@ function vMreihe(v){
      '<circle cx="'+(x+25)+'" cy="'+(y+23)+'" r="14" fill="'+col+'"/>'+_t(x+25,y+29,15,i,'#fff','middle',800)+
      _t(x+52,y+31,23,'× '+n,'#2B3350','start',700)+_t(x+150,y+31,23,'=','#9AA3B2','middle',700)+_t(x+272,y+31,28,n*i,col,'end',800)}
   var H=6+half*54;
-  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 '+H+'" width="100%" style="display:block;max-width:600px;margin:0 auto" role="img" aria-label="'+n+'er-Reihe">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 '+H+'" width="100%" style="display:block;max-width:600px;margin:0 auto" role="img" aria-label="'+n+'er-Reihe">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vNline(v){
   var fmt=function(n){n=Math.round(n*1000)/1000;return String(n).replace('.',',').replace('-','−')},cnt=function(a,b,st){var r=[],k;for(k=0;a+k*st<=b+1e-9;k++)r.push(Math.round((a+k*st)*1000)/1000);return r};
@@ -498,14 +522,14 @@ function vNline(v){
     o+='<line x1="'+px+'" y1="'+(ty-16)+'" x2="'+px+'" y2="'+(ty-32)+'" stroke="'+c+'" stroke-width="4" stroke-linecap="round"/><rect x="'+(px-w/2)+'" y="'+(ty-68)+'" width="'+w+'" height="36" rx="18" fill="'+c+'" filter="url(#'+id+')"/><text x="'+px+'" y="'+(ty-42)+'" text-anchor="middle" font-size="25" font-weight="800" fill="#fff" '+F+'>'+txt+'</text><circle cx="'+px+'" cy="'+ty+'" r="13" fill="#fff" stroke="'+c+'" stroke-width="6" filter="url(#'+id+')"/>'});
   if(v.q!==undefined&&v.q!==null){var qx=X(v.q);o+='<path d="M'+(qx-16)+' '+(ty-50)+'h32l-16 22z" fill="#F9AB00" filter="url(#'+id+')"/><circle cx="'+qx+'" cy="'+ty+'" r="13" fill="#FFF3C4" stroke="#F9AB00" stroke-width="6" filter="url(#'+id+')"/>'}
   var H=ty+36+fs;
-  return '<figure class="vis nlv" style="width:100%"><svg viewBox="0 '+(v.q!=null||(v.pts&&v.pts.length)?10:52)+' 600 '+(H-(v.q!=null||(v.pts&&v.pts.length)?10:52))+'" width="100%" style="display:block;margin:0 auto" role="img" aria-label="Zahlenstrahl">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis nlv" style="width:100%"><svg viewBox="0 '+(v.q!=null||(v.pts&&v.pts.length)?10:52)+' 600 '+(H-(v.q!=null||(v.pts&&v.pts.length)?10:52))+'" width="100%" style="display:block;margin:0 auto" role="img" aria-label="Zahlenstrahl">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vWall(v){
   var R=v.rows,n=R.length,bw=96,bh=46,g=6,W=n*bw+(n-1)*g+20,o='',i,j,cols=['#8AB4F8','#81C995','#FDD663'];
   for(i=0;i<n;i++){var cnt=R[i].length,x0=(W-(cnt*bw+(cnt-1)*g))/2,y=8+i*(bh+g);
     for(j=0;j<cnt;j++){var t=String(R[i][j]),q=t==='?',x=x0+j*(bw+g);
       o+='<rect x="'+x+'" y="'+y+'" width="'+bw+'" height="'+bh+'" rx="9" fill="'+(q?'#FFF3C4':cols[i%3])+'" stroke="'+(q?'#E37400':'rgba(0,0,0,.18)')+'" stroke-width="'+(q?3:1.5)+'" '+(q?'stroke-dasharray="6 4"':'')+'/><text x="'+(x+bw/2)+'" y="'+(y+31)+'" text-anchor="middle" font-size="'+(q?26:24)+'" font-weight="900" fill="'+(q?'#B06000':'#1b2433')+'" font-family="Arial,sans-serif">'+esc(t)+'</text>'}}
-  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 '+W+' '+(n*(bh+g)+10)+'" width="100%" style="max-width:'+Math.min(420,W*1.4)+'px;display:block;margin:0 auto" role="img" aria-label="Zahlenmauer">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 '+W+' '+(n*(bh+g)+10)+'" width="100%" style="max-width:'+Math.min(420,W*1.4)+'px;display:block;margin:0 auto" role="img" aria-label="Zahlenmauer">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vAngle(v){
   var cx=120,cy=122,R=100,o='<defs><radialGradient id="pg" cx=".5" cy="1" r="1"><stop offset="0" stop-color="#E8F0FE"/><stop offset="1" stop-color="#C6DAFC"/></radialGradient></defs>',i,a;
@@ -517,21 +541,21 @@ function vAngle(v){
   o+='<path d="M'+cx+' '+cy+'L'+(cx+44)+' '+cy+'A44 44 0 0 0 '+(cx+44*Math.cos(ra)).toFixed(1)+' '+(cy-44*Math.sin(ra)).toFixed(1)+'Z" fill="#FBBC04" fill-opacity=".55" stroke="#E37400" stroke-width="2"/>';
   o+='<line x1="'+(cx-R-12)+'" y1="'+cy+'" x2="'+(cx+R+12)+'" y2="'+cy+'" stroke="#202124" stroke-width="4" stroke-linecap="round"/><line x1="'+cx+'" y1="'+cy+'" x2="'+(cx+(R+14)*Math.cos(ra)).toFixed(1)+'" y2="'+(cy-(R+14)*Math.sin(ra)).toFixed(1)+'" stroke="#EA4335" stroke-width="4" stroke-linecap="round"/><circle cx="'+cx+'" cy="'+cy+'" r="5" fill="#202124"/>';
   if(v.lbl)o+='<text x="'+cx+'" y="'+(cy+16)+'" text-anchor="middle" font-size="13" font-weight="900" fill="#B3261E" font-family="Arial,sans-serif">'+esc(v.lbl)+'</text>';
-  return '<figure class="vis"><svg viewBox="0 0 240 146" width="100%" style="max-width:300px;display:block;margin:0 auto" role="img" aria-label="Winkel mit Geodreieck">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis"><svg viewBox="0 0 240 146" width="100%" style="max-width:300px;display:block;margin:0 auto" role="img" aria-label="Winkel mit Geodreieck">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vCircle(v){
   var o='<defs><radialGradient id="cg" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#E8F0FE"/><stop offset="1" stop-color="#AECBFA"/></radialGradient></defs><circle cx="100" cy="80" r="64" fill="url(#cg)" stroke="#1A56C4" stroke-width="4"/>';
   if(v.show!=='d')o+='<line x1="100" y1="80" x2="164" y2="80" stroke="#EA4335" stroke-width="4" stroke-linecap="round"/>'+(v.lr?'<text x="132" y="72" text-anchor="middle" font-size="14" font-weight="900" fill="#B3261E" font-family="Arial,sans-serif">'+esc(v.lr)+'</text>':'');
   if(v.show==='d'||v.show==='both')o+='<line x1="36" y1="80" x2="164" y2="80" stroke="#34A853" stroke-width="4" stroke-linecap="round"/>'+(v.ld?'<text x="68" y="98" text-anchor="middle" font-size="14" font-weight="900" fill="#137333" font-family="Arial,sans-serif">'+esc(v.ld)+'</text>':'');
   o+='<circle cx="100" cy="80" r="5" fill="#202124"/><text x="100" y="64" text-anchor="middle" font-size="13" font-weight="800" fill="#202124" font-family="Arial,sans-serif">M</text>';
-  return '<figure class="vis"><svg viewBox="0 0 200 160" width="100%" style="max-width:220px;display:block;margin:0 auto" role="img" aria-label="Kreis">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis"><svg viewBox="0 0 200 160" width="100%" style="max-width:220px;display:block;margin:0 auto" role="img" aria-label="Kreis">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vJug(v){
   var W=120,H=170,x0=30,y0=10,h=H-20,lv=Math.max(0,Math.min(1,v.level/v.max)),o='<defs><linearGradient id="jg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8AB4F8"/><stop offset="1" stop-color="#1A73E8"/></linearGradient></defs>';
   o+='<rect x="'+x0+'" y="'+(y0+h*(1-lv))+'" width="60" height="'+(h*lv)+'" fill="url(#jg)"/><rect x="'+x0+'" y="'+y0+'" width="60" height="'+h+'" rx="6" fill="none" stroke="#5F6B7A" stroke-width="4"/>';
   var st=v.step||1,i;for(i=0;i<=v.max;i+=st){var y=y0+h*(1-i/v.max);o+='<line x1="'+(x0+60)+'" y1="'+y+'" x2="'+(x0+(i%(v.lab||st)===0?46:52)+14)+'" y2="'+y+'" stroke="#5F6B7A" stroke-width="2"/>';if(i%(v.lab||st)===0)o+='<text x="'+(x0+78)+'" y="'+(y+4)+'" font-size="11" font-weight="800" fill="#202124" font-family="Arial,sans-serif">'+i+'</text>'}
   o+='<text x="'+(x0+30)+'" y="'+(H+10)+'" text-anchor="middle" font-size="12" font-weight="800" fill="#5F6B7A" font-family="Arial,sans-serif">'+esc(v.unit||'')+'</text>';
-  return '<figure class="vis"><svg viewBox="0 0 '+W+' '+(H+16)+'" width="100%" style="max-width:150px;display:block;margin:0 auto" role="img" aria-label="Messbecher">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis"><svg viewBox="0 0 '+W+' '+(H+16)+'" width="100%" style="max-width:150px;display:block;margin:0 auto" role="img" aria-label="Messbecher">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vQuaderOld(v){
   var l=150,b=70,h=70,dx=44,dy=-30,x=44,y=62,o='';
@@ -540,7 +564,7 @@ function vQuaderOld(v){
   o+='<polygon points="'+(x+l)+','+y+' '+(x+l+dx)+','+(y+dy)+' '+(x+l+dx)+','+(y+h+dy)+' '+(x+l)+','+(y+h)+'" fill="#A9C7FA" stroke="#1A56C4" stroke-width="3" stroke-linejoin="round"/>';
   function pill(px,py,t,c){return '<rect x="'+(px-24)+'" y="'+(py-11)+'" width="48" height="22" rx="11" fill="#fff" stroke="'+c+'" stroke-width="2.5"/><text x="'+px+'" y="'+(py+5)+'" text-anchor="middle" font-size="13" font-weight="900" fill="'+c+'" font-family="Arial,sans-serif">'+esc(t)+'</text>'}
   o+=pill(x+l/2,y+h+16,v.l,'#137333')+pill(x+l+dx+14,y+dy+h/2+4,v.b||'',"#B06000")+pill(x-14,y+h/2,v.h,'#B3261E');
-  return '<figure class="vis"><svg viewBox="0 0 300 160" width="100%" style="max-width:310px;display:block;margin:0 auto" role="img" aria-label="Quader">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis"><svg viewBox="0 0 300 160" width="100%" style="max-width:310px;display:block;margin:0 auto" role="img" aria-label="Quader">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vPar(v){
   var k=v.kind,o='<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1A56C4"/></marker></defs>',st='stroke="#1A56C4" stroke-width="5" stroke-linecap="round"';
@@ -548,7 +572,7 @@ function vPar(v){
   else if(k==='perp')o+='<line x1="30" y1="95" x2="170" y2="95" '+st+'/><line x1="100" y1="95" x2="100" y2="15" '+st+'/><path d="M100 77h18v18" fill="#FBBC04" fill-opacity=".5" stroke="#E37400" stroke-width="3"/>';
   else if(k==='cross')o+='<line x1="30" y1="100" x2="170" y2="30" '+st+'/><line x1="30" y1="30" x2="170" y2="100" '+st+'/>';
   else if(k==='tilt')o+='<line x1="20" y1="100" x2="180" y2="40" '+st+'/><line x1="20" y1="50" x2="180" y2="90" '+st+'/>';
-  return '<figure class="vis"><svg viewBox="0 0 200 120" width="100%" style="max-width:220px;display:block;margin:0 auto" role="img" aria-label="Geraden">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis"><svg viewBox="0 0 200 120" width="100%" style="max-width:220px;display:block;margin:0 auto" role="img" aria-label="Geraden">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vBlocks(v){
   var h=v.h||0,z=v.z||0,e=v.e||0,id='pb'+(++_guid),o='',cols=[],x=0,H=190;
@@ -592,7 +616,7 @@ function vBlocks(v){
     x+=c.w+10;
   });
   var W=x-10;
-  return '<figure class="vis" style="align-items:center;width:100%"><svg viewBox="-4 0 '+(W+8)+' '+H+'" width="100%" style="max-width:'+Math.min(400,(W+8)*1.5)+'px;display:block;margin:0 auto" role="img" aria-label="Stellenwert-Material: '+h+' Hunderter, '+z+' Zehner, '+e+' Einer">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis" style="align-items:center;width:100%"><svg viewBox="-4 0 '+(W+8)+' '+H+'" width="100%" style="max-width:'+Math.min(400,(W+8)*1.5)+'px;display:block;margin:0 auto" role="img" aria-label="Stellenwert-Material: '+h+' Hunderter, '+z+' Zehner, '+e+' Einer">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vJumps(v){
   var pts=[v.from],i,F='font-family="Arial,Helvetica,sans-serif"',id='jp'+(++_guid);(v.jumps||[]).forEach(function(j){pts.push(pts[pts.length-1]+j[0])});
@@ -604,7 +628,7 @@ function vJumps(v){
   pts.forEach(function(p,k){var c=k===0?'#34A853':k===pts.length-1?'#4285F4':'#FBBC04';o+='<circle cx="'+X(p)+'" cy="'+y+'" r="10.5" fill="#fff" stroke="'+c+'" stroke-width="5" filter="url(#'+id+'s)"/><text x="'+X(p)+'" y="'+(y+42)+'" text-anchor="middle" font-size="'+Math.min(v.fs||28,28)+'" font-weight="800" fill="#2B3350" '+F+'>'+(k===pts.length-1&&v.hideEnd?'?':String(v.fmt?v.fmt[k]:p).replace('-','−'))+'</text>'});
   (v.jumps||[]).forEach(function(j,k){var a=X(pts[k]),b=X(pts[k+1]),m=(a+b)/2,r=Math.abs(b-a)/2,h=Math.min(46,Math.max(22,10+r*.55))+((k%2&&(v.jumps.some(function(q,qi){return Math.abs(X(pts[qi+1])-X(pts[qi]))<120})))?34:0),jm=(typeof j[2]==='number')?(j[2]===99?99:j[2]%8):7,jc=jm===99?'#EA4335':DC[jm],lab=String(j[1]),pw=Math.max(58,lab.length*17+24);
     o+='<path d="M'+a+' '+(y-14)+'Q'+m+' '+(y-14-2*h)+' '+b+' '+(y-14)+'" fill="none" stroke="'+jc+'" stroke-width="3.4" stroke-linecap="round" marker-end="url(#'+id+jm+')"/><rect x="'+(m-pw/2)+'" y="'+(y-h-56)+'" width="'+pw+'" height="34" rx="17" fill="#fff" stroke="'+jc+'" stroke-width="2.4" filter="url(#'+id+'s)"/><text x="'+m+'" y="'+(y-h-33)+'" text-anchor="middle" font-size="24" font-weight="800" fill="'+jc+'" '+F+'>'+esc(lab)+'</text>'});
-  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 204" width="100%" style="display:block;max-width:600px;margin:0 auto" role="img" aria-label="Rechenstrich">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 204" width="100%" style="display:block;max-width:600px;margin:0 auto" role="img" aria-label="Rechenstrich">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vScene(v){
   var o='',i,k=v.kind,F='font-family="Arial,sans-serif" font-weight="800"';
@@ -643,14 +667,14 @@ function vScene(v){
     ws.forEach(function(p,i){o+='<g class="sc-cookie" style="animation-delay:'+(i*.5)+'s"><rect x="'+(xs+i*cw+4)+'" y="92" width="'+(cw-8)+'" height="62" rx="14" fill="#fff" stroke="'+p[1]+'" stroke-width="4"/><text x="'+(xs+i*cw+cw/2)+'" y="132" text-anchor="middle" font-size="'+(cw<110?20:26)+'" fill="'+p[1]+'" '+F+'>'+esc(p[0])+'</text></g>'});
     if(v.say)o+='<g class="sc-pop"><rect x="120" y="16" width="360" height="46" rx="23" fill="#fff" stroke="#4285F4" stroke-width="3"/><text x="300" y="47" text-anchor="middle" font-size="22" fill="#1A56C8" '+F+'>'+esc(v.say)+'</text></g>';
   }
-  return '<figure class="vis scn" style="width:100%"><svg viewBox="0 0 600 230" width="100%" role="img" aria-label="'+esc(v.cap||'Bild zum Thema')+'" style="border-radius:16px">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis scn" style="width:100%"><svg viewBox="0 0 600 230" width="100%" role="img" aria-label="'+esc(v.cap||'Bild zum Thema')+'" style="border-radius:16px">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vArr(v){
   var P=24,r=v.r,c=v.c,sp=v.split||0,W=c*P+10,H=r*P+10,o='',i,j;
   for(j=0;j<r;j++)for(i=0;i<c;i++){var inA=(v.splitRows?j<sp:i<sp),f=inA?VC[1]:(v.dim?'#D9DDE5':VC[v.col===undefined?0:v.col]);if(!sp)f=VC[v.col===undefined?0:v.col];
     o+='<circle cx="'+(5+i*P+P/2)+'" cy="'+(5+j*P+P/2)+'" r="9" fill="'+f+'" stroke="#fff" stroke-width="1.5"/><ellipse cx="'+(5+i*P+P/2-3)+'" cy="'+(5+j*P+P/2-3.5)+'" rx="3" ry="2" fill="#fff" fill-opacity=".5"/>'}
   if(sp)o+=(v.splitRows?'<line x1="2" x2="'+(W-2)+'" y1="'+(5+sp*P)+'" y2="'+(5+sp*P)+'"':'<line y1="2" y2="'+(H-2)+'" x1="'+(5+sp*P)+'" x2="'+(5+sp*P)+'"')+' stroke="#5f6368" stroke-width="3" stroke-dasharray="6 4"/>';
-  return '<figure class="vis" style="align-items:center;width:100%"><svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+Math.min(420,Math.round(W*Math.min(1.3,260/H)))+'px;max-height:none;display:block;margin:0 auto" role="img" aria-label="Malfeld">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis" style="align-items:center;width:100%"><svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+Math.min(420,Math.round(W*Math.min(1.3,260/H)))+'px;max-height:none;display:block;margin:0 auto" role="img" aria-label="Malfeld">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function vCol(v){
   var a=v.a,b=v.b,plus=v.op!=='-',da=String(a).split('').map(Number),db=String(b).split('').map(Number),n=Math.max(da.length,db.length);
@@ -677,11 +701,11 @@ function vCol(v){
     if(plus)o+='<g><circle cx="'+x(i)+'" cy="152" r="11" fill="#FDE9A6" stroke="#B06000" stroke-width="2"/><text x="'+x(i)+'" y="157" text-anchor="middle" font-size="14" font-weight="900" fill="#7A4A00" font-family="Arial,sans-serif">1</text></g>';
     else o+='<g><circle cx="'+(x(i+1)-24)+'" cy="52" r="9.5" fill="#FDE9A6" stroke="#B06000" stroke-width="2"/><text x="'+(x(i+1)-24)+'" y="56" text-anchor="middle" font-size="10" font-weight="900" fill="#7A4A00" font-family="Arial,sans-serif">10</text></g>';
   }
-  return '<figure class="vis" style="align-items:center;width:100%"><svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+Math.max(220,W*2.2)+'px;display:block;margin:0 auto" role="img" aria-label="Schriftliche Rechnung">'+o+'</svg>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis" style="align-items:center;width:100%"><svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+Math.max(220,W*2.2)+'px;display:block;margin:0 auto" role="img" aria-label="Schriftliche Rechnung">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function visuals(list){
   if(!list||!list.length)return '';
-  var map={pic:vPic,symfig:vSymfig,symgrid:vSymgrid,wcol:vWcol,dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar,tbl:vTbl,chips:vChips,tline:vTline,flow:vFlow,anno:vAnno,cards:vCards,area:vArea,emo:vEmo,field:vField,clock:vClock,coins:vCoins,shape:vShape,mtab:vMtab,mreihe:vMreihe,symm:vSymm,solid:vSolid,nline:vNline,angle:vAngle,circle:vCircle,jug:vJug,quader:vQuader,par:vPar,blocks:vBlocks,jumps:vJumps,arr:vArr,col:vCol,wall:vWall,scene:vScene,geo:vGeo};
+  var map={hl:vHl,pic:vPic,symfig:vSymfig,symgrid:vSymgrid,wcol:vWcol,dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar,tbl:vTbl,chips:vChips,tline:vTline,flow:vFlow,anno:vAnno,cards:vCards,area:vArea,emo:vEmo,field:vField,clock:vClock,coins:vCoins,shape:vShape,mtab:vMtab,mreihe:vMreihe,symm:vSymm,solid:vSolid,nline:vNline,angle:vAngle,circle:vCircle,jug:vJug,quader:vQuader,par:vPar,blocks:vBlocks,jumps:vJumps,arr:vArr,col:vCol,wall:vWall,scene:vScene,geo:vGeo};
   return '<div class="visrow">'+list.map(function(v){return map[v.type]?map[v.type](v):''}).join('')+'</div>';
 }
 
@@ -933,7 +957,7 @@ function vWcol(v){
 }
 function wcWrap(v,s,key,g,mode){WC_ACT=null;
   var guide=mode==='live'&&v.guide?'<p class="wc-guide" data-k="'+esc(key)+'">'+esc(wcGuide(s,WCS[key]))+'</p><p class="wc-rule">'+wcRule(s)+'</p>':'';
-  return '<figure class="vis wcf'+(mode==='live'?' wclive':'')+'" data-k="'+esc(key)+'">'+(v.lab?'<p class="wc-lab">'+esc(v.lab)+'</p>':'')+g+guide+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>';
+  return '<figure class="vis wcf'+(mode==='live'?' wclive':'')+'" data-k="'+esc(key)+'">'+(v.lab?'<p class="wc-lab">'+esc(v.lab)+'</p>':'')+g+guide+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
 function wcRule(s){
   if(s.op==='+')return 'Von rechts nach links. Gibt es 10 oder mehr: Einerziffer unten hinschreiben, die <b>1</b> klein über den Strich bei der nächsten Stelle.';
@@ -1034,7 +1058,7 @@ function visT(list,ans,q,opts){
 }
 
 /* ---------- Form und Raum: Bilder statt Text ---------- */
-function vPic(v){return '<figure class="vis picv"><div class="picbig" aria-hidden="true">'+v.e+'</div>'+(v.cap?'<figcaption>'+esc(v.cap)+'</figcaption>':'')+'</figure>'}
+function vPic(v){return '<figure class="vis picv"><div class="picbig" aria-hidden="true">'+v.e+'</div>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>'}
 var SYMF={
  butterfly:'<path d="M100 60C70 20 22 26 30 70c6 30 40 34 66 18" fill="#F9AB00"/><path d="M100 60c30-40 78-34 70 10-6 30-40 34-66 18" fill="#F9AB00"/><path d="M98 92C70 100 44 120 58 140c12 16 34 2 42-22" fill="#EA4335"/><path d="M102 92c28 8 54 28 40 48-12 16-34 2-42-22" fill="#EA4335"/><circle cx="64" cy="62" r="9" fill="#fff" opacity=".7"/><circle cx="136" cy="62" r="9" fill="#fff" opacity=".7"/><rect x="95" y="48" width="10" height="92" rx="5" fill="#3C4043"/><path d="M98 50l-12-22M102 50l12-22" stroke="#3C4043" stroke-width="3" stroke-linecap="round"/>',
  heart:'<path d="M100 150C40 108 26 78 42 54c14-20 44-18 58 6 14-24 44-26 58-6 16 24 2 54-58 96z" fill="#EA4335"/><ellipse cx="66" cy="66" rx="10" ry="6" fill="#fff" opacity=".5" transform="rotate(-30 66 66)"/>',
