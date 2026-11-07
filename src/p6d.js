@@ -590,9 +590,9 @@ function pinBox(){if(document.getElementById('pinbox'))return;var code='',o=docu
   function close(){o.remove()}
   o.querySelector('.pinx').onclick=close;
   o.querySelectorAll('.pk').forEach(function(b){b.onclick=function(){var k=b.dataset.k;if(k==='del'){code=code.slice(0,-1);dots();return}if(code.length>=4)return;code+=k;dots();
-    if(code.length===4){if(code==='1983'){try{sessionStorage.setItem('es.gpin','ok')}catch(e){}o.querySelector('.pinin').classList.add('pinok');setTimeout(function(){close();go({view:'games'},{view:'home'})},250)}
+    if(code.length===4){if(code==='1983'){o.querySelector('.pinin').classList.add('pinok');setTimeout(function(){close();go({view:'games'},{view:'home'})},250)}
       else{var er=o.querySelector('.pinerr');er.textContent='Falscher Code';var inn=o.querySelector('.pinin');inn.classList.remove('pinshake');void inn.offsetWidth;inn.classList.add('pinshake');setTimeout(function(){code='';dots()},450)}}}})}
-ACT.games=function(){if(gOk())go({view:'games'},{view:'home'});else pinBox()};
+ACT.games=function(){pinBox()};
 ACT.gplay=function(b){var g=GAMES.filter(function(x){return x.id===b.dataset.id})[0];if(!g)return;rwOpen('🎮 Minigames · freies Spiel',g,true,true)};
 window.gcBack=function(){if(nav.view==='games'){var y=window.scrollY;render();window.scrollTo(0,y)}};
 window.gcEnd=function(m,s){var me=RW,g=me.g,nb=setBest(g.id,s),bv=best()[g.id];

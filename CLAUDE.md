@@ -4,7 +4,7 @@ Lern-App (Vanilla-JS, eine `index.html`), GitHub Pages, easy-school.ch. Repo: ha
 
 ## Umgang mit dem Besitzer
 - Immer auf **Deutsch** antworten, kurz, ehrlich. Nur sagen, was wirklich getestet ist. Es gibt keinen iPhone-Test und die Live-Seite ist aus dem Sandkasten nicht erreichbar: Das immer erwähnen.
-- Nach **jeder** Veröffentlichung «Version vX.XX» nennen. Vorher `APP_VERSION` in `src/p1.js` erhöhen (aktuell v5.53; nächste v5.54 usw.).
+- Nach **jeder** Veröffentlichung «Version vX.XX» nennen. Vorher `APP_VERSION` in `src/p1.js` erhöhen (aktuell v5.54; nächste v5.55 usw.).
 - Mehrdeutige Wünsche: Auslegung offen nennen.
 
 ## Bauen und Testen
@@ -28,7 +28,7 @@ Lern-App (Vanilla-JS, eine `index.html`), GitHub Pages, easy-school.ch. Repo: ha
 - **Theorie-Grafik = Fokus:** Die Grafik eines Schritts hebt genau das hervor, was Titel und Text erklären (Endung, Grossbuchstabe, Komma, geänderte Ziffer, Nenner …), farbig markiert; der Rest neutral. Mittel: Fokus-Grafik `hl` (`"rows":["klein[e|Endung]"]`, `[Text|Label|Farbe]`, `[~x~]` = durchgestrichen) oder `{Farbe|Text}` in tbl/lines/chips/flow und Bildunterschriften.
 - Karten-Antworten (MC): kurze Antworten 2 × 2 nebeneinander, lange (>14 Zeichen) untereinander. Platzhalter in Gleichungen/Vergleichen immer `_`, nie ○.
 - Buttons heissen **AI-Karten** und **Easy lernen**.
-- **Minigames** nur mit Code (PIN **1983**, PIN-Fenster `pinBox` in p6d.js); gilt bis die App neu geöffnet wird (sessionStorage `es.gpin`).
+- **Minigames** nur mit Code (PIN **1983**, PIN-Fenster `pinBox` in p6d.js); wird bei jedem Öffnen neu abgefragt, nichts gespeichert.
 - **Glücksrad:** nach 5 richtigen Antworten in Folge immer; sonst zufällig nach 4–9 Fragen; am Ende von Prüfung, Karten und Easy lernen; plus Theorie-Regel (3 Aufgaben). Keine 3-Minuten-Regel.
 - Neue Themen aus Drive-Unterlagen: Skill `easyschool-import`. Englisch Double Decker: Wörter nur aus den Heften/Exporten der Kinder (Quizlet-Export, Buchseiten), nichts raten.
 
