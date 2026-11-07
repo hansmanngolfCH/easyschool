@@ -518,7 +518,7 @@ function vNline(v){
   ticks.forEach(function(n,i){
     var z=Math.abs(n)<1e-9,show=shown.indexOf(n)>=0;
     o+='<line x1="'+X(n)+'" x2="'+X(n)+'" y1="'+(ty+9)+'" y2="'+(ty+(z?30:24))+'" stroke="'+(z?'#1F2937':'#4A5468')+'" stroke-width="'+(z?4:3.2)+'" stroke-linecap="round"/>'+(show||z?'<text x="'+X(n)+'" y="'+(ty+28+fs)+'" text-anchor="middle" font-size="'+fs.toFixed(1)+'" font-weight="'+(z?900:800)+'" fill="#1F2937" '+F+'>'+fmt(n)+'</text>':'')});
-  (v.pts||[]).forEach(function(p,i){var c=VC[i%4],px=X(p),txt=fmt(p),w=Math.max(48,txt.length*18+24);
+  (v.pts||[]).forEach(function(p,i){var c=v._cm&&v._cm[p]!=null?dcol(v._cm[p]):VC[i%4],px=X(p),txt=fmt(p),w=Math.max(48,txt.length*18+24);
     o+='<line x1="'+px+'" y1="'+(ty-16)+'" x2="'+px+'" y2="'+(ty-32)+'" stroke="'+c+'" stroke-width="4" stroke-linecap="round"/><rect x="'+(px-w/2)+'" y="'+(ty-68)+'" width="'+w+'" height="36" rx="18" fill="'+c+'" filter="url(#'+id+')"/><text x="'+px+'" y="'+(ty-42)+'" text-anchor="middle" font-size="25" font-weight="800" fill="#fff" '+F+'>'+txt+'</text><circle cx="'+px+'" cy="'+ty+'" r="13" fill="#fff" stroke="'+c+'" stroke-width="6" filter="url(#'+id+')"/>'});
   if(v.q!==undefined&&v.q!==null){var qx=X(v.q);o+='<path d="M'+(qx-16)+' '+(ty-50)+'h32l-16 22z" fill="#F9AB00" filter="url(#'+id+')"/><circle cx="'+qx+'" cy="'+ty+'" r="13" fill="#FFF3C4" stroke="#F9AB00" stroke-width="6" filter="url(#'+id+')"/>'}
   var H=ty+36+fs;
@@ -706,6 +706,10 @@ function vCol(v){
 function visuals(list){
   if(!list||!list.length)return '';
   var map={hl:vHl,pic:vPic,symfig:vSymfig,symgrid:vSymgrid,wcol:vWcol,dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar,tbl:vTbl,chips:vChips,tline:vTline,flow:vFlow,anno:vAnno,cards:vCards,area:vArea,emo:vEmo,field:vField,clock:vClock,coins:vCoins,shape:vShape,mtab:vMtab,mreihe:vMreihe,symm:vSymm,solid:vSolid,nline:vNline,angle:vAngle,circle:vCircle,jug:vJug,quader:vQuader,par:vPar,blocks:vBlocks,jumps:vJumps,arr:vArr,col:vCol,wall:vWall,scene:vScene,geo:vGeo};
+  /* Farben abgleichen: Zahlen, die in den Chips farbig sind, bekommen auf dem Zahlenstrahl dieselbe Farbe */
+  var ch=list.filter(function(v){return v.type==='chips'&&v.parts}),cm=null,cl={};
+  if(ch.length&&list.some(function(v){return v.type==='nline'})){cm={};ch.forEach(function(c){c.parts.forEach(function(p){var n=String(p[0]).trim().replace(',','.');if(/^-?\d+(\.\d+)?$/.test(n)&&p[2]!=null){cm[+n]=p[2];if(p[1])cl[+n]=String(p[1])}})})}
+  list=list.map(function(v){if(cm&&v.type==='nline'){var o={};for(var k in v)o[k]=v[k];var pts=(v.pts||[]).slice();Object.keys(cl).forEach(function(n){n=+n;if(n>=v.min&&n<=v.max&&pts.indexOf(n)<0)pts.push(n)});pts.sort(function(a,b){return a-b});o.pts=pts;o._cm=cm;o._cl=cl;return o}return v});
   return '<div class="visrow">'+list.map(function(v){return map[v.type]?map[v.type](v):''}).join('')+'</div>';
 }
 
