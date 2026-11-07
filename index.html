@@ -1969,7 +1969,7 @@ input.wc-sbox:focus{border-color:#8AB4F8}
 (function(){
 'use strict';
 var DAY=86400000, INT=[0,1,3,7,14,30], LS='lernwerkstatt.v1', DG=50;
-var APP_VERSION="v5.56";
+var APP_VERSION="v5.57";
 var C=null, P={}, nav={view:'home'}, timer=null, cardIdx={}, PADS={}, penTool='ink', lastAct=0, lastSave=0, SKIN=null, TQ=[];
 var LANG={engl:'en-GB',franz:'fr-FR'};
 var sync={db:null,state:'local',noWrite:false,timers:{},busy:{},last:{}};
@@ -2407,7 +2407,7 @@ function vFbar(v){
 var DC=['#4285F4','#EA4335','#34A853','#F29900','#9334E6','#00A5BF','#D93F8E','#6B7280','#8D5A2B','#D9A400','#E8710A'];
 var DE=false,DM=[8,0,9,2,10,5,6,7];
 function isDeu(){try{var q=nav.queue&&nav.queue[nav.idx]||'';return nav.subject==='deu'||/-deu-/.test((nav.topicId||'')+' '+(nav.scope||'')+' '+q)}catch(e){return false}}
-function dcol(i){i=(i|0)%8;return DC[DE?DM[i]:i]}
+function dcol(i){if(typeof i==='string'&&i.charAt(0)==='#')return i;i=(i|0)%8;return DC[DE?DM[i]:i]}
 function bd(s){return rt(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>')}
 function vTbl(v){
   var h=v.head?'<thead><tr>'+v.head.map(function(x,k){var c=(k>0&&v.hc)?' style="--c:'+dcol(v.hc[k-1])+'" class="hc"':'';return '<th'+c+'>'+bd(x)+'</th>'}).join('')+'</tr></thead>':'';
@@ -2919,15 +2919,17 @@ function vBlocks(v){
   var W=x-10;
   return '<figure class="vis" style="align-items:center;width:100%"><svg viewBox="-4 0 '+(W+8)+' '+H+'" width="100%" style="max-width:'+Math.min(400,(W+8)*1.5)+'px;display:block;margin:0 auto" role="img" aria-label="Stellenwert-Material: '+h+' Hunderter, '+z+' Zehner, '+e+' Einer">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
+function jumpIdx(js){var seen=[];return (js||[]).map(function(j){if(typeof j[2]==='number')return j[2]===99?99:j[2]%8;var a=Math.abs(j[0]),d=seen.indexOf(a);if(d<0){seen.push(a);d=seen.length-1}return [4,5,6][d%3]})}
+function jIdxCol(m){return m===99?'#EA4335':DC[m]}
 function vJumps(v){
-  var pts=[v.from],i,F='font-family="Arial,Helvetica,sans-serif"',id='jp'+(++_guid);(v.jumps||[]).forEach(function(j){pts.push(pts[pts.length-1]+j[0])});
+  var JI=jumpIdx(v.jumps),pts=[v.from],i,F='font-family="Arial,Helvetica,sans-serif"',id='jp'+(++_guid);(v.jumps||[]).forEach(function(j){pts.push(pts[pts.length-1]+j[0])});
   var mn=Math.min.apply(null,pts),mx=Math.max.apply(null,pts),pad=(mx-mn)*.06||1,lo=mn-pad,hi=mx+pad,x0=26,x1=574,y=146;
   function X(n){return x0+(x1-x0)*(n-lo)/(hi-lo)}
   var o='<defs>'+[0,1,2,3,4,5,6,7,99].map(function(ci){var cc=ci===99?'#EA4335':DC[ci];return '<marker id="'+id+ci+'" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto"><path d="M0 1L9 5L0 9z" fill="'+cc+'"/></marker>'}).join('')+'<filter id="'+id+'s" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="1.5" stdDeviation="1.6" flood-color="#1c2a4a" flood-opacity=".28"/></filter></defs>';
   o+='<rect x="'+(x0-10)+'" y="'+(y-4)+'" width="'+(x1-x0+20)+'" height="8" rx="4" fill="#DDE3EE"/>';
   if(hi-lo<=34&&hi-lo>=3){for(i=Math.ceil(lo);i<=Math.floor(hi);i++){o+='<line x1="'+X(i)+'" y1="'+(y+7)+'" x2="'+X(i)+'" y2="'+(y+13)+'" stroke="#B7C0CF" stroke-width="1.8" stroke-linecap="round"/>'}}
-  pts.forEach(function(p,k){var c=k===0?'#34A853':k===pts.length-1?'#4285F4':'#FBBC04';o+='<circle cx="'+X(p)+'" cy="'+y+'" r="10.5" fill="#fff" stroke="'+c+'" stroke-width="5" filter="url(#'+id+'s)"/><text x="'+X(p)+'" y="'+(y+42)+'" text-anchor="middle" font-size="'+Math.min(v.fs||28,28)+'" font-weight="800" fill="#2B3350" '+F+'>'+(k===pts.length-1&&v.hideEnd?'?':String(v.fmt?v.fmt[k]:p).replace('-','−'))+'</text>'});
-  (v.jumps||[]).forEach(function(j,k){var a=X(pts[k]),b=X(pts[k+1]),m=(a+b)/2,r=Math.abs(b-a)/2,h=Math.min(46,Math.max(22,10+r*.55))+((k%2&&(v.jumps.some(function(q,qi){return Math.abs(X(pts[qi+1])-X(pts[qi]))<120})))?34:0),jm=(typeof j[2]==='number')?(j[2]===99?99:j[2]%8):7,jc=jm===99?'#EA4335':DC[jm],lab=String(j[1]),pw=Math.max(58,lab.length*17+24);
+  pts.forEach(function(p,k){var c=k===0?'#34A853':k===pts.length-1?'#4285F4':'#F29900';o+='<circle cx="'+X(p)+'" cy="'+y+'" r="10.5" fill="#fff" stroke="'+c+'" stroke-width="5" filter="url(#'+id+'s)"/><text x="'+X(p)+'" y="'+(y+42)+'" text-anchor="middle" font-size="'+Math.min(v.fs||28,28)+'" font-weight="800" fill="#2B3350" '+F+'>'+(k===pts.length-1&&v.hideEnd?'?':String(v.fmt?v.fmt[k]:p).replace('-','−'))+'</text>'});
+  (v.jumps||[]).forEach(function(j,k){var a=X(pts[k]),b=X(pts[k+1]),m=(a+b)/2,r=Math.abs(b-a)/2,h=Math.min(46,Math.max(22,10+r*.55))+((k%2&&(v.jumps.some(function(q,qi){return Math.abs(X(pts[qi+1])-X(pts[qi]))<120})))?34:0),jm=JI[k],jc=jm===99?'#EA4335':DC[jm],lab=String(j[1]),pw=Math.max(58,lab.length*17+24);
     o+='<path d="M'+a+' '+(y-14)+'Q'+m+' '+(y-14-2*h)+' '+b+' '+(y-14)+'" fill="none" stroke="'+jc+'" stroke-width="3.4" stroke-linecap="round" marker-end="url(#'+id+jm+')"/><rect x="'+(m-pw/2)+'" y="'+(y-h-56)+'" width="'+pw+'" height="34" rx="17" fill="#fff" stroke="'+jc+'" stroke-width="2.4" filter="url(#'+id+'s)"/><text x="'+m+'" y="'+(y-h-33)+'" text-anchor="middle" font-size="24" font-weight="800" fill="'+jc+'" '+F+'>'+esc(lab)+'</text>'});
   return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 204" width="100%" style="display:block;max-width:600px;margin:0 auto" role="img" aria-label="Rechenstrich">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
@@ -3004,14 +3006,74 @@ function vCol(v){
   }
   return '<figure class="vis" style="align-items:center;width:100%"><svg viewBox="0 0 '+W+' '+H+'" width="100%" style="max-width:'+Math.max(220,W*2.2)+'px;display:block;margin:0 auto" role="img" aria-label="Schriftliche Rechnung">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
 }
+/* ---------- Messstab «ruler» (v5.57): Längen immer auf einem echten Massstab zeigen ----------
+   {"type":"ruler","from":0,"to":100,"unit":"cm","lab":10,"tick":1,
+    "segs":[[0,30,"30 cm",2],[30,50,"20 cm",0]],   // gemessene Strecken: [von,bis,Text,Farbe 0–7,Spur 0/1/2]
+    "pts":[[60,"60 cm",1]],                           // Markierung auf dem Stab: [Wert,Text,Farbe]
+    "obj":"✏️","cap":"…"}                               // obj: Gegenstand liegt über der ersten Strecke */
+function vRuler(v){
+  var a=v.from||0,b=v.to===undefined?100:v.to,R=b-a,x0=30,x1=532,F='font-family="Arial,Helvetica,sans-serif"',id='ru'+(++_guid),o='',i;
+  var tick=v.tick||(R<=30?1:R<=200?1:R<=600?5:10),lab=v.lab||(R<=12?1:R<=30?(R<=20?2:5):R<=120?10:R<=300?20:R<=600?50:100),half=lab%2===0?lab/2:0;
+  if((x1-x0)/(R/tick)<3.2)tick=lab/ (lab%5===0?5:2);
+  function X(n){return x0+(x1-x0)*(n-a)/R}
+  var segs=v.segs||[],lanes=0;segs.forEach(function(q){lanes=Math.max(lanes,(q[4]||0)+1)});
+  var LH=52,top=(v.obj?58:10)+lanes*LH,ry=top+10,rh=76,H=ry+rh+12;
+  o+='<defs><linearGradient id="'+id+'g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF3B8"/><stop offset=".55" stop-color="#FFDF6B"/><stop offset="1" stop-color="#F2C53D"/></linearGradient>'+
+     '<filter id="'+id+'s" x="-5%" y="-30%" width="110%" height="170%"><feDropShadow dx="0" dy="2.5" stdDeviation="2.2" flood-color="#7A5A00" flood-opacity=".25"/></filter></defs>';
+  /* Stab */
+  o+='<rect x="'+(x0-16)+'" y="'+ry+'" width="'+(x1-x0+70)+'" height="'+rh+'" rx="7" fill="url(#'+id+'g)" stroke="#C99A1E" stroke-width="2" filter="url(#'+id+'s)"/>';
+  o+='<rect x="'+(x0-14)+'" y="'+(ry+2)+'" width="'+(x1-x0+66)+'" height="11" rx="4" fill="#fff" opacity=".35"/>';
+  /* Teilung */
+  var n0=Math.ceil(a/tick-1e-9)*tick;
+  for(var n=n0;n<=b+1e-9;n+=tick){var nn=Math.round(n*1000)/1000,px=X(nn),isL=Math.abs(nn/lab-Math.round(nn/lab))<1e-6,isH=half&&Math.abs(nn/half-Math.round(nn/half))<1e-6;
+    var L=isL?30:isH?21:12;o+='<line x1="'+px.toFixed(1)+'" y1="'+ry+'" x2="'+px.toFixed(1)+'" y2="'+(ry+L)+'" stroke="#3A2E0A" stroke-width="'+(isL?3:1.6)+'" stroke-linecap="round"/>';
+    if(isL)o+='<text x="'+px.toFixed(1)+'" y="'+(ry+62)+'" text-anchor="middle" font-size="'+(R/lab>12?20:26)+'" font-weight="800" fill="#2B2208" '+F+'>'+String(nn).replace('.',',')+'</text>'}
+  if(v.unit)o+='<text x="'+(x1+38)+'" y="'+(ry+30)+'" text-anchor="middle" font-size="21" font-weight="800" fill="#7A5A00" '+F+'>'+esc(v.unit)+'</text>';
+  /* Strecken über dem Stab */
+  segs.forEach(function(q){var A=X(q[0]),B=X(q[1]),c=dcol(q[3]===undefined?0:q[3]),ln=q[4]||0,y=ry-14-(lanes-1-ln)*LH-38,w=B-A,t=String(q[2]||'');
+    o+='<line x1="'+A.toFixed(1)+'" y1="'+(y+38)+'" x2="'+A.toFixed(1)+'" y2="'+(ry+30)+'" stroke="'+c+'" stroke-width="2" stroke-dasharray="3 3"/><line x1="'+B.toFixed(1)+'" y1="'+(y+38)+'" x2="'+B.toFixed(1)+'" y2="'+(ry+30)+'" stroke="'+c+'" stroke-width="2" stroke-dasharray="3 3"/>';
+    o+='<rect x="'+(A+1).toFixed(1)+'" y="'+y+'" width="'+Math.max(4,w-2).toFixed(1)+'" height="38" rx="12" fill="'+c+'"/><rect x="'+(A+1).toFixed(1)+'" y="'+y+'" width="'+Math.max(4,w-2).toFixed(1)+'" height="13" rx="6" fill="#fff" opacity=".18"/>';
+    o+='<rect x="'+A.toFixed(1)+'" y="'+(ry-3)+'" width="'+w.toFixed(1)+'" height="6" rx="3" fill="'+c+'" opacity=".85"/>';
+    if(t){var fs=Math.min(26,Math.max(14,(w-12)/(t.length*.6)));
+      if(t.length*fs*.6<w-8)o+='<text x="'+((A+B)/2).toFixed(1)+'" y="'+(y+19+fs*.36)+'" text-anchor="middle" font-size="'+fs.toFixed(1)+'" font-weight="800" fill="#fff" '+F+'>'+esc(t)+'</text>';
+      else o+='<text x="'+((A+B)/2).toFixed(1)+'" y="'+(y-7)+'" text-anchor="middle" font-size="22" font-weight="800" fill="'+c+'" '+F+'>'+esc(t)+'</text>'}});
+  /* Gegenstand */
+  if(v.obj&&segs.length){var q0=segs[0],A0=X(q0[0]),B0=X(q0[1]),yo=ry-14-lanes*LH-6;
+    o+='<text x="'+((A0+B0)/2).toFixed(1)+'" y="'+(yo+4)+'" text-anchor="middle" font-size="44">'+esc(v.obj)+'</text>'}
+  /* Punkte */
+  (v.pts||[]).forEach(function(p){var px=X(p[0]),c=dcol(p[2]===undefined?1:p[2]);
+    o+='<path d="M'+(px-8).toFixed(1)+' '+(ry-14)+'h16l-8 13z" fill="'+c+'"/><line x1="'+px.toFixed(1)+'" y1="'+(ry-1)+'" x2="'+px.toFixed(1)+'" y2="'+(ry+34)+'" stroke="'+c+'" stroke-width="4" stroke-linecap="round"/>';
+    if(p[1]){var pw=Math.max(70,String(p[1]).length*15+30);o+='<line x1="'+px.toFixed(1)+'" y1="'+(ry+rh)+'" x2="'+px.toFixed(1)+'" y2="'+(ry+rh+8)+'" stroke="'+c+'" stroke-width="3"/><rect x="'+(Math.min(588-pw,Math.max(12,px-pw/2))).toFixed(1)+'" y="'+(ry+rh+8)+'" width="'+pw+'" height="38" rx="19" fill="#fff" stroke="'+c+'" stroke-width="2.4"/><text x="'+(Math.min(588-pw/2,Math.max(12+pw/2,px))).toFixed(1)+'" y="'+(ry+rh+35)+'" text-anchor="middle" font-size="24" font-weight="800" fill="'+c+'" '+F+'>'+esc(p[1])+'</text>'}});
+  if((v.pts||[]).some(function(p){return p[1]}))H+=52;
+  return '<figure class="vis" style="width:100%"><svg viewBox="0 0 600 '+H+'" width="100%" style="display:block;max-width:600px;margin:0 auto" role="img" aria-label="'+esc(v.cap||'Messstab')+'">'+o+'</svg>'+(v.cap?'<figcaption>'+capt(v.cap)+'</figcaption>':'')+'</figure>';
+}
+window.VEXT=window.VEXT||{}; /* Erweiterungen: VEXT.typ=function(v){return html} am Ende von p2.js anhängen */
 function visuals(list){
   if(!list||!list.length)return '';
-  var map={hl:vHl,pic:vPic,symfig:vSymfig,symgrid:vSymgrid,wcol:vWcol,dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar,tbl:vTbl,chips:vChips,tline:vTline,flow:vFlow,anno:vAnno,cards:vCards,area:vArea,emo:vEmo,field:vField,clock:vClock,coins:vCoins,shape:vShape,mtab:vMtab,mreihe:vMreihe,symm:vSymm,solid:vSolid,nline:vNline,angle:vAngle,circle:vCircle,jug:vJug,quader:vQuader,par:vPar,blocks:vBlocks,jumps:vJumps,arr:vArr,col:vCol,wall:vWall,scene:vScene,geo:vGeo};
+  var map={hl:vHl,pic:vPic,symfig:vSymfig,symgrid:vSymgrid,wcol:vWcol,dots:vDots,pie:vPie,numberline:vLine,pairs:vPairs,flip:vFlip,lines:vLines,img:vImg,bar:vBar,conv:vConv,bars:vBars,scale:vScale,tri:vTri,pyth:vPyth,rect:vRect,fbar:vFbar,tbl:vTbl,chips:vChips,tline:vTline,flow:vFlow,anno:vAnno,cards:vCards,area:vArea,emo:vEmo,field:vField,clock:vClock,coins:vCoins,shape:vShape,mtab:vMtab,mreihe:vMreihe,symm:vSymm,solid:vSolid,nline:vNline,angle:vAngle,circle:vCircle,jug:vJug,quader:vQuader,par:vPar,blocks:vBlocks,jumps:vJumps,ruler:vRuler,arr:vArr,col:vCol,wall:vWall,scene:vScene,geo:vGeo};
+  /* Farben abgleichen II: Rechenkette (Chips) übernimmt die Farben der Grafik (Punktefeld, Zehner/Einer, Sprünge).
+     Gleiche Zahl = gleiche Farbe; Zahlen, die in der Grafik nicht farbig sind (Ergebnis, Summe), neutral (7). */
+  var grs=list.filter(function(v){return v.type==='field'||v.type==='blocks'||v.type==='jumps'});
+  if(grs.length&&list.some(function(v){return v.type==='chips'&&v.parts})){var cmp={},lc=null,set=function(n,c){if(cmp[n]===undefined)cmp[n]=c};
+    grs.forEach(function(gr){
+      if(gr.type==='field'){set(gr.filled,VC[(gr.col||0)%4]);if(gr.filled2){set(gr.filled2,VC[(gr.col2===undefined?1:gr.col2)%4]);set(gr.filled+gr.filled2,7)}}
+      else if(gr.type==='blocks'){lc={H:'#7B3FC4',Z:'#1A56C4',E:'#B06000'};if(gr.h)set(gr.h*100,lc.H);if(gr.z)set(gr.z*10,lc.Z);if(gr.e)set(gr.e,lc.E)}
+      else{var jp=[gr.from],JI=jumpIdx(gr.jumps);(gr.jumps||[]).forEach(function(j){jp.push(jp[jp.length-1]+j[0])});
+        cmp[gr.from]='#34A853';if(jp.length>1)cmp[jp[jp.length-1]]='#4285F4';
+        (gr.jumps||[]).forEach(function(j,k){set(Math.abs(j[0]),jIdxCol(JI[k]))});jp.slice(1,-1).forEach(function(n){set(n,'#F29900')})}});
+    list=list.map(function(v){if(v.type!=='chips'||!v.parts)return v;var o={},np=[],k;for(k in v)o[k]=v[k];
+      v.parts.forEach(function(p,pi){var txt=String(p[0]).trim(),split=/\s[+−\-×·:]\s/.test(txt)&&!/[=<>]/.test(txt)&&!/[A-Za-zÄÖÜäöü]/.test(txt),toks=split?txt.split(/\s+/):[txt];
+        toks.forEach(function(tk,ti){var m=tk.match(/^(\d+)\s*([HZE])$/),lab=String(p[1]||''),col=p[2],nm=tk.replace('−','-').match(/^[+\-]?(\d+)$/);
+          if(/^[+−\-×·:=<>]$/.test(tk))col=p[2];else if(tk==='_')col=7;else if(lc&&m)col=lc[m[2]];
+          else if(nm){var n=+nm[1];col=cmp[n]!==undefined?cmp[n]:lc&&/Hunderter/.test(lab)?lc.H:lc&&/Zehner/.test(lab)?lc.Z:lc&&/Einer/.test(lab)?lc.E:7}
+          np.push([split?tk:p[0],ti===toks.length-1?p[1]:'',col])});
+        var nx=v.parts[pi+1];if(split&&nx&&/^\d+$/.test(String(nx[0]).trim()))np.push(['=',' ',2])});
+      o.parts=np;return o})}
   /* Farben abgleichen: Zahlen, die in den Chips farbig sind, bekommen auf dem Zahlenstrahl dieselbe Farbe */
   var ch=list.filter(function(v){return v.type==='chips'&&v.parts}),cm=null,cl={};
   if(ch.length&&list.some(function(v){return v.type==='nline'})){cm={};ch.forEach(function(c){c.parts.forEach(function(p){var n=String(p[0]).trim().replace(',','.');if(/^-?\d+(\.\d+)?$/.test(n)&&p[2]!=null){cm[+n]=p[2];if(p[1])cl[+n]=String(p[1])}})})}
   list=list.map(function(v){if(cm&&v.type==='nline'){var o={};for(var k in v)o[k]=v[k];var pts=(v.pts||[]).slice();Object.keys(cl).forEach(function(n){n=+n;if(n>=v.min&&n<=v.max&&pts.indexOf(n)<0)pts.push(n)});pts.sort(function(a,b){return a-b});o.pts=pts;o._cm=cm;o._cl=cl;return o}return v});
-  return '<div class="visrow">'+list.map(function(v){return map[v.type]?map[v.type](v):''}).join('')+'</div>';
+  return '<div class="visrow">'+list.map(function(v){var fn=map[v.type]||(window.VEXT&&window.VEXT[v.type]);return fn?fn(v):''}).join('')+'</div>';
 }
 
 /* ---------- Anime-Figur mit Styles ---------- */

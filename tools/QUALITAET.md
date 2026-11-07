@@ -80,3 +80,7 @@ Keine «Nochmal anders»-Wiederholungen, keine Schritte nur zum Wiederholen. Gil
 - Rechtschreibung/Zeichensetzung: oft das Korrektur-Feld verwenden.
 ## Mathe Kl. 7–9 (v4.76)
 - Generator tools/lp/k7.py (Aufgabenfamilien, Theorie über theory_steps mit Alltags-Szene); Taschenrechner ab Kl. 7.
+
+## Regeln v5.57 – Grafik themengerecht (vom Besitzer, 07.11.2026)
+Die Grafik zeigt das echte Messmittel bzw. Material des Themas, nie einen abstrakten Balken. Längen (mm, cm, dm, m, km) immer auf einem Messstab/Lineal (`ruler`: Strecken als farbige Bänder über dem Stab, Punkte als Marken); Zeit → Uhr (`clock`), Zeitspannen Uhr oder Zeitstrahl; Geld (Franken, Rappen) → Münzen und Noten (`coins`); Hohlmasse (Liter, dl, ml) → Messbecher/Krug (`jug`), nie Messstab und nie Balken; Gewicht → Waage (`scale`); Mengen vergleichen → Gegenstände 1:1 nebeneinander (Paare bilden). Eine Grafik ohne Bezug zum Text (z. B. nur ein Krokodil-Emoji) ist verboten.
+- Farben: Steht ein Punktefeld, Zehner/Einer oder Rechenstrich zusammen mit einer Rechenkette (chips), übernimmt die App die Grafikfarben automatisch für die Zahlen (gleiche Zahl = gleiche Farbe, Ergebnis neutral). Bei allen anderen Grafiken muss der Autor die Farben selbst gleich setzen.

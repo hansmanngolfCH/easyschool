@@ -9,6 +9,7 @@ Eine Grafik gilt nur als bestanden, wenn sie wie die Referenz «meter-km / gramm
 - Graue Flächen: lieber weiss. Keine farbigen Rahmen um Zahlen.
 - Unklare Farben: Jede Farbe in der Grafik muss unten in der Rechnung wiederkommen (gleiche Zahl = gleiche Farbe). Start/Ziel/Ergebnis neutral dunkel.
 - Rot nur für Fehler. Violett nie für Fortschritt.
+- Nicht themengerecht: Längen als Balken/Säulen statt auf dem Messstab (`ruler`), Zeit ohne Uhr, Franken/Rappen ohne Münzen/Noten, Liter als Balken oder auf dem Messstab statt im Messbecher (`jug`), Gewicht ohne Waage, Mengenvergleich ohne 1:1-Gegenüberstellung, Grafik ohne Bezug zum Text (z. B. nur ein Emoji). Das Messmittel des Themas ist Pflicht.
 Der Prüfer schaut JEDE Seite, JEDE Kartengrafik und die Prüfung als Screenshot (390 px) und meldet jede Abweichung mit Seite und konkreter Korrektur. «Sieht ok aus» ist keine Antwort: pro Grafik ein Urteil (bestanden/nicht bestanden) mit Begründung. Im Zweifel nicht bestanden.
 
 ## Rollen

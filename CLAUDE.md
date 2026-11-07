@@ -4,7 +4,7 @@ Lern-App (Vanilla-JS, eine `index.html`), GitHub Pages, easy-school.ch. Repo: ha
 
 ## Umgang mit dem Besitzer
 - Immer auf **Deutsch** antworten, kurz, ehrlich. Nur sagen, was wirklich getestet ist. Es gibt keinen iPhone-Test und die Live-Seite ist aus dem Sandkasten nicht erreichbar: Das immer erwähnen.
-- Nach **jeder** Veröffentlichung «Version vX.XX» nennen. Vorher `APP_VERSION` in `src/p1.js` erhöhen (aktuell v5.56; nächste v5.57 usw.).
+- Nach **jeder** Veröffentlichung «Version vX.XX» nennen. Vorher `APP_VERSION` in `src/p1.js` erhöhen (aktuell v5.57; nächste v5.58 usw.).
 - Mehrdeutige Wünsche: Auslegung offen nennen.
 
 ## Bauen und Testen
@@ -25,6 +25,7 @@ Lern-App (Vanilla-JS, eine `index.html`), GitHub Pages, easy-school.ch. Repo: ha
 - **Schriftlich rechnen (kl4–6, Themen schriftlich-plus/-minus/-mal/-durch):** Rechenaufgaben immer als Häuschen-Raster untereinander (`wcol` in p2.js, Erkennung `wcFor`), Kinder füllen Ergebnis- und Übertragsfelder selbst. In Karten und Prüfungen keine Hilfe im Raster (keine Spaltenmarkierung, keine Anleitung), Hilfe nur über den Tipp-Knopf und in der Theorie. Übertrag als kleine 1 unten links über dem Strich, Ergebnis doppelt unterstrichen; Minus mit Übertrag zur unteren Zahl; Division mit «−», Strich und Herunterholen. Ab Oberstufe Rechner statt Raster.
 - **Aufgaben-Text:** Hauptfrage kurz und deutlich (gross); Zusätze/Anleitungen («Schreibe nur die Zahl.», «(in cm)», «Runde …») klein darunter (`qSplit` in p2.js).
 - **Grafiken in Aufgaben (Karten, Easy lernen, Prüfung): Hilfe ja, Lösung oder Lösungsteile nein.** `visT` entfernt Lösungen automatisch (Bildunterschrift weg, Lösungszahl → «_»); erst nach dem Prüfen volle Grafik. Neue Grafiken trotzdem ohne Lösung bauen. Ausnahme: Diagramme/Münzen, deren Ablesen die Aufgabe ist.
+- **Grafik themengerecht (Mathe-Grössen):** Die Grafik zeigt das echte Messmittel bzw. Material des Themas, nie einen abstrakten Balken. Längen (mm, cm, dm, m, km) immer auf einem Messstab/Lineal (`ruler`: Strecken als farbige Bänder über dem Stab, Punkte als Marken); Zeit → Uhr (`clock`), Zeitspannen Uhr oder Zeitstrahl; Geld (Franken, Rappen) → Münzen und Noten (`coins`); Hohlmasse (Liter, dl, ml) → Messbecher/Krug (`jug`), nie Messstab und nie Balken; Gewicht → Waage (`scale`); Mengen vergleichen → Gegenstände 1:1 nebeneinander (Paare bilden). Eine Grafik ohne Bezug zum Text (z. B. nur ein Krokodil-Emoji) ist verboten.
 - **Theorie-Grafik = Fokus:** Die Grafik eines Schritts hebt genau das hervor, was Titel und Text erklären (Endung, Grossbuchstabe, Komma, geänderte Ziffer, Nenner …), farbig markiert; der Rest neutral. Mittel: Fokus-Grafik `hl` (`"rows":["klein[e|Endung]"]`, `[Text|Label|Farbe]`, `[~x~]` = durchgestrichen) oder `{Farbe|Text}` in tbl/lines/chips/flow und Bildunterschriften.
 - Karten-Antworten (MC): kurze Antworten 2 × 2 nebeneinander, lange (>14 Zeichen) untereinander. Platzhalter in Gleichungen/Vergleichen immer `_`, nie ○.
 - Buttons heissen **AI-Karten** und **Easy lernen**.
